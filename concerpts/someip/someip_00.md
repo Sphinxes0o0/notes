@@ -124,12 +124,11 @@ service_discovery_impl
 
 #### Init
 
-
-
+![](./imgs/vSOMEIP_source_routing_init.png)
 
 
 #### Start
-
+![](./imgs/vSOMEIP_source_routing_start.png)
 
 
 
@@ -137,20 +136,15 @@ service_discovery_impl
 
 daemon的主体就是一个vsomeip::application
 
+![](./imgs/vSOMEIP_source_daemon.png)
+
+
+Application创建了一个routing_manager_impl的实例。
+如果这不是Daemon，而是一个通常的Application，那么他会转而创建routing_manager_proxy的实例，并与找到的Routing Manager建立连接。
 
 
 
 ## Tools & Examples
 
 一些简易的Application。用于进行一些消息发送接收的测试工作。
-
-
-
-
-
-
-
-
-
-
 
