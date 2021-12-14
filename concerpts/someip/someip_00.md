@@ -1,4 +1,4 @@
-# SOMEIP 00 : vSOMEIP
+# vSOMEIP 00 :  quick review
 
 * refrence: https://blog.zeerd.com/vsomeip-1st/
 
@@ -11,8 +11,9 @@ vsomeip提供了两个动态库：
 
 vsomeip除了支持设备之间的SOME/IP通讯，也支持设备本地的进程间通讯，本地通讯通过unix socket完成。
 vsomeip的实现基于boost.asio的异步IO库。
-vsomeip应用通过一个Routing Manager与其他设备进行通讯，Routing Manager统一负责服务发现以及外部通讯socket的管理。
-一个设备上的多个vsomeip应用共用一个Routing Manager，默认第一个启动的vsomeip应用负责启动Routing Manager，也可以通过配置指定，其他应用通过proxy与Routing Manage进行通讯。
+vsomeip应用通过一个Routing Manager与其他设备进行通讯: Routing Manager统一负责服务发现以及外部通讯socket的管理。
+一个设备上的多个vsomeip应用共用一个Routing Manager，默认第一个启动的vsomeip应用负责启动Routing Manager，
+也可以通过配置指定，其他应用通过proxy与Routing Manage进行通讯。
 
 vsomeip应用可以通过json文件来进行配置，配置项包含自身IP，应用名字，负责启动Routing Manager的应用，应用日志，服务发现的广播地址，广播间隔等。
 
