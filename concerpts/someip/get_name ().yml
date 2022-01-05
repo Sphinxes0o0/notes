@@ -1,64 +1,10 @@
-get_name () 
-get_client () 
-get_diagnosis () 
-process
-get_security_mode ()
 
-offer_service 
-stop_offer_service
 
-offer_event 
-stop_offer_event
-
-request_service 
-release_service
-
-request_event 
-release_event 
-
-subscribe
-unsubscribe
-
-is_available 
-are_available 
-
-send 
-notify 
-notify_one 
-
-register_state_handler 
-unregister_state_handler
-register_message_handler 
-unregister_message_handler 
-register_availability_handler
-unregister_availability_handler 
-register_subscription_handler 
-register_async_subscription_handler
-unregister_subscription_handler 
-clear_all_handler 
-register_sd_acceptance_handler 
-register_reboot_notification_handler 
-register_routing_ready_handler 
-register_routing_state_handler 
-set_watchdog_handler 
-register_subscription_status_handler 
-unregister_subscription_status_handler
-
-is_routing
-set_routing_state
-
-unsubscribe 
+ 
 
 
 
-get_offered_services_async 
 
 
 
-set_sd_acceptance_required 
-set_sd_acceptance_required 
-get_sd_acceptance_required
 
-update_service_configuration 
-update_security_policy_configuration
-remove_security_policy_configuration 

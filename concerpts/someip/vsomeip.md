@@ -1,5 +1,5 @@
 
-# VSOMEIP 源码学习分享 之 手摸手编译安装 + 源码带看
+# VSOMEIP 源码学习分享 之 手摸手编译安装过源码
 
 
 ## Content
@@ -69,7 +69,7 @@ yshi10@dev:~/someip_space/vsomeip/implementation$ tree . -L 1
 ├── security               --> 安全模块: policy, credentials 
 ├── service_discovery      --> 服务发现: 
                                     发现注册模块, 
-                                    IPv4(IPv6) Options, 
+                                    IPv4/IPv6 Options, 
                                     负载均衡, 
                                     远程订阅
 ├── tracing                --> tracing: 配置 dlt-daemon
@@ -210,7 +210,7 @@ make vsomeip_ctrl
 * payload
 
 
-#### runtime
+#### __runtime__
 
 ![runtime](./imgs/vSOMEIP_source_runtime.png)
 
@@ -245,7 +245,7 @@ make vsomeip_ctrl
 * remove_application
 
 
-#### application
+#### __application__
 
 __最核心的一个部分__
 
@@ -262,70 +262,118 @@ Application可以通过Runtime的接口来实例化。
 - security
 - connector
 
-自身的状态:
-- init():
-  - configuration
-  - security
-  - routing
-  - DLT
-  - signal handler
+##### 函数实现:
 
-- start():
-  - configuration
-  - plugins
+自身状态管理:
+- init
+- start
+- stop
+- process
+- is_available 
+- are_available 
+- is_routing
 
-- stop(): 
+属性:
+- get_name
+- get_client
+- get_diagnosis
+- get_security_mode
+- get_offered_services_async 
+- get_sd_acceptance_required
+- set_routing_state
+- set_sd_acceptance_required 
+- set_sd_acceptance_required
 
-- process: not (yet) implemented
+handler 类(调用client 传入的函数):
 
-请求类:
-- get
-  - name
-  - client
-  - diagnosis
-  - security mode
+- register_state_handler
+- unregister_state_handler
+
+- register_message_handler 
+- unregister_message_handler 
+
+- register_availability_handler
+- unregister_availability_handler 
+
+- register_subscription_handler 
+- register_async_subscription_handler
+- register_subscription_status_handler 
+- unregister_subscription_status_handler
+- unregister_subscription_handler 
+
+- register_routing_ready_handler 
+- register_routing_state_handler 
+
+- clear_all_handler 
+
+- register_sd_acceptance_handler 
+
+- register_reboot_notification_handler 
+
+- set_watchdog_handler 
 
 
+消息服务类:
+- update_service_configuration 
+- update_security_policy_configuration
+- remove_security_policy_configuration 
 
-- request
-  - service
-  - event
+- offer_service 
+- stop_offer_service
 
-- release
-  - service
-  - event
+- offer_event 
+- stop_offer_event
+
+- request_service 
+- release_service
+
+- request_event 
+- release_event 
 
 - subscribe
-
 - unsubscribe
 
-状态类:
-- avaliable
-- is routing
-
-- send
-- notify
+- send 
+- notify 
+- notify_one 
 
 
-handler 类
+#### __messgae & payload__
 
-set 类:
-- set_routing_state
-- 
+![msg_arch](./imgs/vSOMEIP_source_messages_arch.png)
 
-#### messgae
+message & payload 模块与其他模块之间的交互;
+主要负责 `set/get` 相关的属性(session, payload, id...), (反)序列化功能.
 
-#### payload
+由以下 `.cpp` 文件实现功能:
+
+* message_base_impl.cpp
+* message_header_impl.cpp
+* message_impl.cpp
+* payload_impl.cpp
+
+#### __routing__
+
+* event
+* eventgroupinfo
+* remote_subscription
 
 
 
+#### __service discovery__
+
+![msg_arch](./imgs/vSOMEIP_source_sd_arch.png)
 
 
-
-
-
-
-
+sd_runtime.create_service_discovery(host, cfg)
+     |
+     |
+    \|/
+service_discovery_impl.service_discovery_impl
+     |
+     |
+    \|/
+init()
 
 
 
