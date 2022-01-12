@@ -2,8 +2,8 @@
 # VSOMEIP 源码学习分享 之 手摸手编译安装过源码
 
 
-## Content
----
+### Content:
+
 
 1. 源码结构
 
@@ -11,11 +11,11 @@
 
 3. 核心内容  
   3.1 模块  
-  3.2 配置
+  3.2 配置 TODO
 
 4. 总结
 
-
+---
 
 ## 1. 源码结构
 
@@ -36,7 +36,7 @@ yshi10@dev:~/someip_space/vsomeip$ tree . -L 1
 ├── LICENSE_boost
 ├── README.md
 ├── test                 --> 测试代码
-├── tools                --> some_ctrl 工具
+├── tools                --> someip_ctrl 工具
 ├── vsomeip3Config.cmake.in            --|
 ├── vsomeip3ConfigVersion.cmake.in       |
 ├── vsomeip3.pc.in                       |
@@ -46,13 +46,14 @@ yshi10@dev:~/someip_space/vsomeip$ tree . -L 1
 └── vsomeip.xml                        --|
 ```
 
-> 核心代码都在 implementation
+> 代码实现都在 `implementation` 下
 
 ### implementation
 
 
 ![arch](./imgs/00_overview_source_arch.png)
 
+#### `impelemention`:
 ```bash
 yshi10@dev:~/someip_space/vsomeip/implementation$ tree . -L 1
 .
@@ -85,21 +86,21 @@ yshi10@dev:~/someip_space/vsomeip/implementation$ tree . -L 1
 OS环境:
 
 ```bash
-lsb_release -a
+yshi10@dev:~$ lsb_release -a
 No LSB modules are available.
 Distributor ID:	Ubuntu
-Description:	Ubuntu 21.04
-Release:	21.04
-Codename:	hirsute
+Description:	Ubuntu 21.10
+Release:	21.10
+Codename:	impish
 ```
 
-> 实测 18.04 也没有问题, 官方推荐14.04 及以上
+> 实测 18.04, 20.04, 20.10 都没有问题, 官方推荐14.04 及以上, 最新的21.10 上 boost v1.71 与 最新的 glibc v2.34 不兼容, 同步了 boost v1.78 的变更解决这个问题
 
 #### 工具
 
 * CMake
 
-> ref : https://apt.kitware.com/
+  > ref : https://apt.kitware.com/
 
 ```bash
 # For Ubuntu Bionic Beaver (18.04) and newer:
@@ -142,12 +143,12 @@ sudo apt-get install cmake
 
 * g++ / clang++
 
-  需要支持 C++11 
+  __必需支持 C++11__ 
 
-* boost 1.71
+* boost 1.71 (1.55 ~ 1.74)
 
   1.71 刚好和 DoIP boost版本保持一致
-  - repo, (master branch) 
+  - repo:(master branch) 
 
     ```bash
     Ethernet/boost_1_71_0
@@ -174,7 +175,7 @@ mkdir build;cd build;
 # 默认配置
 cmake ..
 
-##  自定义
+##  自定义的CMake配置
 # install path
 cmake -DCMAKE_INSTALL_PREFIX:PATH=$YOUR_PATH ..
 # ip addr
@@ -196,21 +197,45 @@ sudo make install
 make vsomeip_ctrl
 ```
 
-## 3. 核心内容
+## 3. 核心模块
 
-### 3.1 模块
-自上而下来看可以划分为以下:
+vSOMEIP 整体设计是 模块化,插件化,自上而下来看可以简化为以下:
+```
+------------------------------
+| Application                 |
+------------------------------
+       |       /|\ 
+      \|/       |
+------------------------------
+| runtime       |            |
+----------------|     SD     |
+| application   | -----------|
+----------------|     CFG    |
+| messgae       | ---------  |
+----------------|   Plugin   |
+|  payload      |            |
+------------------------------
+```
 
-* runtime
+### Plugin
 
-* application
+装卸载插件, 加载库和导入符号表
 
-* messgae
+* get_plugin
 
-* payload
+* load_plugin
+
+* load_library
+
+* load_symbol
+
+* add_plugin
+
+* unload_plugi
 
 
-#### __runtime__
+
+### __runtime__
 
 ![runtime](./imgs/vSOMEIP_source_runtime.png)
 
@@ -245,13 +270,13 @@ make vsomeip_ctrl
 * remove_application
 
 
-#### __application__
+### __application__
 
 __最核心的一个部分__
 
 每个客户端都存在且仅存在一份。  
-Application可以通过Runtime的接口来实例化。  
-管理着vSomeIP客户端的生命周期和生命周期内的所有通讯。
+`Application` 可以通过 `Runtime` 的接口来实例化。  
+管理着vSomeIP客户端的生命周期和生命周期内的所有通讯。  
 
 管理的资源:
 
@@ -262,7 +287,7 @@ Application可以通过Runtime的接口来实例化。
 - security
 - connector
 
-##### 函数实现:
+#### 函数实现:
 
 自身状态管理:
 - init
@@ -338,7 +363,7 @@ handler 类(调用client 传入的函数):
 - notify_one 
 
 
-#### __messgae & payload__
+### __messgae & payload__
 
 ![msg_arch](./imgs/vSOMEIP_source_messages_arch.png)
 
@@ -352,28 +377,206 @@ message & payload 模块与其他模块之间的交互;
 * message_impl.cpp
 * payload_impl.cpp
 
-#### __routing__
+### __endpoint__
+
+![ep](./imgs/vSOMEIP_endpoint.png)
+
+按功能分成如下:
+
+#### client  
+  base: client_endpoint_impl.cpp
+  - remote (udp/tcp): udp/tcp_client_endpoint_impl.cpp
+  - local(Unix Domain): local_client_endpoint_impl.cpp
+
+#### server  
+  base: server_endpoint_impl.cpp
+  - remote (udp/tcp): udp/tcp_server_endpoint_impl.cpp
+  - local(Unix Domain): server_client_endpoint_impl.cpp
+
+#### 以`local_client_endpoint_impl` 为例子
+
+`endpoint` 是所有vsomeip通讯实例的基础.
+
+> `endpoint`的生命周期其实就是一个“连接”的生命周期。
+
+* start
+
+code: 
+
+```cpp
+void local_client_endpoint_impl::start() {
+    connect();
+}
+```
+
+`start()`函数中会根据`endpoint`的类型创建一个socket链接, 并且开始触发第一次消息接收。
+如果在连接建立起来之前，就已经有消息被放入队列中了。那么，在连接成功之后，会将队列中缓存的消息逐一发出。也就是说，vsomeip对于服务端和客户端启动的先后顺序没有强制要求.
+
+> 在实际 connect() 中 对 socket连接都开启了 `reuse_address`
+
+* connect
+
+1. open socket (set asio::socket_base::reuse_address(true))
+
+2. state = CONNECTING
+
+3.  connect
+
+4. call connect_cbk() (async)
+
+* send
+
+插入数据到一个`buffer`中, 然后设置标志位(判断当前`queue`大小) `void client_endpoint_impl<Protocol>::queue_train` 调用`send_queued()`
+
+> 这里的`queue`数据类型: deque<std::shared_ptr<std::vector<uint8_t> > >
+
+* send_queued
+
+通过 `asio::async_write()` 将数据写入socket然后调用`client_endpoint_impl::send_cbk`
+
+
+* receive
+
+具体实现如下: 
+```cpp
+void local_client_endpoint_impl::receive() {
+    std::lock_guard<std::mutex> its_lock(socket_mutex_);
+    if (socket_->is_open()) {
+        socket_->async_receive(
+            boost::asio::buffer(recv_buffer_),
+            strand_.wrap(
+                std::bind(
+                    &local_client_endpoint_impl::receive_cbk,
+                    std::dynamic_pointer_cast<
+                        local_client_endpoint_impl
+                    >(shared_from_this()),
+                    std::placeholders::_1,
+                    std::placeholders::_2
+                )
+            )
+        );
+    }
+}
+```
+通过asio的 `async_receive()`接受 `receive_cbk()`的方式,接受数据.
+
+* restart
+
+```cpp
+# 设置如下属性
+state_ = cei_state_e::CONNECTING;
+sending_blocked_ = false;
+was_not_connected_ = true;
+reconnect_counter_ = 0;
+
+# 调用如下函数
+queue_.clear();
+shutdown_and_close_socket_unlocked(true);
+start_connect_timer();
+```
+
+* stop
+
+```cpp
+# 1. reset CONNECT_TIMEOUT
+connect_timer_.cancel(ec);
+connect_timeout_ = VSOMEIP_DEFAULT_CONNECT_TIMEOUT;
+
+# 2. check socket open or not
+# if open go to 3 else go to 4
+is_open = socket_->is_open();
+
+# 3. check queue empty or not
+# 3.1 if empty, go to 4
+# 3.2 else 
+std::this_thread::sleep_for(std::chrono::milliseconds(10));
+times_slept++;
+
+# 4 shutdown
+shutdown_and_close_socket(false);
+
+```
+
+##### manager
+
+manager 的本质是 __增删查__
+
+* 增
+  - create_local_server
+  - create_remote_client
+  - create_client_endpoint
+  - add_remote_service_info
+
+* 删
+  - remove_instance
+  - remove_instance_multicast
+  - release_port
+
+
+* 查
+  - find_instance
+  - find_instance_multicast
+  - find_remote_client
+  - on_connect
+  - on_disconnect
+
+* helper
+  - log_client_states
+  - log_server_states
+  - on_error
+  - print_status
+  - is_remote_service_known
+
+
+##### netlink
+
+监控了如下消息:
+* RTMGRP_LINK
+* RTMGRP_IPV4_IFADDR
+* RTMGRP_IPV6_IFADDR 
+* RTMGRP_IPV4_ROUTE 
+* RTMGRP_IPV6_ROUTE 
+* RTMGRP_IPV4_MROUTE
+* RTMGRP_IPV6_MROUTE
+
+
+##### TP
+  - tp.cpp
+  - tp_message.cpp
+  - tp_reassembler.cpp
+
+* tp.cpp
+
+定义最大的分片
+
+```cpp
+const std::uint16_t tp::tp_max_segment_length_ = 1392;
+```
+
+分片函数:
+```cpp
+tp_split_messages_t tp::tp_split_message(const std::uint8_t * const _data, std::uint32_t _size)
+```
+
+
+
+
+
+
+
+>TODO
+---
+### __routing__
 
 * event
 * eventgroupinfo
 * remote_subscription
+* serviceinfo
+* manager
 
 
+### __service discovery__
 
-#### __service discovery__
-
-![msg_arch](./imgs/vSOMEIP_source_sd_arch.png)
-
-
-sd_runtime.create_service_discovery(host, cfg)
-     |
-     |
-    \|/
-service_discovery_impl.service_discovery_impl
-     |
-     |
-    \|/
-init()
 
 
 
