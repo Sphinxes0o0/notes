@@ -1,5 +1,5 @@
 
-# VSOMEIP 源码学习分享 之 手摸手编译安装过源码
+# VSOMEIP 源码学习分享 之 手摸手编译安装
 
 
 ### Content:
@@ -13,7 +13,30 @@
   3.1 模块  
   3.2 配置 TODO
 
-4. 总结
+
+
+```bash
+-----------------------           -----------------------
+|  upper applications |   <---->  |  someip-service     |  
+|                     |           |                     |  
+-----------------------           -----------------------
+       |       /|\                   / /\ 
+      \|/       |                  \/ /
+--------------------------------------
+|  COMMON-API   |  COMMONAPI         |  ---> commonapi-core-generator-<platform>-<arch>
+|  (gen-code)   |  common part (.so) |
+--------------------------------------
+|  COMMON-SOMEIP RT                  |  ---> commonapi-someip-generator-<platform>-<arch>
+--------------------------------------
+       |       /|\ 
+      \|/       |
+---------------------
+|    vsomeip         |
+---------------------
+|    TCP/IP          |
+---------------------
+
+```
 
 ---
 
@@ -94,7 +117,7 @@ Release:	21.10
 Codename:	impish
 ```
 
-> 实测 18.04, 20.04, 20.10 都没有问题, 官方推荐14.04 及以上, 最新的21.10 上 boost v1.71 与 最新的 glibc v2.34 不兼容, 同步了 boost v1.78 的变更解决这个问题
+> 实测 18.04, 20.04, 20.10 都没有问题, 官方推荐12.04 及以上, 最新的21.10 上 boost v1.71 与 最新的 glibc v2.34 不兼容, 同步了 boost v1.78 的变更解决这个问题
 
 #### 工具
 
@@ -180,7 +203,7 @@ cmake ..
 cmake -DCMAKE_INSTALL_PREFIX:PATH=$YOUR_PATH ..
 # ip addr
 cmake -DUNICAST_ADDRESS=<YOUR IP ADDRESS> ..
-# diagnosis addr
+# diagnosis addr ()
 cmake -DDIAGNOSIS_ADDRESS=<YOUR DIAGNOSIS ADDRESS> ..
 # configuration folder
 cmake -DDEFAULT_CONFIGURATION_FOLDER=<DEFAULT CONFIGURATION FOLDER> ..
@@ -199,7 +222,7 @@ make vsomeip_ctrl
 
 ## 3. 核心模块
 
-vSOMEIP 整体设计是 模块化,插件化,自上而下来看可以简化为以下:
+vSOMEIP 整体设计是 模块化,设计了插件机制,自上而下来看可以简化为以下:
 ```
 ------------------------------
 | Application                 |
@@ -216,6 +239,260 @@ vSOMEIP 整体设计是 模块化,插件化,自上而下来看可以简化为以
 |  payload      |            |
 ------------------------------
 ```
+
+### examples
+
+__client__ 
+```cpp
+static vsomeip::service_t service_id = 0x1111;
+static vsomeip::instance_t service_instance_id = 0x2222;
+static vsomeip::method_t service_method_id = 0x3333;
+
+class hello_world_client {
+public:
+    // Get the vSomeIP runtime and
+    // create a application via the runtime, we could pass the application name
+    // here otherwise the name supplied via the VSOMEIP_APPLICATION_NAME
+    // environment variable is used
+    hello_world_client() :
+                    rtm_(vsomeip::runtime::get()),
+                    app_(rtm_->create_application())
+    {
+    }
+
+    bool init(){
+        // init the application
+        if (!app_->init()) {
+            LOG_ERR ("Couldn't initialize application");
+            return false;
+        }
+
+        // register a state handler to get called back after registration at the
+        // runtime was successful
+        app_->register_state_handler(
+                std::bind(&hello_world_client::on_state_cbk, this,
+                        std::placeholders::_1));
+
+        // register a callback for responses from the service
+        app_->register_message_handler(vsomeip::ANY_SERVICE,
+                service_instance_id, vsomeip::ANY_METHOD,
+                std::bind(&hello_world_client::on_message_cbk, this,
+                        std::placeholders::_1));
+
+        // register a callback which is called as soon as the service is available
+        app_->register_availability_handler(service_id, service_instance_id,
+                std::bind(&hello_world_client::on_availability_cbk, this,
+                        std::placeholders::_1, std::placeholders::_2,
+                        std::placeholders::_3));
+        return true;
+    }
+
+    void start()
+    {
+        // start the application and wait for the on_event callback to be called
+        // this method only returns when app_->stop() is called
+        app_->start();
+    }
+
+    void on_state_cbk(vsomeip::state_type_e _state)
+    {
+        if(_state == vsomeip::state_type_e::ST_REGISTERED)
+        {
+            // we are registered at the runtime now we can request the service
+            // and wait for the on_availability callback to be called
+            app_->request_service(service_id, service_instance_id);
+        }
+    }
+
+    void on_availability_cbk(vsomeip::service_t _service,
+            vsomeip::instance_t _instance, bool _is_available)
+    {
+        // Check if the available service is the the hello world service
+        if(service_id == _service && service_instance_id == _instance
+                && _is_available)
+        {
+            // The service is available then we send the request
+            // Create a new request
+            std::shared_ptr<vsomeip::message> rq = rtm_->create_request();
+            // Set the hello world service as target of the request
+            rq->set_service(service_id);
+            rq->set_instance(service_instance_id);
+            rq->set_method(service_method_id);
+
+            // Create a payload which will be sent to the service
+            std::shared_ptr<vsomeip::payload> pl = rtm_->create_payload();
+            std::string str("World");
+            std::vector<vsomeip::byte_t> pl_data(std::begin(str), std::end(str));
+
+            pl->set_data(pl_data);
+            rq->set_payload(pl);
+            // Send the request to the service. Response will be delivered to the
+            // registered message handler
+            LOG_INF("Sending: %s", str.c_str());
+            app_->send(rq);
+        }
+    }
+
+    void on_message_cbk(const std::shared_ptr<vsomeip::message> &_response)
+    {
+        if(service_id == _response->get_service()
+                && service_instance_id == _response->get_instance()
+                && vsomeip::message_type_e::MT_RESPONSE
+                        == _response->get_message_type()
+                && vsomeip::return_code_e::E_OK == _response->get_return_code())
+        {
+            // Get the payload and print it
+            std::shared_ptr<vsomeip::payload> pl = _response->get_payload();
+            std::string resp = std::string(
+                    reinterpret_cast<const char*>(pl->get_data()), 0,
+                    pl->get_length());
+            LOG_INF("Received: %s", resp.c_str());
+            stop();
+        }
+    }
+
+    void stop()
+    {
+        // unregister the state handler
+        app_->unregister_state_handler();
+        // unregister the message handler
+        app_->unregister_message_handler(vsomeip::ANY_SERVICE,
+                service_instance_id, vsomeip::ANY_METHOD);
+        // alternatively unregister all registered handlers at once
+        app_->clear_all_handler();
+        // release the service
+        app_->release_service(service_id, service_instance_id);
+        // shutdown the application
+        app_->stop();
+    }
+
+private:
+    std::shared_ptr<vsomeip::runtime> rtm_;
+    std::shared_ptr<vsomeip::application> app_;
+};
+```
+
+__server__
+```
+static vsomeip::service_t service_id = 0x1111;
+static vsomeip::instance_t service_instance_id = 0x2222;
+static vsomeip::method_t service_method_id = 0x3333;
+
+class hello_world_service {
+public:
+    // Get the vSomeIP runtime and
+    // create a application via the runtime, we could pass the application name
+    // here otherwise the name supplied via the VSOMEIP_APPLICATION_NAME
+    // environment variable is used
+    hello_world_service() :
+                    rtm_(vsomeip::runtime::get()),
+                    app_(rtm_->create_application()),
+                    stop_(false),
+                    stop_thread_(std::bind(&hello_world_service::stop, this))
+    {
+    }
+
+    ~hello_world_service()
+    {
+        stop_thread_.join();
+    }
+
+    bool init()
+    {
+        // init the application
+        if (!app_->init()) {
+            LOG_ERR("Couldn't initialize application");
+            return false;
+        }
+
+        // register a message handler callback for messages sent to our service
+        app_->register_message_handler(service_id, service_instance_id,
+                service_method_id,
+                std::bind(&hello_world_service::on_message_cbk, this,
+                        std::placeholders::_1));
+
+        // register a state handler to get called back after registration at the
+        // runtime was successful
+        app_->register_state_handler(
+                std::bind(&hello_world_service::on_state_cbk, this,
+                        std::placeholders::_1));
+        return true;
+    }
+
+    void start()
+    {
+        // start the application and wait for the on_event callback to be called
+        // this method only returns when app_->stop() is called
+        app_->start();
+    }
+
+    void stop()
+    {
+        std::unique_lock<std::mutex> its_lock(mutex_);
+        while(!stop_) {
+            condition_.wait(its_lock);
+        }
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+        // Stop offering the service
+        app_->stop_offer_service(service_id, service_instance_id);
+        // unregister the state handler
+        app_->unregister_state_handler();
+        // unregister the message handler
+        app_->unregister_message_handler(service_id, service_instance_id,
+                service_method_id);
+        // shutdown the application
+        app_->stop();
+    }
+
+    void terminate() {
+        std::lock_guard<std::mutex> its_lock(mutex_);
+        stop_ = true;
+        condition_.notify_one();
+    }
+
+    void on_state_cbk(vsomeip::state_type_e _state)
+    {
+        if(_state == vsomeip::state_type_e::ST_REGISTERED)
+        {
+            // we are registered at the runtime and can offer our service
+            app_->offer_service(service_id, service_instance_id);
+        }
+    }
+
+    void on_message_cbk(const std::shared_ptr<vsomeip::message> &_request)
+    {
+        // Create a response based upon the request
+        std::shared_ptr<vsomeip::message> resp = rtm_->create_response(_request);
+
+        // Construct string to send back
+        std::string str("Hello ");
+        str.append(
+                reinterpret_cast<const char*>(_request->get_payload()->get_data()),
+                0, _request->get_payload()->get_length());
+
+        // Create a payload which will be sent back to the client
+        std::shared_ptr<vsomeip::payload> resp_pl = rtm_->create_payload();
+        std::vector<vsomeip::byte_t> pl_data(str.begin(), str.end());
+        resp_pl->set_data(pl_data);
+        resp->set_payload(resp_pl);
+
+        // Send the response back
+        app_->send(resp);
+        // we have finished
+        terminate();
+    }
+
+private:
+    std::shared_ptr<vsomeip::runtime> rtm_;
+    std::shared_ptr<vsomeip::application> app_;
+    bool stop_;
+    std::mutex mutex_;
+    std::condition_variable condition_;
+    std::thread stop_thread_;
+};
+
+```
+
 
 ### Plugin
 
