@@ -9,7 +9,26 @@ eBPF导致了网络，安全性，应用程序配置/跟踪和性能故障排除
 
 如果直接解释eBPF，有点不明所以。那我们就看看有哪些基于eBPF的工程，这些工程或许你已经知道，或是已经经常使用，也许你会明白eBPF距离我们并不遥远。
 
-### 基于eBPF的项目
+## eBPF 发展
+
+* BPF
+Berkeley Packet Filter, capturing and filtering network packets that matched specific rules.
+Filters are implemented as programs to be run on a register-based virtual machine.
+
+-> tcpdump
+
+
+## eBPF 运行机制简介
+* 
+* JIT
+
+
+## 主要用途
+
+
+## 横向扩展& 相关技术
+
+## 基于eBPF的项目
 
 1： bcc
 
