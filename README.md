@@ -24,13 +24,15 @@ C 语言系列
 ## Tutorial
 
 - TCP/IP 高级教程
-  - [ ] TCP/IP 基础  
-        - OSI, TCP/IP  
-        - TCP  
-          - 滑动窗口  
-          - 流控算法  
-        - UDP  
-        - ICMP  
+  - [x] TCP/IP 基础  
+        * OSI, TCP/IP  
+        * TCP  
+          * 滑动窗口  
+          * 流控算法
+          * MSS, MTU
+        * PathMTU
+        * UDP
+        * ICMP  
         - Route  
    
 
