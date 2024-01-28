@@ -15,7 +15,7 @@ Unix 网络编程
   - [ ] IPC
 
 C 语言系列
-- [ ] C 和指针
+- [ ] C 和指针  
 - [ ] C 专家编程
  
 - [x] TCP/IP 网络编程 by 伊圣雨
@@ -24,13 +24,13 @@ C 语言系列
 ## Tutorial
 
 - TCP/IP 高级教程
-  - [ ] TCP/IP 基础
-        - OSI, TCP/IP
-        - TCP
-          - 滑动窗口
-          - 流控算法
-        - UDP
-        - ICMP
-        - Route
-  
+  - [ ] TCP/IP 基础  
+        - OSI, TCP/IP  
+        - TCP  
+          - 滑动窗口  
+          - 流控算法  
+        - UDP  
+        - ICMP  
+        - Route  
+   
 
