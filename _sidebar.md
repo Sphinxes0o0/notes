@@ -14,4 +14,9 @@
     - [Map of Network](network\map_of_network.md)
     - [Netlink](network\netlink.md)
 
+* QNX 
+    - System Progrmming
+        - [resource manager](qnx\resource_manager.md)
+        
+
 * [About Me](about.md)
