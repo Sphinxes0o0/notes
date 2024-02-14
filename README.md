@@ -4,7 +4,7 @@
 一些想法的乱描乱画
 
 脑图:
-https://gitmind.cn/app/docs/mli1pvdj
+(gitmind)[https://gitmind.cn/app/docs/mli1pvdj]
 
 ## __TODO__ Reading
 
