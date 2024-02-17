@@ -3,8 +3,10 @@
 一些学习的零星记录
 一些想法的乱描乱画
 
+脑图:
+[gitmind](https://gitmind.cn/app/docs/mli1pvdj)
 
-## Reading Notes
+## __TODO__ Reading
 
 - [ ] Unix 环境高级编程 by W.Richard Stevens
       
