@@ -4,17 +4,12 @@
 * CPP
     - [cpp basic](cpp\cpp.md)
     - [cpp stl](cpp\stl_reading_ntoes.md)
-    
+
 * Linux
     - [System Programming]
         - [System Programming](linux\system_programming\Linux_system_programming.md)
         - [Jan-24-2023 Notes](linux\system_programming\notes_Jan25.md)
         - [Linux IO Notes](linux\system_programming\linux_io_notes.md)
-
-* Network
-    - [eBPF](network\ebpf.md)
-    - [Map of Network](network\map_of_network.md)
-    - [Netlink](network\netlink.md)
 
 * Misc
   - [netcat](misc\netcat.md)
