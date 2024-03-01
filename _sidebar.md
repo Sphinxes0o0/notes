@@ -6,7 +6,7 @@
 
 * CPP
     - [cpp basic](CPP\cpp.md)
-    - [现代CPP简介](CPP\modern_cpp.md)
+    - [现代CPP简介](CPP\ModernCpp.md)
     - [cpp stl](CPP\stl_reading_ntoes.md)
 
 * Linux
