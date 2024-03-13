@@ -1,0 +1,38 @@
+
+set nocompatible
+set encoding=utf-8
+set t_Co=256
+set number
+set cursorline
+set showmode
+set autoindent
+set smartindent
+set smarttab
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set hlsearch
+set incsearch
+set smartcase
+set noswapfile
+set nobackup
+set nowritebackup
+
+
+
+syntax enable
+
+filetype plugin on
+filetype indent on
+filetype plugin indent on
+
+syntax on
+
+call plug#begin()
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+call plug#end()
+
