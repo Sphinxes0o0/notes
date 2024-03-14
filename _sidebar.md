@@ -3,7 +3,7 @@
 
 * C
     - [C内存基础](C\memory.md)
-    - [C 数据结构回顾]
+    - C 数据结构回顾
         - [数组 & 链表](C\array_linkedlist.md)
         - [TODO: 栈 & 队列] 
         - [TODO: 树 & 哈希表]
