@@ -1,14 +1,7 @@
-# notes
 
-一些学习的零星记录
-一些想法的乱描乱画
+# About Me
 
-脑图:
-[gitmind](https://gitmind.cn/app/docs/mli1pvdj)
-
-## About Me
-
-### Hi there 👋
+## Hi there 👋
 
 - 🌱 I’m currently learning 🌱:
   - Linux Network
@@ -32,3 +25,6 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sphinxes0o0&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sphinxes0o0&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
+
+脑图:
+[gitmind](https://gitmind.cn/app/docs/mli1pvdj)
