@@ -82,41 +82,4 @@
 <p data-nodeid="35854"><strong data-nodeid="36014">那么通过这一讲的学习，你可以尝试来回答本讲关联的面试题目：缓冲区的 flip 操作是怎么回事</strong>？</p>
 <p data-nodeid="35855">【<strong data-nodeid="36020">解析</strong>】flip 操作意味翻转，是切换缓冲区的读写状态，在 flip 操作中，通常将 position 指针置 0，limit 指针不变。</p>
 <h3 data-nodeid="35856">思考题</h3>
-<p data-nodeid="35857">再给你出一道需要查资料的思考题目，在缓冲区的设计当中，还通常有一个 rewind 操作，这个操作是用来做什么的呢？</p>
-
-<p data-nodeid="35859">这一讲就到这里，发现求知的乐趣，我是林䭽。感谢你学习本次课程，下一讲我们将学习《12 | 网络 I/O 模型：BIO、NIO 和 AIO 有什么区别？》，再见！</p>
-
----
-
-### 精选评论
-
-##### **如：
-> rewind（文件指针） 使位置指针返回文件开头，无返回值，相当于重头读文件。
-
-##### *西：
-> 写的真好。
-
-##### Yeira：
-> rewind 操作将position设置为0，limit不变，为读取的有效数据做准备
-
-##### **7038：
-> rewind()在读写模式下都可用，它单纯的将当前位置置0，同时取消mark标记，仅此而已；也就是说写模式下limit仍保持与Buffer容量相同，只是重头写而已；读模式下limit仍然与rewind()调用之前相同，也就是为flip()调用之前写模式下的position的最后位置，flip()调用后此位置变为了读模式的limit位置，即越界位置，代码如下：1 public final Buffer rewind() { 
-2         position = 0; 
-3         mark = -1; 
-4         return this; 
-5 } flip()函数的作用是将写模式转变为读模式，即将写模式下的Buffer中内容的最后位置变为读模式下的limit位置，作为读越界位置，同时将当前读位置置为0，表示转换后重头开始读，同时再消除写模式下的mark标记，代码如下1 public final Buffer flip() { 
-2         limit = position; 
-3         position = 0; 
-4         mark = -1; 
-5         return this; 
-6  }
-
-##### **超：
-> 很好
-
-##### **钊：
-> 棒
-
-##### **男：
-> 将位置设为0，取消设置的Mark
-
+<p data-nodeid="35857">思考题目，在缓冲区的设计当中，还通常有一个 rewind 操作，这个操作是用来做什么的呢？</p>
