@@ -66,29 +66,4 @@ serverSocket.bind(<span class="hljs-keyword">new</span> InetSocketAddress(<span 
 <p data-nodeid="887">poll 提供了更优质的编程接口，但是本质和 select 模型相同。因此千级并发以下的 I/O，你可以考虑 select 和 poll，但是如果出现更大的并发量，就需要用 epoll 模型。</p>
 <p data-nodeid="888">epoll 模型在操作系统内核中提供了一个中间数据结构，这个中间数据结构会提供事件监听注册，以及快速判断消息关联到哪个线程的能力（红黑树实现）。因此在高并发 I/O 下，可以考虑 epoll 模型，它的速度更快，开销更小。</p>
 <h3 data-nodeid="889">思考题</h3>
-<p data-nodeid="890"><strong data-nodeid="1036">最后再给你出一道需要查资料的思考题目：请你找一个 epoll 的 hello world 例子，并尝试理解它</strong>。</p>
-<p data-nodeid="891">我建议你花些时间真正地思考一番，然后把答案整理在留言区，我们一起讨论。如果你对本次课程有什么建议和疑问，可以在评论区留言。如果你有所收获，也可以推荐给你的朋友。</p>
-<p data-nodeid="892" class="">这一讲就到这里，发现求知的乐趣，我是林䭽。感谢你学习本次课程，下一讲我们将学习“11 | 流和缓冲区：缓冲区的 flip 是怎么回事？” ，再见！</p>
-
----
-
-### 精选评论
-
-##### **明：
-> 这特么讲得太好了吧！
-
-##### **超：
-> 很好
-
-##### gopher：
-> 清晰易懂，比看博客舒服多了
-
-##### **林：
-> 讲的好，通俗易懂。
-
-##### *迟：
-> 请问一下老师的课件哪里可以下载
-
- ###### &nbsp;&nbsp;&nbsp; 编辑回复：
-> &nbsp;&nbsp;&nbsp; 可以添加班主任领取也可以在拉勾教育公众号回复课程关键词领取课件的
-
+<p data-nodeid="890"><strong data-nodeid="1036">思考题目：请你找一个 epoll 的 hello world 例子，并尝试理解它</strong>。</p>
