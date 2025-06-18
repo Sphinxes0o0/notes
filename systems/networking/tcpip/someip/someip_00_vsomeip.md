@@ -133,10 +133,10 @@ service_discovery_impl
 
 #### Init
 
-![](../imgs/vsomeip_source_routing_init.png)
+![](../../../../resources/imgs/tcpip/someip/vsomeip_source_routing_init.png)
 
 #### Start
-![](../imgs/vsomeip_source_routing_start.png)
+![](../../../../resources/imgs/tcpip/someip/vsomeip_source_routing_start.png)
 
 
 
@@ -144,7 +144,7 @@ service_discovery_impl
 
 daemon的主体就是一个vsomeip::application
 
-![](../imgs/vsomeip_source_daemon.png)
+![](../../../../resources/imgs/tcpip/someip/vsomeip_source_daemon.png)
 
 
 Application创建了一个routing_manager_impl的实例。
