@@ -120,7 +120,7 @@ $ nc cn.bing.com 80
 ```
 wireshark 抓包如下图：
 
-![image](../imgs/misc/2024-02-16-185503.png)
+![image](../resources/imgs/misc/2024-02-16-185503.png)
 
 
 * 使用本地 1234 端口与 www.baidu.com 的 80 端口建立一个 TCP 连接:
@@ -211,7 +211,7 @@ A 机器上：`~$ nc -l 12345`
 B 机器上：`~$ nc 192.168.71.127 12345`
 
 如图：
-![nc_chat](..\imgs\misc\2024-02-16-193158.png)
+![nc_chat](..\resources\imgs\misc\2024-02-16-193158.png)
 
 ### shell
 

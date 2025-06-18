@@ -1,30 +1,87 @@
+# 📚 Technical Notes Repository
 
-# About Me
+本仓库包含了系统编程、操作系统、网络、编程语言等技术领域的学习笔记和资料。
 
-## Hi there 👋
+## 📁 目录结构
 
-- 🌱 I’m currently learning 🌱:
-  - Linux Network
-    - TCP/IP
-    - virtio-net
-    - eBPF
-  - Rust / C / C++ / Python
-  - Android Network Stack
+### 🖥️ Programming (编程)
+- **`c_cpp/`** - C/C++ 语言相关
+  - 基础语法、现代C++特性
+  - STL库使用
+  - 内存管理、位运算等
+- **`algorithms/`** - 算法与数据结构
+  - 数据结构实现
+  - 算法分析
 
-- 👷 Skills (Some experiences in automotive embedded) 🏢:
-  - C/C++
-  - Python
-  - Shell
-  - QNX
-  - Android
-  
-- 💬/📫 How to reach me:
-  - 📧 sphinx.young@outlook.com
+### ⚙️ Systems (系统)
+- **`operating_systems/`** - 操作系统
+  - **`Linux/`** - Linux系统编程
+    - 系统调用、I/O机制
+    - 进程间通信(IPC)
+    - 内核调试、驱动开发
+    - eBPF技术
+  - **`Android/`** - Android系统
+    - 网络服务、以太网
+- **`networking/`** - 网络技术
+  - TCP/IP协议栈
+  - 网络工具使用
+  - Wi-Fi技术
+  - 网络I/O模型
+- **`embedded/`** - 嵌入式系统
+  - QNX系统编程
+  - 汽车电子相关
+- **通用系统主题**
+  - 线程编程
+  - ELF文件格式
+  - 编译器原理
+  - 加密技术
 
+### 📖 Courses (课程)
+- **`os_fundamentals/`** - 操作系统基础课程
+  - 完整的操作系统理论课程
+  - 包含练习题和解答
+- **`network_fundamentals/`** - 网络基础课程
+  - 网络协议详解
+  - 实战案例分析
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sphinxes0o0&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sphinxes0o0&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+### 🛠️ Tools (工具)
+- 实用工具配置和使用
+- 系统管理脚本
+- 开发环境配置
 
+### 📦 Resources (资源)
+- **`imgs/`** - 图片资源
+  - 技术图解、架构图
+  - 课程配图
+- **`docs/`** - 文档资源
+  - PDF参考文档
+  - 技术规范文档
+  - 外部资料
 
-脑图:
-[gitmind](https://gitmind.cn/app/docs/mli1pvdj)
+## 🚀 重构说明
+
+本仓库已完成目录结构重构，主要改进：
+
+1. **清晰分类**：按照编程、系统、课程、工具的逻辑进行分类
+2. **层次化组织**：相关内容集中管理，便于查找
+3. **统一命名**：采用一致的目录和文件命名规范
+4. **资源整合**：图片等资源文件统一管理
+
+## 📚 主要内容
+
+- **Linux系统编程**：从基础系统调用到内核机制的深入分析
+- **网络技术**：TCP/IP、SOME/IP等协议的详细解读
+- **C/C++编程**：现代C++特性、STL使用、内存管理
+- **操作系统理论**：完整的OS课程体系
+- **嵌入式开发**：QNX、汽车电子等领域的技术资料
+
+## 🔍 快速导航
+
+- 查看 `_sidebar.md` 获取完整的文档导航
+- 每个主目录下都有相应的专题文档
+- 图片资源统一存放在 `resources/imgs/` 目录
+- PDF等参考文档统一存放在 `resources/docs/` 目录
+
+---
+
+*最后更新：2024年6月*
