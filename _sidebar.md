@@ -10,6 +10,8 @@
   * [Object Creation](programming/c_cpp/object_creation_heap_or_stack.md)
   * [Bit Operations](programming/c_cpp/common_bit_operations.md)
   * [Computer Architecture](programming/c_cpp/computer_architecture_intro.md)
+  * [Compilers Overview](programming/compilers_overview.md)
+  * [Serialization](programming/serialization.md)
 
 * **Algorithms & Data Structures**
   * [Overview](programming/algorithms/datastructure/README.md)
@@ -28,12 +30,17 @@
     * [Linux Driver Basics](systems/operating_systems/Linux/drivers/linux_driver_basics.md)
     * [eBPF Basics](systems/operating_systems/Linux/ebpf/basic.md)
     * [eBPF Development](systems/operating_systems/Linux/ebpf/ebpf_development.md)
+    * [Thread Concepts](systems/operating_systems/Linux/thread.md)
+    * [ELF Format](systems/operating_systems/Linux/elf.md)
   * **Android**
     * [AOSP](systems/operating_systems/Android/AOSP.md)
     * [Network](systems/operating_systems/Android/network_basic.md)
 
 * **Networking**
   * [Network I/O Models](systems/networking/network_io_and_model.md)
+  * [OSI/PHY/MAC](systems/networking/osi_phy_mac.md)
+  * [PHY/MAC Layers](systems/networking/phy_mac.md)
+  * [Linux Network Devices](systems/networking/linux_network_devices_ascii_flow.md)
   * **TCP/IP**
     * [TCP Protocol](systems/networking/tcpip/tcp.md)
     * [TCP Overview](systems/networking/tcpip/tcp_overview.md)
@@ -57,13 +64,8 @@
 * **Security & Cryptography**
   * [Python Crypto Examples](systems/cryptography/)
 
-* **Others**
-  * [ELF Format](systems/elf.md)
-  * [Thread Concepts](systems/thread.md)
-  * [Serialization](systems/serialization.md)
-  * [OSI/PHY/MAC](systems/osi_phy_mac.md)
-  * [ASCII Flow](systems/ascii_flow.md)
-  * [Compilers](systems/compilers_00.md)
+* **Embedded Systems**
+  * [QNX Resource Manager](systems/embedded/qnx_resource_manager.md)
 
 ## 🎓 Courses
 * [OS Fundamentals](courses/os_fundamentals/)
