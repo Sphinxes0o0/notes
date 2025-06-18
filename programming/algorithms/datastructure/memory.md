@@ -60,7 +60,7 @@ tags:
 > `text` 段在内存中被映射为只读，但 `date` 段与 `bss` 段是可写的.
 
 
-![m](../imgs/memory.gif)
+![m](../../../resources/imgs/cc/memory.gif)
 
 
 > 代码段，数据段，堆栈段是cpu级别的概念，五大分区属于语言级别的概念
