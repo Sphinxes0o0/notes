@@ -22,10 +22,12 @@
   * **Linux**
     * [System Programming](systems/operating_systems/Linux/system_programming/linux_system_programming.md)
     * [Kernel Development](systems/operating_systems/Linux/kernel/linux_kernel_compile_debug.md)
+    * [System Basics](systems/operating_systems/Linux/sys/linux_system_basics.md)
     * [I/O Overview](systems/operating_systems/Linux/sys/linux_io_overview.md)
     * [IPC](systems/operating_systems/Linux/ipc/linux_ipc.md)
-    * [Drivers](systems/operating_systems/Linux/drivers/driver_00.md)
-    * [eBPF](systems/operating_systems/Linux/ebpf/basic.md)
+    * [Linux Driver Basics](systems/operating_systems/Linux/drivers/linux_driver_basics.md)
+    * [eBPF Basics](systems/operating_systems/Linux/ebpf/basic.md)
+    * [eBPF Development](systems/operating_systems/Linux/ebpf/ebpf_development.md)
   * **Android**
     * [AOSP](systems/operating_systems/Android/AOSP.md)
     * [Network](systems/operating_systems/Android/network_basic.md)
