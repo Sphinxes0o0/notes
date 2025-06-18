@@ -74,7 +74,7 @@ yshi10@dev:~/someip_space/vsomeip$ tree . -L 1
 ### implementation
 
 
-![arch](./imgs/00_overview_source_arch.png)
+![arch](../../../../resources/imgs/tcpip/someip/00_overview_source_arch.png)
 
 #### `impelemention`:
 ```bash
@@ -514,7 +514,7 @@ private:
 
 ### __runtime__
 
-![runtime](./imgs/vSOMEIP_source_runtime.png)
+![runtime](../../../../resources/imgs/tcpip/someip/vsomeip_source_runtime.png)
 
 上图为runtime 类在代码中与其他类的关系.
 
@@ -642,7 +642,7 @@ handler 类(调用client 传入的函数):
 
 ### __messgae & payload__
 
-![msg_arch](./imgs/vSOMEIP_source_messages_arch.png)
+![msg_arch](../../../../resources/imgs/tcpip/someip/vsomeip_source_messages_arch.png)
 
 message & payload 模块与其他模块之间的交互;
 主要负责 `set/get` 相关的属性(session, payload, id...), (反)序列化功能.
@@ -656,7 +656,7 @@ message & payload 模块与其他模块之间的交互;
 
 ### __endpoint__
 
-![ep](./imgs/vSOMEIP_endpoint.png)
+![ep](../../../../resources/imgs/tcpip/someip/vsomeip_endpoint.png)
 
 按功能分成如下:
 

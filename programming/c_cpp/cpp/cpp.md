@@ -19,7 +19,7 @@
 
 链接： 汇编程序生成的目标文件，即 `.o` 文件，并不会立即执行，因为可能会出现：`.cpp` 文件中的函数引用了另一个 `.cpp` 文件中定义的符号或者调用了某个库文件中的函数。那链接的目的就是将这些文件对应的目标文件连接成一个整体，从而生成可执行的程序文件。
 
-![cpp_overview_00](./imgs/cpp_overview_00.png)
+![cpp_overview_00](../../../resources/imgs/cc/cpp_overview_00.png)
 
 ### 链接分为两种：
 
@@ -34,12 +34,12 @@
 ### 二者的优缺点：
 
 #### 静态链接： 
-![static](img/../imgs/cpp_overview_01_static.png) 
+![static](../../../resources/imgs/cc/cpp_overview_01_static.png) 
 浪费空间，每个可执行程序都会有目标文件的一个副本，这样如果目标文件进行了更新操作，
 就需要重新进行编译链接生成可执行程序（更新困难）；优点就是执行的时候运行速度快，因为可执行程序具备了程序运行的所有内容。
 
 #### 动态链接：
-![dyn](imgs/cpp_overview_01_dyna.png)
+![dyn](../../../resources/imgs/cc/cpp_overview_01_dyna.png)
 
 节省内存、更新方便，但是动态链接是在程序运行时，每次执行都需要链接，相比静态链接会有一定的性能损失。
 
