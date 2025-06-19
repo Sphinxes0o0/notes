@@ -211,7 +211,7 @@ A 机器上：`~$ nc -l 12345`
 B 机器上：`~$ nc 192.168.71.127 12345`
 
 如图：
-![nc_chat](..\resources\imgs\misc\2024-02-16-193158.png)
+![nc_chat](../resources/imgs/misc/2024-02-16-193158.png)
 
 ### shell
 
