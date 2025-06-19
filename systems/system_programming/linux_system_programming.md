@@ -40,8 +40,6 @@
 （参见 3.4 节）。然后，外壳函数会返回到调用程序，并同时返回一个整型值，以表明系统
 调用是否成功。
 
-![execve](imgs/linux_system_exec_steps.png)
-
 
 ## 文件I/O
 
