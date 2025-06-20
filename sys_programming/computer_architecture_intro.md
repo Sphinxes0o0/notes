@@ -474,7 +474,7 @@ Kernel 运行在超级权限模式下，所以拥有很高的权限。
 也可以简单理解为信号是某种形式上的软中断
 
 可运行kill -l查看Linux支持的信号列表：
-
+```bash
 kill -l
  1) SIGHUP  2) SIGINT  3) SIGQUIT  4) SIGILL  5) SIGTRAP
  2) SIGABRT  7) SIGBUS  8) SIGFPE  9) SIGKILL 10) SIGUSR1
@@ -489,6 +489,7 @@ kill -l
 9)  SIGRTMAX-11 54) SIGRTMAX-10 55) SIGRTMAX-9 56) SIGRTMAX-8 57) SIGRTMAX-7
 10) SIGRTMAX-6 59) SIGRTMAX-5 60) SIGRTMAX-4 61) SIGRTMAX-3 62) SIGRTMAX-2
 11) SIGRTMAX-1 64) SIGRTMAX
+```
 
 「几个常用的信号：」
 

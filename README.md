@@ -4,14 +4,14 @@
 
 ## 📁 目录结构
 
-### 🖥️ Programming (编程)
-- **Programming** - 编程相关
-  - [C Programming](programming/c/c.md) - C语言基础
-  - [C++ Programming](programming/cpp/cpp.md) - C++语言特性
-  - [Object Creation](programming/cpp/object_creation_heap_or_stack.md) - 内存管理
-  - [Bit Operations](programming/common_bit_operations.md) - 位运算技巧
-  - [Compilation Process](programming/compilation_process.md) - 编译过程
-  - [Serialization](programming/serialization.md) - 序列化技术
+### 🖥️ Programming Languages (编程语言)
+- **Programming Languages** - 编程语言相关
+  - [C Programming](languages/c/c.md) - C语言基础
+  - [C++ Programming](languages/cpp/cpp.md) - C++语言特性
+  - [Object Creation](languages/cpp/object_creation_heap_or_stack.md) - 内存管理
+  - [Bit Operations](languages/common_bit_operations.md) - 位运算技巧
+  - [Compilation Process](languages/compilation_process.md) - 编译过程
+  - [Serialization](languages/serialization.md) - 序列化技术
 
 ### ⚙️ Systems (系统)
 - **Operating Systems** - 操作系统
@@ -22,34 +22,36 @@
     - [eBPF Basics](os/Linux/ebpf/basic.md) - eBPF技术入门
 
 - **System Programming** - 系统编程
-  - [Linux System Programming](systems/system_programming/linux_system_programming.md) - Linux系统编程
-  - [ELF Format](systems/system_programming/elf.md) - ELF文件格式
-  - [Computer Architecture](systems/computer_architecture_intro.md) - 计算机体系结构
-  - [IPC](systems/ipc/linux_ipc.md) - 进程间通信
+  - [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md) - Linux系统编程
+  - [ELF Format](sys_programming/fundamentals/elf.md) - ELF文件格式
+  - [Computer Architecture](sys_programming/computer_architecture_intro.md) - 计算机体系结构
+  - [IPC](sys_programming/ipc/linux_ipc.md) - 进程间通信
 
-- **Networking** - 网络技术
-  - [OSI/PHY/MAC](systems/networking/osi_phy_mac.md) - 网络协议栈
-  - [PHY/MAC Layers](systems/networking/phy_mac.md) - 物理层和MAC层
-  - [Linux Network Devices](systems/networking/linux_network_devices_ascii_flow.md) - Linux网络设备
-  - **TCP/IP**
-    - [TCP Protocol](systems/networking/tcpip/tcp.md) - TCP协议
-    - [TCP Overview](systems/networking/tcpip/tcp_overview.md) - TCP概述
-    - [IP Protocol](systems/networking/tcpip/ip.md) - IP协议
-    - [BBR Algorithm](systems/networking/tcpip/bbr.md) - BBR拥塞控制
-    - [DoIP](systems/networking/tcpip/doip.md) - DoIP协议
-    - **SOME/IP**
-      - [Overview](systems/networking/tcpip/someip/someip_overview.md) - SOME/IP概述
-      - [vSOMEIP](systems/networking/tcpip/someip/someip_00_vsomeip.md) - vSOMEIP介绍
-      - [Implementation](systems/networking/tcpip/someip/vsomeip.md) - vSOMEIP实现
-      - [Source Reading](systems/networking/tcpip/someip/vsomeip_source_reading.md) - 源码阅读
-      - [Source Analysis](systems/networking/tcpip/someip/someip_source_analysis.md) - 源码分析
-      - [Configuration](systems/networking/tcpip/someip/someip_configuration.md) - 配置说明
-      - [Service Discovery](systems/networking/tcpip/someip/service_discovery.md) - 服务发现
-      - [Security](systems/networking/tcpip/someip/vsomeip_security.md) - 安全机制
-      - [Adaptive Platform](systems/networking/tcpip/someip/someip_ap.md) - 自适应平台
+### 🌐 Networking (网络)
+- **Basic Concepts** - 基础概念
+  - [OSI/PHY/MAC Layers](network/osi_phy_mac.md) - 网络协议栈
+  - [Linux Network Devices](network/linux_network_devices_ascii_flow.md) - Linux网络设备
+  
+- **TCP/IP Stack** - TCP/IP协议栈
+  - [TCP Protocol](network/tcpip/tcp.md) - TCP协议
+  - [TCP Overview](network/tcpip/tcp_overview.md) - TCP概述
+  - [IP Protocol](network/tcpip/ip.md) - IP协议
+  - [BBR Algorithm](network/tcpip/bbr.md) - BBR拥塞控制
+  - [DoIP](network/tcpip/doip.md) - DoIP协议
+  
+- **SOME/IP** - 面向服务的中间件
+  - [Overview](network/someip/someip_overview.md) - SOME/IP概述
+  - [vSOMEIP](network/someip/someip_00_vsomeip.md) - vSOMEIP介绍
+  - [Implementation](network/someip/vsomeip.md) - vSOMEIP实现
+  - [Source Reading](network/someip/vsomeip_source_reading.md) - 源码阅读
+  - [Source Analysis](network/someip/someip_source_analysis.md) - 源码分析
+  - [Configuration](network/someip/someip_configuration.md) - 配置说明
+  - [Service Discovery](network/someip/service_discovery.md) - 服务发现
+  - [Security](network/someip/vsomeip_security.md) - 安全机制
+  - [Adaptive Platform](network/someip/someip_ap.md) - 自适应平台
 
-- **Security & Cryptography** - 安全与密码学
-  - [Crypto Algorithms](systems/cryptography/) - 密码学算法
+- **DDS** - 数据分发服务
+  - [Getting Started](network/dds/README.md) - DDS入门
 
 ### 📖 Courses (课程)
 
@@ -109,16 +111,21 @@
 
 本仓库已完成目录结构重构，主要改进：
 
-1. **清晰分类**：按照编程、系统、课程、工具的逻辑进行分类
-2. **层次化组织**：相关内容集中管理，便于查找
-3. **统一命名**：采用一致的目录和文件命名规范
-4. **资源整合**：图片等资源文件统一管理
-5. **链接导航**：所有文档都可以直接点击访问
+1. **清晰分类**：将网络相关内容独立成 `network` 目录，系统编程内容整合到 `sys_programming`
+2. **层次化组织**：
+   - `network/` - 所有网络相关内容（TCP/IP, SOME/IP, DDS等）
+   - `sys_programming/` - 系统编程相关内容
+     - `fundamentals/` - 系统编程基础（Linux系统编程、ELF等）
+   - `languages/` - 编程语言相关（C/C++、编译原理等）
+   - `courses/` - 学习课程
+3. **模块化设计**：相关内容集中管理，便于扩展和维护
+4. **统一命名**：采用更明确的目录命名规范
+5. **资源整合**：图片等资源文件统一管理
 
 ## 📚 主要内容
 
 - **Linux系统编程**：从基础系统调用到内核机制的深入分析
-- **网络技术**：TCP/IP、SOME/IP等协议的详细解读
+- **网络技术**：TCP/IP、SOME/IP、DDS等协议的详细解读
 - **C/C++编程**：现代C++特性、STL使用、内存管理
 - **操作系统理论**：完整的OS课程体系
 - **嵌入式开发**：QNX、汽车电子等领域的技术资料
