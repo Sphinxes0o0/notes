@@ -2,12 +2,12 @@
 
 ## 📚 Programming & Computer Science
 * **Programming Languages**
-  * [C Programming](programming/c/c.md)
-  * [C++ Programming](programming/cpp/cpp.md)
-    * [Object Creation](programming/cpp/object_creation_heap_or_stack.md)
-  * [Bit Operations](programming/common_bit_operations.md)
-  * [Compilation Process](programming/compilation_process.md)
-  * [Serialization](programming/serialization.md)
+  * [C Programming](languages/c/c.md)
+  * [C++ Programming](languages/cpp/cpp.md)
+    * [Object Creation](languages/cpp/object_creation_heap_or_stack.md)
+  * [Bit Operations](languages/common_bit_operations.md)
+  * [Compilation Process](languages/compilation_process.md)
+  * [Serialization](languages/serialization.md)
 
 ## 🖥️ Systems & Infrastructure
 * **Operating Systems**
@@ -18,31 +18,36 @@
     * [eBPF Basics](os/Linux/ebpf/basic.md)
 
 * **System Programming**
-  * [Linux System Programming](systems/system_programming/linux_system_programming.md)
-  * [ELF Format](systems/system_programming/elf.md)
-  * [Computer Architecture](systems/computer_architecture_intro.md)
-  * [IPC](systems/ipc/linux_ipc.md)
+  * [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md)
+  * [ELF Format](sys_programming/fundamentals/elf.md)
+  * [Computer Architecture](sys_programming/computer_architecture_intro.md)
+  * [IPC](sys_programming/ipc/linux_ipc.md)
 
-* **Networking**
-  * [OSI/PHY/MAC Layers](systems/networking/osi_phy_mac.md)
-  * [Linux Network Devices](systems/networking/linux_network_devices_ascii_flow.md)
-  * **TCP/IP**
-    * [TCP Protocol](systems/networking/tcpip/tcp.md)
-    * [TCP Overview](systems/networking/tcpip/tcp_overview.md)
-    * [IP Protocol](systems/networking/tcpip/ip.md)
-    * [BBR Algorithm](systems/networking/tcpip/bbr.md)
-    * [DoIP](systems/networking/tcpip/doip.md)
-  * **SOME/IP**
-    * [Overview](systems/networking/tcpip/someip/someip_overview.md)
-    * [vSOMEIP](systems/networking/tcpip/someip/someip_00_vsomeip.md)
-    * [vSOMEIP Implementation](systems/networking/tcpip/someip/vsomeip.md)
-    * [Source Reading](systems/networking/tcpip/someip/vsomeip_source_reading.md)
-    * [Source Analysis](systems/networking/tcpip/someip/someip_source_analysis.md)
-    * [Configuration](systems/networking/tcpip/someip/someip_configuration.md)
-    * [Service Discovery](systems/networking/tcpip/someip/service_discovery.md)
-    * [Security](systems/networking/tcpip/someip/vsomeip_security.md)
-    * [Adaptive Platform](systems/networking/tcpip/someip/someip_ap.md)
+## 🌐 Networking
+* **Basic Concepts**
+  * [OSI/PHY/MAC Layers](network/osi_phy_mac.md)
+  * [Linux Network Devices](network/linux_network_devices_ascii_flow.md)
+  
+* **TCP/IP Stack**
+  * [TCP Protocol](network/tcpip/tcp.md)
+  * [TCP Overview](network/tcpip/tcp_overview.md)
+  * [IP Protocol](network/tcpip/ip.md)
+  * [BBR Algorithm](network/tcpip/bbr.md)
+  * [DoIP](network/tcpip/doip.md)
+  
+* **SOME/IP**
+  * [Overview](network/someip/someip_overview.md)
+  * [vSOMEIP](network/someip/someip_00_vsomeip.md)
+  * [vSOMEIP Implementation](network/someip/vsomeip.md)
+  * [Source Reading](network/someip/vsomeip_source_reading.md)
+  * [Source Analysis](network/someip/someip_source_analysis.md)
+  * [Configuration](network/someip/someip_configuration.md)
+  * [Service Discovery](network/someip/service_discovery.md)
+  * [Security](network/someip/vsomeip_security.md)
+  * [Adaptive Platform](network/someip/someip_ap.md)
 
+* **DDS**
+  * [Getting Started](network/dds/README.md)
 
 ## 🎓 Courses
 * **Data Structures & Algorithms**
