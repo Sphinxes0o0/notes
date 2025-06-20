@@ -12,15 +12,14 @@
 ## 🖥️ Systems & Infrastructure
 * **Operating Systems**
   * **Linux**
-    * [Kernel Development](os/Linux/kernel/linux_kernel_compile_debug.md)
-    * [Driver Basics](os/Linux/drivers/linux_driver_basics.md)
+    * [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md)
     * [VirtIO Network](os/Linux/drivers/virtio_network.md)
     * [eBPF Basics](os/Linux/ebpf/basic.md)
 
 * **System Programming**
+  * [Computer Architecture](sys_programming/computer_architecture_intro.md)
   * [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md)
   * [ELF Format](sys_programming/fundamentals/elf.md)
-  * [Computer Architecture](sys_programming/computer_architecture_intro.md)
   * [IPC](sys_programming/ipc/linux_ipc.md)
 
 ## 🌐 Networking

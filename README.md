@@ -16,8 +16,7 @@
 ### ⚙️ Systems (系统)
 - **Operating Systems** - 操作系统
   - **Linux**
-    - [Kernel Development](os/Linux/kernel/linux_kernel_compile_debug.md) - 内核开发调试
-    - [Driver Basics](os/Linux/drivers/linux_driver_basics.md) - 驱动开发基础
+    - [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md) - Linux内核开发入门
     - [VirtIO Network](os/Linux/drivers/virtio_network.md) - VirtIO网络驱动
     - [eBPF Basics](os/Linux/ebpf/basic.md) - eBPF技术入门
 
