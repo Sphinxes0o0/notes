@@ -35,22 +35,14 @@
 - [Linux Network Devices](network/linux_network_devices_ascii_flow.md) - Linux网络设备
 
 ### TCP/IP Stack - TCP/IP协议栈
-- [TCP Protocol](network/tcpip/tcp.md) - TCP协议
-- [TCP Overview](network/tcpip/tcp_overview.md) - TCP概述
+- [TCP 协议详解](network/tcpip/tcp.md) - TCP协议完整指南（包含连接管理、拥塞控制、性能优化等）
 - [IP Protocol](network/tcpip/ip.md) - IP协议
-- [BBR Algorithm](network/tcpip/bbr.md) - BBR拥塞控制
 - [DoIP](network/tcpip/doip.md) - DoIP协议
 
 ### SOME/IP - 面向服务的中间件
-- [Overview](network/someip/someip_overview.md) - SOME/IP概述
-- [vSOMEIP](network/someip/someip_00_vsomeip.md) - vSOMEIP介绍
-- [Implementation](network/someip/vsomeip.md) - vSOMEIP实现
-- [Source Reading](network/someip/vsomeip_source_reading.md) - 源码阅读
-- [Source Analysis](network/someip/someip_source_analysis.md) - 源码分析
-- [Configuration](network/someip/someip_configuration.md) - 配置说明
-- [Service Discovery](network/someip/service_discovery.md) - 服务发现
-- [Security](network/someip/vsomeip_security.md) - 安全机制
-- [Adaptive Platform](network/someip/someip_ap.md) - 自适应平台
+- [vSOMEIP 入门](network/someip/vsomeip.md) - vSOMEIP完整指南（包含架构、配置、实现等）
+- [Security](network/someip/vsomeip_security.md) - 安全机制分析
+- [Adaptive Platform](network/someip/someip_ap.md) - Vector AUTOSAR自适应平台集成
 
 ### DDS - 数据分发服务
 - [Getting Started](network/dds/README.md) - DDS入门

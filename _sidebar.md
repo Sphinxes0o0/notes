@@ -36,10 +36,8 @@
   * [Linux Network Devices](network/linux_network_devices_ascii_flow.md)
   
 * **TCP/IP Stack**
-  * [TCP Protocol](network/tcpip/tcp.md)
-  * [TCP Overview](network/tcpip/tcp_overview.md)
+  * [TCP 协议详解](network/tcpip/tcp.md)
   * [IP Protocol](network/tcpip/ip.md)
-  * [BBR Algorithm](network/tcpip/bbr.md)
   * [DoIP](network/tcpip/doip.md)
   
 * **SOME/IP**
