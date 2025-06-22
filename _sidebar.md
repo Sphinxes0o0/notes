@@ -61,7 +61,7 @@
   * [07 数组](courses/datastructure/07_数组_如何实现基于索引的查找.md)
   * [08 字符串](courses/datastructure/08_字符串_如何正确回答面试中高频考察的字符串匹配算法.md)
   * [09 树和二叉树](courses/datastructure/09_树和二叉树_分支关系与层次结构下_如何有效实现增删查.md)
-  * [10 哈希表](courses/datastructure/10_哈希表_如何利用好高效率查找的"利器".md)
+  * [10 哈希表](courses/datastructure/10_哈希表_如何利用好高效率查找的利器.md)
   * [11 递归](courses/datastructure/11_递归_如何利用递归求解汉诺塔问题.md)
   * [12 分治](courses/datastructure/12_分治_如何利用分治法完成数据查找.md)
   * [13 排序](courses/datastructure/13_排序_经典排序算法原理解析与优劣对比.md)
