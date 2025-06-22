@@ -11,16 +11,15 @@
 
 
 ## 🖥️ Programming Languages (编程语言)
-### Programming Languages - 编程语言相关
 
-#### C
+### C
 - [C Programming](languages/c/c.md) - C语言基础
 
-#### CPP
+### CPP
 - [C++ Programming](languages/cpp/cpp.md) - C++语言特性
 - [Object Creation](languages/cpp/object_creation_heap_or_stack.md) - 内存管理
 
-#### Misc
+### Misc
 - [Bit Operations](languages/common_bit_operations.md) - 位运算技巧
 - [Compilation Process](languages/compilation_process.md) - 编译过程
 - [Serialization](languages/serialization.md) - 序列化技术
