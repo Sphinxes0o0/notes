@@ -109,11 +109,7 @@
 - [Remove Snap](tools/remove_snap.md) - 移除Snap
 
 ## 📦 Resources (资源)
-### Images - 图片资源
-- 技术图解、架构图
-- 课程配图
 
-### Documents - 文档资源
 - [Networking PDFs](resources/docs/networking/) - 网络技术PDF
 - [SOME/IP PDFs](resources/docs/someip/) - SOME/IP相关PDF
 - [Rust PDFs](resources/docs/rust/) - Rust学习资料
