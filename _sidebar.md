@@ -49,7 +49,7 @@
   * [Getting Started](network/dds/README.md)
 
 ## 🎓 Courses
-* **Data Structures & Algorithms**
+### Data Structures & Algorithms
   * [开篇词](courses/datastructure/开篇词_数据结构与算法_应该这样学.md)
   * [01 复杂度](courses/datastructure/01_复杂度_如何衡量程序运行的效率.md)
   * [02 数据结构](courses/datastructure/02_数据结构_将昂贵的时间复杂度转换成廉价的空间复杂度.md)
@@ -70,7 +70,7 @@
   * [Array & LinkedList](courses/datastructure/array_linkedlist.md)
   * [练习题详解](courses/datastructure/加餐_课后练习题详解.md)
 
-* **Operating Systems Fundamentals**
+### Operating Systems Fundamentals
   * [01 计算机是什么](courses/os_fundamentals/01_计算机是什么.md)
   * [02 程序执行(上)](courses/os_fundamentals/02_程序的执行_相比_32_位_64_位的优势是什么(上).md)
   * [03 程序执行(下)](courses/os_fundamentals/03_程序的执行_相比_32_位_64_位的优势是什么(下).md)
@@ -78,7 +78,7 @@
   * [05 存储器分级](courses/os_fundamentals/05_存储器分级_L1_Cache_比内存和_SSD_快多少倍.md)
   * [39 Linux架构](courses/os_fundamentals/39_Linux_架构优秀在哪里.md)
 
-* **Network Fundamentals**
+### Network Fundamentals
   * [01 移动网络](courses/network_fundamentals/01_漫游互联网_什么是蜂窝移动网络.md)
   * [02 TCP协议](courses/network_fundamentals/02_传输层协议_TCP_TCP_为什么握手是_3_次_挥手是_4_次.md)
   * [03 TCP封包](courses/network_fundamentals/03_TCP_的封包格式_TCP_为什么要粘包和拆包.md)
