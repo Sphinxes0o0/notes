@@ -12,21 +12,26 @@
 
 ## 🖥️ Programming Languages (编程语言)
 ### Programming Languages - 编程语言相关
+
+#### C
 - [C Programming](languages/c/c.md) - C语言基础
+
+#### CPP
 - [C++ Programming](languages/cpp/cpp.md) - C++语言特性
 - [Object Creation](languages/cpp/object_creation_heap_or_stack.md) - 内存管理
+
+#### Misc
 - [Bit Operations](languages/common_bit_operations.md) - 位运算技巧
 - [Compilation Process](languages/compilation_process.md) - 编译过程
 - [Serialization](languages/serialization.md) - 序列化技术
 
-## ⚙️ Systems (系统)
-### Operating Systems - 操作系统
-#### Linux
+## Operating Systems - 操作系统
+### Linux
 - [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md) - Linux内核开发入门
 - [VirtIO Network](os/Linux/drivers/virtio_network.md) - VirtIO网络驱动
 - [eBPF Basics](os/Linux/ebpf/basic.md) - eBPF技术入门
 
-### System Programming - 系统编程
+## System Programming - 系统编程
 - [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md) - Linux系统编程
 - [ELF Format](sys_programming/fundamentals/elf.md) - ELF文件格式
 - [Computer Architecture](sys_programming/computer_architecture_intro.md) - 计算机体系结构
