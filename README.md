@@ -6,6 +6,7 @@
 
 ### C
 - [C Programming](languages/c/c.md) - C语言基础
+- [Memory Management](languages/c/memory_management.md) - C语言内存管理详解
 
 ### CPP
 - [C++ Programming](languages/cpp/cpp.md) - C++语言特性

@@ -3,6 +3,7 @@
 ## 📚 Programming & Computer Science
 * **Programming Languages**
   * [C Programming](languages/c/c.md)
+    * [Memory Management](languages/c/memory_management.md)
   * [C++ Programming](languages/cpp/cpp.md)
     * [STL Containers](languages/cpp/containers/)
       * [array](languages/cpp/containers/array.md)
