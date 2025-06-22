@@ -1,9 +1,6 @@
 # 📚 Technical Notes Repository
 
-
-## 📚 主要内容
 本仓库主要是个人整理记录的操作系统、网络、系统编程、编程语言等学习笔记和资料
-
 
 ## 🖥️ Programming Languages (编程语言)
 
