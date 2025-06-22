@@ -1,9 +1,11 @@
 * [Home](README.md)
 
-## 📚 Programming & Computer Science
-* **Programming Languages**
+## 📚 Programming
+### C
   * [C Programming](languages/c/c.md)
     * [Memory Management](languages/c/memory_management.md)
+
+### C++
   * [C++ Programming](languages/cpp/cpp.md)
     * [STL Containers](languages/cpp/containers/)
       * [array](languages/cpp/containers/array.md)
@@ -14,39 +16,40 @@
       * [stack](languages/cpp/containers/stack.md)
       * [unordered_map](languages/cpp/containers/unordered_map.md)
     * [Object Creation](languages/cpp/object_creation_heap_or_stack.md)
+### Misc
   * [Bit Operations](languages/common_bit_operations.md)
   * [Compilation Process](languages/compilation_process.md)
   * [Serialization](languages/serialization.md)
 
 ## 🖥️ Systems & Infrastructure
-* **Operating Systems**
+### Operating Systems
   * **Linux**
     * [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md)
     * [VirtIO Network](os/Linux/drivers/virtio_network.md)
     * [eBPF Basics](os/Linux/ebpf/basic.md)
 
-* **System Programming**
+### System Programming
   * [Computer Architecture](sys_programming/computer_architecture_intro.md)
   * [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md)
   * [ELF Format](sys_programming/fundamentals/elf.md)
   * [IPC](sys_programming/ipc/linux_ipc.md)
 
 ## 🌐 Networking
-* **Basic Concepts**
+### Basic Concepts
   * [OSI/PHY/MAC Layers](network/osi_phy_mac.md)
   * [Linux Network Devices](network/linux_network_devices_ascii_flow.md)
   
-* **TCP/IP Stack**
+### TCP/IP Stack
   * [TCP 协议详解](network/tcpip/tcp.md)
   * [IP Protocol](network/tcpip/ip.md)
   * [DoIP](network/tcpip/doip.md)
   
-* **SOME/IP**
+### SOME/IP
   * [vSOMEIP 入门](network/someip/vsomeip.md)
   * [Security](network/someip/vsomeip_security.md)
   * [Adaptive Platform](network/someip/someip_ap.md)
 
-* **DDS**
+### DDS
   * [Getting Started](network/dds/README.md)
 
 ## 🎓 Courses
