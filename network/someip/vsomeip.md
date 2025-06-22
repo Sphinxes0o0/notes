@@ -1,17 +1,42 @@
 
-# VSOMEIP 源码学习分享 之 手摸手编译安装
+# vSOMEIP 入门
 
+## 简介和概述
 
-### Content:
+### 什么是 vSOMEIP
 
+vSOMEIP 是 GENIVI 项目中的一个 SOME/IP 开源实现，基于 Mozilla Public License v2.0 协议开源，由 BMW 贡献。
+
+vSOMEIP 提供了两个动态库：
+* **SOME/IP协议的实现库** `libvsomeip.so`
+* **用于服务发现的库** `libvsomeip-sd.so`
+
+### 主要特性
+
+* 支持设备之间的 SOME/IP 通讯
+* 支持设备本地的进程间通讯（通过 unix socket 完成）
+* 基于 boost.asio 的异步 IO 库实现
+* 通过 Routing Manager 统一管理服务发现和外部通讯 socket
+* 支持 JSON 配置文件进行配置管理
+
+### 通讯架构
+
+vSOMEIP 应用通过一个 **Routing Manager** 与其他设备进行通讯：
+- Routing Manager 统一负责服务发现以及外部通讯 socket 的管理
+- 一个设备上的多个 vSOMEIP 应用共用一个 Routing Manager
+- 默认第一个启动的 vSOMEIP 应用负责启动 Routing Manager
+- 其他应用通过 proxy 与 Routing Manager 进行通讯
+
+vSOMEIP 应用可以通过 JSON 文件来进行配置，配置项包含：自身IP，应用名字，负责启动 Routing Manager 的应用，应用日志，服务发现的广播地址，广播间隔等。
+
+### 内容目录
 
 1. 源码结构
-
 2. 环境和编译
-
-3. 核心内容  
-  3.1 模块  
-  3.2 配置 TODO
+3. 核心模块
+4. 实现细节
+5. 配置管理
+6. 高级主题
 
 
 
@@ -37,6 +62,19 @@
 ---------------------
 
 ```
+
+### 代码分层结构
+
+vSOMEIP 的代码主要分成如下四大部分：
+
+* **daemon** - 守护进程
+* **implementation** - 具体实现
+* **interface** - 接口定义
+  - runtime
+  - application
+  - message
+  - payload
+* **tool & examples** - 工具和示例
 
 ---
 
@@ -199,18 +237,62 @@ mkdir build;cd build;
 cmake ..
 
 ##  自定义的CMake配置
-# install path
+
+#### DCMAKE_INSTALL_PREFIX
+安装位置
+```bash
 cmake -DCMAKE_INSTALL_PREFIX:PATH=$YOUR_PATH ..
-# ip addr
+```
+
+#### DBASE_PATH
+创建 local sockets 位置，默认为 `/tmp/vsomeip*`
+```bash
+cmake -DBASE_PATH=<YOUR BASE PATH> ..
+```
+
+#### DUNICAST_ADDRESS
+组播 address
+```bash
 cmake -DUNICAST_ADDRESS=<YOUR IP ADDRESS> ..
-# diagnosis addr ()
+```
+
+#### DDIAGNOSIS_ADDRESS
+诊断 address，默认为 `0x01`
+```bash
 cmake -DDIAGNOSIS_ADDRESS=<YOUR DIAGNOSIS ADDRESS> ..
-# configuration folder
+```
+
+#### DDEFAULT_CONFIGURATION_FOLDER
+配置文件目录，默认为 `/etc/vsomeip`
+```bash
 cmake -DDEFAULT_CONFIGURATION_FOLDER=<DEFAULT CONFIGURATION FOLDER> ..
-# default configuration file
+```
+
+#### DDEFAULT_CONFIGURATION_FILE
+默认配置文件，默认为 `/etc/vsomeip.json`
+```bash
 cmake -DDEFAULT_CONFIGURATION_FILE=<DEFAULT CONFIGURATION FILE> ..
-# signal handling
+```
+
+#### DENABLE_SIGNAL_HANDLING
+开启 signal handling
+```bash
 cmake -DENABLE_SIGNAL_HANDLING=1 ..
+```
+
+#### DROUTING_READY_MESSAGE
+自定义完成 IP routing 后的通知消息
+```bash
+cmake -DROUTING_READY_MESSAGE=<YOUR MESSAGE> ..
+```
+
+#### VSOMEIP_APPLICATION_NAME
+通过环境变量定义启动的程序名字
+```bash
+export VSOMEIP_APPLICATION_NAME=my_vsomeip_client \
+export VSOMEIP_CONFIGURATION=my_settings.json \
+./my_vsomeip_application
+```
 
 make
 
@@ -494,21 +576,29 @@ private:
 ```
 
 
-### Plugin
+### Plugin 系统
+
+#### Plugin 管理
+
+vSOMEIP 允许 Application 加载一到多个 Plugin。
+当 Application 的状态发生变化时，这个变化会被通知到 Plugin。
+在通知的时候会附带 Application 的名称，用于 Plugin 进行区别对待。
+
+Application 的状态有三种，分别为：
+* **Initialized** - 初始化完成
+* **Started** - 已启动  
+* **Stopped** - 已停止
+
+#### Plugin 功能函数
 
 装卸载插件, 加载库和导入符号表
 
 * get_plugin
-
 * load_plugin
-
 * load_library
-
 * load_symbol
-
 * add_plugin
-
-* unload_plugi
+* unload_plugin
 
 
 
@@ -640,12 +730,32 @@ handler 类(调用client 传入的函数):
 - notify_one 
 
 
-### __messgae & payload__
+### __message & payload__
 
 ![msg_arch](../../../../resources/imgs/tcpip/someip/vsomeip_source_messages_arch.png)
 
-message & payload 模块与其他模块之间的交互;
-主要负责 `set/get` 相关的属性(session, payload, id...), (反)序列化功能.
+#### Message 类型
+
+无论是 Request、Response 还是 Notification，本质上都是一种 Message。
+
+从某种意义上来说，Message 可以分成两类：
+- **通用 Message** - 普通的业务消息
+- **服务发现相关的 Message** - SD 相关消息
+
+#### 功能说明
+
+Message & Payload 模块与其他模块之间的交互，主要负责：
+- `set/get` 相关的属性(session, payload, id...)
+- (反)序列化功能
+
+Message 类提供了编串和解串功能，用于进行数据通讯，本质上它封装了 SOME/IP 的消息头。
+所以，它还提供了一系列方法来设置或者读取详细的消息头信息。
+
+#### Payload
+
+Message 的主体。也就是排除消息头之后剩下的部分。
+
+#### 实现文件
 
 由以下 `.cpp` 文件实现功能:
 
@@ -658,17 +768,34 @@ message & payload 模块与其他模块之间的交互;
 
 ![ep](../../../../resources/imgs/tcpip/someip/vsomeip_endpoint.png)
 
+#### Endpoint 分类
+
+每个具有 vSOMEIP 功能的进程都是一个 Endpoint。
+Endpoint 分成六大类：
+
+##### Client Endpoints
+- **local-client** - 本地客户端
+- **udp-client** - UDP 客户端
+- **tcp-client** - TCP 客户端
+
+##### Server Endpoints
+- **local-server** - 本地服务端
+- **udp-server** - UDP 服务端
+- **tcp-server** - TCP 服务端
+
+#### 实现结构
+
 按功能分成如下:
 
-#### client  
-  base: client_endpoint_impl.cpp
-  - remote (udp/tcp): udp/tcp_client_endpoint_impl.cpp
-  - local(Unix Domain): local_client_endpoint_impl.cpp
+##### Client 实现
+base: client_endpoint_impl.cpp
+- remote (udp/tcp): udp/tcp_client_endpoint_impl.cpp
+- local(Unix Domain): local_client_endpoint_impl.cpp
 
-#### server  
-  base: server_endpoint_impl.cpp
-  - remote (udp/tcp): udp/tcp_server_endpoint_impl.cpp
-  - local(Unix Domain): server_client_endpoint_impl.cpp
+##### Server 实现
+base: server_endpoint_impl.cpp
+- remote (udp/tcp): udp/tcp_server_endpoint_impl.cpp
+- local(Unix Domain): server_client_endpoint_impl.cpp
 
 #### 以`local_client_endpoint_impl` 为例子
 
@@ -845,16 +972,226 @@ tp_split_messages_t tp::tp_split_message(const std::uint8_t * const _data, std::
 ---
 ### __routing__
 
+#### Routing 概述
+
+每个系统中只能有一个 vSOMEIP 服务被配置成 Routing。
+
+如果没有特别的设定，那么系统中被运行的第一个具备 vSOMEIP 功能的程序会被作为 Routing Manager。
+
+#### Routing 组件
+
 * event
 * eventgroupinfo
 * remote_subscription
 * serviceinfo
 * manager
 
+#### Routing 生命周期
+
+##### 初始化
+![](../../../../resources/imgs/tcpip/someip/vsomeip_source_routing_init.png)
+
+##### 启动过程
+![](../../../../resources/imgs/tcpip/someip/vsomeip_source_routing_start.png)
+
 
 ### __service discovery__
 
+#### Service Discovery 流程
 
+##### 初始化
+```mermaid
+graph TD;
+    service_discovery_impl == init -.- 
+    parse_confguration -.->
+    service_discovery_imple;
+```
+
+##### 启动过程
+```mermaid
+graph TD;
+
+service_discovery_impl
+ == start 
+ -.-> create_service_discovery_endpoint 
+ -.-> create_server_endpoint 
+ == join_sd_multicast
+--> endpoint
+```
+
+---
+
+## 配置管理
+
+### JSON 配置详解
+
+vSOMEIP 应用可以通过 JSON 文件来进行详细配置，主要配置项包含以下内容：
+
+#### 网络配置
+
+##### unicast
+主机系统的 IP 地址。
+
+##### netmask  
+指定主机系统子网的网络掩码。
+
+##### device
+如果指定，IP endpoints 将绑定到此设备。
+
+#### 诊断配置
+
+##### diagnosis
+用于构建客户端标识符的诊断地址（字节）。诊断地址被分配给所有客户端标识符的最高有效字节（除非另有指定，例如通过预定义的客户端 ID）。
+
+##### diagnosis_mask
+诊断掩码（2字节）用于控制 ECU 上允许的并发 vSOMEIP 客户端的最大数量和客户端 ID 的起始值。
+
+默认值是 `0xFF00`，意味着客户端 ID 的最高有效字节保留给诊断地址，客户端 ID 将从指定的诊断地址开始。
+
+客户端的最大数量是 255，因为反转掩码的汉明权重是 8（2^8 = 256 - 1（用于路由管理器）= 255）。例如，诊断地址为 0x45 的结果客户端 ID 范围将是 0x4501 到 0x45ff。
+
+##### network
+网络标识符，用于支持一台主机上的多个路由管理器。此设置更改 `/dev/shm` 中共享内存段的名称和 `/tmp/` 中 Unix 域套接字的名称。默认为 `vsomeip`，意味着共享内存将命名为 `/dev/shm/vsomeip`，Unix 域套接字将命名为 `/tmp/vsomeip-$CLIENTID`。
+
+#### 日志配置 (logging)
+
+##### level  
+日志级别，支持 6 个等级：
+- `trace` - 跟踪级别
+- `debug` - 调试级别  
+- `info` - 信息级别
+- `warning` - 警告级别
+- `error` - 错误级别
+- `fatal` - 致命错误级别
+
+##### console
+控制日志输出到控制台的开启/关闭：
+- `true` - 启用控制台输出
+- `false` - 禁用控制台输出
+
+##### file
+文件日志配置：
+- `enable` - 启用/禁用文件日志输出
+  - `true` - 启用
+  - `false` - 禁用
+- `path` - 日志文件的绝对路径
+
+##### memory_log_interval
+配置路由管理器记录其使用内存的间隔（秒）。设置大于零的值将启用日志记录。
+
+##### status_log_interval  
+配置路由管理器记录其内部状态的间隔（秒）。设置大于零的值将启用日志记录。
+
+#### 跟踪配置 (Tracing)
+
+##### enable
+启用/禁用跟踪功能。
+
+##### sd_enable
+启用/禁用服务发现跟踪。
+
+##### channels
+跟踪通道配置：
+- `name` - 通道名称
+- `id` - 通道标识符
+
+#### 应用配置 (Applications)
+
+##### name
+应用程序名称。
+
+##### id  
+应用程序标识符。
+
+##### max_dispatchers
+最大调度器数量。
+
+##### max_dispatch_time
+最大调度时间。
+
+##### threads
+线程数量。
+
+##### io_thread_nice
+IO 线程优先级。
+
+##### request_debounce_time
+请求防抖时间。
+
+### 配置示例
+
+```json
+{
+    "unicast": "192.168.1.100",
+    "netmask": "255.255.255.0",
+    "diagnosis": "0x01",
+    "diagnosis_mask": "0xFF00",
+    "logging": {
+        "level": "info",
+        "console": "true",
+        "file": {
+            "enable": "true",
+            "path": "/var/log/vsomeip.log"
+        },
+        "memory_log_interval": 10,
+        "status_log_interval": 60
+    },
+    "tracing": {
+        "enable": "true",
+        "sd_enable": "true",
+        "channels": [
+            {
+                "name": "service_discovery",
+                "id": "SD"
+            }
+        ]
+    },
+    "applications": [
+        {
+            "name": "my_service",
+            "id": "0x1234",
+            "max_dispatchers": 2,
+            "max_dispatch_time": 100,
+            "threads": 1,
+            "io_thread_nice": 0,
+            "request_debounce_time": 10
+        }
+    ]
+}
+```
+
+---
+
+## 高级主题
+
+### Daemon 架构
+
+#### Daemon 概述
+
+daemon 的主体就是一个 `vsomeip::application`
+
+![](../../../../resources/imgs/tcpip/someip/vsomeip_source_daemon.png)
+
+#### Daemon vs Application
+
+Application 创建了一个 `routing_manager_impl` 的实例。
+如果这不是 Daemon，而是一个通常的 Application，那么它会转而创建 `routing_manager_proxy` 的实例，并与找到的 Routing Manager 建立连接。
+
+### Tools & Examples
+
+一些简易的 Application，用于进行一些消息发送接收的测试工作。
+
+---
+
+## 参考资料
+
+* [vSOMEIP Blog Reference](https://blog.zeerd.com/vsomeip-1st/)
+* [GENIVI Project](https://www.genivi.org/)
+* [SOME/IP Protocol Documentation](https://some-ip.com/)
+
+---
+
+*文档最后更新: 2021-12-20*
 
 
 
