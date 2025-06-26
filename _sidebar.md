@@ -25,7 +25,6 @@
 ### Operating Systems
   * **Linux**
     * [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md)
-    * [VirtIO Network](os/Linux/drivers/virtio_network.md)
     * [eBPF Basics](os/Linux/ebpf/basic.md)
 
 ### System Programming
@@ -33,6 +32,8 @@
   * [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md)
   * [ELF Format](sys_programming/fundamentals/elf.md)
   * [IPC](sys_programming/ipc/linux_ipc.md)
+  * **Design Patterns**
+    * [Singleton Pattern](sys_programming/design_pattern/singleton.md)
 
 ## 🌐 Networking
 ### Basic Concepts
@@ -43,6 +44,12 @@
   * [TCP 协议详解](network/tcpip/tcp.md)
   * [IP Protocol](network/tcpip/ip.md)
   * [DoIP](network/tcpip/doip.md)
+
+### Network Devices
+  * [TAP Device Implementation](network/devices/tap_device_implementation.md)
+    * [Verification Guide](network/devices/tap_device_verification/VERIFICATION_REPORT.md)
+    * [Usage Guide](network/devices/tap_device_verification/USAGE_GUIDE.md)
+  * [VirtIO Network](network/devices/virtio_network.md)
   
 ### SOME/IP
   * [vSOMEIP 入门](network/someip/vsomeip.md)
