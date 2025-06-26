@@ -21,7 +21,6 @@
 ## Operating Systems - 操作系统
 ### Linux
 - [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md) - Linux内核开发入门
-- [VirtIO Network](os/Linux/drivers/virtio_network.md) - VirtIO网络驱动
 - [eBPF Basics](os/Linux/ebpf/basic.md) - eBPF技术入门
 
 ## System Programming - 系统编程
@@ -29,6 +28,9 @@
 - [ELF Format](sys_programming/fundamentals/elf.md) - ELF文件格式
 - [Computer Architecture](sys_programming/computer_architecture_intro.md) - 计算机体系结构
 - [IPC](sys_programming/ipc/linux_ipc.md) - 进程间通信
+
+### Design Patterns - 设计模式
+- [Singleton Pattern](sys_programming/design_pattern/singleton.md) - 单例模式详解
 
 ## 🌐 Networking (网络)
 ### Basic Concepts - 基础概念
@@ -39,6 +41,18 @@
 - [TCP 协议详解](network/tcpip/tcp.md) - TCP协议完整指南（包含连接管理、拥塞控制、性能优化等）
 - [IP Protocol](network/tcpip/ip.md) - IP协议
 - [DoIP](network/tcpip/doip.md) - DoIP协议
+
+### Network Devices - 网络设备
+- [TAP Device Implementation](network/devices/tap_device_implementation.md) - TAP设备完整实现指南
+  - **完整的TAP设备内核模块实现**：包含字符设备、网络设备、多队列支持
+  - **高级特性**：VLAN标签处理、校验和卸载、GSO/TSO/GRO优化、Bridge集成
+  - **测试验证**：完整的测试程序和验证方案
+  - **使用场景**：虚拟化、容器网络、VPN应用、网络仿真
+- [VirtIO Network](network/devices/virtio_network.md) - VirtIO网络设备驱动详解
+  - **VirtIO架构原理**：虚拟设备与驱动通信机制
+  - **Virtqueues机制**：高效的共享内存通信
+  - **驱动程序开发**：完整的VirtIO驱动编写指南
+  - **应用场景**：虚拟机网络、云计算环境
 
 ### SOME/IP - 面向服务的中间件
 - [vSOMEIP 入门](network/someip/vsomeip.md) - vSOMEIP完整指南（包含架构、配置、实现等）
