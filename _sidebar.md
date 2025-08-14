@@ -32,6 +32,7 @@
   * [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md)
   * [ELF Format](sys_programming/fundamentals/elf.md)
   * [IPC](sys_programming/ipc/linux_ipc.md)
+    * [Shared Memory](sys_programming/ipc/shm/shm.md)
   * **Design Patterns**
     * [Singleton Pattern](sys_programming/design_pattern/singleton.md)
 
