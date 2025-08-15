@@ -20,8 +20,11 @@
 
 ## Operating Systems - 操作系统
 ### Linux
-- [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md) - Linux内核开发入门
-- [eBPF Basics](os/Linux/ebpf/basic.md) - eBPF技术入门
+- [Kernel Development Guide](os/linux_kernel_development_guide.md) - Linux内核开发入门
+
+## 🌐 Networking (网络)
+### eBPF
+- [eBPF Basics](network/ebpf/basic.md) - eBPF技术入门
 
 ## System Programming - 系统编程
 - [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md) - Linux系统编程
@@ -57,10 +60,8 @@
 ### SOME/IP - 面向服务的中间件
 - [vSOMEIP 入门](network/someip/vsomeip.md) - vSOMEIP完整指南（包含架构、配置、实现等）
 - [Security](network/someip/vsomeip_security.md) - 安全机制分析
-- [Adaptive Platform](network/someip/someip_ap.md) - Vector AUTOSAR自适应平台集成
 
-### DDS - 数据分发服务
-- [Getting Started](network/dds/README.md) - DDS入门
+
 
 ## 📖 Courses (课程)
 
@@ -83,7 +84,6 @@
 - [13 排序](courses/datastructure/13_排序_经典排序算法原理解析与优劣对比.md)
 - [14 动态规划](courses/datastructure/14_动态规划_如何通过最优子结构_完成复杂问题求解.md)
 - [15 复杂度分析](courses/datastructure/15_定位问题才能更好地解决问题_开发前的复杂度分析与技术选型.md)
-- [Memory Management](courses/datastructure/memory.md)
 - [Array & LinkedList](courses/datastructure/array_linkedlist.md)
 - [练习题详解](courses/datastructure/加餐_课后练习题详解.md)
 

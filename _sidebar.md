@@ -24,8 +24,9 @@
 ## 🖥️ Systems & Infrastructure
 ### Operating Systems
   * **Linux**
-    * [Kernel Development Guide](os/Linux/kernel/linux_kernel_development_guide.md)
-    * [eBPF Basics](os/Linux/ebpf/basic.md)
+    * [Kernel Development Guide](os/linux_kernel_development_guide.md)
+  * **eBPF**
+    * [eBPF Basics](network/ebpf/basic.md)
 
 ### System Programming
   * [Computer Architecture](sys_programming/computer_architecture_intro.md)
@@ -48,17 +49,14 @@
 
 ### Network Devices
   * [TAP Device Implementation](network/devices/tap_device_implementation.md)
-    * [Verification Guide](network/devices/tap_device_verification/VERIFICATION_REPORT.md)
     * [Usage Guide](network/devices/tap_device_verification/USAGE_GUIDE.md)
   * [VirtIO Network](network/devices/virtio_network.md)
   
 ### SOME/IP
   * [vSOMEIP 入门](network/someip/vsomeip.md)
   * [Security](network/someip/vsomeip_security.md)
-  * [Adaptive Platform](network/someip/someip_ap.md)
 
-### DDS
-  * [Getting Started](network/dds/README.md)
+
 
 ## 🎓 Courses
 ### Data Structures & Algorithms
@@ -78,7 +76,6 @@
   * [13 排序](courses/datastructure/13_排序_经典排序算法原理解析与优劣对比.md)
   * [14 动态规划](courses/datastructure/14_动态规划_如何通过最优子结构_完成复杂问题求解.md)
   * [15 复杂度分析](courses/datastructure/15_定位问题才能更好地解决问题_开发前的复杂度分析与技术选型.md)
-  * [Memory Management](courses/datastructure/memory.md)
   * [Array & LinkedList](courses/datastructure/array_linkedlist.md)
   * [练习题详解](courses/datastructure/加餐_课后练习题详解.md)
 
