@@ -41,7 +41,7 @@
 ## 🌐 Networking
 ### Basic Concepts
   * [OSI/PHY/MAC Layers](network/osi_phy_mac.md)
-  * [Linux Network Devices](network/linux_network_devices_ascii_flow.md)
+  * [Linux Network Devices](network/devices/network_devices_ascii_flow.md)
   * [Linux Conntrack](network/conntrack.md)
   
 ### TCP/IP Stack
@@ -55,7 +55,7 @@
   
 ### SOME/IP
   * [vSOMEIP 入门](network/someip/vsomeip.md)
-  * [Security](network/someip/vsomeip_security.md)
+  * [Security](network/someip/security.md)
 
 
 
