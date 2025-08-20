@@ -38,7 +38,7 @@
 ## 🌐 Networking (网络)
 ### Basic Concepts - 基础概念
 - [OSI/PHY/MAC Layers](network/osi_phy_mac.md) - 网络协议栈
-- [Linux Network Devices](network/linux_network_devices_ascii_flow.md) - Linux网络设备
+- [Linux Network Devices](network/devices/network_devices_ascii_flow.md) - Linux网络设备
 - [Linux Conntrack](network/conntrack.md) - Linux连接跟踪系统详解
 
 ### TCP/IP Stack - TCP/IP协议栈
@@ -60,7 +60,7 @@
 
 ### SOME/IP - 面向服务的中间件
 - [vSOMEIP 入门](network/someip/vsomeip.md) - vSOMEIP完整指南（包含架构、配置、实现等）
-- [Security](network/someip/vsomeip_security.md) - 安全机制分析
+- [Security](network/someip/security.md) - 安全机制分析
 
 
 
