@@ -1,39 +1,40 @@
-# Prerequisites
-*.d
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# MacOS
+node_modules
 .DS_Store
+dist
+dist-ssr
+coverage
+*.local
 
-*.vscode
+/cypress/videos/
+/cypress/screenshots/
 
-**/build
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+*.tsbuildinfo
+
+# VitePress build output
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# Temporary files
+*.tmp
+*.temp
+.temp
+.cache
