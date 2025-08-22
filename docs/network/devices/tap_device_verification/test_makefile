@@ -1,0 +1,32 @@
+# User Space Test Program Makefile
+
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -O2
+LDFLAGS = 
+
+# 目标程序
+TARGET = test_tap
+SOURCES = test_tap.c
+
+# 编译规则
+all: $(TARGET)
+
+$(TARGET): $(SOURCES)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+# 清理
+clean:
+	rm -f $(TARGET)
+
+# 运行测试
+test: $(TARGET)
+	@echo "=== 编译测试程序成功 ==="
+	@echo "请先加载内核模块，然后运行:"
+	@echo "  sudo ./$(TARGET) -h    # 查看帮助"
+	@echo "  sudo ./$(TARGET) -a    # 运行所有测试"
+
+# 检查语法
+check: $(SOURCES)
+	$(CC) $(CFLAGS) -fsyntax-only $^
+
+.PHONY: all clean test check 
