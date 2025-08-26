@@ -361,7 +361,6 @@ public:
 | `unordered_map/set` | 可能全部失效（若重新哈希）                  | 仅被删除元素的迭代器失效                    |
 
 使用迭代器时需特别注意失效规则，避免悬垂迭代器。
-</think>
 
 ## 迭代器 (Iterators)
 **头文件：** `<iterator>`
