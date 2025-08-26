@@ -79,9 +79,9 @@ sequenceDiagram
 
 | 维度 | 描述 |
 | --- | --- |
-| **触发时机** | <li>周期性线程：`ct_gc_worker()`，默认 1 Hz<br><li>内存压力：已用条目 > `nf_conntrack_max` |
+| **触发时机** | <li>周期性线程：`ct_gc_worker()`，默认 1 Hz</li><br><li>内存压力：已用条目 > `nf_conntrack_max`</li> |
 | **判定条件** | `time_after(jiffies, ct->timeout)` |
-| **清理动作** | <li>同时摘除 `tuplehash[0].hnnode` & `tuplehash[1].hnnode`<br><li>`kmem_cache_free(nf_conn_cachep, ct)` |
+| **清理动作** | <li>同时摘除 `tuplehash[0].hnnode` & `tuplehash[1].hnnode`</li><br><li>`kmem_cache_free(nf_conn_cachep, ct)`</li> |
 | **并发安全** | bucket 链表使用 `hlist_nulls` + RCU；GC 时持 `ct_zone_lock` |
 
 
