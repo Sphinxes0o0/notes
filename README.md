@@ -1,119 +1,102 @@
-# 📚 Technical Notes Repository
+# Sphinx's Notes
 
-本仓库主要是个人整理记录的操作系统、网络、系统编程、编程语言等学习笔记和资料
+这是一个基于 VitePress 构建的技术学习笔记网站，记录了我学习过程中的各种笔记和总结。
 
-## 🖥️ Programming Languages (编程语言)
+## 项目结构
 
-### C
-- [C Programming](languages/c/c.md) - C语言基础
-- [Memory Management](languages/c/memory_management.md) - C语言内存管理详解
+```
+vitepress/
+├── .vitepress/
+│   └── config.mjs          # VitePress 配置文件
+├── notes/                  # 笔记内容目录
+│   ├── ccpp/              # C/C++ 学习笔记
+│   │   ├── c/             # C 语言相关
+│   │   ├── cpp/           # C++ 相关
+│   │   └── index.md       # C/C++ 笔记索引
+│   ├── network/           # 网络技术笔记
+│   │   ├── tcpip/         # TCP/IP 协议
+│   │   ├── linux_netfilter/ # Linux Netfilter
+│   │   └── index.md       # 网络笔记索引
+│   ├── os/                # 操作系统笔记
+│   │   └── index.md       # 操作系统笔记索引
+│   ├── sys/               # 系统编程笔记
+│   │   ├── design_pattern/ # 设计模式
+│   │   ├── fundamentals/  # 基础知识
+│   │   ├── ipc/           # 进程间通信
+│   │   └── index.md       # 系统编程笔记索引
+│   ├── midware/           # 中间件笔记
+│   │   ├── someip/        # SOME/IP 相关
+│   │   └── index.md       # 中间件笔记索引
+│   └── tools/             # 工具使用笔记
+│       └── index.md       # 工具笔记索引
+├── index.md               # 网站首页
+└── README.md              # 项目说明
+```
 
-### CPP
-- [C++ Programming](languages/cpp/cpp.md) - C++语言特性
-- [STL Containers](languages/cpp/containers/) - STL容器详解
-- [Object Creation](languages/cpp/object_creation_heap_or_stack.md) - 内存管理
+## 技术栈
 
-### Misc
-- [Bit Operations](languages/common_bit_operations.md) - 位运算技巧
-- [Compilation Process](languages/compilation_process.md) - 编译过程
-- [Serialization](languages/serialization.md) - 序列化技术
+- **VitePress** - 静态站点生成器
+- **Vue.js** - 前端框架
+- **Markdown** - 内容编写格式
 
-## Operating Systems - 操作系统
-### Linux
-- [Kernel Development Guide](os/linux_kernel_development_guide.md) - Linux内核开发入门
+## 开发指南
 
-## 🌐 Networking (网络)
-### eBPF
-- [eBPF Basics](network/ebpf/basic.md) - eBPF技术入门
+### 环境要求
 
-## System Programming - 系统编程
-- [Linux System Programming](sys_programming/fundamentals/linux_system_programming.md) - Linux系统编程
-- [ELF Format](sys_programming/fundamentals/elf.md) - ELF文件格式
-- [Computer Architecture](sys_programming/computer_architecture_intro.md) - 计算机体系结构
-- [IPC](sys_programming/ipc/linux_ipc.md) - 进程间通信
+- Node.js 16+
+- npm 或 yarn
 
-### Design Patterns - 设计模式
-- [Singleton Pattern](sys_programming/design_pattern/singleton.md) - 单例模式详解
+### 安装依赖
 
-## 🌐 Networking (网络)
-### Basic Concepts - 基础概念
-- [OSI/PHY/MAC Layers](network/osi_phy_mac.md) - 网络协议栈
-- [Linux Network Devices](network/devices/network_devices_ascii_flow.md) - Linux网络设备
-- [Linux Conntrack](network/conntrack.md) - Linux连接跟踪系统详解
+```bash
+npm install
+```
 
-### TCP/IP Stack - TCP/IP协议栈
-- [TCP 协议详解](network/tcpip/tcp.md) - TCP协议完整指南（包含连接管理、拥塞控制、性能优化等）
-- [IP Protocol](network/tcpip/ip.md) - IP协议
-- [DoIP](network/tcpip/doip.md) - DoIP协议
+### 启动开发服务器
 
-### Network Devices - 网络设备
-- [TAP Device Implementation](network/devices/tap_device_implementation.md) - TAP设备完整实现指南
-  - **完整的TAP设备内核模块实现**：包含字符设备、网络设备、多队列支持
-  - **高级特性**：VLAN标签处理、校验和卸载、GSO/TSO/GRO优化、Bridge集成
-  - **测试验证**：完整的测试程序和验证方案
-  - **使用场景**：虚拟化、容器网络、VPN应用、网络仿真
-- [VirtIO Network](network/devices/virtio_network.md) - VirtIO网络设备驱动详解
-  - **VirtIO架构原理**：虚拟设备与驱动通信机制
-  - **Virtqueues机制**：高效的共享内存通信
-  - **驱动程序开发**：完整的VirtIO驱动编写指南
-  - **应用场景**：虚拟机网络、云计算环境
+```bash
+npm run docs:dev
+```
 
-### SOME/IP - 面向服务的中间件
-- [vSOMEIP 入门](network/someip/vsomeip.md) - vSOMEIP完整指南（包含架构、配置、实现等）
-- [Security](network/someip/security.md) - 安全机制分析
+### 构建生产版本
 
+```bash
+npm run docs:build
+```
 
+### 预览生产版本
 
-## 📖 Courses (课程)
+```bash
+npm run docs:preview
+```
 
-> **学习声明**：本节所有课程内容均来源于网络公开教育资源，仅供个人学习研究使用，不用于任何商业用途。如有侵权，请联系删除。所有版权归原作者和出版方所有。
+## 内容组织
 
-### Data Structures & Algorithms - 数据结构与算法
-- [开篇词](courses/datastructure/开篇词_数据结构与算法_应该这样学.md)
-- [01 复杂度](courses/datastructure/01_复杂度_如何衡量程序运行的效率.md)
-- [02 数据结构](courses/datastructure/02_数据结构_将昂贵的时间复杂度转换成廉价的空间复杂度.md)
-- [03 增删查](courses/datastructure/03_增删查_掌握数据处理的基本操作_以不变应万变.md)
-- [04 线性表](courses/datastructure/04_如何完成线性表结构下的增删查.md)
-- [05 栈](courses/datastructure/05_栈_后进先出的线性表_如何实现增删查.md)
-- [06 队列](courses/datastructure/06_队列_先进先出的线性表_如何实现增删查.md)
-- [07 数组](courses/datastructure/07_数组_如何实现基于索引的查找.md)
-- [08 字符串](courses/datastructure/08_字符串_如何正确回答面试中高频考察的字符串匹配算法.md)
-- [09 树和二叉树](courses/datastructure/09_树和二叉树_分支关系与层次结构下_如何有效实现增删查.md)
-- [10 哈希表](courses/datastructure/10_哈希表_如何利用好高效率查找的利器.md)
-- [11 递归](courses/datastructure/11_递归_如何利用递归求解汉诺塔问题.md)
-- [12 分治](courses/datastructure/12_分治_如何利用分治法完成数据查找.md)
-- [13 排序](courses/datastructure/13_排序_经典排序算法原理解析与优劣对比.md)
-- [14 动态规划](courses/datastructure/14_动态规划_如何通过最优子结构_完成复杂问题求解.md)
-- [15 复杂度分析](courses/datastructure/15_定位问题才能更好地解决问题_开发前的复杂度分析与技术选型.md)
-- [Array & LinkedList](courses/datastructure/array_linkedlist.md)
-- [练习题详解](courses/datastructure/加餐_课后练习题详解.md)
+### 笔记分类
 
-### Operating Systems Fundamentals - 操作系统基础
-- [01 计算机是什么](courses/os_fundamentals/01_计算机是什么.md)
-- [02 程序执行(上)](courses/os_fundamentals/02_程序的执行_相比_32_位_64_位的优势是什么(上).md)
-- [03 程序执行(下)](courses/os_fundamentals/03_程序的执行_相比_32_位_64_位的优势是什么(下).md)
-- [04 构造复杂程序](courses/os_fundamentals/04_构造复杂的程序_将一个递归函数转成非递归函数的通用方法.md)
-- [05 存储器分级](courses/os_fundamentals/05_存储器分级_L1_Cache_比内存和_SSD_快多少倍.md)
-- [39 Linux架构](courses/os_fundamentals/39_Linux_架构优秀在哪里.md)
+1. **C/C++ 编程** - C 和 C++ 语言学习笔记
+2. **网络技术** - 网络协议和网络编程笔记
+3. **操作系统** - 操作系统原理和内核开发笔记
+4. **系统编程** - 底层系统编程和 IPC 笔记
+5. **中间件** - 汽车网络协议和中间件技术笔记
+6. **工具使用** - 各种开发工具的使用笔记
 
-### Network Fundamentals - 网络基础
-- [01 移动网络](courses/network_fundamentals/01_漫游互联网_什么是蜂窝移动网络.md)
-- [02 TCP协议](courses/network_fundamentals/02_传输层协议_TCP_TCP_为什么握手是_3_次_挥手是_4_次.md)
-- [03 TCP封包](courses/network_fundamentals/03_TCP_的封包格式_TCP_为什么要粘包和拆包.md)
-- [04 TCP稳定性](courses/network_fundamentals/04_TCP_的稳定性_滑动窗口和流速控制是怎么回事.md)
-- [05 UDP协议](courses/network_fundamentals/05_UDP_协议_TCP_协议和_UDP_协议的优势和劣势.md)
+### 添加新笔记
 
-## 🛠️ Tools (工具)
-- [Netcat](tools/netcat.md) - 网络工具
-- [Vim Config](tools/vim_config.rc) - Vim配置
-- [Manjaro Swap](tools/manjaro_swap.md) - Manjaro交换分区
-- [Remove Snap](tools/remove_snap.md) - 移除Snap
+1. 在相应的目录下创建 `.md` 文件
+2. 在对应的 `index.md` 中添加链接
+3. 在 `.vitepress/config.mjs` 中更新侧边栏配置
 
-## 📦 Resources (资源)
+## 部署
 
-- [Networking PDFs](resources/docs/networking/) - 网络技术PDF
-- [SOME/IP PDFs](resources/docs/someip/) - SOME/IP相关PDF
-- [Rust PDFs](resources/docs/rust/) - Rust学习资料
+本项目可以部署到任何支持静态网站的平台上，如：
 
----
+- GitHub Pages
+- Netlify
+- Vercel
+- 阿里云 OSS
+- 腾讯云 COS
 
+## 许可证
+
+MIT License
