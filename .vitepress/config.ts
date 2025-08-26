@@ -54,12 +54,22 @@ function normalizeLink(link: string): string {
 	return `/${link.replace(/\\/g, '/')}`
 }
 
+function normalizeBase(input: string): string {
+	let b = input || '/'
+	if (!b.startsWith('/')) b = '/' + b
+	if (!b.endsWith('/')) b = b + '/'
+	return b
+}
+
+const base = normalizeBase(process.env.DEPLOY_BASE ?? '/')
+
 export default defineConfig({
 	title: "Sphinx's Notes",
 	description: 'Personal technical notes',
 	lang: 'zh-CN',
 	lastUpdated: true,
 	ignoreDeadLinks: true,
+	base,
 	vite: {
 		publicDir: 'resources',
 	},
@@ -84,7 +94,7 @@ export default defineConfig({
 					const pos = src.indexOf('resources/')
 					if (pos !== -1) {
 						const rest = src.slice(pos + 'resources/'.length)
-						// resources acts as publicDir, so served from root
+						// resources acts as publicDir, so served from site root; base is handled by VitePress
 						src = `/${rest}`
 						tokens[idx].attrs[srcIndex][1] = src
 					}
