@@ -37,11 +37,3 @@
 *.vscode
 
 **/build
-
-# Node / VitePress
-node_modules
-.vitepress/cache
-.vitepress/dist
-.vitepress/temp
-.cache
-.temp
