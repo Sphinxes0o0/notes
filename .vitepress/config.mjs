@@ -5,6 +5,9 @@ export default defineConfig({
   title: "Sphinx's Notes",
   description: "技术学习笔记和总结",
   
+  // GitHub Pages base path
+  base: '/notes/',
+  
   // Exclude courses directory and problematic files from VitePress processing
   srcExclude: ['courses/**', 'notes/midware/someip/**', 'notes/tools/**'],
   
