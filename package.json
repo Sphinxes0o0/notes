@@ -1,0 +1,27 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "本仓库主要是个人整理记录的操作系统、网络、系统编程、编程语言等学习笔记和资料",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sphinxes0o0/notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sphinxes0o0/notes/issues"
+  },
+  "homepage": "https://github.com/Sphinxes0o0/notes#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
