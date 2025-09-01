@@ -9,7 +9,7 @@ export default defineConfig({
   base: '/notes/',
   
   // Exclude courses directory and problematic files from VitePress processing
-  srcExclude: ['courses/**', 'notes/midware/someip/**', 'notes/tools/**'],
+  srcExclude: ['courses/**', 'notes/midware/someip/**'],
   
   // Ignore dead links for excluded content
   ignoreDeadLinks: true,

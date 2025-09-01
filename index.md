@@ -10,9 +10,9 @@ hero:
     - theme: brand
       text: 开始阅读
       link: /notes/ccpp/
-    - theme: alt
-      text: 查看源码
-      link: https://github.com/Sphinxes0o0
+    # - theme: alt
+    #   text: 查看源码
+    #   link: https://github.com/Sphinxes0o0
 
 features:
   - title: C/C++ 编程

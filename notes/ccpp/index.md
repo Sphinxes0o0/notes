@@ -28,7 +28,3 @@
 - [位操作](./common_bit_operations.md) - 位运算技巧
 - [编译过程](./compilation_process.md) - 程序编译流程
 - [序列化](./serialization.md) - 数据序列化技术
-
----
-
-这些笔记记录了我在学习过程中的理解和实践经验，希望能对大家有所帮助！
