@@ -52,9 +52,6 @@ npm run docs:preview
 
 - `.github/workflows/deploy.yml` - 自动部署配置
 
-### 手动触发部署
-
-你也可以在 GitHub 仓库的 Actions 页面手动触发部署。
 
 ## 📁 项目结构
 
@@ -81,11 +78,3 @@ notes/
 - **系统编程**: 底层系统编程、进程间通信等
 - **中间件**: 汽车网络协议、SOME/IP、DoIP 等
 - **工具使用**: 各种开发工具的使用技巧
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request 来改进这个项目。
-
-## �� 许可证
-
-MIT License
