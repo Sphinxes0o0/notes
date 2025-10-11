@@ -112,7 +112,7 @@ yshi10@dev:~/someip_space/vsomeip$ tree . -L 1
 ### implementation
 
 
-![arch](../../../../resources/imgs/tcpip/someip/00_overview_source_arch.png)
+![arch](../../../resources/imgs/tcpip/someip/00_overview_source_arch.png)
 
 #### `impelemention`:
 ```bash
@@ -138,8 +138,6 @@ yshi10@dev:~/someip_space/vsomeip/implementation$ tree . -L 1
 └── utility                --> 通用工具
 ```
 
-
-
 ## 2. 环境和编译
 
 ### 环境
@@ -160,8 +158,7 @@ Codename:	impish
 #### 工具
 
 * CMake
-
-  > ref : https://apt.kitware.com/
+> ref : https://apt.kitware.com/
 
 ```bash
 # For Ubuntu Bionic Beaver (18.04) and newer:
@@ -305,7 +302,8 @@ make vsomeip_ctrl
 ## 3. 核心模块
 
 vSOMEIP 整体设计是 模块化,设计了插件机制,自上而下来看可以简化为以下:
-```
+
+```bash
 ------------------------------
 | Application                 |
 ------------------------------
@@ -452,10 +450,11 @@ private:
     std::shared_ptr<vsomeip::runtime> rtm_;
     std::shared_ptr<vsomeip::application> app_;
 };
+
 ```
 
 __server__
-```
+```cpp
 static vsomeip::service_t service_id = 0x1111;
 static vsomeip::instance_t service_instance_id = 0x2222;
 static vsomeip::method_t service_method_id = 0x3333;
@@ -601,10 +600,9 @@ Application 的状态有三种，分别为：
 * unload_plugin
 
 
-
 ### __runtime__
 
-![runtime](../../../../resources/imgs/tcpip/someip/vsomeip_source_runtime.png)
+![runtime](../../../resources/imgs/tcpip/someip/vsomeip_source_runtime.png)
 
 上图为runtime 类在代码中与其他类的关系.
 
@@ -732,7 +730,7 @@ handler 类(调用client 传入的函数):
 
 ### __message & payload__
 
-![msg_arch](../../../../resources/imgs/tcpip/someip/vsomeip_source_messages_arch.png)
+![msg_arch](../../../resources/imgs/tcpip/someip/vsomeip_source_messages_arch.png)
 
 #### Message 类型
 
@@ -766,7 +764,7 @@ Message 的主体。也就是排除消息头之后剩下的部分。
 
 ### __endpoint__
 
-![ep](../../../../resources/imgs/tcpip/someip/vsomeip_endpoint.png)
+![ep](../../../resources/imgs/tcpip/someip/vsomeip_endpoint.png)
 
 #### Endpoint 分类
 
@@ -989,10 +987,10 @@ tp_split_messages_t tp::tp_split_message(const std::uint8_t * const _data, std::
 #### Routing 生命周期
 
 ##### 初始化
-![](../../../../resources/imgs/tcpip/someip/vsomeip_source_routing_init.png)
+![](../../../resources/imgs/tcpip/someip/vsomeip_source_routing_init.png)
 
 ##### 启动过程
-![](../../../../resources/imgs/tcpip/someip/vsomeip_source_routing_start.png)
+![](../../../resources/imgs/tcpip/someip/vsomeip_source_routing_start.png)
 
 
 ### __service discovery__
@@ -1228,7 +1226,7 @@ IO 线程优先级。
 
 daemon 的主体就是一个 `vsomeip::application`
 
-![](../../../../resources/imgs/tcpip/someip/vsomeip_source_daemon.png)
+![](../../../resources/imgs/tcpip/someip/vsomeip_source_daemon.png)
 
 #### Daemon vs Application
 
