@@ -11,6 +11,7 @@
 ### Linux Netfilter
 - [连接跟踪](./linux_netfilter/conntrack.md) - Linux 连接跟踪机制
 - [连接跟踪垃圾回收](./linux_netfilter/conntrack_gc.md) - 连接跟踪的垃圾回收机制
+- [nftables](./linux_netfilter/nftables.md) - Linux 下一代包过滤框架
 
 ## 学习目标
 
@@ -20,4 +21,3 @@
 2. **内核机制** - 掌握 Linux 网络子系统的核心机制
 3. **性能优化** - 学习网络性能调优和问题排查
 4. **实际应用** - 将理论知识应用到实际网络编程中
-
