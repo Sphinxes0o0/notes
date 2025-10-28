@@ -303,6 +303,101 @@ nfct_callback_register(h, NFCT_T_ALL, cb, NULL);
 | 🕹️ NFLOG 收集系统             | libnetfilter_log + libmnl                      |
 | 🧩 协议辅助开发                  | libnetfilter_cthelper + libnetfilter_cttimeout |
 
+### 典型架构（自定义防火墙系统）
+```
+┌─────────────────────────────────────┐
+│           用户空间自定义程序           │
+│ ┌─────────────────────────────────┐ │
+│ │ 防火墙控制面（规则下发/管理）        │ │
+│ │  → libnftables / libnftnl       │ │
+│ │  → 规则表管理（table/chain/rule） │ │
+│ ├─────────────────────────────────┤ │
+│ │ 数据面（包处理 / 状态分析）         │ │
+│ │  → libnetfilter_queue (NFQUEUE)  │ │
+│ │  → libnetfilter_conntrack        │ │
+│ │  → libnetfilter_log / acct       │ │
+│ ├─────────────────────────────────┤ │
+│ │ 事件同步 / 状态监控 / 可视化        │ │
+│ │  → libmnl 通信 + 自定义协议       │ │
+│ └─────────────────────────────────┘ │
+└─────────────────────────────────────┘
+             │
+             ▼
+    ┌────────────────────────────┐
+    │ Linux 内核 (Netfilter 框架)  │
+    │  nf_tables, nf_conntrack,  │
+    │  nf_nat, nf_queue 等模块    │
+    └────────────────────────────┘
+```
+
+三种常见防火墙架构模型
+1️⃣ 控制面防火墙（规则管理）
+
+使用：
+- libnftables 或 libnftnl
+- libmnl
+
+功能：
+- 创建表、链、规则；
+- 动态更新策略；
+- 支持事务（规则原子更新）；
+- 构建“防火墙守护进程”（类似 firewalld）。
+
+💡 示例项目：
+
+```
+#include <libnftables.h>
+struct nft_ctx *ctx = nft_ctx_new(NFT_CTX_DEFAULT);
+nft_run_cmd_from_buffer(ctx, "add table inet fw");
+nft_run_cmd_from_buffer(ctx, "add chain inet fw input { type filter hook input priority 0; }");
+nft_run_cmd_from_buffer(ctx, "add rule inet fw input tcp dport 22 accept");
+nft_ctx_free(ctx);
+```
+
+2️⃣ 数据面防火墙（NFQUEUE 用户空间过滤）
+
+使用：
+- libnetfilter_queue
+- libmnl（间接依赖）
+
+功能：
+
+从内核队列接收数据包；
+- 检查 payload、协议头、应用层特征；
+- 决定 DROP / ACCEPT / 修改；
+- 适合做 DPI、防病毒、入侵检测、防DDoS。
+
+💡 示例流程：
+```
+iptables -I FORWARD -j NFQUEUE --queue-num 0
+```
+
+```
+int cb(struct nfq_q_handle *qh, struct nfgenmsg *nfmsg, struct nfq_data *nfa, void *data) {
+    uint32_t id = ntohl(nfq_get_msg_packet_hdr(nfa)->packet_id);
+    return nfq_set_verdict(qh, id, NF_DROP, 0, NULL);
+}
+```
+
+3️⃣ 状态防火墙 / NAT 跟踪系统
+
+使用：
+- libnetfilter_conntrack
+- 可配合 libnetfilter_cttimeout, libnetfilter_cthelper
+
+功能：
+- 枚举连接表；
+- 实时监控连接状态；
+- 清理、同步状态（主备防火墙）；
+- 自定义 NAT 会话规则。
+
+💡 示例：
+```
+struct nfct_handle *h = nfct_open(CONNTRACK, 0);
+nfct_callback_register(h, NFCT_T_NEW, cb_new, NULL);
+nfct_callback_register(h, NFCT_T_DESTROY, cb_destroy, NULL);
+nfct_catch(h);
+```
 
 ## Refs
 
@@ -315,3 +410,16 @@ nfct_callback_register(h, NFCT_T_ALL, cb, NULL);
 🔗 libnetfilter_conntrack examples https://netfilter.org/projects/libnetfilter_conntrack/
 
 📘 Linux 内核源码：net/netfilter/ 与 include/uapi/linux/netfilter/
+
+
+| 库名                         | 功能说明                                        | 常见用途                     |
+| -------------------------- | ------------------------------------------- | ------------------------ |
+| **libmnl**                 | Minimal Netlink Library；封装 Linux Netlink 通信 | 所有其他 Netfilter 库的基础依赖    |
+| **libnftnl**               | 操作 nftables 对象（table、chain、rule、expr）       | 构建防火墙控制面                 |
+| **libnftables**            | 高层封装，可直接解析 nft 语法                           | 用于防火墙管理工具（如 `firewalld`） |
+| **libnetfilter_queue**     | 处理 NFQUEUE 的数据包                             | 用户空间防火墙、DPI、IDS/IPS      |
+| **libnetfilter_conntrack** | 访问和监控连接跟踪表                                  | 状态防火墙、NAT 追踪、流量统计        |
+| **libnetfilter_cthelper**  | 管理 conntrack helper（FTP/SIP 等协议辅助）          | 协议识别、防火墙扩展               |
+| **libnetfilter_cttimeout** | 管理连接超时配置                                    | 动态调整不同协议的连接生存期           |
+| **libnetfilter_acct**      | 访问流量统计数据（Accounting）                        | 流量计数与报表                  |
+| **libnetfilter_log**       | 接收内核 NFLOG 输出                               | 实现高性能日志系统                |

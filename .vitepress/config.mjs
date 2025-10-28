@@ -81,7 +81,8 @@ export default defineConfig({
               text: 'Linux Netfilter',
               items: [
                 { text: '连接跟踪', link: '/notes/network/linux_netfilter/conntrack' },
-                { text: '连接跟踪垃圾回收', link: '/notes/network/linux_netfilter/conntrack_gc' }
+                { text: '连接跟踪垃圾回收', link: '/notes/network/linux_netfilter/conntrack_gc' },
+                { text: 'nftables', link: '/notes/network/linux_netfilter/nftables' }
               ]
             }
           ]
