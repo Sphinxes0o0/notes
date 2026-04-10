@@ -8,8 +8,8 @@ export default defineConfig({
   // GitHub Pages base path
   base: '/notes/',
   
-  // Exclude courses directory and problematic files from VitePress processing
-  srcExclude: ['courses/**'],
+  // Exclude courses and wiki directories from VitePress processing
+  srcExclude: ['courses/**', 'wiki/**'],
   
   // Ignore dead links for excluded content
   ignoreDeadLinks: true,
