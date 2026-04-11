@@ -21,6 +21,7 @@ export default defineConfig({
       { text: '网络', link: '/notes/network/' },
       { text: '操作系统', link: '/notes/os/' },
       { text: '系统编程', link: '/notes/sys/' },
+      { text: '安全', link: '/notes/security/' },
       { text: '中间件', link: '/notes/midware/' },
       { text: '工具', link: '/notes/tools/' }
     ],
@@ -123,12 +124,31 @@ export default defineConfig({
                 { text: '共享内存', link: '/notes/sys/ipc/shm/shm' },
                 { text: '邮箱机制', link: '/notes/sys/ipc/mailbox/lwip_mailbox' }
               ]
+            }
+          ]
+        }
+      ],
+      '/notes/security/': [
+        {
+          text: '安全工具笔记',
+          items: [
+            { text: '概述', link: '/notes/security/' },
+            {
+              text: '网络扫描',
+              items: [
+                { text: 'Masscan', link: '/notes/security/masscan/ARCHITECTURE' }
+              ]
             },
             {
-              text: '安全工具',
+              text: '安全监控',
               items: [
-                { text: 'Masscan', link: '/notes/sys/masscan/ARCHITECTURE' },
-                { text: 'Falco', link: '/notes/sys/falco/ARCHITECTURE' }
+                { text: 'Falco', link: '/notes/security/falco/ARCHITECTURE' }
+              ]
+            },
+            {
+              text: '入侵检测',
+              items: [
+                { text: 'Snort 3 架构分析', link: '/notes/security/nids/snort3_architecture_analysis' }
               ]
             }
           ]
