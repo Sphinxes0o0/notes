@@ -123,6 +123,13 @@ export default defineConfig({
                 { text: '共享内存', link: '/notes/sys/ipc/shm/shm' },
                 { text: '邮箱机制', link: '/notes/sys/ipc/mailbox/lwip_mailbox' }
               ]
+            },
+            {
+              text: '安全工具',
+              items: [
+                { text: 'Masscan', link: '/notes/sys/masscan/ARCHITECTURE' },
+                { text: 'Falco', link: '/notes/sys/falco/ARCHITECTURE' }
+              ]
             }
           ]
         }
