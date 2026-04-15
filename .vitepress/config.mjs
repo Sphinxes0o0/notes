@@ -82,7 +82,19 @@ export default defineConfig({
               items: [
                 { text: '概述', link: '/os/' },
                 { text: 'Linux 内核开发指南', link: '/os/linux_kernel_development_guide' },
-                { text: 'Linux 101', link: '/os/linux_101' }
+                { text: 'Linux 101', link: '/os/linux_101' },
+                {
+                  text: '内核深度分析',
+                  items: [
+                    { text: '调度器', link: '/os/scheduler_deep_dive' },
+                    { text: '内存管理/SLUB', link: '/os/slub_allocator_deep_dive' },
+                    { text: '虚拟文件系统/VFS', link: '/os/vfs_deep_dive' },
+                    { text: '块 I/O', link: '/os/block_io_deep_dive' },
+                    { text: '同步机制', link: '/os/synchronization_deep_dive' },
+                    { text: '时间管理', link: '/os/timekeeping_deep_dive' },
+                    { text: 'Cgroups', link: '/os/cgroups_deep_dive' }
+                  ]
+                }
               ]
             },
             {
@@ -119,19 +131,49 @@ export default defineConfig({
               text: '网络',
               items: [
                 { text: '概述', link: '/network/' },
+                { text: '网络栈深度分析', link: '/network/network_stack_deep_dive' },
                 {
                   text: 'TCP/IP',
                   items: [
                     { text: 'IP 协议', link: '/network/tcpip/ip' },
-                    { text: 'TCP 协议', link: '/network/tcpip/tcp' }
+                    { text: 'TCP 协议', link: '/network/tcpip/tcp' },
+                    { text: 'TCP/IP 子系统', link: '/network/tcpip/net_subsystem_tcpip' },
+                    { text: '拥塞控制', link: '/network/tcpip/net_subsystem_congestion' }
                   ]
                 },
                 {
                   text: 'Linux Netfilter',
                   items: [
+                    { text: 'Netfilter 子系统', link: '/network/linux_netfilter/net_subsystem_netfilter' },
+                    { text: 'Netfilter TCP 深度分析', link: '/network/linux_netfilter/netfilter_tcp_deep_dive' },
                     { text: '连接跟踪', link: '/network/linux_netfilter/conntrack' },
                     { text: '连接跟踪垃圾回收', link: '/network/linux_netfilter/conntrack_gc' },
                     { text: 'nftables', link: '/network/linux_netfilter/nftables' }
+                  ]
+                },
+                {
+                  text: '网络核心',
+                  items: [
+                    { text: 'Socket 子系统', link: '/network/core/net_subsystem_socket' },
+                    { text: '连接跟踪', link: '/network/core/net_subsystem_conntrack' },
+                    { text: '路由', link: '/network/core/net_subsystem_routing' }
+                  ]
+                },
+                {
+                  text: '网络性能',
+                  items: [
+                    { text: '内核技巧', link: '/network/performance/net_subsystem_kernel_tricks' },
+                    { text: '热路径', link: '/network/performance/net_subsystem_hotpath' },
+                    { text: '高级特性', link: '/network/performance/net_subsystem_advanced' },
+                    { text: '定时器', link: '/network/performance/net_subsystem_timers' }
+                  ]
+                },
+                {
+                  text: '协议',
+                  items: [
+                    { text: 'BPF Hooks', link: '/network/protocols/net_subsystem_bpf_hooks' },
+                    { text: 'Netlink', link: '/network/protocols/net_subsystem_netlink' },
+                    { text: 'RFC 实现', link: '/network/rfc/net_subsystem_rfc_impl' }
                   ]
                 }
               ]
