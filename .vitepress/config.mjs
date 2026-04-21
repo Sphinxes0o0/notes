@@ -103,7 +103,8 @@ export default defineConfig({
                 { text: '概述', link: '/sys/' },
                 { text: '计算机架构介绍', link: '/sys/computer_architecture_intro' },
                 { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
-                { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' }
+                { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' },
+                { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' }
               ]
             },
             {
@@ -203,7 +204,9 @@ export default defineConfig({
             {
               text: '网络扫描',
               items: [
-                { text: 'Masscan', link: '/security/masscan/ARCHITECTURE' }
+                { text: '架构分析', link: '/security/masscan/ARCHITECTURE' },
+                { text: '报文特征与识别', link: '/security/masscan/PACKET_FEATURES' },
+                { text: '检测方法与引擎', link: '/security/masscan/DETECTION' }
               ]
             },
             {
@@ -228,6 +231,7 @@ export default defineConfig({
             { text: '概述', link: '/tools/' },
             { text: 'Manjaro 交换分区', link: '/tools/manjaro_swap' },
             { text: 'Netcat 使用', link: '/tools/netcat' },
+            { text: '端口扫描器', link: '/tools/port_scanner' },
             { text: '移除 Snap', link: '/tools/remove_snap' },
             { text: 'Vim 配置', link: '/tools/vim_config.rc' }
           ]
