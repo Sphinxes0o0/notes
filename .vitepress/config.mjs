@@ -1,24 +1,188 @@
 import { defineConfig } from 'vitepress'
+import { VitePWA } from 'vite-plugin-pwa'
+import { sitemapPlugin } from '@vuepress/plugin-sitemap'
+import { readingTimePlugin } from './plugins/readingTime.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  plugins: [
+    readingTimePlugin(),
+    sitemapPlugin({
+      hostname: 'https://Sphinxes0o0.github.io/notes',
+      lastmodDateOnly: true
+    })
+  ],
+
   title: "Sphinx's Notes",
   description: "技术学习笔记和总结",
 
-  // GitHub Pages base path
-  base: '/',
+  // Content source directory
+  srcDir: '.',
+
+  // Clean URLs without .html
+  cleanUrls: true,
+
+  // Show last updated timestamp
+  lastUpdated: true,
+
+  // Smooth scroll navigation
+  smoothScroll: true,
 
   // Exclude courses and wiki directories from VitePress processing
   srcExclude: ['courses/**', 'wiki/**', 'misc/**'],
 
   // Ignore dead links for excluded content
   ignoreDeadLinks: true,
+
+  // Markdown configuration
+  markdown: {
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark'
+    },
+    lineNumbers: true,
+    container: {
+      tipLabel: '💡 提示',
+      warningLabel: '⚠️ 注意',
+      dangerLabel: '🚨 危险',
+      infoLabel: 'ℹ️ 信息',
+      detailsLabel: '详情'
+    },
+    // Gracefully handle unrecognized languages
+    ignoreMissing: ['dts', 'haproxy', 'snort', 'conf', 'pam', 'file_api/file_config.h']
+  },
+
+  // PWA configuration
+  pwa: {
+    base: '/',
+    includeAssets: ['favicon.ico', 'robots.txt'],
+    manifest: {
+      name: "Sphinx's Notes",
+      short_name: 'Sphinx笔记',
+      description: '技术学习笔记和总结',
+      theme_color: '#3c8772',
+      background_color: '#ffffff',
+      display: 'standalone',
+      icons: [
+        {
+          src: '/pwa-192x192.svg',
+          sizes: '192x192',
+          type: 'image/svg+xml'
+        },
+        {
+          src: '/pwa-512x512.svg',
+          sizes: '512x512',
+          type: 'image/svg+xml'
+        }
+      ]
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'google-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        {
+          urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'gstatic-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  // Sitemap
+  sitemap: {
+    hostname: 'https://Sphinxes0o0.github.io/notes',
+    lastmodDateOnly: false
+  },
+
+  // Head meta tags for SEO
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'theme-color', content: '#3c8772' }],
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:title', content: "Sphinx's Notes" }],
+    ['meta', { name: 'og:description', content: '技术学习笔记和总结' }],
+    ['meta', { name: 'author', content: 'Sphinx' }],
+    ['meta', { name: 'robots', content: 'index, follow' }]
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    // Search configuration (local search)
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true
+      }
+    },
+
+    // Outline (table of contents)
+    outline: {
+      level: [2, 3],
+      label: '目录'
+    },
+
+    // Edit link - allow users to edit page on GitHub
+    editLink: {
+      pattern: 'https://github.com/Sphinxes0o0/notes/edit/main/:path',
+      text: '在 GitHub 上编辑此页'
+    },
+
+    // Doc footer (prev/next navigation)
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+
+    // Social links
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Sphinxes0o0' }
+    ],
+
+    // Footer
+    footer: {
+      message: '基于 VitePress 构建',
+      copyright: 'Copyright © 2024-present Sphinx'
+    },
+
+    // Last updated text
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      }
+    },
+
+    // Nav
     nav: [
       { text: '首页', link: '/' },
       { text: 'C/C++', link: '/ccpp/' },
       { text: '系统', link: '/sys/' },
+      { text: '内核', link: '/kernel/' },
       { text: '网络/协议', link: '/network/' },
       { text: '安全', link: '/security/' },
       { text: '工具', link: '/tools/' },
@@ -56,7 +220,7 @@ export default defineConfig({
                 {
                   text: '容器',
                   items: [
-                    { text: '容器概览', link: '/ccpp/cpp/containers/containers_overview_guide' },
+                    { text: '容器概览', link: '/ccpp/cpp/containers/overview' },
                     { text: 'vector', link: '/ccpp/cpp/containers/vector' },
                     { text: 'array', link: '/ccpp/cpp/containers/array' },
                     { text: 'list', link: '/ccpp/cpp/containers/list' },
@@ -102,8 +266,7 @@ export default defineConfig({
               text: '系统编程',
               items: [
                 { text: '概述', link: '/sys/' },
-                { text: '计算机架构介绍', link: '/sys/computer_architecture_intro' },
-                { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
+                                { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
                 { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' },
                 { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' }
               ]
@@ -234,8 +397,7 @@ export default defineConfig({
             { text: 'Netcat 使用', link: '/tools/netcat' },
             { text: '端口扫描器', link: '/tools/port_scanner' },
             { text: '移除 Snap', link: '/tools/remove_snap' },
-            { text: 'Vim 配置', link: '/tools/vim_config.rc' }
-          ]
+                      ]
         }
       ],
       '/datastructure/': [
@@ -289,14 +451,14 @@ export default defineConfig({
             { text: '29_访问者模式', link: '/design_patterns/29-访问者模式如何实现对象级别的矩阵结构' },
             { text: '30_模板方法模式', link: '/design_patterns/30-模板方法模式如何实现同一模板框架下的算法扩展' },
             { text: '31_策略模式', link: '/design_patterns/31-策略模式如何解决不同活动策略的营销推荐场景' },
-            { text: '32_状态模式', link: '/design_patterns/32-状态模式如何通过有限状态机监控功能的状态变化' },
+            { text: '32_状态模式', link: '/design_patterns/32-状态模式如何通过有限状态机监控功能的“状态变化”' },
             { text: '33_观察者模式', link: '/design_patterns/33-观察者模式如何发送消息变化的通知' },
             { text: '34_备忘录模式', link: '/design_patterns/34-备忘录模式如何在聊天会话中记录历史消息' },
             { text: '35_中介者模式', link: '/design_patterns/35-中介者模式如何通过中间层来解决耦合过多的问题' },
             { text: '36_迭代器模式', link: '/design_patterns/36-迭代器模式如何实现遍历数据时的职责分离' },
             { text: '37_解释器模式', link: '/design_patterns/37-解释器模式如何实现一个自定义配置规则功能' },
             { text: '38_命令模式', link: '/design_patterns/38-命令模式如何在一次请求中封装多个参数' },
-            { text: '39_责任链模式', link: '/design_patterns/39-责任链模式如何解决审核_过滤场景问题' }
+            { text: '39_责任链模式', link: '/design_patterns/39-责任链模式如何解决审核、过滤场景问题' }
           ]
         }
       ],
@@ -335,8 +497,8 @@ export default defineConfig({
           items: [
             { text: '概述', link: '/os_fundamentals/' },
             { text: '01_计算机是什么', link: '/os_fundamentals/01_计算机是什么' },
-            { text: '02_32位与64位', link: '/os_fundamentals/02_程序的执行_相比_32_位_64_位的优势是什么_上' },
-            { text: '03_程序执行64位下', link: '/os_fundamentals/03_程序的执行_相比_32_位_64_位的优势是什么_下' },
+            { text: '02_32位与64位', link: '/os_fundamentals/02_程序的执行_相比_32_位_64_位的优势是什么(上)' },
+            { text: '03_程序执行64位下', link: '/os_fundamentals/03_程序的执行_相比_32_位_64_位的优势是什么(下)' },
             { text: '04_递归转非递归', link: '/os_fundamentals/04_构造复杂的程序_将一个递归函数转成非递归函数的通用方法' },
             { text: '05_存储器分级', link: '/os_fundamentals/05_存储器分级_L1_Cache_比内存和_SSD_快多少倍' },
             { text: '06_文件管理', link: '/os_fundamentals/06_目录结构和文件管理指令_rm_rf_指令的作用是' },
@@ -364,9 +526,9 @@ export default defineConfig({
             { text: '28_内存回收下', link: '/os_fundamentals/28_内存回收下篇_三色标记_清除算法是怎么回事' },
             { text: '29_Linux目录', link: '/os_fundamentals/29_Linux_下的各个目录有什么作用' },
             { text: '30_文件系统', link: '/os_fundamentals/30_文件系统的底层实现_FAT_NTFS_和_Ext3_有什么区别' },
-            { text: '31_B树与B+树', link: '/os_fundamentals/31_数据库文件系统实例_MySQL_中_B_树和_B_树有什么区别' },
+            { text: '31_B树与B+树', link: '/os_fundamentals/31_数据库文件系统实例_MySQL_中_B_树和_B+_树有什么区别' },
             { text: '32_HDFS', link: '/os_fundamentals/32_HDFS_介绍_分布式文件系统是怎么回事' },
-            { text: '33_TCPIP多路复用', link: '/os_fundamentals/33_互联网协议群_TCPIP_多路复用是怎么回事' },
+            { text: '33_TCPIP多路复用', link: '/os_fundamentals/33_互联网协议群(TCPIP)_多路复用是怎么回事' },
             { text: '34_UDP协议', link: '/os_fundamentals/34_UDP_协议_UDP_和_TCP_相比快在哪里' },
             { text: '35_IO模式', link: '/os_fundamentals/35_Linux_的_IO_模式_electpollepoll_有什么区别' },
             { text: '36_公私钥体系', link: '/os_fundamentals/36_公私钥体系和网络安全_什么是中间人攻击' },
@@ -432,11 +594,185 @@ export default defineConfig({
             }
           ]
         }
+      ],
+      '/kernel/': [
+        {
+          text: 'Linux 内核深度分析',
+          items: [
+            { text: '概述', link: '/kernel/' },
+            {
+              text: '内存管理 (mm)',
+              items: [
+                { text: '概述', link: '/mm/linux_kernel/' },
+                { text: '分配器', link: '/mm/linux_kernel/mm_allocator' },
+                { text: '核心结构', link: '/mm/linux_kernel/mm_core_structs' },
+                { text: '内存映射', link: '/mm/linux_kernel/mm_mmap' },
+                { text: '页错误处理', link: '/mm/linux_kernel/mm_page_fault' },
+                { text: '页面回收', link: '/mm/linux_kernel/mm_page_reclaim' },
+                { text: 'OOM 处理', link: '/mm/linux_kernel/mm_oom' },
+                { text: 'Swap', link: '/mm/linux_kernel/mm_swap' },
+                { text: 'Cgroup 内存', link: '/mm/linux_kernel/mm_memory_cgroup' }
+              ]
+            },
+            {
+              text: '虚拟文件系统 (VFS)',
+              items: [
+                { text: '概述', link: '/vfs/linux_kernel/' },
+                { text: '索引节点', link: '/vfs/linux_kernel/inode' },
+                { text: '目录项缓存', link: '/vfs/linux_kernel/dcache' },
+                { text: '超级块', link: '/vfs/linux_kernel/superblock' },
+                { text: '文件操作', link: '/vfs/linux_kernel/file_operations' },
+                { text: '缓冲区缓存', link: '/vfs/linux_kernel/buffer_cache' },
+                { text: '路径查找', link: '/vfs/linux_kernel/path_lookup' },
+                { text: '挂载命名空间', link: '/vfs/linux_kernel/mount_namespace' },
+                { text: '可执行格式', link: '/vfs/linux_kernel/exec_binfmt' }
+              ]
+            },
+            {
+              text: '块设备层 (block)',
+              items: [
+                { text: '概述', link: '/block/linux_kernel/' },
+                { text: '通用块层', link: '/block/linux_kernel/block_core' },
+                { text: '请求处理', link: '/block/linux_kernel/block_request' },
+                { text: '调度器', link: '/block/linux_kernel/block_scheduler' },
+                { text: '多队列', link: '/block/linux_kernel/block_mq' },
+                { text: ' gendisk', link: '/block/linux_kernel/block_genhd' }
+              ]
+            },
+            {
+              text: '网络子系统',
+              items: [
+                { text: '概述', link: '/net/linux_kernel/' },
+                { text: 'Socket 核心', link: '/net/linux_kernel/net_socket_core' },
+                { text: 'TCP/IP 协议栈', link: '/net/linux_kernel/net_tcp_ip' },
+                { text: 'Netfilter', link: '/net/linux_kernel/net_netfilter' },
+                { text: '路由', link: '/net/linux_kernel/net_routing' },
+                { text: 'sk_buff', link: '/net/linux_kernel/net_skbuff' }
+              ]
+            },
+            {
+              text: 'Netfilter',
+              items: [
+                { text: '概述', link: '/netfilter/linux_kernel/' },
+                { text: '子系统架构', link: '/netfilter/linux_kernel/netfilter_subsystem' }
+              ]
+            },
+            {
+              text: '调度器 (sched)',
+              items: [
+                { text: '概述', link: '/sched/linux_kernel/' },
+                { text: '核心结构', link: '/sched/linux_kernel/sched_core' },
+                { text: 'CFS 调度器', link: '/sched/linux_kernel/sched_cfs' },
+                { text: '实时调度', link: '/sched/linux_kernel/sched_rt' },
+                { text: '上下文切换', link: '/sched/linux_kernel/sched_context_switch' },
+                { text: '负载均衡', link: '/sched/linux_kernel/sched_load_balance' }
+              ]
+            },
+            {
+              text: '同步机制 (locking)',
+              items: [
+                { text: '概述', link: '/locking/linux_kernel/' },
+                { text: '子系统架构', link: '/locking/linux_kernel/locking_subsystem' }
+              ]
+            },
+            {
+              text: 'RCU',
+              items: [
+                { text: '概述', link: '/rcu/linux_kernel/' },
+                { text: '子系统架构', link: '/rcu/linux_kernel/rcu_subsystem' }
+              ]
+            },
+            {
+              text: '时间管理 (time)',
+              items: [
+                { text: '概述', link: '/time/linux_kernel/' },
+                { text: '子系统架构', link: '/time/linux_kernel/time_subsystem' }
+              ]
+            },
+            {
+              text: '进程间通信 (ipc)',
+              items: [
+                { text: '概述', link: '/ipc/linux_kernel/' },
+                { text: '子系统架构', link: '/ipc/linux_kernel/ipc_subsystem' }
+              ]
+            },
+            {
+              text: 'I/O uring',
+              items: [
+                { text: '概述', link: '/io_uring/linux_kernel/' },
+                { text: '核心架构', link: '/io_uring/linux_kernel/io_uring_core' },
+                { text: '内存管理', link: '/io_uring/linux_kernel/io_uring_memory' },
+                { text: '操作机制', link: '/io_uring/linux_kernel/io_uring_operations' },
+                { text: '特性', link: '/io_uring/linux_kernel/io_uring_features' }
+              ]
+            },
+            {
+              text: '加密子系统 (crypto)',
+              items: [
+                { text: '概述', link: '/crypto/linux_kernel/' },
+                { text: '核心架构', link: '/crypto/linux_kernel/crypto_core' },
+                { text: '异步加密', link: '/crypto/linux_kernel/crypto_async' },
+                { text: '基础设施', link: '/crypto/linux_kernel/crypto_infra' },
+                { text: 'SKCIPHER', link: '/crypto/linux_kernel/crypto_skcipher' }
+              ]
+            },
+            {
+              text: '通用库 (lib)',
+              items: [
+                { text: '概述', link: '/lib/linux_kernel/' },
+                { text: '子系统架构', link: '/lib/linux_kernel/lib_subsystem' }
+              ]
+            },
+            {
+              text: '音频子系统 (sound)',
+              items: [
+                { text: '概述', link: '/sound/linux_kernel/' },
+                { text: '子系统架构', link: '/sound/linux_kernel/sound_subsystem' }
+              ]
+            },
+            {
+              text: '虚拟化 (virt)',
+              items: [
+                { text: '概述', link: '/virt/linux_kernel/' },
+                { text: 'KVM 核心', link: '/virt/linux_kernel/kvm_core' },
+                { text: 'KVM 内存', link: '/virt/linux_kernel/kvm_memory' },
+                { text: 'KVM vCPU', link: '/virt/linux_kernel/kvm_vcpu' },
+                { text: 'KVM 中断', link: '/virt/linux_kernel/kvm_interrupt' },
+                { text: 'KVM MMU', link: '/virt/linux_kernel/kvm_mmu' },
+                { text: 'Virtio 框架', link: '/virt/linux_kernel/virtio_framework' },
+                { text: 'Virtio 设备驱动', link: '/virt/linux_kernel/virtio_drivers' },
+                { text: 'Virtio 传输', link: '/virt/linux_kernel/virtio_transport' }
+              ]
+            },
+            {
+              text: 'OpenBMC',
+              items: [
+                { text: '概述', link: '/openbmc/linux_kernel/' },
+                { text: 'IPMI 协议栈', link: '/openbmc/linux_kernel/ipmi_protocol_stack' },
+                { text: 'Redfish 接口', link: '/openbmc/linux_kernel/redfish_interface' },
+                { text: 'D-Bus 服务', link: '/openbmc/linux_kernel/phosphor_dbus_services' },
+                { text: '网络安全', link: '/openbmc/linux_kernel/security_subsystem' },
+                { text: '硬件控制', link: '/openbmc/linux_kernel/hardware_control' },
+                { text: '网络通信服务', link: '/openbmc/linux_kernel/network_comm_services' },
+                { text: '固件更新', link: '/openbmc/linux_kernel/boot_firmware_update' }
+              ]
+            }
+          ]
+        }
       ]
-    },
+    }
+  },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/Sphinxes0o0' }
-    ]
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vue-runtime': ['vue/runtime-core', 'vue/runtime-dom'],
+          'vue-compiler': ['vue/compiler-core', 'vue/compiler-dom', 'vue/compiler-sfc'],
+          'vitepress': ['vitepress']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 600
   }
 })

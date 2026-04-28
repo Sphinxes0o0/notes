@@ -5,6 +5,10 @@
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
+    "vite-plugin-pwa": "^1.2.0",
     "vitepress": "^2.0.0-alpha.12"
+  },
+  "dependencies": {
+    "@vuepress/plugin-sitemap": "^2.0.0-beta.49"
   }
 }
