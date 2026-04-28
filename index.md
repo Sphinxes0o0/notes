@@ -7,7 +7,7 @@ hero:
   text: "技术学习笔记"
   tagline: 记录学习过程中的思考和总结，涵盖 C/C++、网络、操作系统、系统编程等多个技术领域
   image:
-    src: /logo.png
+    src: /logo.svg
     alt: Sphinx's Notes
   actions:
     - theme: brand

@@ -5,6 +5,8 @@ import { readingTimePlugin } from './plugins/readingTime.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/notes/',
+
   plugins: [
     readingTimePlugin(),
     sitemapPlugin({
@@ -54,7 +56,7 @@ export default defineConfig({
 
   // PWA configuration
   pwa: {
-    base: '/',
+    base: '/notes/',
     includeAssets: ['favicon.ico', 'robots.txt'],
     manifest: {
       name: "Sphinx's Notes",
