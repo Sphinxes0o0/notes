@@ -50,6 +50,45 @@ bdrv_open_child()
       → 添加到 children 列表
 ```
 
+## 权限模型
+
+BdrvChild 使用perm和shared_perm实现安全的共享访问：
+
+```c
+// block.c
+bdrv_check_perm()
+{
+    // 检查所有子节点的权限请求
+    QLIST_FOREACH(child, &bs->parents, next_parent) {
+        required = child->perm;
+        shared = child->shared_perm;
+        // 验证权限兼容性
+    }
+}
+
+// 权限标志
+#define BLK_PERM_VALID (BLK_PERM_READ | BLK_PERM_WRITE | \
+                        BLK_PERM_RESIZE | BLK_PERM_GRAPH_MOD)
+```
+
+## 冻结链接 (Frozen Links)
+
+冻结机制防止在热迁移期间子图结构被修改：
+
+```c
+// block.c
+bdrv_freeze_child_link()
+{
+    child->frozen = true;
+    // 冻结后，任何尝试修改连接的操作都会失败
+}
+
+bdrv_unfreeze_child_link()
+{
+    child->frozen = false;
+}
+```
+
 ## COW (Copy-On-Read)
 
 ```c
@@ -67,10 +106,28 @@ bdrv_co_do_copy_on_readv()
 }
 ```
 
+## 子节点替换
+
+在事务中安全替换子节点：
+
+```c
+// block.c
+bdrv_replace_child_noperm()
+{
+    // 从旧父节点移除
+    qlist_remove(&child->next_parent);
+    // 添加到新父节点
+    qlist_insert(&new_bs->parents, &child->next_parent, ...);
+    // 更新指向
+    child->bs = new_bs;
+}
+```
+
 ## 关键文件
 
 | 文件 | 功能 |
 |------|------|
-| `block.c` | BDS 图管理, bdrv_open_child |
-| `block_int-common.h` | BdrvChild, BlockDriverState 结构 |
-| `io.c` | COW 实现 |
+| `block.c` | BDS 图管理, bdrv_open_child, bdrv_replace_child |
+| `block_int-common.h` | BdrvChild, BlockDriverState 结构定义 |
+| `io.c` | COW 实现, bdrv_co_do_copy_on_readv |
+| `backup.c` | 备份任务的 COW 处理 |
