@@ -11,11 +11,10 @@
 
 ### C++
 - [C++ 基础](./cpp/cpp.md) - C++ 语言的基本特性
-- [嵌入式 C++](./cpp/embedded_cpp.md) - 嵌入式 C++ 开发
 - [对象创建](./cpp/object_creation_heap_or_stack.md) - 堆栈对象创建策略
 
 #### 容器
-- [容器概览](./cpp/containers/containers_overview_guide.md) - STL 容器总览
+- [容器概览](./cpp/containers/overview.md) - STL 容器总览
 - [vector](./cpp/containers/vector.md) - 动态数组
 - [array](./cpp/containers/array.md) - 固定大小数组
 - [list](./cpp/containers/list.md) - 双向链表

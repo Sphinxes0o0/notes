@@ -23,7 +23,7 @@
 - [Exec 与 Binfmt](./exec_binfmt.md)
 
 ### 具体文件系统
-- [Ext4 文件系统](../filesystems/ext4.md) (待完成)
+- [Ext4 文件系统](https://www.kernel.org/doc/html/latest/filesystems/ext4/) (外部链接)
 
 ## VFS 架构
 

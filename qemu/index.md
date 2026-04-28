@@ -11,40 +11,40 @@ index: false
 
 ### Phase 1-3: 核心子系统
 
-- [QOM (QEMU 对象模型)](./01_qom)
-- [内存管理](./02_memory)
-- [CPU 执行](./03_cpu)
+- [QOM (QEMU 对象模型)](./01_qom.md)
+- [内存管理](./02_memory.md)
+- [CPU 执行](./03_cpu.md)
 
 ### Phase 4: 块设备层
 
-- [BlockDriverState 图结构](./04_block_bs_graph)
-- [QCOW2 格式实现](./04_qcow2)
-- [Coroutine 和 I/O 线程](./04_coroutine_io)
-- [块任务与实时迁移](./04_block_job)
+- [BlockDriverState 图结构](./04_block_bs_graph.md)
+- [QCOW2 格式实现](./04_qcow2.md)
+- [Coroutine 和 I/O 线程](./04_coroutine_io.md)
+- [块任务与实时迁移](./04_block_job.md)
 
 ### Phase 5: 迁移
 
-- [迁移框架](./05_migration_framework)
-- [RAM 迁移](./05_ram_migration)
-- [Multifd 和压缩](./05_multifd_compression)
+- [迁移框架](./05_migration_framework.md)
+- [RAM 迁移](./05_ram_migration.md)
+- [Multifd 和压缩](./05_multifd_compression.md)
 
 ### Phase 6: 网络
 
-- [网络核心架构](./06_network_core)
-- [VLAN 和 Hub](./06_vlan_hub)
+- [网络核心架构](./06_network_core.md)
+- [VLAN 和 Hub](./06_vlan_hub.md)
 
 ### Phase 7: 用户模式
 
-- [系统调用模拟](./07_syscall)
-- [信号处理](./07_signal)
+- [系统调用模拟](./07_syscall.md)
+- [信号处理](./07_signal.md)
 
 ### Phase 8: QAPI
 
-- [QAPI Schema 和代码生成](./08_qapi)
+- [QAPI Schema 和代码生成](./08_qapi.md)
 
 ### Phase 9: UI
 
-- [VNC 服务器架构](./09_vnc)
+- [VNC 服务器架构](./09_vnc.md)
 
 ## 关键架构模式
 
