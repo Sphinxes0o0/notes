@@ -4,9 +4,6 @@
 
 ## 目录结构
 
-### 基础理论
-- [计算机架构介绍](./computer_architecture_intro.md) - 计算机系统架构基础
-
 ### 设计模式
 - [单例模式](./design_pattern/singleton.md) - 单例设计模式的实现和应用
 
@@ -20,8 +17,8 @@
 - [邮箱机制](./ipc/mailbox/lwip_mailbox.md) - 邮箱式 IPC 实现
 
 ### 安全工具
-- [Masscan](./masscan/ARCHITECTURE.md) - 互联网规模高速端口扫描器
-- [Falco](./falco/ARCHITECTURE.md) - 云原生运行时安全工具
+- [Masscan](/security/masscan/ARCHITECTURE) - 互联网规模高速端口扫描器
+- [Falco](/security/falco/ARCHITECTURE) - 云原生运行时安全工具
 
 ## 学习目标
 
