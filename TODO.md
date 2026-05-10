@@ -13,36 +13,20 @@
 - [x] midware/tools/datastructure/qemu 目录审计与修复
 - [x] design_patterns 目录审计与修复
 - [x] network_fundamentals 目录审计与修复
+- [x] CI 代码块审计流程创建
+- [x] kernel/index.md 修复
+- [x] 空目录清理 (courses/, wiki/)
+- [x] misc 内容迁移到 network/
+- [x] srcExclude 更新
 
-## 待处理
+## 进行中
 
-### 1. 目录清理与迁移
-- [ ] 删除空目录 `courses/`、`wiki/`
-- [ ] 迁移 `misc/osi_phy_mac.md` 到 `notes/network/`
-- [ ] 从 `.vitepress/config.mjs` 的 `srcExclude` 移除 `misc/**`
-- [ ] 添加 `osi_phy_mac.md` 到 network sidebar
+### 1. Sidebar 扩展
+- [ ] 添加 security/linux_kernel/ 到 sidebar（10 个文件）
+- [ ] 添加 network/linux_kernel/ 核心文件到 sidebar（13 个文件）
 
-### 2. CI/CD
-- [x] 创建 CI 代码块审计流程 (`.github/workflows/audit-codeblocks.yml`)
-- [x] 创建审计脚本 (`.github/scripts/audit-codeblocks.js`)
-- [ ] 提交 CI 文件到 GitHub
-
-### 3. 代码块语言标记
-- [ ] 修复 `file_api/file_config.h` → `c` 或 `cpp`（位于 security/nids/snort3_architecture_analysis.md:4103）
-- [ ] 考虑将 `conf` → `ini`，`dts` → `typescript` 等作为近似高亮
-
-## 无需处理（已确认）
-
-### Sidebar 配置
-- [x] 所有 283 个 sidebar 链接都指向存在的文件 ✓
-- [x] 111 个未列入 sidebar 的文件是故意的（deep-dive r1/r2 版本等）
-
-### VitePress 配置
-- [x] `manualChunks` 已优化，无需修改
-- [x] `ignoreMissing` 正确（这些语言 Shiki 不支持）
-
-### kernel/index.md
-- [x] 已修复 16 个链接指向正确的 `linux_kernel/` 子目录
+### 2. 内容修复
+- [ ] 修复 index.md frontmatter
 
 ---
 
