@@ -31,7 +31,7 @@ export default defineConfig({
   smoothScroll: true,
 
   // Exclude courses and wiki directories from VitePress processing
-  srcExclude: ['courses/**', 'wiki/**', 'misc/**'],
+  srcExclude: ['courses/**', 'wiki/**'],
 
   // Ignore dead links for excluded content
   ignoreDeadLinks: true,
