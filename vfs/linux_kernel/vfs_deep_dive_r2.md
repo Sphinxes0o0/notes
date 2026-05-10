@@ -215,7 +215,7 @@ static int d_compare(const struct dentry *dentry, unsigned int len,
     parent = dentry->d_parent;
     
     // 3. 字符串比较
-    return dentry字符串比较实现;
+    // dentry字符串比较实现
 }
 ```
 

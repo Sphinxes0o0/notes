@@ -416,7 +416,6 @@ input IT                   output IT
 - **LIFO 操作**：`stack`
 - **FIFO 操作**：`queue`
 - **优先级操作**：`priority_queue`
-```
 
 ---
 
