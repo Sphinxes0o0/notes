@@ -24,18 +24,28 @@ npm run docs:preview   # Preview production build
 - **Framework**: VitePress v2 (static documentation site generator)
 - **Base path**: `/notes/` (configured for GitHub Pages deployment)
 - **VitePress config**: `.vitepress/config.mjs` - contains all navigation and sidebar configuration
-- **Excluded content**: The `courses/` directory is excluded from VitePress processing but remains in the repo
+- **Build output**: `.vitepress/dist` (uploaded to GitHub Pages artifact)
+- **Custom plugins**: `.vitepress/plugins/readingTime.mjs` (reading time calculation)
+- **Excluded content**: `courses/`, `wiki/`, `misc/` directories are excluded from VitePress processing via `srcExclude`
 
 ## Content Structure
 
 ```
 notes/
-├── ccpp/       # C/C++ notes (C language, C++ containers, memory management)
-├── network/    # Network notes (TCP/IP, Linux Netfilter/nftables)
-├── os/         # Operating system notes (Linux kernel development)
-├── sys/        # System programming (IPC, ELF, design patterns)
-├── midware/    # Middleware (DoIP, SOME/IP, vSOME/IP)
-└── tools/      # Tool usage notes (Vim, Netcat, etc.)
+├── ccpp/              # C/C++ notes (C language, C++ containers, memory management)
+├── network/           # Network notes (TCP/IP, Linux Netfilter/nftables)
+├── os/                # Operating system notes
+├── sys/               # System programming (IPC, ELF, design patterns)
+├── midware/           # Middleware (DoIP, SOME/IP, vSOME/IP)
+├── tools/             # Tool usage notes (Vim, Netcat, etc.)
+├── kernel/            # Linux kernel deep-dive (mm, VFS, block, net, sched, etc.)
+├── security/          # Security tools (masscan, falco, snort)
+├── qemu/              # QEMU architecture analysis
+├── datastructure/     # Data structures course
+├── design_patterns/   # Design patterns course
+├── network_fundamentals/  # Network fundamentals course
+├── os_fundamentals/   # Operating system fundamentals course
+└── resources/        # Resource files
 ```
 
 ## GitHub Actions

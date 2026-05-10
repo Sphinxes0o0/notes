@@ -14,7 +14,13 @@ Linux 指令是由很多顶级程序员共同设计的，使用 Linux 指令解�
 你可以先尝试实现一个最简单的程序，从文件iplist中读出这些ip并尝试用for循环遍历这些ip，具体程序如下：
 ```shell
 #!/usr/bin/bash
-readarray -t ips 首行的#!叫作 Shebang。Linux 的程序加载器会分析 Shebang 的内容，决定执行脚本的程序。这里我们希望用bash来执行这段程序，因为我们用到的 readarray 指令是bash 4.0后才增加的能力。
+readarray -t ips < iplist
+for ip in "${ips[@]}"; do
+    echo "$ip"
+done
+```
+
+首行的#!叫作 Shebang。Linux 的程序加载器会分析 Shebang 的内容，决定执行脚本的程序。这里我们希望用bash来执行这段程序，因为我们用到的 readarray 指令是bash 4.0后才增加的能力。
 readarray指令将 iplist 文件中的每一行读取到变量ips中。ips是一个数组，可以用echo ${ips[@]}打印其中全部的内容：@代表取数组中的全部内容；$符号是一个求值符号。不带$的话，ips[@]会被认为是一个字符串，而不是表达式。
 for循环遍历数组中的每个ip地址，echo把地址打印到屏幕上。
 如果用shell执行上面的程序会报错，因为readarray是bash 4.0后支持的能力，因此我们用chomd为foreach.sh增加执行权限，然后直接利用shebang的能力用bash执行，如下图所示：
@@ -40,16 +46,23 @@ sudo usermod -G sudo lagou
 sudo usermod --shell /bin/bash lagou
 sudo cp ~/.bashrc /home/lagou/
 sudo chown lagou.lagou /home/lagou/.bashrc
-sduo sh -c 'echo "lagou ALL=(ALL)  NOPASSWD:ALL">>/etc/sudoers'
+sudo sh -c 'echo "lagou ALL=(ALL)  NOPASSWD:ALL">>/etc/sudoers'
 
 ```
 你可以删除用户lagou，并清理/etc/sudoers文件最后一行。用指令userdel lagou删除账户，然后执行create_lagou.sh重新创建回lagou账户。如果发现结果一致，就代表create_lagou.sh功能没有问题。
 最后我们想在v1``v2上都执行create_logou.sh这个脚本。但是你不要忘记，我们的目标是让程序在成百上千台机器上传播，因此还需要一个脚本将create_lagou.sh拷贝到需要执行的机器上去。
 这里，可以对foreach.sh稍做修改，然后分发create_lagou.sh文件。
 foreach.sh
-```js
+```bash
 #!/usr/bin/bash
-readarray -t ips 这里，我们在循环中用scp进行文件拷贝，然后分别去每台机器上执行create_lagou.sh。
+readarray -t ips < $1
+for ip in "${ips[@]}"; do
+    echo "execute on .. $ip"
+    scp $script lagou@$ip:/tmp/
+    ssh lagou@$ip "bash /tmp/$script"
+done
+```
+
 如果你的机器非常多，上述过程会变得非常烦琐。你可以先带着这个问题学习下面的Step 4，然后再返回来重新思考这个问题，当然你也可以远程执行脚本。另外，还有一个叫作sshpass的工具，可以帮你把密码传递给要远程执行的指令，如果你对这块内容感兴趣，可以自己研究下这个工具。
 第四步： 打通集群权限
 接下来我们需要打通从主服务器到v1和v2的权限。当然也可以每次都用ssh输入用户名密码的方式登录，但这并不是长久之计。 如果我们有成百上千台服务器，输入用户名密码就成为一件繁重的工作。
@@ -62,22 +75,20 @@ readarray -t ips 这里，我们在循环中用scp进行文件拷贝，然后分
 可以看到id_rsa.pub文件中是加密的字符串，我们可以把这些字符串拷贝到其他机器对应用户的~/.ssh/authorized_keys文件中，当ssh登录其他机器的时候，就不用重新输入密码了。 这个传播公钥的能力，可以用一个shell脚本执行，这里我用transfer_key.sh实现。
 
 我们修改一下foreach.sh，并写一个transfer_key.sh配合foreach.sh的工作。transfer_key.sh内容如下：
-foreach.sh
-```js
+```bash
 #!/usr/bin/bash
-readarray -t ips tranfer_key.sh
-```shell
 ip=$1
 pubkey=$(cat ~/.ssh/id_rsa.pub)
 echo "execute on .. $ip"
-ssh lagou@$ip " 
+ssh lagou@$ip "
 mkdir -p ~/.ssh
 echo $pubkey  >> ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 "
-
 ```
+
+在foreach.sh中我们执行 transfer_key.sh，并且将 IP 地址通过参数传递过去。
 在foreach.sh中我们执行 transfer_key.sh，并且将 IP 地址通过参数传递过去。在 transfer_key.sh 中，用$1读出 IP 地址参数， 再将公钥写入变量pubkey，然后登录到对应的服务器，执行多行指令。用mkdir指令检查.ssh目录，如不存在就创建这个目录。最后我们将公钥追加写入目标机器的~/.ssh/authorized_keys中。
 chmod 700和chmod 600是因为某些特定的linux版本需要.ssh的目录为可读写执行，authorized_keys文件的权限为只可读写。而为了保证安全性，组用户、所有用户都不可以访问这个文件。
 此前，我们执行foreach.sh需要输入两次密码。完成上述操作后，我们再登录这两台服务器就不需要输入密码了。
@@ -103,7 +114,7 @@ java --version
 根据最小权限原则，执行 Java 程序我们考虑再创建一个用户ujava。
 ```js
 sudo useradd -m -d /opt/ujava ujava
-sudo usermod --shell /bin/bash lagou
+sudo usermod --shell /bin/bash ujava
 
 ```
 这个用户可以不设置密码，因为我们不会真的登录到这个用户下去做任何事情。接下来我们为用户配置 Java 环境变量，如下图所示：
@@ -137,9 +148,17 @@ apt后面增了一个-y是为了让执行过程不弹出确认提示。
 第六步：远程安装 Java 环境
 终于到了远程安装 Java 环境这一步，我们又需要用到foreach.sh。为了避免每次修改，你可以考虑允许foreach.sh带一个文件参数，指定需要远程执行的脚本。
 foreach.sh
-```js
+```bash
 #!/usr/bin/bash
-readarray -t ips 改写后的foreach会读取第一个执行参数作为远程执行的脚本文件。 而bash -s会提示使用标准输入流作为命令的输入；< $script负责将脚本文件内容重定向到远程bash的标准输入流。
+readarray -t ips < $1
+for ip in "${ips[@]}"; do
+    echo "execute on .. $ip"
+    ssh lagou@$ip "bash -s" < $script
+done
+```
+
+改写后的foreach会读取第一个执行参数作为远程执行的脚本文件。而bash -s会提示使用标准输入流作为命令的输入；< $script负责将脚本文件内容重定向到远程bash的标准输入流。
+
 然后我们执行foreach.sh install_java.sh，机器等待 1 分钟左右，在执行结束后，可以用下面这个脚本检测两个机器中的安装情况。
 check.sh
 ```java
