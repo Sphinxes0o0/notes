@@ -26,7 +26,7 @@ npm run docs:preview   # Preview production build
 - **VitePress config**: `.vitepress/config.mjs` - contains all navigation and sidebar configuration
 - **Build output**: `.vitepress/dist` (uploaded to GitHub Pages artifact)
 - **Custom plugins**: `.vitepress/plugins/readingTime.mjs` (reading time calculation)
-- **Excluded content**: `courses/`, `wiki/`, `misc/` directories are excluded from VitePress processing via `srcExclude`
+- **Excluded content**: `courses/`, `wiki/` directories are excluded from VitePress processing via `srcExclude`
 
 ## Content Structure
 
@@ -51,3 +51,18 @@ notes/
 ## GitHub Actions
 
 Auto-deploy is configured in `.github/workflows/deploy.yml` - pushes to `main` trigger automatic deployment to GitHub Pages.
+
+## CI/CD
+
+- `.github/workflows/audit-codeblocks.yml` - Automatically audits markdown code blocks on push/PR
+  - Checks for unclosed code blocks, invalid language markers, and content bleeding
+  - Script: `.github/scripts/audit-codeblocks.js`
+
+## Agent Parallelism
+
+This project supports **up to 10 concurrent agents** for parallel tasks:
+- Content auditing across multiple directories simultaneously
+- Batch fixing of code block issues
+- Independent file processing (each agent can work on different files/directories)
+
+Typical parallel workflow: Launch multiple agents with non-overlapping file scopes.

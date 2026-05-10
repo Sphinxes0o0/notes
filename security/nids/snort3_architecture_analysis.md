@@ -15932,7 +15932,6 @@ Inspector* PluginManager::create_inspector(PluginType, const char* name, Module*
 - [Snort 3官方文档](https://snort.org/documents)
 - [Snort 3配置指南](https://snort.org/documents/snort-3-configuration-guide)
 - [Snort 3规则编写](https://snort.org/documents/snort-3-rule-writing)
-- [Snort 3手册](https://www.snort.org/documents/snort-manual)
 
 ### IB.2 协议规范
 
@@ -15945,7 +15944,6 @@ Inspector* PluginManager::create_inspector(PluginType, const char* name, Module*
 ### IB.3 相关工具
 
 - [Wireshark](https://www.wireshark.org/) - 协议分析器
-- [Ettercap](https://ettercap.github.io/) - 中间人攻击工具
 - [Suricata](https://suricata.io/) - 类似IDS/IPS
 - [Zeek](https://zeek.org/) - 网络安全监控器
 

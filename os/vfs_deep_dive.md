@@ -327,12 +327,12 @@ static void __dentry_kill(struct dentry *dentry)
 │    ↓                                                          │
 │ 4. dcache_hash_bucket lock (保护哈希桶)                      │
 └──────────────────────────────────────────────────────────────┘
+```
 
 注意：如果存在祖先关系
 dentry->d_parent->...->d_parent->d_lock
     ↓
     dentry->d_lock
-```
 
 ## 4. Inode 缓存深入分析
 

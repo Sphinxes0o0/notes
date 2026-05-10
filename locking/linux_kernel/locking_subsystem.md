@@ -690,8 +690,9 @@ preempt_disable()                      __raw_spin_lock()
               +---------+---------+
                         |
                         v
-                   循环等待
 ```
+
+循环等待
 
 ### 7.2 Mutex 架构
 

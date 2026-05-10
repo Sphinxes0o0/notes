@@ -226,7 +226,7 @@ sudo apt install -y pkg-config
 
 ### 编译&安装
 
-``` bash
+```bash
 cd vsomeip-3.1.20/
 mkdir build;cd build;
 
@@ -291,6 +291,7 @@ export VSOMEIP_CONFIGURATION=my_settings.json \
 ./my_vsomeip_application
 ```
 
+```bash
 make
 
 sudo make install

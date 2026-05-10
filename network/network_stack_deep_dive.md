@@ -210,6 +210,7 @@ struct sock {
 │     │            │         │                 FIN_WAIT_2 ──► TIME_WAIT │
 │     │            │         │                                               │
 └─────────────────────────────────────────────────────────────────────┘
+```
 
 状态转换关键事件：
 - SYN_SENT: 发送 SYN
@@ -218,7 +219,6 @@ struct sock {
 - FIN_WAIT_1: 发送 FIN
 - FIN_WAIT_2: 收到 ACK
 - TIME_WAIT: 等待 2MSL
-```
 
 ### 3.2 TCP 选项处理
 
