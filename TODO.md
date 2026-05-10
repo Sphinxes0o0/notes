@@ -2,16 +2,10 @@
 
 ## 已完成 ✓
 
-### 审计与修复
-- [x] os_fundamentals 内容审计与修复
-- [x] ccpp 目录审计与修复
-- [x] sys 目录审计与修复
-- [x] network 目录审计与修复
-- [x] kernel 目录审计与修复
-- [x] security 目录审计
-- [x] midware/tools/datastructure/qemu 目录审计与修复
-- [x] design_patterns 目录审计与修复
-- [x] network_fundamentals 目录审计与修复
+### 审计与修复 (2026-05-10)
+- [x] 所有目录内容审计（ccpp, sys, network, kernel, security, midware, tools, datastructure, design_patterns, network_fundamentals, os_fundamentals）
+- [x] 修复 152+ 个代码块 bleeding 问题
+- [x] 修复 6 个失效外部链接
 
 ### 配置与结构
 - [x] CLAUDE.md 内容结构更新
@@ -35,27 +29,32 @@
 
 ---
 
-## 待处理
+## 待规划/潜在优化
 
-### 1. 内容修复 (152 个问题)
-- [ ] datastructure 目录：约 80+ 行需要修复
-- [ ] os_fundamentals 目录：约 50+ 行需要修复
-- [ ] network_fundamentals 目录：约 10+ 行需要修复
-- [ ] 其他目录：零星问题
+### 1. 内容增强
+- [ ] 添加缺失的 index.md 文件描述（如 security/linux_kernel/index.md）
+- [ ] 统一各目录的 frontmatter 格式（author, date, tags 等）
+- [ ] 检查是否有重复内容可以合并
 
-**问题类型**：课程讲解文本混入代码块（CONTENT_BLEEDING）
-**建议**：分批修复，每次 1-2 个文件
+### 2. SEO 优化
+- [ ] 检查 meta description 是否完整
+- [ ] 添加 Open Graph 图片
+- [ ] 验证 sitemap 生成正确
 
-### 2. 外部链接修复 (6 个失效)
-| 文件 | URL |
-|------|-----|
-| network_fundamentals/模块四思考题解答.md:9 | bind9.readthedocs.io - 404 |
-| security/nids/snort3_architecture_analysis.md:15935 | snort.org - 404 |
-| security/nids/snort3_architecture_analysis.md:15948 | ettercap.github.io - 连接错误 |
-| openbmc/linux_kernel/kvm_virtualmedia.md:1045 | kernel.org - 404 |
-| openbmc/linux_kernel/kvm_virtualmedia.md:1046 | kernel.org - 404 |
-| network/linux_netfilter/conntrack.md:562 | kernel.org - 404 |
+### 3. 性能优化
+- [ ] 图片压缩和优化
+- [ ] 考虑使用 CDN 加速外部资源
+- [ ] 评估 chunk size 进一步拆分可能
+
+### 4. 开发者体验
+- [ ] 添加 pre-commit hooks（lint, format）
+- [ ] 添加贡献指南 CONTRIBUTING.md
+- [ ] 考虑添加自动图片压缩 CI
+
+### 5. 内容扩展
+- [ ] 添加缺失的设计模式章节（如 观察者、装饰器等已存在于 content 但需确认 sidebar）
+- [ ] 统一复习题格式
 
 ---
 
-*最后更新: 2026-05-10*
+*最后更新: 2026-05-11*
