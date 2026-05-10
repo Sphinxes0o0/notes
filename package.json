@@ -2,13 +2,34 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
     "vite-plugin-pwa": "^1.2.0",
     "vitepress": "^2.0.0-alpha.12"
   },
   "dependencies": {
     "@vuepress/plugin-sitemap": "^2.0.0-beta.49"
-  }
+  },
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "技术学习笔记和总结，涵盖 C/C++、网络、操作系统、系统编程等多个技术领域。",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sphinxes0o0/notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Sphinxes0o0/notes/issues"
+  },
+  "homepage": "https://github.com/Sphinxes0o0/notes#readme"
 }
