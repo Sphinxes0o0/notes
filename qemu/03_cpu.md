@@ -54,7 +54,7 @@ struct TranslationBlock {
     target_ulong cs_base;              // 代码段基址
     uint32_t flags;                    // 标志
     uint16_t size;                     // 代码大小
-    uint16_t ic快;
+    uint16_t icache;
     uint32_t cflags;                   // 编译标志
     uint32_t invalidated_flag;
 

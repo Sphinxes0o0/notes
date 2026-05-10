@@ -65,7 +65,6 @@ gcc -C hello.s
                      U _GLOBAL_OFFSET_TABLE_
     0000000000000000 T main
                      U printf
-
   ```
 
 * readelf
@@ -317,7 +316,7 @@ typedef struct {
 
 ```
 *  String and symbol tables
-```bash
+```c
 typedef struct {
     uint32_t      st_name;
     Elf32_Addr    st_value;

@@ -198,9 +198,9 @@ s[5]=0;
 ```
 > 这里要注意：在bitset容器中，最低位为0。这与数组实现仍然有区别。
 
-```cpp
 bitset的运算就像一个普通的整数一样，可以进行与(&)、或(|)、异或(^)、左移(<<)、右移(>>)等操作。
 
+```cpp
 // bitset operators
 #include <iostream>       // std::cout
 #include <string>         // std::string
