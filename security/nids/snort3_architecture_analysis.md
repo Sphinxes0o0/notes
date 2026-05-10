@@ -4100,7 +4100,7 @@ public:
 
 ### AG.3 FileConfig
 
-```file_api/file_config.h
+```c
 
 struct FileConfig {
     // 文件处理开关

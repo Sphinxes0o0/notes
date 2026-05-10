@@ -3,11 +3,12 @@
 /**
  * Audit Code Blocks in Markdown Files
  *
- * This script scans all markdown files in the notes/ directory and checks for:
- * a. Missing closing ``` backticks
- * b. Chinese text bleeding into code blocks
- * c. Invalid or missing language markers
- * d. Truncated code (code that ends abruptly with Chinese text)
+ * Checks for:
+ * a. Missing closing backticks (unclosed code blocks)
+ * b. Invalid language markers containing Chinese characters
+ * c. Content bleeding - markdown text that got mixed into code blocks
+ *
+ * Note: Chinese comments, Chinese in diagrams, Chinese in strings are all valid
  */
 
 import fs from 'fs';
@@ -17,12 +18,18 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
-const NOTES_DIR = path.join(REPO_ROOT, 'notes');
 
-// Chinese character range (common CJK Unified Ideographs)
+const CONTENT_DIRS = [
+  'ccpp', 'network', 'sys', 'midware', 'tools', 'kernel',
+  'security', 'qemu', 'datastructure', 'design_patterns',
+  'network_fundamentals', 'os_fundamentals', 'os', 'net',
+  'netfilter', 'mm', 'io_uring', 'ipc', 'locking', 'lib',
+  'crypto', 'block', 'sched', 'rcu', 'time', 'vfs', 'sound',
+  'virt', 'openbmc'
+];
+
 const CHINESE_REGEX = /[一-鿿]/;
 
-// Issues found during audit
 const issues = [];
 
 function walkDir(dir) {
@@ -37,7 +44,6 @@ function walkDir(dir) {
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
 
-    // Skip node_modules and hidden directories
     if (entry.name === 'node_modules' || entry.name.startsWith('.')) {
       continue;
     }
@@ -50,6 +56,42 @@ function walkDir(dir) {
   }
 
   return files;
+}
+
+/**
+ * Check if a line is content bleeding (markdown text mixed into code).
+ *
+ * Only flags lines that are clearly broken/truncated prose.
+ * Diagram labels, comments, tables are all valid.
+ */
+function isContentBleeding(line, language) {
+  const trimmed = line.trim();
+  if (!trimmed || !CHINESE_REGEX.test(trimmed)) {
+    return false;
+  }
+
+  // If language is mermaid, skip
+  if (language === 'mermaid') {
+    return false;
+  }
+
+  // If line starts with comment markers, it's a comment (valid)
+  if (/^\s*(\/\/|#|\/\*|\*)/.test(trimmed)) {
+    return false;
+  }
+
+  // If line has code-like structure, it's valid code
+  if (/[;{}()\[\]|]/.test(trimmed)) {
+    return false;
+  }
+
+  // If line ends with Chinese punctuation (。！？) and has no code structure
+  // and looks like a sentence fragment - this is likely bleeding
+  if (/[。！？]$/.test(trimmed) && !/[=+\-*/<>]/.test(trimmed)) {
+    return true;
+  }
+
+  return false;
 }
 
 function findCodeBlocks(content) {
@@ -66,13 +108,11 @@ function findCodeBlocks(content) {
 
     if (line.startsWith('```')) {
       if (!inCodeBlock) {
-        // Opening fence
         inCodeBlock = true;
         blockStartLine = i + 1;
         language = line.slice(3).trim();
         codeLines = [];
       } else {
-        // Closing fence
         blocks.push({
           startLine: blockStartLine,
           endLine: i + 1,
@@ -89,7 +129,6 @@ function findCodeBlocks(content) {
     }
   }
 
-  // If still in code block, it's unclosed
   if (inCodeBlock) {
     blocks.push({
       startLine: blockStartLine,
@@ -110,59 +149,29 @@ function checkCodeBlock(block, filePath) {
       file: filePath,
       line: block.startLine,
       type: 'UNCLOSED_CODE_BLOCK',
-      message: `Unclosed code block starting at line ${block.startLine} - missing closing \`\`\``
+      message: `Unclosed code block starting at line ${block.startLine} - missing closing`
     });
   }
 
-  // Check c: Invalid or missing language markers
-  // A valid language marker should only contain alphanumeric characters, not Chinese or special chars
+  // Check b: Invalid language markers
   if (block.language && CHINESE_REGEX.test(block.language)) {
     issues.push({
       file: filePath,
       line: block.startLine,
       type: 'INVALID_LANGUAGE_MARKER',
-      message: `Code block at line ${block.startLine} has invalid language marker containing Chinese characters: "${block.language}"`
+      message: `Invalid language marker containing Chinese: "${block.language}"`
     });
   }
 
-  // Check for empty language with potential issues
-  if (block.lines.length > 0 && !block.language) {
-    // Check if the first line looks like it should have a language marker
-    const firstLine = block.lines[0].content;
-    if (firstLine.match(/^[a-zA-Z]/) && !firstLine.match(/^\s/)) {
-      // First line looks like it might be a language marker that got lost
-    }
-  }
-
-  // Check b & d: Chinese text in code blocks and truncated code
+  // Check c: Content bleeding
   if (block.lines.length > 0) {
-    const lastLine = block.lines[block.lines.length - 1];
-    const content = lastLine.content;
-
-    // Check d: Truncated code (ends with Chinese text)
-    const trimmedContent = content.trim();
-    if (trimmedContent && CHINESE_REGEX.test(trimmedContent)) {
-      issues.push({
-        file: filePath,
-        line: lastLine.lineNumber,
-        type: 'TRUNCATED_CODE',
-        message: `Code block at line ${block.startLine} appears truncated - ends with Chinese text: "${trimmedContent}"`
-      });
-    }
-
-    // Check b: Chinese characters inside code block (not just at end)
     for (const lineObj of block.lines) {
-      // Skip the last line as it's handled by truncated code check
-      if (lineObj === lastLine) continue;
-
-      const lineContent = lineObj.content;
-      // Check if there's Chinese text mixed with code (not just whitespace around it)
-      if (CHINESE_REGEX.test(lineContent)) {
+      if (isContentBleeding(lineObj.content, block.language)) {
         issues.push({
           file: filePath,
           line: lineObj.lineNumber,
-          type: 'CHINESE_IN_CODE_BLOCK',
-          message: `Chinese text found inside code block at line ${lineObj.lineNumber}: "${lineContent.trim()}" `
+          type: 'CONTENT_BLEEDING',
+          message: `Markdown text appears to be inside code block at line ${lineObj.lineNumber}: "${lineObj.content.trim().substring(0, 50)}"`
         });
       }
     }
@@ -181,22 +190,23 @@ function auditFile(filePath) {
 function main() {
   console.log('Auditing code blocks in markdown files...\n');
 
-  const files = walkDir(NOTES_DIR);
+  const files = [];
+  for (const dir of CONTENT_DIRS) {
+    const fullPath = path.join(REPO_ROOT, dir);
+    files.push(...walkDir(fullPath));
+  }
   console.log(`Found ${files.length} markdown files to audit.\n`);
 
   for (const file of files) {
-    const relativePath = path.relative(REPO_ROOT, file);
     auditFile(file);
   }
 
-  // Report results
   if (issues.length === 0) {
     console.log('No code block issues found.');
     process.exit(0);
   } else {
     console.log(`Found ${issues.length} issue(s):\n`);
 
-    // Group issues by file
     const issuesByFile = {};
     for (const issue of issues) {
       if (!issuesByFile[issue.file]) {

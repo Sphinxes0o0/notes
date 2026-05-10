@@ -221,6 +221,7 @@ export default defineConfig({
                 { text: '对象创建', link: '/ccpp/cpp/object_creation_heap_or_stack' },
                 {
                   text: '容器',
+                  collapsed: true,
                   items: [
                     { text: '容器概览', link: '/ccpp/cpp/containers/overview' },
                     { text: 'vector', link: '/ccpp/cpp/containers/vector' },
@@ -252,6 +253,7 @@ export default defineConfig({
                 { text: 'Linux 101', link: '/os/linux_101' },
                 {
                   text: '内核深度分析',
+                  collapsed: true,
                   items: [
                     { text: '调度器', link: '/os/scheduler_deep_dive' },
                     { text: '内存管理/SLUB', link: '/os/slub_allocator_deep_dive' },
@@ -328,6 +330,7 @@ export default defineConfig({
                 },
                 {
                   text: 'Linux 网络核心',
+                  collapsed: true,
                   items: [
                     { text: 'Socket', link: '/network/linux_kernel/socket' },
                     { text: 'Socket Syscall', link: '/network/linux_kernel/socket_syscall' },
@@ -432,6 +435,7 @@ export default defineConfig({
             { text: 'Netcat 使用', link: '/tools/netcat' },
             { text: '端口扫描器', link: '/tools/port_scanner' },
             { text: '移除 Snap', link: '/tools/remove_snap' },
+            { text: 'Tcpdump 使用', link: '/tools/tcpdump' },
                       ]
         }
       ],
@@ -652,6 +656,7 @@ export default defineConfig({
             { text: '概述', link: '/kernel/' },
             {
               text: '内存管理 (mm)',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/mm/linux_kernel/' },
                 { text: '分配器', link: '/mm/linux_kernel/mm_allocator' },
@@ -666,6 +671,7 @@ export default defineConfig({
             },
             {
               text: '虚拟文件系统 (VFS)',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/vfs/linux_kernel/' },
                 { text: '索引节点', link: '/vfs/linux_kernel/inode' },
@@ -680,6 +686,7 @@ export default defineConfig({
             },
             {
               text: '块设备层 (block)',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/block/linux_kernel/' },
                 { text: '通用块层', link: '/block/linux_kernel/block_core' },
@@ -709,6 +716,7 @@ export default defineConfig({
             },
             {
               text: '调度器 (sched)',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/sched/linux_kernel/' },
                 { text: '核心结构', link: '/sched/linux_kernel/sched_core' },
@@ -782,6 +790,7 @@ export default defineConfig({
             },
             {
               text: '虚拟化 (virt)',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/virt/linux_kernel/' },
                 { text: 'KVM 核心', link: '/virt/linux_kernel/kvm_core' },
@@ -796,6 +805,7 @@ export default defineConfig({
             },
             {
               text: 'OpenBMC',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/openbmc/linux_kernel/' },
                 { text: 'IPMI 协议栈', link: '/openbmc/linux_kernel/ipmi_protocol_stack' },
