@@ -559,7 +559,7 @@ done
 
 1. [Linux 内核源码 - net/netfilter/](https://elixir.bootlin.com/linux/latest/source/net/netfilter)
 2. [Netfilter 官方文档](https://netfilter.org/documentation/)
-3. [Linux 连接跟踪详解](https://www.kernel.org/doc/html/latest/networking/conntrack.html)
+3. [Linux 网络文档](https://www.kernel.org/doc/html/latest/networking/index.html)
 4. [iptables 连接跟踪](https://netfilter.org/documentation/HOWTO/packet-filtering-HOWTO-7.html)
 
 ---

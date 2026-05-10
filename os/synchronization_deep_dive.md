@@ -8,7 +8,6 @@
 
 ### 2.1 x86_64 内存模型
 
-```
 x86_64 使用 TSO（Total Store Order）内存模型：
 
 1. Stores are globally visible in program order
@@ -20,7 +19,6 @@ x86_64 使用 TSO（Total Store Order）内存模型：
 - SFENCE 针对 SF 指令（流存储）
 - MFENCE 针对 LF 指令（流加载）
 - LOCK prefix 提供完整内存屏障
-```
 
 ### 2.2 内存屏障原语
 
@@ -51,7 +49,6 @@ x86_64 使用 TSO（Total Store Order）内存模型：
 
 ### 2.3 内存屏障语义证明
 
-```
 定理：smp_mb() 在 x86_64 上通过 LOCK ADD 实现的内存屏障效果
 
 证明：
@@ -60,7 +57,6 @@ x86_64 使用 TSO（Total Store Order）内存模型：
 3. 这意味着屏障前的所有内存操作必须在屏障后的操作之前完成
 
 因此：smp_mb() 提供了完全的内存排序保证
-```
 
 ### 2.4 锁与内存序
 
@@ -263,7 +259,6 @@ static inline void arch_spin_unlock(arch_spinlock_t *lock)
 
 ### 3.4 qspinlock 性能分析
 
-```
 复杂度分析：
 - 获取锁（无竞争）：O(1)
 - 获取锁（单等待者）：O(1) + 自旋
@@ -277,7 +272,6 @@ static inline void arch_spin_unlock(arch_spinlock_t *lock)
 对比传统自旋锁：
 - 传统自旋锁：所有竞争者都在同一缓存行上自旋 → 缓存行 bouncing
 - qspinlock：每个 CPU 在自己的节点上自旋 → 无 bouncing
-```
 
 ## 4. 互斥锁（Mutex）深入
 
@@ -821,23 +815,25 @@ static __always_inline void refcount_inc(refcount_t *r)
 
 ### 9.2 缓存行竞争
 
-```
 锁竞争导致的缓存行 bouncing：
 
-传统自旋锁：
+**传统自旋锁：**
+```
 ┌─────────┐         ┌─────────┐         ┌─────────┐
 │ CPU 0   │◄───────►│  Lock   │◄───────►│ CPU 1   │
 │ (写)    │ MESI    │ (1行)   │ MESI    │ (写)    │
 └─────────┘         └─────────┘         └─────────┘
+```
 每次自旋都需要锁总线访问
 
-qspinlock：
+**qspinlock：**
+```
 ┌─────────┐         ┌─────────┐         ┌─────────┐
 │ CPU 0   │         │ CPU 1   │         │ CPU 2   │
 │ node[0] │────────►│ node[1] │────────►│ node[2] │
 └─────────┘         └─────────┘         └─────────┘
-每个 CPU 只在自己的节点上自旋
 ```
+每个 CPU 只在自己的节点上自旋
 
 ## 10. 参考资料
 

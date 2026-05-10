@@ -347,9 +347,9 @@ FIB 查找 (fib_lookup)
 创建 dst_entry (dst_alloc)
     ↓
 缓存到 rtable (rt_hash_table)
-    ↓
-返回给协议栈
 ```
+
+返回给协议栈
 
 ### 8.2 PMTU 发现
 

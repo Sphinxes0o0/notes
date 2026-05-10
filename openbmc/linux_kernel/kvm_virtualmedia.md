@@ -1042,8 +1042,8 @@ $ dmesg
 - [phosphor-webui](https://github.com/openbmc/phosphor-webui)
 - [RFB/VNC 协议规范](https://github.com/rfbproto/rfbproto)
 - [NBD 协议规范](https://nbd.sourceforge.io/)
-- [Linux USB Gadget API](https://www.kernel.org/doc/html/latest/usb/gadget.html)
-- [V4L2 开发者文档](https://www.kernel.org/doc/html/latest/media/uapi/v4l/)
+- [Linux USB Gadget API](https://www.kernel.org/doc/html/latest/usb/gadget/index.html)
+- [V4L2 开发者文档](https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/)
 
 ---
 
