@@ -126,6 +126,8 @@ export default defineConfig({
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: "Sphinx's Notes" }],
     ['meta', { name: 'og:description', content: '技术学习笔记和总结' }],
+    ['meta', { name: 'og:url', content: 'https://Sphinxes0o0.github.io/notes/' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'author', content: 'Sphinx' }],
     ['meta', { name: 'robots', content: 'index, follow' }]
   ],
