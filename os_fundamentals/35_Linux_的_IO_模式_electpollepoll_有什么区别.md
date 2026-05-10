@@ -5,7 +5,6 @@
 为了弄清楚高并发网络场景是如何处理的，我们先来看一个最基本的内容：当数据到达网卡之后，操作系统会做哪些事情？
 网络数据到达网卡之后，首先需要把数据拷贝到内存。拷贝到内存的工作往往不需要消耗 CPU 资源，而是通过 DMA 模块直接进行内存映射。之所以这样做，是因为网卡没有大量的内存空间，只能做简单的缓冲，所以必须赶紧将它们保存下来。
 Linux 中用一个双向链表作为缓冲区，你可以观察下图中的 Buffer，看上去像一个有很多个凹槽的线性结构，每个凹槽（节点）可以存储一个封包，这个封包可以从网络层看（IP 封包），也可以从传输层看（TCP 封包）。操作系统不断地从 Buffer 中取出数据，数据通过一个协议栈，你可以把它理解成很多个协议的集合。协议栈中数据封包找到对应的协议程序处理完之后，就会形成 Socket 文件。
-!
 如果高并发的请求量级实在太大，有可能把 Buffer 占满，此时，操作系统就会拒绝服务。网络上有一种著名的攻击叫作拒绝服务攻击，就是利用的这个原理。操作系统拒绝服务，实际上是一种保护策略。通过拒绝服务，避免系统内部应用因为并发量太大而雪崩。
 如上图所示，传入网卡的数据被我称为 Frames。一个 Frame 是数据链路层的传输单位（或封包）。现代的网卡通常使用 DMA 技术，将 Frame 写入缓冲区（Buffer），然后在触发 CPU 中断交给操作系统处理。操作系统从缓冲区中不断取出 Frame，通过协进栈（具体的协议）进行还原。
 在 UNIX 系的操作系统中，一个 Socket 文件内部类似一个双向的管道。因此，非常适用于进程间通信。在网络当中，本质上并没有发生变化。网络中的 Socket 一端连接 Buffer， 一端连接应用——也就是进程。网卡的数据会进入 Buffer，Buffer 经过协议栈的处理形成 Socket 结构。通过这样的设计，进程读取 Socket 文件，可以从 Buffer 中对应节点读走数据。
@@ -67,7 +66,7 @@ while(true) {
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/Socket.h>
+#include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
 #define PORT    5555
@@ -217,7 +216,7 @@ epoll有 2 个最大的优势：
 	#include <stdlib.h>
 	#include <string.h>
 	#include <sys/epoll.h>
-	#include <sys/Socket.h>
+	#include <sys/socket.h>
 	#include <sys/types.h>
 	#include <unistd.h>
 	

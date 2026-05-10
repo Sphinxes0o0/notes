@@ -534,7 +534,22 @@ export default defineConfig({
             { text: '34_UDP协议', link: '/os_fundamentals/34_UDP_协议_UDP_和_TCP_相比快在哪里' },
             { text: '35_IO模式', link: '/os_fundamentals/35_Linux_的_IO_模式_electpollepoll_有什么区别' },
             { text: '36_公私钥体系', link: '/os_fundamentals/36_公私钥体系和网络安全_什么是中间人攻击' },
-            { text: '39_Linux架构', link: '/os_fundamentals/39_Linux_架构优秀在哪里' }
+            { text: '39_Linux架构', link: '/os_fundamentals/39_Linux_架构优秀在哪里' },
+            {
+              text: '加餐',
+              collapsed: true,
+              items: [
+                { text: '加餐(一)', link: '/os_fundamentals/加餐_练习题详解(一)' },
+                { text: '加餐(二)', link: '/os_fundamentals/加餐_练习题详解(二)' },
+                { text: '加餐(三)', link: '/os_fundamentals/加餐_练习题详解(三)' },
+                { text: '加餐(四)', link: '/os_fundamentals/加餐_练习题详解(四)' },
+                { text: '加餐(五)', link: '/os_fundamentals/加餐_练习题详解(五)' },
+                { text: '加餐(六)', link: '/os_fundamentals/加餐_练习题详解(六)' },
+                { text: '加餐(七)', link: '/os_fundamentals/加餐_练习题详解(七)' },
+                { text: '加餐(八)', link: '/os_fundamentals/加餐_练习题详解(八)' }
+              ]
+            },
+            { text: '结束语', link: '/os_fundamentals/结束语_论程序员的发展——信仰_选择和博弈' }
           ]
         }
       ],
