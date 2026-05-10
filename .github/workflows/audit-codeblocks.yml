@@ -1,0 +1,21 @@
+name: Audit Code Blocks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit-codeblocks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Audit code blocks in markdown files
+        run: node .github/scripts/audit-codeblocks.js
