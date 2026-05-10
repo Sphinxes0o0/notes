@@ -40,7 +40,11 @@ public class OtherClass {
     public OtherClass() {
     }
     public String replace(String str){
-            return str.replaceAll("你会发现，代码实现中的 Adapter 类充当了一个中间者的角色，Adapter 类继承目标类TargetAbstraction 并实现接口 filter，同时在 fliter 中加入新的扩展功能，扩展功能使用具体适配者类 OtherClass 来实现，这样在保留原有 filter 功能的同时，也增加了新的功能。
+        return str.replaceAll("a","A");
+    }
+}
+```
+
 事实上，适配器模式封装了三个重要事实：
 
 具体适配者类可以有不同的接口；
