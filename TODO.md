@@ -27,37 +27,34 @@
 
 ### CI/CD
 - [x] `.github/workflows/audit-codeblocks.yml` - 代码块审计流程
-- [x] `.github/scripts/audit-codeblocks.js` - 审计脚本
+- [x] `.github/scripts/audit-codeblocks.js` - 审计脚本（已优化）
+
+### Sidebar 优化
+- [x] tools 目录加入 sidebar（tcpdump）
+- [x] 统一 collapsed 行为（>5 项的子菜单折叠）
 
 ---
 
 ## 待处理
 
-### 1. CI 验证
-- [ ] 验证 GitHub Actions workflow 是否正常工作
-- [ ] 首次 CI 运行后根据结果修复问题
+### 1. 内容修复 (152 个问题)
+- [ ] datastructure 目录：约 80+ 行需要修复
+- [ ] os_fundamentals 目录：约 50+ 行需要修复
+- [ ] network_fundamentals 目录：约 10+ 行需要修复
+- [ ] 其他目录：零星问题
 
-### 2. 内容质量
-- [ ] 外部链接检查 - 验证外部 URL 是否有效
-- [ ] 考虑将 `file_api/file_config.h` 改为 `c` 或 `cpp`
+**问题类型**：课程讲解文本混入代码块（CONTENT_BLEEDING）
+**建议**：分批修复，每次 1-2 个文件
 
-### 3. Sidebar 优化（可选）
-- [ ] 添加 tools 子目录内容到 sidebar
-- [ ] 统一 collapsed 行为
-- [ ] 考虑为 os/ 子目录添加更多内容
-
-### 4. 其他
-- [ ] 添加 .gitignore（如果需要）
-- [ ] 考虑添加依赖版本锁定（package-lock.json 或 yarn.lock）
-
----
-
-## 无需处理（已确认）
-
-- 图片链接：所有现有图片引用有效 ✓
-- Sidebar 链接：全部 283 个链接都指向存在的文件 ✓
-- VitePress 配置：manualChunks 和 ignoreMissing 已优化 ✓
-- TODO 标记：用户选择保留 ✓
+### 2. 外部链接修复 (6 个失效)
+| 文件 | URL |
+|------|-----|
+| network_fundamentals/模块四思考题解答.md:9 | bind9.readthedocs.io - 404 |
+| security/nids/snort3_architecture_analysis.md:15935 | snort.org - 404 |
+| security/nids/snort3_architecture_analysis.md:15948 | ettercap.github.io - 连接错误 |
+| openbmc/linux_kernel/kvm_virtualmedia.md:1045 | kernel.org - 404 |
+| openbmc/linux_kernel/kvm_virtualmedia.md:1046 | kernel.org - 404 |
+| network/linux_netfilter/conntrack.md:562 | kernel.org - 404 |
 
 ---
 
