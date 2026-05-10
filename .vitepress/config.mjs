@@ -327,6 +327,24 @@ export default defineConfig({
                   ]
                 },
                 {
+                  text: 'Linux 网络核心',
+                  items: [
+                    { text: 'Socket', link: '/network/linux_kernel/socket' },
+                    { text: 'Socket Syscall', link: '/network/linux_kernel/socket_syscall' },
+                    { text: 'TCP', link: '/network/linux_kernel/ipv4_tcp' },
+                    { text: 'UDP', link: '/network/linux_kernel/ipv4_udp' },
+                    { text: 'Netfilter', link: '/network/linux_kernel/netfilter' },
+                    { text: 'XDP', link: '/network/linux_kernel/xdp' },
+                    { text: 'AF Packet', link: '/network/linux_kernel/af_packet' },
+                    { text: 'Net Device', link: '/network/linux_kernel/net_device' },
+                    { text: 'NAPI', link: '/network/linux_kernel/napi' },
+                    { text: 'SK Buff', link: '/network/linux_kernel/sk_buff' },
+                    { text: 'Bridge', link: '/network/linux_kernel/bridge' },
+                    { text: 'DSA', link: '/network/linux_kernel/dsa' },
+                    { text: 'Routing', link: '/network/linux_kernel/routing' }
+                  ]
+                },
+                {
                   text: '网络性能',
                   items: [
                     { text: '内核技巧', link: '/network/performance/net_subsystem_kernel_tricks' },
@@ -385,6 +403,21 @@ export default defineConfig({
               text: '入侵检测',
               items: [
                 { text: 'Snort 3 架构分析', link: '/security/nids/snort3_architecture_analysis' }
+              ]
+            },
+            {
+              text: 'Linux 内核安全',
+              collapsed: true,
+              items: [
+                { text: 'LSM Framework', link: '/security/linux_kernel/lsm_framework' },
+                { text: 'SELinux', link: '/security/linux_kernel/selinux_detailed' },
+                { text: 'AppArmor', link: '/security/linux_kernel/apparmor_detailed' },
+                { text: 'BPF Security', link: '/security/linux_kernel/bpf_security' },
+                { text: 'Landlock', link: '/security/linux_kernel/landlock_detailed' },
+                { text: 'Integrity Keys', link: '/security/linux_kernel/integrity_keys' },
+                { text: 'Lockdown LoadPin', link: '/security/linux_kernel/lockdown_loadpin' },
+                { text: 'Security Deep Dive R1', link: '/security/linux_kernel/security_deep_dive_r1' },
+                { text: 'Security Deep Dive R2', link: '/security/linux_kernel/security_deep_dive_r2' }
               ]
             }
           ]
