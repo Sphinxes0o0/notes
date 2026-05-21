@@ -1,0 +1,85 @@
+name: Sync Upstream Repos
+
+on:
+  schedule:
+    - cron: '0 8 * * *'        # 每天 8:00 UTC (16:00 北京时间)
+  workflow_dispatch:             # 手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          lfs: true
+
+      - name: Configure Git
+        run: |
+          git config user.name "pyramid-bot"
+          git config user.email "bot@pyramid.local"
+
+      - name: Sync notes
+        run: |
+          REPO="Sphinxes0o0/notes"
+          SNAPSHOT_DIR="raw/github/notes"
+          META="$SNAPSHOT_DIR/.meta.md"
+          
+          OLD_SHA=$(grep "snapshot_sha:" "$META" | awk '{print $2}')
+          NEW_SHA=$(git ls-remote "https://github.com/$REPO.git" HEAD | awk '{print $1}')
+          
+          if [ "$OLD_SHA" != "$NEW_SHA" ]; then
+            echo "notes: $OLD_SHA → $NEW_SHA"
+            # Remove old snapshot
+            find "$SNAPSHOT_DIR" -mindepth 1 -not -name '.meta.md' -delete
+            # Clone temp, copy .md files only
+            TMP=$(mktemp -d)
+            git clone --depth 1 "https://github.com/$REPO.git" "$TMP"
+            # Copy markdown files + README/CLAUDE/AGENT
+            find "$TMP" -name "*.md" -o -name "README*" -o -name "CLAUDE*" -o -name "AGENT*" | while read f; do
+              rel=$(echo "$f" | sed "s|^$TMP/||")
+              mkdir -p "$SNAPSHOT_DIR/$(dirname "$rel")"
+              cp "$f" "$SNAPSHOT_DIR/$rel"
+            done
+            rm -rf "$TMP"
+            # Update SHA
+            sed -i "s/snapshot_sha:.*/snapshot_sha: $NEW_SHA/" "$META"
+            sed -i "s/snapshot_date:.*/snapshot_date: $(date +%Y-%m-%d)/" "$META"
+            echo "CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "notes: up to date ($OLD_SHA)"
+          fi
+
+      - name: Sync relay-neuron
+        run: |
+          REPO="Sphinxes0o0/relay-neuron"
+          SNAPSHOT_DIR="raw/github/relay-neuron"
+          META="$SNAPSHOT_DIR/.meta.md"
+          
+          OLD_SHA=$(grep "snapshot_sha:" "$META" | awk '{print $2}')
+          NEW_SHA=$(git ls-remote "https://github.com/$REPO.git" HEAD | awk '{print $1}')
+          
+          if [ "$OLD_SHA" != "$NEW_SHA" ]; then
+            echo "relay-neuron: $OLD_SHA → $NEW_SHA"
+            find "$SNAPSHOT_DIR" -mindepth 1 -not -name '.meta.md' -delete
+            TMP=$(mktemp -d)
+            git clone --depth 1 "https://github.com/$REPO.git" "$TMP"
+            find "$TMP" -name "*.md" -o -name "README*" -o -name "CLAUDE*" -o -name "AGENT*" | while read f; do
+              rel=$(echo "$f" | sed "s|^$TMP/||")
+              mkdir -p "$SNAPSHOT_DIR/$(dirname "$rel")"
+              cp "$f" "$SNAPSHOT_DIR/$rel"
+            done
+            rm -rf "$TMP"
+            sed -i "s/snapshot_sha:.*/snapshot_sha: $NEW_SHA/" "$META"
+            sed -i "s/snapshot_date:.*/snapshot_date: $(date +%Y-%m-%d)/" "$META"
+            echo "CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "relay-neuron: up to date ($OLD_SHA)"
+          fi
+
+      - name: Commit and push
+        if: env.CHANGED == 'true'
+        run: |
+          git add raw/github/
+          git commit -m "sync: upstream repo updates ($(date +%Y-%m-%d))"
+          git push
