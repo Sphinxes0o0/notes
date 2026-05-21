@@ -261,3 +261,24 @@ sources: []           # 仅 entity 和 synthesis
 > "LLM 的工作是把所有繁琐的维护工作做好——总结、交叉引用、保持一致。人的工作是筛选来源、提出好问题、思考意义。"
 >
 > 参考：Karpathy LLM Wiki, Vannevar Bush's Memex (1945)
+
+---
+
+## Quality Gates
+
+> 所有 agent 必须遵守。Ingest 后 Reviewer 逐项验证。
+
+### Cross-Link Quality Gate
+
+- 每个 entity 页面 ≥2 条指向其他 entity 的 [[wikilinks]]（index/dashboard/source 不计）
+- 每对相关 entity 应该互链
+- 禁止仅靠 index/dashboard 串联的星形结构
+
+### Agent Behavior Gate
+
+来自 Karpathy Claude Code Guidelines：
+
+1. **Think Before Coding** — 不确定就问，不要默默猜测
+2. **Simplicity First** — 最少代码，不过度抽象
+3. **Surgical Changes** — 只改该改的，不动无关代码
+4. **Goal-Driven Execution** — 先定验收标准，再写代码
