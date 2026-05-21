@@ -7,55 +7,13 @@
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
-    {
-      "query": "path:entities/exercise-science",
-      "color": {
-        "a": 1,
-        "rgb": 5614713
-      }
-    },
-    {
-      "query": "path:entities/linux",
-      "color": {
-        "a": 1,
-        "rgb": 4408131
-      }
-    },
-    {
-      "query": "path:entities/os",
-      "color": {
-        "a": 1,
-        "rgb": 10113279
-      }
-    },
-    {
-      "query": "path:entities/datastructure",
-      "color": {
-        "a": 1,
-        "rgb": 16742400
-      }
-    },
-    {
-      "query": "path:entities/design-patterns",
-      "color": {
-        "a": 1,
-        "rgb": 16750848
-      }
-    },
-    {
-      "query": "path:entities/cpp",
-      "color": {
-        "a": 1,
-        "rgb": 65471
-      }
-    },
-    {
-      "query": "path:entities/interview",
-      "color": {
-        "a": 1,
-        "rgb": 10027059
-      }
-    }
+    {"query": "path:entities/exercise-science", "color": {"a": 1, "rgb": 5614713}},
+    {"query": "path:entities/linux",            "color": {"a": 1, "rgb": 4408131}},
+    {"query": "path:entities/os",               "color": {"a": 1, "rgb": 10113279}},
+    {"query": "path:entities/datastructure",    "color": {"a": 1, "rgb": 16742400}},
+    {"query": "path:entities/design-patterns",  "color": {"a": 1, "rgb": 16750848}},
+    {"query": "path:entities/cpp",              "color": {"a": 1, "rgb": 65471}},
+    {"query": "path:entities/interview",        "color": {"a": 1, "rgb": 10027059}}
   ],
   "collapse-display": false,
   "showArrow": true,
@@ -68,5 +26,5 @@
   "linkStrength": 0.643619791666667,
   "linkDistance": 374,
   "scale": 0.5664956212834497,
-  "close": true
+  "close": false
 }
