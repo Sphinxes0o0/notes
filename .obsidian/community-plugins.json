@@ -1,5 +1,6 @@
 [
   "dataview",
   "quickadd",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-git"
 ]
