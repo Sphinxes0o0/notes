@@ -51,4 +51,4 @@ task<void> async_read() {
 - [[entities/cpp/lambda-expressions]] - Lambda的改进
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 10: C++20新特性
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 10: C++20新特性

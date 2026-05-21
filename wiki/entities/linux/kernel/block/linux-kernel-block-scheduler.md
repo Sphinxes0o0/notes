@@ -74,4 +74,4 @@ dd_dispatch_request()
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — block_scheduler.md
+- [[sources/notes-kernel]] — block_scheduler.md

@@ -41,4 +41,4 @@ created: 2026-05-20
 
 ## 相关页面
 - [[synthesis/topic-network-fundamentals]] — 综合分析
-- [[sources/github-sphinxes0o0-notes-os_fundamentals]]
+- [[sources/notes-os-fundamentals]]

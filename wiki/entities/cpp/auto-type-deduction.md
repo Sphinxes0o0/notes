@@ -50,4 +50,4 @@ auto add = [](auto x, auto y) { return x + y; };
 - [[entities/cpp/lambda-expressions]] - Lambda中的auto参数
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 2.3: auto与decltype
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 2.3: auto与decltype

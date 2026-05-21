@@ -38,7 +38,7 @@ sources: [notes-os-fundamentals]
 
 ## 来源详情
 
-- [[sources/github-notes-os-fundamentals]]
+- [[sources/notes-os-fundamentals]]
 ## Related Concepts
 
 - [[entities/linux/kernel/ipc/linux-kernel-ipc-core]] — 进程间通信的基础机制

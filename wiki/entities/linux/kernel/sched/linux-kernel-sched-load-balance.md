@@ -88,4 +88,4 @@ struct sched_group {
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — sched_load_balance.md
+- [[sources/notes-kernel]] — sched_load_balance.md

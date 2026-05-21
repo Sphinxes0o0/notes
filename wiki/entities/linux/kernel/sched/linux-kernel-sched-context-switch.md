@@ -72,4 +72,4 @@ struct rq {
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — sched_context_switch.md
+- [[sources/notes-kernel]] — sched_context_switch.md

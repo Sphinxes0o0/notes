@@ -33,4 +33,4 @@ QEMU 块设备层通过 BlockDriverState (BDS) 图结构管理存储，支持 QC
 
 ## 来源详情
 
-- [[sources/github-notes-qemu]]
+- [[sources/notes-qemu]]

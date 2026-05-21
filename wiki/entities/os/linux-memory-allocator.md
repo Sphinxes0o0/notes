@@ -40,4 +40,4 @@ Linux 内存分配栈由 SLUB/SLAB（对象分配）和 Buddy System（页面分
 
 ## 来源详情
 
-- [[sources/github-notes-os]]
+- [[sources/notes-os]]

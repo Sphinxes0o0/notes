@@ -38,4 +38,4 @@ VFS 是 Linux 内核的核心子系统，为用户空间程序提供统一的文
 
 ## 来源详情
 
-- [[sources/github-notes-os]]
+- [[sources/notes-os]]

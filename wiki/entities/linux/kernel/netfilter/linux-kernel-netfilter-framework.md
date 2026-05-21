@@ -120,7 +120,7 @@ Netfilter 是 Linux 内核提供的数据包过滤和修改框架，通过在网
 
 ## 来源详情
 
-- [[sources/github-notes-netfilter]] — Netfilter 深度分析 R1/R2
-- [[sources/github-notes-net]] — Linux Net 子系统分析
+- [[sources/notes-netfilter]] — Netfilter 深度分析 R1/R2
+- [[sources/notes-network-fundamentals]] — Linux Net 子系统分析
 - github-notes-network-linux-netfilter-conntrack — conntrack 详解
 - github-notes-network-linux-netfilter-nftables — nftables 架构

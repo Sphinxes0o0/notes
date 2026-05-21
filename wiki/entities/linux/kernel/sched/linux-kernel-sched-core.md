@@ -70,7 +70,7 @@ struct task_struct {
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — sched_core.md
+- [[sources/notes-kernel]] — sched_core.md
 ## Related Concepts
 
 - [[entities/linux/kernel/time/linux-kernel-time-core]] — 时间管理是调度器的核心依赖

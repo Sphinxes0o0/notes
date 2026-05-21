@@ -93,7 +93,7 @@ blk_add_rq_to_plug() / blk_mq_try_issue_directly()
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — block_mq.md
+- [[sources/notes-kernel]] — block_mq.md
 ## Related Concepts
 
 - [[entities/linux/kernel/virt/linux-kernel-virt-kvm]] — KVM虚拟机块设备后端

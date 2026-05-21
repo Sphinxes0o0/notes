@@ -65,4 +65,4 @@ enum zone_watermarks {
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — mm_page_reclaim.md
+- [[sources/notes-kernel]] — mm_page_reclaim.md

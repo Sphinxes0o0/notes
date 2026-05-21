@@ -37,4 +37,4 @@ cgroups (control groups) 是 Linux 内核的资源限制机制，通过 CSS (cgr
 
 ## 来源详情
 
-- [[sources/github-notes-os]]
+- [[sources/notes-os]]

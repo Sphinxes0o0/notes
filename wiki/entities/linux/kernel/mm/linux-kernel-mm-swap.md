@@ -79,4 +79,4 @@ typedef struct { unsigned long val; } swp_entry_t;
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — mm_swap.md
+- [[sources/notes-kernel]] — mm_swap.md

@@ -17,7 +17,7 @@ created: 2026-05-20
 
 # notes — Sphinx 技术笔记
 
-> 来源：[[sources/github-sphinxes0o0-notes]]
+> 来源：[[sources/notes-overview]]
 > 快照：`4272d9c`
 
 ## 概述

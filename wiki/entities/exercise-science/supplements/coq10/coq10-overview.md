@@ -69,4 +69,4 @@ Complex I ←→ CoQ10 ←→ Complex III
 
 ## Sources
 
-- [[sources/github-relay-neuron-supplements]]
+- [[sources/relay-neuron-supplements]]

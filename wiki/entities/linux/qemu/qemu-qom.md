@@ -34,4 +34,4 @@ QEMU 的核心对象模型系统，提供动态类型注册、继承、接口实
 
 ## 来源详情
 
-- [[sources/github-notes-qemu]]
+- [[sources/notes-qemu]]

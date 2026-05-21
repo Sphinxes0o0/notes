@@ -34,4 +34,4 @@ QEMU 通过 Tiny Code Generator (TCG) 将 guest 指令翻译为 host 指令执�
 
 ## 来源详情
 
-- [[sources/github-notes-qemu]]
+- [[sources/notes-qemu]]

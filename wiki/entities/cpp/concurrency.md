@@ -52,7 +52,7 @@ result.wait();
 - [[entities/cpp/smart-pointers]] - shared_ptr在线程间共享
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 7: 线程
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 7: 线程
 ## Related Concepts
 
 - [[entities/interview/system-design-basics]] — 系统设计涉及并发编程模型

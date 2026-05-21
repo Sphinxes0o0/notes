@@ -97,8 +97,8 @@ dev_queue_xmit() → netdev_start_xmit() → NIC DMA
 
 ## 来源详情
 
-- [[sources/github-notes-net]] — Linux Net 子系统深度分析 R1
-- [[sources/github-notes-network]] — 网络笔记索引
+- [[sources/notes-network-fundamentals]] — Linux Net 子系统深度分析 R1
+- [[sources/notes-network-fundamentals]] — 网络笔记索引
 ## Related Concepts
 
 - [[entities/linux/kernel/crypto/linux-kernel-crypto-core]] — 网络协议栈依赖内核加密API实现TLS/IPsec

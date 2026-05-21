@@ -10,25 +10,26 @@
 
 | 来源 | 描述 | 日期 | 类型 |
 |------|------|------|------|
-| [[sources/github-relay-neuron-supplements]] | 姜黄素与辅酶Q10补剂深度研究（~30篇文献）| 2026-04 | github |
-| [[sources/github-relay-neuron-exercise-physiology]] | 运动生理学研究：肌肥大、mTOR、BFR、VO2max等（~25主题）| 2026-05 | github |
-| [[sources/github-notes-network]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
-| [[sources/github-notes-net]] | Linux 内核网络子系统深度分析（Socket/sk_buff/Netdevice/路由）| 2026-05 | github |
-| [[sources/github-notes-netfilter]] | Linux Netfilter/iptables/nftables/conntrack 深度分析 | 2026-05 | github |
-| [[sources/github-notes-os]] | Linux 内核深度分析：VFS、调度器、SLUB 分配器、cgroups 架构详解 | 2026-05 | github |
-| [[sources/github-notes-os-fundamentals]] | 操作系统基础：进程/线程、内存管理、文件系统、IO模型 | 2026-05 | github |
-| [[sources/github-notes-qemu]] | QEMU 模拟器架构：TCG、QOM、KVM 集成、块设备、迁移 | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes]] | Sphinx 技术笔记索引页 | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-kernel]] | Linux 内核各子系统深度分析：mm、sched、block、VFS、网络、虚拟化 | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-kernel-crypto]] | Linux 内核密码学子系统：crypto_alg注册、skcipher、aead、ahash | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-kernel-ipc]] | Linux 内核 IPC 子系统：msg、sem、shm、mqueue | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-kernel-locking]] | Linux 内核锁子系统：spinlock、mutex、rwsem、percpu、lockdep | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-kernel-rcu]] | Linux 内核 RCU：Read-Copy-Update、无锁同步、grace period | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-kernel-sound]] | Linux 内核声音子系统：ALSA、PCM、ASoC、DAPM | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-kernel-time]] | Linux 内核时间子系统：tick、hrtimer、timekeeping、posix-timers | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-network_fundamentals]] | 计算机网络基础：TCP/UDP、IP、Socket 编程、HTTP、DNS | 2026-05 | github |
-| [[sources/github-sphinxes0o0-notes-os_fundamentals]] | 操作系统基础课程：进程/线程、内存管理、文件系统、IO模型、网络协议 | 2026-05 | github |
-| [[sources/pdf-modern-cpp-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
+| [[sources/relay-neuron-supplements]] | 姜黄素与辅酶Q10补剂深度研究（~30篇文献）| 2026-04 | github |
+| [[sources/relay-neuron-physiology]] | 运动生理学研究：肌肥大、mTOR、BFR、VO2max等（~25主题）| 2026-05 | github |
+| [[sources/notes-network-fundamentals]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
+| [[sources/notes-network-fundamentals]] | Linux 内核网络子系统深度分析（Socket/sk_buff/Netdevice/路由）| 2026-05 | github |
+| [[sources/notes-netfilter]] | Linux Netfilter/iptables/nftables/conntrack 深度分析 | 2026-05 | github |
+| [[sources/notes-os]] | Linux 内核深度分析：VFS、调度器、SLUB 分配器、cgroups 架构详解 | 2026-05 | github |
+| [[sources/notes-os-fundamentals]] | 操作系统基础：进程/线程、内存管理、文件系统、IO模型 | 2026-05 | github |
+| [[sources/notes-qemu]] | QEMU 模拟器架构：TCG、QOM、KVM 集成、块设备、迁移 | 2026-05 | github |
+| [[sources/notes-overview]] | Sphinx 技术笔记索引页 | 2026-05 | github |
+| [[sources/notes-kernel]] | Linux 内核各子系统深度分析：mm、sched、block、VFS、网络、虚拟化 | 2026-05 | github |
+| [[sources/notes-kernel-crypto]] | Linux 内核密码学子系统：crypto_alg注册、skcipher、aead、ahash | 2026-05 | github |
+| [[sources/notes-kernel-ipc]] | Linux 内核 IPC 子系统：msg、sem、shm、mqueue | 2026-05 | github |
+| [[sources/notes-kernel-locking]] | Linux 内核锁子系统：spinlock、mutex、rwsem、percpu、lockdep | 2026-05 | github |
+| [[sources/notes-kernel-rcu]] | Linux 内核 RCU：Read-Copy-Update、无锁同步、grace period | 2026-05 | github |
+| [[sources/notes-kernel-sound]] | Linux 内核声音子系统：ALSA、PCM、ASoC、DAPM | 2026-05 | github |
+| [[sources/notes-kernel-time]] | Linux 内核时间子系统：tick、hrtimer、timekeeping、posix-timers | 2026-05 | github |
+| [[sources/notes-network-fundamentals]] | 计算机网络基础：TCP/UDP、IP、Socket 编程、HTTP、DNS | 2026-05 | github |
+| [[sources/notes-os-fundamentals]] | 操作系统基础课程：进程/线程、内存管理、文件系统、IO模型、网络协议 | 2026-05 | github |
+| [[sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
+| [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
 
 ---
 
@@ -333,6 +334,19 @@
 | [[entities/cpp/variadic-templates]] | 模板变参：参数包展开、sizeof...、折叠表达式 | cpp, modern-cpp |
 | [[entities/cpp/if-constexpr]] | if constexpr：编译时分支、编译期多态 | cpp, modern-cpp |
 | [[entities/cpp/cpp20-features]] | C++20新特性：Concepts、Modules、Coroutines、Ranges | cpp, modern-cpp, cpp20 |
+
+## Entities / STL (标准模板库)
+
+| 实体 | 描述 | 标签 |
+|------|------|------|
+| [[entities/cpp/cpp-stl-containers]] | STL容器：vector/deque/list/set/map，无序容器 | cpp, stl |
+| [[entities/cpp/cpp-stl-algorithms]] | STL算法：sort/find/remove/transform，迭代器配合 | cpp, stl |
+| [[entities/cpp/cpp-stl-iterators]] | STL迭代器：类别、失效规则、适配器 | cpp, stl |
+| [[entities/cpp/cpp-stl-functors]] | STL函数对象：仿函数、Lambda、函数适配器 | cpp, stl |
+| [[entities/cpp/cpp-stl-string]] | STL字符串：string实现、string_view、高效操作 | cpp, stl |
+| [[entities/cpp/cpp-stl-allocators]] | STL分配器：内存管理、自定义分配器、allocator_traits | cpp, stl |
+
+---
 
 ## Synthesis (综合分析)
 

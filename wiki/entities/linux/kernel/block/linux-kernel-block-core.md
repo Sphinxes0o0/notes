@@ -84,4 +84,4 @@ struct gendisk {
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — block_core.md
+- [[sources/notes-kernel]] — block_core.md

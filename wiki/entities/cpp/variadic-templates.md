@@ -54,4 +54,4 @@ auto f = [...xs = std::move(x), ...ys = std::move(y)]() {
 - [[entities/cpp/lambda-expressions]] - Lambda的变参捕获
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 2.5: 变参模板
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 2.5: 变参模板

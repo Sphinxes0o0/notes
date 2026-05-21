@@ -17,7 +17,7 @@ created: 2026-05-20
 
 # relay-neuron — 转接神经元
 
-> 来源：[[sources/github-sphinxes0o0-relay-neuron]]
+> 来源：[[sources/relay-neuron-overview]]
 > 快照：`5088843`
 
 ## 概述

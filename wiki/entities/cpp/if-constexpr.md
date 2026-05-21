@@ -56,4 +56,4 @@ void process(T val) {
 - [[entities/cpp/auto-type-deduction]] - auto与编译期类型判断
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 2.4: if constexpr
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 2.4: if constexpr

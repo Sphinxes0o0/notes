@@ -89,4 +89,4 @@ struct vm_operations_struct {
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — mm_page_fault.md
+- [[sources/notes-kernel]] — mm_page_fault.md

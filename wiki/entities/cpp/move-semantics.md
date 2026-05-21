@@ -45,4 +45,4 @@ void pass(T&& v) {
 - [[entities/cpp/auto-type-deduction]] - decltype(auto)处理移动
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 3.3: 值类别与移动语义
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 3.3: 值类别与移动语义

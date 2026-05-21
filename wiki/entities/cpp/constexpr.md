@@ -49,4 +49,4 @@ auto add = [](auto x, auto y) constexpr { return x + y; };
 - [[entities/cpp/variadic-templates]] - 模板变参与constexpr
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 2.1: constexpr
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 2.1: constexpr

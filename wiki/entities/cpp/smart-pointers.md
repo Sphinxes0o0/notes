@@ -47,4 +47,4 @@ struct B {
 - [[entities/cpp/cpp20-features]] - C++20的std::enable_shared_from_this增强
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 5: 智能指针与RAII
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 5: 智能指针与RAII

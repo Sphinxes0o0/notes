@@ -54,3 +54,19 @@ Added entity pages:
 
 Cross-linked to existing entities/cpp.md.
 Updated wiki/index.md with new source and entity entries.
+
+## [2026-05-21] ingest | pdf-cpp-effective-stl
+
+Added source page:
+- wiki/sources/pdf-cpp-effective-stl.md — Effective STL (Scott Meyers) 简体中文版
+
+Added entity pages:
+- wiki/entities/cpp/cpp-stl-containers.md — STL容器（vector/deque/list/set/map/unordered_*）
+- wiki/entities/cpp/cpp-stl-algorithms.md — STL算法（sort/find/remove/transform/二分查找）
+- wiki/entities/cpp/cpp-stl-iterators.md — STL迭代器（类别/失效规则/适配器）
+- wiki/entities/cpp/cpp-stl-functors.md — STL函数对象（仿函数/Lambda/函数适配器）
+- wiki/entities/cpp/cpp-stl-string.md — STL字符串（string实现/string_view/高效操作）
+- wiki/entities/cpp/cpp-stl-allocators.md — STL分配器（内存管理/自定义分配器）
+
+Cross-linked to existing cpp entities (move-semantics, smart-pointers, lambda-expressions, cpp20-features).
+Updated wiki/home.md with new source and entity entries.

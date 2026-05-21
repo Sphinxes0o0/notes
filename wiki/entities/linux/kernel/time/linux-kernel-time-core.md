@@ -94,4 +94,4 @@ Linux内核时间管理子系统，负责系统时钟维护、定时器管理（
 - [[entities/linux/kernel/sched/linux-kernel-sched-cfs]] — CFS与vruntime
 
 ## 来源详情
-- [[sources/github-sphinxes0o0-notes-kernel-time]]
+- [[sources/notes-kernel-time]]

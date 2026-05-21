@@ -71,4 +71,4 @@ kmalloc()
 
 ## 来源详情
 
-- [[sources/github-sphinxes0o0-notes-kernel]] — mm_allocator.md
+- [[sources/notes-kernel]] — mm_allocator.md

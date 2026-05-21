@@ -50,4 +50,4 @@ auto generic = [](auto x, auto y) { return x + y; };
 - [[entities/cpp/smart-pointers]] - std::function包装Lambda
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 3: Lambda表达式
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 3: Lambda表达式

@@ -48,4 +48,4 @@ auto p = std::make_unique<int>(10);
 - [[entities/cpp/move-semantics]] - 移动语义与RAII结合
 
 ## 来源详情
-- [[sources/pdf-modern-cpp-tutorial]] - Chapter 5.1: RAII惯用法
+- [[sources/pdf-cpp-modern-tutorial]] - Chapter 5.1: RAII惯用法

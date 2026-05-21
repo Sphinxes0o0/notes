@@ -109,4 +109,4 @@ Linux内核进程间通信子系统，提供消息队列（msg）、信号量（
 - [[entities/linux/kernel/mm/linux-kernel-mm-mmap]] — mmap接口
 
 ## 来源详情
-- [[sources/github-sphinxes0o0-notes-kernel-ipc]]
+- [[sources/notes-kernel-ipc]]
