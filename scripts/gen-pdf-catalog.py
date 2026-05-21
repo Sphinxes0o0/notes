@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""生成 pyramid PDF 目录索引页 — wiki/pdf-catalog.md
+"""生成 pyramid PDF 目录索引页 — wiki/pdf-index.md
 
 扫描 raw/PDFs/{books,papers,slides}/ 下所有 PDF，
 生成带分类表格的 Obsidian 索引页面。
@@ -10,7 +10,7 @@ from datetime import datetime
 
 LLM_WIKI = os.path.expanduser("~/pyramid")
 PDF_DIR = os.path.join(LLM_WIKI, "raw", "PDFs")
-OUTPUT = os.path.join(LLM_WIKI, "wiki", "pdf-catalog.md")
+OUTPUT = os.path.join(LLM_WIKI, "wiki", "pdf-index.md")
 
 CATEGORY_LABELS = {
     "books":  "书籍 / 教材",
