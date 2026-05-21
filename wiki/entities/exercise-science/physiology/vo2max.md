@@ -74,3 +74,7 @@ VO2max = 心输出量 (CO) × 动静脉氧差
 - [[entities/exercise-science/physiology/lactate-threshold]]
 - [[entities/exercise-science/physiology/concurrent-training]]
 - [[entities/exercise-science/physiology/fatigue-recovery]]
+## Related Concepts
+
+- [[entities/exercise-science/running/ultra-endurance]] — 超耐力运动对VO2max的长期适应
+- [[entities/exercise-science/health/exercise-disease]] — 心肺功能与疾病预防高度相关

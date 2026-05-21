@@ -1,6 +1,6 @@
 ---
 type: index
-tags: [dashboard, exercise-science]
+tags: [dashboard, exercise-science, index]
 created: 2026-05-21
 ---
 

@@ -80,6 +80,10 @@ sources: [github-relay-neuron-supplements]
 - [[entities/exercise-science/supplements/curcumin/curcumin-inflammation]] — HA纳米粒在RA中的应用
 - [[entities/exercise-science/supplements/curcumin/curcumin-neuro]] — 纳米乳剂在PD中的应用
 
+## Related Concepts
+
+- [[entities/exercise-science/supplements/curcumin/curcumin-liver]] — 姜黄素生物利用度影响其护肝效果
+
 ## Sources
 
 - European Journal of Drug Metabolism and Pharmacokinetics 2019 — Enhancing Curcumin Oral Bioavailability Through Nanoformulations

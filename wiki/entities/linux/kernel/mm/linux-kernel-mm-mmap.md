@@ -76,3 +76,6 @@ struct vm_area_struct {
 ## 来源详情
 
 - [[sources/github-sphinxes0o0-notes-kernel]] — mm_mmap.md
+## Related Concepts
+
+- [[entities/linux/kernel/ipc/linux-kernel-ipc-core]] — 共享内存是IPC的重要机制

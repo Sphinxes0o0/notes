@@ -54,3 +54,6 @@ sources: [github-sphinxes0o0-notes-datastructure]
 ## 来源详情
 
 - github-sphinxes0o0-notes-datastructure — `01_复杂度_如何衡量程序运行的效率`
+## Related Concepts
+
+- [[entities/interview/system-design-basics]] — 系统设计需要算法复杂度分析

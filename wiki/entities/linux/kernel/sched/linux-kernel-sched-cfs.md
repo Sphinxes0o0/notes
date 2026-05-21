@@ -72,3 +72,6 @@ delta_vruntime = delta_exec * (NICE_0_LOAD / task_weight)
 ## 来源详情
 
 - [[sources/github-sphinxes0o0-notes-kernel]] — sched_cfs.md
+## Related Concepts
+
+- [[entities/linux/kernel/time/linux-kernel-time-core]] — CFS依赖时间管理进行vruntime计算

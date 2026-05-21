@@ -39,3 +39,7 @@ sources: [github-notes-os-fundamentals]
 ## 来源详情
 
 - [[sources/github-notes-os-fundamentals]]
+## Related Concepts
+
+- [[entities/linux/kernel/ipc/linux-kernel-ipc-core]] — 进程间通信的基础机制
+- [[entities/os/os-io-model]] — 网络I/O模型与进程/线程模型密切相关

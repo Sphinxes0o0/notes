@@ -77,3 +77,6 @@ sources: [github-relay-neuron-exercise-physiology]
 ## 来源详情
 
 - Journal of Science in Sport and Exercise (2021). 超级马拉松外周血管和神经肌肉反应
+## Related Concepts
+
+- [[entities/exercise-science/biomechanics/running-shoes]] — 越野跑鞋是越野跑的核心装备

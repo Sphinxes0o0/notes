@@ -94,3 +94,7 @@ sources: [github-relay-neuron-exercise-physiology]
 - PLOS ONE (2022). Expert Delphi Consensus on factors associated with high-level endurance performance
 - Sports Medicine (2024). Strength training methods and running performance
 - Scientific Reports (2023). Daily hopping exercise improves RE in amateur runners
+## Related Concepts
+
+- [[entities/exercise-science/running/ultra-endurance]] — 超耐力训练影响跑步经济性
+- [[entities/exercise-science/biomechanics/running-shoes]] — 跑鞋技术影响跑步经济性

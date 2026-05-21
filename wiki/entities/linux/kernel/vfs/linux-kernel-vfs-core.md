@@ -147,3 +147,6 @@ VFS 层
 - `raw/github/notes/vfs/linux_kernel/buffer_cache.md`
 - `raw/github/notes/vfs/linux_kernel/exec_binfmt.md`
 - `raw/github/notes/vfs/linux_kernel/mount_namespace.md`
+## Related Concepts
+
+- [[entities/linux/kernel/sound/linux-kernel-sound-core]] — ALSA设备节点通过VFS暴露

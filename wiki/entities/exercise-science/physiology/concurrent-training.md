@@ -73,3 +73,6 @@ sources: [github-relay-neuron-exercise-physiology]
 - [[entities/exercise-science/physiology/vo2max]]
 - [[entities/exercise-science/physiology/lactate-threshold]]
 - [[entities/exercise-science/physiology/training-frequency]]
+## Related Concepts
+
+- [[entities/exercise-science/health/exercise-disease]] — 并发训练对代谢综合征有显著改善

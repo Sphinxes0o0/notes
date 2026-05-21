@@ -92,3 +92,6 @@ ACKNOWLEDGE → DRIVER → DRIVER_OK
 - `raw/github/notes/virt/linux_kernel/virtio_transport.md`
 - `raw/github/notes/virt/linux_kernel/virtio_drivers.md`
 - `raw/github/notes/virt/linux_kernel/virtio_device_drivers.md`
+## Related Concepts
+
+- [[entities/linux/kernel/sound/linux-kernel-sound-core]] — Virtio音频设备驱动

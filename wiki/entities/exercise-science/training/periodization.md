@@ -90,3 +90,6 @@ sources: [github-relay-neuron-exercise-physiology]
 
 - Sports Medicine (2015). Periodization models综述
 - Scientific Reports (2022). 线性周期化对肥胖成年人生活质量影响
+## Related Concepts
+
+- [[entities/exercise-science/training/training-methods]] — 周期化训练包含多种训练方法

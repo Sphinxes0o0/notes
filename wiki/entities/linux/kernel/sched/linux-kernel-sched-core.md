@@ -71,3 +71,8 @@ struct task_struct {
 ## 来源详情
 
 - [[sources/github-sphinxes0o0-notes-kernel]] — sched_core.md
+## Related Concepts
+
+- [[entities/linux/kernel/time/linux-kernel-time-core]] — 时间管理是调度器的核心依赖
+- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]] — RCU用于调度器数据保护
+- [[entities/linux/kernel/virt/linux-kernel-virt-kvm]] — vCPU调度是KVM虚拟化的核心

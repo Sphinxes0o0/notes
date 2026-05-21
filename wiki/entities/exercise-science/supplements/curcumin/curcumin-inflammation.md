@@ -70,6 +70,10 @@ COX-2抑制 → PGE₂↓
 - [[entities/exercise-science/supplements/curcumin/curcumin-neuro]] — 神经炎症
 - [[entities/exercise-science/physiology/fatigue-recovery]] — 运动后炎症恢复
 
+## Related Concepts
+
+- [[entities/exercise-science/supplements/curcumin/curcumin-liver]] — 肝脏炎症是MAFLD的核心机制
+
 ## Sources
 
 - Springer 2024 — Enhancement of Anti-Inflammatory Activity of Curcumin through Hyaluronic Acid Decorated Niosomal Nanoparticles for Effective Treatment of Rheumatoid Arthritis

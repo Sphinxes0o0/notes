@@ -40,3 +40,6 @@ Linux 调度器通过分层调度类（Deadline → RT → CFS → Idle）管理
 ## 来源详情
 
 - [[sources/github-notes-os]]
+## Related Concepts
+
+- [[entities/os/os-io-model]] — I/O多路复用影响进程调度

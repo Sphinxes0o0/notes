@@ -37,3 +37,6 @@ sources: [github-notes-os-fundamentals]
 ## 来源详情
 
 - [[sources/github-notes-os-fundamentals]]
+## Related Concepts
+
+- [[entities/os/linux-vfs]] — 页缓存是VFS与虚拟内存的交汇点

@@ -61,3 +61,6 @@ sources: [github-relay-neuron-exercise-physiology]
 - Schoenfeld et al. — 亮氨酸阈值研究
 - Morton et al. — 蛋白质剂量-响应Meta分析
 - J Int Soc Sports Nutr — 运动蛋白质摄入立场声明
+## Related Concepts
+
+- [[entities/exercise-science/health/exercise-disease]] — 蛋白质代谢与运动疾病干预相关

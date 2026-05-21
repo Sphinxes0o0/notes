@@ -76,3 +76,6 @@ sources: [github-relay-neuron-exercise-physiology]
 
 - Sports Medicine (2015). Periodization and tapering研究
 - Journal of Science in Sport and Exercise. Tapering科学
+## Related Concepts
+
+- [[entities/exercise-science/training/training-methods]] — 减量期前使用训练方法调整状态
