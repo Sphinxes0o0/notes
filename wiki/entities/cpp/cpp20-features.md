@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, modern-cpp, cpp20]
 created: 2026-05-20
-sources: [pdf-modern-cpp-tutorial]
+sources: [pdf-cpp-modern-tutorial]
 ---
 
 # C++20 Features (C++20新特性)

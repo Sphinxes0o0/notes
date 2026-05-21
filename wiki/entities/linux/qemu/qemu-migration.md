@@ -2,7 +2,7 @@
 type: entity
 tags: [QEMU, 迁移, VMState, 虚拟机]
 created: 2026-05-20
-sources: [github-notes-qemu]
+sources: [notes-qemu]
 ---
 
 # QEMU 迁移框架

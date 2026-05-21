@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux内核, 密码学, crypto子系统, 对称加密, 非对称加密, 哈希]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-kernel-crypto]
+sources: [notes-overview-kernel-crypto]
 ---
 
 # Linux Kernel Crypto Subsystem

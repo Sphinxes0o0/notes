@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, endurance, lactate-metabolism]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Lactate Threshold (乳酸阈值)

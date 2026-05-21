@@ -2,7 +2,7 @@
 type: entity
 tags: [linux-kernel, networking, socket, skbuff, netdevice, tcp, udp, routing, ipv4, ipv6]
 created: 2026-05-20
-sources: [github-notes-net]
+sources: [notes-net]
 ---
 
 # Linux Kernel Net Subsystem (网络子系统)

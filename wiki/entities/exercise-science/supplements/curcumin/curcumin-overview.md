@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, curcumin, anti-inflammatory, antioxidant, multi-target]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # Curcumin Overview (姜黄素概述)

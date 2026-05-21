@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, protein-metabolism, muscle-building]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Muscle Protein Synthesis (MPS, 肌肉蛋白合成)

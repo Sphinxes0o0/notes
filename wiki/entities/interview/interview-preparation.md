@@ -2,7 +2,7 @@
 type: entity
 tags: [面试, 编程面试, 面试准备]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-interview]
+sources: [notes-overview-interview]
 ---
 
 # 面试准备方法论 (Interview Preparation Methodology)

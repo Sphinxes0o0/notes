@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, coq10, Parkinson, migraine, mitochondria, neurodegeneration]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # CoQ10 & Neurodegeneration (辅酶Q10与神经系统)

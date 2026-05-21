@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, training, training-methods, methodology]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 训练方法 (Training Methods)

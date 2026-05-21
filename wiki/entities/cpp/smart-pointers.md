@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, modern-cpp]
 created: 2026-05-20
-sources: [pdf-modern-cpp-tutorial]
+sources: [pdf-cpp-modern-tutorial]
 ---
 
 # Smart Pointers (智能指针)

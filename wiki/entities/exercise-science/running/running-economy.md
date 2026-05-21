@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, running, running-economy, endurance]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 跑步经济性 (Running Economy)

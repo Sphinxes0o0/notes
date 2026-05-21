@@ -2,7 +2,7 @@
 type: entity
 tags: [linux-kernel, scheduler, cfs, vruntime, eevdf]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-kernel]
+sources: [notes-overview-kernel]
 ---
 
 # Linux Kernel CFS Scheduler (完全公平调度器)

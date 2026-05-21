@@ -2,7 +2,7 @@
 type: entity
 tags: [操作系统, 虚拟内存, 页表, MMU]
 created: 2026-05-20
-sources: [github-notes-os-fundamentals]
+sources: [notes-os-fundamentals]
 ---
 
 # 虚拟内存

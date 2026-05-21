@@ -2,7 +2,7 @@
 type: entity
 tags: [设计模式, 设计原则, DIP, SoC, 关注点分离]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-design-patterns]
+sources: [notes-overview-design-patterns]
 ---
 
 # 进阶设计原则 (Advanced Design Principles)

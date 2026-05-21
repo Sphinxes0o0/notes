@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, nutrition, ketogenic-diet, low-carb, body-composition]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 生酮饮食与运动 (Ketogenic Diet & Exercise)

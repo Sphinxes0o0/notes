@@ -2,7 +2,7 @@
 type: entity
 tags: [数据结构, 算法, 复杂度分析]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-datastructure]
+sources: [notes-overview-datastructure]
 ---
 
 # 算法复杂度分析 (Algorithm Complexity Analysis)

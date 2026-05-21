@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, curcumin, bioavailability, nanocarriers, drug-delivery]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # Curcumin Bioavailability (姜黄素生物利用度)

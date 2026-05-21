@@ -2,7 +2,7 @@
 type: entity
 tags: [linux-kernel, block-layer, io-scheduler, elevator, deadline, bfq]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-kernel]
+sources: [notes-overview-kernel]
 ---
 
 # Linux Kernel I/O Scheduler Framework

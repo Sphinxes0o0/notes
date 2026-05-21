@@ -2,7 +2,7 @@
 type: entity
 tags: [设计模式, 行为型模式, 策略, 状态, 观察者, 命令, 模板方法, 迭代器, 中介者, 责任链]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-design-patterns]
+sources: [notes-overview-design-patterns]
 ---
 
 # 行为型设计模式 (Behavioral Patterns)

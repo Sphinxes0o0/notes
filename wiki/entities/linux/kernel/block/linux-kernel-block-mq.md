@@ -2,7 +2,7 @@
 type: entity
 tags: [linux-kernel, block-layer, multi-queue, blk-mq, hctx]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-kernel]
+sources: [notes-overview-kernel]
 ---
 
 # Linux Kernel Block MultiQueue (blk-mq)

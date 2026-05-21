@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, coq10, statin, myopathy, HMG-CoA, mevalonate-pathway, muscle]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # CoQ10 & Statin Myopathy (辅酶Q10与他汀相关肌病)

@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, curcumin, inflammation, autoimmune, rheumatoid-arthritis, NF-κB]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # Curcumin & Inflammation (姜黄素与炎症)

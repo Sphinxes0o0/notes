@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, training, tapering, recovery, pre-competition]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 减量训练 (Tapering)

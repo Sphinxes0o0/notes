@@ -2,7 +2,7 @@
 type: entity
 tags: [数据结构, 线性结构, 数组, 链表, 栈, 队列]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-datastructure]
+sources: [notes-overview-datastructure]
 ---
 
 # 线性数据结构 (Linear Data Structures)

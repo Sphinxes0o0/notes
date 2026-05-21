@@ -2,7 +2,7 @@
 type: entity
 tags: [linux-kernel, networking, netfilter, iptables, nftables, conntrack, nat, firewall]
 created: 2026-05-20
-sources: [github-notes-netfilter, github-notes-net]
+sources: [notes-netfilter, notes-net]
 ---
 
 # Linux Kernel Netfilter Framework (Netfilter 框架)

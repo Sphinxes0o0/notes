@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, curcumin, MAFLD, NAFLD, liver, fibrosis, NASH]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # Curcumin & Liver / MAFLD (姜黄素与肝脏/代谢相关脂肪肝病)

@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, running, ultra-endurance, super-marathon, physiology]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 超耐力运动 (Ultra-Endurance Running)

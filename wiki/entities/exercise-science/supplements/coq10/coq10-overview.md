@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, coq10, mitochondria, antioxidant, cardiovascular, electron-transport-chain]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # CoQ10 Overview (辅酶Q10概述)

@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, aerobic-training, resistance-training, training-methodology]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Concurrent Training (并发训练)

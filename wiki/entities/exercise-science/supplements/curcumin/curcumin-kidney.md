@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, curcumin, diabetic-nephropathy, podocyte, autophagy, mTOR]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # Curcumin & Kidney / Diabetic Nephropathy (姜黄素与肾脏/糖尿病肾病)

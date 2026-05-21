@@ -2,7 +2,7 @@
 type: entity
 tags: [算法, 递归, 分治法]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-datastructure]
+sources: [notes-overview-datastructure]
 ---
 
 # 递归与分治法 (Recursion & Divide and Conquer)

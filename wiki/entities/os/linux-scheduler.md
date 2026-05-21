@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux, 调度器, CFS, 进程管理]
 created: 2026-05-20
-sources: [github-notes-os]
+sources: [notes-os]
 ---
 
 # Linux 进程调度器

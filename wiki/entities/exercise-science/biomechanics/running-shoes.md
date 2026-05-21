@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, biomechanics, running-shoes, equipment]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 跑鞋技术 (Running Shoe Technology)

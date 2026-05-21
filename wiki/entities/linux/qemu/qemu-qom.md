@@ -2,7 +2,7 @@
 type: entity
 tags: [QEMU, 虚拟机, 对象模型]
 created: 2026-05-20
-sources: [github-notes-qemu]
+sources: [notes-qemu]
 ---
 
 # QOM (QEMU Object Model)

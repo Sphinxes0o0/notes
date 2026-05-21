@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, blood-flow-restriction, low-load-training]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Blood Flow Restriction Training (BFR, 血流限制训练)

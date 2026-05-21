@@ -2,7 +2,7 @@
 type: entity
 tags: [设计模式, 创建型模式, 单例, 工厂, 建造者, 原型]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-design-patterns]
+sources: [notes-overview-design-patterns]
 ---
 
 # 创建型设计模式 (Creational Patterns)

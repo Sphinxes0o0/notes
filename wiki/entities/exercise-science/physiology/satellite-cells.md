@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, muscle-stem-cells, muscle-hypertrophy]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Satellite Cells (卫星细胞)

@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, training, periodization, programming]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 训练周期化 (Training Periodization)

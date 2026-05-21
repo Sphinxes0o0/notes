@@ -2,7 +2,7 @@
 type: entity
 tags: [操作系统, 进程, 线程, 资源分配]
 created: 2026-05-20
-sources: [github-notes-os-fundamentals]
+sources: [notes-os-fundamentals]
 ---
 
 # 进程与线程

@@ -2,7 +2,7 @@
 type: entity
 tags: [linux-kernel, networking, tcp, udp, ipv4, ipv6, ipsec, bridging, routing, bpf, xdp]
 created: 2026-05-20
-sources: [github-notes-network]
+sources: [notes-network]
 ---
 
 # Linux Network Protocols (Linux 网络协议实现)

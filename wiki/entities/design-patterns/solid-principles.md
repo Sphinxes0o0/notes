@@ -2,7 +2,7 @@
 type: entity
 tags: [设计模式, 设计原则, SOLID]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-design-patterns]
+sources: [notes-overview-design-patterns]
 ---
 
 # SOLID 设计原则 (SOLID Principles)

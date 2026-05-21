@@ -2,7 +2,7 @@
 type: entity
 tags: [数据结构, 排序算法, 算法]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-datastructure]
+sources: [notes-overview-datastructure]
 ---
 
 # 排序算法 (Sorting Algorithms)

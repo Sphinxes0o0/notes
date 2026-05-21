@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, resistance-training, training-programming]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Training Frequency (训练频率)

@@ -2,7 +2,7 @@
 type: entity
 tags: [数据结构, 树, 二叉树, 图]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-datastructure]
+sources: [notes-overview-datastructure]
 ---
 
 # 树和二叉树 (Trees & Binary Trees)

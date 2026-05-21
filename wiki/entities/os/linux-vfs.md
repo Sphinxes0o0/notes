@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux, VFS, 文件系统, 内核]
 created: 2026-05-20
-sources: [github-notes-os]
+sources: [notes-os]
 ---
 
 # Linux VFS (Virtual File System)

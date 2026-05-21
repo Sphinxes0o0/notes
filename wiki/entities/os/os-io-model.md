@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux, I/O模型, select, poll, epoll, 网络]
 created: 2026-05-20
-sources: [github-notes-os-fundamentals]
+sources: [notes-os-fundamentals]
 ---
 
 # Linux I/O 模型

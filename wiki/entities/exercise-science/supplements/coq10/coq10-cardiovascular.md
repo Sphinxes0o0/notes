@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, coq10, heart-failure, hypertension, coronary-artery-disease, mitochondria]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # CoQ10 & Cardiovascular System (辅酶Q10与心血管系统)

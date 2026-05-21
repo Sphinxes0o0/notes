@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, biomechanics, gait-analysis, running-technique]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 步态分析 (Gait Analysis)

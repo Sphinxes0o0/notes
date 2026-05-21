@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, protein-synthesis, cell-signaling]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # mTOR Pathway (mTOR 信号通路)

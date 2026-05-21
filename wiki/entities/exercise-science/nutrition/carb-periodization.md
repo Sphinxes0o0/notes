@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, nutrition, periodization, endurance]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 碳水化合物周期化 (Carbohydrate Periodization)

@@ -2,7 +2,7 @@
 type: entity
 tags: [算法, 动态规划, 最优子结构]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-datastructure]
+sources: [notes-overview-datastructure]
 ---
 
 # 动态规划 (Dynamic Programming)

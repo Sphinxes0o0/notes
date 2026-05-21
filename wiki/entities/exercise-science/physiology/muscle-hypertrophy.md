@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, muscle-hypertrophy, resistance-training]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Muscle Hypertrophy (肌肥大)

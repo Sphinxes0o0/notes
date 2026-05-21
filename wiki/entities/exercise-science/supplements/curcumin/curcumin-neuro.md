@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, curcumin, neurodegeneration, Alzheimer, Parkinson, BBB, alpha-synuclein]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # Curcumin & Neurodegeneration (姜黄素与神经退行性疾病)

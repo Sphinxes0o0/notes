@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, coq10, ubiquinol, ubiquinone, bioavailability, pharmacokinetics]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # CoQ10 Bioavailability (辅酶Q10生物利用度)

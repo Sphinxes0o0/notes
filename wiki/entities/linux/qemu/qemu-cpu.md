@@ -2,7 +2,7 @@
 type: entity
 tags: [QEMU, CPU执行, TCG, 模拟器]
 created: 2026-05-20
-sources: [github-notes-qemu]
+sources: [notes-qemu]
 ---
 
 # QEMU CPU 执行架构

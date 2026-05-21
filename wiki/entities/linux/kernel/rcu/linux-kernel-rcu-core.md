@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux内核, RCU, Read-Copy-Update, 无锁同步, 并发控制]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-kernel-rcu]
+sources: [notes-overview-kernel-rcu]
 ---
 
 # Linux Kernel RCU (Read-Copy-Update)

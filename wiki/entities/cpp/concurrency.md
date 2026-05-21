@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, modern-cpp]
 created: 2026-05-20
-sources: [pdf-modern-cpp-tutorial]
+sources: [pdf-cpp-modern-tutorial]
 ---
 
 # Concurrency (并发编程)

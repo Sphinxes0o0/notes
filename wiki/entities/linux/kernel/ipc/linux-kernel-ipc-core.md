@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux内核, 进程间通信, IPC, 消息队列, 信号量, 共享内存, mqueue]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-kernel-ipc]
+sources: [notes-overview-kernel-ipc]
 ---
 
 # Linux Kernel IPC Subsystem

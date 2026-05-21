@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux内核, 时间管理, hrtimer, tick, timekeeping, posix-timers]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-kernel-time]
+sources: [notes-overview-kernel-time]
 ---
 
 # Linux Kernel Time Subsystem

@@ -2,7 +2,7 @@
 type: entity
 tags: [QEMU, 块设备, QCOW2, 存储]
 created: 2026-05-20
-sources: [github-notes-qemu]
+sources: [notes-qemu]
 ---
 
 # QEMU 块设备层

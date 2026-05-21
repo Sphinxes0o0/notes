@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, health, disease-prevention, diabetes, cardiovascular]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 运动与疾病预防 (Exercise & Disease Prevention)

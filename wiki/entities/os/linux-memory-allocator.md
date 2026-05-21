@@ -2,7 +2,7 @@
 type: entity
 tags: [Linux, 内存分配器, SLUB, Buddy, 内核]
 created: 2026-05-20
-sources: [github-notes-os]
+sources: [notes-os]
 ---
 
 # Linux 内存分配器

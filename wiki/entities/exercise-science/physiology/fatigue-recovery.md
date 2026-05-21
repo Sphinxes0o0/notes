@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, fatigue, recovery, physiology]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Exercise-Induced Fatigue & Recovery (运动性疲劳与恢复)

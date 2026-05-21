@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, nutrition, protein, muscle-hypertrophy]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # 蛋白质与运动营养 (Protein & Sports Nutrition)

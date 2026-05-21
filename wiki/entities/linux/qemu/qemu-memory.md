@@ -2,7 +2,7 @@
 type: entity
 tags: [QEMU, 内存管理, 虚拟化]
 created: 2026-05-20
-sources: [github-notes-qemu]
+sources: [notes-qemu]
 ---
 
 # QEMU 内存管理

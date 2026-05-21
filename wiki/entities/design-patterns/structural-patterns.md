@@ -2,7 +2,7 @@
 type: entity
 tags: [设计模式, 结构型模式, 适配器, 桥接, 组合, 装饰, 门面, 享元, 代理]
 created: 2026-05-20
-sources: [github-sphinxes0o0-notes-design-patterns]
+sources: [notes-overview-design-patterns]
 ---
 
 # 结构型设计模式 (Structural Patterns)

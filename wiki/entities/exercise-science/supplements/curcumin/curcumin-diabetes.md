@@ -2,7 +2,7 @@
 type: entity
 tags: [supplements, curcumin, diabetes, insulin-resistance, beta-cell, GSK-3β, IAPP]
 created: 2026-05-20
-sources: [github-relay-neuron-supplements]
+sources: [relay-neuron-supplements]
 ---
 
 # Curcumin & Diabetes (姜黄素与糖尿病)

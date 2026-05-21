@@ -2,7 +2,7 @@
 type: entity
 tags: [exercise-science, nutrition, omega3, anti-inflammatory, recovery]
 created: 2026-05-20
-sources: [github-relay-neuron-exercise-physiology]
+sources: [relay-neuron-physiology]
 ---
 
 # Omega-3 与运动恢复 (Omega-3 & Exercise Recovery)
