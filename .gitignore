@@ -1,12 +1,3 @@
-# PDFs — too large for git
-raw/PDFs/
-
-# GitHub raw snapshots — already versioned at source, only keep .meta.md
-raw/github/notes/*/
-raw/github/relay-neuron/*/
-!raw/github/notes/.meta.md
-!raw/github/relay-neuron/.meta.md
-
 # Obsidian workspace (personal per-machine config)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
