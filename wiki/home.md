@@ -1,3 +1,10 @@
+---
+type: index
+tags: [navigation]
+created: 2026-01-01
+updated: 2026-05-21
+---
+
 # LLM Wiki — 全局导航
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。

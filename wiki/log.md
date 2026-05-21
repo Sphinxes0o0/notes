@@ -1,3 +1,9 @@
+---
+type: log
+tags: [log]
+created: 2026-01-01
+---
+
 ## [2026-05-20] ingest | github-notes-ccpp, github-notes-sys, github-notes-midware, github-notes-tools, github-notes-security
 
 Added entity pages:
