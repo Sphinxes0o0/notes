@@ -1,9 +1,11 @@
 ---
+
 type: entity
 tags: [系统编程, Linux, IPC, ELF]
 created: 2026-05-20
 
----
+
+sources: [notes-ccpp]---
 
 # 系统编程（System Programming）
 

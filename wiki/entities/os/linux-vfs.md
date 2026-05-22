@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux, VFS, 文件系统, 内核]
+tags: [linux-kernel, vfs, 文件系统, 内核]
 created: 2026-05-20
 sources: [notes-os]
 ---

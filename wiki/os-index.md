@@ -1,0 +1,29 @@
+---
+type: index
+tags: [operating-system, linux]
+created: 2026-05-22
+---
+
+# Operating System Fundamentals
+
+> Process/thread model, virtual memory, I/O paradigms, Linux-specific subsystems
+
+## Entities
+
+| Entity | Description | Tags |
+|--------|-------------|------|
+| [[entities/os/os-process-thread]] | Process and thread: resource allocation, state machine, context switching | os, process, thread |
+| [[entities/os/os-virtual-memory]] | Virtual memory: page tables, MMU, page faults, swap | os, virtual-memory |
+| [[entities/os/os-io-model]] | I/O models: select/poll/epoll, blocking/non-blocking, sync/async | os, io-model |
+| [[entities/os/linux-vfs]] | Linux VFS: dentry/inode cache, RCU path lookup, page cache | linux, vfs |
+| [[entities/os/linux-scheduler]] | Linux scheduler: CFS, RT, Deadline, load balancing | linux, scheduler |
+| [[entities/os/linux-memory-allocator]] | Linux memory allocator: SLUB/Buddy, sheaf mechanism, cmpxchg16b | linux, memory |
+| [[entities/os/linux-cgroups]] | Linux cgroups: CSS mechanism, v2 single hierarchy, CPU/memory controllers | linux, cgroups |
+
+## Cross-References
+
+- [[kernel-sched-index]] — Deep-dive into scheduler internals
+- [[kernel-mm-index]] — Deep-dive into memory management internals
+- [[kernel-io-index]] — Deep-dive into VFS and io_uring
+- [[kernel-subsystems-index]] — Locking and IPC are core OS subsystems
+- [[synthesis/topic-os-fundamentals]] — OS fundamentals synthesis combining all above

@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux, 内存分配器, SLUB, Buddy, 内核]
+tags: [linux-kernel, 内存分配器, slub, Buddy, 内核]
 created: 2026-05-20
 sources: [notes-os]
 ---

@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [exercise-science, endurance, cardio-vascular]
+tags: [exercise-science, endurance, cardiovascular]
 created: 2026-05-20
 sources: [relay-neuron-physiology]
 ---

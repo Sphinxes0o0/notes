@@ -4,6 +4,53 @@ tags: [log]
 created: 2026-01-01
 ---
 
+## [2026-05-22] ingest | notes-ccpp
+
+Ingested remaining C/C++ notes from raw/github/notes/ccpp/ (4 .md files). Filled gaps in existing cpp/ entity directory.
+
+Added source page:
+- wiki/sources/notes-ccpp.md — C/C++ 技术笔记：序列化、智能指针深度分析、堆栈对象创建策略、移动语义
+
+Added entity pages:
+- wiki/entities/cpp/cpp-serialization.md — C++ 序列化：JSON/XML/Protobuf/Boost/MessagePack 全方案对比
+- wiki/entities/cpp/cpp-object-lifetime.md — C++ 对象生命周期：堆-only/栈-only 分配限制策略
+
+Added new "Additional Topics" section to cpp-index.md with serialization and object-lifetime.
+Cross-linked new entities to smart-pointers, raii, move-semantics.
+Updated wiki/home.md (entity count 141→143, new source added) and index.md.
+
+## [2026-05-22] ingest | notes-openbmc
+
+Added source page:
+- wiki/sources/notes-openbmc.md — OpenBMC 深度技术分析：硬件控制、安全、Redfish、IPMI、启动更新（5篇）
+
+Added entity pages:
+- wiki/entities/linux/openbmc/openbmc-overview.md — OpenBMC 整体架构：硬件控制、安全子系统、技术栈
+- wiki/entities/linux/openbmc/openbmc-ipmi.md — IPMI 协议栈：KCS/SMIC、FRU/SEL/SDR、内核驱动
+- wiki/entities/linux/openbmc/openbmc-redfish.md — Redfish RESTful API：资源层级、认证、OEM 扩展
+- wiki/entities/linux/openbmc/openbmc-boot.md — 启动与固件更新：A/B 双镜像、Flash 布局、entity-manager
+
+Added module index:
+- wiki/openbmc-index.md — OpenBMC 模块导航
+
+Cross-linked openbmc entities to each other and to kernel (locking, sched, ipc, netfilter, mm).
+Updated wiki/home.md and index.md with OpenBMC module index and source entry.
+
+## [2026-05-22] ingest | notes-tools
+
+Added source page:
+- wiki/sources/notes-tools.md — 工具使用笔记：tcpdump、netcat、masscan/nmap、移除 Snap
+
+Added entity pages:
+- wiki/entities/tools/linux-network-tools.md — Linux 网络诊断工具（tcpdump 抓包 + netcat 网络瑞士军刀）
+- wiki/entities/tools/port-scanning.md — 端口扫描（masscan 高速异步 + nmap 全面深度检测）
+
+Added module index:
+- wiki/tools-index.md — 工具模块导航
+
+Cross-linked to kernel-net-index, security entity, os-io-model, cpp-index, sys-prog-index.
+Updated wiki/home.md and index.md with tools module index and source entry.
+
 ## [2026-05-20] ingest | github-notes-ccpp, github-notes-sys, github-notes-midware, github-notes-tools, github-notes-security
 
 Added entity pages:
@@ -76,3 +123,25 @@ Added entity pages:
 
 Cross-linked to existing cpp entities (move-semantics, smart-pointers, lambda-expressions, cpp20-features).
 Updated wiki/home.md with new source and entity entries.
+
+## [2026-05-22] ingest | notes-net-deep
+
+Ingested remaining network deep-dive notes from raw/github/notes/net/linux_kernel/ and raw/github/notes/network/ (10+ .md files).
+
+Added source page:
+- wiki/sources/notes-net-deep.md — 网络深度笔记合并：skbuff 内存管理、Netfilter/iptables/nftables、IPv4 路由 Trie、PHY/MAC 物理层、Conntrack 连接跟踪、Socket 层架构、网络栈全路径
+
+Added entity pages:
+- wiki/entities/linux/kernel/net/skbuff-deep-dive.md — SKB 内存管理深度分析（四指针布局、clone/copy、scatter-gather、dataref、linearize、destructor）
+- wiki/entities/linux/network/osi-physical-layer.md — OSI 物理层/数据链路层（PHY/MAC 架构、MII/SMI、PCS/PMA/PMD、固件 vs 驱动）
+- wiki/entities/linux/network/net-stack-deep-dive.md — 网络栈全路径分析（Socket→TCP/UDP→IP→Netfilter→Device、Jacobson RTT、拥塞控制、分片）
+
+Added module index:
+- wiki/kernel-protocols-index.md — 网络协议与物理层导航（protocols + stack-deep-dive + osi-phy）
+
+Updated:
+- wiki/kernel-net-index.md — 新增 skbuff-deep-dive 条目和 kernel-protocols-index 交叉引用
+- wiki/home.md — 新增 kernel-protocols-index 模块和 notes-net-deep 来源
+- index.md — 同步 home.md 全部更新
+
+Cross-linked all new entities to existing linux-kernel-net-subsystem, linux-kernel-netfilter-framework, and linux-network-protocols.

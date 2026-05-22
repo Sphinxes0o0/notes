@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux, I/O模型, select, poll, epoll, 网络]
+tags: [linux-kernel, I/O模型, select, poll, epoll, 网络]
 created: 2026-05-20
 sources: [notes-os-fundamentals]
 ---

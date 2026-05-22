@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux, 调度器, CFS, 进程管理]
+tags: [linux-kernel, 调度器, cfs, 进程管理]
 created: 2026-05-20
 sources: [notes-os]
 ---

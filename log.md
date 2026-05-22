@@ -4,6 +4,37 @@
 
 ---
 
+## [2026-05-22] restructure | 模块索引重构 + 全量 ingest
+
+- **Phase 1**: 拆分 home.md → 21 个模块索引文件 (wiki/{module}-index.md)
+- **Phase 2**: relay-neuron 肥胖文献 (23篇) → 6 entity + 1 source + 1 index
+- **Phase 3**: notes 剩余 (OpenBMC 5 + tools 5 + net/network 10 + ccpp 4) → 12 entity + 4 source + 4 index
+- **Phase 4**: .meta.md 确认已存在
+- **Phase 5**: QA — Cross-Link Gate PASS (124/124), 0 broken wikilinks
+- **总增长**: 127 → 185 pages (+58), entities 95 → 124 (+29), indexes 0 → 25
+
+---
+
+## [2026-05-22] ingest | relay-neuron 剩余内容 (technology/kinesiology-tape/population/training-methods)
+
+- **技术 (10文件)**: 可穿戴设备、HRV监控、跑步功率计、AI/ML预测、实时生理监控、ACSM指南、SCSEPF会议、JESF/SMHS期刊
+  - 3 entity: wearable-devices, hrv-training, running-power-meter
+  - 1 source: relay-neuron-technology
+- **肌贴 (6文件)**: 机制、肌肉力量、关节疼痛、临床应用、最新综述
+  - 1 entity: kinesiology-tape (合并机制+临床)
+  - 1 source: relay-neuron-kinesiology-tape
+- **人群专项 (6文件)**: 青少年、中老年、女性、精英、休闲跑者、儿童体能认知
+  - 4 entity: youth-runners, master-runners, female-runners, elite-athletes
+  - 1 source: relay-neuron-population-specific
+- **训练方法 (5文件)**: 间歇、节奏跑、LSD、阈值、坡度训练
+  - 1 entity (update): training-methods.md 新增5种训练方法内容
+  - 1 source: relay-neuron-training-methods
+- **Indexes**: technology-index, kinesiology-tape-index, population-index
+- **Hub更新**: home.md + index.md (3 indexes + 4 sources)
+- **总增长**: +8 entity pages, +4 source pages, +3 module indexes
+
+---
+
 ## [2026-05-20] init | Initialized llm-wiki structure
 
 - 创建目录结构

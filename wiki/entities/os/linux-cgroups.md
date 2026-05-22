@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux, cgroups, 资源限制, 容器]
+tags: [linux-kernel, cgroups, 资源限制, 容器]
 created: 2026-05-20
 sources: [notes-os]
 ---
