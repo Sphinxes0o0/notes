@@ -27,6 +27,7 @@ created: 2026-05-22
 | [[kernel-sched-index]] | CFS, context switch, load balancing | 4 |
 | [[kernel-block-index]] | bio/request, blk-mq, IO schedulers | 3 |
 | [[kernel-subsystems-index]] | Crypto, locking, IPC, RCU, time, sound | 6 |
+| [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem | 5 |
 
 ### Emulation
 | Index | Domain | Entities |
@@ -99,6 +100,8 @@ created: 2026-05-22
 | [[sources/notes-openbmc]] | OpenBMC 深度技术分析：硬件控制、安全、Redfish、IPMI、启动更新 | 2026-05 | github |
 | [[sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
 | [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
+| [[sources/pdf-ebpf-books]] | eBPF书籍3册：龙蜥白皮书(XDP/TC/CO-RE)、技术实践、Cilium创始人Liz Rice入门 | 2026-05 | pdf |
+| [[sources/pdf-ebpf-papers]] | eBPF论文7篇：Thomas Graf微内核愿景、Apple Falco、Google审计(Atomics/Ringbuf)、Black Hat Rootkit攻防 | 2026-05 | pdf |
 | [[sources/notes-ccpp]] | C/C++ 技术笔记：序列化、智能指针深度分析、堆栈对象创建策略、移动语义 | 2026-05 | github |
 | [[sources/notes-datastructure]] | 数据结构与算法：复杂度分析、线性结构、排序、DP、递归、哈希表、树与图（21章节+真题训练） | 2026-05 | github |
 | [[sources/notes-design-patterns]] | 设计模式：SOLID原则、创建型5种、结构型7种、行为型11种共23种设计模式 | 2026-05 | github |
