@@ -4,6 +4,23 @@ tags: [log]
 created: 2026-01-01
 ---
 
+## [2026-05-22] ingest | pdf-cpp-slides + pdf-cpp-perf-books
+
+Ingested 5 C++ conference slides (2025) + 2 performance/architecture books.
+
+Source pages created:
+- wiki/sources/pdf-cpp-slides.md — 彭博reflection、David Sankel/John Lakos safety、阿里云perf、xLLM inference
+- wiki/sources/pdf-cpp-perf-books.md — Optimized C++ (Kurt Guntheroth) + Large-Scale C++ Software Design (John Lakos)
+
+Entity pages created (NEW topics — no prior coverage):
+- wiki/entities/cpp/cpp-reflection.md — C++26 P2996 reflection: `^^`, `[: :]`, `std::meta::info`, meta functions, access context
+- wiki/entities/cpp/cpp-safety.md — Defense-in-depth (sandbox/harden/detect/prevent), C++26 Contracts P2900, memory safety CVEs
+- wiki/entities/cpp/cpp-perf-optimization.md — CPU cache, SIMD, NUMA, profiling tools (perf/eBPF/IPT)
+- wiki/entities/cpp/cpp-llm-inference.md — xLLM: PD/EPD separation, KV Cache pooling, async pipeline, SLO scheduling
+
+Updated wiki/cpp-index.md with 4 new entity rows under "Additional Topics".
+Cross-linked to existing entities: smart-pointers, raii, move-semantics, concurrency, constexpr, serialization.
+
 ## [2026-05-22] ingest | notes-ccpp
 
 Ingested remaining C/C++ notes from raw/github/notes/ccpp/ (4 .md files). Filled gaps in existing cpp/ entity directory.
