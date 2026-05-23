@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-23 | Total pages: ~152 | Module indexes: 19
+> Last updated: 2026-05-23 | Total pages: ~175 | Module indexes: 19
 
 ---
 
@@ -45,7 +45,7 @@ created: 2026-05-22
 | [[datastructure-index]] | DSA: complexity, linear, sorting, DP, recursion, hash, trees | 7 |
 | [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
 | [[interview-index]] | Coding patterns, system design basics | 3 |
-| [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 20 |
+| [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
 | [[rust-index]] | Rust language: ownership, borrowing, lifetimes, traits, concurrency | 1 |
 | [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
 
@@ -86,7 +86,18 @@ created: 2026-05-22
 | [[sources/pdf-cpp-templates]] | C++ Templates 2nd Edition：模板权威指南（范德沃尔德/约祖蒂斯/格雷戈）| 2017 | pdf |
 | [[sources/pdf-cpp-nginx-module]] | Nginx模块开发指南：C++11 + Boost 扩展Nginx | 2015 | pdf |
 | [[sources/pdf-crypto-books]] | OpenSSL Cookbook + 图解密码技术 第三版 | 2024 | pdf |
-| [[sources/pdf-rust-intro]] | Let's Get Rusty! - Rust 入门指北（基础设施 + 语言简介）| 2024 | pdf |
+| [[sources/pdf-cpp-modern-books]] | Modern C++ 合集 6册：C++20/23、Professional C++、21st Century C++、Modern C、C++17、Large-Scale C++ | 2024 | pdf |
+| [[sources/pdf-cpp-templates-books]] | C++ Templates 合集 3册：完整指南 + 模板元编程实战 | 2023 | pdf |
+| [[sources/pdf-cpp-perf-memory]] | C++ 性能与内存管理 4册：内存管理高级指南、性能优化指南、Cache 内存 | 2025 | pdf |
+| [[sources/pdf-cpp-concurrency]] | C++ 并发编程 2册：Concurrency with Modern C++ + C++ Concurrency in Action | 2023 | pdf |
+| [[sources/pdf-c-language]] | C 语言编程 2册：K&R C 第2版 + C in a Nutshell 第2版 | 2015 | pdf |
+| [[sources/pdf-linux-sysprog]] | Linux系统编程4册：TLPI+APUE+Unix工具+CSAPP深入理解计算机系统 | 2026-05 | pdf |
+| [[sources/pdf-linux-kernel-books]] | Linux内核2册：深入理解Linux内核(架构)+Linux内核0.12完全注释 | 2026-05 | pdf |
+| [[sources/pdf-linux-net-server]] | Linux网络/服务端3册：高性能服务器+muduo多线程编程+LwIP协议栈源码 | 2026-05 | pdf |
+| [[sources/pdf-concurrency-perf]] | 并发与并行编程2册：OSTEP线程锁+perfbook(Paul McKenney RCU/无锁同步) | 2026-05 | pdf |
+| [[sources/pdf-design-patterns-cpp]] | GoF 23种设计模式精解附C++实现源码 | 2026-05 | pdf |
+| [[sources/pdf-ds-cpp]] | 数据结构C++语言版(第3版·清华大学邓俊辉)：向量/树/图/排序/串匹配 | 2026-05 | pdf |
+| [[sources/pdf-rust-intro]] | Rust 合集 3册：入门指北 + Programming Rust 2nd Ed + Rust 编程语言（官方中文版）| 2024 | pdf |
 | [[sources/pdf-af-xdp-quic]] | B站 AF_XDP with QUIC 实践：QUIC网关性能优化 | 2024 | pdf |
 | [[sources/pdf-someip-docs]] | SOME/IP & vSOME/IP 技术文档6篇：CommonAPI/Franca/SD/Endpoints | 2024 | pdf |
 | [[sources/notes-ccpp]] | C/C++ 技术笔记：序列化、智能指针深度分析、堆栈对象创建策略、移动语义 | 2026-05 | github |
@@ -96,6 +107,11 @@ created: 2026-05-22
 | [[sources/notes-midware]] | 中间件：DoIP协议（ISO 13400）、SOME/IP服务通信、vSOME/IP开源实现 | 2026-05 | github |
 | [[sources/notes-security]] | 安全工具：Masscan高速端口扫描、Falco K8s运行时安全、Snort 3 NIDS架构分析 | 2026-05 | github |
 | [[sources/notes-sys]] | 系统编程：TTY/Shell/Console体系、ELF文件格式、Linux IPC、单例模式 | 2026-05 | github |
+| [[sources/pdf-algo-ds-books]] | 算法与数据结构7册：Sedgewick图算法、TAOCP Vol.1、邓俊辉数据结构、基础集合论 | 2026-05 | pdf |
+| [[sources/pdf-interview-books]] | 编程面试2册：Cracking the Coding Interview 6th + EPI | 2026-05 | pdf |
+| [[sources/pdf-security-crypto-books]] | 安全与密码学6册：Bulletproof TLS/PKI、mbedtls、TrustZone/OP-TEE、商用密码考核 | 2026-05 | pdf |
+| [[sources/pdf-arm-architecture]] | ARM体系结构4册：Armv8/Armv9参考手册、Cortex-A9 TRM、量化研究方法 | 2026-05 | pdf |
+| [[sources/pdf-misc-books]] | 杂项3册：人月神话、非线性动力学与混沌、偏微分方程 | 2026-05 | pdf |
 
 ---
 

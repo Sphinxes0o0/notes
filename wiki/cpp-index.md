@@ -46,6 +46,8 @@ created: 2026-05-22
 | [[entities/cpp/cpp-llm-inference]] | C++ for LLM inference: PD/EPD separation, KV Cache pooling, xLLM architecture | cpp, llm, ai |
 | [[entities/cpp/cpp-recsys-optimization]] | C++ for recommendation training: RecIS, Four Walls (Python/CPU/Memory/Compute), GPU HashTable | cpp, recsys, performance |
 | [[entities/cpp/cpp-templates]] | C++ Templates: metaprogramming, specialization, SFINAE, CRTP, variadic templates, fold expressions | cpp, templates, metaprogramming |
+| [[entities/cpp/cpp-memory-management]] | C++ 内存管理：智能指针、RAII、自定义分配器、缓存优化、内存池 | cpp, memory-management |
+| [[entities/cpp/large-scale-cpp]] | Large-Scale C++ Software Design：物理设计、组件、层级、依赖管理 | cpp, architecture, physical-design |
 
 ## Sources
 
@@ -57,6 +59,10 @@ created: 2026-05-22
 | [[sources/pdf-cpp-perf-engineering]] | Performance engineering: kernel bypass, Bcache Btree, distributed caching, RDMA transfer, crash diagnosis | 2025-12 |
 | [[sources/pdf-cpp-engineering-practices]] | Engineering practices: AI coding (Baidu/Meituan), testing, maturity model, Xiaomi Vela, CLI tools, object lifetime, robotics build | 2025-12 |
 | [[sources/pdf-cpp-templates]] | C++ Templates 2nd Ed: Vandevoorde, Josuttis, Gregor — metaprogramming, SFINAE, CRTP, specialization | 2017 |
+| [[sources/pdf-cpp-templates-books]] | C++ Templates 合集 3册：完整指南 + 模板元编程实战 | 2023 |
+| [[sources/pdf-cpp-modern-books]] | Modern C++ 合集 6册：C++20/23、Professional C++、21st Century C++、C++17、Large-Scale C++ | 2024 |
+| [[sources/pdf-cpp-perf-memory]] | C++ 性能与内存管理 4册：内存管理高级指南、性能优化、Cache 内存 | 2025 |
+| [[sources/pdf-cpp-concurrency]] | C++ 并发编程 2册：Concurrency with Modern C++ + C++ Concurrency in Action | 2023 |
 | [[sources/pdf-cpp-nginx-module]] | Nginx module dev with C++11 + Boost: Luó Jiànfēng — module architecture, HTTP/stream, Boost integration | 2015 |
 | [[sources/pdf-crypto-books]] | OpenSSL Cookbook + Illustrated Cryptography 3rd Ed: key management, TLS testing, crypto basics | 2024 |
 

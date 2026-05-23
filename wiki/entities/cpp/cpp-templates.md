@@ -2,7 +2,7 @@
 type: entity
 tags: [c++, templates, metaprogramming, generics]
 created: 2026-05-23
-sources: [pdf-cpp-templates]
+sources: [pdf-cpp-templates, pdf-cpp-templates-books]
 ---
 
 # C++ Templates
@@ -51,3 +51,4 @@ C++ 模板是一种编译时泛型编程机制，允许以类型参数化的方�
 ## 来源详情
 
 - [[sources/pdf-cpp-templates]] — C++ Templates 2nd Edition (Vandevoorde, Josuttis, Gregor)
+- [[sources/pdf-cpp-templates-books]] — C++ Templates 合集（含 Template Metaprogramming）

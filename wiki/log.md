@@ -280,3 +280,33 @@ New non-eBPF source page:
 - wiki/sources/pdf-someip-docs.md — CommonAPI/Franca/SOME/IP-SD/vSomeIP/netmap
 
 Updated: wiki/home.md (Sources table + Rust index), wiki/ebpf-index.md (new entities), wiki/cpp-index.md (new sources + entity), wiki/entities/linux/ebpf/ebpf-security.md (source refs)
+
+## [2026-05-23] ingest | 5 book source pages (algo/interview/security/ARM/misc)
+
+Ingested ~22 books into pyramid wiki, grouped into 5 thematic source pages.
+
+Source pages created:
+- wiki/sources/pdf-algo-ds-books.md — 算法与数据结构7册：Sedgewick图算法、TAOCP Vol.1、邓俊辉数据结构、基础集合论
+- wiki/sources/pdf-interview-books.md — 编程面试2册：Cracking the Coding Interview 6th + EPI
+- wiki/sources/pdf-security-crypto-books.md — 安全与密码学6册：Bulletproof TLS/PKI 2nd、mbedtls、TrustZone/OP-TEE、商用密码考核、OpenSSL Cookbook、图解密码技术
+- wiki/sources/pdf-arm-architecture.md — ARM体系结构4册：Armv8/Armv9参考手册、Cortex-A9 TRM、量化研究方法
+- wiki/sources/pdf-misc-books.md — 杂项3册：人月神话、非线性动力学与混沌、偏微分方程
+
+Entity pages created (10 new):
+- wiki/entities/datastructure/graph-algorithms.md — Graph traversal, shortest path, MST, network flow (Sedgewick)
+- wiki/entities/datastructure/set-theory-basics.md — Sets, relations, functions, cardinality (基础集合论)
+- wiki/entities/arm/trustzone-op-tee.md — ARM TrustZone & OP-TEE TEE architecture
+- wiki/entities/security/mbedtls-crypto.md — mbedtls embedded TLS/crypto library
+- wiki/entities/security/commercial-cryptography.md — 商用密码（国密SM2/SM3/SM4 + 密评）
+- wiki/entities/arm/armv8-architecture.md — ARMv8-A (AArch64) architecture reference
+- wiki/entities/arm/arm-cortex-a9.md — Cortex-A9 processor microarchitecture
+- wiki/entities/arm/computer-architecture.md — Hennessy & Patterson quantitative approach
+- wiki/entities/software-engineering/mythical-man-month.md — Brooks' Law, No Silver Bullet
+- wiki/entities/math/nonlinear-dynamics-chaos.md — Strogatz nonlinear dynamics & chaos
+
+Updated:
+- wiki/home.md — Sources table (+5 rows), page count 152→167
+- wiki/datastructure-index.md — Added graph-algorithms + set-theory-basics entity rows
+- wiki/interview-index.md — Added pdf-interview-books cross-reference
+
+Cross-linked all new entities (2+ wikilinks per page verified).

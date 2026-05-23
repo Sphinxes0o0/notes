@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, modern-cpp]
 created: 2026-05-20
-sources: [pdf-cpp-modern-tutorial]
+sources: [pdf-cpp-modern-tutorial, pdf-cpp-concurrency]
 ---
 
 # Concurrency (并发编程)
@@ -53,7 +53,5 @@ result.wait();
 
 ## 来源详情
 - [[sources/pdf-cpp-modern-tutorial]] - Chapter 7: 线程
-## Related Concepts
-
-- [[entities/interview/system-design-basics]] — 系统设计涉及并发编程模型
-- [[entities/midware]] — 车载中间件采用异步I/O和消息队列机制
+- [[sources/pdf-cpp-concurrency]] — Concurrency with Modern C++ + C++ Concurrency in Action
+- [[sources/pdf-cpp-modern-books]] — C++17 并行算法章节

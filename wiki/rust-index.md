@@ -24,4 +24,4 @@ created: 2026-05-23
 
 | Source | Description | Date |
 |--------|-------------|------|
-| [[sources/pdf-rust-intro]] | Let's Get Rusty! — Rust 入门指北（基础设施 + 语言简介） | 2024 |
+| [[sources/pdf-rust-intro]] | Rust 入门指北 + Programming Rust 2nd Ed + Rust 编程语言（官方中文版）| 2024 |

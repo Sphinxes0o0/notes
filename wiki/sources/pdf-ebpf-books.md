@@ -7,7 +7,7 @@ author: "浪潮信息/龙蜥社区; 多位贡献者"
 date: 2026-05-22
 size: medium
 path: raw/PDFs/books/eBPF基础.pdf, raw/PDFs/books/eBPF_technical_practice_v2.pdf, raw/PDFs/books/Beginners_guide_to_eBPF_programming_for_networking.pdf
-summary: "3册eBPF书籍：龙蜥社区白皮书（架构/CO-RE/应用场景）、技术实践指南（XDP/TC/iproute2/CO-RE）、Liz Rice入门指南（事件驱动/程序类型/网络钩子）"
+summary: "3册eBPF书籍：龙蜥社区白皮书/基础教程（架构/CO-RE/Verifier/JIT/Maps/6大场景）、技术实践指南（XDP/TC/iproute2/CO-RE）、Liz Rice入门指南（事件驱动/程序类型/网络钩子）"
 ---
 
 # eBPF Books (3册)

@@ -2,7 +2,7 @@
 type: entity
 tags: [rust, systems-programming, memory-safety, concurrency]
 created: 2026-05-23
-sources: [pdf-rust-intro]
+sources: [pdf-rust-intro, pdf-cpp-modern-books]
 ---
 
 # Rust Programming Language
@@ -55,4 +55,6 @@ Rust 是由 Mozilla（现 Rust 基金会）开发的系统级编程语言，旨�
 
 ## 来源详情
 
-- [[sources/pdf-rust-intro]] — Let's Get Rusty! 入门指北
+- [[sources/pdf-rust-intro]] — Rust 入门指北 + Programming Rust + Rust 编程语言（官方中文版）
+- [[sources/pdf-cpp-modern-books]] — C++ 对比参考
+- [[sources/pdf-cpp-concurrency]] — C++ 并发模型对比参考

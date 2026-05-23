@@ -21,3 +21,4 @@ created: 2026-05-22
 - [[datastructure-index]] — Core DSA fundamentals underpin all coding interview problems
 - [[design-patterns-index]] — SOLID and design patterns are key interview topics
 - [[sys-prog-index]] — System design interviews draw heavily on OS, networking, and C/C++ knowledge
+- [[sources/pdf-interview-books]] — Cracking the Coding Interview + EPI books

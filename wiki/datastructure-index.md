@@ -19,6 +19,8 @@ created: 2026-05-22
 | [[entities/datastructure/recursion-and-divide-conquer]] | Tower of Hanoi, divide-and-conquer, binary search | algorithm, recursion |
 | [[entities/datastructure/hash-table]] | Hash functions, collision handling, O(1) lookup | datastructure, hash |
 | [[entities/datastructure/trees-and-graphs]] | Binary tree, BST, heap, BFS/DFS | datastructure, tree |
+| [[entities/datastructure/graph-algorithms]] | Graph traversal, shortest path, MST, network flow | algorithm, graph |
+| [[entities/datastructure/set-theory-basics]] | Sets, relations, functions, cardinality — math foundation of CS | math, set-theory |
 
 ## Cross-References
 

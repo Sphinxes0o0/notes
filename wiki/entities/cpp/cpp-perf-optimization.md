@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, performance, optimization, cpu-cache, simd, profiling]
 created: 2026-05-22
-sources: [pdf-cpp-slides]
+sources: [pdf-cpp-slides, pdf-cpp-perf-memory, pdf-cpp-modern-books]
 ---
 
 # C++ Performance Optimization
@@ -123,6 +123,12 @@ Async stack dumping with 1/131th overhead of `pstack` (14% QPS impact vs. 100% f
 - [[entities/cpp/move-semantics]] — `std::move` eliminates unnecessary copies of large objects
 - [[entities/cpp/constexpr]] — move computation to compile time; zero runtime cost
 - [[entities/cpp/cpp-stl-containers]] — `std::vector` cache-friendly vs `std::list`; `reserve()` prevents reallocation
+- [[entities/cpp/cpp-memory-management]] — 内存管理深入分析
 - [[entities/cpp/cpp-stl-algorithms]] — `std::for_each` with SIMD, algorithms vs hand-written loops
 - [[entities/cpp/concurrency]] — parallel execution requires understanding Amdahl's Law; `std::thread` for parallelism
 - [[entities/cpp/if-constexpr]] — compile-time branch elimination reduces instruction cache pressure
+
+## Sources
+
+- [[sources/pdf-cpp-perf-memory]] — C++ 性能优化与内存管理 4 册
+- [[sources/pdf-cpp-modern-books]] — Modern C++ 书籍的性能章节
