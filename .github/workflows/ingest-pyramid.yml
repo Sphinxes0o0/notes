@@ -11,6 +11,8 @@ on:
 jobs:
   ingest:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout notes (source)
         uses: actions/checkout@v4
@@ -30,9 +32,10 @@ jobs:
           rsync -av --delete notes-src/courses/ pyramid/raw/github/notes/courses/ || true
           rsync -av --delete notes-src/resources/ pyramid/raw/github/notes/resources/ || true
 
-      - name: Run ingest
+      - name: Ingest (Copilot → MiniMax fallback)
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MINIMAX_CN_API_KEY: ${{ secrets.MINIMAX_CN_API_KEY }}
         run: |
           cd pyramid
-          python3 scripts/ingest_wiki.py . github/notes || true
+          python3 scripts/ingest_wiki.py . github/notes
