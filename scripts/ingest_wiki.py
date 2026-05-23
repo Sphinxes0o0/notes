@@ -288,7 +288,7 @@ Output JSON action plan."""
     elif args.provider:
         providers = [args.provider]
     else:
-        providers = ["copilot", "minimax"]  # Copilot first, MiniMax fallback
+        providers = ["minimax", "copilot"]  # MiniMax primary, Copilot fallback
 
     print(f"Providers: {' → '.join(providers)}", file=sys.stderr)
     result, used_provider = call_llm(WIKI_SYSTEM_PROMPT, user_msg, providers)
