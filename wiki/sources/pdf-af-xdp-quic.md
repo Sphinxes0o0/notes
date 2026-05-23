@@ -2,6 +2,7 @@
 type: source
 tags: [ebpf, xdp, af-xdp, quic, networking, bilibili]
 source-type: pdf
+created: 2026-05-23
 title: "AF_XDP with QUIC Practice - Bilibili"
 author: "Bilibili Network Protocol Team"
 date: 2024

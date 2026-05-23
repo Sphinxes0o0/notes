@@ -80,6 +80,12 @@ created: 2026-05-22
 | [[sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
 | [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
 | [[sources/pdf-epi-python]] | Elements of Programming Interviews in Python：编程面试DS&A、设计问题、OOD | 2017 | pdf |
+| [[sources/pdf-cpp-slides]] | C++ Conference Talks 合集5讲：反射(Bloomberg)、安全防御(Adobe/Bloomberg)、PolarDB性能优化(阿里)、xLLM推理(C++框架) | 2026-05 | pdf |
+| [[sources/pdf-cpp-ai-inference]] | AI推理与MLIR编译优化：RTP-LLM(阿里)、xLLM、DeepSeek SGLang优化、MLIR Actor编译器 | 2026-05 | pdf |
+| [[sources/pdf-cpp-compiler-toolchain]] | 编译器与工具链：MLIR fuzzing、RISC-V AI编译器、多元AI算子库、编译技术在AI软件栈的实践 | 2026-05 | pdf |
+| [[sources/pdf-cpp-perf-engineering]] | 高性能C++工程：缓存/分布式计算加速、内核Btree块缓存、异构传输库优化 | 2026-05 | pdf |
+| [[sources/pdf-cpp-safety-standards]] | C++安全标准与安全优先演进：安全开发路线图、AI原生研发成熟度 | 2026-05 | pdf |
+| [[sources/pdf-cpp-engineering-practices]] | C++工程实践：C++在Xiaomi Vela(嵌入式)、统一算力FlagScale/FlagOS、CodeBuddy终端、具身机器人多仓构建、AI重塑测试 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-books]] | eBPF书籍3册：龙蜥白皮书(XDP/TC/CO-RE)、技术实践、Cilium创始人Liz Rice入门 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-papers]] | eBPF论文9篇：Thomas Graf微内核、Apple Falco、Google审计、Rootkit攻防、UFMG XDP、生态库、saBPF容器审计、Isovalent安全可观测性 | 2026-05 | pdf |
 | [[sources/pdf-ptp-security]] | PTPsec：IEEE 1588时间同步延迟攻击检测与缓解 (INFOCOM 2024) | 2024 | pdf |
