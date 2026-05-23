@@ -125,19 +125,42 @@ FlagScale is BAAI's unified training and inference framework within the FlagOS e
 
 ## 易慧民 — RecIS：C++驱动的高性能推荐训练框架优化实践
 
-**Speaker:** 易慧民 (Alibaba, Platform Technology)
-**File:** `易慧民_RecIS：C++驱动的高性能推荐训练框架优化实践.pdf` (25 pages, 3.2K chars)
+**Speaker:** 易慧民(须焰) (Alibaba, Platform Technology)
+**File:** `易慧民_RecIS：C++ 驱动的高性能推荐训练框架优化实践.pdf` (25 pages, 2.7K chars)
 
 RecIS is Alibaba's C++-driven recommendation system training optimization framework.
 
-**Key takeaways:**
-- Background: "The Free Lunch Is Over" — CPU frequency wall → multi-core → GPU parallel computing
-- **Performance challenges in recommendation training:**
-  - CPU vs GPU characteristics: CPU (50%+ control logic, low latency) vs GPU (nearly all compute units, high throughput)
-  - GPU memory hierarchy: H100 SM (132 SMs) vs ALU (Cuda Core)
-  - Memory bandwidth is the primary bottleneck for recommendation model training
-- **C++ engineering optimizations:** Custom memory allocators, SIMD vectorization, cache-aware data layouts, NUMA-aware scheduling
-- Compared to LLM training, recommendation training has different workload patterns: sparse features, embedding tables, dynamic shapes
+**Background:** "The Free Lunch Is Over" — CPU frequency wall (~2005) → multi-core (~2015) → GPU parallel computing (~now)
+
+**GPU vs CPU characteristics:**
+- CPU: 50%+ control logic (pipeline, branch prediction, OoO), low latency
+- GPU: nearly all compute units, high throughput, hides latency with parallelism
+- H100: 132 SMs × 32×4 = 16,896 ALU (Cuda Core); Peak FP16/BF16: 134 TFLOPS (989T with TensorCore)
+
+**The Memory Wall:** Data movement costs more than computation. Roofline model: only sufficiently high compute density (ops:bytes ratio) can saturate peak FLOPS.
+- LLM compute density: ~50% of peak achievable
+- Recommendation model compute density: ~10% — **memory bandwidth is the primary bottleneck**
+
+**The Four Walls of Recommendation Training:**
+
+| Wall | Problem | Root Cause |
+|------|---------|------------|
+| **Python Wall** | 1000+ columns of features; 10,000+ Python graph construction ops per step; GIL bottleneck | PyTorch-based data pipeline; row-wise reading; Pythonic DataLoader |
+| **CPU Wall** | CPU sample pipeline; CPU Embedding Table (100B+ rows); memory-bandwidth bound | DDR4 200-400 GBps vs GPU HBM3e 1-8 TBps — 10-100X gap |
+| **Memory Wall** | Sparse operations are all memory-intensive; low operator memory efficiency; atomic operation overhead | Coalesced access, vectorized access issues |
+| **Compute Wall** | Dense computation efficiency; large model integration | Ops count: ~50,000 vs LLM's ~500 |
+
+**C++ Engineering Optimizations (RecIS solutions):**
+
+1. **Python Wall — DataIO:** Replaced Python DataLoader with C++ DataIO: columnar reading (vs row-wise), GPU-first data transfer, GPU-side processing, multi-threading (vs multi-processing with GIL)
+2. **CPU Wall — GPU HashTable:** GPU HashTable with open addressing, tile-based probing, atomic CAS, warp intrinsics; GPU Slabs with logical contiguity, merge & split, logical fusion, full-hash sharding
+3. **Memory Wall — Sparse Fusion:** Vertical fusion (Hash+Bucketize, Unique+Partition, Tile+Reduce), Horizontal fusion (all columns with same ops)
+4. **Memory Wall — Vectorized Access:** `LDG.64`, `LDG.128` coalesced memory access
+5. **Memory Wall — Atomic Optimization:** Warp Shuffle, Block Shared Memory, Global Memory hierarchy
+
+**Results:** Migrated from TensorFlow to PyTorch ecosystem; 2–3X improvement over baseline; 30%–150% over TensorFlow performance.
+
+**Key insight:** Recommendation models and LLMs have fundamentally different bottlenecks. C++ is essential to closely match hardware characteristics and approach compute limits. Evolution path: C++ → Python, Memory-bound → Compute-bound, System → Algorithm.
 
 ---
 

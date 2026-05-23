@@ -44,6 +44,7 @@ created: 2026-05-22
 | [[entities/cpp/cpp-safety]] | Safety-first C++: defense-in-depth (sandbox/harden/detect/prevent), C++26 Contracts | cpp, safety, security |
 | [[entities/cpp/cpp-perf-optimization]] | CPU cache optimization, SIMD, branch prediction, profiling tools (perf/eBPF/IPT) | cpp, performance |
 | [[entities/cpp/cpp-llm-inference]] | C++ for LLM inference: PD/EPD separation, KV Cache pooling, xLLM architecture | cpp, llm, ai |
+| [[entities/cpp/cpp-recsys-optimization]] | C++ for recommendation training: RecIS, Four Walls (Python/CPU/Memory/Compute), GPU HashTable | cpp, recsys, performance |
 
 ## Sources
 

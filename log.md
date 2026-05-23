@@ -154,3 +154,24 @@
 **Synthesis 核心概念**:
 - OS: 图灵机/计算理论、进程vs线程开销、虚拟内存/页表、epoll红黑树、TCP三次握手四次挥手
 - Network: TCP/IP五层模型、滑动窗口、epoll vs select/poll、HTTP缓存、DNS解析
+
+## [2026-05-23] ingest | pdf-cpp-slides (enhance) + pdf-epi-python + cpp-recsys-optimization
+
+Enhanced existing source page `wiki/sources/pdf-cpp-slides.md` with richer detail from actual PDFs:
+- David Sankel: sandboxing tools (Sandbox2/SAPI/RLBox/AppSandbox/AppContainer), hardening flags detail, sanitizer specifics
+- John Lakos: C++ under pressure (Google/MS/Adobe migrating), Safe-Healthy-Efficient strategy details, contracts 20-year timeline
+- 吴晓飞: memory hierarchy latency/bandwidth table, cache miss types, perf/eBPF/IPT tool specifics, hardware benchmarking
+- 刘童旋: adaptive PD scheduling, business impact metrics (TP99↓50%, cost↓70%, UCVR↑5%)
+
+Enhanced existing source page `wiki/sources/pdf-cpp-ai-inference.md`:
+- 易慧民 RecIS: Four Walls (Python/CPU/Memory/Compute), GPU HashTable design, sparse fusion, 2-3X performance results
+
+Created new source page:
+- `wiki/sources/pdf-epi-python.md` — Elements of Programming Interviews in Python sampler (book, not a C++ slide)
+
+Created new entity page:
+- `wiki/entities/cpp/cpp-recsys-optimization.md` — C++ for recommendation system training optimization
+
+Updated:
+- `wiki/cpp-index.md` — added recsys-optimization row
+- `wiki/home.md` — added pdf-epi-python source, updated cpp-index count 18→19, page estimate ~140→~142

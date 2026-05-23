@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-23 | Total pages: ~140 | Module indexes: 18
+> Last updated: 2026-05-23 | Total pages: ~142 | Module indexes: 18
 
 ---
 
@@ -45,7 +45,7 @@ created: 2026-05-22
 | [[datastructure-index]] | DSA: complexity, linear, sorting, DP, recursion, hash, trees | 7 |
 | [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
 | [[interview-index]] | Coding patterns, system design basics | 3 |
-| [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 18 |
+| [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 19 |
 | [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
 
 ### Tools & BMC
@@ -78,6 +78,7 @@ created: 2026-05-22
 | [[sources/notes-openbmc]] | OpenBMC 深度技术分析：硬件控制、安全、Redfish、IPMI、启动更新 | 2026-05 | github |
 | [[sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
 | [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
+| [[sources/pdf-epi-python]] | Elements of Programming Interviews in Python：编程面试DS&A、设计问题、OOD | 2017 | pdf |
 | [[sources/pdf-ebpf-books]] | eBPF书籍3册：龙蜥白皮书(XDP/TC/CO-RE)、技术实践、Cilium创始人Liz Rice入门 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-papers]] | eBPF论文7篇：Thomas Graf微内核愿景、Apple Falco、Google审计(Atomics/Ringbuf)、Black Hat Rootkit攻防 | 2026-05 | pdf |
 | [[sources/notes-ccpp]] | C/C++ 技术笔记：序列化、智能指针深度分析、堆栈对象创建策略、移动语义 | 2026-05 | github |

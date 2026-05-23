@@ -230,3 +230,10 @@ Ran full lint on wiki (154 files). Results:
 2. Add `notes-net`, `notes-network`, and `pdf-cpp-perf-books` to home.md Sources table
 3. Add `updated` field to pages when content changes to enable stale detection
 4. Consider splitting pdf-cpp-engineering-practices.md into thematic sub-pages
+
+## [2026-05-23] ingest | 7 new C++ slides
+- Created: wiki/sources/pdf-epi-python.md (EPI Python sampler source)
+- Created: wiki/entities/cpp/cpp-recsys-optimization.md (C++ recsys optimization entity)
+- Enhanced: pdf-cpp-slides.md (David Sankel, John Lakos, 吴晓飞, 刘童旋 sections)
+- Enhanced: pdf-cpp-ai-inference.md (RecIS section)
+- Updated: cpp-index.md, home.md
