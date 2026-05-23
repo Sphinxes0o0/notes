@@ -43,7 +43,7 @@ sources: [source-slug]
 
 # ── MiniMax ──
 MINIMAX_BASE = "https://api.minimaxi.com/v1"
-MINIMAX_MODEL = os.getenv("MINIMAX_MODEL", "MiniMax-M2.7-highspeed")
+MINIMAX_MODEL = os.getenv("MINIMAX_MODEL", "MiniMax-Text-01")
 
 def call_minimax(system_prompt: str, user_message: str) -> str:
     api_key = os.getenv("MINIMAX_CN_API_KEY", "")
@@ -55,8 +55,7 @@ def call_minimax(system_prompt: str, user_message: str) -> str:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message}
         ],
-        "temperature": 0.3, "max_tokens": 32000,
-        "enable_thinking": False
+        "temperature": 0.3, "max_tokens": 8192
     }).encode()
     req = Request(f"{MINIMAX_BASE}/chat/completions", data=body, headers={
         "Authorization": f"Bearer {api_key}",
