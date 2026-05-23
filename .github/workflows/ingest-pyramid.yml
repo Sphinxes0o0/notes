@@ -28,9 +28,13 @@ jobs:
 
       - name: Sync raw sources
         run: |
-          rsync -av --delete notes-src/notes/ pyramid/raw/github/notes/ || true
-          rsync -av --delete notes-src/courses/ pyramid/raw/github/notes/courses/ || true
-          rsync -av --delete notes-src/resources/ pyramid/raw/github/notes/resources/ || true
+          # Notes repo content is at root (ccpp/, kernel/, network/, etc.)
+          # Sync everything except .git, node_modules, .github into pyramid's raw/
+          rsync -av --delete \
+            --exclude='.git' --exclude='node_modules' --exclude='.github' \
+            --exclude='.vitepress' --exclude='README.md' --exclude='CLAUDE.md' \
+            --exclude='package.json' --exclude='package-lock.json' \
+            notes-src/ pyramid/raw/github/notes/
 
       - name: Ingest (Copilot → MiniMax fallback)
         env:
