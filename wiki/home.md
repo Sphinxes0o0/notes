@@ -37,7 +37,7 @@ created: 2026-05-22
 ### Operating System
 | Index | Domain | Entities |
 |-------|--------|----------|
-|| [[os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems | 7 |
+| [[os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems | 7 |
 
 ### Programming & Algorithms
 | Index | Domain | Entities |
@@ -60,7 +60,7 @@ created: 2026-05-22
 
 | 来源 | 描述 | 日期 | 类型 |
 |------|------|------|------|
-|| [[sources/notes-net-deep]] | 网络深度笔记合并：skbuff/NAT/路由 Trie/PHY-MAC/Conntrack/全栈路径 | 2026-05 | github |
+| [[sources/notes-net-deep]] | 网络深度笔记合并：skbuff/NAT/路由 Trie/PHY-MAC/Conntrack/全栈路径 | 2026-05 | github |
 | [[sources/notes-network-fundamentals]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
 | [[sources/notes-netfilter]] | Linux Netfilter/iptables/nftables/conntrack 深度分析 | 2026-05 | github |
 | [[sources/notes-os]] | Linux 内核深度分析：VFS、调度器、SLUB 分配器、cgroups 架构详解 | 2026-05 | github |
