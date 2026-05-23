@@ -55,7 +55,8 @@ def call_minimax(system_prompt: str, user_message: str) -> str:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message}
         ],
-        "temperature": 0.3, "max_tokens": 16000
+        "temperature": 0.3, "max_tokens": 32000,
+        "enable_thinking": False
     }).encode()
     req = Request(f"{MINIMAX_BASE}/chat/completions", data=body, headers={
         "Authorization": f"Bearer {api_key}",
@@ -216,6 +217,10 @@ Update indexes. Skip already-covered. Output JSON action plan."""
 
     try:
         text = result.strip()
+        # Strip  think tags (MiniMax reasoning mode fallback)
+        if "<｜end▁of▁thinking｜>" in text:
+            text = text.split("<｜end▁of▁thinking｜>")[1] if "<｜end▁of▁thinking｜>" in text else text
+        text = text.replace("<｜end▁of▁thinking｜>", "").replace("<｜end▁of▁thinking｜>", "").strip()
         if text.startswith("```"): text = text.split("\n", 1)[1]
         if text.endswith("```"): text = text[:-3]
         plan = json.loads(text)
