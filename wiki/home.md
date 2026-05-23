@@ -91,7 +91,7 @@ created: 2026-05-22
 | [[sources/pdf-ptp-security]] | PTPsec：IEEE 1588时间同步延迟攻击检测与缓解 (INFOCOM 2024) | 2024 | pdf |
 | [[sources/pdf-cpp-templates]] | C++ Templates 2nd Edition：模板权威指南（范德沃尔德/约祖蒂斯/格雷戈）| 2017 | pdf |
 | [[sources/pdf-cpp-nginx-module]] | Nginx模块开发指南：C++11 + Boost 扩展Nginx | 2015 | pdf |
-| [[sources/pdf-crypto-books]] | OpenSSL Cookbook + 图解密码技术 第三版 | 2024 | pdf |
+| [[sources/pdf-crypto-books]] | [DEPRECATED → pdf-security-crypto-books] OpenSSL Cookbook + 图解密码技术 | 2024 | pdf |
 | [[sources/pdf-cpp-modern-books]] | Modern C++ 合集 6册：C++20/23、Professional C++、21st Century C++、Modern C、C++17、Large-Scale C++ | 2024 | pdf |
 | [[sources/pdf-cpp-templates-books]] | C++ Templates 合集 3册：完整指南 + 模板元编程实战 | 2023 | pdf |
 | [[sources/pdf-cpp-perf-memory]] | C++ 性能与内存管理 4册：内存管理高级指南、性能优化指南、Cache 内存 | 2025 | pdf |
