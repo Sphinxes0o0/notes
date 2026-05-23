@@ -4,7 +4,7 @@ LLM-maintained interlinked knowledge base covering Linux kernel, C++, eBPF, netw
 
 ## Stats
 
-~175 pages | 19 module indexes | 70+ sources
+~205 pages | 19 module indexes | 35 PDF sources + 25+ notes sources | 124 PDFs ingested
 
 ## Structure
 
