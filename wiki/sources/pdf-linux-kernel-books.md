@@ -1,6 +1,8 @@
 ---
 type: source
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-linux-kernel-books]
 title: "Linux Kernel Books (2 books)"
 author: "Daniel P. Bovet, Marco Cesati; Zhao Jiong"
 date: 2026-05-23

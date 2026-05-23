@@ -8,6 +8,7 @@ size: medium
 path: raw/github/notes/network_fundamentals/
 summary: "计算机网络课程笔记：TCP/UDP协议、IP协议、Socket编程、HTTP/DNS、网络安全"
 tags: [linux-kernel, networking]
+sources: [notes-network-fundamentals]
 created: 2026-05-20
 ---
 

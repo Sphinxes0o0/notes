@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-22
 source-type: pdf
+sources: [pdf-ebpf-papers]
 title: "eBPF Papers (9篇)"
 author: "Thomas Graf, Pat Hogan, Brendan Jackman, Eric Sage, Kyle Quest, Marcos A. M. Vieira, Soo Yee Lim, Bogdan Stelea, Xueyuan Han, Thomas Pasquier, Jed Salazar & Natalia Reka Ivanko"
 date: 2026-05-22

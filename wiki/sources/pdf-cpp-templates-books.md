@@ -2,6 +2,8 @@
 type: source
 tags: [cpp, templates, metaprogramming, generics, cpp11, cpp14, cpp17, cpp20]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-cpp-templates-books]
 title: "C++ Templates Books (3 volumes)"
 author: "David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor, Marius Bancila"
 date: 2023

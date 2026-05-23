@@ -2,6 +2,8 @@
 type: source
 tags: [cpp, nginx, boost, web-server]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-cpp-nginx-module]
 title: "Nginx模块开发指南：使用C++11和Boost程序库"
 author: "罗剑锋"
 date: 2015

@@ -2,6 +2,8 @@
 type: source
 tags: [cpp, templates, metaprogramming, generics]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-cpp-templates]
 title: "C++ Templates 2nd Edition"
 author: "David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor"
 date: 2017

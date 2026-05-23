@@ -1,6 +1,8 @@
 ---
 type: source
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-linux-sysprog]
 title: "Linux System Programming (4 books)"
 author: "Michael Kerrisk; W. Richard Stevens; Nick Parlante, Julie Zelenski; Randal E. Bryant, David R. O'Hallaron"
 date: 2026-05-23

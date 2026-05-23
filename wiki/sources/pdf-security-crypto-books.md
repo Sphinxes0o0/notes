@@ -2,6 +2,8 @@
 type: source
 tags: [security, crypto, tls, pki, trustzone, mbedtls, books]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-security-crypto-books]
 title: "安全与密码学书籍合集（6册）"
 author: "Ivan Ristić, 徐凯/崔红鹏, 帅峰云/黄腾/宋洋, 结城浩, etc."
 date: 2026-05

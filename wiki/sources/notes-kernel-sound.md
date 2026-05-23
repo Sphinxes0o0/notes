@@ -8,6 +8,7 @@ size: small
 path: raw/github/notes/sound/linux_kernel/
 summary: "Linux内核声音子系统：ALSA架构、PCM、ASoC、DAPM、DAI数字音频接口"
 tags: [linux-kernel, sound]
+sources: [notes-kernel-sound]
 created: 2026-05-20
 ---
 

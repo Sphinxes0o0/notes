@@ -9,6 +9,7 @@ date: 2026-05-22
 size: large
 path: raw/github/notes/openbmc/linux_kernel/
 summary: "OpenBMC 开源 BMC 固件栈深度分析：硬件控制、安全子系统、Redfish 接口、IPMI 协议栈、启动控制与固件更新，共5篇技术文档"
+sources: [notes-openbmc]
 ---
 
 # OpenBMC 深度技术分析笔记

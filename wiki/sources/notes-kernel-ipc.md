@@ -8,6 +8,7 @@ size: small
 path: raw/github/notes/ipc/linux_kernel/
 summary: "Linux内核IPC子系统：msg、sem、shm、mqueue消息队列、信号量、共享内存"
 tags: [linux-kernel, ipc]
+sources: [notes-kernel-ipc]
 created: 2026-05-20
 ---
 

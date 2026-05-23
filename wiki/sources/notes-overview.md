@@ -12,6 +12,7 @@ url: https://github.com/Sphinxes0o0/notes
 summary: "个人技术知识库：Linux 内核各子系统深度分析、QEMU 虚拟化、C/C++、操作系统、网络、数据结构与设计模式"
 topics: [linux-kernel, cpp, os, networking, virtualization, qemu, data-structures, design-patterns]
 tags: [general]
+sources: [notes-overview]
 created: 2026-05-20
 ---
 

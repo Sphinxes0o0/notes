@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-23
 source-type: pdf
+sources: [pdf-cpp-ai-inference]
 tags: [cpp, ai, inference, ml]
 title: "AI/ML Inference Slides (2025)"
 author: "Various (Alibaba, Approaching.AI, SenseTime, BAAI, vivo)"

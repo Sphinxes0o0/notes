@@ -8,6 +8,7 @@ size: large
 path: raw/github/notes/os_fundamentals/
 summary: "操作系统原理课程：进程线程、虚拟内存、I/O模型、文件系统、并发控制等核心概念"
 tags: [linux, os]
+sources: [notes-os-fundamentals]
 created: 2026-05-20
 ---
 

@@ -3,6 +3,7 @@ type: source
 tags: [someip, autosar, vsomeip, commonapi, franca, automotive, middleware]
 source-type: pdf
 created: 2026-05-23
+sources: [pdf-someip-docs]
 title: "SOME/IP & vSOME/IP 技术文档 (6篇)"
 author: "AUTOSAR, GENIVI, Charles Chan"
 date: 2024

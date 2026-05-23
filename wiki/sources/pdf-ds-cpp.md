@@ -1,6 +1,8 @@
 ---
 type: source
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-ds-cpp]
 title: "Data Structures (C++ Language Edition, 3rd Ed)"
 author: "Deng Junhui (邓俊辉, Tsinghua University)"
 date: 2026-05-23

@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-23
 source-type: pdf
+sources: [pdf-cpp-engineering-practices]
 tags: [cpp, engineering, practices]
 title: "Engineering Practices Slides (2025)"
 author: "Various (Baidu, Meituan, CSDN, Xiaomi, Parasoft, Tencent, Qoder, Bloomberg, Agibot)"

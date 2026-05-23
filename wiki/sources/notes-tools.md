@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-22
 source-type: github
+sources: [notes-tools]
 tags: [tools, networking, security]
 title: "工具使用笔记 (Tools Notes)"
 author: "Sphinx"

@@ -8,6 +8,7 @@ size: large
 path: raw/github/notes/network/
 summary: "Linux 网络协议实现笔记：TCP/IP、IPv4/IPv6、BPF/XDP、桥接、路由、Netfilter、性能优化（hotpath、NAPI、GRO）"
 tags: [linux-kernel, networking]
+sources: [notes-network]
 created: 2026-05-20
 ---
 

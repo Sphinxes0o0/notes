@@ -8,6 +8,7 @@ size: medium
 path: raw/github/notes/
 summary: Linux 内核各子系统深度分析笔记，包含 mm、sched、block、VFS、网络、虚拟化等
 tags: [linux-kernel]
+sources: [notes-kernel]
 created: 2026-05-20
 ---
 

@@ -2,6 +2,8 @@
 type: source
 tags: [cpp, modern-cpp, c++20, c++17, c++14, c++11]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-cpp-modern-books]
 title: "Modern C++ Programming Books (6 volumes)"
 author: "Various: lkimuk, Marc Gregoire, Bjarne Stroustrup, Jens Gustedt, Nicolai M. Josuttis, John Lakos"
 date: 2024

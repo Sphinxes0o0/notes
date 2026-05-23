@@ -1,6 +1,8 @@
 ---
 type: source
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-linux-net-server]
 title: "Linux Networking/Server Programming (3 books)"
 author: "You Yugui; Chen Shuo (giantchen@gmail.com); Laowu (老衲五木)"
 date: 2026-05-23

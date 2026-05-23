@@ -2,6 +2,8 @@
 type: source
 tags: [cpp, memory-management, performance, optimization, cpu-cache, allocators]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-cpp-perf-memory]
 title: "C++ Performance & Memory Management Books (4 volumes)"
 author: "Ayman Alheraki, Kurt Guntheroth, Patrice Roy, Wang Qi et al."
 date: 2025

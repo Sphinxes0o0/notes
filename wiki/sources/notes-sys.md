@@ -3,6 +3,7 @@ type: source
 source-type: github
 tags: [system-programming, linux]
 path: raw/github/notes/sys/
+sources: [notes-sys]
 created: 2026-05-22
 ---
 

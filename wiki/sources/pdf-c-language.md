@@ -2,6 +2,8 @@
 type: source
 tags: [c, programming-language, c11, c99, systems-programming]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-c-language]
 title: "C Programming Language Books (2 volumes)"
 author: "Brian W. Kernighan, Dennis M. Ritchie; Peter Prinz, Tony Crawford"
 date: 2016

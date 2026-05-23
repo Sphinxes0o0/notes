@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-23
 source-type: pdf
+sources: [pdf-cpp-compiler-toolchain]
 tags: [cpp, compiler, toolchain]
 title: "Compiler & Toolchain Slides (2025)"
 author: "Various (CAS, PKU, BAAI, Tsinghua, Qiyuan Lab)"

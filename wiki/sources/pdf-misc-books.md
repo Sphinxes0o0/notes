@@ -2,6 +2,8 @@
 type: source
 tags: [software-engineering, nonlinear-dynamics, math, books]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-misc-books]
 title: "杂项书籍合集（3册）"
 author: "Frederick P. Brooks Jr., Steven H. Strogatz, etc."
 date: 2026-05

@@ -8,6 +8,7 @@ size: medium
 path: raw/github/notes/os/
 summary: "Linux 内核深度分析：VFS、调度器、SLUB 分配器、cgroups 架构详解"
 tags: [linux, os]
+sources: [notes-os]
 created: 2026-05-20
 ---
 

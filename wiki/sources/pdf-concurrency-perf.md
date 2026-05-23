@@ -1,6 +1,8 @@
 ---
 type: source
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-concurrency-perf]
 title: "Concurrency & Parallel Programming (2 books)"
 author: "Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau; Paul E. McKenney"
 date: 2026-05-23

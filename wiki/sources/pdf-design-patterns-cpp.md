@@ -1,6 +1,8 @@
 ---
 type: source
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-design-patterns-cpp]
 title: "Design Patterns in C++ (GoF 23 patterns with C++ implementation)"
 author: "k_eckel (blog.mscenter.edu.cn)"
 date: 2026-05-23

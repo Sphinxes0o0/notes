@@ -2,6 +2,8 @@
 type: source
 tags: [rust, systems-programming, beginner, ownership, concurrency]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-rust-intro]
 title: "Rust Programming Books (3 volumes)"
 author: "Sphinx (notes), Jim Blandy, Jason Orendorff, Leonora F.S. Tindall; Steve Klabnik, Carol Nichols, shieber"
 date: 2024

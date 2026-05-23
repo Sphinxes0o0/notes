@@ -1,6 +1,7 @@
 ---
 type: source
 source-type: pdf
+sources: [pdf-cpp-modern-tutorial]
 title: "Modern C++ Tutorial (C++11/14/17/20)"
 author: "Changkun (hi[at]changkun.de)"
 date: 2024-06-01

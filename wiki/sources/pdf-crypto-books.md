@@ -2,6 +2,8 @@
 type: source
 tags: [crypto, openssl, tls, security]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-crypto-books]
 title: "OpenSSL Cookbook 中文版 / 图解密码技术 第三版"
 author: "Ivan Ristić; 结城浩"
 date: 2024

@@ -8,6 +8,7 @@ size: small
 path: raw/github/notes/locking/linux_kernel/
 summary: "Linux内核锁子系统：spinlock、mutex、rwsem、percpu、lockdep调试"
 tags: [linux-kernel, locking]
+sources: [notes-kernel-locking]
 created: 2026-05-20
 ---
 

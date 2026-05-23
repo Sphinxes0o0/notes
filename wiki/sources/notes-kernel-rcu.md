@@ -8,6 +8,7 @@ size: small
 path: raw/github/notes/rcu/linux_kernel/
 summary: "Linux内核RCU子系统：Read-Copy-Update、无锁同步、宽限期、grace period"
 tags: [linux-kernel, rcu]
+sources: [notes-kernel-rcu]
 created: 2026-05-20
 ---
 

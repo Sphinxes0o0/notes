@@ -2,6 +2,8 @@
 type: source
 tags: [cpp, concurrency, multithreading, parallel, memory-model, cpp11, cpp17, cpp20]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-cpp-concurrency]
 title: "C++ Concurrency Books (2 volumes)"
 author: "Rainer Grimm, Anthony Williams"
 date: 2023

@@ -2,6 +2,8 @@
 type: source
 tags: [arm, architecture, cpu, trustzone, books]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-arm-architecture]
 title: "ARM体系结构与计算机架构书籍合集（4册）"
 author: "Arm Limited, John L. Hennessy/David A. Patterson, etc."
 date: 2026-05

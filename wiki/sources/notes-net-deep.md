@@ -8,6 +8,7 @@ size: medium
 path: raw/github/notes/net/linux_kernel/ + raw/github/notes/network/
 summary: "合并来自 notes/net 和 notes/network 的剩余网络深度分析文档，涵盖 skbuff 内存管理、Netfilter/iptables/nftables、IPv4 路由 Trie、PHY/MAC 物理层架构、Conntrack 连接跟踪、Socket 层架构和网络栈全路径分析。"
 tags: [networking, linux-kernel, netfilter]
+sources: [notes-net-deep]
 ---
 
 # Notes Net Deep — 网络子系统深度分析

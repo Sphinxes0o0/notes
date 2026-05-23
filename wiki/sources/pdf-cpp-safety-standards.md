@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-23
 source-type: pdf
+sources: [pdf-cpp-safety-standards]
 tags: [cpp, safety, standards]
 title: "C++ Safety & Standardization Slides (2025)"
 author: "Bjarne Stroustrup, Michael Wong, David Sankel"

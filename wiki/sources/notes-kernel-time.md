@@ -8,6 +8,7 @@ size: small
 path: raw/github/notes/time/linux_kernel/
 summary: "Linux内核时间子系统：tick、hrtimer、timekeeping、NTP、posix-timers"
 tags: [linux-kernel, time]
+sources: [notes-kernel-time]
 created: 2026-05-20
 ---
 

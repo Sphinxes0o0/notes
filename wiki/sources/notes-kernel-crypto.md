@@ -8,6 +8,7 @@ size: small
 path: raw/github/notes/crypto/linux_kernel/
 summary: "Linux内核密码学子系统：crypto_alg注册、skcipher、aead、ahash、模板机制"
 tags: [linux-kernel, crypto]
+sources: [notes-kernel-crypto]
 created: 2026-05-20
 ---
 

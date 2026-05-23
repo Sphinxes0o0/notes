@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-23
 source-type: pdf
+sources: [pdf-epi-python]
 title: "Elements of Programming Interviews in Python (Sampler)"
 author: "Adnan Aziz, Tsung-Hsien Lee, Amit Prakash"
 date: 2017

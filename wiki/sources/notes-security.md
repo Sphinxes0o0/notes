@@ -3,6 +3,7 @@ type: source
 source-type: github
 tags: [security, tools]
 path: raw/github/notes/security/
+sources: [notes-security]
 created: 2026-05-22
 ---
 

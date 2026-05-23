@@ -2,6 +2,8 @@
 type: source
 tags: [algorithm, datastructure, graph, set-theory, books]
 source-type: pdf
+created: 2026-05-23
+sources: [pdf-algo-ds-books]
 title: "算法与数据结构书籍合集（7册）"
 author: "Robert Sedgewick, Michael T. Goodrich, Roberto Tamassia, Donald E. Knuth, 邓俊辉, 石田保辉/宫崎修一, etc."
 date: 2026-05

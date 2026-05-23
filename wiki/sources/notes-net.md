@@ -8,6 +8,7 @@ size: medium
 path: raw/github/notes/net/
 summary: "Linux 内核网络子系统深度分析：Socket Layer、sk_buff、Netdevice、Routing、Netfilter Hooks、TCP/UDP 协议实现"
 tags: [linux-kernel, networking]
+sources: [notes-net]
 created: 2026-05-20
 ---
 
