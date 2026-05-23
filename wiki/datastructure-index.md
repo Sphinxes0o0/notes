@@ -26,3 +26,4 @@ created: 2026-05-22
 
 - [[interview-index]] — DSA is the core of technical interview preparation
 - [[sys-prog-index]] — System programming requires understanding of data structure performance tradeoffs
+- [[pdf-dataview]] — Dataview query index for PDF sources in this wiki

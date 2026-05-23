@@ -69,6 +69,7 @@ sources: [pdf-ebpf-papers]
 - [[entities/linux/ebpf/ebpf-security]] — eBPF 安全监控与 Rootkit
 - [[entities/linux/ebpf/ebpf-container-audit]] — saBPF 容器审计
 - [[entities/linux/ebpf/ebpf-networking]] — TC 与 Cilium 网络层
+- [[entities/security/commercial-cryptography]] — 国密算法 (SM2/SM3/SM4) 在云原生安全中的应用
 - [[ebpf-index]] — eBPF 模块导航
 
 ## 来源详情

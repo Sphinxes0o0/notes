@@ -47,6 +47,8 @@ created: 2026-05-22
 | [[entities/cpp/cpp-recsys-optimization]] | C++ for recommendation training: RecIS, Four Walls (Python/CPU/Memory/Compute), GPU HashTable | cpp, recsys, performance |
 | [[entities/cpp/cpp-templates]] | C++ Templates: metaprogramming, specialization, SFINAE, CRTP, variadic templates, fold expressions | cpp, templates, metaprogramming |
 | [[entities/cpp/cpp-memory-management]] | C++ 内存管理：智能指针、RAII、自定义分配器、缓存优化、内存池 | cpp, memory-management |
+| [[entities/cpp/cpp-memory-model]] | C/C++ Memory Model：Sequential Consistency、Acquire/Release、memory_order、Memory Barriers | cpp, c, concurrency, memory-model, atomics |
+| [[entities/c/c-language]] | C Language：C89/C99/C11标准、指针、数组、结构体、malloc/free、函数、头文件 | c, programming-language, systems-programming |
 | [[entities/cpp/large-scale-cpp]] | Large-Scale C++ Software Design：物理设计、组件、层级、依赖管理 | cpp, architecture, physical-design |
 
 ## Sources

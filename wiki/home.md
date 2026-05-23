@@ -38,8 +38,24 @@ created: 2026-05-22
 | Index | Domain | Entities |
 |-------|--------|----------|
 | [[os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems | 7 |
+| [[arm-index]] | ARMv8-A, Cortex-A9, TrustZone/OP-TEE, computer architecture | 4 |
 
 ### Programming & Algorithms
+| Index | Domain | Entities |
+|-------|--------|----------|
+| [[datastructure-index]] | DSA: complexity, linear, sorting, DP, recursion, hash, trees | 7 |
+| [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
+| [[interview-index]] | Coding patterns, system design basics | 3 |
+| [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
+| [[rust-index]] | Rust language: ownership, borrowing, lifetimes, traits, concurrency | 1 |
+| [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
+| [[math-index]] | 非线性动力学与混沌 | 1 |
+| [[se-index]] | 人月神话、项目管理、软件架构 | 1 |
+
+### Security
+| Index | Domain | Entities |
+|-------|--------|----------|
+| [[security-index]] | 商用密码(SM2/3/4)、mbedtls、TLS/DTLS、PKI | 2 |
 | Index | Domain | Entities |
 |-------|--------|----------|
 | [[datastructure-index]] | DSA: complexity, linear, sorting, DP, recursion, hash, trees | 7 |
@@ -63,6 +79,8 @@ created: 2026-05-22
 |------|------|------|------|
 | [[sources/notes-net-deep]] | 网络深度笔记合并：skbuff/NAT/路由 Trie/PHY-MAC/Conntrack/全栈路径 | 2026-05 | github |
 | [[sources/notes-network-fundamentals]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
+| [[sources/notes-net]] | Linux 内核网络子系统深度分析：Socket/sk_buff/Netdevice/Routing/Netfilter/TCP/UDP | 2026-05 | github |
+| [[sources/notes-network]] | Linux 网络协议笔记：TCP/IP、IPv4/IPv6、BPF/XDP、桥接、路由、性能优化 | 2026-05 | github |
 | [[sources/notes-netfilter]] | Linux Netfilter/iptables/nftables/conntrack 深度分析 | 2026-05 | github |
 | [[sources/notes-os]] | Linux 内核深度分析：VFS、调度器、SLUB 分配器、cgroups 架构详解 | 2026-05 | github |
 | [[sources/notes-os-fundamentals]] | 操作系统基础：进程/线程、内存管理、文件系统、IO模型 | 2026-05 | github |
@@ -79,7 +97,6 @@ created: 2026-05-22
 | [[sources/notes-openbmc]] | OpenBMC 深度技术分析：硬件控制、安全、Redfish、IPMI、启动更新 | 2026-05 | github |
 | [[sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
 | [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
-| [[sources/pdf-epi-python]] | Elements of Programming Interviews in Python：编程面试DS&A、设计问题、OOD | 2017 | pdf |
 | [[sources/pdf-cpp-slides]] | C++ Conference Talks 合集5讲：反射(Bloomberg)、安全防御(Adobe/Bloomberg)、PolarDB性能优化(阿里)、xLLM推理(C++框架) | 2026-05 | pdf |
 | [[sources/pdf-cpp-ai-inference]] | AI推理与MLIR编译优化：RTP-LLM(阿里)、xLLM、DeepSeek SGLang优化、MLIR Actor编译器 | 2026-05 | pdf |
 | [[sources/pdf-cpp-compiler-toolchain]] | 编译器与工具链：MLIR fuzzing、RISC-V AI编译器、多元AI算子库、编译技术在AI软件栈的实践 | 2026-05 | pdf |
@@ -96,6 +113,7 @@ created: 2026-05-22
 | [[sources/pdf-cpp-templates-books]] | C++ Templates 合集 3册：完整指南 + 模板元编程实战 | 2023 | pdf |
 | [[sources/pdf-cpp-perf-memory]] | C++ 性能与内存管理 4册：内存管理高级指南、性能优化指南、Cache 内存 | 2025 | pdf |
 | [[sources/pdf-cpp-concurrency]] | C++ 并发编程 2册：Concurrency with Modern C++ + C++ Concurrency in Action | 2023 | pdf |
+| [[sources/pdf-cpp-perf-books]] | C++性能优化与架构2册：Optimized C++ (string/algorithm/memory优化) + Large-Scale C++ Software Design (物理设计/组件/层级) | 2016-2019 | pdf |
 | [[sources/pdf-c-language]] | C 语言编程 2册：K&R C 第2版 + C in a Nutshell 第2版 | 2015 | pdf |
 | [[sources/pdf-linux-sysprog]] | Linux系统编程4册：TLPI+APUE+Unix工具+CSAPP深入理解计算机系统 | 2026-05 | pdf |
 | [[sources/pdf-linux-kernel-books]] | Linux内核2册：深入理解Linux内核(架构)+Linux内核0.12完全注释 | 2026-05 | pdf |
@@ -115,6 +133,7 @@ created: 2026-05-22
 | [[sources/notes-sys]] | 系统编程：TTY/Shell/Console体系、ELF文件格式、Linux IPC、单例模式 | 2026-05 | github |
 | [[sources/pdf-algo-ds-books]] | 算法与数据结构7册：Sedgewick图算法、TAOCP Vol.1、邓俊辉数据结构、基础集合论 | 2026-05 | pdf |
 | [[sources/pdf-interview-books]] | 编程面试2册：Cracking the Coding Interview 6th + EPI | 2026-05 | pdf |
+| [[sources/pdf-epi-python]] | Python编程面试书：DS&A (数组/链表/树/图/哈希)、设计问题、OOD、Python 3实现 | 2017 | pdf |
 | [[sources/pdf-security-crypto-books]] | 安全与密码学6册：Bulletproof TLS/PKI、mbedtls、TrustZone/OP-TEE、商用密码考核 | 2026-05 | pdf |
 | [[sources/pdf-arm-architecture]] | ARM体系结构4册：Armv8/Armv9参考手册、Cortex-A9 TRM、量化研究方法 | 2026-05 | pdf |
 | [[sources/pdf-misc-books]] | 杂项3册：人月神话、非线性动力学与混沌、偏微分方程 | 2026-05 | pdf |

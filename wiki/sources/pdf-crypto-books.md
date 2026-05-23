@@ -38,4 +38,5 @@ OpenSSL 是最重要、最广泛使用的开源加密库之一，几乎所有互
 
 - [[kernel-subsystems-index]] — 内核密码学子系统
 - [[entities/cpp/raii]] — RAII 资源管理
+- [[entities/security/commercial-cryptography]] — 国密算法 SM2/SM3/SM4 与商用密码评估
 - [[sys-prog-index]] — 系统编程导航

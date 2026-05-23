@@ -38,6 +38,7 @@ Computer architecture is the science and art of designing computer systems — d
 
 - [[entities/arm/armv8-architecture]] — ARMv8-A as a concrete ISA example
 - [[entities/arm/arm-cortex-a9]] — Cortex-A9 microarchitecture
+- [[entities/math/nonlinear-dynamics-chaos]] — Computer simulation of dynamical systems (Lorenz attractor, chaos)
 - [[os-index]] — OS interacts with architecture (context switch, MMU, cache)
 - [[qemu-index]] — QEMU simulates computer architectures
 

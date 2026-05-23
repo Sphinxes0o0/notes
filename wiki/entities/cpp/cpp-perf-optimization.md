@@ -124,6 +124,7 @@ Async stack dumping with 1/131th overhead of `pstack` (14% QPS impact vs. 100% f
 - [[entities/cpp/constexpr]] — move computation to compile time; zero runtime cost
 - [[entities/cpp/cpp-stl-containers]] — `std::vector` cache-friendly vs `std::list`; `reserve()` prevents reallocation
 - [[entities/cpp/cpp-memory-management]] — 内存管理深入分析
+- [[entities/cpp/cpp-memory-model]] — Memory ordering and atomics for concurrent access
 - [[entities/cpp/cpp-stl-algorithms]] — `std::for_each` with SIMD, algorithms vs hand-written loops
 - [[entities/cpp/concurrency]] — parallel execution requires understanding Amdahl's Law; `std::thread` for parallelism
 - [[entities/cpp/if-constexpr]] — compile-time branch elimination reduces instruction cache pressure
