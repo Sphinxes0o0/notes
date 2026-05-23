@@ -1,76 +1,84 @@
 #!/usr/bin/env python3
 """
 Wiki auto-ingest script for GitHub Actions.
-Reads raw/ files, calls MiniMax API to ingest into LLM wiki format.
+Reads raw/ files, calls LLM to ingest into LLM wiki format.
+Supports dual provider with automatic fallback.
 
 Usage:
-  python3 scripts/ingest_wiki.py <wiki_dir> <raw_subdir>
+  python3 scripts/ingest_wiki.py <wiki_dir> <raw_subdir> [--provider minimax|copilot]
+
+Provider priority (env OVERRIDE_PROVIDER):
+  1. OVERRIDE_PROVIDER env var (if set)
+  2. --provider flag
+  3. COPILOT first, MINIMAX fallback
 
 Environment:
-  MINIMAX_CN_API_KEY  - MiniMax API key (from GitHub Secret)
-  MINIMAX_MODEL       - Model name (default: MiniMax-M2.7-highspeed)
-  GITHUB_TOKEN        - For gh CLI auth (auto in Actions)
+  GITHUB_TOKEN           - Auto-injected in Actions (for Copilot API)
+  COPILOT_CHAT_MODEL     - Copilot model (auto-detect)
+  MINIMAX_CN_API_KEY     - MiniMax API key
+  MINIMAX_MODEL          - MiniMax model (default: MiniMax-M2.7-highspeed)
 """
 
-import os, sys, json, hashlib, subprocess
+import os, sys, json, hashlib, subprocess, argparse
 from pathlib import Path
 from datetime import datetime
 from urllib.request import Request, urlopen
 from urllib.error import URLError
 
-MINIMAX_BASE = "https://api.minimaxi.com/v1"
-MODEL = os.getenv("MINIMAX_MODEL", "MiniMax-M2.7-highspeed")
-API_KEY = os.getenv("MINIMAX_CN_API_KEY", "")
 
-WIKI_SYSTEM_PROMPT = """You are an LLM Wiki maintenance agent. Your job is to read raw source files (tech notes, research papers, exercise science literature) and integrate them into a structured markdown wiki.
+# ── System Prompt ──────────────────────────────────────────
+
+WIKI_SYSTEM_PROMPT = """You are an LLM Wiki maintenance agent. Integrate raw source files into a structured markdown wiki.
 
 ## Wiki Convention
-
-### File structure
 - wiki/sources/<slug>.md — source summary pages
 - wiki/entities/<domain>/<slug>.md — concept/entity pages
 - wiki/<domain>-index.md — module indexes
 - wiki/home.md — global navigation
 - wiki/log.md — operation log
 
-### Page format (YAML frontmatter required)
+### Page frontmatter (required)
 ```yaml
 ---
 type: source | entity | index
 tags: [tag1, tag2]
 created: YYYY-MM-DD
-sources: [source-slug]  # for entities
+sources: [source-slug]
 ---
 ```
 
-### Cross-references
-- Use [[wikilinks]] between pages
-- Minimum 2 cross-links per entity page
+### Rules
+- Use [[wikilinks]] between pages. Minimum 2 cross-links per entity page.
+- Keep pages <200 lines.
+- Write in Chinese for Chinese sources, English for English sources.
+- DON'T duplicate existing content — check home.md and log.md first.
 
-### Your task
-Given raw source files, output a JSON plan with these actions:
-- CREATE: file path + content for new pages
-- UPDATE: file path + patch instructions for existing pages
-- SKIP: files already covered
-
-Respond in this JSON format:
+### Output format
+Output VALID JSON only, no markdown wrapping:
 ```json
 {
-  "summary": "one-line summary of what you ingested",
+  "summary": "one-line summary of ingested content",
   "actions": [
-    {"type": "CREATE", "path": "wiki/sources/foo.md", "content": "full page content"},
-    {"type": "UPDATE", "path": "wiki/home.md", "instruction": "add new source to Sources table"}
+    {"type": "CREATE", "path": "wiki/sources/foo.md", "content": "full page content..."},
+    {"type": "UPDATE", "path": "wiki/home.md", "instruction": "add new source to Sources table"},
+    {"type": "SKIP", "path": "already/covered.md"}
   ]
 }
-```
+```"""
 
-Keep pages concise (<200 lines). Write in Chinese for Chinese sources, English for English sources."""
 
+# ── Provider: MiniMax (OpenAI-compatible) ──────────────────
+
+MINIMAX_BASE = "https://api.minimaxi.com/v1"
+MINIMAX_MODEL = os.getenv("MINIMAX_MODEL", "MiniMax-M2.7-highspeed")
 
 def call_minimax(system_prompt: str, user_message: str) -> str:
-    """Call MiniMax API (OpenAI-compatible)."""
+    api_key = os.getenv("MINIMAX_CN_API_KEY", "")
+    if not api_key:
+        raise RuntimeError("MINIMAX_CN_API_KEY not set")
+
     body = json.dumps({
-        "model": MODEL,
+        "model": MINIMAX_MODEL,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message}
@@ -83,39 +91,80 @@ def call_minimax(system_prompt: str, user_message: str) -> str:
         f"{MINIMAX_BASE}/chat/completions",
         data=body,
         headers={
-            "Authorization": f"Bearer {API_KEY}",
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
         }
     )
+    with urlopen(req, timeout=180) as resp:
+        data = json.loads(resp.read())
+        return data["choices"][0]["message"]["content"]
 
-    try:
-        with urlopen(req, timeout=120) as resp:
-            data = json.loads(resp.read())
-            return data["choices"][0]["message"]["content"]
-    except URLError as e:
-        print(f"MiniMax API error: {e}", file=sys.stderr)
-        raise
 
+# ── Provider: GitHub Copilot (via gh CLI in Actions) ───────
+
+def call_copilot(system_prompt: str, user_message: str) -> str:
+    """Call GitHub Copilot via 'gh copilot' CLI. Works in Actions with GITHUB_TOKEN."""
+    full_prompt = f"{system_prompt}\n\n---\n\n{user_message}"
+
+    # gh copilot chat accepts piped input
+    result = subprocess.run(
+        ["gh", "copilot", "chat"],
+        input=full_prompt,
+        capture_output=True, text=True, timeout=300
+    )
+
+    if result.returncode != 0:
+        stderr = result.stderr[:500]
+        raise RuntimeError(f"gh copilot failed (exit {result.returncode}): {stderr}")
+
+    output = result.stdout.strip()
+    if not output:
+        raise RuntimeError("gh copilot returned empty output")
+    return output
+
+
+# ── Provider dispatch ──────────────────────────────────────
+
+PROVIDERS = {
+    "minimax": call_minimax,
+    "copilot": call_copilot,
+}
+
+def call_llm(system_prompt: str, user_message: str, providers: list) -> tuple:
+    """Try providers in order. Returns (result, provider_name)."""
+    errors = []
+    for name in providers:
+        fn = PROVIDERS.get(name)
+        if not fn:
+            errors.append(f"{name}: unknown provider")
+            continue
+        try:
+            print(f"  Trying {name}...", file=sys.stderr)
+            result = fn(system_prompt, user_message)
+            print(f"  {name} ✓", file=sys.stderr)
+            return result, name
+        except Exception as e:
+            msg = f"{name}: {e}"
+            print(f"  {name} ✗ — {e}", file=sys.stderr)
+            errors.append(msg)
+    raise RuntimeError(f"All providers failed:\n" + "\n".join(errors))
+
+
+# ── File utilities ─────────────────────────────────────────
 
 def read_file_safe(path: str, max_bytes: int = 50000) -> str:
-    """Read a file, return truncated content if too large."""
     try:
         with open(path, 'r', encoding='utf-8') as f:
             content = f.read(max_bytes)
             if len(content) >= max_bytes:
-                content += "\n\n[TRUNCATED - file too large]"
+                content += "\n\n[TRUNCATED]"
             return content
-    except UnicodeDecodeError:
-        return "[BINARY FILE - cannot read]"
-    except FileNotFoundError:
-        return "[FILE NOT FOUND]"
-
+    except (UnicodeDecodeError, FileNotFoundError):
+        return "[CANNOT READ]"
 
 def compute_manifest(raw_dir: str) -> dict:
-    """Compute hash manifest of all raw files."""
     manifest = {}
     for root, dirs, files in os.walk(raw_dir):
-        # Skip .git
         dirs[:] = [d for d in dirs if d != '.git']
         for f in files:
             fpath = os.path.join(root, f)
@@ -127,92 +176,71 @@ def compute_manifest(raw_dir: str) -> dict:
                 manifest[rel] = "UNREADABLE"
     return manifest
 
-
-def load_manifest(manifest_path: str) -> dict:
-    """Load saved manifest from JSON file."""
-    if os.path.exists(manifest_path):
-        with open(manifest_path) as f:
+def load_manifest(path: str) -> dict:
+    if os.path.exists(path):
+        with open(path) as f:
             return json.load(f)
     return {}
 
-
-def save_manifest(manifest: dict, manifest_path: str):
-    """Save manifest to JSON file."""
-    os.makedirs(os.path.dirname(manifest_path), exist_ok=True)
-    with open(manifest_path, 'w') as f:
+def save_manifest(manifest: dict, path: str):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w') as f:
         json.dump(manifest, f, indent=2)
 
-
 def get_changed_files(raw_dir: str, manifest_path: str) -> list:
-    """Return list of changed/new/deleted file paths."""
     current = compute_manifest(raw_dir)
     old = load_manifest(manifest_path)
-
     changed = []
-    for path, new_hash in current.items():
-        if path not in old:
-            changed.append(("NEW", path))
-        elif old[path] != new_hash:
-            changed.append(("CHANGED", path))
-
+    for p, h in current.items():
+        if p not in old:
+            changed.append(("NEW", p))
+        elif old[p] != h:
+            changed.append(("CHANGED", p))
     save_manifest(current, manifest_path)
     return changed
 
 
+# ── Action applier ─────────────────────────────────────────
+
 def apply_actions(actions: list, wiki_dir: str):
-    """Apply CREATE and UPDATE actions to the wiki."""
     for action in actions:
         typ = action.get("type")
         path = os.path.join(wiki_dir, action["path"])
-
         if typ == "CREATE":
-            content = action.get("content", "")
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, 'w', encoding='utf-8') as f:
-                f.write(content)
+                f.write(action.get("content", ""))
             print(f"  CREATE {action['path']}")
-
         elif typ == "UPDATE":
-            instruction = action.get("instruction", "")
-            # For now, log update instructions — manual review recommended
-            print(f"  UPDATE {action['path']}: {instruction}")
-
+            print(f"  UPDATE {action['path']}: {action.get('instruction', '')}")
         elif typ == "SKIP":
-            print(f"  SKIP {action.get('path', 'unknown')}")
-
+            print(f"  SKIP {action.get('path', '?')}")
 
 def git_commit_and_push(wiki_dir: str, message: str):
-    """Stage, commit, and push changes."""
     subprocess.run(["git", "-C", wiki_dir, "config", "user.name", "hermes-wiki-bot"], check=True)
     subprocess.run(["git", "-C", wiki_dir, "config", "user.email", "wiki-bot@hermes.local"], check=True)
     subprocess.run(["git", "-C", wiki_dir, "add", "-A"], check=True)
-
-    # Check if there are changes
-    result = subprocess.run(
-        ["git", "-C", wiki_dir, "diff", "--cached", "--quiet"],
-        capture_output=True
-    )
-    if result.returncode == 0:
+    r = subprocess.run(["git", "-C", wiki_dir, "diff", "--cached", "--quiet"], capture_output=True)
+    if r.returncode == 0:
         print("No changes to commit")
         return
-
     subprocess.run(["git", "-C", wiki_dir, "commit", "-m", message], check=True)
     subprocess.run(["git", "-C", wiki_dir, "push"], check=True)
-    print(f"Committed and pushed: {message}")
+    print(f"Committed: {message}")
 
+
+# ── Main ───────────────────────────────────────────────────
 
 def main():
-    if len(sys.argv) < 3:
-        print("Usage: ingest_wiki.py <wiki_dir> <raw_subdir>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Wiki auto-ingest")
+    parser.add_argument("wiki_dir", help="Path to wiki repo")
+    parser.add_argument("raw_subdir", help="Raw subdirectory (e.g. github/notes)")
+    parser.add_argument("--provider", choices=["minimax", "copilot"],
+                        help="Force a specific provider")
+    args = parser.parse_args()
 
-    wiki_dir = sys.argv[1]
-    raw_subdir = sys.argv[2]
-
-    if not API_KEY:
-        print("ERROR: MINIMAX_CN_API_KEY not set", file=sys.stderr)
-        sys.exit(1)
-
+    wiki_dir = args.wiki_dir
+    raw_subdir = args.raw_subdir
     raw_dir = os.path.join(wiki_dir, "raw", raw_subdir)
     manifest_path = os.path.join(wiki_dir, ".raw_manifest.json")
 
@@ -221,91 +249,84 @@ def main():
         sys.exit(1)
 
     # 1. Detect changes
-    print(f"Scanning {raw_dir} for changes...")
+    print(f"Scanning {raw_dir}...", file=sys.stderr)
     changed = get_changed_files(raw_dir, manifest_path)
-
     if not changed:
-        print("No changes detected. Skipping ingest.")
+        print("No changes. Done.")
         return
-
-    print(f"Found {len(changed)} changed/new files:")
+    print(f"{len(changed)} changed files", file=sys.stderr)
 
     # 2. Read changed files
     files_content = []
     for status, path in changed:
-        print(f"  [{status}] {path}")
         content = read_file_safe(os.path.join(raw_dir, path), max_bytes=30000)
-        files_content.append(f"## File: {path} ({status})\n\n{content}")
+        files_content.append(f"## [{status}] {path}\n\n{content}")
 
     # 3. Read wiki context
-    home_content = read_file_safe(os.path.join(wiki_dir, "wiki/home.md"), max_bytes=10000)
+    home = read_file_safe(os.path.join(wiki_dir, "wiki/home.md"), max_bytes=10000)
     log_tail = read_file_safe(os.path.join(wiki_dir, "wiki/log.md"), max_bytes=5000)
 
-    # 4. Build prompt and call MiniMax
+    # 4. Build prompt
     user_msg = f"""## Wiki Context
-
-### home.md (current)
-{home_content}
-
+### home.md
+{home}
 ### log.md (recent)
 {log_tail}
 
-## Changed Raw Files
-
+## Changed Files
 {chr(10).join(files_content)}
 
-## Instructions
-Analyze these raw files. For each file, check if it's already covered in the existing wiki.
-Output a JSON action plan. Create source pages for new topics. Create entity pages for new concepts.
-Update index pages and home.md as needed. Skip files that are already well-covered."""
+## Task
+Analyze these files. Create source/entity pages for NEW content.
+Update indexes and home.md. Skip already-covered content.
+Output JSON action plan."""
 
-    print("\nCalling MiniMax API...")
+    # 5. Call LLM with fallback
+    override = os.getenv("OVERRIDE_PROVIDER", "")
+    if override:
+        providers = [override]
+    elif args.provider:
+        providers = [args.provider]
+    else:
+        providers = ["copilot", "minimax"]  # Copilot first, MiniMax fallback
+
+    print(f"Providers: {' → '.join(providers)}", file=sys.stderr)
+    result, used_provider = call_llm(WIKI_SYSTEM_PROMPT, user_msg, providers)
+
+    # 6. Parse JSON
     try:
-        result = call_minimax(WIKI_SYSTEM_PROMPT, user_msg)
-    except Exception as e:
-        print(f"ERROR calling MiniMax: {e}", file=sys.stderr)
-        sys.exit(1)
-
-    # 5. Parse and apply
-    # Extract JSON from response (may have markdown wrapping)
-    try:
-        # Find JSON block
-        if "```json" in result:
-            result = result.split("```json")[1].split("```")[0]
-        elif "```" in result:
-            result = result.split("```")[1].split("```")[0]
-
-        plan = json.loads(result)
-    except json.JSONDecodeError as e:
-        print(f"ERROR parsing MiniMax response: {e}", file=sys.stderr)
-        print("Raw response:", file=sys.stderr)
+        # Strip markdown code fences if present
+        text = result.strip()
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1]
+            if text.endswith("```"):
+                text = text[:-3]
+        plan = json.loads(text)
+    except json.JSONDecodeError:
+        print(f"ERROR parsing response from {used_provider}", file=sys.stderr)
         print(result[:2000], file=sys.stderr)
         sys.exit(1)
 
     summary = plan.get("summary", "auto-ingest")
     actions = plan.get("actions", [])
-    print(f"\nPlan: {summary}")
-    print(f"Actions: {len(actions)}")
+    print(f"\nPlan ({used_provider}): {summary}  |  {len(actions)} actions")
 
-    # 6. Apply actions
+    # 7. Apply
     apply_actions(actions, wiki_dir)
 
-    # 7. Update log.md
-    log_path = os.path.join(wiki_dir, "wiki/log.md")
+    # 8. Log
     today = datetime.now().strftime("%Y-%m-%d")
     log_entry = f"""
-## [{today}] auto-ingest | {summary}
+## [{today}] auto-ingest ({used_provider}) | {summary}
 
-GitHub Actions auto-ingest triggered by push to source repo.
-{len(changed)} files changed: {', '.join(f[1] for f in changed[:5])}{'...' if len(changed) > 5 else ''}
-
-Actions applied: {len(actions)}
+Triggered by GitHub Actions push. Provider: {used_provider}.
+{len(changed)} files, {len(actions)} actions applied.
 """
-    with open(log_path, 'a', encoding='utf-8') as f:
+    with open(os.path.join(wiki_dir, "wiki/log.md"), 'a', encoding='utf-8') as f:
         f.write(log_entry)
 
-    # 8. Commit and push
-    git_commit_and_push(wiki_dir, f"auto-ingest: {summary}")
+    # 9. Commit
+    git_commit_and_push(wiki_dir, f"auto-ingest ({used_provider}): {summary}")
 
 
 if __name__ == "__main__":
