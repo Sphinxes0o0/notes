@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-23
 source-type: pdf
+tags: [cpp, performance, engineering]
 title: "Performance Engineering Slides (2025)"
 author: "Various (IIT Bombay, Alibaba, Incredibuild, Shanghai AI Lab)"
 date: 2025-12-13

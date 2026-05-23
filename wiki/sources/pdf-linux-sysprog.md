@@ -7,6 +7,7 @@ date: 2026-05-23
 size: large
 path: raw/PDFs/books/The Linux Programming Interface.pdf, raw/PDFs/books/UNIX环境高级编程(第三版).pdf, raw/PDFs/books/UnixProgrammingTools.pdf, raw/PDFs/books/computer_systems_a_programmers_perspective.pdf
 summary: "4册Linux系统编程经典：TLPI Linux/UNIX系统编程接口、APUE UNIX环境高级编程（第三版·中文）、Stanford Unix编程工具(gcc/make/gdb/emacs)、CSAPP深入理解计算机系统(程序员视角)"
+tags: [linux, system-programming, books]
 ---
 
 # Linux System Programming (4 books)

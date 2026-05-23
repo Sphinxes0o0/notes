@@ -1,6 +1,7 @@
 ---
 type: source
 source-type: github
+tags: [design-patterns, software-engineering]
 path: raw/github/notes/design_patterns/
 created: 2026-05-22
 ---

@@ -7,6 +7,7 @@ date: 2026-05-23
 size: large
 path: raw/PDFs/books/深入理解Linuxkenrle.pdf, raw/PDFs/books/linux内核注释.pdf
 summary: "2册Linux内核经典：Bovet & Cesati 深入理解Linux内核（2005全面内核架构分析）、赵炯 Linux内核0.12完全注释（2万字逐行注释早期内核源码）"
+tags: [linux, kernel, books]
 ---
 
 # Linux Kernel Books (2 books)

@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-22
 source-type: pdf
+tags: [cpp, slides]
 title: "C++ Slides Collection (2025)"
 author: "Bloomberg, Adobe, 阿里云"
 date: 2025-12-13

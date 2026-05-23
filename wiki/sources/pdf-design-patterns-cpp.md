@@ -7,6 +7,7 @@ date: 2026-05-23
 size: small
 path: raw/PDFs/books/GoF+23种设计解析附C++实现.pdf
 summary: "GoF 23种设计模式精解：创建型5种、结构型7种、行为型11种，每模式附带完整C++实现源码和解析"
+tags: [design-patterns, cpp, books]
 ---
 
 # Design Patterns in C++ (GoF 23 patterns with C++ implementation)

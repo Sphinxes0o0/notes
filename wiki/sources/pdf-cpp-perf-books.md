@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-22
 source-type: pdf
+tags: [cpp, performance, books]
 title: "C++ Performance & Architecture Books"
 author: "Kurt Guntheroth, John Lakos"
 date: 2016-2019

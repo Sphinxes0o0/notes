@@ -7,6 +7,7 @@ date: 2026-05-23
 size: medium
 path: raw/PDFs/books/数据结构C++.pdf
 summary: "邓俊辉《数据结构（C++语言版）》第3版：清华985教材，从向量/列表到高级搜索树（Splay/Red-Black/B-Tree）、串匹配（KMP/BM/Karp-Rabin）、图论（DFS/BFS/最短路径/最小生成树）"
+tags: [data-structures, cpp, books]
 ---
 
 # Data Structures (C++ Language Edition, 3rd Ed)

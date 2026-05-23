@@ -7,6 +7,7 @@ date: 2026-05-23
 size: medium
 path: raw/PDFs/books/threads-locks.pdf, raw/PDFs/books/perfbook-e2-rc11.pdf
 summary: "2册并发与并行编程经典：Arpaci-Dusseau OSTEP Concurrency章（线程/锁/条件变量/信号量/死锁）、Paul McKenney perfbook（RCU/无锁同步/内存屏障/并行性能）"
+tags: [concurrency, performance, books]
 ---
 
 # Concurrency & Parallel Programming (2 books)

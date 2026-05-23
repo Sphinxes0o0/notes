@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-22
 source-type: github
+tags: [openbmc, bmc, hardware]
 title: "OpenBMC 深度技术分析笔记"
 author: "Sphinx Shi"
 date: 2026-05-22

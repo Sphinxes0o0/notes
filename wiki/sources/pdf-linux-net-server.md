@@ -7,6 +7,7 @@ date: 2026-05-23
 size: medium
 path: raw/PDFs/books/Linux高性能服务器编程.pdf, raw/PDFs/books/Linux多线程服务端编程：使用muduo C++网络库.pdf, raw/PDFs/books/LwIP 协议栈源码详解.pdf
 summary: "3册Linux网络与服务端编程：Linux高性能服务器编程（Linux服务器全栈技术）、陈硕 muduo多线程服务端编程（one loop per thread模型）、LwIP协议栈源码详解（嵌入式TCP/IP深度解析）"
+tags: [linux, networking, server, books]
 ---
 
 # Linux Networking/Server Programming (3 books)

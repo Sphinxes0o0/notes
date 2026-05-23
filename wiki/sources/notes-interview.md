@@ -1,6 +1,7 @@
 ---
 type: source
 source-type: github
+tags: [interview, algorithms]
 path: raw/github/notes/interview/
 created: 2026-05-22
 ---

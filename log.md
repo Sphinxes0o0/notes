@@ -174,4 +174,9 @@ Created new entity page:
 
 Updated:
 - `wiki/cpp-index.md` — added recsys-optimization row
-- `wiki/home.md` — added pdf-epi-python source, updated cpp-index count 18→19, page estimate ~140→~142
+| `wiki/home.md` — added pdf-epi-python source, updated cpp-index count 18→19, page estimate ~140→~142
+
+## [2026-05-23] lint | 26 issues fixed
+
+- Added missing `tags:` frontmatter to 26 source pages (including pdf-design-patterns-cpp, pdf-concurrency-perf, pdf-linux-sysprog, pdf-linux-kernel-books, pdf-linux-net-server, pdf-ds-cpp, pdf-epi-python, notes-net-deep, pdf-ebpf-papers, pdf-cpp-compiler-toolchain, pdf-cpp-safety-standards, pdf-cpp-perf-engineering, pdf-cpp-engineering-practices, pdf-cpp-slides, pdf-cpp-perf-books, pdf-cpp-ai-inference, pdf-ebpf-books, notes-sys, notes-midware, notes-openbmc, notes-design-patterns, notes-ccpp, notes-interview, notes-security, notes-tools, notes-datastructure)
+- Verified orphan module indexes ([[rust-index]] and [[openbmc-index]]) already linked in home.md

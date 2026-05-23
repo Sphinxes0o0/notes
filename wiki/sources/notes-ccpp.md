@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-22
 source-type: github
+tags: [c, cpp, programming]
 title: "Sphinx's C/C++ Technical Notes"
 author: "Sphinx"
 date: 2026-05-22

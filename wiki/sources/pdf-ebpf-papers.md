@@ -8,7 +8,7 @@ date: 2026-05-22
 updated: 2026-05-23
 size: medium
 path: raw/PDFs/papers/bpf-rethinkingthelinuxkernel-200303183208.pdf, raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf, raw/PDFs/papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf, raw/PDFs/papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf, raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf, raw/PDFs/papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf, raw/PDFs/papers/eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More.pdf, raw/PDFs/papers/2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf, raw/PDFs/papers/isovalent_security_observability.pdf
-summary: "9篇eBPF论文：Thomas Graf里程碑演讲（Cilium微内核愿景）、Pat Hogan eBPF Rootkit攻防、Google内部审计（Atomics/Ringbuf）、Apple Falco安全监控、UFMG XDP高速数据包处理、Kyle Quest生态库全评测、saBPF容器审计框架、Isovalent/Cilium安全可观测性"
+tags: [ebpf, linux-kernel, papers]
 ---
 
 # eBPF Papers (9篇)

@@ -1,6 +1,7 @@
 ---
 type: source
 source-type: github
+tags: [middleware, someip, automotive]
 path: raw/github/notes/midware/
 created: 2026-05-22
 ---

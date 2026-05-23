@@ -8,6 +8,7 @@ date: 2017
 size: medium
 path: raw/PDFs/slides/epilight_python_new.pdf
 summary: "A sampler of 'Elements of Programming Interviews in Python' (EPI Python) — a comprehensive programming interview preparation book covering DS&A, design problems, language questions, and OOD, with problems in Python"
+tags: [python, interview, books]
 ---
 
 # Elements of Programming Interviews in Python (Sampler)

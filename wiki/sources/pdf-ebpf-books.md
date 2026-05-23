@@ -2,6 +2,7 @@
 type: source
 created: 2026-05-22
 source-type: pdf
+tags: [ebpf, linux-kernel, books]
 title: "eBPF Books (3册)"
 author: "浪潮信息/龙蜥社区; 多位贡献者"
 date: 2026-05-22
