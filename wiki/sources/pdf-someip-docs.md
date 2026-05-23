@@ -33,9 +33,9 @@ AUTOSAR 标准中 SOME/IP 序列化协议的错误处理机制。
 ## 4. SOME/IP-SD 头部格式
 
 SOME/IP Service Discovery 协议头部结构：
-- SOME/IP 头部 + SOME/IP-SD 头部
-- Flags (8 bit) + Reserved (24 bit) + Entries Array + Options Array
-- Reboot Flag 在重启后置 1，Session-ID 回绕后恢复 0
+- **SOME/IP 头部** (16 bytes): Service ID, Method ID, Length, Client ID, Session ID, Protocol Version, Interface Version, Message Type, Return Code
+- **SOME/IP-SD 头部** (12 bytes): Flags (8 bit, bit 7 = Reboot Flag, bits 6-0 reserved) + Reserved (24 bit) + Entries Array + Options Array
+- Reboot Flag: 单播模式下重启后置 1，Session-ID（位于 SOME/IP 头部的 Request ID 字段中）递增
 
 ## 5. vSomeIP Endpoints 实现分析
 
