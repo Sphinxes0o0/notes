@@ -217,10 +217,12 @@ Update indexes. Skip already-covered. Output JSON action plan."""
 
     try:
         text = result.strip()
-        # Strip  think tags (MiniMax reasoning mode fallback)
-        if "<｜end▁of▁thinking｜>" in text:
-            text = text.split("<｜end▁of▁thinking｜>")[1] if "<｜end▁of▁thinking｜>" in text else text
-        text = text.replace("<｜end▁of▁thinking｜>", "").replace("<｜end▁of▁thinking｜>", "").strip()
+        # Strip think tags (MiniMax reasoning mode)
+        think_open = chr(60) + "think" + chr(62)
+        think_close = chr(60) + "/think" + chr(62)
+        if think_open in text:
+            text = text.split(think_close, 1)[-1]
+        text = text.replace(think_open, "").replace(think_close, "").strip()
         if text.startswith("```"): text = text.split("\n", 1)[1]
         if text.endswith("```"): text = text[:-3]
         plan = json.loads(text)
