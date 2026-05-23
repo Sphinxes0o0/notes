@@ -27,7 +27,7 @@ pyramid/
 │
 ├── wiki/                     # Generated Layer（LLM 写 = Obsidian Vault）
 │   ├── attachments/           # 图片/附件
-│   ├── entities/             # 概念页面
+│   ├── entities/             # Tech concept pages (Linux kernel, C++, networking, eBPF, tools, algorithms)
 │   ├── sources/              # 源文档摘要页
 │   ├── synthesis/            # 综合分析、对比
 │   └── temporal/journal/     # 日记

@@ -162,3 +162,8 @@ Updated:
 - index.md — 同步 home.md 全部更新
 
 Cross-linked all new entities to existing linux-kernel-net-subsystem, linux-kernel-netfilter-framework, and linux-network-protocols.
+
+## [2026-05-23] split | Sport-health moved to atlas
+Split exercise science content into Sphinxes0o0/atlas — separate Obsidian vault.
+Removed: 11 module indexes, ~60 entity pages, 8 source pages (relay-neuron).
+Remaining: ~130 tech pages (Linux kernel, C++, networking, eBPF, tools, algorithms).

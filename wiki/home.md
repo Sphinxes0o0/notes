@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-22 | Total pages: 157 | Module indexes: 26
+> Last updated: 2026-05-23 | Total pages: ~130 | Module indexes: 18
 
 ---
 
@@ -37,22 +37,7 @@ created: 2026-05-22
 ### Operating System
 | Index | Domain | Entities |
 |-------|--------|----------|
-| [[os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems | 7 |
-
-### Exercise Science
-| Index | Domain | Entities |
-|-------|--------|----------|
-| [[supplements-index]] | Curcumin (7 sub-entities), CoQ10 (5 sub-entities) | 12 |
-| [[physiology-index]] | Muscle hypertrophy, mTOR, MPS, VO2max, lactate threshold, BFR... | 10 |
-| [[nutrition-index]] | Protein, carbs, omega-3, ketogenic diet | 4 |
-| [[running-index]] | Running economy, trail running, ultra-endurance | 3 |
-| [[training-index]] | Periodization, tapering, training methods | 3 |
-| [[biomechanics-index]] | Gait analysis, running shoes | 2 |
-| [[exercise-health-index]] | Exercise as medicine, chronic disease | 1 |
-| [[obesity-index]] | Obesity & visceral fat: 5-system impact, 23 papers | 6 |
-| [[technology-index]] | Wearable devices, HRV monitoring, running power meters, AI/ML | 3 |
-| [[kinesiology-tape-index]] | Kinesiology tape: mechanism, clinical evidence, pain management | 1 |
-| [[population-index]] | Youth, master, female, elite runners; population-specific training | 4 |
+|| [[os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems | 7 |
 
 ### Programming & Algorithms
 | Index | Domain | Entities |
@@ -75,14 +60,7 @@ created: 2026-05-22
 
 | 来源 | 描述 | 日期 | 类型 |
 |------|------|------|------|
-| [[sources/relay-neuron-supplements]] | 姜黄素与辅酶Q10补剂深度研究（~30篇文献）| 2026-04 | github |
-| [[sources/relay-neuron-physiology]] | 运动生理学：肌肥大、mTOR、BFR、VO2max等（~25主题）| 2026-05 | github |
-| [[sources/relay-neuron-obesity-literature]] | 中国肥胖文献分析：23篇，覆盖心血管/肝脏/神经/代谢/肾脏五大系统 | 2026-04 | github |
-| [[sources/relay-neuron-technology]] | 可穿戴设备、HRV监控、跑步功率计、AI/ML预测、实时生理监控（10主题）| 2026-04 | github |
-| [[sources/relay-neuron-kinesiology-tape]] | 运动肌贴原理、肌肉力量、关节稳定性、临床应用（5主题，2024-2026）| 2026-04 | github |
-| [[sources/relay-neuron-population-specific]] | 青少年、中老年、女性、精英、休闲跑者专项研究（6主题）| 2026-04 | github |
-| [[sources/relay-neuron-training-methods]] | 间歇、节奏跑、LSD、阈值、坡度训练综合（5主题）| 2026-04 | github |
-| [[sources/notes-net-deep]] | 网络深度笔记合并：skbuff/NAT/路由 Trie/PHY-MAC/Conntrack/全栈路径 | 2026-05 | github |
+|| [[sources/notes-net-deep]] | 网络深度笔记合并：skbuff/NAT/路由 Trie/PHY-MAC/Conntrack/全栈路径 | 2026-05 | github |
 | [[sources/notes-network-fundamentals]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
 | [[sources/notes-netfilter]] | Linux Netfilter/iptables/nftables/conntrack 深度分析 | 2026-05 | github |
 | [[sources/notes-os]] | Linux 内核深度分析：VFS、调度器、SLUB 分配器、cgroups 架构详解 | 2026-05 | github |
