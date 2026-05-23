@@ -45,6 +45,7 @@ created: 2026-05-22
 | [[entities/cpp/cpp-perf-optimization]] | CPU cache optimization, SIMD, branch prediction, profiling tools (perf/eBPF/IPT) | cpp, performance |
 | [[entities/cpp/cpp-llm-inference]] | C++ for LLM inference: PD/EPD separation, KV Cache pooling, xLLM architecture | cpp, llm, ai |
 | [[entities/cpp/cpp-recsys-optimization]] | C++ for recommendation training: RecIS, Four Walls (Python/CPU/Memory/Compute), GPU HashTable | cpp, recsys, performance |
+| [[entities/cpp/cpp-templates]] | C++ Templates: metaprogramming, specialization, SFINAE, CRTP, variadic templates, fold expressions | cpp, templates, metaprogramming |
 
 ## Sources
 
@@ -55,6 +56,9 @@ created: 2026-05-22
 | [[sources/pdf-cpp-compiler-toolchain]] | Compiler/toolchain: MLIR fuzzing, RISC-V AI compiler, FlagOS compiler, heterogeneous architecture | 2025-12 |
 | [[sources/pdf-cpp-perf-engineering]] | Performance engineering: kernel bypass, Bcache Btree, distributed caching, RDMA transfer, crash diagnosis | 2025-12 |
 | [[sources/pdf-cpp-engineering-practices]] | Engineering practices: AI coding (Baidu/Meituan), testing, maturity model, Xiaomi Vela, CLI tools, object lifetime, robotics build | 2025-12 |
+| [[sources/pdf-cpp-templates]] | C++ Templates 2nd Ed: Vandevoorde, Josuttis, Gregor — metaprogramming, SFINAE, CRTP, specialization | 2017 |
+| [[sources/pdf-cpp-nginx-module]] | Nginx module dev with C++11 + Boost: Luó Jiànfēng — module architecture, HTTP/stream, Boost integration | 2015 |
+| [[sources/pdf-crypto-books]] | OpenSSL Cookbook + Illustrated Cryptography 3rd Ed: key management, TLS testing, crypto basics | 2024 |
 
 ## Cross-References
 

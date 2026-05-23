@@ -236,4 +236,47 @@ Ran full lint on wiki (154 files). Results:
 - Created: wiki/entities/cpp/cpp-recsys-optimization.md (C++ recsys optimization entity)
 - Enhanced: pdf-cpp-slides.md (David Sankel, John Lakos, 吴晓飞, 刘童旋 sections)
 - Enhanced: pdf-cpp-ai-inference.md (RecIS section)
-- Updated: cpp-index.md, home.md
+- Enhanced: cpp-index.md, home.md
+
+## [2026-05-23] ingest | 3 eBPF papers + notes/docs PDFs
+
+Ingested 3 new eBPF/security papers + notes/docs PDFs into pyramid wiki.
+
+### eBPF Papers (merged into pdf-ebpf-papers.md)
+- saBPF: Secure Namespaced Kernel Audit for Containers (Soo Yee Lim, SoCC 2021) — container-level eBPF audit via LSM + cgroup
+- Security Observability with eBPF (Jed Salazar & Natalia Reka Ivanko, O'Reilly 2022) — Four Golden Signals for K8s security
+- PTPsec (INFOCOM 2024) — NOT eBPF, created separate source pdf-ptp-security.md
+
+Source pages updated:
+- wiki/sources/pdf-ebpf-papers.md — 7→9 papers, added saBPF + Isovalent sections
+
+New entity pages:
+- wiki/entities/linux/ebpf/ebpf-container-audit.md — saBPF container audit framework
+- wiki/entities/linux/ebpf/ebpf-security-observability.md — eBPF Four Golden Signals
+
+New non-eBPF source page:
+- wiki/sources/pdf-ptp-security.md — PTPsec: IEEE 1588 delay attack detection
+
+### Notes/docs PDFs assessed and ingested
+
+**C++ PDFs (5)** — 2 image-only, 3 extracted:
+- wiki/sources/pdf-cpp-templates.md — C++ Templates 2nd Edition
+- wiki/sources/pdf-cpp-nginx-module.md — Nginx module dev with C++11+Boost
+- wiki/sources/pdf-crypto-books.md — OpenSSL Cookbook + Illustrated Cryptography
+- wiki/entities/cpp/cpp-templates.md — C++ templates entity page
+- 泛型编程与STL中文版.pdf + 图解密码技术.pdf — image-only, noted
+
+**Rust PDFs (2)** — new domain:
+- wiki/sources/pdf-rust-intro.md — Rust 入门指北 (infrastructure + language)
+- wiki/entities/rust/rust-language.md — Rust language entity
+- wiki/rust-index.md — Rust module index
+
+**Networking PDFs (3)** — 1 new, 2 duplicates:
+- wiki/sources/pdf-af-xdp-quic.md — B站 AF_XDP + QUIC practice
+- linux_network_stack.pdf — duplicates notes-net-deep
+- tcp_protocol_rfc_design_implementation.pdf — duplicates existing content
+
+**SOME/IP PDFs (6)** — consolidated:
+- wiki/sources/pdf-someip-docs.md — CommonAPI/Franca/SOME/IP-SD/vSomeIP/netmap
+
+Updated: wiki/home.md (Sources table + Rust index), wiki/ebpf-index.md (new entities), wiki/cpp-index.md (new sources + entity), wiki/entities/linux/ebpf/ebpf-security.md (source refs)

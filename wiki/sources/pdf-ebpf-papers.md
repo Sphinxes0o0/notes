@@ -2,15 +2,16 @@
 type: source
 created: 2026-05-22
 source-type: pdf
-title: "eBPF Papers (7篇)"
-author: "Thomas Graf, Pat Hogan, Brendan Jackman, Eric Sage & Melissa Kilby, Kyle Quest, Marcos A. M. Vieira"
+title: "eBPF Papers (9篇)"
+author: "Thomas Graf, Pat Hogan, Brendan Jackman, Eric Sage & Melissa Kilby, Kyle Quest, Marcos A. M. Vieira, Soo Yee Lim, Jed Salazar & Natalia Reka Ivanko"
 date: 2026-05-22
+updated: 2026-05-23
 size: medium
-path: raw/PDFs/papers/bpf-rethinkingthelinuxkernel-200303183208.pdf, raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf, raw/PDFs/papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf, raw/PDFs/papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf, raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf, raw/PDFs/papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf, raw/PDFs/papers/eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More.pdf
-summary: "7篇eBPF论文：Thomas Graf里程碑演讲（Cilium微内核愿景）、Pat Hogan eBPF Rootkit攻防、Brendan Jackman Google内部审计（Atomics/Ringbuf）、Apple Falco安全监控、UFMG XDP高速数据包处理、Kyle Quest生态库全评测"
+path: raw/PDFs/papers/bpf-rethinkingthelinuxkernel-200303183208.pdf, raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf, raw/PDFs/papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf, raw/PDFs/papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf, raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf, raw/PDFs/papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf, raw/PDFs/papers/eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More.pdf, raw/PDFs/papers/2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf, raw/PDFs/papers/isovalent_security_observability.pdf
+summary: "9篇eBPF论文：Thomas Graf里程碑演讲（Cilium微内核愿景）、Pat Hogan eBPF Rootkit攻防、Google内部审计（Atomics/Ringbuf）、Apple Falco安全监控、UFMG XDP高速数据包处理、Kyle Quest生态库全评测、saBPF容器审计框架、Isovalent/Cilium安全可观测性"
 ---
 
-# eBPF Papers (7篇)
+# eBPF Papers (9篇)
 
 ## 核心内容
 
@@ -134,6 +135,52 @@ Apple 选择 BPF 而非内核模块的核心理由。
 
 **Verdict：** BCC（功能优先）vs libbpf（官方/轻量）vs cilium/ebpf（Go生态首选）
 
+### 8. Secure Namespaced Kernel Audit for Containers (saBPF, Soo Yee Lim, SoCC 2021)
+
+saBPF 是 eBPF 框架的安全审计扩展，实现容器粒度的内核审计。
+
+**核心架构：**
+- 在 LSM hook 点附加 eBPF 程序，基于 cgroup 实现容器级隔离
+- 每个容器可自定义审计策略和机制，同主机不同容器互不影响
+- 扩展 Linux 的 eBPF 框架以支持 reference monitor 与 namespace 的交集
+
+**安全保证：**
+- 高保真审计数据：完整记录容器触发的系统活动
+- 无并发漏洞：LSM 的 reference-monitor 设计确保内核状态不可变
+- 无记录缺失：避免传统 audit 工具的 TOCTTOU 攻击漏洞
+
+**Kubernetes 集成：**
+- Sidecar 设计模式：每个 pod 配置 saBPF 捕获审计日志
+- Sidecar 容器分析日志并发送可疑事件到远程关联系统
+- 实现入侵检测系统和轻量级访问控制机制
+
+**性能对比：** saBPF 性能与直接在内核中实现的审计系统相当
+
+### 9. Security Observability with eBPF (Jed Salazar & Natalia Reka Ivanko, O'Reilly 2022)
+
+Isovalent/Cilium 团队撰写的 eBPF 安全可观测性报告。
+
+**核心论点：**
+- Kubernetes 不提供默认安全配置，也无内置可观测性
+- 传统安全工具不支持 kernel namespace 识别容器化进程
+- Pod IP 地址是临时的，基于 IP 的安全日志难以追溯
+
+**安全可观测性的四金信号 (Four Golden Signals)：**
+1. **Process Execution** — 进程执行事件（execve、fork）
+2. **Network Sockets** — 网络连接事件（connect、accept）
+3. **File Access** — 文件访问事件（open、read、write）
+4. **Layer 7 Network Identity** — 应用层身份（HTTP/gRPC/DNS 请求）
+
+**eBPF 优势：**
+- 原生理解容器属性（K8s labels、namespace、pod name）
+- 捕获 pre-NAT pod IP，保留容器级身份
+- 进程级可观测性：包括调用进程、参数、capabilities
+- 无需更改应用程序代码
+
+**最佳实践：**
+- 最小权限原则：通过 eBPF 观察容器实际需要的 capabilities
+- 检测权限提升、横向移动、凭据滥用等攻击模式
+
 ## 关键引用
 
 - "eBPF is a highly efficient sandboxed virtual machine in the Linux kernel making the Linux kernel programmable at native execution speed" — Thomas Graf
@@ -146,4 +193,6 @@ Apple 选择 BPF 而非内核模块的核心理由。
 - [[entities/linux/ebpf/ebpf-security]] — 安全监控与 Rootkit
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP 数据面
 - [[entities/linux/ebpf/ebpf-ecosystem]] — 生态库对比
+- [[entities/linux/ebpf/ebpf-container-audit]] — saBPF 容器审计
+- [[entities/linux/ebpf/ebpf-security-observability]] — eBPF 安全可观测性
 - [[kernel-net-index]] — Linux 网络子系统

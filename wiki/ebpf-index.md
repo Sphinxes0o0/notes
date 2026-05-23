@@ -19,6 +19,8 @@ created: 2026-05-22
 | [[entities/linux/ebpf/ebpf-security]] | 安全监控与Rootkit | Falco/KRSI/LSM/Atomics/Ringbuf | Apple/Google论文, Black Hat |
 | [[entities/linux/ebpf/ebpf-networking]] | 网络与Cilium | TC/sock_ops/Cilium/Hubble/Kubernetes | Thomas Graf论文×2 |
 | [[entities/linux/ebpf/ebpf-ecosystem]] | 生态库与工具 | BCC/libbpf/cilium-ebpf/aya/bpftrace | 书籍, Kyle Quest论文 |
+| [[entities/linux/ebpf/ebpf-container-audit]] | 容器审计 | saBPF/LSM/Cgroup/Sidecar模式 | saBPF论文 |
+| [[entities/linux/ebpf/ebpf-security-observability]] | 安全可观测性 | 四金信号/Cilium/K8s可观测性 | O'Reilly报告 |
 
 ## Cross-Reference Map
 
@@ -39,6 +41,8 @@ ebpf-security ─────────→ kernel-subsystems-index (LSM/seccom
 ebpf-networking ───────→ kernel-net-index (Netfilter/Conntrack)
        │                → kernel-protocols-index (L3-L4路由)
        │
+ebpf-security-observability ───→ kernel-net-index (K8s网络/四金信号)
+       │
 ebpf-ecosystem ───────→ tools-index (bpftool/tcpdump)
 ```
 
@@ -47,19 +51,20 @@ ebpf-ecosystem ───────→ tools-index (bpftool/tcpdump)
 | Source | Description | Type | Date |
 |--------|-------------|------|------|
 | [[sources/pdf-ebpf-books]] | 3册eBPF书籍：龙蜥白皮书(架构/CO-RE)、技术实践(XDP/TC)、Liz Rice入门 | pdf | 2026-05 |
-| [[sources/pdf-ebpf-papers]] | 7篇eBPF论文：Thomas Graf微内核愿景/Apple Falco/Google审计/Black Hat Rootkit/UFMG XDP/生态库评测 | pdf | 2026-05 |
+| [[sources/pdf-ebpf-papers]] | 9篇eBPF论文：Thomas Graf微内核愿景/Apple Falco/Google审计/Black Hat Rootkit/UFMG XDP/生态库评测/saBPF容器审计/Isovalent安全可观测性 | pdf | 2026-05 |
 
 ## Quick Navigation
 
 - **入门**：[[entities/linux/ebpf/ebpf-overview]] → Verifier/JIT/Maps 核心概念
 - **网络**：[[entities/linux/ebpf/ebpf-xdp]] (XDP) + [[entities/linux/ebpf/ebpf-networking]] (TC/Cilium)
-- **安全**：[[entities/linux/ebpf/ebpf-security]] (Falco/LSM/Rootkit)
+- **安全**：[[entities/linux/ebpf/ebpf-security]] (Falco/LSM/Rootkit) + [[entities/linux/ebpf/ebpf-container-audit]] (saBPF) + [[entities/linux/ebpf/ebpf-security-observability]] (四金信号)
 - **开发**：[[entities/linux/ebpf/ebpf-ecosystem]] → BCC/libbpf/cilium-ebpf/aya
 - **工具**：bpftool / iproute2 / bpftrace
 
 ## Key Stats
 
-- **Total Sources**：10 PDFs (3 books + 7 papers)
-- **Total Entities**：5
+- **Total Sources**：10 PDFs (3 books + 9 papers)
+- **Total Entities**：7
 - **Kernel Version**：eBPF 从 Linux 3.18 广泛可用，CO-RE 从 4.18+ 广泛可用
 - **CO-RE 依赖**：CONFIG_DEBUG_INFO_BTF=y (Ubuntu 20.10+ 默认开启)
+- **新增来源**：PTPsec (INFOCOM 2024)、AF_XDP QUIC (B站)、Rust 入门、C++ Templates/NGINX/密码学、SOME/IP 文档

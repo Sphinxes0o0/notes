@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-23 | Total pages: ~142 | Module indexes: 18
+> Last updated: 2026-05-23 | Total pages: ~152 | Module indexes: 19
 
 ---
 
@@ -27,7 +27,7 @@ created: 2026-05-22
 | [[kernel-sched-index]] | CFS, context switch, load balancing | 4 |
 | [[kernel-block-index]] | bio/request, blk-mq, IO schedulers | 3 |
 | [[kernel-subsystems-index]] | Crypto, locking, IPC, RCU, time, sound | 6 |
-| [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem | 5 |
+| [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem, saBPF, Security Observability | 7 |
 
 ### Emulation
 | Index | Domain | Entities |
@@ -45,7 +45,8 @@ created: 2026-05-22
 | [[datastructure-index]] | DSA: complexity, linear, sorting, DP, recursion, hash, trees | 7 |
 | [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
 | [[interview-index]] | Coding patterns, system design basics | 3 |
-| [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 19 |
+| [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 20 |
+| [[rust-index]] | Rust language: ownership, borrowing, lifetimes, traits, concurrency | 1 |
 | [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
 
 ### Tools & BMC
@@ -80,7 +81,14 @@ created: 2026-05-22
 | [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
 | [[sources/pdf-epi-python]] | Elements of Programming Interviews in Python：编程面试DS&A、设计问题、OOD | 2017 | pdf |
 | [[sources/pdf-ebpf-books]] | eBPF书籍3册：龙蜥白皮书(XDP/TC/CO-RE)、技术实践、Cilium创始人Liz Rice入门 | 2026-05 | pdf |
-| [[sources/pdf-ebpf-papers]] | eBPF论文7篇：Thomas Graf微内核愿景、Apple Falco、Google审计(Atomics/Ringbuf)、Black Hat Rootkit攻防 | 2026-05 | pdf |
+| [[sources/pdf-ebpf-papers]] | eBPF论文9篇：Thomas Graf微内核、Apple Falco、Google审计、Rootkit攻防、UFMG XDP、生态库、saBPF容器审计、Isovalent安全可观测性 | 2026-05 | pdf |
+| [[sources/pdf-ptp-security]] | PTPsec：IEEE 1588时间同步延迟攻击检测与缓解 (INFOCOM 2024) | 2024 | pdf |
+| [[sources/pdf-cpp-templates]] | C++ Templates 2nd Edition：模板权威指南（范德沃尔德/约祖蒂斯/格雷戈）| 2017 | pdf |
+| [[sources/pdf-cpp-nginx-module]] | Nginx模块开发指南：C++11 + Boost 扩展Nginx | 2015 | pdf |
+| [[sources/pdf-crypto-books]] | OpenSSL Cookbook + 图解密码技术 第三版 | 2024 | pdf |
+| [[sources/pdf-rust-intro]] | Let's Get Rusty! - Rust 入门指北（基础设施 + 语言简介）| 2024 | pdf |
+| [[sources/pdf-af-xdp-quic]] | B站 AF_XDP with QUIC 实践：QUIC网关性能优化 | 2024 | pdf |
+| [[sources/pdf-someip-docs]] | SOME/IP & vSOME/IP 技术文档6篇：CommonAPI/Franca/SD/Endpoints | 2024 | pdf |
 | [[sources/notes-ccpp]] | C/C++ 技术笔记：序列化、智能指针深度分析、堆栈对象创建策略、移动语义 | 2026-05 | github |
 | [[sources/notes-datastructure]] | 数据结构与算法：复杂度分析、线性结构、排序、DP、递归、哈希表、树与图（21章节+真题训练） | 2026-05 | github |
 | [[sources/notes-design-patterns]] | 设计模式：SOLID原则、创建型5种、结构型7种、行为型11种共23种设计模式 | 2026-05 | github |

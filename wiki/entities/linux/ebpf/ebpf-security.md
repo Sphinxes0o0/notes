@@ -123,3 +123,6 @@ eBPF rootkit 利用 eBPF 实现**内核级**攻击，且无需加载内核模块
 - [[sources/pdf-ebpf-papers]] — Think eBPF for Kernel Security Monitoring (Apple Falco, eBPF Summit 2021)
 - [[sources/pdf-ebpf-papers]] — Stories from BPF Security Auditing at Google (Brendan Jackman)
 - [[sources/pdf-ebpf-papers]] — Creating and Countering the Next Generation of Linux Rootkits using eBPF (Pat Hogan, Black Hat)
+- [[sources/pdf-ebpf-papers]] — Secure Namespaced Kernel Audit for Containers (saBPF, SoCC 2021)
+- [[sources/pdf-ebpf-papers]] — Security Observability with eBPF (O'Reilly 2022)
+- [[sources/pdf-ptp-security]] — PTPsec: PTP Time Delay Attack Detection (INFOCOM 2024)
