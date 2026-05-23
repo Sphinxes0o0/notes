@@ -1,11 +1,9 @@
 ---
-
 type: entity
 tags: [中间件, 汽车电子, DoIP, SOME/IP]
 created: 2026-05-20
-
-
-sources: [notes-ccpp]---
+sources: [notes-ccpp]
+---
 
 # 中间件（Middleware）
 

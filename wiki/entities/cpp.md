@@ -1,11 +1,9 @@
 ---
-
 type: entity
 tags: [C, C++, 系统编程, 语言]
 created: 2026-05-20
-
-
-sources: [notes-ccpp, pdf-cpp-modern-tutorial, pdf-cpp-effective-stl]---
+sources: [notes-ccpp, pdf-cpp-modern-tutorial, pdf-cpp-effective-stl]
+---
 
 # C/C++ 系统编程
 

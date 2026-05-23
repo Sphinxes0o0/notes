@@ -37,7 +37,7 @@ Traditional compiler testing generates C/C++ programs then translates to MLIR �
 - CUDA compatibility translation layer for domestic NPU chips
 
 ## Related Concepts
-- [[risc-v-ai-ecosystem]] — RISC-V AI compilers and operator libraries
+- [[entities/risc-v-ai-ecosystem]] — RISC-V AI compilers and operator libraries
 - [[entities/cpp/cpp-perf-optimization]] — Low-level CPU/memory optimization complements compiler-level optimization
 - [[entities/cpp/cpp-llm-inference]] — LLM inference frameworks that benefit from compiler optimizations
 

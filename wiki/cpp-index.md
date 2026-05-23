@@ -60,6 +60,6 @@ created: 2026-05-22
 - [[design-patterns-index]] — RAII and smart pointers encode creational patterns in C++; modern C++ idioms embody SOLID
 - [[interview-index]] — Modern C++ features (move semantics, constexpr, concurrency) are key interview topics
 - [[sys-prog-index]] — [[entities/cpp]] and C/C++ language fundamentals underpin all system programming work
-- [[ai-mlir-compilation]] — AI compilation and MLIR infrastructure for model optimization
-- [[risc-v-ai-ecosystem]] — RISC-V open ISA + AI software ecosystem
-- [[kernel-bypass-dpdk]] — Kernel bypass techniques for high-speed networking
+- [[entities/ai-mlir-compilation]] — AI compilation and MLIR infrastructure for model optimization
+- [[entities/risc-v-ai-ecosystem]] — RISC-V open ISA + AI software ecosystem
+- [[entities/kernel-bypass-dpdk]] — Kernel bypass techniques for high-speed networking

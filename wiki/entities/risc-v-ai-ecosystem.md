@@ -39,7 +39,7 @@ The RISC-V AI ecosystem refers to the full-stack software infrastructure — com
 Nvidia, GPU/NPU, DSA, custom accelerators all have RISC-V-based implementations; 10+ chip vendors, 20+ chip models supported in the FlagOS ecosystem.
 
 ## Related Concepts
-- [[ai-mlir-compilation]] — MLIR-based compilation infrastructure for AI workloads
+- [[entities/ai-mlir-compilation]] — MLIR-based compilation infrastructure for AI workloads
 - [[entities/cpp/cpp-llm-inference]] — LLM inference on diverse hardware backends
 
 ## Sources
