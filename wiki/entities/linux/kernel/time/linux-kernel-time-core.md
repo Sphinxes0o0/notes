@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux内核, 时间管理, hrtimer, tick, timekeeping, posix-timers]
+tags: [linux-kernel, 时间管理, hrtimer, tick, timekeeping, posix-timers]
 created: 2026-05-20
 sources: [notes-overview-kernel-time]
 ---

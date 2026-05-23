@@ -1,6 +1,6 @@
 ---
 type: index
-tags: [interview, algorithm, system-design]
+tags: [interview, algorithms, system-design]
 created: 2026-05-22
 ---
 

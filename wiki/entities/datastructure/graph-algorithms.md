@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [algorithm, graph, datastructure]
+tags: [algorithms, graph, data-structures]
 created: 2026-05-23
 sources: [pdf-algo-ds-books]
 ---

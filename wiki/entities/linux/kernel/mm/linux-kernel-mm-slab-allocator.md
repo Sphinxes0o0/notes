@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [linux-kernel, memory-management, slub, allocator]
+tags: [linux-kernel, memory-management, slub, allocators]
 created: 2026-05-20
 sources: [notes-overview-kernel]
 ---

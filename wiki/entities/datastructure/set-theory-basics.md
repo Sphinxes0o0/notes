@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [math, set-theory, algorithm, foundation]
+tags: [math, set-theory, algorithms, foundation]
 created: 2026-05-23
 sources: [pdf-algo-ds-books]
 ---

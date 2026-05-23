@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux内核, RCU, Read-Copy-Update, 无锁同步, 并发控制]
+tags: [linux-kernel, RCU, Read-Copy-Update, 无锁同步, 并发控制]
 created: 2026-05-20
 sources: [notes-overview-kernel-rcu]
 ---

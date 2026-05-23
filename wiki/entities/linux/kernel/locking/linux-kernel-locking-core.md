@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux内核, 锁机制, 并发控制, spinlock, mutex, 信号量, lockdep]
+tags: [linux-kernel, 锁机制, 并发控制, spinlock, mutex, 信号量, lockdep]
 created: 2026-05-20
 sources: [notes-overview-kernel-locking]
 ---

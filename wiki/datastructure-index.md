@@ -1,6 +1,6 @@
 ---
 type: index
-tags: [datastructure, algorithm]
+tags: [data-structures, algorithms]
 created: 2026-05-22
 ---
 

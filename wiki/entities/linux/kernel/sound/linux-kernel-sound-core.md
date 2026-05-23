@@ -1,6 +1,6 @@
 ---
 type: entity
-tags: [Linux内核, 声音系统, ALSA, PCM, ASoC, DAPM, 音频驱动]
+tags: [linux-kernel, 声音系统, ALSA, PCM, ASoC, DAPM, 音频驱动]
 created: 2026-05-20
 sources: [notes-overview-kernel-sound]
 ---
