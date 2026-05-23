@@ -182,9 +182,16 @@ def main():
     if not changed: print("No changes."); return
     print(f"{len(changed)} changed files", file=sys.stderr)
 
+    # Limit to MAX_FILES to stay within MiniMax context (204K)
+    MAX_FILES = 10
+    MAX_BYTES_PER_FILE = 5000
+    if len(changed) > MAX_FILES:
+        print(f"Limiting to first {MAX_FILES} of {len(changed)} changed files", file=sys.stderr)
+        changed = changed[:MAX_FILES]
+
     files_content = []
     for status, path in changed:
-        files_content.append(f"## [{status}] {path}\n\n{read_file_safe(os.path.join(raw_dir, path), 30000)}")
+        files_content.append(f"## [{status}] {path}\n\n{read_file_safe(os.path.join(raw_dir, path), MAX_BYTES_PER_FILE)}")
 
     home = read_file_safe(os.path.join(args.wiki_dir, "wiki/home.md"), 10000)
     log_tail = read_file_safe(os.path.join(args.wiki_dir, "wiki/log.md"), 5000)
@@ -203,7 +210,7 @@ Analyze these files. Create source/entity pages for NEW content.
 Update indexes. Skip already-covered. Output JSON action plan."""
 
     override = os.getenv("OVERRIDE_PROVIDER", "")
-    providers = [override] if override else ([args.provider] if args.provider else ["minimax", "copilot"])
+    providers = [override] if override else ([args.provider] if args.provider else ["minimax"])
     print(f"Providers: {' -> '.join(providers)}", file=sys.stderr)
     result, used = call_llm(WIKI_SYSTEM_PROMPT, user_msg, providers)
 
