@@ -45,8 +45,21 @@ created: 2026-05-22
 | [[entities/cpp/cpp-perf-optimization]] | CPU cache optimization, SIMD, branch prediction, profiling tools (perf/eBPF/IPT) | cpp, performance |
 | [[entities/cpp/cpp-llm-inference]] | C++ for LLM inference: PD/EPD separation, KV Cache pooling, xLLM architecture | cpp, llm, ai |
 
+## Sources
+
+| Source | Description | Date |
+|--------|-------------|------|
+| [[sources/pdf-cpp-ai-inference]] | AI/ML inference: Mooncake, RTP-LLM, DeepSeek, LazyLLM, FlagScale, on-device LLM, RecIS | 2025-12 |
+| [[sources/pdf-cpp-safety-standards]] | C++ safety & standards: Bjarne@40, Michael AI stack, David AI code risks | 2025-12 |
+| [[sources/pdf-cpp-compiler-toolchain]] | Compiler/toolchain: MLIR fuzzing, RISC-V AI compiler, FlagOS compiler, heterogeneous architecture | 2025-12 |
+| [[sources/pdf-cpp-perf-engineering]] | Performance engineering: kernel bypass, Bcache Btree, distributed caching, RDMA transfer, crash diagnosis | 2025-12 |
+| [[sources/pdf-cpp-engineering-practices]] | Engineering practices: AI coding (Baidu/Meituan), testing, maturity model, Xiaomi Vela, CLI tools, object lifetime, robotics build | 2025-12 |
+
 ## Cross-References
 
 - [[design-patterns-index]] — RAII and smart pointers encode creational patterns in C++; modern C++ idioms embody SOLID
 - [[interview-index]] — Modern C++ features (move semantics, constexpr, concurrency) are key interview topics
 - [[sys-prog-index]] — [[entities/cpp]] and C/C++ language fundamentals underpin all system programming work
+- [[ai-mlir-compilation]] — AI compilation and MLIR infrastructure for model optimization
+- [[risc-v-ai-ecosystem]] — RISC-V open ISA + AI software ecosystem
+- [[kernel-bypass-dpdk]] — Kernel bypass techniques for high-speed networking
