@@ -4,6 +4,28 @@ tags: [log]
 created: 2026-01-01
 ---
 
+## [2026-05-25] ingest | Batch F: safeos-lwfw LWFW Firewall Analysis
+
+- **来源**: raw/safeos/lwfw_*.md + raw/safeos/lwfw_analysis/ (27 篇文档)
+- **操作**:
+  - 创建 26 个 entity 页面: lwfw-architecture, lwfw-core-filtering, lwfw-data-structure, lwfw-classification, lwfw-filter-flow, lwfw-list-search, lwfw-tree-search, lwfw-hook-injection, lwfw-tcpip-thread, lwfw-lwct, lwfw-lwct-gc-analysis, lwfw-lwct-interaction, lwfw-config-parsing, lwfw-parser, lwfw-parser-concurrency, lwfw-notif, lwfw-ipc-mechanism, lwfw-stats, lwfw-agent, lwfw-agent-log-system, lwfw-vlan-interception-flow, lwfw-vlan-isolation-guide, lwfw-hotswap-analysis, lwfw-rule-matching, lwfw-optimization, lwfw-lwct (root-level)
+  - 创建 1 个 source 页面: wiki/sources/safeos-lwfw.md
+  - 创建 1 个 module index: wiki/lwfw-index.md
+- **更新**: wiki/home.md (lwfw-index + safeos-lwfw 入口), log.md
+- **核心概念**: SafeOS LWFW 状态ful 防火墙，5-tuple/L2/L3/L4 匹配，双过滤引擎(list/tree)，LWCT 连接追踪，seL4 IPC + 共享内存 FIFO 事件通知，VLAN 隔离，P0-P3 优化问题汇总
+- **关键发现**: 位标志冲突(P0)，热重载窗口期无防护(P0)，静态解析器状态(P1)，GC 线程退出无重启(P1)
+
+## [2026-05-25] ingest | Batch E: safeos-lwip-extensions lwIP Extensions & Integration
+
+- **来源**: raw/safeos/lwip_*_analysis.md (19 篇分析文档)
+- **操作**:
+  - 创建 19 个 entity 页面: lwip-analysis-summary, lwip-arp-filter-netif-fn, lwip-bridgeif, lwip-cma-buffer, lwip-elem-ring, lwip-firewall, lwip-ipcif, lwip-lwfw-filter-hooks, lwip-nsv-event-loop, lwip-packet-mmap, lwip-raw-socket, lwip-sel4-function, lwip-sel4-interaction, lwip-sel4-ipc, lwip-sel4-performance-boundary, lwip-sys-net-ctl, lwip-sys-net-send-recv, lwip-sys-net-socket-api, lwip-virt-brg
+  - 创建 1 个 source 页面: wiki/sources/safeos-lwip-extensions.md
+  - 更新 wiki/lwip-index.md (新增基础设施/LWFW/RAW/Socket API/seL4/概览章节)
+  - 更新 wiki/home.md (lwip-index 入口 + safeos-lwip-extensions 源)
+- **核心概念**: SafeOS lwIP 扩展模块集：LWFW 三层安全架构、CMA/elem_ring 基础设施、seL4 微内核集成（~3x 单核性能损失）、packet_mmap/AF-PACKET 零拷贝、VIRT_BRG/IPCIF 虚拟化、NSv Socket API
+- **更新**: lwip-index.md (entity count 27→46), home.md (total pages ~203→~222), log.md
+
 ## [2026-05-22] ingest | pdf-cpp-slides + pdf-cpp-perf-books
 
 Ingested 5 C++ conference slides (2025) + 2 performance/architecture books.
