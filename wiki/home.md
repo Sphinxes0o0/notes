@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-25 | Total pages: ~367 | Module indexes: 25
+> Last updated: 2026-05-25 | Total pages: ~373 | Module indexes: 25
 
 ---
 
@@ -167,6 +167,7 @@ created: 2026-05-22
 | [[sources/pdf-arm-architecture]] | ARM体系结构4册：Armv8/Armv9参考手册、Cortex-A9 TRM、量化研究方法 | 2026-05 | pdf |
 | [[sources/pdf-misc-books]] | 杂项3册：人月神话、非线性动力学与混沌、偏微分方程 | 2026-05 | pdf |
 | [[sources/pdf-remaining-books]] | 剩余书籍汇总 Batch O（38册）：C基础/嵌入式/ARM/Rust/数学/软件工程/其他 | 2026-05 | pdf |
+| [[sources/pdf-onedrive-batch1]] | OneDrive Batch P (5 PDFs): OS concepts + C++ concurrency/high-performance/templates-v2 | 2026-05 | pdf |
 
 ---
 
