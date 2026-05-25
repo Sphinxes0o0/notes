@@ -46,6 +46,9 @@ created: 2026-05-22
 | [[entities/cpp/cpp-llm-inference]] | C++ for LLM inference: PD/EPD separation, KV Cache pooling, xLLM architecture | cpp, llm, ai |
 | [[entities/cpp/cpp-recsys-optimization]] | C++ for recommendation training: RecIS, Four Walls (Python/CPU/Memory/Compute), GPU HashTable | cpp, recsys, performance |
 | [[entities/cpp/cpp-templates]] | C++ Templates: metaprogramming, specialization, SFINAE, CRTP, variadic templates, fold expressions | cpp, templates, metaprogramming |
+| [[entities/cpp/cpp-concurrency-action]] | C++ Concurrency in Action (Williams 2nd Ed): std::thread/mutex/atomic, lock-free data structures, C++17 parallel algorithms | cpp, concurrency |
+| [[entities/cpp/cpp-high-performance]] | C++ High Performance (Andrist & Sehr 2nd Ed): zero-cost abstractions, memory management, ranges/views, templates | cpp, performance |
+| [[entities/cpp/cpp-templates-v2]] | C++ Templates 2nd Ed (Vandevoorde/Josuttis/Gregor): 823pp template complete guide, concepts, sfinae, variadic, move semantics | cpp, templates, metaprogramming |
 | [[entities/cpp/cpp-memory-management]] | C++ 内存管理：智能指针、RAII、自定义分配器、缓存优化、内存池 | cpp, memory-management |
 | [[entities/cpp/cpp-memory-model]] | C/C++ Memory Model：Sequential Consistency、Acquire/Release、memory_order、Memory Barriers | cpp, c, concurrency, memory-model, atomics |
 | [[entities/c/c-language]] | C Language：C89/C99/C11标准、指针、数组、结构体、malloc/free、函数、头文件 | c, programming-language, systems-programming |

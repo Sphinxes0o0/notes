@@ -235,3 +235,18 @@ Updated:
 - **更新**: home.md (kernel-books-index + 3 新源页面 + 更新计数 359→367/25 indexes), index.md, log.md
 - **核心概念**: TLPI 500+系统调用百科、CS:APP 计算机系统视角（机器码/缓存/虚拟内存/链接/并发）、APUE POSIX 标准编程、虚拟内存系统、进程管理模型、x86-64 机器码
 - **扫描跳过**: UNIX环境高级编程(第三版).pdf — Adobe Acrobat Image Conversion Plug-in 生成，无可提取文本
+
+---
+
+## [2026-05-25] ingest | Batch P: OneDrive ebooks (5 PDFs: OS + C++)
+
+- **来源**: OneDrive ebooks/ (5 PDFs: 2 OS + 3 C++), 首次读取触发 OneDrive streaming download
+- **操作**:
+  - PyPDF2 提取 3/5 成功：C++ Concurrency in Action (97K chars) + C++ High Performance (76K) + C++ Templates 2nd Ed (105K)
+  - OneDrive streaming timeout: Operating System Concept (30MB) + 现代操作系统 原理与实现 (206MB) — 基于书籍结构创建 entity
+  - 创建 2 个 OS entity pages: os-concept, modern-operating-system
+  - 创建 3 个 C++ entity pages: cpp-concurrency-action, cpp-high-performance, cpp-templates-v2
+  - 创建 1 个 source 页面: wiki/sources/pdf-onedrive-batch1.md
+  - 更新 os-index.md (2 entities), cpp-index.md (3 entities), home.md (计数 367→373), index.md, log.md
+- **核心概念**: OS 原理（Silberschatz 经典教材）、C++ 并发（Williams 2nd Ed）、C++ 高性能（Andrist/Sehr）、C++ Templates 2nd Ed（823 页模板完全指南）
+- **提取结果**: 3/5 PDFs extracted, 2 OS PDFs — OneDrive streaming blocked (timeout on seek-to-EOF)

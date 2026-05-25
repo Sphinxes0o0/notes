@@ -89,6 +89,7 @@ created: 2026-05-22
 | [[wiki/sources/pdf-the-linux-programming-interface]] | TLPI (Kerrisk, 1556页)：Linux/UNIX系统编程百科，500+系统调用 |
 | [[wiki/sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程（扫描版）|
 | [[wiki/sources/pdf-computer-systems-programmers-perspective]] | CS:APP (Bryant & O'Hallaron, 1078页)：计算机系统程序员视角，CMU 15-213 |
+| [[wiki/sources/pdf-onedrive-batch1]] | OneDrive Batch P: OS concepts + C++ concurrency/high-performance/templates-v2 |
 
 ## Synthesis
 | Topic | Description |
