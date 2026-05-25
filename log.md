@@ -4,6 +4,18 @@
 
 ---
 
+## [2026-05-25] ingest | Batch D: safeos-lwip-core lwIP Core Network Protocol
+
+- **来源**: raw/safeos/lwip_*.md (~28 分析文档)
+- **操作**:
+  - 创建 27 个 entity 页面: lwip-netif, lwip-netif-add, lwip-ethernet-input, lwip-ethernet-output, lwip-pbuf, lwip-malloc, lwip-ip4-input, lwip-ip4-output, lwip-routing, lwip-ip-fragmentation, lwip-tcp-input, lwip-tcp-output, lwip-tcp-pcb, lwip-tcp-recv-queue, lwip-tcp-socket, lwip-tcpip-thread, lwip-udp-input, lwip-udp-output, lwip-udp-socket, lwip-igmp, lwip-dhcp, lwip-network-init, lwip-vlan-dispatch, lwip-vlan-dispatch-deep, lwip-vlan-hook, lwip-vlan-implementation, lwip-vlan-parsing
+  - 创建 1 个 source 页面: wiki/sources/safeos-lwip-core.md
+  - 创建 1 个 module index: wiki/lwip-index.md
+- **更新**: wiki/home.md (lwip-index + safeos-lwip-core 入口), log.md
+- **核心概念**: lwIP 嵌入式协议栈，LWIP_TCPIP_CORE_LOCKING=1 模式，VLAN 分发机制，TCP/UDP/IGMP/DHCP 协议实现
+
+---
+
 ## [2026-05-22] restructure | 模块索引重构 + 全量 ingest
 
 - **Phase 1**: 拆分 home.md → 21 个模块索引文件 (wiki/{module}-index.md)

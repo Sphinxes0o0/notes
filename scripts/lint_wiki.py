@@ -8,7 +8,7 @@ import json
 from collections import defaultdict
 from datetime import datetime, date
 
-WIKI = "/Users/sphinx/github/pyramid/wiki"
+WIKI = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "wiki")
 
 # ──────────────────────────────────────────────
 # 1. Collect all wiki page files

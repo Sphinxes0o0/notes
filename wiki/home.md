@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-23 | Total pages: ~175 | Module indexes: 19
+> Last updated: 2026-05-25 | Total pages: ~203 | Module indexes: 20
 
 ---
 
@@ -28,6 +28,11 @@ created: 2026-05-22
 | [[kernel-block-index]] | bio/request, blk-mq, IO schedulers | 3 |
 | [[kernel-subsystems-index]] | Crypto, locking, IPC, RCU, time, sound | 6 |
 | [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem, saBPF, Security Observability | 7 |
+
+### Embedded Network
+| Index | Domain | Entities |
+|-------|--------|----------|
+| [[lwip-index]] | lwIP embedded TCP/IP stack: netif, pbuf, memory, IPv4, TCP, UDP, IGMP, DHCP, VLAN dispatch | 27 |
 
 ### Emulation
 | Index | Domain | Entities |
@@ -78,6 +83,7 @@ created: 2026-05-22
 | 来源 | 描述 | 日期 | 类型 |
 |------|------|------|------|
 | [[sources/notes-net-deep]] | 网络深度笔记合并：skbuff/NAT/路由 Trie/PHY-MAC/Conntrack/全栈路径 | 2026-05 | github |
+| [[sources/safeos-lwip-core]] | SafeOS lwIP 核心网络协议分析 (~28篇)：netif/pbuf/TCP/UDP/IGMP/DHCP/VLAN/LWFW | 2026-05 | github |
 | [[sources/notes-network-fundamentals]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
 | [[sources/notes-net]] | Linux 内核网络子系统深度分析：Socket/sk_buff/Netdevice/Routing/Netfilter/TCP/UDP | 2026-05 | github |
 | [[sources/notes-network]] | Linux 网络协议笔记：TCP/IP、IPv4/IPv6、BPF/XDP、桥接、路由、性能优化 | 2026-05 | github |
