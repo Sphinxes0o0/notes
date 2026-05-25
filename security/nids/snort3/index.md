@@ -54,6 +54,32 @@ detection (规则检测)
   - PAF: 协议感知Flush
   - IP Defrag: IP分片重组
 
+### 规则检测
+- [01_detection](/security/nids/snort3/01_detection) - 检测框架核心
+  - DetectionEngine: 检测引擎主类
+  - IpsContext: 检测上下文(单包状态)
+  - OptTreeNode/RuleTreeNode: 规则树节点
+  - 快速模式匹配入口(fp_full/fp_partial)
+
+- [02_ips_options](/security/nids/snort3/02_ips_options) - IPS检测选项
+  - content: 字符串模式匹配(Boyer-Moore)
+  - pcre: Perl兼容正则表达式(pcre2)
+  - byte_test/byte_jump/byte_extract/byte_math: 字节操作
+  - flow/flowbits: 流状态和标志位
+  - flags/dsize: TCP标志位和载荷大小
+  - 共70个选项实现
+
+- [03_search_engines](/security/nids/snort3/03_search_engines) - 模式匹配引擎
+  - AC_BNFA: Aho-Corasick Binary NFA(低内存)
+  - Hyperscan: Intel正则引擎(高性能)
+  - Mpse: 多模式搜索抽象接口
+
+- [04_filters](/security/nids/snort3/04_filters) - 快速过滤模块
+  - rate_filter: 速率过滤(动态规则动作)
+  - sfthreshold: 阈值过滤(事件数限制)
+  - detection_filter: 检测率过滤
+  - Port/Service/Protocol预过滤
+
 ## 相关文档
 
 - [Snort3 整体架构分析](/security/nids/snort3_architecture_analysis) - 完整架构概览
