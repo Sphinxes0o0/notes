@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-25 | Total pages: ~250 | Module indexes: 21
+> Last updated: 2026-05-25 | Total pages: ~285 | Module indexes: 23
 
 ---
 
@@ -34,6 +34,7 @@ created: 2026-05-22
 |-------|--------|----------|
 | [[lwip-index]] | lwIP embedded TCP/IP stack: netif, pbuf, memory, IPv4, TCP, UDP, IGMP, DHCP, VLAN dispatch | 27 |
 | [[lwfw-index]] | SafeOS LWFW firewall: 5-tuple, LWCT, dual filter engines, seL4 IPC, VLAN isolation | 26 |
+| [[safeos-index]] | SafeOS NSv architecture: NSv Network Server, CMA/elem-ring, AF-PACKET/TPACKET, VDF nids relation | 4 |
 
 ### SafeOS LWFW
 | Index | Domain | Entities |
@@ -58,6 +59,7 @@ created: 2026-05-22
 | [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
 | [[interview-index]] | Coding patterns, system design basics | 3 |
 | [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
+| [[cpp-modern-index]] | Modern C++ Skills (C++17+Master): 13 C++17 skills + 15 Master mental models | 28 |
 | [[rust-index]] | Rust language: ownership, borrowing, lifetimes, traits, concurrency | 1 |
 | [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
 | [[math-index]] | 非线性动力学与混沌 | 1 |
@@ -73,6 +75,7 @@ created: 2026-05-22
 | [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
 | [[interview-index]] | Coding patterns, system design basics | 3 |
 | [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
+| [[cpp-modern-index]] | Modern C++ Skills (C++17+Master): 13 C++17 skills + 15 Master mental models | 28 |
 | [[rust-index]] | Rust language: ownership, borrowing, lifetimes, traits, concurrency | 1 |
 | [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
 
@@ -92,6 +95,7 @@ created: 2026-05-22
 | [[sources/safeos-lwip-core]] | SafeOS lwIP 核心网络协议分析 (~28篇)：netif/pbuf/TCP/UDP/IGMP/DHCP/VLAN | 2026-05 | github |
 | [[sources/safeos-lwfw]] | SafeOS LWFW 防火墙分析 (27篇)：架构/过滤/LWCT/解析/事件/IPC/Agent/VLAN/优化 | 2026-05 | github |
 | [[sources/safeos-lwip-extensions]] | SafeOS lwIP 扩展/集成分析 (19篇)：LWFW/CMA/elem_ring/AF-PACKET/seL4 IPC/VIRT_BRG | 2026-05 | github |
+| [[sources/safeos-architecture]] | SafeOS NSv 架构设计文档 (7篇)：9阶段分析计划/NSv深度分析/AF-PACKET设计/VDF nids关系 | 2026-05 | github |
 | [[sources/notes-network-fundamentals]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
 | [[sources/notes-net]] | Linux 内核网络子系统深度分析：Socket/sk_buff/Netdevice/Routing/Netfilter/TCP/UDP | 2026-05 | github |
 | [[sources/notes-network]] | Linux 网络协议笔记：TCP/IP、IPv4/IPv6、BPF/XDP、桥接、路由、性能优化 | 2026-05 | github |
@@ -139,6 +143,7 @@ created: 2026-05-22
 | [[sources/pdf-af-xdp-quic]] | B站 AF_XDP with QUIC 实践：QUIC网关性能优化 | 2024 | pdf |
 | [[sources/pdf-someip-docs]] | SOME/IP & vSOME/IP 技术文档6篇：CommonAPI/Franca/SD/Endpoints | 2024 | pdf |
 | [[sources/notes-ccpp]] | C/C++ 技术笔记：序列化、智能指针深度分析、堆栈对象创建策略、移动语义 | 2026-05 | github |
+| [[sources/cpp-modern-skills]] | Modern C++ Skills (C++17+Master): 26 skills covering ownership, templates, type-driven design, error handling, concurrency, DDD, performance, ecosystem, lifecycle | 2026-05 | github |
 | [[sources/notes-datastructure]] | 数据结构与算法：复杂度分析、线性结构、排序、DP、递归、哈希表、树与图（21章节+真题训练） | 2026-05 | github |
 | [[sources/notes-design-patterns]] | 设计模式：SOLID原则、创建型5种、结构型7种、行为型11种共23种设计模式 | 2026-05 | github |
 | [[sources/notes-interview]] | 面试准备：方法论、问题解决模式、系统设计基础、NP完全性、位操作、进阶数据结构 | 2026-05 | github |

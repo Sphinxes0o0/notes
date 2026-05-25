@@ -4,6 +4,34 @@ tags: [log]
 created: 2026-01-01
 ---
 
+## [2026-05-25] ingest | Batch H: Modern-Cpp-Skills C++17 + Master (26 skills)
+
+- **来源**: raw/Modern-Cpp-Skills/ (26 SKILL.md files)
+  - C++17 skills (13): c17-01-ownership, c17-02-resource, c17-03-mutability, c17-04-templates, c17-05-type-driven, c17-06-error-handling, c17-07-concurrency, c17-09-domain, c17-10-performance, c17-11-ecosystem, c17-12-lifecycle, c17-13-domain-error, cpp-skill-creator
+  - Master skills (15): m01-ownership, m02-resource, m03-mutability, m04-zero-cost, m05-type-driven, m06-error-handling, m07-concurrency, m09-domain, m10-performance, m11-ecosystem, m12-lifecycle, m13-domain-error, m14-mental-model, m15-anti-pattern
+- **操作**:
+  - 创建 28 个 entity 页面: wiki/entities/cpp/modern/{c17-01..13, m01..15, cpp-skill-creator}.md
+  - 创建 1 个 source 页面: wiki/sources/cpp-modern-skills.md
+  - 创建 1 个 module index: wiki/cpp-modern-index.md
+- **更新**: wiki/home.md (cpp-modern-index 入口 + cpp-modern-skills 源 + 頁面數 ~257→~285), log.md
+- **核心概念**: 
+  - C++17 Skills: if constexpr, std::variant, std::string_view, std::shared_mutex, scoped_lock, CTAD, PMR, DDD (Value Object/Entity/Aggregate), type-state pattern, domain events, exception hierarchies
+  - Master Skills: Error → Design Question 框架, Trace Up/Down 推理, Core Question 模式, ownership/resource/mutability/zero-cost/type-driven/error/concurrency/domain/performance/ecosystem/lifecycle/mental-model/anti-pattern 思維模型
+- **交叉引用策略**: 與現有 cpp entity（move-semantics, raii, smart-pointers, concurrency, constexpr, if-constexpr, variadic-templates, cpp20-features, cpp-safety, cpp-perf-optimization, stl-containers, stl-string）互鏈，確保 ≥2 wikilinks 每 entity
+
+## [2026-05-25] ingest | Batch G: safeos-architecture SafeOS Architecture & Design
+
+- **来源**: raw/safeos/ (7 篇文档)
+  - architecture_notes.md, plan.md, NSv_analysis.md, network_implementation_analysis.md
+  - packet_mmap_design.md, af_packet_mmap_summary.md, memory/safeos_vdf_nids.md
+- **操作**:
+  - 创建 4 个 entity 页面: safeos-nsv, safeos-network-implementation, safeos-packet-mmap, safeos-vdf-nids-relation
+  - 创建 1 个 source 页面: wiki/sources/safeos-architecture.md
+  - 创建 1 个 module index: wiki/safeos-index.md
+  - 更新 wiki/home.md (safeos-index 入口 + safeos-architecture 源, page count ~250→~257)
+- **核心概念**: SafeOS NSv 用户态网络栈架构：3线程模型(event_loop/nic_rx_thread/tcpip_thread)、CMA 96MB+elem_ring 4环、AF-PACKET自定义混合方案(TPACKET+DSPACE，非Linux标准)、VDF nids适配需重写capture backend
+- **关键发现**: SafeOS AF-PACKET非标准实现(tpacket_recv写入DSPACE)、API稳定性差(内部头文件暴露)、无TPACKET_V3支持、无零拷贝(nids decoder兼容但capture层需重写)
+
 ## [2026-05-25] ingest | Batch F: safeos-lwfw LWFW Firewall Analysis
 
 - **来源**: raw/safeos/lwfw_*.md + raw/safeos/lwfw_analysis/ (27 篇文档)
