@@ -2,7 +2,7 @@
 type: entity
 tags: [algorithms, graph, data-structures]
 created: 2026-05-23
-sources: [pdf-algo-ds-books]
+sources: [pdf-algo-ds-books, pdf-algorithms-books]
 ---
 
 # Graph Algorithms

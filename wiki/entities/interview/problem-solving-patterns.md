@@ -2,7 +2,7 @@
 type: entity
 tags: [面试, 算法, 解题模式, LeetCode]
 created: 2026-05-20
-sources: [notes-overview-interview]
+sources: [notes-overview-interview, pdf-algorithms-books]
 ---
 
 # 问题解决模式 (Problem Solving Patterns)

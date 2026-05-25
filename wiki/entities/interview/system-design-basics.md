@@ -2,7 +2,7 @@
 type: entity
 tags: [面试, 系统设计, 架构, 可扩展性]
 created: 2026-05-20
-sources: [notes-overview-interview]
+sources: [notes-overview-interview, pdf-algorithms-books]
 ---
 
 # 系统设计基础 (System Design Basics)

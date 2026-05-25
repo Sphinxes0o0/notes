@@ -2,7 +2,6 @@
 type: source
 source-type: pdf
 created: 2026-05-23
-sources: [pdf-linux-kernel-books]
 title: "Linux Kernel Books (2 books)"
 author: "Daniel P. Bovet, Marco Cesati; Zhao Jiong"
 date: 2026-05-23
@@ -106,6 +105,7 @@ A comprehensive line-by-line Chinese annotation of the Linux kernel v0.12 source
 
 ## Related Pages
 
+- [[kernel-books-index]] — 完整 Linux/Kernel 书籍索引（Batch K 更新）
 - [[kernel-sched-index]] — Scheduler internals
 - [[kernel-mm-index]] — Memory management internals
 - [[kernel-io-index]] — I/O subsystem
@@ -118,3 +118,7 @@ A comprehensive line-by-line Chinese annotation of the Linux kernel v0.12 source
 - [[entities/linux/kernel/block/linux-kernel-block-core]] — Block I/O layer
 - [[os-index]] — Operating system fundamentals
 - [[sys-prog-index]] — System programming
+
+---
+
+> **Batch K (2026-05-25)**: 本批次 ingest 确认 2 册 Linux 内核书籍均为存量内容（深入理解Linux内核 + linux内核注释），新增系统编程书籍 TLPI/APUE/CSAPP 已单独建源页面（pdf-the-linux-programming-interface / pdf-unix-environment-advanced-programming / pdf-computer-systems-programmers-perspective），相关核心概念实体已建立（virtual-memory-systems / process-management-model / machine-code-programmers-perspective）。

@@ -2,7 +2,7 @@
 type: entity
 tags: [数据结构, 哈希表, 散列表, O(1)查找]
 created: 2026-05-20
-sources: [notes-overview-datastructure]
+sources: [notes-overview-datastructure, pdf-algorithms-books]
 ---
 
 # 哈希表 (Hash Table)

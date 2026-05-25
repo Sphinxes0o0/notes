@@ -59,8 +59,8 @@ tags: [security, crypto, mbedtls, tls, dtls, openssl, iot, pkcs, x509, pki]
 
 ## 相关页面
 - [[entities/security/mbedtls-crypto]]
-- [[entities/security/bulletproof-tls-pki]]
-- [[entities/security/openssl-tls-library]]
+- [[entities/linux/security/bulletproof-tls-pki]]
+- [[entities/linux/security/openssl-tls-library]]
 - [[entities/security/commercial-cryptography]]
 - [[security-index]]
 - [[kernel-subsystems-index]]

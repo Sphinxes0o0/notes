@@ -20,7 +20,7 @@ sources: [cpp-modern-skills]
 | 問題 | 設計問題 |
 |------|----------|
 | **Uncaught Exception** | 是否忘記了 catch，或在 `noexcept` 中拋出？ |
-| **Silent Failure** | 是否忽略了返回碼？（使用 `[[nodiscard]]`） |
+| **Silent Failure** | 是否忽略了返回碼？（使用 ``nodiscard``） |
 | **Destructor Throw** | 從不在析構函數中拋出（`std::terminate`）|
 
 ## Thinking Prompt

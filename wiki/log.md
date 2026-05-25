@@ -1,8 +1,112 @@
 ---
+type: journal
+tags: [log]
+created: 2026-05-22
+---
+
+
+## [2026-05-25] ingest | Batch M: C++ Slides
+- Created sources/pdf-cpp-slides.md (18 conference talks)
+- C++ evolution (Bjarne/Michael), AI security (David Sankel), compilers (MLIR/RISC-V)
+---
 type: log
 tags: [log]
 created: 2026-01-01
 ---
+
+## [2026-05-25] ingest | Batch K: Linux/Kernel/ARM Books (11 PDFs) — summary only
+
+**来源**: raw/PDFs/books/ (11 PDFs assessed, summary only)
+
+**Linux/Kernel Books (7):**
+- Linux高性能服务器编程.pdf — 高性能服务器, 网络编程
+- Linux多线程服务端编程：使用muduo C++网络库.pdf — 多线程, muduo, C++
+- The Linux Programming Interface.pdf — TLPI, Michael Kerrisk, 1556p
+- UNIX环境高级编程(第三版).pdf — APUE, Stevens & Rago, 822p
+- linux内核注释.pdf — 内核0.12源码注释
+- 深入理解Linuxkenrle.pdf — 内核深入分析
+- perfbook-e2-rc11.pdf — Linux性能优化, RCU
+
+**ARM Books (4):**
+- DDI0388H_cortex_a9_r4p0_trm.pdf — Cortex-A9 TRM
+- DDI0487Fc_armv8_arm.pdf — ARMv8 ARM
+- DDI0487_M_a_a_a-profile_architecture_reference_manual.pdf — ARM A-profile
+- 手机安全和可信应用开发指南：TrustZone与OP-TEE技术详解.pdf — TrustZone/OP-TEE
+
+**操作**:
+- 创建 1 个 source 页面: wiki/sources/pdf-linux-kernel-books.md (汇总页)
+- 更新 wiki/kernel-books-index.md (添加 ARM 章节 + ARM Entities)
+- 现有 home.md source entry 已存在 (pdf-linux-kernel-books 2026-05-25 entry)
+
+**Note**: Batch K 仅做汇总，未提取 PDF 文本，未创建 entity 页面
+
+## [2026-05-25] ingest | Batch L: Algorithms & Interviews (8 PDFs)
+
+**来源**: raw/PDFs/books/ (8 PDFs)
+
+**书目**:
+- Data Structures & Algorithms in C++, 2nd Ed — Goodrich/Tamassia/Mount (17.8 MB, 文本)
+- Data Structures & Algorithms in C++, 3rd Ed — Goodrich/Tamassia/Mount (44.0 MB, 文本)
+- Algorithms in C, 3rd Ed (Full) — Robert Sedgewick (30.4 MB, 扫描)
+- Algorithms in C, 3rd Ed — Part 5: Graph Algorithms — Robert Sedgewick (1.1 MB, 扫描)
+- The Art of Computer Programming, Vol.1: Fundamental Algorithms, 3rd Ed — Donald E. Knuth (6.7 MB, 文本)
+- 我的第一本算法书 — 石田保辉/宫崎修一 (8.9 MB, 文本)
+- Cracking the Coding Interview, 6th Ed — Gayle Laakmann McDowell (56.4 MB, 文本)
+- Elements of Programming Interviews (EPI) — Aziz/Lee/Prakash (1.1 MB, 文本)
+
+**操作**:
+- 更新 1 个 source 页面: wiki/sources/pdf-algorithms-books.md (修正书名/作者/大小信息)
+
+**核心概念覆盖**:
+- DS&A: 数组/链表/栈/队列/哈希/树/图 + O(n)分析
+- 图算法: DFS/BFS/MST/最短路径/网络流
+- 面试: CTCI 189题 + EPI 16章 + 双指针/滑动窗口/DP模式
+- TAOCP: MMIX/信息结构/递归/栈与子程序
+
+**交叉引用**: datastructure-index (graph-algorithms/entity), interview-index (pdf-algorithms-books)
+
+## [2026-05-25] ingest | Batch J: C/C++ Core Programming (16 PDFs) — 15 extracted, 1 scanned skip
+
+**来源**: raw/PDFs/books/ (16 PDFs assessed, 15 text-extracted, 1 image-only)
+
+**C++ Modern (6 books):**
+- Cpp17.pdf → merged to pdf-cpp-modern-books.md (C++17 Complete Guide)
+- ModernC.pdf → merged to pdf-cpp-modern-books.md (Modern C by Jens Gustedt)
+- Professional-C++-6ed-zh-20241122.pdf → merged to pdf-cpp-modern-books.md
+- The.Book.of.Modern.C++.-.Electronic.Edition.pdf → merged to pdf-cpp-modern-books.md
+- 21st-Century-C++.pdf → merged to pdf-cpp-modern-books.md
+- modern-cpp-tutorial-zh-cn.pdf → existing source pdf-cpp-modern-tutorial.md (83p, C++11/14/17/20)
+
+**C++ Templates (3 books):**
+- C++模板_第二版.pdf → merged to pdf-cpp-templates-books.md
+- C++-Templates-The-Complete-Guide-zh-20220903.pdf → merged to pdf-cpp-templates-books.md
+- Template-Metaprogramming-with-C++-cn-20230401.pdf → merged to pdf-cpp-templates-books.md
+
+**C++ Concurrency (3 books):**
+- Concurrency.with.Modern.C++-zh.pdf → merged to pdf-cpp-concurrency.md
+- C++并发编程指南.pdf → merged to pdf-cpp-concurrency.md (C++ Concurrency in Action)
+- threads-locks.pdf → merged to pdf-concurrency-perf.md (OSEP Threads & Locks)
+
+**C++ Performance & Memory (4 books):**
+- C++性能优化指南.pdf → merged to pdf-cpp-perf-memory.md + pdf-cpp-perf-books.md
+- Advanced_Memory_Management_in_Modern_Cpp.pdf → merged to pdf-cpp-perf-memory.md
+- Large-Scale C++ Software Design.pdf → merged to pdf-cpp-modern-books.md + pdf-cpp-perf-books.md
+
+**Skipped (Image-Only):**
+- STL源码剖析简体中文完整版(清晰扫描带目录).pdf → **扫描版，无法提取文本，跳过**
+
+**操作:**
+- 创建 1 个 module index: wiki/cpp-books-index.md (C++ Books 聚合索引)
+- 更新 wiki/home.md (添加 cpp-books-index 入口，页数 ~296→~297，indexes 23→24)
+
+**Source 页面状态:**
+- pdf-cpp-modern-books.md: 6册已覆盖
+- pdf-cpp-modern-tutorial.md: 已存在
+- pdf-cpp-templates-books.md: 3册已覆盖
+- pdf-cpp-concurrency.md: 2册已覆盖
+- pdf-concurrency-perf.md: threads-locks 已合并
+- pdf-cpp-perf-memory.md: 4册已覆盖
+- pdf-cpp-perf-books.md: 2册已覆盖
 
 ## [2026-05-25] ingest | Batch I: Security/Crypto PDFs — eBPF安全 papers + TLS/mbedtls books
 

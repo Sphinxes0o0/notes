@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-25 | Total pages: ~296 | Module indexes: 23
+> Last updated: 2026-05-25 | Total pages: ~367 | Module indexes: 25
 
 ---
 
@@ -27,6 +27,7 @@ created: 2026-05-22
 | [[kernel-sched-index]] | CFS, context switch, load balancing | 4 |
 | [[kernel-block-index]] | bio/request, blk-mq, IO schedulers | 3 |
 | [[kernel-subsystems-index]] | Crypto, locking, IPC, RCU, time, sound | 6 |
+| [[kernel-books-index]] | Linux/Kernel书籍索引：内核/TLPI/APUE/CSAPP/网络/并发 (9 books) | 3 |
 | [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem, saBPF, Security Observability | 7 |
 
 ### Embedded Network
@@ -60,6 +61,8 @@ created: 2026-05-22
 | [[interview-index]] | Coding patterns, system design basics | 3 |
 | [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
 | [[cpp-modern-index]] | Modern C++ Skills (C++17+Master): 13 C++17 skills + 15 Master mental models | 28 |
+| [[cpp-books-index]] | C++ Books: Modern/Templates/Concurrency/Performance/Memory/Design (16 PDFs) | 14 |
+| [[cpp-slides-index]] | C++ Conference Talks (Batch M, 12 talks): Bjarne/AI标准化/安全/嵌入式/测试/编译器 | 12 |
 | [[rust-index]] | Rust language: ownership, borrowing, lifetimes, traits, concurrency | 1 |
 | [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
 | [[math-index]] | 非线性动力学与混沌 | 1 |
@@ -113,7 +116,7 @@ created: 2026-05-22
 | [[sources/notes-openbmc]] | OpenBMC 深度技术分析：硬件控制、安全、Redfish、IPMI、启动更新 | 2026-05 | github |
 | [[sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
 | [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
-| [[sources/pdf-cpp-slides]] | C++ Conference Talks 合集5讲：反射(Bloomberg)、安全防御(Adobe/Bloomberg)、PolarDB性能优化(阿里)、xLLM推理(C++框架) | 2026-05 | pdf |
+| [[sources/pdf-cpp-slides]] | C++ Conference Talks Batch M (18 talks)：Bjarne/AI标准化/安全/反射/对象生存期/嵌入式/MLIR fuzz/性能优化/编译器/存储 | 2026-05 | pdf |
 | [[sources/pdf-cpp-ai-inference]] | AI推理与MLIR编译优化：RTP-LLM(阿里)、xLLM、DeepSeek SGLang优化、MLIR Actor编译器 | 2026-05 | pdf |
 | [[sources/pdf-cpp-compiler-toolchain]] | 编译器与工具链：MLIR fuzzing、RISC-V AI编译器、多元AI算子库、编译技术在AI软件栈的实践 | 2026-05 | pdf |
 | [[sources/pdf-cpp-perf-engineering]] | 高性能C++工程：缓存/分布式计算加速、内核Btree块缓存、异构传输库优化 | 2026-05 | pdf |
@@ -131,6 +134,9 @@ created: 2026-05-22
 | [[sources/pdf-cpp-concurrency]] | C++ 并发编程 2册：Concurrency with Modern C++ + C++ Concurrency in Action | 2023 | pdf |
 | [[sources/pdf-cpp-perf-books]] | C++性能优化与架构2册：Optimized C++ (string/algorithm/memory优化) + Large-Scale C++ Software Design (物理设计/组件/层级) | 2016-2019 | pdf |
 | [[sources/pdf-c-language]] | C 语言编程 2册：K&R C 第2版 + C in a Nutshell 第2版 | 2015 | pdf |
+| [[sources/pdf-the-linux-programming-interface]] | TLPI (Michael Kerrisk, 1556页)：Linux/UNIX系统编程百科，500+系统调用，64章节覆盖进程/线程/内存/IPC/网络 | 2026-05 | pdf |
+| [[sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程，POSIX标准系统编程经典（扫描版） | 2026-05 | pdf |
+| [[sources/pdf-computer-systems-programmers-perspective]] | CS:APP (Bryant & O'Hallaron, 1078页)：计算机系统程序员视角，机器码/缓存/虚拟内存/链接/并发，CMU 15-213 教材 | 2026-05 | pdf |
 | [[sources/pdf-linux-sysprog]] | Linux系统编程4册：TLPI+APUE+Unix工具+CSAPP深入理解计算机系统 | 2026-05 | pdf |
 | [[sources/pdf-linux-kernel-books]] | Linux内核2册：深入理解Linux内核(架构)+Linux内核0.12完全注释 | 2026-05 | pdf |
 | [[sources/pdf-linux-net-server]] | Linux网络/服务端3册：高性能服务器+muduo多线程编程+LwIP协议栈源码 | 2026-05 | pdf |
@@ -151,6 +157,7 @@ created: 2026-05-22
 | [[sources/notes-sys]] | 系统编程：TTY/Shell/Console体系、ELF文件格式、Linux IPC、单例模式 | 2026-05 | github |
 | [[sources/pdf-algo-ds-books]] | 算法与数据结构7册：Sedgewick图算法、TAOCP Vol.1、邓俊辉数据结构、基础集合论 | 2026-05 | pdf |
 | [[sources/pdf-interview-books]] | 编程面试2册：Cracking the Coding Interview 6th + EPI | 2026-05 | pdf |
+| [[sources/pdf-algorithms-books]] | 算法与面试书籍合集8册：Sedgewick算法+图算法卷、Goodrich DS&A 2nd+3rd、Knuth TAOCP、石田算法书、CTCI 6th、EPI | 2026-05 | pdf |
 | [[sources/pdf-epi-python]] | Python编程面试书：DS&A (数组/链表/树/图/哈希)、设计问题、OOD、Python 3实现 | 2017 | pdf |
 | [[sources/pdf-security-crypto-books]] | 安全与密码学6册：Bulletproof TLS/PKI、mbedtls、TrustZone/OP-TEE、商用密码考核 | 2026-05 | pdf |
 | [[sources/pdf-security-crypto-books-updated]] | 安全与密码学更新3册：mbedtls开发实战、OpenSSL攻略、Bulletproof TLS/PKI | 2026-05 | pdf |

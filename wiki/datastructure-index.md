@@ -26,4 +26,9 @@ created: 2026-05-22
 
 - [[interview-index]] — DSA is the core of technical interview preparation
 - [[sys-prog-index]] — System programming requires understanding of data structure performance tradeoffs
-- [[pdf-dataview]] — Dataview query index for PDF sources in this wiki
+- `pdf-dataview` — Dataview query index for PDF sources in this wiki
+- [[sources/pdf-algorithms-books]] — 算法与面试书籍合集（8册）：Sedgewick图算法、Goodrich C++ DS&A、Knuth TAOCP、邓俊辉数据结构、石田算法书、CTCI、EPI
+
+## Sources
+
+- [[sources/pdf-algorithms-books]] — 8册算法/数据结构/面试经典书籍（2026-05）

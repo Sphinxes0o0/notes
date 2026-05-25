@@ -2,7 +2,7 @@
 type: entity
 tags: [算法, 动态规划, 最优子结构]
 created: 2026-05-20
-sources: [notes-overview-datastructure]
+sources: [notes-overview-datastructure, pdf-algorithms-books]
 ---
 
 # 动态规划 (Dynamic Programming)

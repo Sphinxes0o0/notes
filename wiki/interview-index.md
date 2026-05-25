@@ -22,3 +22,8 @@ created: 2026-05-22
 - [[design-patterns-index]] — SOLID and design patterns are key interview topics
 - [[sys-prog-index]] — System design interviews draw heavily on OS, networking, and C/C++ knowledge
 - [[sources/pdf-interview-books]] — Cracking the Coding Interview + EPI books
+- [[sources/pdf-algorithms-books]] — 算法与面试书籍合集（8册）：CTCI 6th (189题)、EPI面试、Knuth TAOCP、Sedgewick图算法
+
+## Sources
+
+- [[sources/pdf-algorithms-books]] — 8册算法/数据结构/面试经典书籍（2026-05）

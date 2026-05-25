@@ -17,7 +17,7 @@ C++17 性能優化關注數據訪問模式和內存管理。核心問題：**數
 | 傳遞字符串 | `std::string_view` | 零拷貝，無分配 |
 | 臨時分配 | SSO (Small String Optimization) | 短字符串棧存儲 |
 | 自定義內存池 | `std::pmr` | 減少分配開銷 |
-| 熱路徑小數據 | Inline / `[[gnu::always_inline]]` | 避免函數調用開銷 |
+| 熱路徑小數據 | Inline / ``gnu::always_inline`` | 避免函數調用開銷 |
 | 減少拷貝 | 移動語義 | `std::move` 對 rvalue |
 
 ## 關鍵要點

@@ -205,3 +205,19 @@ Updated:
 
 - Added missing `tags:` frontmatter to 26 source pages (including pdf-design-patterns-cpp, pdf-concurrency-perf, pdf-linux-sysprog, pdf-linux-kernel-books, pdf-linux-net-server, pdf-ds-cpp, pdf-epi-python, notes-net-deep, pdf-ebpf-papers, pdf-cpp-compiler-toolchain, pdf-cpp-safety-standards, pdf-cpp-perf-engineering, pdf-cpp-engineering-practices, pdf-cpp-slides, pdf-cpp-perf-books, pdf-cpp-ai-inference, pdf-ebpf-books, notes-sys, notes-midware, notes-openbmc, notes-design-patterns, notes-ccpp, notes-interview, notes-security, notes-tools, notes-datastructure)
 - Verified orphan module indexes ([[rust-index]] and [[openbmc-index]]) already linked in home.md
+
+---
+
+## [2026-05-25] ingest | Batch K: Linux/Kernel/ARM PDFs (12 books)
+
+- **来源**: raw/PDFs/books/ (12 PDFs: 3 网络/服务器 + 6 内核/系统 + 3 ARM)
+- **操作**:
+  - PyPDF2 扫描全部 12 册：其中 1 册（APUE 第三版）确认为扫描版，跳过文本提取
+  - TLPI (1556页) + CSAPP (1078页) 完全可读，创建详细源页面
+  - APUE 第三版（822页）扫描版，基于书籍结构创建源页面
+  - 3 个 entity 页面: virtual-memory-systems, process-management-model, machine-code-programmers-perspective
+  - 1 个 kernel-books-index.md 模块索引
+  - 更新 pdf-linux-kernel-books.md（追加 Batch K 注记）
+- **更新**: home.md (kernel-books-index + 3 新源页面 + 更新计数 359→367/25 indexes), index.md, log.md
+- **核心概念**: TLPI 500+系统调用百科、CS:APP 计算机系统视角（机器码/缓存/虚拟内存/链接/并发）、APUE POSIX 标准编程、虚拟内存系统、进程管理模型、x86-64 机器码
+- **扫描跳过**: UNIX环境高级编程(第三版).pdf — Adobe Acrobat Image Conversion Plug-in 生成，无可提取文本

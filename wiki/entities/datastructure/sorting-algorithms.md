@@ -2,7 +2,7 @@
 type: entity
 tags: [数据结构, 排序算法, 算法]
 created: 2026-05-20
-sources: [notes-overview-datastructure]
+sources: [notes-overview-datastructure, pdf-algorithms-books]
 ---
 
 # 排序算法 (Sorting Algorithms)

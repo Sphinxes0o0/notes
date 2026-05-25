@@ -21,6 +21,7 @@ created: 2026-05-22
 | [[wiki/kernel-sched-index]] | CFS, context switch, load balancing |
 | [[wiki/kernel-block-index]] | bio/request, blk-mq, IO schedulers |
 | [[wiki/kernel-subsystems-index]] | Crypto, locking, IPC, RCU, time, sound |
+| [[wiki/kernel-books-index]] | Linux/Kernel书籍索引：内核/TLPI/APUE/CSAPP/网络/并发 (9 books) |
 | [[wiki/ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem |
 
 ### Emulation
@@ -85,6 +86,9 @@ created: 2026-05-22
 | [[wiki/sources/notes-midware]] | 中间件：DoIP协议（ISO 13400）、SOME/IP服务通信、vSOME/IP开源实现 |
 | [[wiki/sources/notes-security]] | 安全工具：Masscan高速端口扫描、Falco K8s安全监控、Snort 3 NIDS |
 | [[wiki/sources/notes-sys]] | 系统编程：TTY/Shell/Console体系、ELF文件格式、Linux IPC |
+| [[wiki/sources/pdf-the-linux-programming-interface]] | TLPI (Kerrisk, 1556页)：Linux/UNIX系统编程百科，500+系统调用 |
+| [[wiki/sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程（扫描版）|
+| [[wiki/sources/pdf-computer-systems-programmers-perspective]] | CS:APP (Bryant & O'Hallaron, 1078页)：计算机系统程序员视角，CMU 15-213 |
 
 ## Synthesis
 | Topic | Description |
