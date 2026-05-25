@@ -80,6 +80,45 @@ detection (规则检测)
   - detection_filter: 检测率过滤
   - Port/Service/Protocol预过滤
 
+### 网络检查器
+- [network_inspectors](/security/nids/snort3/network_inspectors) - 网络层检查器
+  - binder: 流量绑定与服务识别
+  - port_scan: 端口扫描检测
+  - arp_spoof: ARP欺骗检测
+  - normalize: 数据包规范化
+  - perf_monitor: 性能监控
+  - reputation: IP信誉评估
+  - rna: 响应网络分析
+  - appid: 应用识别
+
+### 应用层检查器
+- [service_inspectors](/security/nids/snort3/service_inspectors) - 应用层协议分析
+  - http_inspect: HTTP协议分析与检测
+  - dns: DNS协议分析
+  - smtp/ftp_telnet/ssh/ssl: 邮件/文件传输/远程访问/加密
+  - dce_rpc: DCE/RPC协议分析
+  - sip: VoIP协议分析
+  - wizard: 协议自动检测
+
+### 连接器与侧信道
+- [connectors_and_side_channel](/security/nids/snort3/connectors_and_side_channel) - 通信机制
+  - TcpConnector: TCP连接器
+  - FileConnector: 文件连接器
+  - UnixDomainConnector: Unix域Socket连接器
+  - SideChannel: 带外通信框架
+
+### 事件、动作与日志
+- [events_actions_loggers](/security/nids/snort3/events_actions_loggers) - 响应与输出
+  - Event: 事件封装
+  - IpsAction: 动作系统(alert/drop/block/reject/pass)
+  - Logger: 日志输出(alert_json/alert_csv/unified2)
+
+### 内存管理与性能分析
+- [memory_profiler_target_based](/security/nids/snort3/memory_profiler_target_based) - 资源管理
+  - MemoryCap: 内存容量管理
+  - Profiler: 时间/规则/内存性能分析
+  - HostAttributes: 目标主机属性策略
+
 ## 相关文档
 
 - [Snort3 整体架构分析](/security/nids/snort3_architecture_analysis) - 完整架构概览
