@@ -5,7 +5,7 @@ created: 2026-05-22
 
 # LLM Wiki
 
-> **157 pages. 26 module indexes.**
+> **~95 pages. 15 module indexes.**
 > Each module index acts as a sub-hub in the Obsidian graph view.
 
 ## Module Indexes
@@ -33,21 +33,6 @@ created: 2026-05-22
 |-------|--------|
 | [[wiki/os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems |
 
-### Exercise Science
-| Index | Domain |
-|-------|--------|
-| [[wiki/supplements-index]] | Curcumin, CoQ10 |
-| [[wiki/physiology-index]] | Muscle hypertrophy, mTOR, MPS, VO2max, lactate threshold |
-| [[wiki/nutrition-index]] | Protein, carbs, omega-3, ketogenic diet |
-| [[wiki/running-index]] | Running economy, trail running, ultra-endurance |
-| [[wiki/training-index]] | Periodization, tapering, training methods |
-| [[wiki/biomechanics-index]] | Gait analysis, running shoes |
-| [[wiki/exercise-health-index]] | Exercise as medicine, chronic disease |
-| [[wiki/obesity-index]] | Obesity & visceral fat: 5-system impact, 23 papers |
-| [[wiki/technology-index]] | Wearable devices, HRV, running power meters, AI/ML training |
-| [[wiki/kinesiology-tape-index]] | Kinesiology tape: mechanism, clinical evidence, pain management |
-| [[wiki/population-index]] | Youth, master, female, elite runners; population-specific training |
-
 ### Programming & Algorithms
 | Index | Domain |
 |-------|--------|
@@ -66,13 +51,6 @@ created: 2026-05-22
 ## Sources
 | Source | Description |
 |--------|-------------|
-| [[wiki/sources/relay-neuron-supplements]] | 姜黄素与辅酶Q10补剂深度研究 |
-| [[wiki/sources/relay-neuron-physiology]] | 运动生理学研究：肌肥大、mTOR、BFR、VO2max |
-| [[wiki/sources/relay-neuron-obesity-literature]] | 中国肥胖文献分析：23篇，五大系统 |
-| [[wiki/sources/relay-neuron-technology]] | 可穿戴设备、HRV监控、跑步功率计、AI/ML预测、实时生理监控（10主题）|
-| [[wiki/sources/relay-neuron-kinesiology-tape]] | 运动肌贴原理、肌肉力量、关节稳定性、临床应用（5主题）|
-| [[wiki/sources/relay-neuron-population-specific]] | 青少年、中老年、女性、精英、休闲跑者专项研究（6主题）|
-| [[wiki/sources/relay-neuron-training-methods]] | 间歇、节奏跑、LSD、阈值、坡度训练综合（5主题）|
 | [[wiki/sources/notes-net-deep]] | 网络深度笔记：skbuff/NAT/路由 Trie/PHY-MAC/Conntrack/全栈 |
 | [[wiki/sources/notes-network-fundamentals]] | Linux 网络协议实现笔记 |
 | [[wiki/sources/notes-netfilter]] | Linux Netfilter/iptables/nftables/conntrack |
