@@ -2,6 +2,7 @@
 type: source
 source-type: pdf
 created: 2026-05-25
+sources: []
 tags: [books, reference, c, rust, math, software-engineering]
 title: "Remaining Reference Books (13 volumes)"
 date: 2026-05

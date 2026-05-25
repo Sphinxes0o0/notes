@@ -3,7 +3,7 @@ type: source
 source-type: slides
 created: 2026-05-25
 tags: [cpp, compiler, slides, ai, mlir, risc-v]
-title: "C++ & Compiler Conference Slides (18 talks)"
+title: "C++ & Compiler Conference Slides (21 talks)"
 date: 2026-05
 size: medium
 path: raw/PDFs/slides/
