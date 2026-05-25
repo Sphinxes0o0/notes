@@ -2,7 +2,6 @@
 type: source
 tags: [network-security, ptp, time-sync, smart-grid, tsn]
 created: 2026-05-23
-sources:
 title: "PTPsec: Securing PTP Against Time Delay Attacks Using Cyclic Path Asymmetry Analysis"
 author: "Andreas Finkenzeller, Oliver Butowski, Emanuel Regnath, Mohammad Hamad, Sebastian Steinhorst"
 date: 2024

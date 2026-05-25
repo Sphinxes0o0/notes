@@ -42,6 +42,12 @@ created: 2026-05-22
 | [[wiki/cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms |
 | [[wiki/sys-prog-index]] | C/C++, Linux, middleware, security |
 
+### C++ Frameworks & Libraries
+| Index | Domain |
+|-------|--------|
+| [[wiki/workflow-index]] | Sogou Workflow async engine: HTTP/Redis/MySQL/Kafka/DNS |
+| [[wiki/cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms |
+
 ### Tools & BMC
 | Index | Domain |
 |-------|--------|
@@ -71,6 +77,7 @@ created: 2026-05-22
 | [[wiki/sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers) |
 | [[wiki/sources/pdf-ebpf-books]] | eBPF书籍3册: 龙蜥白皮书+技术实践+Liz Rice入门 |
 | [[wiki/sources/pdf-ebpf-papers]] | eBPF论文7篇: Thomas Graf微内核愿景+Apple Falco+Google审计+Black Hat |
+| [[wiki/sources/workflow-engine]] | Sogou Workflow C++ 异步引擎：架构核心17篇+教程18篇，13种协议支持 |
 | [[wiki/sources/notes-ccpp]] | C/C++ 技术笔记：序列化、智能指针、堆栈对象创建、移动语义 |
 | [[wiki/sources/notes-datastructure]] | 数据结构与算法：复杂度、线性结构、排序、DP、递归、哈希表、树与图 |
 | [[wiki/sources/notes-design-patterns]] | 设计模式：SOLID、创建型5种、结构型7种、行为型11种共23种 |

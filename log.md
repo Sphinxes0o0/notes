@@ -4,6 +4,19 @@
 
 ---
 
+## [2026-05-25] ingest | Batch I: Sogou Workflow Engine (C++ async framework)
+
+- **来源**: raw/workflow/ (36 docs: 17 architecture + 18 tutorials + 1 xmake)
+- **操作**:
+  - 创建 17 个 architecture entity pages: workflow-async-model, workflow-go-task, workflow-counter, workflow-timer, workflow-selector, workflow-conditional, workflow-module-task, workflow-graph-task, workflow-resource-pool, workflow-config, workflow-error-handling, workflow-exit-handling, workflow-timeout, workflow-upstream, workflow-service-governance, workflow-tlv-message, workflow-dns, workflow-connection-context, workflow-benchmark, workflow-known-bugs
+  - 创建 8 个 tutorial entity pages: workflow-network-client, workflow-parallel-tasks, workflow-compute-tasks, workflow-http-server, workflow-user-defined-protocol, workflow-name-service, workflow-redis-features, workflow-dns-server
+  - 创建 1 个 source page: wiki/sources/workflow-engine.md
+  - 创建 1 个 module index: wiki/workflow-index.md
+- **更新**: index.md (workflow-index + workflow-engine source), log.md
+- **核心概念**: Sogou Workflow C++ 异步引擎，13+ 协议支持 (HTTP/Redis/MySQL/Kafka/DNS)，DAG 任务模型，Upstream 负载均衡与熔断，性能 500K QPS
+
+---
+
 ## [2026-05-25] ingest | Batch D: safeos-lwip-core lwIP Core Network Protocol
 
 - **来源**: raw/safeos/lwip_*.md (~28 分析文档)

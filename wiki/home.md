@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-25 | Total pages: ~285 | Module indexes: 23
+> Last updated: 2026-05-25 | Total pages: ~296 | Module indexes: 23
 
 ---
 
@@ -69,15 +69,13 @@ created: 2026-05-22
 | Index | Domain | Entities |
 |-------|--------|----------|
 | [[security-index]] | 商用密码(SM2/3/4)、mbedtls、TLS/DTLS、PKI | 2 |
+
+### C++ Frameworks & Libraries
 | Index | Domain | Entities |
 |-------|--------|----------|
-| [[datastructure-index]] | DSA: complexity, linear, sorting, DP, recursion, hash, trees | 7 |
-| [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
-| [[interview-index]] | Coding patterns, system design basics | 3 |
+| [[workflow-index]] | Sogou Workflow async engine: HTTP/Redis/MySQL/Kafka/DNS | 28 |
 | [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
 | [[cpp-modern-index]] | Modern C++ Skills (C++17+Master): 13 C++17 skills + 15 Master mental models | 28 |
-| [[rust-index]] | Rust language: ownership, borrowing, lifetimes, traits, concurrency | 1 |
-| [[sys-prog-index]] | C/C++, Linux, middleware, security | 4 |
 
 ### Tools & BMC
 | Index | Domain | Entities |
@@ -149,11 +147,16 @@ created: 2026-05-22
 | [[sources/notes-interview]] | 面试准备：方法论、问题解决模式、系统设计基础、NP完全性、位操作、进阶数据结构 | 2026-05 | github |
 | [[sources/notes-midware]] | 中间件：DoIP协议（ISO 13400）、SOME/IP服务通信、vSOME/IP开源实现 | 2026-05 | github |
 | [[sources/notes-security]] | 安全工具：Masscan高速端口扫描、Falco K8s运行时安全、Snort 3 NIDS架构分析 | 2026-05 | github |
+| [[sources/workflow-engine]] | Sogou Workflow C++ 异步引擎：架构核心17篇+教程18篇，13种协议支持 | 2026-05 | github |
 | [[sources/notes-sys]] | 系统编程：TTY/Shell/Console体系、ELF文件格式、Linux IPC、单例模式 | 2026-05 | github |
 | [[sources/pdf-algo-ds-books]] | 算法与数据结构7册：Sedgewick图算法、TAOCP Vol.1、邓俊辉数据结构、基础集合论 | 2026-05 | pdf |
 | [[sources/pdf-interview-books]] | 编程面试2册：Cracking the Coding Interview 6th + EPI | 2026-05 | pdf |
 | [[sources/pdf-epi-python]] | Python编程面试书：DS&A (数组/链表/树/图/哈希)、设计问题、OOD、Python 3实现 | 2017 | pdf |
 | [[sources/pdf-security-crypto-books]] | 安全与密码学6册：Bulletproof TLS/PKI、mbedtls、TrustZone/OP-TEE、商用密码考核 | 2026-05 | pdf |
+| [[sources/pdf-security-crypto-books-updated]] | 安全与密码学更新3册：mbedtls开发实战、OpenSSL攻略、Bulletproof TLS/PKI | 2026-05 | pdf |
+| [[sources/pdf-security-papers-ebpf]] | eBPF安全论文3篇：Rootkit攻防(2024)、Apple Falco运行时检测(2021)、Google KRSI审计 | 2021-2024 | pdf |
+| [[sources/pdf-isovalent-security-observability]] | Isovalent O'Reilly报告：eBPF Four Golden Signals云原生安全可观测性(Cilium/Hubble) | 2022 | pdf |
+| [[sources/pdf-sabpf-container-audit]] | saBPF SoCC 2021论文：eBPF容器级LSM审计，零内核修改，provenance追踪 | 2021 | pdf |
 | [[sources/pdf-arm-architecture]] | ARM体系结构4册：Armv8/Armv9参考手册、Cortex-A9 TRM、量化研究方法 | 2026-05 | pdf |
 | [[sources/pdf-misc-books]] | 杂项3册：人月神话、非线性动力学与混沌、偏微分方程 | 2026-05 | pdf |
 

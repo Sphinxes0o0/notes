@@ -4,6 +4,40 @@ tags: [log]
 created: 2026-01-01
 ---
 
+## [2026-05-25] ingest | Batch I: Security/Crypto PDFs — eBPF安全 papers + TLS/mbedtls books
+
+**来源**: raw/PDFs/papers/ + raw/PDFs/books/ (11 PDFs assessed, 9 extracted)
+
+**Papers (6 PDFs):**
+- 2024-INFOCOM-PTPsec.pdf → source: pdf-ptp-security (更新现有)
+- isovalent_security_observability.pdf → source: pdf-isovalent-security-observability (新建)
+- 2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf → source: pdf-sabpf-container-audit (新建)
+- Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf → 合并到 pdf-security-papers-ebpf
+- Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf → 合并到 pdf-security-papers-ebpf
+- Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf → 合并到 pdf-security-papers-ebpf
+
+**Books (5 PDFs):**
+- 密码技术与物联网安全mbedtls开发实战.pdf → 合并到 pdf-security-crypto-books-updated
+- openssl-cookbook-中文版.pdf → 合并到 pdf-security-crypto-books-updated
+- 图解密码技术 第三版.pdf → **image-only，无法提取文本，跳过**
+- bulletproof-tls-and-pki-2nbsped-9781907117091.pdf → 合并到 pdf-security-crypto-books-updated
+- 商用密码应用安全性评估考核题.pdf → **AES加密阻挡提取，跳过**
+
+**操作:**
+- 创建 4 个 entity 页面: linux-security-observability-ebpf, linux-security-ptpsec, bulletproof-tls-pki, openssl-tls-library
+- 创建 4 个 source 页面: pdf-security-papers-ebpf, pdf-isovalent-security-observability, pdf-sabpf-container-audit, pdf-security-crypto-books-updated
+- 更新 security-index.md (entity 2→6, source 1→6)
+- 更新 wiki/home.md (Sources table +4行, page count ~285→~296)
+
+**核心概念:**
+- eBPF安全可观测性：Falco运行时检测、Apple BPF优势、KRSI BPF LSM、Google BPF Atomics/Ringbuffer
+- saBPF容器审计：cgroup命名空间感知、provenance追踪、零内核修改
+- PTPsec时间同步安全：循环路径不对称性分析检测延迟攻击
+- TLS/PKI: TLS 1.3 0-RTT/1-RTT、AEAD、PSK；PKI X.509/证书链/OCSP/CT；常见攻击(BEAST/POODLE/CRIME/BREACH/Sweet32)
+- OpenSSL vs mbedtls: 服务器/桌面 vs 嵌入式/IoT；libcrypto + libssl架构
+
+**交叉引用:** 与 ebpf-index (saBPF/Falco/Isovalent)、kernel-subsystems-index (crypto/time)、security-index 互链
+
 ## [2026-05-25] ingest | Batch H: Modern-Cpp-Skills C++17 + Master (26 skills)
 
 - **来源**: raw/Modern-Cpp-Skills/ (26 SKILL.md files)
