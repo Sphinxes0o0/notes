@@ -1,3 +1,7 @@
+
+## [2026-05-25] ingest | Batch N+O: Remaining Slides & Books
+- N: Updated sources/pdf-cpp-slides.md (12→37 talks)
+- O: Created sources/pdf-remaining-books.md (13 volumes)
 ---
 type: journal
 tags: [log]

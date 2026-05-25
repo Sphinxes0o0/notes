@@ -208,6 +208,20 @@ Updated:
 
 ---
 
+## [2026-05-25] ingest | Batch N: C++ Slides 剩余25 PDFs
+
+- **来源**: raw/PDFs/slides/ (25个新幻灯片加入原有12个)
+- **操作**: 仅汇总 — 不提取文本，不创建 entity
+- **更新**: sources/pdf-cpp-slides.md (条目 13-36 → 共37条，按主题分组: AI推理9/编译器5/工程实践6/异构计算3/其他4), wiki/home.md (source描述+index行), log.md
+- **主题分组**:
+  - AI推理: Mooncake/RTP-LLM/xLLM/DeepSeek/LazyLLM/RecIS/FlagScale/AI成熟度
+  - 编译器: MLIR fuzz/AI软件栈/多元AI算子库/RISC-V AI编译器/RISC-V全栈
+  - 工程实践: Crash诊断/Qoder CLI/Coding Agent/AI Coding实践/AI测试/具身机器人
+  - 异构计算: 异构计算架构/异构传输库/统一智能计算
+- **更新后**: pdf-cpp-slides 共37条，[[cpp-slides-index]] 更新为37 talks
+
+---
+
 ## [2026-05-25] ingest | Batch K: Linux/Kernel/ARM PDFs (12 books)
 
 - **来源**: raw/PDFs/books/ (12 PDFs: 3 网络/服务器 + 6 内核/系统 + 3 ARM)
