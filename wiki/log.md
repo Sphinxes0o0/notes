@@ -1,4 +1,26 @@
 
+## [2026-05-25] source | lwip-source-index + 5 core entity pages
+
+**操作:**
+- 创建 5 个 lwIP 核心源文件 entity pages:
+  - wiki/entities/linux/lwip/source/ip4.c.md (1307 行) — IPv4 input/output, routing, forwarding
+  - wiki/entities/linux/lwip/source/tcp.c.md (2768 行) — TCP PCB management, timers, close
+  - wiki/entities/linux/lwip/source/udp.c.md (1385 行) — UDP dispatch/send, PCB management
+  - wiki/entities/linux/lwip/source/pbuf.c.md (1570 行) — pbuf alloc/free, chain operations, header manipulation
+  - wiki/entities/linux/lwip/source/netif.c.md (1913 行) — netif management, addressing, loopback
+- 创建索引页: wiki/lwip-source-index.md (源码阅读层入口)
+- 更新 wiki/home.md (lwip-source-index 入口)
+
+**每个 source entity page 包含:**
+- 函数索引表 (函数名 + 行号 + 功能一句话)
+- 关键数据结构 (struct 字段说明)
+- 调用链 (调用者/被调用者)
+- 交叉引用 (→ wiki/entities/linux/lwip/*)
+
+**对应源码:** external/lwip_ds_mcu/src/core/
+
+---
+
 ## [2026-05-25] ingest | Batch N+O: Remaining Slides & Books
 - N: Updated sources/pdf-cpp-slides.md (12→37 talks)
 - O: Created sources/pdf-remaining-books.md (13 volumes)

@@ -34,6 +34,7 @@ created: 2026-05-22
 | Index | Domain | Entities |
 |-------|--------|----------|
 | [[lwip-index]] | lwIP embedded TCP/IP stack: netif, pbuf, memory, IPv4, TCP, UDP, IGMP, DHCP, VLAN dispatch | 27 |
+| [[lwip-source-index]] | lwIP core source reference: ip4.c, tcp.c, udp.c, pbuf.c, netif.c — 函数索引、数据结构、调用链 | 5 |
 | [[lwfw-index]] | SafeOS LWFW firewall: 5-tuple, LWCT, dual filter engines, seL4 IPC, VLAN isolation | 26 |
 | [[safeos-index]] | SafeOS NSv architecture: NSv Network Server, CMA/elem-ring, AF-PACKET/TPACKET, VDF nids relation | 4 |
 
