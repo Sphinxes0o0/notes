@@ -1,4 +1,36 @@
 
+## [2026-05-25] ingest | Batch: android, network-traffic-analysis, ccpp-concurrency, kernel-handson
+
+**批次 1: Android Treble 架构**
+- 创建 source: wiki/sources/notes-android.md（15篇文档汇总）
+- 创建 6 个 entity:
+  - wiki/entities/android/treble-architecture.md — Treble 架构总览
+  - wiki/entities/android/hidl.md — HIDL 接口定义语言
+  - wiki/entities/android/vndk.md — VNDK 供应商原生开发套件
+  - wiki/entities/android/vintf.md — VINTF 供应商接口对象
+  - wiki/entities/android/stable-aidl.md — Stable AIDL 接口
+  - wiki/entities/android/hal.md — HAL 硬件抽象层类型体系
+
+**批次 2: 网络流量分析**
+- 创建 source: wiki/sources/notes-network-traffic-analysis.md（62篇论文综述）
+- 创建 4 个 entity:
+  - wiki/entities/security/network-traffic-analysis.md — 网络流量分析总览
+  - wiki/entities/security/ids-ml-survey.md — IDS 机器学习综述
+  - wiki/entities/security/encrypted-traffic-analysis.md — TLS 加密流量侧信道分析
+  - wiki/entities/security/traffic-deep-learning.md — CNN/LSTM/AutoEncoder/GNN 模型
+
+**批次 3: C++ 并发 + Kernel 动手实验**
+- 创建 source: wiki/sources/notes-ccpp-concurrency.md
+- 创建 entity: wiki/entities/cpp/concurrency-demos.md — MPMC队列/内存序/future-promise
+- 创建 source: wiki/sources/notes-kernel-handson.md
+- 创建 entity: wiki/entities/linux/kernel/handson-hypervisor.md — Rust RISC-V 裸机管理程序
+
+**更新**: wiki/home.md (Sources table +4行，页数 ~373→~385), wiki/log.md
+
+**交叉引用**: 所有 entity 均含 ≥2 [[wikilinks]]
+
+---
+
 ## [2026-05-25] source | lwip-source-index + 5 core entity pages
 
 **操作:**

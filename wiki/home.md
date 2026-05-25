@@ -9,6 +9,7 @@ created: 2026-05-22
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
 > Last updated: 2026-05-27 | Total: ~647 pages
+> Last updated: 2026-05-25 | Total pages: ~385 | Module indexes: 25
 
 ---
 
@@ -217,6 +218,10 @@ created: 2026-05-22
 | [[sources/pdf-ebpf-basics]] | eBPF基础：80页入门/CO-RE/BTF/Maps/Pinning机制/11个64位寄存器 | 2023 | pdf |
 | [[sources/pdf-computer-architecture-hp]] | H&P计算机体系结构量化研究方法（第五版）：612页体系结构圣经 | 2017 | pdf |
 | [[sources/pdf-onedrive-batch1]] | OneDrive Batch P (5 PDFs): OS concepts + C++ concurrency/high-performance/templates-v2 | 2026-05 | pdf |
+| [[sources/notes-android]] | Android Treble 架构笔记（15篇）：HIDL/VNDK/VINTF/Stable-AIDL/HAL类型/模块化系统 | 2026-05 | github |
+| [[sources/notes-network-traffic-analysis]] | 网络流量分析文献综述（62篇论文）：IDS/加密流量/DL方法/eBPF实时检测 | 2026-05 | github |
+| [[sources/notes-ccpp-concurrency]] | C++ 并发编程实战：MPMC无锁队列/内存序/future-promise/async/yield | 2026-05 | github |
+| [[sources/notes-kernel-handson]] | Linux Kernel 动手实验：Rust RISC-V裸机管理程序 + C 1000行OS | 2026-05 | github |
 
 ---
 
