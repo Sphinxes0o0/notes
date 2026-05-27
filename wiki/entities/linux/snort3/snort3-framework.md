@@ -179,10 +179,12 @@ class SO_PUBLIC Cursor
 
 ## 相关概念
 
-- [[intrusion-detection-system]] — IDS 基础概念
-- [[network-security-monitoring]] — NSM 相关
-- [[tcp-ip-protocol-stack]] — Snort3 协议解析依赖
-- [[linux-kernel-networking]] — 网络包处理流程
+- [[snort3-detection-engine]] — 检测引擎子系统
+- [[snort3-ips-options]] — IPS 规则选项插件
+- [[snort3-codecs]] — 协议解析 codec 插件
+- [[snort3-infrastructure]] — 基础设施层（hash、file_api、js_norm）
+- [[snort3-control-startup]] — 控制通道与启动序列
+- [[snort3-actions]] — 动作插件
 
 ## 来源详情
 

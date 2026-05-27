@@ -227,15 +227,13 @@ PluginManager::load_plugins(cd_mpls);
 
 ## 相关概念
 
-- [[network-packet-decoding]]
+- [[snort3-infrastructure]] — 文件处理、JavaScript 规范化等基础设施
+- [[snort3-detection-engine]] — Codec 解析后的数据包送入检测引擎
 - [[ethernet-frame]]
-- [[ipv4]]
-- [[ipv6]]
 - [[tcp]]
 - [[udp]]
 - [[vlan]]
 - [[mpls]]
-- [[snort3]]
 
 ## 来源详情
 

@@ -74,6 +74,11 @@ created: 2026-05-22
 |-------|--------|----------|
 | [[security-index]] | 商用密码(SM2/3/4)、mbedtls、TLS/DTLS、PKI | 2 |
 
+### Snort3 NIDS/NIPS
+| Index | Domain | Entities |
+|-------|--------|----------|
+| [[snort3-index]] | Snort3 IDS/IPS 源码分析：框架、检测引擎、IPS选项、动作、事件过滤、Flow追踪、连接器、基础设施、Codecs、控制启动 | 10 |
+
 ### C++ Frameworks & Libraries
 | Index | Domain | Entities |
 |-------|--------|----------|

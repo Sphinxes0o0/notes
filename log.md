@@ -384,3 +384,17 @@ Updated:
 - **未 commit**
 
 ## [2026-05-26] ingest | design-patterns (24 entities), notes reorg (30→14 dirs), lint pass
+
+## [2026-05-27] lint | snort3 cross-links — 10 entities all ≥2 wikilinks
+
+- **操作**:
+  - 审查 wiki/entities/linux/snort3/ 下全部 10 个 entity 页面的 wikilinks 质量
+  - 修复 snort3-actions.md: 移除指向不存在的 ips_action.framework、packet-io-active、snort3-pig；新增 snort3-detection-engine、snort3-framework、snort3-events-filters
+  - 修复 snort3-codecs.md: 移除指向不存在的 snort3 顶层 entity；新增 snort3-infrastructure、snort3-detection-engine
+  - 修复 snort3-detection-engine.md: 新增 6 条 snort3 内部 wikilinks（snort3-actions/ips-options/events-filters/flow/connectors/infrastructure）
+  - 修复 snort3-connectors.md: 移除指向不存在的 snort3-pig、ring-helpers；新增 snort3-detection-engine、snort3-framework
+  - 修复 snort3-framework.md: 移除指向不存在的 intrusion-detection-system、network-security-monitoring、tcp-ip-protocol-stack、linux-kernel-networking；新增 snort3-detection-engine、snort3-ips-options、snort3-codecs、snort3-infrastructure、snort3-control-startup、snort3-actions
+  - 创建 wiki/snort3-index.md — 10-entity 索引页，包含 cross-reference map 和 source 列表
+  - 更新 wiki/home.md — 新增 Snort3 NIDS/NIPS section（snort3-index，10 entities）
+- **Cross-link 验证**: 全部 10 个 entity 均 ≥2 条 snort3 内部 wikilinks
+- **未 commit**

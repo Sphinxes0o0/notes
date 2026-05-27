@@ -188,6 +188,6 @@ void load_actions() {
 ## 相关概念
 
 - [[snort3-connectors]] — 动作的数据导出机制
-- [[ips_action.framework]] — 基类框架
-- [[packet-io-active]] — Active 动作系统
-- [[snort3-pig]] — Snort3 插件系统
+- [[snort3-detection-engine]] — 检测引擎触发动作执行
+- [[snort3-framework]] — 插件系统、IpsAction 基类
+- [[snort3-events-filters]] — 动作的触发来源（事件队列）

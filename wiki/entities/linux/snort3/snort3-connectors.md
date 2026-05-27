@@ -247,5 +247,5 @@ void load_connectors() {
 ## 相关概念
 
 - [[snort3-actions]] — 使用 connector 导出数据的 IPS 动作
-- [[snort3-pig]] — 插件加载和生命周期
-- [[ring-helpers]] — 无锁环形缓冲区实现
+- [[snort3-detection-engine]] — 检测引擎触发 connector 数据导出
+- [[snort3-framework]] — Connector 插件系统注册机制
