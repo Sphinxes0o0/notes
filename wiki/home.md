@@ -77,7 +77,7 @@ created: 2026-05-22
 ### C++ Frameworks & Libraries
 | Index | Domain | Entities |
 |-------|--------|----------|
-| [[workflow-index]] | Sogou Workflow async engine: HTTP/Redis/MySQL/Kafka/DNS | 28 |
+| [[workflow-index]] | Sogou Workflow async engine: HTTP/Redis/MySQL/Kafka/DNS | 68 |
 | [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
 | [[cpp-modern-index]] | Modern C++ Skills (C++17+Master): 13 C++17 skills + 15 Master mental models | 28 |
 

@@ -352,4 +352,12 @@ Updated:
   - 设计-patterns-index.md 已包含全部 15 个 wikilinks（已有 `updated: 2026-05-27`），无需额外更新
 - **未 commit**
 
+## [2026-05-27] update | index pages + home.md page counts + log
+
+- **操作**:
+  - design-patterns-index.md: 更新为 23 个 GoF individual patterns（Creational 5 + Structural 7 + Behavioral 11 + grouped references 5）
+  - workflow-index.md: 更新实体统计为 68 个（原 38 个）；增加 tut/tutorial 系列 33 个教程实体
+  - wiki/home.md: design-patterns 5→23，workflow 28→68
+- **未 commit**
+
 ## [2026-05-26] ingest | design-patterns (24 entities), notes reorg (30→14 dirs), lint pass
