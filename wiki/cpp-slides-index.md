@@ -7,7 +7,7 @@ updated: 2026-05-27
 
 # C++ Slides Index — Conference Talks
 
-> 37 new slides (Batch N). Source: [[sources/pdf-slides]]
+> 37 slides (2024-2026). Source: [[sources/pdf-slides]] + 6 category source pages
 
 ## 总览
 
