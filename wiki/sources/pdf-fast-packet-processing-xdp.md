@@ -1,6 +1,7 @@
 ---
 type: source
-source-type: pdf
+tags: []
+created: 2026-05-26source-type: pdf
 title: "Fast Packet Processing using eBPF and XDP"
 author: "Unknown"
 date: 2020

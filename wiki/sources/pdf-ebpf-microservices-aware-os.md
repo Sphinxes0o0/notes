@@ -1,6 +1,7 @@
 ---
 type: source
-source-type: pdf
+tags: []
+created: 2026-05-26source-type: pdf
 title: "eBPF: Turning Linux into a Microservices-Aware Operating System"
 author: "Brendan Gregg (Netflix)"
 date: 2018

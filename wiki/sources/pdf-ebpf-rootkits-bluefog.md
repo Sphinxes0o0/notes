@@ -1,6 +1,7 @@
 ---
 type: source
-source-type: pdf
+tags: []
+created: 2026-05-26source-type: pdf
 title: "Creating and Countering the Next Generation of Linux Rootkits using eBPF"
 author: "BlueFog / Doyensec Research"
 date: 2023

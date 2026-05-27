@@ -1,6 +1,7 @@
 ---
 type: source
-source-type: pdf
+tags: []
+created: 2026-05-26source-type: pdf
 title: "Security Observability with eBPF — Isovalent"
 author: "Isovalent"
 date: 2023

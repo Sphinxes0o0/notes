@@ -1,6 +1,7 @@
 ---
 ---
-type: source
+tags: []
+created: 2026-05-26type: source
 source-type: pdf
 title: "eBPF Library Ecosystem Overview in Go, Rust, Python, C and More"
 author: "Cilium / Isovalent Community"
