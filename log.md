@@ -341,4 +341,15 @@ Updated:
 - **说明**: ARM 文档已收录于 pdf-arm-architecture；OS textbooks 来自 OneDrive batch（streaming 待完成）
 - **未 commit**
 
+## [2026-05-27] ingest | design-patterns 15 remaining patterns populated
+
+- **来源**: raw/github/design-pattern/docs/ (chapters 04, 07-19, 21, 23)
+- **操作**:
+  - 填充 15 个空 entity pages（frontmatter + C++ 实现摘要）:
+    - Creational: prototype
+    - Structural: bridge, composite, facade, flyweight, proxy
+    - Behavioral: chain-of-responsibility, command, interpreter, iterator, mediator, memento, null-object, state, template-method
+  - 设计-patterns-index.md 已包含全部 15 个 wikilinks（已有 `updated: 2026-05-27`），无需额外更新
+- **未 commit**
+
 ## [2026-05-26] ingest | design-patterns (24 entities), notes reorg (30→14 dirs), lint pass

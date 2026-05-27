@@ -58,7 +58,7 @@ created: 2026-05-22
 | Index | Domain | Entities |
 |-------|--------|----------|
 | [[datastructure-index]] | DSA: complexity, linear, sorting, DP, recursion, hash, trees | 7 |
-| [[design-patterns-index]] | SOLID, creational, structural, behavioral | 5 |
+| [[design-patterns-index]] | SOLID, creational, structural, behavioral | 23 |
 | [[interview-index]] | Coding patterns, system design basics | 3 |
 | [[cpp-index]] | Modern C++ (C++11-20), STL containers/algorithms/iterators, serialization | 22 |
 | [[cpp-modern-index]] | Modern C++ Skills (C++17+Master): 13 C++17 skills + 15 Master mental models | 28 |
