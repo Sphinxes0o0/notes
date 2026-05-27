@@ -17,7 +17,13 @@
 
 ---
 
-## [2026-05-27] ingest | Batch N: raw/PDFs/slides/ (37 PDFs → 6 group source pages)
+## [2026-05-27] ingest | Batch N (enhanced): raw/PDFs/slides/ (37 PDFs) — 深度解析
+
+- **来源**: raw/PDFs/slides/ (37 PDFs, CPP-Summit 2025 & C++ 40周年)
+- **PyMuPDF元数据提取**: 全部37个PDF speaker/author/title确认（部分为图片扫描，pdftotext无输出）
+- **已创建 group source pages** (6个): pdf-slides-cpp-standard/ai-coding/ai-compiler/llm-inference/kernel/tools
+- **演讲嘉宾确认** (部分): 郑杨(智源研究院)/崔慧敏(中科加禾CEO)/麻津铭(上海AI Lab)/彭博(Bloomberg)/王豪杰(清华)/马良焰(美团)/董俊杰(小米Vela)/范颂颂(Incredibuild)/邢俊威(百度)/邹涛(阿里云)/徐亮亮(阿里)/李彦博(Parasoft)/汪晟杰(腾讯云)
+- **更新**: cpp-slides-index.md (修正为37 talks), home.md (+6 group source rows, ~403→~409 pages)
 
 - **来源**: raw/PDFs/slides/ (37 PDFs)
 - **操作**: summary-only提取文件名+标题，按主题分组，创建6个grouped source pages
