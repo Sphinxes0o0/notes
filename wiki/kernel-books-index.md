@@ -8,7 +8,7 @@ created: 2026-05-25
 
 > 本索引聚合所有 Linux/Kernel 相关的 PDF 书籍来源，按主题分类。
 >
-> Last updated: 2026-05-25 | Batch K ingest
+> Last updated: 2026-05-27 | Batch L ingest
 
 ---
 
