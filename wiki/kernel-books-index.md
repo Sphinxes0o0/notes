@@ -8,7 +8,7 @@ created: 2026-05-25
 
 > 本索引聚合所有 Linux/Kernel 相关的 PDF 书籍来源，按主题分类。
 >
-> Last updated: 2026-05-27 | Batch L ingest
+> Last updated: 2026-05-27 | Batch S ingest
 
 ---
 
@@ -54,6 +54,15 @@ created: 2026-05-25
 | 书名 | 作者 | 页数 | 来源 | 核心主题 |
 |------|------|------|------|----------|
 | Computer Systems: A Programmer's Perspective | Bryant & O'Hallaron | 1078 | [[sources/pdf-computer-systems-programmers-perspective]] | 机器码/缓存/虚拟内存/链接/并发，CS:APP |
+
+---
+
+## Operating Systems
+
+| 书名 | 作者 | 页数 | 来源 | 核心主题 |
+|------|------|------|------|----------|
+| Operating System Concepts, 10th Ed | Silberschatz, Galvin & Gagne | — | [[sources/pdf-os-embedded-books-batch-s]] | 进程/线程/调度/内存/文件/I/O |
+| 现代操作系统 原理与实现 | 中文教材 | — | [[sources/pdf-os-embedded-books-batch-s]] | OS架构/虚拟内存/SLUB/Buddy/VFS/ELF |
 
 ---
 

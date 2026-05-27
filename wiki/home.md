@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-27 | Total pages: ~403 | Module indexes: 25
+> Last updated: 2026-05-27 | Total pages: ~409 | Module indexes: 25
 
 ---
 
@@ -123,6 +123,12 @@ created: 2026-05-22
 | [[sources/pdf-cpp-perf-engineering]] | 高性能C++工程：缓存/分布式计算加速、内核Btree块缓存、异构传输库优化 | 2026-05 | pdf |
 | [[sources/pdf-cpp-safety-standards]] | C++安全标准与安全优先演进：安全开发路线图、AI原生研发成熟度 | 2026-05 | pdf |
 | [[sources/pdf-cpp-engineering-practices]] | C++工程实践：C++在Xiaomi Vela(嵌入式)、统一算力FlagScale/FlagOS、CodeBuddy终端、具身机器人多仓构建、AI重塑测试 | 2026-05 | pdf |
+| [[sources/pdf-slides-cpp-standard]] | C++语言演进与标准化 (8 talks)：Bjarne 40年/John Safe C++/Michael标准化/Pete工程/彭博反射/吴咏炜生命周期/董俊杰Vela/李彦博AI测试 | 2026-05 | pdf |
+| [[sources/pdf-slides-ai-coding]] | AI Coding与开发工具 (6 talks)：Coding Agent/马良焰企业实践/汪晟杰AI Spec Coding/李彦博AI测试/CRASH_NG/Qoder CLI | 2026-05 | pdf |
+| [[sources/pdf-slides-ai-compiler]] | AI编译器与MLIR (5 talks)：MLIR fuzzing/崔慧敏AI软件栈/郑杨多元AI芯片/张洪滨RISC-V AI编译/谢涛RISC-V全栈生态 | 2026-05 | pdf |
+| [[sources/pdf-slides-llm-inference]] | LLM推理优化 (11 talks)：Mooncake/RTP-LLM/xLLM/DeepSeek/王骁端侧部署/LazyLLM/FlagScale/王豪杰异构计算/麻津铭传输库/范颂颂缓存/RecIS | 2026-05 | pdf |
+| [[sources/pdf-slides-kernel]] | Linux内核与调试工具 (4 talks)：CS744 kernel-bypass/邹涛CRASH_NG AI诊断/李勇Btree块设备/田文鑫具身机器人构建 | 2026-05 | pdf |
+| [[sources/pdf-slides-tools]] | 工具与杂项 (2 talks)：EPI Python算法面试/徐亮亮Qoder CLI终端AI伙伴 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-books]] | eBPF书籍3册：龙蜥白皮书(XDP/TC/CO-RE)、技术实践、Cilium创始人Liz Rice入门 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-papers]] | eBPF论文10篇：Thomas Graf微内核、微服务感知OS、Apple Falco、Google KRSI、Rootkit攻防、UFMG XDP、生态库、saBPF容器审计、Isovalent安全可观测性、PTPsec | 2026-05 | pdf |
 | [[sources/pdf-bpf-rethinking-kernel]] | Rethinking Linux Kernel (Thomas Graf 2020)：eBPF微内核+可组合服务层愿景 | 2020 | pdf |
