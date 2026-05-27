@@ -2,33 +2,37 @@
 type: source
 source-type: pdf
 title: "Large-Scale C++ Software Design"
-author: "John Lakos"
+author: "John M. Lakos"
 date: 1996
 size: large
 path: raw/PDFs/books/Large-Scale C++ Software Design.pdf
-summary: "Lakos大规模C++设计，物理设计（层次化组件）、ADG依赖层次、链接器模型"
+summary: "Lakos 大规模 C++ 软件设计：组件划分、物理设计、依赖管理、可伸缩性原则"
+tags: [books, cpp, software-engineering, large-scale, design, dependency]
+created: 2026-05-27
 ---
 
 # Large-Scale C++ Software Design
 
+## 基本信息
+- **作者**: John M. Lakos
+- **出版**: Addison-Wesley, 1996
+- **页数**: ~556
+- **语言**: English
+- **主题**: 大规模 C++ 软件的物理设计与架构
+
 ## 核心内容
-
-John Lakos 的大规模 C++ 软件设计经典之作：
-
-- **物理设计**：代码组织、编译依赖管理
-- **层次化组件**：分层架构原则
-- **ADG（Accumulated Dependency Graph）**：依赖累积图分析
-- **链接器模型**：编译时间与链接时间的优化
-- **防止循环依赖**：组件间依赖无环原则
-- **性能与可维护性平衡**
-
-## 关键要点
-
-- Lakos 三卷本第一卷（后续还有 MEDIC 中的 Level 1/2/3）
-- 核心思想：物理设计先于逻辑设计
-- 适合大型 C++ 项目的架构决策者
+- 大规模系统的分层架构
+- 组件划分原则（component-level design）
+- 依赖管理：前向声明、接口类、句柄类
+- 物理设计（physical design）与逻辑设计的区别
+- 循环依赖的消除
+- 抽象基类的使用
+- 可伸缩性原则（scalability）
+- 继承 vs 组合的权衡
+- 模板与泛型的物理设计影响
 
 ## 相关页面
-- [[pdf-book-cpp-templates-v2]]
-- [[pdf-book-concurrency-modern-cpp]]
-- [[pdf-book-cpp17]]
+- [[sources/pdf-book-large-scale-cpp-design]] — 大规模 C++ 设计
+- [[sources/pdf-cpp-engineering-practices]] — C++ 工程实践
+- [[sources/pdf-book-gof-design-patterns]] — 设计模式
+- [[cpp-index]] — C++ 模块索引

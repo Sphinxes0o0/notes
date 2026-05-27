@@ -6,7 +6,7 @@ created: 2026-05-25
 
 # Modern C++ Skills Index (C++17 + Master)
 
-> C++17 功能技能 + Master 思維模型，共 28 個 entity
+> C++17 功能技能 + Master 思維模型，共 42 個 entity（13 C++17 + 14 modern-m* + 15 c17-*）
 >
 > 來源: [[sources/cpp-modern-skills]]
 
@@ -54,20 +54,21 @@ created: 2026-05-25
 
 | Entity | Core Question | Key Framework | Tags |
 |--------|---------------|---------------|------|
-| [[entities/cpp/modern/m01-ownership]] | 誰擁有這個資源？ | Error → Design, Trace Up/Down | master, mental-model |
-| [[entities/cpp/modern/m02-resource]] | 多少個所有者？ | unique_ptr (90%), shared_ptr, weak_ptr | master, mental-model |
-| [[entities/cpp/modern/m03-mutability]] | 誰能改變狀態？ | Logical vs Bitwise const, mutable + mutex | master, mental-model |
-| [[entities/cpp/modern/m04-zero-cost]] | 何時確定類型？ | Static (template) vs Dynamic (virtual) | master, mental-model |
-| [[entities/cpp/modern/m05-type-driven]] | 能讓 bug 變編譯錯誤嗎？ | Strong types, phantom types, type-state | master, mental-model |
-| [[entities/cpp/modern/m06-error-handling]] | 錯誤可恢復嗎？ | optional vs expected vs throw vs assert | master, mental-model |
-| [[entities/cpp/modern/m07-concurrency]] | 線程如何通信？ | Shared state vs Coordination vs Tasks | master, mental-model |
-| [[entities/cpp/modern/m09-domain]] | 身份還是值？ | Value Object vs Entity vs Aggregate | master, mental-model |
-| [[entities/cpp/modern/m10-performance]] | 數據在哪裡？ | Cache locality, allocations, measurement | master, mental-model |
-| [[entities/cpp/modern/m11-ecosystem]] | 如何構建維護？ | CMake + vcpkg + sanitizers | master, mental-model |
-| [[entities/cpp/modern/m12-lifecycle]] | 對象何時死亡？ | Stack vs Heap vs Static | master, mental-model |
-| [[entities/cpp/modern/m13-domain-error]] | 誰捕獲錯誤？ | Exception vs error_code hierarchy | master, mental-model |
-| [[entities/cpp/modern/m14-mental-model]] | 內存中發生了什麼？ | Value vs Reference vs Pointer | master, mental-model |
-| [[entities/cpp/modern/m15-anti-pattern]] | 這是 C 還是 C++？ | RAII vs malloc, unique_ptr vs new | master, mental-model |
+| [[entities/cpp/modern/modern-m01-ownership]] | 誰擁有這個資源？ | Error → Design, Trace Up/Down | master, mental-model |
+| [[entities/cpp/modern/modern-m02-resource]] | 多少個所有者？ | unique_ptr (90%), shared_ptr, weak_ptr | master, mental-model |
+| [[entities/cpp/modern/modern-m03-mutability]] | 誰能改變狀態？ | Logical vs Bitwise const, mutable + mutex | master, mental-model |
+| [[entities/cpp/modern/modern-m04-zero-cost]] | 何時確定類型？ | Static (template) vs Dynamic (virtual) | master, mental-model |
+| [[entities/cpp/modern/modern-m05-type-driven]] | 能讓 bug 變編譯錯誤嗎？ | Strong types, phantom types, type-state | master, mental-model |
+| [[entities/cpp/modern/modern-m06-error-handling]] | 錯誤可恢復嗎？ | optional vs expected vs throw vs assert | master, mental-model |
+| [[entities/cpp/modern/modern-m07-concurrency]] | 線程如何通信？ | Shared state vs Coordination vs Tasks | master, mental-model |
+| *(m08 skipped — not present in source)* | | | |
+| [[entities/cpp/modern/modern-m09-domain]] | 身份還是值？ | Value Object vs Entity vs Aggregate | master, mental-model |
+| [[entities/cpp/modern/modern-m10-performance]] | 數據在哪裡？ | Cache locality, allocations, measurement | master, mental-model |
+| [[entities/cpp/modern/modern-m11-ecosystem]] | 如何構建維護？ | CMake + vcpkg + sanitizers | master, mental-model |
+| [[entities/cpp/modern/modern-m12-lifecycle]] | 對象何時死亡？ | Stack vs Heap vs Static | master, mental-model |
+| [[entities/cpp/modern/modern-m13-domain-error]] | 誰捕獲錯誤？ | Exception vs error_code hierarchy | master, mental-model |
+| [[entities/cpp/modern/modern-m14-mental-model]] | 內存中發生了什麼？ | Value vs Reference vs Pointer | master, mental-model |
+| [[entities/cpp/modern/modern-m15-anti-pattern]] | 這是 C 還是 C++？ | RAII vs malloc, unique_ptr vs new | master, mental-model |
 
 ## 交叉引用地圖
 
@@ -105,32 +106,41 @@ Master Anti-Pattern ────────────────────
 
 | 現有 Entity | 新技能覆蓋 |
 |-------------|------------|
-| [[entities/cpp/move-semantics]] | c17-01-ownership, m01-ownership |
-| [[entities/cpp/raii]] | c17-01-ownership, c17-12-lifecycle, m12-lifecycle |
-| [[entities/cpp/smart-pointers]] | c17-02-resource, m02-resource |
-| [[entities/cpp/lambda-expressions]] | - |
-| [[entities/cpp/auto-type-deduction]] | - |
-| [[entities/cpp/constexpr]] | c17-03-mutability |
-| [[entities/cpp/concurrency]] | c17-07-concurrency, m07-concurrency |
-| [[entities/cpp/variadic-templates]] | c17-04-templates |
-| [[entities/cpp/if-constexpr]] | c17-04-templates |
-| [[entities/cpp/cpp20-features]] | c17-04-templates (concepts C++20) |
-| [[entities/cpp/cpp-stl-containers]] | c17-10-performance |
-| [[entities/cpp/cpp-stl-string]] | c17-10-performance |
-| [[entities/cpp/cpp-stl-algorithms]] | - |
-| [[entities/cpp/cpp-stl-iterators]] | - |
-| [[entities/cpp/cpp-stl-functors]] | - |
-| [[entities/cpp/cpp-stl-allocators]] | - |
-| [[entities/cpp/cpp-serialization]] | - |
-| [[entities/cpp/cpp-object-lifetime]] | c17-12-lifecycle |
-| [[entities/cpp/cpp-reflection]] | - |
-| [[entities/cpp/cpp-safety]] | c17-11-ecosystem, m11-ecosystem |
-| [[entities/cpp/cpp-perf-optimization]] | c17-10-performance, m10-performance |
-| [[entities/cpp/cpp-llm-inference]] | - |
-| [[entities/cpp/cpp-recsys-optimization]] | - |
-| [[entities/cpp/cpp-templates]] | c17-04-templates, m04-zero-cost |
-| [[entities/cpp/cpp-memory-management]] | - |
-| [[entities/cpp/cpp-memory-model]] | c17-07-concurrency |
+| [[entities/cpp/move-semantics]] | modern-m01-ownership, c17-01-ownership |
+| [[entities/cpp/raii]] | modern-m01-ownership, modern-m12-lifecycle, c17-01-ownership, c17-12-lifecycle |
+| [[entities/cpp/smart-pointers]] | modern-m02-resource, c17-02-resource |
+| [[entities/cpp/constexpr]] | modern-m03-mutability, c17-03-mutability |
+| [[entities/cpp/concurrency]] | modern-m07-concurrency, c17-07-concurrency |
+| [[entities/cpp/variadic-templates]] | modern-m04-zero-cost, c17-04-templates |
+| [[entities/cpp/if-constexpr]] | modern-m04-zero-cost, c17-04-templates |
+| [[entities/cpp/cpp20-features]] | modern-m04-zero-cost, c17-04-templates (concepts C++20) |
+| [[entities/cpp/cpp-stl-containers]] | modern-m10-performance, c17-10-performance |
+| [[entities/cpp/cpp-stl-string]] | modern-m10-performance, c17-10-performance |
+| [[entities/cpp/cpp-object-lifetime]] | modern-m12-lifecycle, c17-12-lifecycle |
+| [[entities/cpp/cpp-safety]] | modern-m11-ecosystem, c17-11-ecosystem |
+| [[entities/cpp/cpp-perf-optimization]] | modern-m10-performance, c17-10-performance |
+| [[entities/cpp/cpp-templates]] | modern-m04-zero-cost, c17-04-templates |
+| [[entities/cpp/cpp-memory-model]] | modern-m07-concurrency, c17-07-concurrency |
+
+## 來源導航
+
+| Source | 模塊 |
+|--------|------|
+| [[sources/github-modern-cpp-skills-m01]] | m01-ownership |
+| [[sources/github-modern-cpp-skills-m02]] | m02-resource |
+| [[sources/github-modern-cpp-skills-m03]] | m03-mutability |
+| [[sources/github-modern-cpp-skills-m04]] | m04-zero-cost |
+| [[sources/github-modern-cpp-skills-m05]] | m05-type-driven |
+| [[sources/github-modern-cpp-skills-m06]] | m06-error-handling |
+| [[sources/github-modern-cpp-skills-m07]] | m07-concurrency |
+| *(m08 skipped)* | |
+| [[sources/github-modern-cpp-skills-m09]] | m09-domain |
+| [[sources/github-modern-cpp-skills-m10]] | m10-performance |
+| [[sources/github-modern-cpp-skills-m11]] | m11-ecosystem |
+| [[sources/github-modern-cpp-skills-m12]] | m12-lifecycle |
+| [[sources/github-modern-cpp-skills-m13]] | m13-domain-error |
+| [[sources/github-modern-cpp-skills-m14]] | m14-mental-model |
+| [[sources/github-modern-cpp-skills-m15]] | m15-anti-pattern |
 
 ## Source
 

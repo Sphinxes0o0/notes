@@ -1,38 +1,27 @@
 ---
 type: source
-source-type: pdf-book
-title: "The Book of Modern C++ (第二版)"
-author: "lkimuk et al. (水滴会飞/何荣华/邹启翔/整汇)"
-date: 2024
-size: large
+source-type: pdf
+title: "The Book of Modern C++"
+author: "Klaus Iglberger"
+date: 2022
+size: medium
 path: raw/PDFs/books/The.Book.of.Modern.C++.-.Electronic.Edition.pdf
-pages: 1053
-summary: "社区协作 C++20/23 高级教程第二版（2024）：由多位专家执笔，涵盖 C++20/23 核心特性（Concepts/Modules/Coroutines/Ranges）、高级主题和最佳实践，免费开源。"
+summary: "现代 C++ 工程实践：RVO/emplace/移动语义/类型安全/C++23 新特性"
 ---
 
-# The Book of Modern C++ (第二版)
+# The Book of Modern C++
 
-## Metadata
-- **Authors:** lkimuk404, 何荣华, 邹启翔, 水滴会飞, 整汇
-- **Edition:** 2nd Edition
-- **Published:** 2024-01-20
-- **Pages:** 1053
-- **Topic:** C++20/23 advanced topics
-- **Language:** 中文
-- **License:** 免费，仅供个人学习
-- **GitHub:** https://github.com/lkimuk/the-book-of-modern-cpp
-- **Error Feedback:** https://github.com/lkimuk/the-book-of-modern-cpp/issues
+## 核心内容
 
-## Core Content
-社区协作编写 C++20/23 高级教程第二版（1053页），由多位专家执笔，覆盖：
+- **性能陷阱**：Copy elision (RVO/NRVO)、init 最佳实践、emplace vs push
+- **移动语义**：移动构造/赋值、perfect forwarding、forward_as_tuple
+- **类型安全**：enum class、std::variant、std::optional、strong typedef
+- **函数与 Lambda**：捕获方式、泛型 lambda、Capture this by value
+- **并发**：atomic 的 memory_order、lock-free 数据结构、coroutine 入门
+- **C++23**：import std、constexpr 容器、auto(x) 语法、std::print
+- **最佳实践**：每个主题都有"不要这样写"vs"应该这样写"对比
 
-- C++20 新特性：Concepts、Modules、Coroutines、Ranges、 constexpr 算法
-- C++23 新特性：更多模板和库改进
-- Modern C++ 最佳实践
-- 来自多位专家的高级主题
-
-## Related Pages
-- [[sources/pdf-cpp-modern-books]] — Modern C++ Books bundle page
-- [[sources/pdf-book-modern-cpp]] — Modern C++ Tutorial (Changkun)
-- [[entities/cpp/cpp20-features]] — C++20 新特性
-- [[cpp-index]] — C++ 模块导航
+## 相关页面
+- [[pdf-book-cpp17]]
+- [[pdf-book-modern-cpp-tutorial-zh]]
+- [[pdf-book-concurrency-modern-cpp]]
