@@ -5,9 +5,9 @@ title: "The Book of Modern C++ (第二版)"
 author: "里缪 404, 何荣华, 邹启翔 等（水滴会飞）"
 date: 2024
 size: large
-path: raw/PDFs/books/The.Book.of.Modern.C++.-.Electronic.Edition.pdf
-summary: "The Book of Modern C++第二版：1053页多人合著，C++20/23高级主题，涵盖Concepts/Modules/Ranges/Coroutines/constexpr"
-tags: [cpp, modern-cpp, cpp20, cpp23, books]
+path: raw/PDFs/books/
+summary: "Modern C++ 书籍合集：陈晓伟《C++ Templates Complete Guide》(667页)、《C++ 并发编程指南》(528页)、《Concurrency with Modern C++》(480页)、《Advanced Memory Management in Modern C++》、《C++ 性能优化指南》、《C++17 标准详解》、《Effective STL 中文版》、Stroustrup《21st Century C++》等"
+tags: [cpp, modern-cpp, cpp17, cpp20, books]
 ---
 
 # The Book of Modern C++ (第二版)

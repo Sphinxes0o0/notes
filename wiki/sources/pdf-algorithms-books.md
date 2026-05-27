@@ -3,7 +3,7 @@ type: source
 tags: [algorithm, datastructure, graph, interview, books]
 source-type: pdf
 created: 2026-05-25
-sources: [pdf-algo-ds-books, pdf-interview-books]
+sources: [pdf-algo-ds-books, pdf-interview-books, pdf-book-algorithms-c, pdf-book-sedgewick-graph-algos, pdf-book-ds-algos-cpp, pdf-book-cracking-coding-interview]
 title: "算法与面试书籍合集（8册）"
 author: "Robert Sedgewick, Goodrich/Tamassia/Mount (2nd+3rd), Donald E. Knuth, 石田保辉/宫崎修一, Gayle Laakmann McDowell, EPI Authors"
 date: 2026-05
