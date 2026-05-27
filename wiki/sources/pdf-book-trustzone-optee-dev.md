@@ -30,4 +30,4 @@ summary: "手机安全与可信应用开发指南，TrustZone硬件安全与OP-T
 ## 相关页面
 - [[pdf-book-armv8-arm]]
 - [[pdf-book-trustzone-optee]]
-- [[pdf-security-crypto-books]]
+- [[pdf-security-crypto-books-updated]]
