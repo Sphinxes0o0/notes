@@ -47,8 +47,36 @@ created: 2026-05-25
 |--------|------|
 | [[entities/cpp/workflow/workflow-benchmark]] | 性能测试 |
 | [[entities/cpp/workflow/workflow-known-bugs]] | 已知问题 |
+| [[entities/cpp/workflow/workflow-build]] | 编译与构建 |
 
 ## 教程
+
+### 基础入门
+| Entity | 主题 |
+|--------|------|
+| [[entities/cpp/workflow/workflow-tut-wget]] | wget 第一个 HTTP 任务 |
+| [[entities/cpp/workflow/workflow-tut-redis-cli]] | redis_cli Redis 客户端 |
+| [[entities/cpp/workflow/workflow-tut-wget-to-redis]] | wget_to_redis 任务链 |
+| [[entities/cpp/workflow/workflow-tut-http-echo-server]] | http_echo_server HTTP 服务器 |
+| [[entities/cpp/workflow/workflow-tut-http-proxy]] | http_proxy HTTP 代理 |
+
+### 并行与计算
+| Entity | 主题 |
+|--------|------|
+| [[entities/cpp/workflow/workflow-tut-parallel-wget]] | parallel_wget 并行抓取 |
+| [[entities/cpp/workflow/workflow-tut-sort-task]] | sort_task 算法工厂 |
+| [[entities/cpp/workflow/workflow-tut-matrix-multiply]] | matrix_multiply 自定义计算 |
+| [[entities/cpp/workflow/workflow-tut-http-file-server]] | http_file_server 异步文件 IO |
+
+### 高级协议
+| Entity | 主题 |
+|--------|------|
+| [[entities/cpp/workflow/workflow-user-defined-protocol]] | 自定义协议 |
+| [[entities/cpp/workflow/workflow-tut-mysql-cli]] | mysql_cli MySQL 客户端 |
+| [[entities/cpp/workflow/workflow-tut-dns-cli]] | dns_cli DNS 客户端 |
+| [[entities/cpp/workflow/workflow-tut-name-service]] | name_service 自定义命名服务 |
+| [[entities/cpp/workflow/workflow-tut-redis-subscriber]] | redis_subscriber Redis 订阅 |
+| [[entities/cpp/workflow/workflow-tut-dns-server]] | dns_server DNS 服务器 |
 
 ### 客户端
 | Entity | 主题 |

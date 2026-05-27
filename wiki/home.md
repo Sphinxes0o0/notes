@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-27 | Total pages: ~395 | Module indexes: 25
+> Last updated: 2026-05-27 | Total pages: ~403 | Module indexes: 25
 
 ---
 
@@ -28,7 +28,7 @@ created: 2026-05-22
 | [[kernel-block-index]] | bio/request, blk-mq, IO schedulers | 3 |
 | [[kernel-subsystems-index]] | Crypto, locking, IPC, RCU, time, sound | 6 |
 | [[kernel-books-index]] | Linux/Kernel书籍索引：内核/TLPI/APUE/CSAPP/网络/并发 (9 books) | 3 |
-| [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem, saBPF, Security Observability | 7 |
+| [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem, saBPF, Security Observability, 10 papers | 7 |
 
 ### Embedded Network
 | Index | Domain | Entities |
@@ -124,7 +124,14 @@ created: 2026-05-22
 | [[sources/pdf-cpp-safety-standards]] | C++安全标准与安全优先演进：安全开发路线图、AI原生研发成熟度 | 2026-05 | pdf |
 | [[sources/pdf-cpp-engineering-practices]] | C++工程实践：C++在Xiaomi Vela(嵌入式)、统一算力FlagScale/FlagOS、CodeBuddy终端、具身机器人多仓构建、AI重塑测试 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-books]] | eBPF书籍3册：龙蜥白皮书(XDP/TC/CO-RE)、技术实践、Cilium创始人Liz Rice入门 | 2026-05 | pdf |
-| [[sources/pdf-ebpf-papers]] | eBPF论文9篇：Thomas Graf微内核、Apple Falco、Google审计、Rootkit攻防、UFMG XDP、生态库、saBPF容器审计、Isovalent安全可观测性 | 2026-05 | pdf |
+| [[sources/pdf-ebpf-papers]] | eBPF论文10篇：Thomas Graf微内核、微服务感知OS、Apple Falco、Google KRSI、Rootkit攻防、UFMG XDP、生态库、saBPF容器审计、Isovalent安全可观测性、PTPsec | 2026-05 | pdf |
+| [[sources/pdf-bpf-rethinking-kernel]] | Rethinking Linux Kernel (Thomas Graf 2020)：eBPF微内核+可组合服务层愿景 | 2020 | pdf |
+| [[sources/pdf-bpf-microservices-os]] | BPF Microservices-aware OS (Thomas Graf 2018)：Cilium/Hubble功能矩阵/Service Mesh加速 | 2018 | pdf |
+| [[sources/pdf-google-bpf-audit]] | BPF Security Auditing at Google (Brendan Jackman)：KRSI BPF LSM/Atomics原子/Ringbuf promise/CO-RE | 2021 | pdf |
+| [[sources/pdf-falco-apple]] | Falco at Apple (eBPF Summit 2021)：BPF vs内核模块优势/LSM hook/高价值Syscall监控列表 | 2021 | pdf |
+| [[sources/pdf-ebpf-library-ecosystem]] | eBPF Library Ecosystem (Kyle Quest)：Go/Rust/Python/C生态库：BCC/libbpf/cilium-ebpf/aya全面评测 | 2021 | pdf |
+| [[sources/pdf-xdp-fast-packet]] | XDP Fast Packet Processing (UFMG)：BPF指令格式详解/~20Mpps性能/XDP Actions部署 | 2021 | pdf |
+| [[sources/pdf-infocom-ptpsec]] | PTPsec (INFOCOM 2024)：IEEE 1588时间同步循环路径不对称分析/静态增量延迟攻击缓解 | 2024 | pdf |
 | [[sources/pdf-ptp-security]] | PTPsec：IEEE 1588时间同步延迟攻击检测与缓解 (INFOCOM 2024) | 2024 | pdf |
 | [[sources/pdf-cpp-templates]] | C++ Templates 2nd Edition：模板权威指南（范德沃尔德/约祖蒂斯/格雷戈）| 2017 | pdf |
 | [[sources/pdf-cpp-nginx-module]] | Nginx模块开发指南：C++11 + Boost 扩展Nginx | 2015 | pdf |

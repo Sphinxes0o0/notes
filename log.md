@@ -4,6 +4,25 @@
 
 ---
 
+## [2026-05-27] ingest | Batch Q: raw/PDFs/papers/ (10 papers → 8 new source pages)
+
+- **来源**: raw/PDFs/papers/ (10 PDFs)
+- **操作**: 创建 8 个新 source pages + 更新 4 个 index/nav pages
+- **新增 source pages**:
+  1. `wiki/sources/pdf-infocom-ptpsec.md` — PTPsec (INFOCOM 2024): 循环路径不对称分析, Meas消息, 冗余路径RTT, 静态/增量延迟攻击缓解
+  2. `wiki/sources/pdf-falco-apple.md` — Falco at Apple (eBPF Summit 2021): BPF vs内核模块, LSM hook, Ringbuf, 高价值Syscall监控列表
+  3. `wiki/sources/pdf-google-bpf-audit.md` — BPF Security Auditing at Google (Brendan Jackman): KRSI BPF LSM, Atomics原子操作, Ringbuf promise机制, CO-RE跨版本兼容
+  4. `wiki/sources/pdf-ebpf-library-ecosystem.md` — eBPF Library Ecosystem (Kyle Quest): Go(Rust/Python/C生态库评测: BCC/libbpf/cilium-ebpf/aya
+  5. `wiki/sources/pdf-xdp-fast-packet.md` — XDP Fast Packet Processing (UFMG): BPF指令格式详解, ~20Mpps vs TC~5Mpps vs Netfilter~1Mpps, XDP Actions
+  6. `wiki/sources/pdf-bpf-rethinking-kernel.md` — Rethinking Linux Kernel (Thomas Graf 2020): eBPF微内核愿景, 可组合服务层, Map类型一览
+  7. `wiki/sources/pdf-bpf-microservices-os.md` — BPF Microservices-aware OS (Thomas Graf 2018): Cilium/Hubble可观测性, L7网络可视化, Service Mesh加速~3.5x
+  8. `wiki/sources/pdf-sabpf-container-audit.md` — (已存在, 补充) saBPF SoCC 2021: 容器级LSM审计, 零内核修改, provenance追踪
+- **更新**: pdf-ebpf-papers.md (+Individual Paper Pages节, 9→10篇, 作者补全), ebpf-index.md (+7 individual source rows, 统计更新), security-index.md (+pdf-infocom-ptpsec), home.md (+8 new source rows, 页面数395→403), index.md (更新pdf-ebpf-papers条目 7→10篇)
+- **已存在未修改**: pdf-security-papers-ebpf.md, pdf-ptp-security.md, pdf-isovalent-security-observability.md, pdf-sabpf-container-audit.md
+- **核心概念**: eBPF生态全景(10论文), PTPsec时间同步安全, BPF微内核架构演进, XDP高速数据面, Go/Rust/Python多语言生态
+
+---
+
 ## [2026-05-26] ingest | Batch G: SafeOS remaining docs (architecture_notes + plan)
 
 - **来源**: raw/safeos/architecture_notes.md, raw/safeos/plan.md
