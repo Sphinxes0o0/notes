@@ -4,6 +4,11 @@
 
 ---
 
+## [2026-05-27] ingest | snort3 actions + connectors (20 files)
+
+- **来源**: `~/workspace/github/snort3/src/{actions,connectors}/` (20 source files)
+- **操作**: 创建 `wiki/entities/linux/snort3/snort3-actions.md`、`wiki/entities/linux/snort3/snort3-connectors.md`、`wiki/sources/github-snort3-actions-connectors.md`
+
 ## [2026-05-27] ingest | snort3 events/host_tracker/filters (26 files)
 
 - **来源**: `~/workspace/github/snort3/src/{events,host_tracker,filters}/` (26 source files)
