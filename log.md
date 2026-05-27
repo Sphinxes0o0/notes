@@ -4,6 +4,13 @@
 
 ---
 
+## [2026-05-27] ingest | snort3 events/host_tracker/filters (26 files)
+
+- **来源**: `~/workspace/github/snort3/src/{events,host_tracker,filters}/` (26 source files)
+- **操作**:
+  - 创建 `wiki/entities/linux/snort3/snort3-events-filters.md` — Event queue (memcap/SF_EVENTQ)、HostTracker profiler (TCP/UDP/ICMP/MAC/service/client/fingerprint)、三层过滤架构 (detection/rate/event filter)
+  - 创建 `wiki/sources/github-snort3-events-filters.md` — Source summary page (commit 72675d1ab, 3.10.0.0)
+
 ## [2026-05-27] ingest | Modern-Cpp-Skills (14 Master modules: m01-m15)
 
 - **来源**: raw/Modern-Cpp-Skills/ (14 Master skill modules: m01-ownership, m02-resource, m03-mutability, m04-zero-cost, m05-type-driven, m06-error-handling, m07-concurrency, m09-domain, m10-performance, m11-ecosystem, m12-lifecycle, m13-domain-error, m14-mental-model, m15-anti-pattern)
