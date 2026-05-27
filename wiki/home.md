@@ -117,7 +117,7 @@ created: 2026-05-22
 | [[sources/notes-openbmc]] | OpenBMC 深度技术分析：硬件控制、安全、Redfish、IPMI、启动更新 | 2026-05 | github |
 | [[sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20)：Lambda、智能指针、RAII、并发、Move语义 | 2026-05 | pdf |
 | [[sources/pdf-cpp-effective-stl]] | Effective STL (Scott Meyers)：50条STL最佳实践，容器/迭代器/算法/仿函数 | 2026-05 | pdf |
-| [[sources/pdf-cpp-slides]] | C++ Conference Talks Batch N (21 talks)：Bjarne/安全/AI推理(RTP-LLM/Mooncake/xLLM)/编译器(RISC-V/MLIR)/嵌入式/AI Coding/异构计算 | 2026-05 | pdf |
+| [[sources/pdf-cpp-slides]] | C++ Conference Talks (37 talks)：Bjarne/安全/AI推理(RTP-LLM/Mooncake/xLLM)/编译器(RISC-V/MLIR)/AI Coding/嵌入式/异构计算 | 2026-05 | pdf |
 | [[sources/pdf-cpp-ai-inference]] | AI推理与MLIR编译优化：RTP-LLM(阿里)、xLLM、DeepSeek SGLang优化、MLIR Actor编译器 | 2026-05 | pdf |
 | [[sources/pdf-cpp-compiler-toolchain]] | 编译器与工具链：MLIR fuzzing、RISC-V AI编译器、多元AI算子库、编译技术在AI软件栈的实践 | 2026-05 | pdf |
 | [[sources/pdf-cpp-perf-engineering]] | 高性能C++工程：缓存/分布式计算加速、内核Btree块缓存、异构传输库优化 | 2026-05 | pdf |

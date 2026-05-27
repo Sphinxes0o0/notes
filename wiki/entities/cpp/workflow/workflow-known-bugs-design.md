@@ -39,6 +39,6 @@ task->set_prepare([](WFHttpTask *task) {
 
 ## 相关页面
 
-- [[workflow-known-bugs]] — Known Bugs 实体页
-- [[workflow-upstream]] — Upstream 负载均衡
-- [[workflow-user-defined-protocol]] — 自定义协议
+- [[entities/cpp/workflow/workflow-known-bugs]] — Known Bugs 实体页
+- [[entities/cpp/workflow/workflow-upstream]] — Upstream 负载均衡
+- [[entities/cpp/workflow/workflow-user-defined-protocol]] — 自定义协议

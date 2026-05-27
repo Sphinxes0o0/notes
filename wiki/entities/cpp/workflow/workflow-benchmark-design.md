@@ -57,6 +57,6 @@ Sogou C++ Workflow 的官方性能测试文档，记录了 HTTP Server 场景下
 
 ## 相关页面
 
-- [[workflow-benchmark]] — Benchmark 实体页
-- [[workflow-http-server]] — HTTP Server 教程
-- [[workflow-performance]] — 性能相关
+- [[entities/cpp/workflow/workflow-benchmark]] — Benchmark 实体页
+- [[entities/cpp/workflow/workflow-http-server]] — HTTP Server 教程
+- [[entities/cpp/workflow/workflow-performance]] — 性能相关

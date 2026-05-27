@@ -44,7 +44,7 @@ WFTaskFactory::signal_by_name("slot_name", msg);
 
 ## 相关页面
 
-- [[workflow-conditional]] — Conditional 任务类型
-- [[workflow-timer]] — Timer 定时器
-- [[workflow-selector]] — Selector 多选一
-- [[workflow-async-model]] — 异步任务模型
+- [[entities/cpp/workflow/workflow-conditional]] — Conditional 任务类型
+- [[entities/cpp/workflow/workflow-timer]] — Timer 定时器
+- [[entities/cpp/workflow/workflow-selector]] — Selector 多选一
+- [[entities/cpp/workflow/workflow-async-model]] — 异步任务模型
