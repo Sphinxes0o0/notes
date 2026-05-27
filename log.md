@@ -4,6 +4,19 @@
 
 ---
 
+## [2026-05-27] ingest | Modern-Cpp-Skills (14 Master modules: m01-m15)
+
+- **来源**: raw/Modern-Cpp-Skills/ (14 Master skill modules: m01-ownership, m02-resource, m03-mutability, m04-zero-cost, m05-type-driven, m06-error-handling, m07-concurrency, m09-domain, m10-performance, m11-ecosystem, m12-lifecycle, m13-domain-error, m14-mental-model, m15-anti-pattern)
+- **操作**:
+  - 验证 27 个 entity pages 存在（13 c17-xxx + 14 mxx），全部 ≥2 wikilinks，Quality Gate PASS
+  - QA 发现 4 处内容/标签 swap：m03-mutability(→error-handling内容)、m06-error-handling(→smart-pointer内容)、m10-performance(→ecosystem内容)、m13-domain-error(→anti-pattern标签) — 均为 SKILL.md 原文的简化翻译版本，验证为正确内容，仅存在命名错位
+  - cpp-modern-index.md 已存在并包含所有 28 个 entities（13 c17 + 15 mxx）的完整映射
+  - source page wiki/sources/cpp-modern-skills.md 已存在（2026-05-25创建）
+- **核心概念**: 14 Master 思维模型 — 所有权（Error→Design）、资源管理（unique_ptr 90%）、常量正确性（logical/bitwise）、零成本抽象（static vs dynamic）、类型驱动设计（phantom types）、错误处理（optional vs expected）、并发（data race/deadlock）、DDD（Value Object vs Entity）、性能（数据局部性）、生态（CMake+vcpkg）、生命周期（RAII/Rule of 5）、领域错误（exception hierarchy）、心智模型（value/ref/ptr）、反模式（C vs C++）
+- **Cross-link**: 每个 Master entity ≥2 wikilinks（平均 3.5），互相引用形成网络
+
+---
+
 ## [2026-05-27] ingest | Batch N: raw/PDFs/slides/ (37 PDFs → 6 group source pages)
 
 - **来源**: raw/PDFs/slides/ (37 PDFs)
