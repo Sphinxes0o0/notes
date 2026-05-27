@@ -4,6 +4,17 @@
 
 ---
 
+## [2026-05-27] ingest | snort3 infrastructure — helpers/hash/file_api/decompress/js_norm (80+ files)
+
+- **来源**: `~/workspace/github/snort3/src/{helpers,hash,file_api,decompress,js_norm}/` (80+ source files)
+- **操作**:
+  - 创建 `wiki/entities/linux/snort3/snort3-infrastructure.md` — 8-section entity page covering XHash/ZHash/GHash, file_api pipeline (FileFlows/FileCache/FileCapture/FileIdentifier), decompress (PDF/SWF/ZIP/OLE/VBA), js_norm (Flex lexers, identifier normalization, PDF JS extraction), helpers
+  - 创建 `wiki/sources/github-snort3-infrastructure.md` — Source summary (hash/file_api/decompress/js_norm/helpers directories)
+  - 更新 `wiki/index.md` (+Snort3 module index with 8 entities + source entry)
+- **核心概念**: XHash memcap+LRU, SegmentedLruCache低竞争, FileIdentifier magic trie, 3-stage file pipeline, VBA extraction pipeline (ZIP→OLE→RLE), Flex双lexer架构, var_xxxx identifier normalization
+- **Cross-link**: snort3-infrastructure.md links to snort3-{actions,connectors,events-filters,flow,ips-options,framework,control-startup}
+- **未 commit**
+
 ## [2026-05-27] ingest | snort3 actions + connectors (20 files)
 
 - **来源**: `~/workspace/github/snort3/src/{actions,connectors}/` (20 source files)

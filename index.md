@@ -55,6 +55,18 @@ created: 2026-05-22
 | [[wiki/tools-index]] | tcpdump, netcat, masscan, nmap |
 | [[wiki/openbmc-index]] | IPMI, Redfish, boot/firmware update, hardware control |
 
+### Snort3 IDS/IPS
+| Index | Domain |
+|-------|--------|
+| [[wiki/entities/linux/snort3/snort3-framework]] | Plugin system, lifecycle, pig, shell |
+| [[wiki/entities/linux/snort3/snort3-actions]] | Rule actions |
+| [[wiki/entities/linux/snort3/snort3-connectors]] | Service connectors (TCP/UDP/file/popen) |
+| [[wiki/entities/linux/snort3/snort3-events-filters]] | Event generation, 3-layer filter architecture |
+| [[wiki/entities/linux/snort3/snort3-flow]] | Flow tracking |
+| [[wiki/entities/linux/snort3/snort3-ips-options]] | IPS options |
+| [[wiki/entities/linux/snort3/snort3-infrastructure]] | Hash tables, file_api, decompress, js_norm, helpers |
+| [[wiki/entities/linux/snort3/snort3-control-startup]] | Control and startup |
+
 ## Sources
 | Source | Description |
 |--------|-------------|
@@ -85,6 +97,7 @@ created: 2026-05-22
 | [[wiki/sources/notes-interview]] | 面试准备：方法论、问题解决模式、系统设计基础、NP完全性、位操作 |
 | [[wiki/sources/notes-midware]] | 中间件：DoIP协议（ISO 13400）、SOME/IP服务通信、vSOME/IP开源实现 |
 | [[wiki/sources/notes-security]] | 安全工具：Masscan高速端口扫描、Falco K8s安全监控、Snort 3 NIDS |
+| [[wiki/sources/github-snort3-infrastructure]] | Snort3 infrastructure: hash/XHash/ZHash, file_api, decompress, js_norm |
 | [[wiki/sources/notes-sys]] | 系统编程：TTY/Shell/Console体系、ELF文件格式、Linux IPC |
 | [[wiki/sources/pdf-the-linux-programming-interface]] | TLPI (Kerrisk, 1556页)：Linux/UNIX系统编程百科，500+系统调用 |
 | [[wiki/sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程（扫描版）|
