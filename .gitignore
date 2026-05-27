@@ -6,3 +6,10 @@ wiki/.obsidian/workspace.json
 # macOS
 .DS_Store
 raw/PDFs/ebooks/
+
+# raw/ — don't track git repos, IDE config, Obsidian config
+raw/**/.git/
+raw/**/.obsidian/
+raw/**/.vscode/
+raw/**/.claude/
+raw/**/.husky/
