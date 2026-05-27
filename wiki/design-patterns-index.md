@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > SOLID principles, creational, structural, and behavioral patterns
 
-## Entities
+## Entities (23 patterns)
 
 | Entity | Description | Tags |
 |--------|-------------|------|

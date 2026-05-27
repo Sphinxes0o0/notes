@@ -340,3 +340,5 @@ Updated:
 - **书目**: 5册 — Operating System Concepts 10th Ed / 现代操作系统原理与实现 / Cortex-A9 TRM / ARMv8 ARM / ARM A-profile Reference
 - **说明**: ARM 文档已收录于 pdf-arm-architecture；OS textbooks 来自 OneDrive batch（streaming 待完成）
 - **未 commit**
+
+## [2026-05-26] ingest | design-patterns (24 entities), notes reorg (30→14 dirs), lint pass

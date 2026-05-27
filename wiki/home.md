@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-27 | Total pages: ~409 | Module indexes: 25
+> Last updated: 2026-05-27 | Total: ~647 pages
 
 ---
 
