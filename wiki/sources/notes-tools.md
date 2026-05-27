@@ -8,7 +8,7 @@ title: "工具使用笔记 (Tools Notes)"
 author: "Sphinx"
 date: 2025-02-16
 size: small
-path: raw/github/notes/tools/
+path: raw/notes/tools/
 summary: "Linux 网络抓包（tcpdump）、网络工具（netcat）、端口扫描（masscan/nmap）、系统管理（移除 Snap）实用指南"
 ---
 

@@ -5,7 +5,7 @@ title: "Sphinx 技术笔记 - Linux 内核"
 author: Sphinxes0o0
 date: 2026-05-20
 size: medium
-path: raw/github/notes/
+path: raw/notes/
 summary: Linux 内核各子系统深度分析笔记，包含 mm、sched、block、VFS、网络、虚拟化等
 tags: [linux-kernel]
 sources: [notes-kernel]
@@ -37,37 +37,37 @@ created: 2026-05-20
 
 ### 内存管理 (mm/)
 
-- `raw/github/notes/kernel/mm/linux_kernel/index.md` — MM 子系统总览
-- `raw/github/notes/mm/linux_kernel/mm_allocator.md` — SLUB 分配器
-- `raw/github/notes/mm/linux_kernel/mm_page_fault.md` — 缺页中断
-- `raw/github/notes/mm/linux_kernel/mm_swap.md` — Swap 子系统
-- `raw/github/notes/mm/linux_kernel/mm_page_reclaim.md` — 页面回收
-- `raw/github/notes/mm/linux_kernel/mm_mmap.md` — mmap 内存映射
-- `raw/github/notes/mm/linux_kernel/mm_core_structs.md` — 核心数据结构
-- `raw/github/notes/mm/linux_kernel/mm_deep_dive_r1.md` — 深度分析 R1
-- `raw/github/notes/mm/linux_kernel/mm_deep_dive_r2.md` — 深度分析 R2
+- `raw/notes/kernel/mm/linux_kernel/index.md` — MM 子系统总览
+- `raw/notes/mm/linux_kernel/mm_allocator.md` — SLUB 分配器
+- `raw/notes/mm/linux_kernel/mm_page_fault.md` — 缺页中断
+- `raw/notes/mm/linux_kernel/mm_swap.md` — Swap 子系统
+- `raw/notes/mm/linux_kernel/mm_page_reclaim.md` — 页面回收
+- `raw/notes/mm/linux_kernel/mm_mmap.md` — mmap 内存映射
+- `raw/notes/mm/linux_kernel/mm_core_structs.md` — 核心数据结构
+- `raw/notes/mm/linux_kernel/mm_deep_dive_r1.md` — 深度分析 R1
+- `raw/notes/mm/linux_kernel/mm_deep_dive_r2.md` — 深度分析 R2
 
 ### 调度器 (sched/)
 
-- `raw/github/notes/kernel/sched/linux_kernel/index.md` — Sched 子系统总览
-- `raw/github/notes/sched/linux_kernel/sched_core.md` — 调度器核心
-- `raw/github/notes/sched/linux_kernel/sched_cfs.md` — CFS 调度器
-- `raw/github/notes/sched/linux_kernel/sched_context_switch.md` — 上下文切换
-- `raw/github/notes/sched/linux_kernel/sched_load_balance.md` — 负载均衡
-- `raw/github/notes/sched/linux_kernel/sched_class.md` — 调度类框架
-- `raw/github/notes/sched/linux_kernel/sched_rt.md` — RT 调度器
-- `raw/github/notes/sched/linux_kernel/sched_deep_dive_r1.md` — 深度分析 R1
+- `raw/notes/kernel/sched/linux_kernel/index.md` — Sched 子系统总览
+- `raw/notes/sched/linux_kernel/sched_core.md` — 调度器核心
+- `raw/notes/sched/linux_kernel/sched_cfs.md` — CFS 调度器
+- `raw/notes/sched/linux_kernel/sched_context_switch.md` — 上下文切换
+- `raw/notes/sched/linux_kernel/sched_load_balance.md` — 负载均衡
+- `raw/notes/sched/linux_kernel/sched_class.md` — 调度类框架
+- `raw/notes/sched/linux_kernel/sched_rt.md` — RT 调度器
+- `raw/notes/sched/linux_kernel/sched_deep_dive_r1.md` — 深度分析 R1
 
 ### 块设备层 (block/)
 
-- `raw/github/notes/kernel/block/linux_kernel/index.md` — Block 子系统总览
-- `raw/github/notes/block/linux_kernel/block_core.md` — 块设备核心结构
-- `raw/github/notes/block/linux_kernel/block_mq.md` — MultiQueue
-- `raw/github/notes/block/linux_kernel/block_scheduler.md` — I/O 调度器
-- `raw/github/notes/block/linux_kernel/block_request.md` — Request 处理
-- `raw/github/notes/block/linux_kernel/block_genhd.md` — GenHD 和分区
-- `raw/github/notes/block/linux_kernel/block_deep_dive_r1.md` — 深度分析 R1
-- `raw/github/notes/block/linux_kernel/block_deep_dive_r2.md` — 深度分析 R2
+- `raw/notes/kernel/block/linux_kernel/index.md` — Block 子系统总览
+- `raw/notes/block/linux_kernel/block_core.md` — 块设备核心结构
+- `raw/notes/block/linux_kernel/block_mq.md` — MultiQueue
+- `raw/notes/block/linux_kernel/block_scheduler.md` — I/O 调度器
+- `raw/notes/block/linux_kernel/block_request.md` — Request 处理
+- `raw/notes/block/linux_kernel/block_genhd.md` — GenHD 和分区
+- `raw/notes/block/linux_kernel/block_deep_dive_r1.md` — 深度分析 R1
+- `raw/notes/block/linux_kernel/block_deep_dive_r2.md` — 深度分析 R2
 
 ## 相关概念
 

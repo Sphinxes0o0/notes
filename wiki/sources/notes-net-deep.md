@@ -5,7 +5,7 @@ source-type: github
 title: "Sphinx 网络深度笔记 — Netfilter, Routing, skbuff, OSI/PHY/MAC, Network Stack Deep Dive"
 date: 2026-05-22
 size: medium
-path: raw/github/notes/net/linux_kernel/ + raw/github/notes/network/
+path: raw/notes/net/linux_kernel/ + raw/notes/network/
 summary: "合并来自 notes/net 和 notes/network 的剩余网络深度分析文档，涵盖 skbuff 内存管理、Netfilter/iptables/nftables、IPv4 路由 Trie、PHY/MAC 物理层架构、Conntrack 连接跟踪、Socket 层架构和网络栈全路径分析。"
 tags: [networking, linux-kernel, netfilter]
 sources: [notes-net-deep]
@@ -17,7 +17,7 @@ sources: [notes-net-deep]
 
 本来源聚合了 Sphinx 技术笔记仓库中尚未被 ingest 的网络相关深度分析文档，分为两大目录：
 
-### raw/github/notes/net/linux_kernel/ (内核网络)
+### raw/notes/net/linux_kernel/ (内核网络)
 
 | 文档 | 内容 |
 |------|------|
@@ -27,7 +27,7 @@ sources: [notes-net-deep]
 | `index.md` | Net/ 子系统文档索引与架构总览图（VFS→协议层→skbuff→Netfilter→路由→设备层） |
 | `net_deep_dive_r1.md` | R1 深度分析：Socket Layer（socket/sock 结构）、sk_buff、Netdevice、Routing、Netfilter Hooks、TCP/UDP 协议实现，含数据结构关联表和核心函数调用链总表 |
 
-### raw/github/notes/network/ (网络原理与协议)
+### raw/notes/network/ (网络原理与协议)
 
 | 文档 | 内容 |
 |------|------|

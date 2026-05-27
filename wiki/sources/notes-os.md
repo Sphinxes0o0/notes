@@ -2,10 +2,10 @@
 type: source
 source-type: github
 title: "操作系统学习笔记"
-author: "notes (github/notes)"
+author: "notes (raw/notes)"
 date: 2026-05-20
 size: medium
-path: raw/github/notes/os/
+path: raw/notes/os/
 summary: "Linux 内核深度分析：VFS、调度器、SLUB 分配器、cgroups 架构详解"
 tags: [linux, os]
 sources: [notes-os]

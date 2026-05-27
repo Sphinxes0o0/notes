@@ -5,7 +5,7 @@ title: "Linux Kernel Crypto Subsystem Notes"
 author: "notes repo"
 date: 2026-05-20
 size: small
-path: raw/github/notes/crypto/linux_kernel/
+path: raw/notes/crypto/linux_kernel/
 summary: "Linux内核密码学子系统：crypto_alg注册、skcipher、aead、ahash、模板机制"
 tags: [linux-kernel, crypto]
 sources: [notes-kernel-crypto]
@@ -16,7 +16,7 @@ created: 2026-05-20
 
 ## 来源信息
 
-- **路径**: raw/github/notes/crypto/linux_kernel/
+- **路径**: raw/notes/crypto/linux_kernel/
 - **文件数**: 5个文档（index + 4个分析文档）
 - **类型**: 内核源码分析笔记
 

@@ -5,7 +5,7 @@ title: "计算机网络基础 (Network Fundamentals)"
 author: "notes repo"
 date: 2026-05-20
 size: medium
-path: raw/github/notes/network_fundamentals/
+path: raw/notes/network_fundamentals/
 summary: "计算机网络课程笔记：TCP/UDP协议、IP协议、Socket编程、HTTP/DNS、网络安全"
 tags: [linux-kernel, networking]
 sources: [notes-network-fundamentals]
@@ -16,7 +16,7 @@ created: 2026-05-20
 
 ## 来源信息
 
-- **路径**: raw/github/notes/network_fundamentals/
+- **路径**: raw/notes/network_fundamentals/
 - **文件数**: 21个lecture + 5个模块解答
 - **类型**: 课程笔记（Markdown格式）
 

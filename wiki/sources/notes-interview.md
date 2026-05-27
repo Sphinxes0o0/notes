@@ -3,7 +3,7 @@ type: source
 source-type: github
 sources: [notes-interview]
 tags: [interview, algorithms]
-path: raw/github/notes/interview/
+path: raw/notes/interview/
 created: 2026-05-22
 ---
 

@@ -8,7 +8,7 @@ title: "SOME/IP & vSOME/IP 技术文档 (6篇)"
 author: "AUTOSAR, GENIVI, Charles Chan"
 date: 2024
 size: medium
-path: raw/github/notes/resources/docs/someip/
+path: raw/notes/resources/docs/someip/
 summary: "4篇 SOME/IP 技术文档（CommonAPI、Franca IDL、AUTOSAR 错误处理、SOME/IP-SD 头部）+ 2篇网络相关（vSomeIP Endpoints、Netmap 用户态协议栈）"
 ---
 

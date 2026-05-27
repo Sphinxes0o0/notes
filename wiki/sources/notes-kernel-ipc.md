@@ -5,7 +5,7 @@ title: "Linux Kernel IPC Subsystem Notes"
 author: "notes repo"
 date: 2026-05-20
 size: small
-path: raw/github/notes/ipc/linux_kernel/
+path: raw/notes/ipc/linux_kernel/
 summary: "Linux内核IPC子系统：msg、sem、shm、mqueue消息队列、信号量、共享内存"
 tags: [linux-kernel, ipc]
 sources: [notes-kernel-ipc]
@@ -16,7 +16,7 @@ created: 2026-05-20
 
 ## 来源信息
 
-- **路径**: raw/github/notes/ipc/linux_kernel/
+- **路径**: raw/notes/ipc/linux_kernel/
 - **文件数**: 3个文档（index + 2个分析文档）
 - **类型**: 内核源码分析笔记
 

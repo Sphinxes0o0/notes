@@ -3,7 +3,7 @@ type: source
 source-type: github
 sources: [notes-design-patterns]
 tags: [design-patterns, software-engineering]
-path: raw/github/notes/design_patterns/
+path: raw/notes/design_patterns/
 created: 2026-05-22
 ---
 

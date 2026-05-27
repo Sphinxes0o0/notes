@@ -5,7 +5,7 @@ title: "Linux Kernel Netfilter Notes"
 author: "Sphinx"
 date: 2026-05-20
 size: medium
-path: raw/github/notes/netfilter/
+path: raw/notes/netfilter/
 summary: "Linux Netfilter/iptables/nftables/conntrack 深度分析：Hook 机制、连接跟踪、NAT、xtables、nftables 表达式、PIPAPO 算法"
 tags: [linux-kernel, networking]
 sources: [notes-netfilter]

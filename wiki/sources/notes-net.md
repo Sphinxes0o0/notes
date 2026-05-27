@@ -5,7 +5,7 @@ title: "Linux Kernel Net Subsystem Notes"
 author: "Sphinx"
 date: 2026-05-20
 size: medium
-path: raw/github/notes/net/
+path: raw/notes/net/
 summary: "Linux 内核网络子系统深度分析：Socket Layer、sk_buff、Netdevice、Routing、Netfilter Hooks、TCP/UDP 协议实现"
 tags: [linux-kernel, networking]
 sources: [notes-net]

@@ -8,7 +8,7 @@ title: "C++ Templates 2nd Edition"
 author: "David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor"
 date: 2017
 size: large
-path: raw/github/notes/resources/docs/cpp/C++模板_第二版.pdf
+path: raw/notes/resources/docs/cpp/C++模板_第二版.pdf
 summary: "C++ 模板权威指南第二版（中文翻译），涵盖模板核心概念、特化/偏特化、变参模板、SFINAE、CRTP、模板与设计、C++11/14/17 模板新特性"
 ---
 

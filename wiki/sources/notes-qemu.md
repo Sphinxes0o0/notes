@@ -2,10 +2,10 @@
 type: source
 source-type: github
 title: "QEMU 架构分析"
-author: "notes (github/notes)"
+author: "notes (raw/notes)"
 date: 2026-05-20
 size: medium
-path: raw/github/notes/qemu/
+path: raw/notes/qemu/
 summary: "深入分析 QEMU 模拟器内部架构：QOM、内存管理、CPU执行、块设备层、迁移框架、网络等子系统"
 tags: [linux, qemu, virtualization]
 sources: [notes-qemu]

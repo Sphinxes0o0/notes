@@ -5,7 +5,7 @@ title: "Linux Kernel Sound Subsystem Notes"
 author: "notes repo"
 date: 2026-05-20
 size: small
-path: raw/github/notes/sound/linux_kernel/
+path: raw/notes/sound/linux_kernel/
 summary: "Linux内核声音子系统：ALSA架构、PCM、ASoC、DAPM、DAI数字音频接口"
 tags: [linux-kernel, sound]
 sources: [notes-kernel-sound]
@@ -16,7 +16,7 @@ created: 2026-05-20
 
 ## 来源信息
 
-- **路径**: raw/github/notes/sound/linux_kernel/
+- **路径**: raw/notes/sound/linux_kernel/
 - **文件数**: 4个文档（index + 3个分析文档）
 - **类型**: 内核源码分析笔记
 

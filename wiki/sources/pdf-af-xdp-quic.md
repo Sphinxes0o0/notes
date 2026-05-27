@@ -8,7 +8,7 @@ title: "AF_XDP with QUIC Practice - Bilibili"
 author: "Bilibili Network Protocol Team"
 date: 2024
 size: small
-path: raw/github/notes/resources/docs/networking/bilibili_af_xdp_quic_practice.pdf
+path: raw/notes/resources/docs/networking/bilibili_af_xdp_quic_practice.pdf
 summary: "B站网络协议组的技术分享：使用 AF_XDP 技术优化 QUIC 网关收发包效率，减少 CPU 负载，实现在线视频 CDN 场景的降本增效"
 ---
 

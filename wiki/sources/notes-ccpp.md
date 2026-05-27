@@ -8,7 +8,7 @@ title: "Sphinx's C/C++ Technical Notes"
 author: "Sphinx"
 date: 2026-05-22
 size: medium
-path: raw/github/notes/ccpp/
+path: raw/notes/ccpp/
 summary: "C/C++ 技术笔记：序列化技术（JSON/XML/Protobuf/Boost/MessagePack）、智能指针深度分析、堆栈对象创建策略、移动语义与完美转发"
 ---
 

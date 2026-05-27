@@ -8,7 +8,7 @@ title: "Nginx模块开发指南：使用C++11和Boost程序库"
 author: "罗剑锋"
 date: 2015
 size: medium
-path: raw/github/notes/resources/docs/cpp/Nginx模块开发指南使用C++11和Boost程序库(罗剑锋著).pdf
+path: raw/notes/resources/docs/cpp/Nginx模块开发指南使用C++11和Boost程序库(罗剑锋著).pdf
 summary: "Nginx 模块开发实战指南，使用 C++11 和 Boost 库扩展 Nginx 功能，涵盖模块架构、配置解析、HTTP/stream 模块开发、Boost 集成"
 ---
 

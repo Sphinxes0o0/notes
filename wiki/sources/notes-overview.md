@@ -1,7 +1,7 @@
 ---
 type: source
 source-type: github
-path: raw/github/notes/
+path: raw/notes/
 title: "notes — Sphinx 技术笔记"
 owner: Sphinxes0o0
 repo: notes

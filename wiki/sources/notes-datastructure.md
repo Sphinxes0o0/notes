@@ -3,7 +3,7 @@ type: source
 source-type: github
 sources: [notes-datastructure]
 tags: [data-structures, algorithms]
-path: raw/github/notes/datastructure/
+path: raw/notes/datastructure/
 created: 2026-05-22
 ---
 

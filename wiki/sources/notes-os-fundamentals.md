@@ -2,10 +2,10 @@
 type: source
 source-type: github
 title: "操作系统基础 (39 lectures)"
-author: "notes (github/notes)"
+author: "notes (raw/notes)"
 date: 2026-05-20
 size: large
-path: raw/github/notes/os_fundamentals/
+path: raw/notes/os_fundamentals/
 summary: "操作系统原理课程：进程线程、虚拟内存、I/O模型、文件系统、并发控制等核心概念"
 tags: [linux, os]
 sources: [notes-os-fundamentals]

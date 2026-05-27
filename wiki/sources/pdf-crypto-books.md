@@ -8,7 +8,7 @@ title: "OpenSSL Cookbook 中文版 / 图解密码技术 第三版"
 author: "Ivan Ristić; 结城浩"
 date: 2024
 size: medium
-path: raw/github/notes/resources/docs/cpp/openssl-cookbook-中文版.pdf, raw/github/notes/resources/docs/cpp/图解密码技术 第三版.pdf
+path: raw/notes/resources/docs/cpp/openssl-cookbook-中文版.pdf, raw/notes/resources/docs/cpp/图解密码技术 第三版.pdf
 summary: "两册密码学书籍：OpenSSL Cookbook（密钥生成、证书管理、服务器安全测试）和 图解密码技术 第三版（公钥加密、数字签名、证书、TLS/SSL 图解）"
 ---
 
