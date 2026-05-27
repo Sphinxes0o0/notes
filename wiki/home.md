@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-25 | Total pages: ~373 | Module indexes: 25
+> Last updated: 2026-05-27 | Total pages: ~395 | Module indexes: 25
 
 ---
 
@@ -36,7 +36,7 @@ created: 2026-05-22
 | [[lwip-index]] | lwIP embedded TCP/IP stack: netif, pbuf, memory, IPv4, TCP, UDP, IGMP, DHCP, VLAN dispatch | 27 |
 | [[lwip-source-index]] | lwIP core source reference: ip4.c, tcp.c, udp.c, pbuf.c, netif.c — 函数索引、数据结构、调用链 | 5 |
 | [[lwfw-index]] | SafeOS LWFW firewall: 5-tuple, LWCT, dual filter engines, seL4 IPC, VLAN isolation | 26 |
-| [[safeos-index]] | SafeOS NSv architecture: NSv Network Server, CMA/elem-ring, AF-PACKET/TPACKET, VDF nids relation | 4 |
+| [[safeos-index]] | SafeOS NSv architecture: NSv Network Server, CMA/elem-ring, AF-PACKET/TPACKET, ABI boundary, analysis plan | 6 |
 
 ### SafeOS LWFW
 | Index | Domain | Entities |
@@ -168,6 +168,23 @@ created: 2026-05-22
 | [[sources/pdf-arm-architecture]] | ARM体系结构4册：Armv8/Armv9参考手册、Cortex-A9 TRM、量化研究方法 | 2026-05 | pdf |
 | [[sources/pdf-misc-books]] | 杂项3册：人月神话、非线性动力学与混沌、偏微分方程 | 2026-05 | pdf |
 | [[sources/pdf-remaining-books]] | 剩余书籍汇总 Batch O（38册）：C基础/嵌入式/ARM/Rust/数学/软件工程/其他 | 2026-05 | pdf |
+| [[sources/pdf-security-crypto-books-updated]] | 安全与密码学更新3册：mbedtls开发实战、OpenSSL攻略、Bulletproof TLS/PKI | 2026-05 | pdf |
+| [[sources/pdf-cpp-bjarne-40years]] | Bjarne Stroustrup C++ 40年演讲：成功因素/AI时代定位/C++26方向 | 2026-05 | pdf |
+| [[sources/pdf-mlir-fuzzing]] | MLIR编译器模糊测试：覆盖率引导fuzzing发现pass间/跨dialect bug | 2026-05 | pdf |
+| [[sources/pdf-ai-compiler-stack]] | AI编译器软件栈：SigInfer推理引擎/国产卡CUDA兼容/AI编译器自动生成 | 2026-05 | pdf |
+| [[sources/pdf-xllm-inference]] | xLLM大模型推理引擎C++实现：PD/EPD分离/电商场景/DAG调度/KVCache优化 | 2026-05 | pdf |
+| [[sources/pdf-riscv-ai-compiler]] | RISC-V大模型推理AI编译器：软硬件协同/V扩展/代价模型/自动调优 | 2026-05 | pdf |
+| [[sources/pdf-rtp-llm]] | RTP-LLM阿里推理引擎：MoE专家模型/投机采样/分布式架构/未来展望 | 2026-05 | pdf |
+| [[sources/pdf-mooncake]] | Mooncake解耦式LLM推理：KVCache Pool分层/以存换算/vLLM兼容 | 2026-05 | pdf |
+| [[sources/pdf-flagscale]] | FlagScale训练推理框架：FlagCX统一通信/FlagOS跨AI芯片生态 | 2026-05 | pdf |
+| [[sources/pdf-llm-edge-storage]] | 端侧大模型部署：AIOS架构/存储挑战/分层KVCache/计算存储融合 | 2026-05 | pdf |
+| [[sources/pdf-book-modern-cpp]] | The Book of Modern C++ 第二版：1053页多人合著C++20/23高级主题 | 2024 | pdf |
+| [[sources/pdf-trustzone-optee]] | TrustZone与OP-TEE技术详解：786页ARM硬件安全扩展权威著作 | 2018 | pdf |
+| [[sources/pdf-commercial-crypto-assessment]] | 商用密码评估考核题：622页SM算法/密评流程/等级保护2.0 | 2023 | pdf |
+| [[sources/pdf-openssl-cookbook]] | OpenSSL Cookbook中文版：72页密钥生成/证书管理/SSL测试/漏洞检测 | 2015 | pdf |
+| [[sources/pdf-ebpf-technical-practice]] | eBPF技术实践v2（龙蜥社区）：100页开发流程/工具链/应用场景 | 2023 | pdf |
+| [[sources/pdf-ebpf-basics]] | eBPF基础：80页入门/CO-RE/BTF/Maps/Pinning机制/11个64位寄存器 | 2023 | pdf |
+| [[sources/pdf-computer-architecture-hp]] | H&P计算机体系结构量化研究方法（第五版）：612页体系结构圣经 | 2017 | pdf |
 | [[sources/pdf-onedrive-batch1]] | OneDrive Batch P (5 PDFs): OS concepts + C++ concurrency/high-performance/templates-v2 | 2026-05 | pdf |
 
 ---

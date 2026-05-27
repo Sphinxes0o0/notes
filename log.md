@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-05-26] ingest | Batch G: SafeOS remaining docs (architecture_notes + plan)
+
+- **来源**: raw/safeos/architecture_notes.md, raw/safeos/plan.md
+- **操作**:
+  - 创建 2 个 entity pages: safeos-abi-boundary (ABI边界与头文件暴露), safeos-lwip-lwfw-plan (lwIP+LWFW 深度分析计划)
+  - 更新 safeos-index.md (+2 entities, 4→6)
+  - 更新 home.md (entity count, last-updated)
+- **核心概念**: ABI boundary设计、内部头文件暴露问题、public/private API分离、稳定ABI接口层；lwIP+LWFW 9阶段~64任务分析计划、架构总览、模块分解方法
+
 ## [2026-05-25] ingest | Batch I: Sogou Workflow Engine (C++ async framework)
 
 - **来源**: raw/workflow/ (36 docs: 17 architecture + 18 tutorials + 1 xmake)

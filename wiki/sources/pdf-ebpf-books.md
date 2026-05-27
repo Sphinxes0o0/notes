@@ -108,4 +108,6 @@ Liz Rice (Isovalent) 的入门教程，简洁易懂。
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP 快速数据路径
 - [[entities/linux/ebpf/ebpf-networking]] — TC 与 Cilium
 - [[entities/linux/ebpf/ebpf-ecosystem]] — eBPF 开发框架
+- [[entities/linux-ebpf-fundamentals]] — eBPF基础教程（80页入门）
+- [[entities/linux-ebpf-technical-practice]] — eBPF技术实践白皮书v2（龙蜥社区100页）
 - [[kernel-subsystems-index]] — Linux 内核子系统

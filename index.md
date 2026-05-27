@@ -90,6 +90,22 @@ created: 2026-05-22
 | [[wiki/sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程（扫描版）|
 | [[wiki/sources/pdf-computer-systems-programmers-perspective]] | CS:APP (Bryant & O'Hallaron, 1078页)：计算机系统程序员视角，CMU 15-213 |
 | [[wiki/sources/pdf-onedrive-batch1]] | OneDrive Batch P: OS concepts + C++ concurrency/high-performance/templates-v2 |
+| [[wiki/sources/pdf-cpp-bjarne-40years]] | Bjarne Stroustrup C++ 40年演讲：成功因素、AI时代定位、C++26方向 |
+| [[wiki/sources/pdf-mlir-fuzzing]] | MLIR编译器模糊测试：覆盖率引导fuzzing发现pass间bug |
+| [[wiki/sources/pdf-ai-compiler-stack]] | AI编译器软件栈：SigInfer推理引擎/国产卡CUDA兼容/AI编译器自动生成 |
+| [[wiki/sources/pdf-xllm-inference]] | xLLM大模型推理引擎：PD分离/EPD解耦/C++全栈/DAG调度 |
+| [[wiki/sources/pdf-riscv-ai-compiler]] | RISC-V大模型推理AI编译器：软硬件协同设计/V扩展/代价模型 |
+| [[wiki/sources/pdf-rtp-llm]] | RTP-LLM阿里大模型推理引擎：MoE专家模型/投机采样/分布式架构 |
+| [[wiki/sources/pdf-mooncake]] | Mooncake解耦式大模型推理：KVCache Pool分层存储/以存换算 |
+| [[wiki/sources/pdf-flagscale]] | FlagScale大模型训练推理框架：FlagCX统一通信库/FlagOS生态 |
+| [[wiki/sources/pdf-llm-edge-storage]] | 端侧大模型部署：AIOS架构/存储系统挑战/KVCache分层 |
+| [[wiki/sources/pdf-book-modern-cpp]] | The Book of Modern C++ 第二版：1053页多人合著C++20/23高级主题 |
+| [[wiki/sources/pdf-trustzone-optee]] | TrustZone与OP-TEE技术详解：786页ARM硬件安全扩展权威著作 |
+| [[wiki/sources/pdf-commercial-crypto-assessment]] | 商用密码应用安全性评估考核题：622页SM算法/密评/等级保护2.0 |
+| [[wiki/sources/pdf-openssl-cookbook]] | OpenSSL Cookbook中文版：72页密钥生成/证书管理/SSL测试实用手册 |
+| [[wiki/sources/pdf-ebpf-technical-practice]] | eBPF技术实践v2（龙蜥社区）：100页XDP/TC/CO-RE工具链 |
+| [[wiki/sources/pdf-ebpf-basics]] | eBPF基础：80页入门/11个64位寄存器/CO-RE/BTF/Pinning机制 |
+| [[wiki/sources/pdf-computer-architecture-hp]] | Hennessy & Patterson计算机体系结构量化研究方法（第五版）612页 |
 
 ## Synthesis
 | Topic | Description |

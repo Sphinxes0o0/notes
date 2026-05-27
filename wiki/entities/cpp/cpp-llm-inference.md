@@ -101,3 +101,8 @@ Python is used for model definition and orchestration; **C++ handles production 
 - [[entities/cpp/smart-pointers]] — shared ownership of KV Cache tensors; `unique_ptr` for per-request allocations
 - [[entities/cpp/concurrency]] — multi-threaded scheduling, async pipelines, thread pools for request handling
 - [[entities/cpp/move-semantics]] — passing large tensors between pipeline stages without copying; move-on-send semantics
+- [[entities/ai-moonscake-kvcache-disaggregation]] — Mooncake KVCache解耦式架构（Prefill/Decode分离）
+- [[entities/ai-rtp-llm-inference]] — RTP-LLM阿里巴巴推理引擎（MoE/投机采样/分布式）
+- [[entities/ai-flagscale-framework]] — FlagScale统一训练推理框架（FlagOS生态）
+- [[entities/ai-edge-llm-deployment]] — 端侧LLM部署（存储系统挑战）
+- [[entities/ai-mlir-fuzzing]] — MLIR模糊测试（编译器质量保障）
