@@ -122,3 +122,4 @@ While object-oriented design focuses on classes (logical design), physical desig
 - [[entities/cpp/cpp20-features]] — Modules in C++20 directly address physical design problems (separate compilation, header units)
 - [[entities/cpp/smart-pointers]] — move semantics for avoiding memory copies
 - [[entities/cpp/constexpr]] — compile-time computation to eliminate runtime overhead
+- [[entities/cpp-book-modern-cpp]] — The Book of Modern C++第二版（1053页C++20/23高级主题）

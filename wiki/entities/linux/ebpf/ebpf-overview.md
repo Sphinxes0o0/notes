@@ -94,5 +94,7 @@ CO-RE 通过 BTF 捕获内核类型信息，Clang 记录字段重定位信息（
 
 ## 来源详情
 
-- [[sources/pdf-ebpf-books]] — 《eBPF基础》白皮书 + 《eBPF技术实践》
+- [[sources/pdf-ebpf-books]] — 《eBPF基础》白皮书 + 《eBPF技术实践》（龙蜥社区）+ Liz Rice入门
 - [[sources/pdf-ebpf-papers]] — Thomas Graf eBPF架构论文 + Cilium/Falco/Google/Apple/rootkit论文
+- [[entities/linux-ebpf-fundamentals]] — eBPF基础教程（80页入门）
+- [[entities/linux-ebpf-technical-practice]] — eBPF技术实践白皮书v2（龙蜥社区100页）

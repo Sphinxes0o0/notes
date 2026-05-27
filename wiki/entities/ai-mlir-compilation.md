@@ -40,6 +40,10 @@ Traditional compiler testing generates C/C++ programs then translates to MLIR �
 - [[entities/risc-v-ai-ecosystem]] — RISC-V AI compilers and operator libraries
 - [[entities/cpp/cpp-perf-optimization]] — Low-level CPU/memory optimization complements compiler-level optimization
 - [[entities/cpp/cpp-llm-inference]] — LLM inference frameworks that benefit from compiler optimizations
+- [[entities/ai-mlir-fuzzing]] — MLIR编译器模糊测试，发现pass间不兼容bug
+- [[entities/ai-rtp-llm-inference]] — RTP-LLM推理引擎（AI编译在国产AI芯片的应用）
+- [[entities/ai-flagscale-framework]] — FlagScale跨AI芯片训练推理框架
+- [[entities/ai-moonscake-kvcache-disaggregation]] — Mooncake解耦式推理架构
 
 ## Sources
 - [[sources/pdf-cpp-compiler-toolchain]] — MLIR fuzzing, AI compilation, RISC-V AI compiler slides
