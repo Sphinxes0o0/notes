@@ -3,12 +3,12 @@ type: source
 created: 2026-05-22
 source-type: pdf
 sources: [pdf-ebpf-papers]
-title: "eBPF Papers (9篇)"
-author: "Thomas Graf, Pat Hogan, Brendan Jackman, Eric Sage, Kyle Quest, Marcos A. M. Vieira, Soo Yee Lim, Bogdan Stelea, Xueyuan Han, Thomas Pasquier, Jed Salazar & Natalia Reka Ivanko"
+title: "eBPF Papers (10篇)"
+author: "Thomas Graf, Pat Hogan, Brendan Jackman, Eric Sage, Melissa Kilby, Kyle Quest, Marcos A. M. Vieira, Soo Yee Lim, Bogdan Stelea, Xueyuan Han, Thomas Pasquier, Jed Salazar, Natalia Reka Ivanko, Andreas Finkenzeller"
 date: 2026-05-22
 updated: 2026-05-23
 size: medium
-path: raw/PDFs/papers/bpf-rethinkingthelinuxkernel-200303183208.pdf, raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf, raw/PDFs/papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf, raw/PDFs/papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf, raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf, raw/PDFs/papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf, raw/PDFs/papers/eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More.pdf, raw/PDFs/papers/2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf, raw/PDFs/papers/isovalent_security_observability.pdf
+path: raw/PDFs/papers/bpf-rethinkingthelinuxkernel-200303183208.pdf, raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf, raw/PDFs/papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf, raw/PDFs/papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf, raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf, raw/PDFs/papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf, raw/PDFs/papers/eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More.pdf, raw/PDFs/papers/2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf, raw/PDFs/papers/isovalent_security_observability.pdf, raw/PDFs/papers/2024-INFOCOM-PTPsec.pdf
 tags: [ebpf, linux-kernel, papers]
 ---
 
@@ -187,6 +187,23 @@ Isovalent/Cilium 团队撰写的 eBPF 安全可观测性报告。
 - "eBPF is a highly efficient sandboxed virtual machine in the Linux kernel making the Linux kernel programmable at native execution speed" — Thomas Graf
 - "The kernel does not know about containers or Kubernetes pods — there is no container ID in the kernel" — Thomas Graf
 - "XDP allows packets to be reflected, filtered or redirected without traversing the networking stack" — Vieira, UFMG
+
+## Individual Paper Pages
+
+> Each paper has its own dedicated source page for detailed notes:
+
+| # | Paper | Source Page |
+|---|-------|------------|
+| 1 | Rethinking the Linux Kernel (Thomas Graf) | [[sources/pdf-bpf-rethinking-kernel]] |
+| 2 | BPF: Microservices-aware OS (Thomas Graf) | [[sources/pdf-bpf-microservices-os]] |
+| 3 | Linux Rootkits using eBPF (Black Hat) | (see §3 above) |
+| 4 | XDP Fast Packet Processing (UFMG) | [[sources/pdf-xdp-fast-packet]] |
+| 5 | BPF Security Auditing at Google | [[sources/pdf-google-bpf-audit]] |
+| 6 | Falco at Apple (eBPF Summit 2021) | [[sources/pdf-falco-apple]] |
+| 7 | eBPF Library Ecosystem (Kyle Quest) | [[sources/pdf-ebpf-library-ecosystem]] |
+| 8 | saBPF Container Audit (SoCC 2021) | [[sources/pdf-sabpf-container-audit]] |
+| 9 | Security Observability with eBPF (Isovalent) | [[sources/pdf-isovalent-security-observability]] |
+| 10 | PTPsec Time Sync (INFOCOM 2024) | [[sources/pdf-infocom-ptpsec]] |
 
 ## 相关页面
 
