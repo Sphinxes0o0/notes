@@ -36,12 +36,17 @@ created: 2026-05-22
 | [[lwip-index]] | lwIP embedded TCP/IP stack: netif, pbuf, memory, IPv4, TCP, UDP, IGMP, DHCP, VLAN dispatch | 27 |
 | [[lwip-source-index]] | lwIP core source reference: ip4.c, tcp.c, udp.c, pbuf.c, netif.c — 函数索引、数据结构、调用链 | 5 |
 | [[lwfw-index]] | SafeOS LWFW firewall: 5-tuple, LWCT, dual filter engines, seL4 IPC, VLAN isolation | 26 |
-| [[safeos-index]] | SafeOS NSv architecture: NSv Network Server, CMA/elem-ring, AF-PACKET/TPACKET, ABI boundary, analysis plan | 6 |
+| [[safeos-index]] | SafeOS NSv architecture: NSv Network Server, CMA/elem-ring, AF-PACKET/TPACKET, VLAN, LWFW hot-swap, seL4 perf boundary | 10 |
 
 ### SafeOS LWFW
 | Index | Domain | Entities |
 |-------|--------|----------|
 | [[lwfw-index]] | LWFW module index: architecture, classification, filtering, LWCT, parsing, IPC, agent, VLAN, optimization | 26 |
+
+### NIO VDF (Vehicle Distributed Framework)
+| Index | Domain | Entities |
+|-------|--------|----------|
+| [[vdf-index]] | VDF apps: evm-report(GB/T 32960), iot-gateway, oam-service, traffic-manager, data-collection, diagnostic-lib, switch-monitor | 11 |
 
 ### Emulation
 | Index | Domain | Entities |
@@ -103,6 +108,14 @@ created: 2026-05-22
 | [[sources/safeos-lwfw]] | SafeOS LWFW 防火墙分析 (27篇)：架构/过滤/LWCT/解析/事件/IPC/Agent/VLAN/优化 | 2026-05 | github |
 | [[sources/safeos-lwip-extensions]] | SafeOS lwIP 扩展/集成分析 (19篇)：LWFW/CMA/elem_ring/AF-PACKET/seL4 IPC/VIRT_BRG | 2026-05 | github |
 | [[sources/safeos-architecture]] | SafeOS NSv 架构设计文档 (7篇)：9阶段分析计划/NSv深度分析/AF-PACKET设计/VDF nids关系 | 2026-05 | github |
+| [[sources/safeos-lwip-analysis-summary]] | SafeOS lwIP 深度分析汇总 (~28 Core + 19 Extensions)：T-001~T-114共64任务、核心调用链 | 2026-05 | github |
+| [[sources/safeos-lwip-vlan-dispatch]] | lwIP vs Linux VLAN 分发机制对比：LWIP_ARP_FILTER_NETIF+VLAN ID vs rx_handler，Bridge不理解VLAN tag | 2026-05 | github |
+| [[sources/safeos-lwip-vlan-implementation]] | lwIP IEEE 802.1Q VLAN 实现：struct eth_vlan_hdr、netif->vlanid、PCP优先级、LWIP_HOOK_VLAN_SET/CHECK | 2026-05 | github |
+| [[sources/safeos-lwip-firewall-analysis]] | lwIP 防火墙三层架构：lwfw无状态过滤+lwct连接跟踪+cBPF socket级过滤，hook位置/过滤链/规则匹配 | 2026-05 | github |
+| [[sources/safeos-plan]] | SafeOS lwIP + LWFW 深度分析9阶段计划 (~64任务)：优先级P0~P2 | 2026-05 | github |
+| [[sources/vdf-apps]] | VDF Apps (evm-report/iot-gateway/oam-service/traffic-manager/data-collection 等) | 2026-05 | github |
+| [[sources/vdf-tools]] | VDF Tools: switch-monitor 以太网交换机监控 (BBMGR/smitool) | 2026-05 | github |
+| [[sources/vdf-sel4]] | VDF seL4: niobuild 构建/版本切换/sel4flash 刷版指南 | 2026-05 | github |
 | [[sources/notes-network-fundamentals]] | Linux 网络协议实现笔记（~78 .md 文件）| 2026-05 | github |
 | [[sources/notes-net]] | Linux 内核网络子系统深度分析：Socket/sk_buff/Netdevice/Routing/Netfilter/TCP/UDP | 2026-05 | github |
 | [[sources/notes-network]] | Linux 网络协议笔记：TCP/IP、IPv4/IPv6、BPF/XDP、桥接、路由、性能优化 | 2026-05 | github |

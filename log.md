@@ -424,3 +424,20 @@ Updated:
   - 更新 wiki/home.md — 新增 Snort3 NIDS/NIPS section（snort3-index，10 entities）
 - **Cross-link 验证**: 全部 10 个 entity 均 ≥2 条 snort3 内部 wikilinks
 - **未 commit**
+
+## [2026-05-27] ingest | SafeOS docs (lwip_analysis_summary, lwip_vlan_dispatch, lwip_vlan_implementation, lwip_firewall_analysis, plan) + VDF apps
+
+- **来源**: `~/workspace/remote/safeos/docs/lwip_analysis_summary.md`, `lwip_vlan_dispatch_analysis.md`, `lwip_vlan_implementation.md`, `lwip_firewall_analysis.md`, `plan.md` + `~/workspace/remote/vdf/apps/recipes/` (evm-report, iot-gateway, oam-service, traffic-manager, data-collection, diagnostic-lib, persistent-data-lib, vca-uds-library, nservice-config-agent, switch-monitor, comm-control-service) + `~/workspace/remote/vdf/tools/` + `~/workspace/remote/vdf/vdf-sel4/`
+- **操作**:
+  - 创建 5 个 safeos source pages: safeos-lwip-analysis-summary, safeos-lwip-vlan-dispatch, safeos-lwip-vlan-implementation, safeos-lwip-firewall-analysis, safeos-plan
+  - 创建 4 个 safeos entity pages: safeos-lwip-vlan, safeos-lwip-sel4-performance-boundary, lwip-cma-elem-ring (in lwip/), safeos-lwfw-hotswap
+  - 创建 11 个 vdf entity pages: vdf-evm-report, vdf-iot-gateway, vdf-oam-service, vdf-traffic-manager, vdf-data-collection, vdf-diagnostic-lib, vdf-persistent-data-lib, vdf-vca-uds-library, vdf-nservice-config-agent, vdf-switch-monitor, vdf-comm-control-service
+  - 创建 3 个 vdf source pages: vdf-apps, vdf-tools, vdf-sel4
+  - 创建 vdf-index.md (module index)
+  - 更新 safeos-index.md (+4 new entities + 5 new sources)
+  - 更新 home.md (+vdf-index section, +new source rows, safeos count 6→10)
+- **核心概念**:
+  - SafeOS lwIP: VLAN 分发机制 vs Linux (LWIP_ARP_FILTER_NETIF 两层分发), IEEE 802.1Q 实现 (TPID=0x8100/PCP/VID), 防火墙三层架构 (lwfw/lwct/cBPF), seL4 IPC 开销 150-710ns/packet, tcpip_thread 单线程瓶颈 4核仅~25%
+  - VDF: NIO 车辆分布式框架, evm-report(GB/T 32960), iot-gateway(物物模型), oam-service(远程救援), traffic-manager(QoS), data-collection(CAN信号), diagnostic-lib(UDS/OBD)
+- **Cross-link**: safeos entities → lwip-index, lwfw-index, safeos-index; vdf entities → vdf-index
+- **未 commit**
