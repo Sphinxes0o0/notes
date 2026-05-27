@@ -70,5 +70,5 @@ xmake f --redis=n --kafka=y --mysql=n && xmake -r
 
 ## 相关页面
 
-- [[workflow-build]] — Build 实体页
-- [[workflow-tutorial-bugs]] — Tutorial 调试
+- [[entities/cpp/workflow/workflow-build]] — Build 实体页
+- [[entities/cpp/workflow/workflow-tutorial-bugs]] — Tutorial 调试
