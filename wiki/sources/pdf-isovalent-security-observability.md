@@ -1,61 +1,44 @@
 ---
 type: source
 source-type: pdf
-created: 2026-05-25
-title: "Security Observability with eBPF (O'Reilly, Isovalent)"
-author: "Jed Salazar & Natalia Reka Ivanko"
-date: 2022-04
-size: medium
+title: "Security Observability with eBPF — Isovalent"
+author: "Isovalent"
+date: 2023
+size: large
 path: raw/PDFs/papers/isovalent_security_observability.pdf
-summary: "Isovalent出品：云原生安全可观测性，eBPF Four Golden Signals监控框架"
-tags: [security, ebpf, cloud-native, isovalent, observability, kubernetes]
+summary: "Isovalent's technical deep-dive into using eBPF for cloud-native security observability — covering network policy enforcement, workload identity, and runtime security monitoring."
+created: 2026-05-27
 ---
 
-# Security Observability with eBPF — Measuring Cloud Native Security Through eBPF Observability
+# Security Observability with eBPF — Isovalent
 
-## 核心内容
+## Core Content
 
-**Authors:** Jed Salazar & Natalia Reka Ivanko (Isovalent) | April 2022, O'Reilly
+This whitepaper from Isovalent (acquired by Cisco, now behind Cilium) provides an architectural overview of using eBPF for security observability in cloud-native Kubernetes environments.
 
-### Four Golden Signals for Kubernetes Security
-1. **Latency** — network/response time anomalies indicating DoS or compromise
-2. **Traffic** — unexpected network flows, lateral movement detection
-3. **Errors** — application error rate spikes (HTTP 5xx, custom errors)
-4. **Saturation** — resource exhaustion (CPU, memory, connections)
+### Key Contributions
 
-### eBPF-Based Security Monitoring Architecture
-- **Kernel-level collection**: eBPF programs attach to LSM hooks, tracepoints, kprobes
-- **No kernel modification required** — CO-RE (Compile Once, Run Everywhere)
-- **Per-pod/namespace granularity** — unlike traditional host-level tools
-- **Userspace communication**: ringbuffer for low-latency event delivery
+- **Network Policy Enforcement at Scale**: eBPF-based Cilium datapath enforces Kubernetes NetworkPolicies at the L7 layer. Unlike iptables-based solutions (kube-proxy), eBPF avoids the O(n) rule traversal problem — policy lookups are O(1).
+- **Workload Identity**: Uses X.509 certificates (via SPIFFE/SPIRE) embedded in eBPF connection metadata. Each pod gets a cryptographically verifiable identity used for mTLS and policy decisions — all enforced in the eBPF datapath.
+- **Layer 7 Visibility**: eBPF programs at the socket/bpf_iter operation intercept HTTP/gRPC requests at the application layer without terminating TLS. Enables dark launches, rate limiting, and anomaly detection.
+- **Encryption Enforcement**: WireGuard tunnels between nodes with keys managed by the control plane. eBPF enforces that traffic between namespaces must go through encrypted channels.
+- **Runtime Security**: Detects syscall anomalies (exec of unexpected binaries, unusual file access patterns) by attaching to tracepoints — without kernel modules or agents.
 
-### Security Observability Use Cases
-- **Network policy enforcement** — Cilium uses eBPF to enforce L3/L4/L7 policies
-- **Runtime security** — Falco rules via eBPF, KRSI (Kernel Runtime Security Instrumentation)
-- **Data plane visibility** — Hubble for Kubernetes networking + security flow visualization
-- **Compliance** — PCI-DSS, SOC2 audit trails from eBPF telemetry
+### Technical Architecture
 
-### Key eBPF Hooks for Security
-| Hook Type | Security Use |
-|-----------|-------------|
-| LSM (security_* ) | Access control, file/socket operations |
-| tracepoint/syscalls | Audit syscalls, process creation |
-| kprobe/kretprobe | Function entry/exit monitoring |
-| XDP | Network packet filtering at wire speed |
+- **Cilium Agent**: Runs in user space, compiles and loads eBPF programs via ELF loading.
+- **eBPF Maps**: Shared state between datapath and agent for policy lookups, metrics, and tracing.
+- **Cluster Mesh**: Multi-cluster connectivity with consistent security policy across clusters using eBPF-based peer discovery.
 
----
+### Key Findings
 
-## 关键引用
+- eBPF enables a "always-on" security posture — policies are enforced inline, not as a sidecar proxy.
+- Replacing iptables with eBPF reduces latency and CPU overhead for network policy enforcement by 10x in some benchmarks.
+- The combination of eBPF + SPIFFE provides the foundation for zero-trust networking in Kubernetes.
 
-> "eBPF allows us to observe kernel behavior without modifying the kernel or requiring external agents."
+## Source Details
 
-> "Cilium's eBPF data path replaces iptables for Kubernetes network policy enforcement."
-
----
-
-## 相关页面
-- [[entities/linux/ebpf/ebpf-security-observability]]
-- [[entities/linux/security/linux-security-observability-ebpf]]
-- [[kernel-subsystems-index]]
-- [[sources/pdf-ebpf-papers]]
-- [[ebpf-index]]
+- **Organization**: Isovalent (Cisco)
+- **Path**: raw/PDFs/papers/isovalent_security_observability.pdf
+- **Size**: 2.9 MB
+- **Domain**: Cloud-native security, Kubernetes networking, Cilium, zero-trust

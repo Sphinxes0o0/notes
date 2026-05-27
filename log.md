@@ -4,7 +4,26 @@
 
 ---
 
-## [2026-05-27] ingest | Batch Q: raw/PDFs/papers/ (10 papers → 8 new source pages)
+## [2026-05-27] ingest | Batch N: raw/PDFs/slides/ (37 PDFs → 6 group source pages)
+
+- **来源**: raw/PDFs/slides/ (37 PDFs)
+- **操作**: summary-only提取文件名+标题，按主题分组，创建6个grouped source pages
+- **主题分组** (6 groups, 36 confirmed):
+  - **C++ 语言演进与标准化** (8): Bjarne/John Lakos/Michael Spertus/Pete/彭博/吴咏炜/董俊杰/李彦博
+  - **AI Coding / Coding Agent** (6): David Sankel×2/马良焰/李建忠/邢俊威/汪晟杰
+  - **AI Compiler / MLIR** (5): 赵英全/崔慧敏/张洪滨/谢涛/郑杨
+  - **LLM 推理优化** (11): 杨珂/石新飞/刘童旋/黄石柱/王骁/王志宏/熬玉龙/王豪杰/麻津铭/范颂颂/易慧民
+  - **Linux Kernel / 调试工具** (4): CS744 kernel-bypass/邹涛 CRASH_NG/李勇 Btree/田文鑫 具身机器人
+  - **Tools / 杂项** (2): EPI Python刷题/徐亮亮 Qoder CLI
+  - **Python**: epilight EPI (1)
+- **创建 source pages**: pdf-slides.md (总览) + pdf-slides-cpp-standard.md + pdf-slides-ai-coding.md + pdf-slides-ai-compiler.md + pdf-slides-llm-inference.md + pdf-slides-kernel.md + pdf-slides-tools.md
+- **更新**: cpp-slides-index.md (重写, 37 talks), index.md (+7 new source rows), log.md
+- **Cross-link**: 各 group page 链接到相关 existing PDF sources (moonca ke/rtp-llm/xllm/flagscale/mlir-fuzzing/riscv-compiler/cpp-bjarne-40years)
+- **核心概念**: C++大会slides全量汇入wiki，58 talks总规模 (37 new + 21 existing)
+
+---
+
+## [2026-05-27] ingest | Batch Q: raw/PDFs/papers/
 
 - **来源**: raw/PDFs/papers/ (10 PDFs)
 - **操作**: 创建 8 个新 source pages + 更新 4 个 index/nav pages
