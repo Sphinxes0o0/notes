@@ -142,6 +142,29 @@ Master Anti-Pattern ────────────────────
 | [[sources/github-modern-cpp-skills-m14]] | m14-mental-model |
 | [[sources/github-modern-cpp-skills-m15]] | m15-anti-pattern |
 
+## Feature Reference Entities (15 entities from AnthonyCalandra/modern-cpp-features)
+
+> Source: [[sources/github-modern-cpp-features]] — C++11/14/17/20/23 feature reference
+
+| Entity | Coverage | Tags |
+|--------|----------|------|
+| [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] | auto, decltype, decltype(auto), forwarding refs | cpp11, cpp14 |
+| [[entities/cpp/modern-cpp/cpp-move-semantics]] | rvalue refs, std::move, std::forward, Rule of 5 | cpp11 |
+| [[entities/cpp/modern-cpp/cpp-lambda-expressions]] | lambdas, generic lambdas, captures, mutable | cpp11, cpp14, cpp20 |
+| [[entities/cpp/modern-cpp/cpp-smart-pointers]] | unique_ptr, shared_ptr, weak_ptr, make_unique | cpp11, cpp14, cpp20 |
+| [[entities/cpp/modern-cpp/cpp-variadic-templates]] | parameter packs, fold expressions, integer_sequence | cpp11, cpp17 |
+| [[entities/cpp/modern-cpp/cpp-constexpr]] | constexpr, consteval, constexpr if, constexpr virtual | cpp11, cpp14, cpp17, cpp20, cpp23 |
+| [[entities/cpp/modern-cpp/cpp-concepts]] | requires, constraints, standard concepts library | cpp20 |
+| [[entities/cpp/modern-cpp/cpp-structured-bindings]] | structured bindings, CTAD, std::tie, designated init | cpp17, cpp20 |
+| [[entities/cpp/modern-cpp/cpp-coroutines]] | co_await, co_yield, co_return, stackless | cpp20 |
+| [[entities/cpp/modern-cpp/cpp-attributes]] | [[nodiscard]], [[likely]], [[deprecated]], noexcept | cpp11, cpp14, cpp17, cpp20, cpp23 |
+| [[entities/cpp/modern-cpp/cpp-stl-optional-variant-any]] | std::variant, std::optional, std::any, std::expected | cpp17, cpp20, cpp23 |
+| [[entities/cpp/modern-cpp/cpp-stl-functional]] | std::invoke, std::apply, std::bind_front, std::not_fn | cpp11, cpp17, cpp20 |
+| [[entities/cpp/modern-cpp/cpp-stl-string-view]] | std::string_view, starts_with, ends_with, contains | cpp17, cpp20, cpp23 |
+| [[entities/cpp/modern-cpp/cpp-stl-format-span]] | std::format, std::span, spanstream, out_ptr | cpp20, cpp23 |
+| [[entities/cpp/modern-cpp/cpp-concurrency]] | std::thread, std::jthread, atomic, memory_order, locks | cpp11, cpp14, cpp17, cpp20 |
+
 ## Source
 
 - [[sources/cpp-modern-skills]] - Modern C++ Skills source (28 skill files)
+- [[sources/github-modern-cpp-features]] - AnthonyCalandra/modern-cpp-features (C++11-23, 100+ features)

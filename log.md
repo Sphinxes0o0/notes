@@ -4,6 +4,32 @@
 
 ---
 
+## [2026-05-27] ingest | modern-cpp-features — AnthonyCalandra feature reference (100+ features)
+
+- **来源**: `raw/github/modern-cpp-features/README.md` (99KB, C++11/14/17/20/23)
+- **操作**:
+  - 创建 source page: `wiki/sources/github-modern-cpp-features.md`
+  - 创建 15 个 consolidated entity pages in `wiki/entities/cpp/modern-cpp/`:
+    - cpp-auto-type-deduction (auto, decltype, decltype(auto), forwarding refs)
+    - cpp-move-semantics (rvalue refs, std::move, std::forward, Rule of 5)
+    - cpp-lambda-expressions (lambdas, generic lambdas, captures, mutable)
+    - cpp-smart-pointers (unique_ptr, shared_ptr, weak_ptr, make_unique)
+    - cpp-variadic-templates (parameter packs, fold expressions, integer_sequence)
+    - cpp-constexpr (constexpr, consteval, constexpr if, constexpr virtual)
+    - cpp-concepts (requires, constraints, standard concepts library)
+    - cpp-structured-bindings (structured bindings, CTAD, std::tie, designated init)
+    - cpp-coroutines (co_await, co_yield, co_return, stackless)
+    - cpp-attributes ([[nodiscard]], [[likely]], [[deprecated]], noexcept)
+    - cpp-stl-optional-variant-any (std::variant, std::optional, std::any, std::expected)
+    - cpp-stl-functional (std::invoke, std::apply, std::bind_front, std::not_fn)
+    - cpp-stl-string-view (std::string_view, starts_with, ends_with, contains)
+    - cpp-stl-format-span (std::format, std::span, spanstream, out_ptr)
+    - cpp-concurrency (std::thread, std::jthread, atomic, memory_order, locks)
+  - 更新 `wiki/cpp-modern-index.md` (+15 entities + 2 source entries)
+- **核心概念**: Modern C++ feature reference covering 100+ features across C++11-23, grouped into 15 consolidated entity pages
+- **Cross-link**: each entity links to related entities (e.g., cpp-move-semantics→cpp-smart-pointers, cpp-concurrency→cpp-memory-model)
+- **未 commit**
+
 ## [2026-05-27] ingest | snort3 infrastructure — helpers/hash/file_api/decompress/js_norm (80+ files)
 
 - **来源**: `~/workspace/github/snort3/src/{helpers,hash,file_api,decompress,js_norm}/` (80+ source files)
