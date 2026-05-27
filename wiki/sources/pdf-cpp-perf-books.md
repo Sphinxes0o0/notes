@@ -116,6 +116,12 @@ While object-oriented design focuses on classes (logical design), physical desig
 - The rule of minimizing header includes and using forward declarations remains central
 - Component-level thinking maps to modern practices: header-only libraries vs. compiled libraries, unity builds, precompiled headers
 
+## Individual Book Pages
+
+- [[sources/pdf-book-cpp-perf-optimization]] — Optimized C++ (Kurt Guntheroth, 310页)
+- [[sources/pdf-book-modern-cpp]] — Large-Scale C++ Software Design (Lakos, 870页)
+- [[sources/pdf-book-muduo-network-programming]] — Linux 多线程服务端编程 (陈硕, 151页)
+
 ## Related Pages
 - [[entities/cpp/cpp-perf-optimization]] — CPU cache, SIMD, profiling, memory optimization
 - [[entities/cpp/cpp-safety]] — defense-in-depth and safe C++ practices

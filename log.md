@@ -330,3 +330,13 @@ Updated:
 - **更新**: workflow-index.md, log.md
 - **核心概念**: wget 入门 → redis → Series → Echo → Proxy → Parallel → Sort → Matrix → FileIO → MySQL → NameService → DNS → Redis Sub → DNS Server；xmake 模块裁剪（redis/kafka/mysql/upstream）
 - **Cross-link**: 所有 entity ≥2 wikilinks（如 resource-pool→conditional, benchmark→config, known-bugs→upstream）
+
+---
+
+## [2026-05-27] ingest | Batch S: Linux Kernel / OS / Embedded Books
+
+- **来源**: raw/PDFs/books/（ARM TRM + ARMv8 ARM + A-profile + OS textbooks）
+- **操作**: 创建 wiki/sources/pdf-os-embedded-books-batch-s.md；更新 kernel-books-index.md（新增 OS 章节）
+- **书目**: 5册 — Operating System Concepts 10th Ed / 现代操作系统原理与实现 / Cortex-A9 TRM / ARMv8 ARM / ARM A-profile Reference
+- **说明**: ARM 文档已收录于 pdf-arm-architecture；OS textbooks 来自 OneDrive batch（streaming 待完成）
+- **未 commit**
