@@ -2,6 +2,7 @@
 type: index
 tags: [C++异步框架, Sogou, 模块索引]
 created: 2026-05-25
+updated: 2026-05-27
 ---
 
 # Workflow Engine 模块索引
@@ -47,51 +48,56 @@ created: 2026-05-25
 |--------|------|
 | [[entities/cpp/workflow/workflow-benchmark]] | 性能测试 |
 | [[entities/cpp/workflow/workflow-known-bugs]] | 已知问题 |
-| [[entities/cpp/workflow/workflow-build]] | 编译与构建 |
+| [[entities/cpp/workflow/workflow-xmake]] | xmake 编译构建 |
 
 ## 教程
 
-### 基础入门
-| Entity | 主题 |
-|--------|------|
-| [[entities/cpp/workflow/workflow-tut-wget]] | wget 第一个 HTTP 任务 |
-| [[entities/cpp/workflow/workflow-tut-redis-cli]] | redis_cli Redis 客户端 |
-| [[entities/cpp/workflow/workflow-tut-wget-to-redis]] | wget_to_redis 任务链 |
-| [[entities/cpp/workflow/workflow-tut-http-echo-server]] | http_echo_server HTTP 服务器 |
-| [[entities/cpp/workflow/workflow-tut-http-proxy]] | http_proxy HTTP 代理 |
+### 入门
+| Entity | 源文档 | 主题 |
+|--------|--------|------|
+| [[entities/cpp/workflow/workflow-tutorial-wget]] | tutorial-01-wget | HTTP 抓取入门 |
+| [[entities/cpp/workflow/workflow-tutorial-redis-cli]] | tutorial-02-redis_cli | Redis 异步客户端 |
+| [[entities/cpp/workflow/workflow-tutorial-wget-to-redis]] | tutorial-03-wget_to_redis | Series 任务链 |
+
+### HTTP Server
+| Entity | 源文档 | 主题 |
+|--------|--------|------|
+| [[entities/cpp/workflow/workflow-tutorial-http-echo-server]] | tutorial-04-http_echo_server | Echo Server |
+| [[entities/cpp/workflow/workflow-tutorial-http-proxy]] | tutorial-05-http_proxy | HTTP 代理 |
+| [[entities/cpp/workflow/workflow-tutorial-http-file-server]] | tutorial-09-http_file_server | 异步文件服务器 |
 
 ### 并行与计算
-| Entity | 主题 |
-|--------|------|
-| [[entities/cpp/workflow/workflow-tut-parallel-wget]] | parallel_wget 并行抓取 |
-| [[entities/cpp/workflow/workflow-tut-sort-task]] | sort_task 算法工厂 |
-| [[entities/cpp/workflow/workflow-tut-matrix-multiply]] | matrix_multiply 自定义计算 |
-| [[entities/cpp/workflow/workflow-tut-http-file-server]] | http_file_server 异步文件 IO |
+| Entity | 源文档 | 主题 |
+|--------|--------|------|
+| [[entities/cpp/workflow/workflow-tutorial-parallel-wget]] | tutorial-06-parallel_wget | Parallel 并行任务 |
+| [[entities/cpp/workflow/workflow-tutorial-sort-task]] | tutorial-07-sort_task | 排序算法工厂 |
+| [[entities/cpp/workflow/workflow-tutorial-matrix-multiply]] | tutorial-08-matrix_multiply | 自定义计算任务 |
+| [[entities/cpp/workflow/workflow-tutorial-graph-task]] | tutorial-11-graph_task | DAG 图任务 |
 
 ### 高级协议
-| Entity | 主题 |
-|--------|------|
-| [[entities/cpp/workflow/workflow-user-defined-protocol]] | 自定义协议 |
-| [[entities/cpp/workflow/workflow-tut-mysql-cli]] | mysql_cli MySQL 客户端 |
-| [[entities/cpp/workflow/workflow-tut-kafka-cli]] | kafka_cli Kafka 客户端 |
-| [[entities/cpp/workflow/workflow-tut-dns-cli]] | dns_cli DNS 客户端 |
-| [[entities/cpp/workflow/workflow-tut-name-service]] | name_service 自定义命名服务 |
-| [[entities/cpp/workflow/workflow-tut-redis-subscriber]] | redis_subscriber Redis 订阅 |
-| [[entities/cpp/workflow/workflow-tut-dns-server]] | dns_server DNS 服务器 |
+| Entity | 源文档 | 主题 |
+|--------|--------|------|
+| [[entities/cpp/workflow/workflow-tutorial-user-defined-protocol]] | tutorial-10-user_defined_protocol | 自定义协议 |
+| [[entities/cpp/workflow/workflow-tutorial-name-service]] | tutorial-15-name_service | 自定义命名服务 |
 
-### 客户端
+### 数据库与消息
+| Entity | 源文档 | 主题 |
+|--------|--------|------|
+| [[entities/cpp/workflow/workflow-tutorial-mysql-cli]] | tutorial-12-mysql_cli | MySQL 异步客户端 |
+| [[entities/cpp/workflow/workflow-tutorial-kafka-cli]] | tutorial-13-kafka_cli | Kafka 异步客户端 |
+| [[entities/cpp/workflow/workflow-tutorial-redis-subscriber]] | tutorial-18-redis_subscriber | Redis 订阅模式 |
+| [[entities/cpp/workflow/workflow-tutorial-dns-cli]] | tutorial-17-dns_cli | DNS 客户端 |
+| [[entities/cpp/workflow/workflow-tutorial-dns-server]] | tutorial-19-dns_server | DNS 服务器 |
+
+## 客户端与服务器总览
 | Entity | 主题 |
 |--------|------|
 | [[entities/cpp/workflow/workflow-network-client]] | HTTP/Redis/MySQL/Kafka/DNS 客户端 |
-| [[entities/cpp/workflow/workflow-redis-features]] | Redis 订阅模式 |
-
-### 服务器
-| Entity | 主题 |
-|--------|------|
+| [[entities/cpp/workflow/workflow-redis-features]] | Redis 订阅模式、Cluster |
 | [[entities/cpp/workflow/workflow-http-server]] | HTTP Server 教程 |
 | [[entities/cpp/workflow/workflow-dns-server]] | DNS Server |
 
-### 高级
+## 高级
 | Entity | 主题 |
 |--------|------|
 | [[entities/cpp/workflow/workflow-parallel-tasks]] | Series/Parallel 并行任务 |
@@ -140,3 +146,9 @@ created: 2026-05-25
 - **服务治理**：Upstream、熔断、负载均衡
 - **异步 IO**：Linux aio、epoll/kqueue
 - **线程池**：默认 CPU 核数
+
+## 实体统计
+
+- **架构实体**：19 个（任务模型 9 + 基础设施 5 + 网络协议 6 + 调试工具 3）
+- **教程实体**：19 个（入门 3 + HTTP Server 3 + 并行计算 4 + 高级协议 2 + 数据库消息 5 + 构建 1 + Bug 1）
+- **总实体**：38 个
