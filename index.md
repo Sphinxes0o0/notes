@@ -90,6 +90,13 @@ created: 2026-05-22
 | [[wiki/sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程（扫描版）|
 | [[wiki/sources/pdf-computer-systems-programmers-perspective]] | CS:APP (Bryant & O'Hallaron, 1078页)：计算机系统程序员视角，CMU 15-213 |
 | [[wiki/sources/pdf-onedrive-batch1]] | OneDrive Batch P: OS concepts + C++ concurrency/high-performance/templates-v2 |
+| [[wiki/sources/pdf-slides]] | C++ & Compiler Slides: 58 conference talks in 6 categories |
+| [[wiki/sources/pdf-slides-cpp-standard]] | C++ Slides: 语言演进/标准化/反射/对象生命周期/嵌入式 (8 talks) |
+| [[wiki/sources/pdf-slides-ai-coding]] | C++ Slides: AI Coding Agent/Coding/安全防御 (6 talks) |
+| [[wiki/sources/pdf-slides-ai-compiler]] | C++ Slides: AI Compiler/MLIR/RISC-V生态 (5 talks) |
+| [[wiki/sources/pdf-slides-llm-inference]] | C++ Slides: LLM推理/Mooncake/xLLM/DeepSeek/FlagScale/异构计算 (11 talks) |
+| [[wiki/sources/pdf-slides-kernel]] | C++ Slides: Linux Kernel/调试/Btree/Kernel-bypass (4 talks) |
+| [[wiki/sources/pdf-slides-tools]] | C++ Slides: EPI面试/Python刷题/Qoder CLI (2 talks) |
 | [[wiki/sources/pdf-cpp-bjarne-40years]] | Bjarne Stroustrup C++ 40年演讲：成功因素、AI时代定位、C++26方向 |
 | [[wiki/sources/pdf-mlir-fuzzing]] | MLIR编译器模糊测试：覆盖率引导fuzzing发现pass间bug |
 | [[wiki/sources/pdf-ai-compiler-stack]] | AI编译器软件栈：SigInfer推理引擎/国产卡CUDA兼容/AI编译器自动生成 |

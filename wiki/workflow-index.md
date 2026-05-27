@@ -73,6 +73,7 @@ created: 2026-05-25
 |--------|------|
 | [[entities/cpp/workflow/workflow-user-defined-protocol]] | 自定义协议 |
 | [[entities/cpp/workflow/workflow-tut-mysql-cli]] | mysql_cli MySQL 客户端 |
+| [[entities/cpp/workflow/workflow-tut-kafka-cli]] | kafka_cli Kafka 客户端 |
 | [[entities/cpp/workflow/workflow-tut-dns-cli]] | dns_cli DNS 客户端 |
 | [[entities/cpp/workflow/workflow-tut-name-service]] | name_service 自定义命名服务 |
 | [[entities/cpp/workflow/workflow-tut-redis-subscriber]] | redis_subscriber Redis 订阅 |

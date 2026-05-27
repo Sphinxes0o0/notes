@@ -278,3 +278,17 @@ Updated:
   - 更新 os-index.md (2 entities), cpp-index.md (3 entities), home.md (计数 367→373), index.md, log.md
 - **核心概念**: OS 原理（Silberschatz 经典教材）、C++ 并发（Williams 2nd Ed）、C++ 高性能（Andrist/Sehr）、C++ Templates 2nd Ed（823 页模板完全指南）
 - **提取结果**: 3/5 PDFs extracted, 2 OS PDFs — OneDrive streaming blocked (timeout on seek-to-EOF)
+
+---
+
+## [2026-05-27] ingest | Batch R: Workflow Tutorial & Build docs
+
+- **来源**: raw/workflow/ (14 tutorial docs: t01-09, t12, t13, t15, t17-19 + xmake + 4 about docs)
+- **操作**:
+  - 创建 13 个 tutorial entity pages: workflow-tut-wget, workflow-tut-redis-cli, workflow-tut-wget-to-redis, workflow-tut-http-echo-server, workflow-tut-http-proxy, workflow-tut-parallel-wget, workflow-tut-sort-task, workflow-tut-matrix-multiply, workflow-tut-http-file-server, workflow-tut-mysql-cli, workflow-tut-name-service, workflow-tut-dns-cli, workflow-tut-redis-subscriber, workflow-tut-dns-server
+  - 创建 1 个 build entity page: workflow-build (xmake 编译与构建)
+  - 更新 3 个 existing entity pages (resource-pool, benchmark, known-bugs)：增补详细内容和 [[wikilinks]]
+  - 更新 workflow-index.md：新增 4 个分类（基础入门/并行与计算/高级协议/调试与工具）+ build
+- **更新**: workflow-index.md, log.md
+- **核心概念**: wget 入门 → redis → Series → Echo → Proxy → Parallel → Sort → Matrix → FileIO → MySQL → NameService → DNS → Redis Sub → DNS Server；xmake 模块裁剪（redis/kafka/mysql/upstream）
+- **Cross-link**: 所有 entity ≥2 wikilinks（如 resource-pool→conditional, benchmark→config, known-bugs→upstream）

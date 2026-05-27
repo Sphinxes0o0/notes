@@ -3,7 +3,7 @@ type: source
 tags: [interview, algorithm, coding, career, books]
 source-type: pdf
 created: 2026-05-23
-sources: [pdf-interview-books]
+sources: [pdf-interview-books, pdf-book-cracking-coding-interview]
 title: "编程面试书籍合集（2册）"
 author: "Gayle Laakmann McDowell, Adnan Aziz, Tsung-Hsien Lee, Amit Prakash"
 date: 2026-05
