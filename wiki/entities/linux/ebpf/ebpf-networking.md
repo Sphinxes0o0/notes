@@ -120,3 +120,6 @@ BPF 程序拦截 socket 操作，动态设置 TCP 参数。15 个 hook 点覆盖
 - [[sources/pdf-ebpf-papers]] — Rethinking the Linux Kernel (Thomas Graf, Cilium)
 - [[sources/pdf-ebpf-papers]] — BPF: Turning Linux into a Microservices-aware OS (Thomas Graf)
 - [[sources/achieved-ebpf-android]] — Android eBPF Doze模式网络控制实现
+- [[sources/reading-ebpf-how-ebpf-work]] — eBPF深入理解：TC SCHED_CLS/SCHED_ACT/Socket Filter/Sock_ops程序类型
+- [[sources/reading-linux-advanced-routing-tc]] — Linux高级路由与TC：iproute2/qdisc(TBF/HTB/RED/netem)/classifier(u32/fw)/Netfilter集成
+- [[sources/reading-linux-tc-traffic-control]] — Linux TC流量控制：qdisc(netem/tbf/fq_codel)/NIDS测试仿真

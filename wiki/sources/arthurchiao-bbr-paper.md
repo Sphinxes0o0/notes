@@ -57,3 +57,42 @@ PROBE_RTT → periodic minimum-inflight probing (100ms every ~10s)
 - [[entities/linux/network/congestion-control]] — Entity page
 - [[entities/linux/network/tcp-congestion-control]] — TCP congestion control overview
 - [[entities/linux/network/net-stack-implementation-rx]] — Where ACK processing happens
+
+## Key Equations
+
+![BBR Throughput Model](attachments/arthurchiao/bbr-paper/eq1.png)
+*Figure: BBR throughput model — BtlBw × RTprop defines optimal BDP*
+
+![BDP Calculation](attachments/arthurchiao/bbr-paper/eq2.png)
+*Figure: Bandwidth-Delay Product calculation*
+
+![Minimum RTT Estimation](attachments/arthurchiao/bbr-paper/eq3.png)
+*Figure: Round-trip propagation time estimation*
+
+## BBR State Machine Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> STARTUP: First packets
+    STARTUP --> DRAIN: 2/ln2 gain found BtlBw
+    DRAIN --> PROBE_BW: Queue drained
+    PROBE_BW --> PROBE_RTT: Every ~10 seconds
+    PROBE_RTT --> PROBE_BW: 100ms probe complete
+    PROBE_BW --> PROBE_BW: 8-phase gain cycle
+
+    note right of STARTUP
+        Exponential probing
+        to discover BtlBw
+    end note
+
+    note right of DRAIN
+        Inverse gain
+        to drain startup queue
+    end note
+
+    note right of PROBE_BW
+        8-phase cycle:
+        5/4, 3/4, 1,1,1,1,1,1
+        pacing rate
+    end note
+```

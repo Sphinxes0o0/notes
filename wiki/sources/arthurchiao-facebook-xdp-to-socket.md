@@ -50,3 +50,53 @@ XDP (NIC) → kernel protocol stack → BPF socket ops → application socket
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP details
 - [[entities/linux/network/load-balancing]] — Load balancing concepts
 - [[entities/linux/network/modern-lb-proxy]] — Envoy, service mesh context
+
+## Images
+
+![Katran Traffic Infrastructure](attachments/arthurchiao/facebook-xdp-to-socket/traffic-infra-1.jpg)
+*Figure: Katran L4 load balancer — XDP-based production load balancing at Facebook*
+
+![Katran Performance](attachments/arthurchiao/facebook-xdp-to-socket/katran-perf.jpg)
+*Figure: Katran vs IPVS — superior performance with Maglev hashing*
+
+![Maglev Hashing Performance](attachments/arthurchiao/facebook-xdp-to-socket/maglev-perf.jpg)
+*Figure: Maglev consistent hashing — minimal re-mapping during backend changes*
+
+![BPF Socket Takeover](attachments/arthurchiao/facebook-xdp-to-socket/socket-takeover-1.jpg)
+*Figure: BPF sk_reuseport — zero-downtime service deployment*
+
+![BPF Map Structure](attachments/arthurchiao/facebook-xdp-to-socket/bpf-map-1.jpg)
+*Figure: BPF sockhash map — stores socket references for fast lookup*
+
+## Architecture Diagram
+
+```mermaid
+flowchart LR
+    subgraph Client["Client"]
+        C[TCP Connection]
+    end
+
+    subgraph LB["Katran L4 LB (XDP)"]
+        XDP[XDP Program]
+        MAGLEV[Maglev Hashing]
+        SERVER_ID[Embed server_id<br/>in TCP header]
+    end
+
+    subgraph Backend["Backend Host"]
+        BPF_SOCK[BPF Socket Ops<br/>sockops program]
+        SOCKMAP[BPF Map<br/>sockhash]
+        SK_MSG[sk_msg program<br/>msg_redirect_hash]
+        APP[Application]
+    end
+
+    C -->|L4 routing| XDP
+    XDP --> MAGLEV
+    MAGLEV --> SERVER_ID
+    SERVER_ID -->|forward| BPF_SOCK
+    BPF_SOCK -->|store socket| SOCKMAP
+    SK_MSG -->|lookup| SOCKMAP
+    SK_MSG -->|bypass stack| APP
+
+    style XDP fill:#c8e6c9
+    style SOCKMAP fill:#bbdefb
+```

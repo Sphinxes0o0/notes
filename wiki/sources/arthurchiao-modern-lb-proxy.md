@@ -73,3 +73,57 @@ Modern load balancing is foundational to reliable distributed systems. This arti
 - [[entities/linux/network/modern-lb-proxy]] — Entity page
 - [[entities/linux/ebpf/ebpf-networking]] — eBPF-based load balancing (Katran)
 - [[entities/linux/network/congestion-control]] — Related for backend congestion control
+
+## Images
+
+![Network LB Overview](attachments/arthurchiao/modern-lb-proxy/network-lb-overview.png)
+*Figure: Modern load balancing topology overview*
+
+![L4 Termination LB](attachments/arthurchiao/modern-lb-proxy/l4-termination-lb.png)
+*Figure: L4 termination load balancer — LB terminates client connection, opens new to backend*
+
+![L4 Passthrough LB](attachments/arthurchiao/modern-lb-proxy/l4-passthrough-lb.png)
+*Figure: L4 passthrough — NAT without terminating; LB maintains connection mapping*
+
+![L4 DSR](attachments/arthurchiao/modern-lb-proxy/l4-dsr.png)
+*Figure: Direct Server Return (DSR) — response goes directly to client, reducing LB bandwidth*
+
+![L7 Termination LB](attachments/arthurchiao/modern-lb-proxy/l7-termination-lb.png)
+*Figure: L7 termination — protocol-aware routing (HTTP, gRPC, Redis)*
+
+## Load Balancing Topology Patterns
+
+```mermaid
+flowchart LR
+    subgraph Client["Client"]
+        C1[Client 1]
+        C2[Client 2]
+    end
+
+    subgraph EdgeProxy["Edge/ Middle Proxy"]
+        LB[HAProxy<br/>NGINX<br/>Envoy]
+    end
+
+    subgraph ClientLib["Embedded Client Library"]
+        LIB[Finagle<br/>gRPC]
+    end
+
+    subgraph Sidecar["Sidecar Proxy"]
+        SIDE[Envoy<br/>in Service Mesh]
+    end
+
+    subgraph Backends["Backends"]
+        B1[Backend 1]
+        B2[Backend 2]
+    end
+
+    C1 --> LB --> B1
+    C2 --> LIB --> B2
+    LIB -.->|requires multi-language| B2
+    SIDE --> B1
+    SIDE --> B2
+
+    style EdgeProxy fill:#e3f2fd
+    style ClientLib fill:#fff3e0
+    style Sidecar fill:#e8f5e9
+```

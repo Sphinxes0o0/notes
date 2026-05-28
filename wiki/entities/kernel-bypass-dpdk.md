@@ -77,3 +77,5 @@ TCP Bypass aims to replace kernel TCP/IP for ultra-low-latency scenarios (HFT, t
 
 ## Sources
 - [[sources/pdf-cpp-perf-engineering]] — Kernel bypass theory slides
+- [[sources/reading-af-xdp-technical]] — AF_XDP零拷贝架构：UMEM/ring/bpf_redirect_map/XDP hook
+- [[sources/reading-software-performance-deep-thinking]] — 软件性能工程：profiling/latency/throughput/内存优化

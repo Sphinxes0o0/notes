@@ -153,6 +153,15 @@ created: 2026-05-22
 | [[wiki/sources/arthurchiao-tc-da-mode]] | TC eBPF direct-action mode: clsact, action verdicts, cls_bpf filter |
 | [[wiki/sources/arthurchiao-conntrack-design]] | Conntrack design: netfilter hooks, two-phase creation, NAT dependency |
 | [[wiki/sources/arthurchiao-sockmap-ebpf]] | eBPF sockmap: socket redirection bypassing TCP/IP stack, sockops/sk_msg |
+| [[wiki/sources/reading-ebpf-how-ebpf-work]] | eBPF深入理解 NoPanic：Verifier/JIT/Maps/Tail Call/XDP vs TC性能排名 |
+| [[wiki/sources/reading-af-xdp-technical]] | AF_XDP技术详解：UMEM/ring/bpf_redirect_map/XSKMAP零拷贝 |
+| [[wiki/sources/reading-linux-advanced-routing-tc]] | Linux Advanced Routing & TC HOWTO：iproute2/qdisc/netem/Netfilter/QoS |
+| [[wiki/sources/reading-linux-tc-traffic-control]] | Linux TC流量控制 NoPanic：qdisc(netem/tbf)/NIDS测试仿真 |
+| [[wiki/sources/reading-tcp-troubleshooting-plantegg]] | TCP疑难问题 plantegg：CLOSE_WAIT/queue溢出/TTL fingerprint/ss/netstat |
+| [[wiki/sources/reading-tcp-self-connection-plantegg]] | TCP自连接 plantegg：simultaneous open/四元组/bind vs connect |
+| [[wiki/sources/reading-software-performance-deep-thinking]] | 深入理解软件性能 NoPanic：profiling/latency/throughput/CPU+内存优化 |
+| [[wiki/sources/reading-linux-performance-engineering]] | Linux性能优化实战：perf/bpftrace/tcpdump/sar/典型瓶颈场景 |
+| [[wiki/sources/reading-lwip-bridge-implementation]] | LwIP网桥实现 catboy：二层转发/netif/packet flow |
 | [[wiki/sources/achieved-arp-table-aging]] | Linux ARP表老化机制：三状态(delay/reachable/stale)与gc_thresh1 |
 | [[wiki/sources/achieved-tcp-bypass-notes]] | TCP Bypass：RDMA/iWARP/RoCE/InfiniBand零拷贝与超低延迟 |
 | [[wiki/sources/achieved-tcp-sack-dsack]] | TCP SACK/DSACK：Linux内核v18/v37实现对比与scoreboard标签 |

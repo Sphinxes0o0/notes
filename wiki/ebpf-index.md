@@ -59,6 +59,10 @@ ebpf-ecosystem ───────→ tools-index (bpftool/tcpdump)
 | [[sources/pdf-ebpf-library-ecosystem]] | eBPF Library Ecosystem (Kyle Quest)：Go/Rust/Python/C生态库评测 | pdf | 2021 |
 | [[sources/pdf-xdp-fast-packet]] | XDP Fast Packet Processing (UFMG)：BPF指令格式/~20Mpps性能 | pdf | 2021 |
 | [[sources/pdf-infocom-ptpsec]] | PTPsec (INFOCOM 2024)：IEEE 1588延迟攻击检测与缓解 | pdf | 2024 |
+| [[sources/reading-ebpf-how-ebpf-work]] | eBPF深入理解 NoPanic：Verifier/JIT/Maps/Tail Call/XDP vs TC性能排名 | web | 2024 |
+| [[sources/reading-af-xdp-technical]] | AF_XDP技术详解：UMEM/ring/bpf_redirect_map/XSKMAP/零拷贝 | web | 2023 |
+| [[sources/reading-linux-advanced-routing-tc]] | Linux Advanced Routing & TC HOWTO：iproute2/qdisc/netem/Netfilter | web | 2024 |
+| [[sources/reading-linux-tc-traffic-control]] | Linux TC流量控制 NoPanic：qdisc/netem/NIDS测试仿真 | web | 2024 |
 
 ## Quick Navigation
 
@@ -70,8 +74,9 @@ ebpf-ecosystem ───────→ tools-index (bpftool/tcpdump)
 
 ## Key Stats
 
-- **Total Sources**：17 PDFs (3 books + 10 papers + 2 individual paper pages) + 8 additional individual paper pages
+- **Total Sources**：17 PDFs (3 books + 10 papers + 2 individual paper pages) + 8 additional individual paper pages + 4 web readings (eBPF/TC/AF_XDP)
 - **Total Entities**：7
 - **Kernel Version**：eBPF 从 Linux 3.18 广泛可用，CO-RE 从 4.18+ 广泛可用
 - **CO-RE 依赖**：CONFIG_DEBUG_INFO_BTF=y (Ubuntu 20.10+ 默认开启)
 - **Individual Papers**：10 papers from raw/PDFs/papers/ now have dedicated source pages
+- **New Web Readings**：4篇网络/eBPF/性能文章（2026-05 ingest）

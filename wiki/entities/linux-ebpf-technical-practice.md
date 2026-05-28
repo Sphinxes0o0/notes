@@ -50,3 +50,4 @@ eBPF Technical Practice v2 is a 100-page white paper authored by the Anolis Comm
 ## Source Details
 
 - [[sources/pdf-ebpf-technical-practice]] — eBPF技术实践 v2（龙蜥社区白皮书）
+- [[sources/reading-ebpf-how-ebpf-work]] — eBPF深入理解 NoPanic：Hook点性能排名/XDP vs TC/程序类型/Maps

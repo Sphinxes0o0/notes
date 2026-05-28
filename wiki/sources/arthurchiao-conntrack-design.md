@@ -73,3 +73,49 @@ Cilium implements its own conntrack using **BPF hooks** instead of Netfilter (si
 - [[entities/linux/network/netfilter-hooks]] — Netfilter hooks
 - [[entities/linux/network/nat]] — NAT implementation
 - [[entities/linux/ebpf/ebpf-networking]] — Cilium's BPF-based approach
+
+## Images
+
+![Netfilter Conntrack Hooks](attachments/arthurchiao/conntrack-design/netfilter-conntrack.png)
+*Figure: Netfilter 5 hook points and conntrack integration*
+
+![Hook to NAT Flow](attachments/arthurchiao/conntrack-design/hook-to-nat.png)
+*Figure: Packet flow through netfilter hooks — conntrack before NAT*
+
+![Cilium BPF Conntrack](attachments/arthurchiao/conntrack-design/cilium-conntrack.png)
+*Figure: Cilium's BPF-based conntrack alternative to netfilter*
+
+![Netfilter Design](attachments/arthurchiao/conntrack-design/netfilter-design.png)
+*Figure: Netfilter architecture — hooks in protocol stack*
+
+## Conntrack State Machine
+
+```mermaid
+flowchart TD
+    subgraph TwoPhase["Two-Phase Connection Creation"]
+        NEW[nf_conntrack_in()<br/>Create unconfirmed record]
+        --> CONFIRM[nf_conntrack_confirm()<br/>Move to confirmed list]
+    end
+
+    subgraph Hooks["5 Netfilter Hook Points"]
+        PRE[NF_IP_PRE_ROUTING<br/>After checksum verification]
+        LOC_IN[NF_IP_LOCAL_IN<br/>For this host]
+        FWD[NF_IP_FORWARD<br/>Another interface]
+        LOC_OUT[NF_IP_LOCAL_OUT<br/>From local processes]
+        POST[NF_IP_POST_ROUTING<br/>About to exit]
+    end
+
+    subgraph States["Connection States"]
+        SYN_SENT[SYN_SENT]
+        ESTABLISHED[ESTABLISHED]
+        FIN_WAIT[FIN_WAIT]
+        TIME_WAIT[TIME_WAIT]
+    end
+
+    NEW -->|New packet| PRE
+    CONFIRM -->|Confirmed| ESTABLISHED
+
+    style TwoPhase fill:#e3f2fd
+    style Hooks fill:#fff3e0
+    style States fill:#e8f5e9
+```

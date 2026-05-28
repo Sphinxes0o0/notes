@@ -64,3 +64,48 @@ PKCS#12 (cert chain + encrypted private key, Microsoft)
 - [[entities/security/pki-certificates]] — Entity page
 - [[entities/security/tls-handshake]] — TLS protocol details
 - [[entities/security/certificate-transparency]] — CT logs
+
+## Images
+
+![Chain of Trust](attachments/arthurchiao/pki/chain-of-trust.jpg)
+*Figure: PKI chain of trust — Root CA → Intermediate CA → Leaf Certificate*
+
+![Certificate Path Validation](attachments/arthurchiao/pki/cert-path.jpg)
+*Figure: Certificate path validation — browser verifies each certificate in chain*
+
+![Trust Store](attachments/arthurchiao/pki/trust-chain.jpg)
+*Figure: Trust store — pre-configured trusted root certificates in browser/OS*
+
+![Certificate Hierarchy](attachments/arthurchiao/pki/step-ca-certificate-flow.jpg)
+*Figure: Certificate issuance flow — CSR → CA signing → Certificate chain*
+
+![License vs Certificate](attachments/arthurchiao/pki/license-vs-cert.jpg)
+*Figure: Driver's license (physical identity) vs Certificate (digital identity)*
+
+## PKI Trust Chain Architecture
+
+```mermaid
+flowchart TD
+    subgraph TrustStore["Trust Store (Browser/OS)"]
+        ROOT[Root CA Certificate<br/>Self-signed]
+    end
+
+    subgraph Intermediate["Intermediate CA"]
+        INT1[Intermediate CA 1]
+        INT2[Intermediate CA 2]
+    end
+
+    subgraph Leaf["Leaf Certificates"]
+        CERT1[Server Cert<br/>example.com]
+        CERT2[Client Cert<br/>user@example.com]
+    end
+
+    ROOT -->|signs| INT1
+    INT1 -->|signs| INT2
+    INT2 -->|signs| CERT1
+    INT2 -->|signs| CERT2
+
+    style TrustStore fill:#ffcdd2
+    style Intermediate fill:#fff9c4
+    style Leaf fill:#c8e6c9
+```

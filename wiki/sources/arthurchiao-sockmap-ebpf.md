@@ -68,3 +68,42 @@ bpftool prog attach pinned /sys/fs/bpf/bpf_redir msg_verdict pinned /sys/fs/bpf/
 - [[entities/linux/ebpf/ebpf-networking]] — eBPF networking context
 - [[entities/linux/ebpf/sockmap-sockhash]] — Entity page
 - [[entities/linux/network/net-stack-implementation-rx]] — Where socket events originate
+
+## Images
+
+![eBPF Kernel Hooks for Socket Ops](attachments/arthurchiao/sockmap-ebpf/bpf-kernel-hooks.png)
+*Figure: BPF kernel hooks for socket operations — sockops and sk_msg*
+
+![Socket Redirection via Sockmap](attachments/arthurchiao/sockmap-ebpf/sock-redir.png)
+*Figure: Sockmap redirect — bypass TCP/IP stack, send directly to peer socket*
+
+## Sockmap Architecture
+
+```mermaid
+flowchart TD
+    subgraph Program1["Program 1: sockops"]
+        TCP_EVENT[TCP connection<br/>establish/close events]
+        --> SOCKOPS[sockops program<br/>BPF_PROG_TYPE_SOCK_OPS]
+        --> SOCKHASH[BPF_MAP_TYPE_SOCKHASH<br/>Store socket references]
+    end
+
+    subgraph Program2["Program 2: sk_msg"]
+        SENDMSG[sendmsg() syscall]
+        --> SK_MSG[sk_msg program<br/>Intercepts sendmsg]
+        --> REDIRECT[msg_redirect_hash()<br/>Lookup in sockhash]
+        --> PEER_Q[Peer Socket<br/>Direct Queue Bypass]
+    end
+
+    subgraph Result["Data Path"]
+        DIRECT[Direct to Peer<br/>Bypass TCP/IP Stack]
+        NORMAL[Normal TCP/IP Stack]
+    end
+
+    SOCKHASH --> REDIRECT
+    REDIRECT --> DIRECT
+    SENDMSG -->|if no match| NORMAL
+
+    style Program1 fill:#e3f2fd
+    style Program2 fill:#fff3e0
+    style Result fill:#e8f5e9
+```

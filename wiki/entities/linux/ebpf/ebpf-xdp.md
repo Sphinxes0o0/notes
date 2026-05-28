@@ -119,3 +119,5 @@ Cloudflare 最早使用 XDP，在配置良好的服务器上 iptables 仅处理 
 
 - [[sources/pdf-ebpf-books]] — 《eBPF基础》第2.1.3节 XDP 技术实践
 - [[sources/pdf-ebpf-papers]] — Fast-Packet-Processing using eBPF and XDP (UFMG, EVComp 2020)
+- [[sources/reading-ebpf-how-ebpf-work]] — eBPF深入理解：BPF_PROG_TYPE_XDP/~10-20Mpps/XDP vs TC hook点性能对比
+- [[sources/reading-af-xdp-technical]] — AF_XDP零拷贝：bpf_redirect_map/XSKMAP/UMEM ring/对比DPDK

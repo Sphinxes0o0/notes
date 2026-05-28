@@ -50,3 +50,4 @@ BPF Maps/programs are kernel resources (anonymous inodes). Pinning exposes them 
 ## Source Details
 
 - [[sources/pdf-ebpf-basics]] — eBPF基础（80页入门教程）
+- [[sources/reading-ebpf-how-ebpf-work]] — eBPF深入理解：Verifier/JIT/Maps/Tail Call/XDP vs TC性能排名

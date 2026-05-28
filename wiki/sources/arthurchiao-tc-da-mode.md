@@ -54,3 +54,44 @@ tc filter add dev eth0 ingress bpf direct-action obj foo.o sec .text
 - [[entities/linux/ebpf/ebpf-networking]] — TC + eBPF context
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP comparison
 - [[entities/linux/network/tc-ebpf-direct-action]] — Entity page
+
+## Images
+
+![Kernel Commit for Direct-Action Mode](attachments/arthurchiao/tc-da-mode/kernel-commit.png)
+*Figure: Kernel commit adding direct-action (da) mode support*
+
+## TC eBPF Direct-Action Architecture
+
+```mermaid
+flowchart TD
+    subgraph Traditional["Traditional TC"]
+        CLS[Classifier<br/>Returns ClassID]
+        --> ACT[Action<br/>TC_ACT_SHOT, TC_ACT_OK]
+    end
+
+    subgraph DirectAction["Direct-Action (da) Mode"]
+        BPF[cls_bpf filter<br/>bpf direct-action]
+    end
+
+    subgraph ReturnValues["Return Values (da mode)"]
+        RET0[TC_ACT_OK = 0<br/>Allow packet]
+        RET1[TC_ACT_RECLASSIFY = 1<br/>Reclassify]
+        RET2[TC_ACT_SHOT = 2<br/>Drop packet]
+    end
+
+    subgraph Qdisc["clsact Qdisc"]
+        ING[Ingress]
+        EGR[Egress]
+    end
+
+    BPF --> RET0
+    BPF --> RET1
+    BPF --> RET2
+
+    ING -->|both ingress<br/>and egress| BPF
+    EGR -->|without queuing| BPF
+
+    style Traditional fill:#ffcdd2
+    style DirectAction fill:#c8e6c9
+    style Qdisc fill:#bbdefb
+```
