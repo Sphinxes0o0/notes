@@ -98,6 +98,14 @@ created: 2026-05-22
 | [[wiki/sources/notes-interview]] | 面试准备：方法论、问题解决模式、系统设计基础、NP完全性、位操作 |
 | [[wiki/sources/notes-midware]] | 中间件：DoIP协议（ISO 13400）、SOME/IP服务通信、vSOME/IP开源实现 |
 | [[wiki/sources/notes-security]] | 安全工具：Masscan高速端口扫描、Falco K8s安全监控、Snort 3 NIDS |
+| [[wiki/sources/bookmark-cpp-core-guidelines]] | C++ Core Guidelines 中文版：Bjarne Stroustrup 官方安全规范（类型安全、资源管理、并发） |
+| [[wiki/sources/bookmark-stl-source-analysis]] | STL 源码分析 (SGI STL 3.0)：52个文件覆盖配置器/迭代器/容器/算法/函数对象 |
+| [[wiki/sources/bookmark-cpp-design-patterns]] | C++ 设计模式：GoF 23种+7种额外模式，30个C++实现，2.6k stars |
+| [[wiki/sources/bookmark-modern-cmake]] | Modern CMake 教程（中文版）：3.1+ 构建系统最佳实践，纠正网上错误用法 |
+| [[wiki/sources/bookmark-effective-modern-cpp]] | Effective Modern C++ 中文版：Scott Meyers 42条款覆盖移动语义/lambda/并发/智能指针 |
+| [[wiki/sources/bookmark-cpp-concurrency-in-action]] | C++ Concurrency in Action 第2版 (Web版)：C++20 jthread/semaphore/barrier 补充 |
+| [[wiki/sources/bookmark-modern-cpp-programming]] | Modern C++ Programming：Federico Busato 课程，29章节含性能优化/二进制大小/构建工程 |
+| [[wiki/sources/bookmark-hacking-cpp]] | Hacking C++：代码示例+信息图表快速参考，可视化 cheat sheets |
 | [[wiki/sources/github-snort3-infrastructure]] | Snort3 infrastructure: hash/XHash/ZHash, file_api, decompress, js_norm |
 | [[wiki/sources/notes-sys]] | 系统编程：TTY/Shell/Console体系、ELF文件格式、Linux IPC |
 | [[wiki/sources/pdf-the-linux-programming-interface]] | TLPI (Kerrisk, 1556页)：Linux/UNIX系统编程百科，500+系统调用 |

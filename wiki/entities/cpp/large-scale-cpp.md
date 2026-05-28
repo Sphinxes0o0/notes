@@ -50,5 +50,6 @@ sources: [pdf-cpp-modern-books, pdf-cpp-perf-books]
 
 ## 来源详情
 
+- [[sources/bookmark-cpp-design-patterns]] — GoF 设计模式 C++ 实现（SOLID + 30 模式）
 - [[sources/pdf-cpp-modern-books]] — Large-Scale C++ 章节
 - [[sources/pdf-cpp-perf-books]] — 大规模设计中的性能考量

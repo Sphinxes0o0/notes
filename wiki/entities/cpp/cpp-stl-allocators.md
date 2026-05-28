@@ -94,3 +94,4 @@ struct allocator_traits {
 - [[entities/cpp/cpp-stl-string]] — string 通过分配器管理字符存储
 - [[entities/cpp/cpp-stl-algorithms]] — 算法操作容器内存
 - [[entities/cpp/smart-pointers]] — 智能指针也使用分配器
+- [[sources/bookmark-stl-source-analysis]] — SGI STL 3.0 源码分析，深入剖析配置器实现

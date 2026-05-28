@@ -4,6 +4,34 @@
 
 ---
 
+## [2026-05-28] ingest | bookmark-cc — 8 C++ bookmark sources (TOP quality selection)
+
+- **来源**: 12 个候选资源中筛选 top 8，按 gap analysis 选择最高价值来源
+- **筛选策略**: 已有 C++ wiki 覆盖 modern-cpp-features / STL 用法 / 模板 / 并发 / Skills — 聚焦补充缺口
+- **TOP 8**:
+  1. bookmark-cpp-core-guidelines — Bjarne Stroustrup 官方安全规范（唯一官方标准，工具可检查）
+  2. bookmark-stl-source-analysis — SGI STL 3.0 源码（实现层面，非用法）
+  3. bookmark-cpp-design-patterns — GoF 23种+7种 C++ 实现（补 design-patterns 实体缺口）
+  4. bookmark-modern-cmake — CMake 构建系统（补 professional engineering 缺口）
+  5. bookmark-effective-modern-cpp — Scott Meyers 42条款中文翻译（配套最佳实践）
+  6. bookmark-cpp-concurrency-in-action — Web版补充 C++20 jthread/semaphore/barrier
+  7. bookmark-modern-cpp-programming — Federico Busato 专业工程课程（二进制大小、构建时间）
+  8. bookmark-hacking-cpp — 可视化 cheat sheets 快速参考
+- **操作**:
+  - 创建 8 个 source pages in `wiki/sources/bookmark-*.md`
+  - 更新 6 个 entity pages 交叉引用：
+    - cpp-safety.md → bookmark-cpp-core-guidelines
+    - cpp-stl-allocators.md → bookmark-stl-source-analysis
+    - cpp-stl-containers.md → bookmark-stl-source-analysis
+    - cpp-stl-algorithms.md → bookmark-stl-source-analysis
+    - cpp-high-performance.md → bookmark-modern-cmake + bookmark-modern-cpp-programming
+    - cpp-templates.md → bookmark-effective-modern-cpp + bookmark-stl-source-analysis
+    - large-scale-cpp.md → bookmark-cpp-design-patterns
+  - 更新 `index.md` (+8 source entries)
+- **未 ingest 到 raw/**: bookmark 资源为 Web/GitHub 来源，无需下载到 raw/
+- **核心概念**: 补官方安全规范(Core Guidelines)、STL实现深度、设计模式CMake 专业工程四个关键缺口
+- **未 commit**
+
 ## [2026-05-27] ingest | modern-cpp-features — AnthonyCalandra feature reference (100+ features)
 
 - **来源**: `raw/github/modern-cpp-features/README.md` (99KB, C++11/14/17/20/23)

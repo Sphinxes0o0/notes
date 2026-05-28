@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, safety, security, defense-in-depth, contracts, cpp26]
 created: 2026-05-22
-sources: [pdf-cpp-slides]
+sources: [pdf-cpp-slides, bookmark-cpp-core-guidelines]
 ---
 
 # C++ Safety-First Development
@@ -87,6 +87,7 @@ Bloomberg categorizes safety into five dimensions:
 
 ## Relationship to Existing Entities
 
+- [[sources/bookmark-cpp-core-guidelines]] — Bjarne Stroustrup 主导的官方 C++ 规范，规则可被静态分析工具检查
 - [[entities/cpp/smart-pointers]] — prevent use-after-free and double-free; RAII-based resource management
 - [[entities/cpp/raii]] — automatic cleanup via constructors/destructors; prevents resource leaks
 - [[entities/cpp/concurrency]] — data-race safety via `std::atomic` and proper mutex usage

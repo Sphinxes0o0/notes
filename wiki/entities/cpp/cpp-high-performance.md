@@ -58,6 +58,8 @@ Björn Andrist & Viktor Sehr 著《C++ High Performance》第 2 版（Packt, 202
 - [[entities/cpp/constexpr]] — constexpr 编译时计算
 - [[entities/cpp/cpp-stl-containers]] — STL 容器
 - [[entities/cpp/concurrency]] — C++ 并发
+- [[sources/bookmark-modern-cmake]] — Modern CMake（构建优化、二进制大小）
+- [[sources/bookmark-modern-cpp-programming]] — 专业工程技能（性能优化、benchmarking、CPU 架构）
 
 ## 来源详情
 

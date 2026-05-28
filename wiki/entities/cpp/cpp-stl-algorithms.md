@@ -79,3 +79,4 @@ if (it != myset.end()) myset.erase(it);
 - [[entities/cpp/cpp-stl-iterators]] — 算法通过迭代器访问元素
 - [[entities/cpp/cpp-stl-functors]] — 算法常配合函数对象使用
 - [[entities/cpp/cpp-stl-string]] — 字符串容器支持的算法
+- [[sources/bookmark-stl-source-analysis]] — SGI STL 源码分析，揭示 copy/rotate/sort 等算法实现细节
