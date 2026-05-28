@@ -67,6 +67,7 @@ struct task_struct {
 - [[entities/linux/kernel/sched/linux-kernel-sched-cfs]] — CFS 调度器实现
 - [[entities/linux/kernel/sched/linux-kernel-sched-context-switch]] — context_switch() 执行 CPU 切换
 - [[entities/linux/kernel/sched/linux-kernel-sched-load-balance]] — 多 CPU 间负载均衡
+- [[entities/linux/kernel/smp/linux-kernel-smp]] — SMP 多核系统，per-CPU 调度实体
 
 ## 来源详情
 

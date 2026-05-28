@@ -15,6 +15,8 @@ created: 2026-05-22
 | [[entities/linux/kernel/block/linux-kernel-block-core]] | Block layer: bio/request/gendisk, block_device | linux-kernel, block |
 | [[entities/linux/kernel/block/linux-kernel-block-mq]] | blk-mq: hctx/tags, software queue, hardware queue | linux-kernel, block, mq |
 | [[entities/linux/kernel/block/linux-kernel-block-scheduler]] | IO schedulers: mq-deadline, BFQ, elevator | linux-kernel, block, scheduler |
+| [[entities/lsm-tree]] | LSM-tree: Log Structured Merge Tree，写优化存储结构，LevelDB/RocksDB核心 | storage, LSM-tree, key-value |
+| [[entities/sstable]] | SSTable: Sorted String Table磁盘格式，Data/Filter/Index Block，Compaction合并 | storage, SSTable, LevelDB |
 
 ## Cross-References
 

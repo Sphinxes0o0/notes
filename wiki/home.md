@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-05-27 | Total: ~647 pages
+> Last updated: 2026-05-28 | Total: ~657 pages
 > Last updated: 2026-05-25 | Total pages: ~385 | Module indexes: 25
 
 ---
@@ -222,6 +222,12 @@ created: 2026-05-22
 | [[sources/notes-network-traffic-analysis]] | 网络流量分析文献综述（62篇论文）：IDS/加密流量/DL方法/eBPF实时检测 | 2026-05 | github |
 | [[sources/notes-ccpp-concurrency]] | C++ 并发编程实战：MPMC无锁队列/内存序/future-promise/async/yield | 2026-05 | github |
 | [[sources/notes-kernel-handson]] | Linux Kernel 动手实验：Rust RISC-V裸机管理程序 + C 1000行OS | 2026-05 | github |
+| [[sources/bookmark-archbase]] | 计算机体系结构基础（龙芯第3版）：ISA/流水线/存储层次/多核/总线/启动/性能评价 | 2026-05 | bookmark |
+| [[sources/bookmark-leveldb-handbook]] | LevelDB Handbook中文版：LSM-tree/日志/MemTable/SSTable/缓存/布隆过滤器/Compaction/版本控制 | 2026-05 | bookmark |
+| [[sources/bookmark-hypervisor-rust]] | You Are The BIOS Now: Rust+KVM Type-II hypervisor，VCPU/内存映射/x86模式切换/VMExit | 2026-05 | bookmark |
+| [[sources/bookmark-compiler-from-scratch]] | Build a Compiler from Scratch: Pylite→x86汇编，Lexer/Parser/语义分析/IR/优化/代码生成 | 2026-05 | bookmark |
+| [[sources/bookmark-sdn-guide]] | feiskyer SDN实践指南：TC/eBPF/XDP/OpenFlow/P4/OVS/DPDK/容器网络/SD-WAN | 2026-05 | bookmark |
+| [[sources/bookmark-thebyte]] | 深入高可用系统原理与设计：云原生/容器/K8s/负载均衡/Paxos/Raft/Service Mesh | 2026-05 | bookmark |
 
 ---
 

@@ -34,6 +34,8 @@ cgroups (control groups) 是 Linux 内核的资源限制机制，通过 CSS (cgr
 
 - [[entities/os/linux-scheduler]] — cgroups 的 cpu controller 影响 CFS 调度
 - [[entities/os/linux-memory-allocator]] — cgroups 的 memory controller 限制内存使用
+- [[container-technology]] — 容器技术（cgroups是容器资源限制的底层支持）
+- [[kubernetes-orchestration]] — Kubernetes（cgroups资源模型）
 
 ## 来源详情
 

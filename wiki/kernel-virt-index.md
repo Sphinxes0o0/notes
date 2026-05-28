@@ -14,6 +14,7 @@ created: 2026-05-22
 |--------|-------------|------|
 | [[entities/linux/kernel/virt/linux-kernel-virt-kvm]] | KVM: hardware virtualization, struct kvm/vCPU, VM-Exit/Entry, EPT paging, Dirty Ring, guest_memfd | linux-kernel, virtualization, kvm |
 | [[entities/linux/kernel/virt/linux-kernel-virt-virtio]] | Virtio: paravirtual I/O framework, virtqueue ring, device state machine, PCI/MMIO transport | linux-kernel, virtualization, virtio |
+| [[entities/hypervisor-design]] | Hypervisor Design: Type-II KVM架构/VCPU管理/内存映射/x86实模式到长模式/GDT/I/O端口VMExit | virtualization, hypervisor, KVM, VMX |
 
 ## Cross-References
 

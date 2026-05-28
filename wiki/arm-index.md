@@ -15,6 +15,8 @@ created: 2026-05-23
 | [[entities/arm/armv8-architecture]] | ARMv8-A: 64-bit ISA, AArch64/AArch32, Exception Levels, VMSAv8-64 | arm, architecture, armv8, aarch64 |
 | [[entities/arm/arm-cortex-a9]] | Cortex-A9: out-of-order, superscalar, NEON SIMD, multiprocessing (SCU/GIC) | arm, cortex-a9, cpu, architecture |
 | [[entities/arm/computer-architecture]] | Computer Architecture: Amdahl's law, memory hierarchy, DSA, chiplets | architecture, computer-science, cpu, performance |
+| [[entities/cpu-architecture]] | CPU Architecture: ISA设计(RISC/CISC/VLIW)、微架构(流水线/超标量/乱序执行)、分支预测 | computer-architecture, CPU, ISA, pipeline |
+| [[entities/memory-hierarchy]] | Memory Hierarchy: 寄存器→Cache→DRAM→SSD存储层次、Cache映射、TLB、一致性协议MESI | memory-hierarchy, cache, TLB, storage |
 | [[entities/arm/trustzone-op-tee]] | TrustZone & OP-TEE: TEE, Secure World, Monitor Mode, ATF boot stages | security, arm, trustzone, tee, op-tee, mobile-security |
 
 ## Sources

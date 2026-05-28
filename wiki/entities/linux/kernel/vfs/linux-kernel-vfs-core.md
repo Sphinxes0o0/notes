@@ -135,6 +135,7 @@ VFS 层
 - [[entities/linux/kernel/mm/linux-kernel-mm-page-fault]]: 文件页缓存的页错误处理
 - [[entities/linux/kernel/io_uring/linux-kernel-io-uring-core]]: io_uring 操作最终调用 VFS 的 file_operations
 - [[entities/linux/kernel/sched/linux-kernel-sched-load-balance]]: VFS inode 的 i_count 引用计数影响 inode 回收调度
+- [[entities/linux/kernel/syscall/linux-kernel-syscall]]: 系统调用（VFS 是 syscall 的底层实现基础，socket() 等通过 VFS 分配 fd）
 
 ## 来源详情
 
