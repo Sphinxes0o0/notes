@@ -4,6 +4,77 @@
 
 ---
 
+## [2026-05-28] ingest | bookmark-sdn-guide — feiskyer SDN网络指南
+
+- **来源**: raw/bookmarks/ebooks/sdn-guide/ (50+ 文件)
+- **Source**: [[sources/bookmark-sdn-guide]]
+- **操作**:
+  - 创建 1 个 source page: bookmark-sdn-guide
+  - 创建 6 个 entity pages:
+    - linux/network/traffic-control (TC流量控制: qdisc/class/filter/HTB/ifb)
+    - sdn/sdn-architecture (SDN架构: 控制/转发分离/ONF三层/北向API/南向API)
+    - sdn/openflow (OpenFlow协议: 流表/匹配域/Meter/三种消息类型)
+    - linux/ebpf/ebpf-sdn-guide (eBPF基础: tc/XDP/firewall/cgroups)
+    - linux/ebpf/xdp-sdn-guide (XDP: ~20Mpps/DPDK对比/无锁/批量I/O)
+- **Cross-link**: ebpf-overview→ebpf-sdn-guide/xdp-sdn-guide; ebpf-networking→sdn-architecture; tc→ebpf-overview
+- **未 commit**
+
+## [2026-05-28] ingest | bookmark-thebyte — 深入高可用系统原理与设计
+
+- **来源**: raw/bookmarks/ebooks/thebyte/ (10章，覆盖云原生/网络/负载均衡/一致性/容器/Service Mesh)
+- **Source**: [[sources/bookmark-thebyte]]
+- **操作**:
+  - 创建 1 个 source page: bookmark-thebyte
+  - 创建 8 个 entity pages:
+    - cloud-native (云原生: 容器/微服务/服务网格/不可变基础设施/声明式API)
+    - load-balancing (负载均衡: L4/L7/部署拓扑/调度算法/粘性会话/TLS卸载)
+    - paxos-consensus (Paxos: Proposer/Acceptor/Learner/两阶段/Prepare/Accept/活锁)
+    - raft-consensus (Raft: Leader/Follower/Candidate/选举/日志复制/成员变更)
+    - kubernetes-orchestration (Kubernetes: Borg演进/API Server/Scheduler/Pod/CRD)
+    - container-technology (容器技术: chroot→namespace→cgroups演进/8类命名空间)
+    - service-mesh (服务网格: Envoy/边车代理/xDS/数据平面/控制平面)
+- **Cross-link**: linux-cgroups→container-technology/kubernetes-orchestration; ebpf-overview→ebpf-sdn-guide; load-balancing→cloud-native/service-mesh; paxos-consensus→raft-consensus
+- **未 commit**
+
+## [2026-05-28] ingest | 4 ebooks — archbase + leveldb-handbook + hypervisor-rust + compiler-from-scratch
+
+- **来源**: 4个ebook书签资源
+- **archbase**（计算机体系结构基础，龙芯第3版）:
+  - `wiki/sources/bookmark-archbase.md` — Source摘要
+  - `wiki/entities/cpu-architecture.md` — CPU架构：ISA(RISC/CISC/VLIW)、微架构(流水线/超标量/乱序)、分支预测
+  - `wiki/entities/memory-hierarchy.md` — 存储层次：寄存器→Cache→DRAM→SSD、Cache映射、TLB、MESI一致性
+- **leveldb-handbook**（中文LevelDB技术手册）:
+  - `wiki/sources/bookmark-leveldb-handbook.md` — Source摘要
+  - `wiki/entities/lsm-tree.md` — LSM-tree核心：WAL→MemTable→SSTable、读写路径、B+tree对比
+  - `wiki/entities/sstable.md` — SSTable格式：Data/Filter/Index Block、Footer、Compaction机制
+- **hypervisor-rust**（Rust+KVM Type-II hypervisor）:
+  - `wiki/sources/bookmark-hypervisor-rust.md` — Source摘要
+  - `wiki/entities/hypervisor-design.md` — Hypervisor设计：KVM/VCPU/GDT/长模式切换/I/O端口VMExit
+- **compiler-from-scratch**（Pylite→x86编译器）:
+  - `wiki/sources/bookmark-compiler-from-scratch.md` — Source页面（按要求不建entity）
+- **更新**: kernel-block-index.md (+lsm-tree +sstable), kernel-virt-index.md (+hypervisor-design), arm-index.md (+cpu-architecture +memory-hierarchy), home.md (+4 sources, ~647→~657 pages)
+- **Cross-link**: 每个entity≥2条wikilinks（cpu-architecture→cache-memory-design/armv8/cortex-a9等）
+- **未 commit**
+
+## [2026-05-28] ingest | ebook-systems-approach — Systems Approach networking textbook
+
+- **来源**: Computer Networks: A Systems Approach (Peterson & Davie, 6.2), 61 sections, 225 diagrams, CC BY 4.0
+- **来源路径**: `raw/bookmarks/ebooks/systems-approach/`
+- **核心章节**: Ch1 Foundation, Ch3 Internetworking, Ch5 E2E Protocols, Ch6 Congestion Control, Ch8 Security
+- **操作**:
+  - 创建 1 个 source page: `wiki/sources/ebook-systems-approach.md`
+  - 创建 6 个 entity pages:
+    - `internet-architecture.md` — IP, subnetting/CIDR, ARP, DHCP, ICMP, tunneling, hourglass model
+    - `network-switching.md` — Datagram vs virtual circuit, learning bridges, STP, VLANs, switching implementation
+    - `tcp-congestion-control.md` — AIMD, slow start, fast retransmit, CUBIC, ECN, BBR
+    - `quality-of-service.md` — FIFO/FQ queuing, RED/ECN AQM, IntServ/DiffServ
+    - `sdn-networks.md` — Control/data plane separation, OpenFlow, NOS, bare-metal switches
+    - `network-virtualization-security.md` — VPN/tunnel, symmetric/asymmetric crypto, TLS/IPsec/SSH/PGP, firewalls
+  - 交叉链接现有 entity: linux-network-protocols, net-stack-overview, congestion-control, arp-neighbor, tc-ebpf-direct-action, modern-lb-proxy
+  - 交叉链接现有 source: arthurchiao-*, reading-*, notes-*, pdf-*
+  - 更新 `index.md` (+1 source entry)
+- **未 commit**
+
 ## [2026-05-28] ingest | bookmark-achieved — 7 achieved Linux/网络 bookmark sources
 
 - **来源**: 7 个已阅读/确认的高质量书签资源，NIDS相关优先

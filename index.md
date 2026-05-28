@@ -32,6 +32,11 @@ created: 2026-05-22
 ### Operating System
 | Index | Domain |
 |-------|--------|
+| [[wiki/distributed-systems-index]] | 分布式系统：复制、分片、事务、一致性与共识 (DDIA) |
+
+
+| Index | Domain |
+|-------|--------|
 | [[wiki/os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems |
 
 ### Programming & Algorithms
@@ -119,6 +124,9 @@ created: 2026-05-22
 | [[wiki/sources/pdf-the-linux-programming-interface]] | TLPI (Kerrisk, 1556页)：Linux/UNIX系统编程百科，500+系统调用 |
 | [[wiki/sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程（扫描版）|
 | [[wiki/sources/pdf-computer-systems-programmers-perspective]] | CS:APP (Bryant & O'Hallaron, 1078页)：计算机系统程序员视角，CMU 15-213 |
+| [[wiki/sources/ebook-systems-approach]] | Systems Approach (Peterson & Davie)：网络教材经典，61章覆盖分层/交换/TCP/SDN/QoS/安全 |
+| [[wiki/sources/ebook-ddia]] | DDIA (Kleppmann)：数据密集型应用设计，复制/分片/事务/共识/批处理/流处理 |
+| [[wiki/sources/ebook-linux-insides]] | Linux Insides 中文：内核入门经典，boot/interrupt/syscall/timers/sync/MM/Cgroups (22/59章) |
 | [[wiki/sources/pdf-onedrive-batch1]] | OneDrive Batch P: OS concepts + C++ concurrency/high-performance/templates-v2 |
 | [[wiki/sources/pdf-slides]] | C++ & Compiler Slides: 58 conference talks in 6 categories |
 | [[wiki/sources/pdf-slides-cpp-standard]] | C++ Slides: 语言演进/标准化/反射/对象生命周期/嵌入式 (8 talks) |
