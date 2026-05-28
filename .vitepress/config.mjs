@@ -31,7 +31,7 @@ export default defineConfig({
   smoothScroll: true,
 
   // Exclude courses and wiki directories from VitePress processing
-  srcExclude: ['courses/**', 'wiki/**'],
+  srcExclude: ['courses/**', 'wiki/**', 'android/**'],
 
   // Ignore dead links for excluded content
   ignoreDeadLinks: true,
@@ -249,24 +249,12 @@ export default defineConfig({
           text: '系统',
           items: [
             {
-              text: '操作系统',
+              text: '系统编程',
               items: [
-                { text: '概述', link: '/os/' },
-                { text: 'Linux 内核开发指南', link: '/os/linux_kernel_development_guide' },
-                { text: 'Linux 101', link: '/os/linux_101' },
-                {
-                  text: '内核深度分析',
-                  collapsed: true,
-                  items: [
-                    { text: '调度器', link: '/os/scheduler_deep_dive' },
-                    { text: '内存管理/SLUB', link: '/os/slub_allocator_deep_dive' },
-                    { text: '虚拟文件系统/VFS', link: '/os/vfs_deep_dive' },
-                    { text: '块 I/O', link: '/os/block_io_deep_dive' },
-                    { text: '同步机制', link: '/os/synchronization_deep_dive' },
-                    { text: '时间管理', link: '/os/timekeeping_deep_dive' },
-                    { text: 'Cgroups', link: '/os/cgroups_deep_dive' }
-                  ]
-                }
+                { text: '概述', link: '/sys/' },
+                { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
+                { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' },
+                { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' }
               ]
             },
             {
@@ -661,149 +649,158 @@ export default defineConfig({
               text: '内存管理 (mm)',
               collapsed: true,
               items: [
-                { text: '概述', link: '/mm/linux_kernel/' },
-                { text: '分配器', link: '/mm/linux_kernel/mm_allocator' },
-                { text: '核心结构', link: '/mm/linux_kernel/mm_core_structs' },
-                { text: '内存映射', link: '/mm/linux_kernel/mm_mmap' },
-                { text: '页错误处理', link: '/mm/linux_kernel/mm_page_fault' },
-                { text: '页面回收', link: '/mm/linux_kernel/mm_page_reclaim' },
-                { text: 'OOM 处理', link: '/mm/linux_kernel/mm_oom' },
-                { text: 'Swap', link: '/mm/linux_kernel/mm_swap' },
-                { text: 'Cgroup 内存', link: '/mm/linux_kernel/mm_memory_cgroup' }
+                { text: '概述', link: '/kernel/mm/' },
+                { text: '分配器', link: '/kernel/mm/mm_allocator' },
+                { text: '核心结构', link: '/kernel/mm/mm_core_structs' },
+                { text: '内存映射', link: '/kernel/mm/mm_mmap' },
+                { text: '页错误处理', link: '/kernel/mm/mm_page_fault' },
+                { text: '页面回收', link: '/kernel/mm/mm_page_reclaim' },
+                { text: 'OOM 处理', link: '/kernel/mm/mm_oom' },
+                { text: 'Swap', link: '/kernel/mm/mm_swap' },
+                { text: 'Cgroup 内存', link: '/kernel/mm/mm_memory_cgroup' }
               ]
             },
             {
               text: '虚拟文件系统 (VFS)',
               collapsed: true,
               items: [
-                { text: '概述', link: '/vfs/linux_kernel/' },
-                { text: '索引节点', link: '/vfs/linux_kernel/inode' },
-                { text: '目录项缓存', link: '/vfs/linux_kernel/dcache' },
-                { text: '超级块', link: '/vfs/linux_kernel/superblock' },
-                { text: '文件操作', link: '/vfs/linux_kernel/file_operations' },
-                { text: '缓冲区缓存', link: '/vfs/linux_kernel/buffer_cache' },
-                { text: '路径查找', link: '/vfs/linux_kernel/path_lookup' },
-                { text: '挂载命名空间', link: '/vfs/linux_kernel/mount_namespace' },
-                { text: '可执行格式', link: '/vfs/linux_kernel/exec_binfmt' }
+                { text: '概述', link: '/kernel/vfs/' },
+                { text: '索引节点', link: '/kernel/vfs/inode' },
+                { text: '目录项缓存', link: '/kernel/vfs/dcache' },
+                { text: '超级块', link: '/kernel/vfs/superblock' },
+                { text: '文件操作', link: '/kernel/vfs/file_operations' },
+                { text: '缓冲区缓存', link: '/kernel/vfs/buffer_cache' },
+                { text: '路径查找', link: '/kernel/vfs/path_lookup' },
+                { text: '挂载命名空间', link: '/kernel/vfs/mount_namespace' },
+                { text: '可执行格式', link: '/kernel/vfs/exec_binfmt' }
               ]
             },
             {
               text: '块设备层 (block)',
               collapsed: true,
               items: [
-                { text: '概述', link: '/block/linux_kernel/' },
-                { text: '通用块层', link: '/block/linux_kernel/block_core' },
-                { text: '请求处理', link: '/block/linux_kernel/block_request' },
-                { text: '调度器', link: '/block/linux_kernel/block_scheduler' },
-                { text: '多队列', link: '/block/linux_kernel/block_mq' },
-                { text: ' gendisk', link: '/block/linux_kernel/block_genhd' }
+                { text: '概述', link: '/kernel/block/' },
+                { text: '通用块层', link: '/kernel/block/block_core' },
+                { text: '请求处理', link: '/kernel/block/block_request' },
+                { text: '调度器', link: '/kernel/block/block_scheduler' },
+                { text: '多队列', link: '/kernel/block/block_mq' },
+                { text: 'gendisk', link: '/kernel/block/block_genhd' }
               ]
             },
             {
               text: '网络子系统',
               items: [
-                { text: '概述', link: '/net/linux_kernel/' },
-                { text: 'Socket 核心', link: '/net/linux_kernel/net_socket_core' },
-                { text: 'TCP/IP 协议栈', link: '/net/linux_kernel/net_tcp_ip' },
-                { text: 'Netfilter', link: '/net/linux_kernel/net_netfilter' },
-                { text: '路由', link: '/net/linux_kernel/net_routing' },
-                { text: 'sk_buff', link: '/net/linux_kernel/net_skbuff' }
+                { text: '概述', link: '/network/linux_kernel/' },
+                { text: 'Socket 核心', link: '/network/linux_kernel/net_socket_core' },
+                { text: 'TCP/IP 协议栈', link: '/network/linux_kernel/net_tcp_ip' },
+                { text: 'Netfilter', link: '/network/linux_kernel/net_netfilter' },
+                { text: '路由', link: '/network/linux_kernel/net_routing' },
+                { text: 'sk_buff', link: '/network/linux_kernel/net_skbuff' }
               ]
             },
             {
               text: 'Netfilter',
               items: [
-                { text: '概述', link: '/netfilter/linux_kernel/' },
-                { text: '子系统架构', link: '/netfilter/linux_kernel/netfilter_subsystem' }
+                { text: '概述', link: '/network/linux_netfilter/' },
+                { text: '子系统架构', link: '/network/linux_netfilter/netfilter_subsystem' }
               ]
             },
             {
               text: '调度器 (sched)',
               collapsed: true,
               items: [
-                { text: '概述', link: '/sched/linux_kernel/' },
-                { text: '核心结构', link: '/sched/linux_kernel/sched_core' },
-                { text: 'CFS 调度器', link: '/sched/linux_kernel/sched_cfs' },
-                { text: '实时调度', link: '/sched/linux_kernel/sched_rt' },
-                { text: '上下文切换', link: '/sched/linux_kernel/sched_context_switch' },
-                { text: '负载均衡', link: '/sched/linux_kernel/sched_load_balance' }
+                { text: '概述', link: '/kernel/sched/' },
+                { text: '核心结构', link: '/kernel/sched/sched_core' },
+                { text: 'CFS 调度器', link: '/kernel/sched/sched_cfs' },
+                { text: '实时调度', link: '/kernel/sched/sched_rt' },
+                { text: '上下文切换', link: '/kernel/sched/sched_context_switch' },
+                { text: '负载均衡', link: '/kernel/sched/sched_load_balance' }
               ]
             },
             {
               text: '同步机制 (locking)',
               items: [
-                { text: '概述', link: '/locking/linux_kernel/' },
-                { text: '子系统架构', link: '/locking/linux_kernel/locking_subsystem' }
+                { text: '概述', link: '/kernel/locking/' },
+                { text: '子系统架构', link: '/kernel/locking/locking_subsystem' }
               ]
             },
             {
               text: 'RCU',
               items: [
-                { text: '概述', link: '/rcu/linux_kernel/' },
-                { text: '子系统架构', link: '/rcu/linux_kernel/rcu_subsystem' }
+                { text: '概述', link: '/kernel/rcu/' },
+                { text: '子系统架构', link: '/kernel/rcu/rcu_subsystem' }
               ]
             },
             {
               text: '时间管理 (time)',
               items: [
-                { text: '概述', link: '/time/linux_kernel/' },
-                { text: '子系统架构', link: '/time/linux_kernel/time_subsystem' }
+                { text: '概述', link: '/kernel/time/' },
+                { text: '子系统架构', link: '/kernel/time/time_subsystem' }
               ]
             },
             {
               text: '进程间通信 (ipc)',
               items: [
-                { text: '概述', link: '/ipc/linux_kernel/' },
-                { text: '子系统架构', link: '/ipc/linux_kernel/ipc_subsystem' }
+                { text: '概述', link: '/kernel/ipc/' },
+                { text: '子系统架构', link: '/kernel/ipc/ipc_subsystem' }
               ]
             },
             {
               text: 'I/O uring',
               items: [
-                { text: '概述', link: '/io_uring/linux_kernel/' },
-                { text: '核心架构', link: '/io_uring/linux_kernel/io_uring_core' },
-                { text: '内存管理', link: '/io_uring/linux_kernel/io_uring_memory' },
-                { text: '操作机制', link: '/io_uring/linux_kernel/io_uring_operations' },
-                { text: '特性', link: '/io_uring/linux_kernel/io_uring_features' }
+                { text: '概述', link: '/kernel/io_uring/' },
+                { text: '核心架构', link: '/kernel/io_uring/io_uring_core' },
+                { text: '内存管理', link: '/kernel/io_uring/io_uring_memory' },
+                { text: '操作机制', link: '/kernel/io_uring/io_uring_operations' },
+                { text: '特性', link: '/kernel/io_uring/io_uring_features' }
               ]
             },
             {
               text: '加密子系统 (crypto)',
               items: [
-                { text: '概述', link: '/crypto/linux_kernel/' },
-                { text: '核心架构', link: '/crypto/linux_kernel/crypto_core' },
-                { text: '异步加密', link: '/crypto/linux_kernel/crypto_async' },
-                { text: '基础设施', link: '/crypto/linux_kernel/crypto_infra' },
-                { text: 'SKCIPHER', link: '/crypto/linux_kernel/crypto_skcipher' }
+                { text: '概述', link: '/kernel/crypto/' },
+                { text: '核心架构', link: '/kernel/crypto/crypto_core' },
+                { text: '异步加密', link: '/kernel/crypto/crypto_async' },
+                { text: '基础设施', link: '/kernel/crypto/crypto_infra' },
+                { text: 'SKCIPHER', link: '/kernel/crypto/crypto_skcipher' }
               ]
             },
             {
               text: '通用库 (lib)',
               items: [
-                { text: '概述', link: '/lib/linux_kernel/' },
-                { text: '子系统架构', link: '/lib/linux_kernel/lib_subsystem' }
+                { text: '概述', link: '/kernel/lib/' },
+                { text: '子系统架构', link: '/kernel/lib/lib_subsystem' }
               ]
             },
             {
               text: '音频子系统 (sound)',
               items: [
-                { text: '概述', link: '/sound/linux_kernel/' },
-                { text: '子系统架构', link: '/sound/linux_kernel/sound_subsystem' }
+                { text: '概述', link: '/kernel/sound/' },
+                { text: '子系统架构', link: '/kernel/sound/sound_subsystem' }
               ]
             },
             {
               text: '虚拟化 (virt)',
               collapsed: true,
               items: [
-                { text: '概述', link: '/virt/linux_kernel/' },
-                { text: 'KVM 核心', link: '/virt/linux_kernel/kvm_core' },
-                { text: 'KVM 内存', link: '/virt/linux_kernel/kvm_memory' },
-                { text: 'KVM vCPU', link: '/virt/linux_kernel/kvm_vcpu' },
-                { text: 'KVM 中断', link: '/virt/linux_kernel/kvm_interrupt' },
-                { text: 'KVM MMU', link: '/virt/linux_kernel/kvm_mmu' },
-                { text: 'Virtio 框架', link: '/virt/linux_kernel/virtio_framework' },
-                { text: 'Virtio 设备驱动', link: '/virt/linux_kernel/virtio_drivers' },
-                { text: 'Virtio 传输', link: '/virt/linux_kernel/virtio_transport' }
+                { text: '概述', link: '/kernel/virt/' },
+                { text: 'KVM 核心', link: '/kernel/virt/kvm_core' },
+                { text: 'KVM 内存', link: '/kernel/virt/kvm_memory' },
+                { text: 'KVM vCPU', link: '/kernel/virt/kvm_vcpu' },
+                { text: 'KVM 中断', link: '/kernel/virt/kvm_interrupt' },
+                { text: 'KVM MMU', link: '/kernel/virt/kvm_mmu' },
+                { text: 'Virtio 框架', link: '/kernel/virt/virtio_framework' },
+                { text: 'Virtio 设备驱动', link: '/kernel/virt/virtio_drivers' },
+                { text: 'Virtio 传输', link: '/kernel/virt/virtio_transport' }
+              ]
+            },
+            {
+              text: 'eBPF',
+              items: [
+                { text: '概述', link: '/kernel/ebpf/ebpf' },
+                { text: 'eBPF 工作原理', link: '/kernel/ebpf/ebpf-how-ebpf-work' },
+                { text: 'AF_XDP 技术', link: '/kernel/ebpf/af-xdp-technical' },
+                { text: 'Android 网络', link: '/kernel/ebpf/ebpf-android-network' }
               ]
             },
             {
