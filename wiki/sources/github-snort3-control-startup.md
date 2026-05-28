@@ -82,6 +82,6 @@ snort_main()
 ## 相关页面
 
 - [[snort3-control-startup]] — 控制通道与启动序列 entity 页面
-- [[snort3-framework]] — 插件系统与生命周期
-- [[snort3-actions]] — 9 种动作类型
-- [[snort3-connectors]] — 4 种连接器类型
+- [[entities/linux/snort3/snort3-framework]] — 插件系统与生命周期
+- [[entities/linux/snort3/snort3-actions]] — 9 种动作类型
+- [[entities/linux/snort3/snort3-connectors]] — 4 种连接器类型

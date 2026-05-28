@@ -200,8 +200,8 @@ struct ObfuscatorBlock { uint32_t offset; uint32_t length; };
 ## 相关页面
 
 - [[snort3-pubsub-log]] — 实体页面
-- [[snort3-framework]] — 框架层（DataBus 基类）
-- [[snort3-codecs]] — Codec 协议解析
+- [[entities/linux/snort3/snort3-framework]] — 框架层（DataBus 基类）
+- [[entities/linux/snort3/snort3-codecs]] — Codec 协议解析
 - [[snort3-stream]] — Stream 流重组
-- [[snort3-detection-engine]] — 检测引擎
+- [[entities/linux/snort3/snort3-detection-engine]] — 检测引擎
 - [[intrusion-detection-system]] — IDS 概念

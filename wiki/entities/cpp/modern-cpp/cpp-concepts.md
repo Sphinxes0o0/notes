@@ -140,5 +140,5 @@ constinit const char* d = g();  // ERROR: g() not constexpr
 ## Related Concepts
 
 - [[cpp-templates]] — concepts constrain template parameters
-- [[cpp-constexpr]] — constexpr functions in concept constraints
-- [[cpp-auto-type-deduction]] — constrained auto: `my_concept auto x`
+- [[entities/cpp/modern-cpp/cpp-constexpr]] — constexpr functions in concept constraints
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — constrained auto: `my_concept auto x`

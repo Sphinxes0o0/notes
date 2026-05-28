@@ -227,8 +227,8 @@ PluginManager::load_plugins(cd_mpls);
 
 ## 相关概念
 
-- [[snort3-infrastructure]] — 文件处理、JavaScript 规范化等基础设施
-- [[snort3-detection-engine]] — Codec 解析后的数据包送入检测引擎
+- [[entities/linux/snort3/snort3-infrastructure]] — 文件处理、JavaScript 规范化等基础设施
+- [[entities/linux/snort3/snort3-detection-engine]] — Codec 解析后的数据包送入检测引擎
 - [[ethernet-frame]]
 - [[tcp]]
 - [[udp]]

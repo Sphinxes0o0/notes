@@ -194,8 +194,8 @@ PCRE2 支持选项：`SNORT_PCRE_RELATIVE`、`SNORT_PCRE_INVERT`、`SNORT_PCRE_A
 
 ## 相关概念
 
-- [[snort3-flow]] — Flow 追踪机制
-- [[snort3-framework]] — Snort3 框架概览
+- [[entities/linux/snort3/snort3-flow]] — Flow 追踪机制
+- [[entities/linux/snort3/snort3-framework]] — Snort3 框架概览
 - [[network-intrusion-detection]] — 入侵检测系统
 
 ## 来源详情

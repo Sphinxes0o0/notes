@@ -134,6 +134,6 @@ struct Foo {
 ## Related Concepts
 
 - [[cpp-stl-functional]] — std::invoke, std::bind_front, std::not_fn
-- [[cpp-auto-type-deduction]] — generic lambdas use auto
-- [[cpp-constexpr]] — constexpr lambdas
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — generic lambdas use auto
+- [[entities/cpp/modern-cpp/cpp-constexpr]] — constexpr lambdas
 - [[cpp-concurrency]] — lambdas in thread creation and async

@@ -13,7 +13,7 @@ sources: [github-modern-cpp-features]
 
 ## Key Concepts
 
-### [[nodiscard]] (C++17)
+### nodiscard (C++17)
 
 Warns when return value is discarded. Applied to functions or classes:
 

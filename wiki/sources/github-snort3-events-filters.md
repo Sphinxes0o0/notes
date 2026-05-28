@@ -85,8 +85,8 @@ LruCacheSharedMemcap (atomic memcap tracking)
 
 ## 相关页面
 
-- [[snort3-events-filters]] — 概念详解
-- [[snort3-framework]] — 框架总览
-- [[snort3-flow]] — Flow/会话追踪
-- [[snort3-actions]] — 动作系统
-- [[snort3-ips-options]] — IPS 选项
+- [[entities/linux/snort3/snort3-events-filters]] — 概念详解
+- [[entities/linux/snort3/snort3-framework]] — 框架总览
+- [[entities/linux/snort3/snort3-flow]] — Flow/会话追踪
+- [[entities/linux/snort3/snort3-actions]] — 动作系统
+- [[entities/linux/snort3/snort3-ips-options]] — IPS 选项

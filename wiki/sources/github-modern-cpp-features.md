@@ -81,7 +81,7 @@ Comprehensive, example-driven reference of Modern C++ features spanning five sta
 - [[entities/cpp/modern-cpp/cpp-concepts]] — concepts, requires, constraints
 - [[entities/cpp/modern-cpp/cpp-structured-bindings]] — structured bindings, decomposition
 - [[entities/cpp/modern-cpp/cpp-coroutines]] — coroutines, co_await, co_yield, co_return
-- [[entities/cpp/modern-cpp/cpp-attributes]] — attributes, [[nodiscard]], [[likely]], [[deprecated]]
+- [[entities/cpp/modern-cpp/cpp-attributes]] — attributes, [[entities/cpp/nodiscard]], [[likely]], [[deprecated]]
 - [[entities/cpp/modern-cpp/cpp-stl-optional-variant-any]] — std::variant, std::optional, std::any
 - [[entities/cpp/modern-cpp/cpp-stl-functional]] — std::invoke, std::apply, std::bind_front, std::not_fn
 - [[entities/cpp/modern-cpp/cpp-stl-string-view]] — std::string_view, starts_with, ends_with

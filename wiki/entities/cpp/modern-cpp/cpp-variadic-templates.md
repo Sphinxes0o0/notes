@@ -126,7 +126,7 @@ using CommonType = std::common_type_t<Args...>;
 
 ## Related Concepts
 
-- [[cpp-auto-type-deduction]] — forwarding references preserve pack value categories
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — forwarding references preserve pack value categories
 - [[cpp-concepts]] — constraining variadic templates with concepts
-- [[cpp-constexpr]] — variadics work in constexpr contexts
+- [[entities/cpp/modern-cpp/cpp-constexpr]] — variadics work in constexpr contexts
 - [[cpp-constexpr#if-constexpr]] — if constexpr for compile-time branching on parameter packs

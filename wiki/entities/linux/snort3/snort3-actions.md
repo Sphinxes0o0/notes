@@ -187,7 +187,7 @@ void load_actions() {
 
 ## 相关概念
 
-- [[snort3-connectors]] — 动作的数据导出机制
-- [[snort3-detection-engine]] — 检测引擎触发动作执行
-- [[snort3-framework]] — 插件系统、IpsAction 基类
-- [[snort3-events-filters]] — 动作的触发来源（事件队列）
+- [[entities/linux/snort3/snort3-connectors]] — 动作的数据导出机制
+- [[entities/linux/snort3/snort3-detection-engine]] — 检测引擎触发动作执行
+- [[entities/linux/snort3/snort3-framework]] — 插件系统、IpsAction 基类
+- [[entities/linux/snort3/snort3-events-filters]] — 动作的触发来源（事件队列）

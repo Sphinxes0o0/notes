@@ -157,7 +157,7 @@ Master Anti-Pattern ────────────────────
 | [[entities/cpp/modern-cpp/cpp-concepts]] | requires, constraints, standard concepts library | cpp20 |
 | [[entities/cpp/modern-cpp/cpp-structured-bindings]] | structured bindings, CTAD, std::tie, designated init | cpp17, cpp20 |
 | [[entities/cpp/modern-cpp/cpp-coroutines]] | co_await, co_yield, co_return, stackless | cpp20 |
-| [[entities/cpp/modern-cpp/cpp-attributes]] | [[nodiscard]], [[likely]], [[deprecated]], noexcept | cpp11, cpp14, cpp17, cpp20, cpp23 |
+| [[entities/cpp/modern-cpp/cpp-attributes]] | [[entities/cpp/nodiscard]], [[likely]], [[deprecated]], noexcept | cpp11, cpp14, cpp17, cpp20, cpp23 |
 | [[entities/cpp/modern-cpp/cpp-stl-optional-variant-any]] | std::variant, std::optional, std::any, std::expected | cpp17, cpp20, cpp23 |
 | [[entities/cpp/modern-cpp/cpp-stl-functional]] | std::invoke, std::apply, std::bind_front, std::not_fn | cpp11, cpp17, cpp20 |
 | [[entities/cpp/modern-cpp/cpp-stl-string-view]] | std::string_view, starts_with, ends_with, contains | cpp17, cpp20, cpp23 |

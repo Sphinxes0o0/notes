@@ -99,7 +99,7 @@ wrapper(0);       // T=int  → forward<int>(0)  → int&&
 
 ## Related Concepts
 
-- [[cpp-auto-type-deduction]] — forwarding references, decltype(auto)
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — forwarding references, decltype(auto)
 - [[cpp-smart-pointers]] — std::unique_ptr relies on move semantics
-- [[cpp-constexpr]] — move semantics in constexpr contexts (C++14+)
+- [[entities/cpp/modern-cpp/cpp-constexpr]] — move semantics in constexpr contexts (C++14+)
 - [[raii]] — move semantics enables efficient RAII ownership transfer

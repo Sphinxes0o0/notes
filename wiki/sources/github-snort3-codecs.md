@@ -185,5 +185,5 @@ struct CodecData {
 
 ## 相关页面
 
-- [[snort3-codecs]] — 概念实体页
+- [[entities/linux/snort3/snort3-codecs]] — 概念实体页
 - [[snort3]] — Snort3 概览

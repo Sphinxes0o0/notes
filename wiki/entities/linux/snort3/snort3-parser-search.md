@@ -226,7 +226,7 @@ hs_clone_scratch(s_scratch, &sc->state[thread_id][scratch_index]);
 
 ## 交叉引用
 
-- [[snort3]] — 整体架构
+- [[snort3-index]] — 整体架构
 - [[linux-intrusion-detection]] — IDS/IPS 生态
 - [[ebpf-xdp]] — 网络数据包处理（XDP 旁路架构参考）
 - [[hyperscan]] — Intel RE 模式匹配库

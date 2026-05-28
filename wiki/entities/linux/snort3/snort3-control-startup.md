@@ -164,9 +164,9 @@ main_reload_config() [main.cc:492]
 
 ## 相关概念
 
-- [[snort3-framework]] — 插件系统、Inspector 生命周期
-- [[snort3-actions]] — 9 种动作类型
-- [[snort3-connectors]] — 4 种连接器类型
-- [[snort3-events-filters]] — 3 层过滤器架构
-- [[snort3-flow]] — Flow 管理与状态追踪
-- [[snort3-ips-options]] — IPS 选项匹配引擎
+- [[entities/linux/snort3/snort3-framework]] — 插件系统、Inspector 生命周期
+- [[entities/linux/snort3/snort3-actions]] — 9 种动作类型
+- [[entities/linux/snort3/snort3-connectors]] — 4 种连接器类型
+- [[entities/linux/snort3/snort3-events-filters]] — 3 层过滤器架构
+- [[entities/linux/snort3/snort3-flow]] — Flow 管理与状态追踪
+- [[entities/linux/snort3/snort3-ips-options]] — IPS 选项匹配引擎

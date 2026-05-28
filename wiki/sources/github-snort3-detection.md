@@ -217,6 +217,6 @@ detection:
 
 ## 相关页面
 
-- [[snort3-detection-engine]] — 实体页面（完整分析）
+- [[entities/linux/snort3/snort3-detection-engine]] — 实体页面（完整分析）
 - [[snort-rule-language]] — Snort 规则语言
 - [[intrusion-detection-system]] — 入侵检测系统概念

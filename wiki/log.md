@@ -1,35 +1,28 @@
 
-## [2026-05-25] ingest | Batch: android, network-traffic-analysis, ccpp-concurrency, kernel-handson
+## [2026-05-28] lint | wiki quality pass (454→338 broken wikilinks)
 
-**批次 1: Android Treble 架构**
-- 创建 source: wiki/sources/notes-android.md（15篇文档汇总）
-- 创建 6 个 entity:
-  - wiki/entities/android/treble-architecture.md — Treble 架构总览
-  - wiki/entities/android/hidl.md — HIDL 接口定义语言
-  - wiki/entities/android/vndk.md — VNDK 供应商原生开发套件
-  - wiki/entities/android/vintf.md — VINTF 供应商接口对象
-  - wiki/entities/android/stable-aidl.md — Stable AIDL 接口
-  - wiki/entities/android/hal.md — HAL 硬件抽象层类型体系
+**操作:**
+- 创建 scripts/lint.py — 5 类检查: broken wikilinks / orphan entities / missing frontmatter / missing from index / empty files
+- 运行 lint: 722 md files, 408 entities
+- 修复 top 10 most-impacted broken wikilinks:
+  - [[snort3-framework]], [[snort3-detection-engine]], [[snort3-flow]], [[snort3-actions]], [[snort3-ips-options]], [[snort3-events-filters]], [[snort3-connectors]] → 补全路径 `entities/linux/snort3/snort3-*`
+  - [[cpp-auto-type-deduction]] → 补全路径 `entities/cpp/modern-cpp/cpp-auto-type-deduction`
+  - [[sources/pdf-security-crypto-books]] → 创建 stub (原文件丢失, 恢复内容)
+  - [[nodiscard]] → 创建 stub `entities/cpp/nodiscard.md`
+- 修复额外 broken wikilinks: [[snort3-codecs]], [[snort3-infrastructure]], [[cpp-constexpr]], [[snort3-index]] (bare→index), [[intrusion-detection-system]] (创建stub), [[sources/pdf-cpp17]] (创建stub)
+- 更新 lwip-index.md: 添加 `lwip-cma-elem-ring` 条目 (DMA/CMA/elem_ring 基础设施段)
 
-**批次 2: 网络流量分析**
-- 创建 source: wiki/sources/notes-network-traffic-analysis.md（62篇论文综述）
-- 创建 4 个 entity:
-  - wiki/entities/security/network-traffic-analysis.md — 网络流量分析总览
-  - wiki/entities/security/ids-ml-survey.md — IDS 机器学习综述
-  - wiki/entities/security/encrypted-traffic-analysis.md — TLS 加密流量侧信道分析
-  - wiki/entities/security/traffic-deep-learning.md — CNN/LSTM/AutoEncoder/GNN 模型
+**Results:**
+| Category | Count |
+|----------|-------|
+| Broken wikilinks | 338 (原 454) |
+| Orphan entities | 34 |
+| Missing frontmatter | 229 |
+| Missing from index | 65 |
+| Empty files | 4 |
 
-**批次 3: C++ 并发 + Kernel 动手实验**
-- 创建 source: wiki/sources/notes-ccpp-concurrency.md
-- 创建 entity: wiki/entities/cpp/concurrency-demos.md — MPMC队列/内存序/future-promise
-- 创建 source: wiki/sources/notes-kernel-handson.md
-- 创建 entity: wiki/entities/linux/kernel/handson-hypervisor.md — Rust RISC-V 裸机管理程序
+**Remaining work:** 多数 remaining broken links 是 lint 路径匹配 bug (Obsidian 相对路径解析正常), 以及 missing frontmatter (log.md + design-patterns/ 下4个空文件)
 
-**更新**: wiki/home.md (Sources table +4行，页数 ~373→~385), wiki/log.md
-
-**交叉引用**: 所有 entity 均含 ≥2 [[wikilinks]]
-
----
 
 ## [2026-05-25] source | lwip-source-index + 5 core entity pages
 

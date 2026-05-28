@@ -143,6 +143,6 @@ bool b = is_ct();            // false
 ## Related Concepts
 
 - [[cpp-variadic-templates]] — constexpr with parameter packs
-- [[cpp-auto-type-deduction]] — decltype(auto) + constexpr interaction
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — decltype(auto) + constexpr interaction
 - [[cpp-concepts]] — constexpr in concept constraints
 - [[cpp-lambda-expressions]] — constexpr lambdas

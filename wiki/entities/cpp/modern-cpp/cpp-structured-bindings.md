@@ -134,5 +134,5 @@ std::get<1>(player);  // "Frans Nielsen"
 ## Related Concepts
 
 - [[cpp-variadic-templates]] — tuples are variadic
-- [[cpp-auto-type-deduction]] — CTAD uses auto deduction
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — CTAD uses auto deduction
 - [[cpp-stl-functional]] — std::tie used with std::bind_front

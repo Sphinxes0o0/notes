@@ -183,7 +183,7 @@ struct TraceConstraints {
 ## 关键交叉引用
 
 - [[snort3-stream-analysis]] — TCP重组依赖InspectorManager的stream inspector
-- [[snort3-detection-engine]] — 规则评估使用Rule Profiler + Rule Latency
+- [[entities/linux/snort3/snort3-detection-engine]] — 规则评估使用Rule Profiler + Rule Latency
 - [[snort3-packet-processing]] — Packet Latency在最外层包处理context中push/pop
 - [[snort3-mempool]] — Memory系统与Flow缓存共享memcap配置
 - [[snort3-inspectors]] — Inspector生命周期由InspectorManager管理

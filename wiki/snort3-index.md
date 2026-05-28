@@ -12,15 +12,15 @@ created: 2026-05-27
 
 | Entity | Domain | Key Concepts |
 |--------|--------|--------------|
-| [[snort3-framework]] | 核心框架 | 插件架构（Codec/Inspector/IpsOption/Action/Logger/Connector/Mpse）、Module 生命周期、pig 线程封装、Lua Shell、DataBus 事件系统 |
-| [[snort3-detection-engine]] | 检测引擎 | Fast Pattern、MPSE 批量搜索、Detection Option Tree、IpsContext、Port Rule Map、Regex Offload |
-| [[snort3-ips-options]] | IPS 选项 | content/pcre/byte_test/flowbits/detection_filter、选项树求值、Cursor 系统、变量提取 |
-| [[snort3-actions]] | 动作系统 | alert/log/pass/drop/block/reject/react/rewrite、优先级链、IpsAction 基类、Active 动作执行 |
-| [[snort3-events-filters]] | 事件与过滤 | SF_EVENTQ 环形队列、HostTracker（LRU 分段缓存）、Detection/Rate/Event 三层过滤器 |
-| [[snort3-flow]] | Flow 追踪 | FlowCache ZHash 表、FlowKey 超时淘汰、角色追踪、Session 抽象、流状态机 |
-| [[snort3-connectors]] | 连接器 | file/tcp/unixdomain/std connector、双工通信、异步接收、Ring buffer、HA 数据导出 |
-| [[snort3-infrastructure]] | 基础设施 | XHash/ZHash/GHash、File API 三阶段管道、PDF/SWF/ZIP/OLE 解压、JS Normalization、MemCapAllocator |
-| [[snort3-codecs]] | 协议编解码 | Ethernet/VLAN/MPLS/IPv4/IPv6/TCP/UDP/ICMP/GTP/VXLAN/GENEVE 解码树、隧道旁路 |
+| [[entities/linux/snort3/snort3-framework]] | 核心框架 | 插件架构（Codec/Inspector/IpsOption/Action/Logger/Connector/Mpse）、Module 生命周期、pig 线程封装、Lua Shell、DataBus 事件系统 |
+| [[entities/linux/snort3/snort3-detection-engine]] | 检测引擎 | Fast Pattern、MPSE 批量搜索、Detection Option Tree、IpsContext、Port Rule Map、Regex Offload |
+| [[entities/linux/snort3/snort3-ips-options]] | IPS 选项 | content/pcre/byte_test/flowbits/detection_filter、选项树求值、Cursor 系统、变量提取 |
+| [[entities/linux/snort3/snort3-actions]] | 动作系统 | alert/log/pass/drop/block/reject/react/rewrite、优先级链、IpsAction 基类、Active 动作执行 |
+| [[entities/linux/snort3/snort3-events-filters]] | 事件与过滤 | SF_EVENTQ 环形队列、HostTracker（LRU 分段缓存）、Detection/Rate/Event 三层过滤器 |
+| [[entities/linux/snort3/snort3-flow]] | Flow 追踪 | FlowCache ZHash 表、FlowKey 超时淘汰、角色追踪、Session 抽象、流状态机 |
+| [[entities/linux/snort3/snort3-connectors]] | 连接器 | file/tcp/unixdomain/std connector、双工通信、异步接收、Ring buffer、HA 数据导出 |
+| [[entities/linux/snort3/snort3-infrastructure]] | 基础设施 | XHash/ZHash/GHash、File API 三阶段管道、PDF/SWF/ZIP/OLE 解压、JS Normalization、MemCapAllocator |
+| [[entities/linux/snort3/snort3-codecs]] | 协议编解码 | Ethernet/VLAN/MPLS/IPv4/IPv6/TCP/UDP/ICMP/GTP/VXLAN/GENEVE 解码树、隧道旁路 |
 | [[snort3-control-startup]] | 控制与启动 | Lua Shell + ControlConn 双层架构、pig 状态机（NEW→INITIALIZED→STARTED→RUNNING）、零宕机配置重载、epoll/poll 事件驱动 |
 
 ## Cross-Reference Map

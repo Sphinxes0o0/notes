@@ -106,6 +106,6 @@ auto x3 {3};          // int (was std::initializer_list<int> in C++11)
 ## Related Concepts
 
 - [[cpp-move-semantics]] — forwarding is used with std::forward
-- [[cpp-constexpr]] — auto/constexpr interaction
+- [[entities/cpp/modern-cpp/cpp-constexpr]] — auto/constexpr interaction
 - [[cpp-lambda-expressions]] — generic lambdas use auto parameters
 - [[cpp-variadic-templates]] — forwarding references with parameter packs

@@ -120,8 +120,8 @@ FlowControl
 
 ## 相关概念
 
-- [[snort3-ips-options]] — IPS 选项评估
-- [[snort3-framework]] — Snort3 框架概览
+- [[entities/linux/snort3/snort3-ips-options]] — IPS 选项评估
+- [[entities/linux/snort3/snort3-framework]] — Snort3 框架概览
 - [[network-intrusion-detection]] — 入侵检测系统
 
 ## 来源详情

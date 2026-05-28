@@ -87,8 +87,8 @@ Notable utilities:
 
 ## Related Pages
 
-- [[snort3-infrastructure]] — Entity page with detailed architecture diagrams
+- [[entities/linux/snort3/snort3-infrastructure]] — Entity page with detailed architecture diagrams
 - [[snort3-actions-connectors]] — Rule actions and service connectors
-- [[snort3-events-filters]] — Event generation and filter architecture
+- [[entities/linux/snort3/snort3-events-filters]] — Event generation and filter architecture
 - [[snort3-flow-ips]] — Flow tracking and IPS options
-- [[snort3-framework]] — Plugin system and framework internals
+- [[entities/linux/snort3/snort3-framework]] — Plugin system and framework internals

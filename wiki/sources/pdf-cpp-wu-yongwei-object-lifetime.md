@@ -47,7 +47,7 @@ munmap(ptr, sizeof(Obj));
 
 - **手动内存管理**：mmap/munmap + placement new，显式 init/cleanup
 - **对象池**：预分配对象集合，重用而非分配/释放
-- **生命周期注解**：[[nodiscard]]、[[maybe_unused]] 辅助编译器检查
+- **生命周期注解**：[[entities/cpp/nodiscard]]、[[maybe_unused]] 辅助编译器检查
 
 ## 关键引用
 

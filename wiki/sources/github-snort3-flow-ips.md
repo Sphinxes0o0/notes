@@ -115,6 +115,6 @@ summary: "Snort3 源码分析：flow 模块（flow tracking、hash table、timeo
 
 ## 相关页面
 
-- [[snort3-flow]] — Flow 追踪实体页
-- [[snort3-ips-options]] — IPS 选项实体页
-- [[snort3-framework]] — Snort3 框架概览
+- [[entities/linux/snort3/snort3-flow]] — Flow 追踪实体页
+- [[entities/linux/snort3/snort3-ips-options]] — IPS 选项实体页
+- [[entities/linux/snort3/snort3-framework]] — Snort3 框架概览

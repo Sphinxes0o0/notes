@@ -98,5 +98,5 @@ enum Type {
 
 ## 相关页面
 
-- [[snort3-framework]] — 实体页面
+- [[entities/linux/snort3/snort3-framework]] — 实体页面
 - [[intrusion-detection-system]] — IDS 概念

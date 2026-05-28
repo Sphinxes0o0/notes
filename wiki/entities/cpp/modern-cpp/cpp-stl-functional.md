@@ -99,5 +99,5 @@ f = std::multiplies<int>{};  // works too
 ## Related Concepts
 
 - [[cpp-lambda-expressions]] — lambdas are callables
-- [[cpp-auto-type-deduction]] — auto for callable type deduction
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — auto for callable type deduction
 - [[cpp-concurrency]] — std::invoke in thread/async contexts

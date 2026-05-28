@@ -106,5 +106,5 @@ t.request_stop();  // signal stop
 ## Related Concepts
 
 - [[cpp-concurrency]] — coroutines interact with threads
-- [[cpp-auto-type-deduction]] — return type deduction with coroutines
+- [[entities/cpp/modern-cpp/cpp-auto-type-deduction]] — return type deduction with coroutines
 - [[cpp-stl-functional]] — std::bind_front for binding coroutine callable

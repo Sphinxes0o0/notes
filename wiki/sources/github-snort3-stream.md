@@ -203,6 +203,6 @@ update_paws_timestamps():
 ## 相关页面
 
 - [[snort3-stream]] — Stream TCP 实体页
-- [[snort3-flow]] — Flow 追踪与会话管理
-- [[snort3-detection-engine]] — 检测引擎
-- [[snort3-framework]] — Snort3 框架概览
+- [[entities/linux/snort3/snort3-flow]] — Flow 追踪与会话管理
+- [[entities/linux/snort3/snort3-detection-engine]] — 检测引擎
+- [[entities/linux/snort3/snort3-framework]] — Snort3 框架概览

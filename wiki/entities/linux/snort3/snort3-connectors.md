@@ -246,6 +246,6 @@ void load_connectors() {
 
 ## 相关概念
 
-- [[snort3-actions]] — 使用 connector 导出数据的 IPS 动作
-- [[snort3-detection-engine]] — 检测引擎触发 connector 数据导出
-- [[snort3-framework]] — Connector 插件系统注册机制
+- [[entities/linux/snort3/snort3-actions]] — 使用 connector 导出数据的 IPS 动作
+- [[entities/linux/snort3/snort3-detection-engine]] — 检测引擎触发 connector 数据导出
+- [[entities/linux/snort3/snort3-framework]] — Connector 插件系统注册机制

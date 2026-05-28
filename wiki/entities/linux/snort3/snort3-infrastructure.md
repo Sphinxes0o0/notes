@@ -292,12 +292,12 @@ Generates detection events (GID 154) for:
 
 ## Related Concepts
 
-- [[snort3-actions]] — Snort3 rule actions
-- [[snort3-connectors]] — Service connectors (TCP/UDP/file/popen)
-- [[snort3-events-filters]] — Event generation and 3-layer filter architecture
-- [[snort3-flow]] — Flow tracking
-- [[snort3-ips-options]] — IPS options
-- [[snort3-framework]] — Plugin system, lifecycle, pig, shell
+- [[entities/linux/snort3/snort3-actions]] — Snort3 rule actions
+- [[entities/linux/snort3/snort3-connectors]] — Service connectors (TCP/UDP/file/popen)
+- [[entities/linux/snort3/snort3-events-filters]] — Event generation and 3-layer filter architecture
+- [[entities/linux/snort3/snort3-flow]] — Flow tracking
+- [[entities/linux/snort3/snort3-ips-options]] — IPS options
+- [[entities/linux/snort3/snort3-framework]] — Plugin system, lifecycle, pig, shell
 - [[snort3-control-startup]] — Control and startup
 
 ## Sources

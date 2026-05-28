@@ -121,4 +121,4 @@ std::expected<double, Error> sqrt_double(const std::string& input) {
 
 - [[cpp-type-traits]] — type checking with std::variant
 - [[cpp-stl-functional]] — std::visit for variants
-- [[cpp-constexpr]] — optional and variant in constexpr contexts
+- [[entities/cpp/modern-cpp/cpp-constexpr]] — optional and variant in constexpr contexts
