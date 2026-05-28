@@ -65,3 +65,40 @@ No universal configuration exists — tune based on specific workload requiremen
 - [[entities/linux/network/net-stack-overview]] — Network stack principles
 - [[entities/linux/kernel/irq-softirq]] — Softirq mechanics
 - [[entities/linux/ebpf/ebpf-networking]] — XDP/BPF integration points
+
+## Images
+
+![RX Stack Overview](attachments/arthurchiao/linux-net-stack-tuning-rx/rx-overview.png)
+*Figure: Linux Network Stack RX Overview — key tuning touch points*
+
+![CPU Frequency vs Latency](attachments/arthurchiao/linux-net-stack-tuning-rx/amd-nodes-cpuhz.png)
+*Figure: CPU power state affects latency — disable power saving for consistent low latency*
+
+![CPU Hz vs time_squeeze](attachments/arthurchiao/linux-net-stack-tuning-rx/cpuhz-vs-time_squeeze.png)
+*Figure: CPU frequency correlation with softirq time_squeeze metric*
+
+## Tuning Decision Tree
+
+```mermaid
+flowchart TD
+    START[Start: RX Performance Issue] --> MONITOR{Establish<br/>Monitoring}
+
+    MONITOR --> |"/proc/softirqs"| IRQ_DIST[Check IRQ<br/>Distribution]
+    MONITOR --> |"/proc/net/softnet_stat"| TIME_SQ[Check<br/>time_squeeze]
+    MONITOR --> |"ethtool -S"| DEV_STATS[Device<br/>Statistics]
+
+    IRQ_DIST --> IMBA{IRQs<br/>Imbalanced?}
+    TIME_SQ --> SQ_HIGH{time_squeeze<br/>High?}
+    DEV_STATS --> DROPS{Drops or<br/>Errors?}
+
+    IMBA --> |Yes| IRQ_AFF[IRQ Affinity<br/>smp_affinity]
+    SQ_HIGH --> |Yes| BUDGET[Increase<br/>netdev_budget]
+    DROPS --> |Yes| RING[Increase<br/>Ring Size]
+
+    IRQ_AFF --> TUNE_DONE
+    BUDGET --> TUNE_DONE
+    RING --> TUNE_DONE
+
+    TUNE_DONE --> VERIFY[Verify with<br/>Monitoring]
+    VERIFY --> START
+```

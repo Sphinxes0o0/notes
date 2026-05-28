@@ -119,3 +119,4 @@ BPF 程序拦截 socket 操作，动态设置 TCP 参数。15 个 hook 点覆盖
 - [[sources/pdf-ebpf-books]] — 《eBPF基础》第3.4-3.7节网络性能优化与访问控制
 - [[sources/pdf-ebpf-papers]] — Rethinking the Linux Kernel (Thomas Graf, Cilium)
 - [[sources/pdf-ebpf-papers]] — BPF: Turning Linux into a Microservices-aware OS (Thomas Graf)
+- [[sources/achieved-ebpf-android]] — Android eBPF Doze模式网络控制实现

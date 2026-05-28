@@ -71,3 +71,58 @@ RCU_SOFTIRQ
 - [[entities/linux/kernel/irq-softirq]] — Entity page
 - [[entities/linux/network/net-stack-implementation-rx]] — Where softirq processes RX
 - [[entities/linux/network/net-stack-tuning-rx]] — Softirq tuning parameters
+
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+    subgraph HardIRQ["Hard IRQ (Top Half)"]
+        IRQ[CPU receives<br/>Interrupt Signal]
+        --> PAUSE[Pause<br/>Current Work]
+        --> IVT[Execute ISR<br/>Interrupt Vector Table]
+        --> RESUME[Resume<br/>Execution]
+    end
+
+    subgraph SoftIRQ["Softirq (Bottom Half)"]
+        RAISE[raise_softirq()<br/>Mark Pending]
+        --> WAKE[Wake ksoftirqd<br/>per-CPU thread]
+        --> SCHED[ksoftirqd<br/>Scheduler]
+        --> HANDLER[__do_softirq()<br/>Process Deferred Work]
+    end
+
+    subgraph SoftirqTypes["10 Softirq Types (Linux 5.10)"]
+        HI[HI_SOFTIRQ<br/>tasklet high]
+        TIMER[TIMER_SOFTIRQ]
+        NET_TX[NET_TX_SOFTIRQ<br/>TX packets]
+        NET_RX[NET_RX_SOFTIRQ<br/>RX packets]
+        BLOCK[BLOCK_SOFTIRQ]
+        IRQ_POLL[IRQ_POLL_SOFTIRQ]
+        TASKLET[TASKLET_SOFTIRQ<br/>tasklet normal]
+        SCHED[SCHED_SOFTIRQ]
+        HRTIMER[HRTIMER_SOFTIRQ]
+        RCU[RCU_SOFTIRQ]
+    end
+
+    subgraph ExecutionMechanisms["Deferred Execution Mechanisms"]
+        SOFTIRQ[softirq]
+        TASKLET[tasklet]
+        WORKQUEUE[workqueue]
+    end
+
+    HardIRQ --> RAISE
+    WAKE --> HANDLER
+    HANDLER --> HI
+    HANDLER --> TIMER
+    HANDLER --> NET_TX
+    HANDLER --> NET_RX
+    HANDLER --> BLOCK
+    HANDLER --> IRQ_POLL
+    HANDLER --> TASKLET
+    HANDLER --> SCHED
+    HANDLER --> HRTIMER
+    HANDLER --> RCU
+
+    style HardIRQ fill:#ffcdd2
+    style SoftIRQ fill:#c8e6c9
+    style SoftirqTypes fill:#bbdefb
+```

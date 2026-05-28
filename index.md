@@ -153,6 +153,13 @@ created: 2026-05-22
 | [[wiki/sources/arthurchiao-tc-da-mode]] | TC eBPF direct-action mode: clsact, action verdicts, cls_bpf filter |
 | [[wiki/sources/arthurchiao-conntrack-design]] | Conntrack design: netfilter hooks, two-phase creation, NAT dependency |
 | [[wiki/sources/arthurchiao-sockmap-ebpf]] | eBPF sockmap: socket redirection bypassing TCP/IP stack, sockops/sk_msg |
+| [[wiki/sources/achieved-arp-table-aging]] | Linux ARP表老化机制：三状态(delay/reachable/stale)与gc_thresh1 |
+| [[wiki/sources/achieved-tcp-bypass-notes]] | TCP Bypass：RDMA/iWARP/RoCE/InfiniBand零拷贝与超低延迟 |
+| [[wiki/sources/achieved-tcp-sack-dsack]] | TCP SACK/DSACK：Linux内核v18/v37实现对比与scoreboard标签 |
+| [[wiki/sources/achieved-ebpf-android]] | Android eBPF Doze模式：tcp_v4_do_rcv钩子与UID流量控制 |
+| [[wiki/sources/achieved-linux-packet-flow]] | Linux网络包流转：Ring Buffer/NAPI/sk_buff/SoftIRQ完整路径 |
+| [[wiki/sources/achieved-plantegg-method]] | plantegg举三反一：TCP CLOSE_WAIT诊断案例 |
+| [[wiki/sources/achieved-bluepuni-blog]] | Caturra's Blog: packetdrill TCP分析/Linux内核/eBPF/C++优化 |
 | [[wiki/sources/pdf-ebpf-basics]] | eBPF基础：80页入门/11个64位寄存器/CO-RE/BTF/Pinning机制 |
 | [[wiki/sources/pdf-computer-architecture-hp]] | Hennessy & Patterson计算机体系结构量化研究方法（第五版）612页 |
 

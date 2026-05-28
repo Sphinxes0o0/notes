@@ -61,3 +61,63 @@ Software packet merging — combines similar packets before protocol stack deliv
 - [[entities/linux/kernel/irq-softirq]] — Softirq mechanics
 - [[entities/linux/kernel/skbuff-deep-dive]] — sk_buff structure
 - [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Kernel network subsystem
+
+## Images
+
+![9-Stage RX Pipeline Overview](attachments/arthurchiao/linux-net-stack-implementation-rx/rx-overview.png)
+*Figure: 9-Stage RX Pipeline from NIC to Socket*
+
+![DMA Ring Buffer](attachments/arthurchiao/linux-net-stack-implementation-rx/dma-ringbuffer.png)
+*Figure: DMA Ring Buffer — circular queue where NIC writes incoming packets*
+
+![NAPI and GRO Receive](attachments/arthurchiao/linux-net-stack-implementation-rx/napi_gro_receive.png)
+*Figure: NAPI poll cycle with GRO (Generic Receive Offloading)*
+
+![L3 Processing Stack](attachments/arthurchiao/linux-net-stack-implementation-rx/l3-processing-stack.png)
+*Figure: L3/IP Protocol processing stack*
+
+![UDP Receive](attachments/arthurchiao/linux-net-stack-implementation-rx/uu_udp4_lib_rcv.png)
+*Figure: UDP delivery path to socket receive queue*
+
+## 9-Stage RX Pipeline Architecture
+
+```mermaid
+flowchart TD
+    subgraph Stage1["Stage 1: Driver Init"]
+        NAPI[NAPI Poll<br/>Registration]
+    end
+
+    subgraph Stage2_4["Stages 2-4: Packet Arrival"]
+        PACKET[Packet Arrival<br/>at NIC]
+        DMA[ DMA Transfer to<br/>Ring Buffer]
+        IRQ[Hard IRQ<br/>Triggered]
+    end
+
+    subgraph Stage5_6["Stages 5-6: Softirq Processing"]
+        SCHED[Schedule<br/>ksoftirqd]
+        POLL[NAPI Poll<br/>Executes]
+    end
+
+    subgraph Stage7_9["Stages 7-9: Protocol Stack"]
+        L2[L2 Protocol<br/>Processing]
+        L3[L3/IP<br/>Handling]
+        L4[L4/UDP<br/>Delivery]
+    end
+
+    SQ[Socket<br/>Receive Queue]
+
+    NAPI --> PACKET
+    PACKET --> DMA
+    DMA --> IRQ
+    IRQ --> SCHED
+    SCHED --> POLL
+    POLL --> L2
+    L2 --> L3
+    L3 --> L4
+    L4 --> SQ
+
+    style Stage1 fill:#e1f5fe
+    style Stage2_4 fill:#fff3e0
+    style Stage5_6 fill:#e8f5e9
+    style Stage7_9 fill:#f3e5f5
+```

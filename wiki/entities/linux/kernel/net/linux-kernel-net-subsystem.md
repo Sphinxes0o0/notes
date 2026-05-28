@@ -94,11 +94,15 @@ dev_queue_xmit() → netdev_start_xmit() → NIC DMA
 - [[entities/linux/kernel/netfilter/linux-kernel-netfilter-framework]] — Netfilter 钩子框架
 - [[entities/linux/network/linux-network-protocols]] — 协议层实现（TCP/UDP/IPv4/IPv6）
 - [[entities/linux/kernel/sched/linux-kernel-sched-cfs]] — 调度与网络 softirq 抢占
+- [[entities/linux/network/arp-neighbor]] — ARP/Neighbor 表老化机制
 
 ## 来源详情
 
 - [[sources/notes-network-fundamentals]] — Linux Net 子系统深度分析 R1
 - [[sources/notes-network-fundamentals]] — 网络笔记索引
+- [[sources/achieved-tcp-bypass-notes]] — TCP Bypass 低延迟技术
+- [[sources/achieved-ebpf-android]] — Android eBPF 网络优化
+
 ## Related Concepts
 
 - [[entities/linux/kernel/crypto/linux-kernel-crypto-core]] — 网络协议栈依赖内核加密API实现TLS/IPsec

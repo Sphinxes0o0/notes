@@ -4,6 +4,25 @@
 
 ---
 
+## [2026-05-28] ingest | bookmark-achieved — 7 achieved Linux/网络 bookmark sources
+
+- **来源**: 7 个已阅读/确认的高质量书签资源，NIDS相关优先
+- **来源列表**:
+  1. achieved-arp-table-aging — Linux ARP表老化机制（delay/reachable/stale三状态）
+  2. achieved-tcp-bypass-notes — TCP Bypass低延迟技术（RDMA/iWARP/RoCE/InfiniBand）
+  3. achieved-ebpf-android — Android eBPF Doze模式网络控制（tcp_v4_do_rcv钩子）
+  4. achieved-tcp-sack-dsack — TCP SACK/DSACK Linux内核实现（v18/v37对比）
+  5. achieved-linux-packet-flow — plantegg Linux网络包流转（Ring Buffer/NAPI/sk_buff）
+  6. achieved-plantegg-method — plantegg举三反一（TCP CLOSE_WAIT诊断案例）
+  7. achieved-bluepuni-blog — Caturra's Blog精选网络/性能/内核文章
+- **操作**:
+  - 创建 7 个 source pages in `wiki/sources/achieved-*.md`
+  - 创建 2 个 entity pages: `tcp-sack-dsack.md`, `arp-neighbor.md`
+  - 更新 5 个 entity pages 交叉引用（linux-network-protocols, ebpf-networking, net-stack-deep-dive, kernel-net-subsystem, kernel-bypass-dpdk）
+  - 更新 `index.md` (+7 source entries)
+- **未 ingest**: distributed链路追踪(403)跳过
+- **未 commit**
+
 ## [2026-05-28] ingest | bookmark-linux — 8 Linux kernel bookmark sources
 
 - **来源**: 8 个 Linux kernel 书签资源，聚焦 interrupt subsystem / memory management / network stack (NIDS relevance)

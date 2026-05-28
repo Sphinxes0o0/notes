@@ -54,6 +54,23 @@ XDP (eXpress Data Path) attaches BPF programs at the NIC driver level — not a 
 - **RDMA (InfiniBand/RoCE/iWARP):** Direct memory access between machines, bypassing both CPUs for data movement
 - **DLSlime:** Point-to-point RDMA transfer for AI inference — one-sided semantics avoid CPU involvement
 
+## TCP Bypass (Low-Latency Trading)
+
+TCP Bypass aims to replace kernel TCP/IP for ultra-low-latency scenarios (HFT, trading systems):
+
+### Key Techniques
+- **Zero Copy**: DMA from file buffer cache to network, eliminating user-kernel copies
+- **iWARP**: RDMA over Ethernet (基于TCP)
+- **RoCE**: Converged Enhanced Ethernet (无损网络)
+- **InfiniBand**: 融合互联
+
+### Linux Network Stack Bypass Evolution
+| 技术 | 层次 | 性能 |
+|------|------|------|
+| XDP/eBPF | NIC驱动层（skb分配前） | ~20 Mpps |
+| kernel-bypass (DPDK) | 用户空间轮询 | 10-80 Mpps |
+| RDMA | 跨机内存直接访问 | 亚微秒级 |
+
 ## Related Concepts
 - [[entities/cpp/cpp-perf-optimization]] — CPU cache optimization, memory hierarchy awareness
 - [[entities/cpp/cpp-llm-inference]] — LLM inference networking (RDMA for KV Cache transfer)

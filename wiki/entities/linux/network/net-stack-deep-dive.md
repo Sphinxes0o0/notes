@@ -170,3 +170,6 @@ RTO    = srtt + 4 × rttvar
 ## 来源详情
 
 - [[sources/notes-net-deep]] — network_stack_deep_dive.md + net_deep_dive_r1.md + 相关 core/ 文档
+- [[sources/achieved-linux-packet-flow]] — plantegg: 网络包流转详解
+- [[sources/achieved-arp-table-aging]] — Linux ARP表老化机制
+- [[sources/achieved-bluepuni-blog]] — Caturra's Blog: packetdrill TCP分析

@@ -38,3 +38,40 @@ Understanding the full network stack "opens new horizons" for addressing perform
 - [[entities/linux/kernel/irq-softirq]] — IRQ/softirq mechanics
 - [[entities/linux/ebpf/ebpf-networking]] — BPF/XDP integration
 - [[entities/linux/kernel/skbuff-deep-dive]] — sk_buff structure
+
+## Images
+
+![RX Pipeline Overview](attachments/arthurchiao/linux-net-stack/rx-overview.png)
+*Figure: Linux Network Stack RX Overview — NIC to Socket path*
+
+![DMA Ring Buffer](attachments/arthurchiao/linux-net-stack/dma-ringbuffer.png)
+*Figure: DMA Ring Buffer — NIC writes packets directly to pre-allocated kernel memory*
+
+![IRQ and NAPI Poll](attachments/arthurchiao/linux-net-stack/irq-and-napi-poll.png)
+*Figure: IRQ and NAPI Poll Cycle — interrupt-driven + polling hybrid*
+
+![NET_RX_SOFTIRQ Processing](attachments/arthurchiao/linux-net-stack/net_rx_action.png)
+*Figure: net_rx_action() — softirq handler processing packets from ring buffer*
+
+![CPU Schedule Threads](attachments/arthurchiao/linux-net-stack/cpu-schedule-threads.png)
+*Figure: ksoftirqd per-CPU thread scheduling*
+
+## Architecture Diagram
+
+```mermaid
+flowchart LR
+    NIC[NIC Hardware] -->|DMA| RB[Ring Buffer<br/>pre-allocated sk_buffs]
+    RB -->|Hard IRQ| ISR[ISR<br/>Top Half]
+    ISR -->|raises softirq| KSOFT[ksoftirqd<br/>per-CPU thread]
+    KSOFT -->|net_rx_action| NAPI[NAPI Poll<br/>batch processing]
+    NAPI -->|GRO| L2[L2 Protocol<br/>eth_type_trans]
+    L2 -->|skb| L3[L3/IP Protocol<br/>ip_rcv/ipv6_rcv]
+    L3 -->|L4| UDP[UDP<br/>udp_rcv]
+    UDP -->|deliver| SQ[Socket<br/>Receive Queue]
+
+    subgraph "IRQ & NAPI Cycle"
+        IRQ_HWM[New Packets<br/>trigger IRQs] -->|wake| NAPI
+        NAPI -->|busy poll| NAPI
+        NAPI -->|budget exhausted| KSOFT
+    end
+```
