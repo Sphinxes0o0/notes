@@ -4,6 +4,36 @@
 
 ---
 
+## [2026-05-28] ingest | ebook-ddia + ebook-linux-insides — 2 ebooks ingested
+
+- **来源**:
+  1. ebook-ddia — Designing Data-Intensive Applications (Martin Kleppmann), 14章中文翻译版
+  2. ebook-linux-insides — Linux Insides 中文版 (0xAX), 22/59章节可用
+- **DDIA 操作**:
+  - 创建 source page: `wiki/sources/ebook-ddia.md`
+  - 创建 4 个 entity pages in `wiki/entities/distributed-systems/`:
+    - replication.md — 单主/多主/无主复制，CRDT，LWW，仲裁读写
+    - partitioning.md — 哈希/范围/一致性哈希分片，二级索引，请求路由
+    - transactions.md — ACID，MVCC，隔离级别，2PC，可串行化
+    - distributed-consensus.md — Raft/Paxos，CAP，线性一致性，ZooKeeper/etcd
+  - 创建 module index: `wiki/distributed-systems-index.md`
+- **Linux Insides 操作**:
+  - 更新 source page: `wiki/sources/ebook-linux-insides.md` (增强版)
+  - 创建 2 个 entity pages in `wiki/entities/linux/kernel/`:
+    - smp/linux-kernel-smp.md — CPU masks, per-CPU 变量, ticket spinlock, qspinlock, hotplug
+    - syscall/linux-kernel-syscall.md — entry_SYSCALL_64, sys_call_table, MSR寄存器, SWAPGS
+  - Skip: boot/init/IRQ/timers/sync/MM/Cgroups 章节 — 已被 kernel subsystems 覆盖
+- **Cross-link 更新**:
+  - linux-kernel-locking-core.md → linux-kernel-smp
+  - linux-kernel-vfs-core.md → linux-kernel-syscall
+  - linux-kernel-sched-core.md → linux-kernel-smp
+  - ebook-linux-insides.md → SMP + syscall entities
+  - ebook-ddia.md → 4 distributed-systems entities
+- **更新**: index.md (+2 sources + distributed-systems-index + OS section row)
+- **未 commit**
+
+---
+
 ## [2026-05-28] ingest | bookmark-sdn-guide — feiskyer SDN网络指南
 
 - **来源**: raw/bookmarks/ebooks/sdn-guide/ (50+ 文件)

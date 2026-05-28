@@ -32,12 +32,8 @@ created: 2026-05-22
 ### Operating System
 | Index | Domain |
 |-------|--------|
-| [[wiki/distributed-systems-index]] | 分布式系统：复制、分片、事务、一致性与共识 (DDIA) |
-
-
-| Index | Domain |
-|-------|--------|
 | [[wiki/os-index]] | Process/thread, virtual memory, I/O models, Linux subsystems |
+| [[wiki/distributed-systems-index]] | 分布式系统：复制、分片、事务、一致性与共识 (DDIA) |
 
 ### Programming & Algorithms
 | Index | Domain |
