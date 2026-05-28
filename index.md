@@ -84,6 +84,14 @@ created: 2026-05-22
 | [[wiki/sources/notes-kernel-rcu]] | Linux 内核 RCU |
 | [[wiki/sources/notes-kernel-sound]] | Linux 内核声音子系统 |
 | [[wiki/sources/notes-kernel-time]] | Linux 内核时间子系统 |
+| [[wiki/sources/bookmark-wowotech-linux-kernel]] | 蜗窝科技 Linux内核分析：Kernel 4.14 ARM64，块设备/内存/调度/网络 |
+| [[wiki/sources/bookmark-linux-inside]] | Linux Inside：内核入门经典，boot/interrupt/sync/memory/Cgroups |
+| [[wiki/sources/bookmark-linux-source-code-analyze]] | Linux内核源码分析 (liexusong, 1.6k stars)：60+文档覆盖进程/内存/网络/容器/eBPF |
+| [[wiki/sources/bookmark-linux-interrupt-loyenwang]] | Linux中断子系统 (LoyenWang)：ARM64 Kernel 4.14，控制器/softirq/tasklet/workqueue |
+| [[wiki/sources/bookmark-linux-kernel-map]] | Interactive Kernel Map：SVG可缩放80倍，从硬件接口到系统调用的内核组件地图 |
+| [[wiki/sources/bookmark-linux-kernel-labs]] | Linux内核教学 (中文)：理论+实验，内存/调度/系统调用/interrupt/lock/VM |
+| [[wiki/sources/bookmark-linux-kernel-explorer]] | Linux Kernel Explorer (Reverser.dev)：在线内核源码浏览器，符号搜索/XREF导航 |
+| [[wiki/sources/bookmark-edsionte-kernel-beginner]] | 内核新手区 (Edsionte)：最低门槛内核入门，进程/内存/VFS/设备驱动/系统调用 |
 | [[wiki/sources/notes-tools]] | 工具使用笔记：tcpdump、netcat、masscan/nmap |
 | [[wiki/sources/notes-openbmc]] | OpenBMC 深度技术分析 |
 | [[wiki/sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20) |

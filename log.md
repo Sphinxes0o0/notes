@@ -4,6 +4,24 @@
 
 ---
 
+## [2026-05-28] ingest | bookmark-linux — 8 Linux kernel bookmark sources
+
+- **来源**: 8 个 Linux kernel 书签资源，聚焦 interrupt subsystem / memory management / network stack (NIDS relevance)
+- **TOP 8**:
+  1. bookmark-wowotech-linux-kernel — 蜗窝科技，Kernel 4.14 ARM64，块设备/内存/调度/网络
+  2. bookmark-linux-inside — Linux Inside，boot/interrupt/sync/memory/Cgroups 入门经典
+  3. bookmark-linux-source-code-analyze — liexusong，1.6k stars，60+文档覆盖进程/内存/网络/容器/eBPF
+  4. bookmark-linux-interrupt-loyenwang — LoyenWang，ARM64 Kernel 4.14 中断子系统深度分析
+  5. bookmark-linux-kernel-map — Interactive Kernel Map，SVG可缩放80倍，内核组件关系地图
+  6. bookmark-linux-kernel-labs — Linux内核教学，理论+实验，内存/调度/interrupt/lock
+  7. bookmark-linux-kernel-explorer — Reverser.dev，在线内核源码浏览器，符号搜索/XREF
+  8. bookmark-edsionte-kernel-beginner — 内核新手区，最低门槛入门
+- **操作**:
+  - 创建 8 个 source pages in `wiki/sources/bookmark-*.md`
+  - 更新 `index.md` (+8 source entries)
+- **未 ingest 到 raw/**: bookmark/Web 资源无需下载到 raw/
+- **未 commit**
+
 ## [2026-05-28] ingest | bookmark-cc — 8 C++ bookmark sources (TOP quality selection)
 
 - **来源**: 12 个候选资源中筛选 top 8，按 gap analysis 选择最高价值来源
