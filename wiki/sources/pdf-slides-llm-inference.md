@@ -53,9 +53,9 @@ summary: "杨珂/石新飞/刘童旋/黄石柱/王骁/王志宏/熬玉龙/王豪
 
 ## 相关页面
 
-- [[wiki/sources/pdf-slides]] — 总入口
-- [[wiki/sources/pdf-mooncake]] — Mooncake PDF
-- [[wiki/sources/pdf-rtp-llm]] — RTP-LLM PDF
-- [[wiki/sources/pdf-xllm-inference]] — xLLM PDF
-- [[wiki/sources/pdf-flagscale]] — FlagScale PDF
-- [[wiki/sources/pdf-llm-edge-storage]] — 端侧 LLM 存储 PDF
+- [[pdf-slides]] — 总入口
+- [[pdf-mooncake]] — Mooncake PDF
+- [[pdf-rtp-llm]] — RTP-LLM PDF
+- [[pdf-xllm-inference]] — xLLM PDF
+- [[pdf-flagscale]] — FlagScale PDF
+- [[pdf-llm-edge-storage]] — 端侧 LLM 存储 PDF

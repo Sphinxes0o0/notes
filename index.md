@@ -125,6 +125,18 @@ created: 2026-05-22
 | [[wiki/sources/pdf-commercial-crypto-assessment]] | 商用密码应用安全性评估考核题：622页SM算法/密评/等级保护2.0 |
 | [[wiki/sources/pdf-openssl-cookbook]] | OpenSSL Cookbook中文版：72页密钥生成/证书管理/SSL测试实用手册 |
 | [[wiki/sources/pdf-ebpf-technical-practice]] | eBPF技术实践v2（龙蜥社区）：100页XDP/TC/CO-RE工具链 |
+| [[wiki/sources/arthurchiao-linux-cpu-power-management]] | Linux CPU power management: P-states, C-states, TDP, hyperthreading |
+| [[wiki/sources/arthurchiao-linux-net-stack]] | Linux network stack overview: IRQ/softirq, RX/TX, BPF/XDP, monitoring |
+| [[wiki/sources/arthurchiao-linux-net-stack-implementation-rx]] | Linux network RX implementation: NAPI, DMA ring buffer, 9-stage pipeline |
+| [[wiki/sources/arthurchiao-linux-net-stack-tuning-rx]] | Linux network RX tuning: ethtool, RSS, RPS, GRO, softirq budget |
+| [[wiki/sources/arthurchiao-linux-irq-softirq]] | Linux IRQ/softirq: hard IRQ, softirq subsystem, tasklets, workqueues |
+| [[wiki/sources/arthurchiao-bbr-paper]] | BBR congestion control: BtlBw/RTprop measurement, zero queue operation |
+| [[wiki/sources/arthurchiao-facebook-xdp-to-socket]] | Facebook XDP/eBPF: Katran L4 LB, Maglev hashing, bpf_sk_reuseport |
+| [[wiki/sources/arthurchiao-pki]] | PKI and certificates: CA hierarchy, trust stores, mTLS, certificate chain |
+| [[wiki/sources/arthurchiao-modern-lb-proxy]] | Modern load balancing: L4 vs L7, topology, ECMP, service mesh |
+| [[wiki/sources/arthurchiao-tc-da-mode]] | TC eBPF direct-action mode: clsact, action verdicts, cls_bpf filter |
+| [[wiki/sources/arthurchiao-conntrack-design]] | Conntrack design: netfilter hooks, two-phase creation, NAT dependency |
+| [[wiki/sources/arthurchiao-sockmap-ebpf]] | eBPF sockmap: socket redirection bypassing TCP/IP stack, sockops/sk_msg |
 | [[wiki/sources/pdf-ebpf-basics]] | eBPF基础：80页入门/11个64位寄存器/CO-RE/BTF/Pinning机制 |
 | [[wiki/sources/pdf-computer-architecture-hp]] | Hennessy & Patterson计算机体系结构量化研究方法（第五版）612页 |
 

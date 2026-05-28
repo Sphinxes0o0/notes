@@ -28,6 +28,37 @@
   - 更新 `wiki/cpp-modern-index.md` (+15 entities + 2 source entries)
 - **核心概念**: Modern C++ feature reference covering 100+ features across C++11-23, grouped into 15 consolidated entity pages
 - **Cross-link**: each entity links to related entities (e.g., cpp-move-semantics→cpp-smart-pointers, cpp-concurrency→cpp-memory-model)
+
+## [2026-05-28] ingest | arthurchiao.art — 12 web articles (CPU, network stack, eBPF, PKI)
+
+- **来源**: 12 articles from arthurchiao.art (Linux CPU power, network stack, IRQ/softirq, BBR, Facebook XDP, TC da-mode, conntrack, sockmap, modern LB, PKI)
+- **操作**:
+  - 创建 12 个 source pages in `wiki/sources/`:
+    - arthurchiao-linux-cpu-power-management
+    - arthurchiao-linux-net-stack
+    - arthurchiao-linux-net-stack-implementation-rx
+    - arthurchiao-linux-net-stack-tuning-rx
+    - arthurchiao-linux-irq-softirq
+    - arthurchiao-bbr-paper
+    - arthurchiao-facebook-xdp-to-socket
+    - arthurchiao-pki
+    - arthurchiao-modern-lb-proxy
+    - arthurchiao-tc-da-mode
+    - arthurchiao-conntrack-design
+    - arthurchiao-sockmap-ebpf
+  - 创建 10 个 entity pages in `wiki/entities/`:
+    - linux/kernel/cpu-power-management
+    - linux/kernel/irq-softirq
+    - linux/network/net-stack-overview
+    - linux/network/net-stack-implementation-rx
+    - linux/network/net-stack-tuning-rx
+    - linux/network/congestion-control (BBR)
+    - linux/network/load-balancing
+    - linux/network/tc-ebpf-direct-action
+    - linux/ebpf/sockmap-sockhash
+    - security/pki-certificates
+  - 更新 `index.md` (+12 source entries)
+- **核心概念**: Arthur Chiao blog translations covering Linux kernel networking/eBPF/PKI fundamentals with production-grade insights (Facebook infrastructure, Mellanox NIC examples)
 - **未 commit**
 
 ## [2026-05-27] ingest | snort3 infrastructure — helpers/hash/file_api/decompress/js_norm (80+ files)

@@ -16,12 +16,12 @@ summary: "C++ 生态大会slides汇总：语言标准化、安全编程、AI Cod
 
 | 分类 | 源页面 | 数量 |
 |------|--------|------|
-| [[wiki/sources/pdf-slides-cpp-standard]] | C++ 语言演进与标准化 | 8 |
-| [[wiki/sources/pdf-slides-ai-coding]] | AI Coding / Coding Agent | 5 |
-| [[wiki/sources/pdf-slides-ai-compiler]] | AI Compiler / MLIR | 5 |
-| [[wiki/sources/pdf-slides-llm-inference]] | LLM 推理优化 | 10 |
-| [[wiki/sources/pdf-slides-kernel]] | Linux Kernel / 调试工具 | 3 |
-| [[wiki/sources/pdf-slides-tools]] | Tools / Build / 异构计算 | 6 |
+| [[pdf-slides-cpp-standard]] | C++ 语言演进与标准化 | 8 |
+| [[pdf-slides-ai-coding]] | AI Coding / Coding Agent | 5 |
+| [[pdf-slides-ai-compiler]] | AI Compiler / MLIR | 5 |
+| [[pdf-slides-llm-inference]] | LLM 推理优化 | 10 |
+| [[pdf-slides-kernel]] | Linux Kernel / 调试工具 | 3 |
+| [[pdf-slides-tools]] | Tools / Build / 异构计算 | 6 |
 
 ## 新增演讲 (Batch N, 2026-05-27)
 
@@ -75,9 +75,9 @@ summary: "C++ 生态大会slides汇总：语言标准化、安全编程、AI Cod
 
 ## 来源详情
 
-- [[wiki/sources/pdf-slides-cpp-standard]]
-- [[wiki/sources/pdf-slides-ai-coding]]
-- [[wiki/sources/pdf-slides-ai-compiler]]
-- [[wiki/sources/pdf-slides-llm-inference]]
-- [[wiki/sources/pdf-slides-kernel]]
-- [[wiki/sources/pdf-slides-tools]]
+- [[pdf-slides-cpp-standard]]
+- [[pdf-slides-ai-coding]]
+- [[pdf-slides-ai-compiler]]
+- [[pdf-slides-llm-inference]]
+- [[pdf-slides-kernel]]
+- [[pdf-slides-tools]]

@@ -26,5 +26,5 @@ summary: "EPI Python算法面试 / 徐亮亮 Qoder CLI — 面试刷题、终端
 
 ## 相关页面
 
-- [[wiki/sources/pdf-slides]] — 总入口
-- [[wiki/sources/notes-datastructure]] — 数据结构与算法
+- [[pdf-slides]] — 总入口
+- [[notes-datastructure]] — 数据结构与算法

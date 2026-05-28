@@ -3,11 +3,22 @@ type: source
 source-type: github
 title: "Android Treble 架构笔记"
 date: 2026-05-25
+tags: [android, treble, hal, hidl, vndk, vintf, stable-aidl]
+created: 2026-05-28
 path: raw/github/notes/android/notes/
 summary: "Android Treble 架构核心文档（15篇）：系统架构、HIDL/HAL机制、VNDK/VINTF/Stable-AIDL、引导加载程序、Java SDK库"
 ---
 
 # Android Treble 架构笔记
+
+## 相关 Entity
+
+- [[entities/android/hal]] — HAL 硬件抽象层
+- [[entities/android/hidl]] — HIDL 接口定义语言
+- [[entities/android/vndk]] — VNDK 供应商原生开发套件
+- [[entities/android/vintf]] — VINTF 供应商接口
+- [[entities/android/stable-aidl]] — Stable AIDL 机制
+- [[entities/android/treble-architecture]] — Treble 架构总览
 
 ## 核心内容
 

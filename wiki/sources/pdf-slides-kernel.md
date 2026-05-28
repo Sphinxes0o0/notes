@@ -30,6 +30,6 @@ summary: "CS744 kernel-bypass/邹涛 CRASH_NG/李勇 Btree索引/田文鑫 具�
 
 ## 相关页面
 
-- [[wiki/sources/pdf-slides]] — 总入口
-- [[wiki/kernel-block-index]] — Linux Block Layer
-- [[wiki/kernel-net-index]] — Linux Network
+- [[pdf-slides]] — 总入口
+- [[kernel-block-index]] — Linux Block Layer
+- [[kernel-net-index]] — Linux Network
