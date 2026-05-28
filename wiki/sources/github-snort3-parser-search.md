@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "snort3/src/parser + search_engines"
-author: "Cisco/OASIS"
+title: snort3/src/parser + search_engines
+author: Cisco/OASIS
 date: 2026-05-27
 size: large
 path: /Users/sphinx.shi/workspace/github/snort3/src/parser
-summary: "Snort3 规则解析器（26 文件）+ 多模式搜索引掣（20 文件）。覆盖规则文本 → FSM 解析 → RTN/OTN 构建 → AC/Hyperscan 模式搜索完整流水线。"
+summary: Snort3 规则解析器（26 文件）+ 多模式搜索引掣（20 文件）。覆盖规则文本 → FSM 解析 → RTN/OTN 构建 → AC/Hyperscan 模式搜索完整流水线。
+created: 2026-05-27
+tags: []
 ---
-
 # Source: Snort3 Parser + Search Engines
 
 **仓库：** `sphinx shi / snort3`（OASIS-LPP/Openlntrusion/Snort3 fork）

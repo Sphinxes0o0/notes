@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Stories from BPF Security Auditing at Google"
-author: "Brendan Jackman (Google)"
+title: Stories from BPF Security Auditing at Google
+author: Brendan Jackman (Google)
 date: 2023
 size: medium
 path: raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf
 summary: "A practitioner's account of auditing eBPF for security vulnerabilities inside Google — covering the bug classes found, the audit methodology, and the hardening efforts that followed."
 created: 2026-05-27
+tags: [ebpf]
 ---
-
 # Stories from BPF Security Auditing at Google
 
 ## Core Content

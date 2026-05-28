@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Snort3 Network Inspectors & Packet I/O"
-author: "Cisco Talos"
+title: Snort3 Network Inspectors & Packet I/O
+author: Cisco Talos
 date: 2024
 size: medium
 path: ~/workspace/github/snort3/src/network_inspectors/
-summary: "Snort3 367个网络inspector源文件 + 25个packet_io源文件，深入分析架构模式、核心inspectors（ARP/IP/ICMP）、DAQ抽象层"
+summary: Snort3 367个网络inspector源文件 + 25个packet_io源文件，深入分析架构模式、核心inspectors（ARP/IP/ICMP）、DAQ抽象层
+created: 2024
+tags: []
 ---
-
 # Snort3 Network Inspectors & Packet I/O 源码分析
 
 ## 概述

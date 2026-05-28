@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "OpenSSL Cookbook 中文版"
-author: "Ivan Ristić (李振宇译)"
+title: OpenSSL Cookbook 中文版
+author: Ivan Ristić (李振宇译)
 date: 2015
 size: small
 path: raw/PDFs/books/openssl-cookbook-中文版.pdf
-summary: "Ivan Ristić OpenSSL Cookbook：密钥生成/证书管理/CA搭建/SSL测试实用手册，72页精炼指南"
+summary: Ivan Ristić OpenSSL Cookbook：密钥生成/证书管理/CA搭建/SSL测试实用手册，72页精炼指南
 tags: [security, openssl, tls, pki, certificates, books]
+created: 2015
 ---
-
 # OpenSSL Cookbook 中文版
 
 ## 核心内容

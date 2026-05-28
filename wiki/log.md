@@ -1,3 +1,8 @@
+---
+type: source
+tags: []
+created: 2026-05-28
+---
 
 ## [2026-05-28] lint | wiki quality pass (454→338 broken wikilinks)
 

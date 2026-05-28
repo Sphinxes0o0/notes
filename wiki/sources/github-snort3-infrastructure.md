@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: github
-title: "Snort3 Infrastructure Module"
+title: Snort3 Infrastructure Module
 description: "Core utilities: hash tables, file processing, decompression, JavaScript normalization, helper utilities"
-author: "Cisco Talos"
+author: Cisco Talos
 date: 2024-01-01
 path: ~/workspace/github/snort3/src
 size: large
-summary: "Infrastructure layer providing hash tables (XHash/ZHash/GHash), file processing pipeline (FileFlows/FileCache/FileCapture), decompression framework (PDF/SWF/ZIP/OLE), and JavaScript normalization (js_norm)"
+summary: Infrastructure layer providing hash tables (XHash/ZHash/GHash), file processing pipeline (FileFlows/FileCache/FileCapture), decompression framework (PDF/SWF/ZIP/OLE), and JavaScript normalization (js_norm)
+created: 2024-01-01
+tags: []
 ---
-
 # Snort3 Infrastructure — Source Summary
 
 ## Repository

@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "端侧大模型部署：存储系统面临的挑战和优化实践"
-author: "王骁"
+title: 端侧大模型部署：存储系统面临的挑战和优化实践
+author: 王骁
 date: 2024
 size: small
 path: raw/PDFs/slides/王骁_端侧大模型部署：存储系统面临的挑战和优化实践.pdf
-summary: "王骁：端侧LLM部署的存储系统挑战，AIOS架构，端侧存储优化实践"
+summary: 王骁：端侧LLM部署的存储系统挑战，AIOS架构，端侧存储优化实践
 tags: [llm, edge-inference, storage, aios, mobile, ai-slides]
+created: 2024
 ---
-
 # 端侧大模型部署：存储系统面临的挑战和优化实践
 
 ## 核心内容

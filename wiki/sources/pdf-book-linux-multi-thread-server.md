@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Linux多线程服务端编程：使用muduo C++网络库"
-author: "陈硕"
+title: Linux多线程服务端编程：使用muduo C++网络库
+author: 陈硕
 date: 2012
 size: medium
 path: raw/PDFs/books/Linux多线程服务端编程：使用muduo C++网络库.pdf
-summary: "陈硕muduo库作者，讲解one-loop-per-thread模型与现代C++多线程网络编程"
+summary: 陈硕muduo库作者，讲解one-loop-per-thread模型与现代C++多线程网络编程
+created: 2012
+tags: [linux]
 ---
-
 # Linux多线程服务端编程：使用muduo C++网络库
 
 ## 核心内容

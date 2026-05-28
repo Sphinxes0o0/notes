@@ -1,12 +1,13 @@
 ---
 type: source
 source-type: github
-title: "C++ 并发编程实战笔记"
+title: C++ 并发编程实战笔记
 date: 2026-05-25
 path: raw/github/notes/ccpp/concurrency/
 summary: "C++ 并发编程实战演示代码：MPMC 无锁环形缓冲区、内存序演示、std::future/promise/async、线程局部退出处理、多线程 atexit"
+created: 2026-05-25
+tags: [cpp, concurrency]
 ---
-
 # C++ 并发编程实战笔记
 
 ## 核心内容

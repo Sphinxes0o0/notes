@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "ARM Architecture Reference Manual Armv8, for Armv8-A (DDI 0487F.c)"
-author: "ARM Limited"
+title: ARM Architecture Reference Manual Armv8, for Armv8-A (DDI 0487F.c)
+author: ARM Limited
 date: 2020
 size: large
 path: raw/PDFs/books/DDI0487Fc_armv8_arm.pdf
 pages: 8248
-summary: "ARMv8-A 架构参考手册（8248页）：AArch64/AArch32 执行状态、寄存器、系统指令、MMU/Cache/TLB、异常处理、内存模型、Power Management、GIC/SMMU。"
+summary: ARMv8-A 架构参考手册（8248页）：AArch64/AArch32 执行状态、寄存器、系统指令、MMU/Cache/TLB、异常处理、内存模型、Power Management、GIC/SMMU。
+created: 2020
+tags: []
 ---
-
 # ARM Architecture Reference Manual Armv8, for Armv8-A (DDI 0487F.c)
 
 ## Metadata

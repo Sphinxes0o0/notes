@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "UNIX环境高级编程（第三版）"
-author: "W. Richard Stevens, Stephen A. Rago"
+title: UNIX环境高级编程（第三版）
+author: W. Richard Stevens, Stephen A. Rago
 date: 2013
 size: large
 path: raw/PDFs/books/UNIX环境高级编程(第三版).pdf
-summary: "APUE第三版，Stevens/Rago，Unix系统编程权威指南（扫描版，无文字提取）"
+summary: APUE第三版，Stevens/Rago，Unix系统编程权威指南（扫描版，无文字提取）
+created: 2013
+tags: []
 ---
-
 # UNIX环境高级编程（第三版）
 
 ## 核心内容

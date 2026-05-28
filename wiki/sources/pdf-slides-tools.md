@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: slides
-title: "Tools / Build / 异构计算 — Slides (2 talks)"
+title: Tools / Build / 异构计算 — Slides (2 talks)
 date: 2026-05
 size: small
 path: raw/PDFs/slides/
-summary: "EPI Python算法面试 / 徐亮亮 Qoder CLI — 面试刷题、终端智能伙伴"
+summary: EPI Python算法面试 / 徐亮亮 Qoder CLI — 面试刷题、终端智能伙伴
+created: 2026-05
+tags: [slides]
 ---
-
 # Tools / Build / 杂项 Slides (2 talks)
 
 ## 演讲列表

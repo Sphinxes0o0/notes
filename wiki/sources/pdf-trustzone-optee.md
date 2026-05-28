@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "TrustZone与OP-TEE技术详解"
-author: "帅峰云, 黄腾, 宋洋"
+title: TrustZone与OP-TEE技术详解
+author: 帅峰云, 黄腾, 宋洋
 date: 2018
 size: large
 path: raw/PDFs/books/手机安全和可信应用开发指南：TrustZone与OP-TEE技术详解.pdf
-summary: "手机安全和可信应用开发指南：ARM TrustZone硬件安全扩展 + OP-TEE开源TEE实现，786页权威著作"
+summary: 手机安全和可信应用开发指南：ARM TrustZone硬件安全扩展 + OP-TEE开源TEE实现，786页权威著作
 tags: [security, trustzone, op-tee, arm, tee, iot, books]
+created: 2018
 ---
-
 # TrustZone与OP-TEE技术详解
 
 ## 核心内容

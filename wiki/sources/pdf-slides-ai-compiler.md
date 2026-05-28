@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: slides
-title: "AI Compiler / MLIR — Conference Slides (5 talks)"
+title: AI Compiler / MLIR — Conference Slides (5 talks)
 date: 2026-05
 size: medium
 path: raw/PDFs/slides/
-summary: "赵英全/崔慧敏/张洪滨/谢涛/郑杨 — MLIR模糊测试、AI编译软件栈、RISC-V AI编译器、RISC-V全栈生态、多元AI芯片算子库"
+summary: 赵英全/崔慧敏/张洪滨/谢涛/郑杨 — MLIR模糊测试、AI编译软件栈、RISC-V AI编译器、RISC-V全栈生态、多元AI芯片算子库
+created: 2026-05
+tags: [slides]
 ---
-
 # AI Compiler / MLIR Slides (5 talks)
 
 ## 演讲列表

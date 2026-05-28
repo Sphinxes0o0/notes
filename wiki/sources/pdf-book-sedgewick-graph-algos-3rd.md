@@ -2,13 +2,14 @@
 type: source
 source-type: pdf
 title: "Algorithms in C, Part 5: Graph Algorithms, 3rd Edition"
-author: "Robert Sedgewick"
+author: Robert Sedgewick
 date: 2002
 size: small
 path: raw/PDFs/books/AlgorithmsTHIRD EDITION INC Part 5 GRAPH ALGORITHMS.pdf
-summary: "Sedgewick 图算法第三版：DFS/BFS/最小生成树/最短路径/网络流"
+summary: Sedgewick 图算法第三版：DFS/BFS/最小生成树/最短路径/网络流
+created: 2002
+tags: []
 ---
-
 # Algorithms in C, Part 5: Graph Algorithms (3rd Edition)
 
 ## 核心内容

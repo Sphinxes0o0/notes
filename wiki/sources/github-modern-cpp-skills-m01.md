@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m01-ownership — C++ Master: Ownership Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m01-ownership/SKILL.md
 summary: "C++ Master-level skill for ownership, move semantics, and RAII. Core question: Who owns this resource and does it need to move? Includes Error → Design mapping and Trace Up/Down framework."
 tags: [cpp, master, ownership, move-semantics, raii]
+created: 2026-05-27
 ---
-
 # m01-ownership — C++ Ownership & Move Semantics
 
 ## 核心內容

@@ -6,9 +6,10 @@ author: "Randal E. Bryant, David R. O'Hallaron"
 date: 2011
 size: small
 path: raw/PDFs/books/computer_systems_a_programmers_perspective.pdf
-summary: "CSAPP：程序员的计算机系统视角（数据表示/内存/链接/进程/网络/并发）"
+summary: CSAPP：程序员的计算机系统视角（数据表示/内存/链接/进程/网络/并发）
+created: 2011
+tags: []
 ---
-
 # Computer Systems: A Programmer's Perspective (CSAPP)
 
 ## 核心内容

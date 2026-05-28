@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: github
-title: "snort3/src/detection — Detection Engine Source"
-author: "Cisco / Sourcefire"
+title: snort3/src/detection — Detection Engine Source
+author: Cisco / Sourcefire
 date: 2026-05-27
 path: /Users/sphinx.shi/workspace/github/snort3/src/detection/
-summary: "Snort3 IDS/IPS 入侵检测引擎核心源代码，涵盖规则评估流水线、快速模式匹配、事件队列、检测选项树"
+summary: Snort3 IDS/IPS 入侵检测引擎核心源代码，涵盖规则评估流水线、快速模式匹配、事件队列、检测选项树
+created: 2026-05-27
+tags: []
 ---
-
 # Snort3 Detection Engine Source
 
 ## 仓库信息

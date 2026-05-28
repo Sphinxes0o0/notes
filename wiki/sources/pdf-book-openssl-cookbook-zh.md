@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "OpenSSL Cookbook"
-author: "Ivan Ristic"
+title: OpenSSL Cookbook
+author: Ivan Ristic
 date: 2013
 size: small
 path: raw/PDFs/books/openssl-cookbook-中文版.pdf
-summary: "OpenSSL 实战速查：密钥管理、TLS 配置、HTTPS 部署、密码套件选择"
+summary: OpenSSL 实战速查：密钥管理、TLS 配置、HTTPS 部署、密码套件选择
+created: 2013
+tags: []
 ---
-
 # OpenSSL Cookbook 中文版
 
 ## 核心内容

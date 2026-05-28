@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "snort3 src/actions/ and src/connectors/"
-author: "Cisco / Snort Team"
+title: snort3 src/actions/ and src/connectors/
+author: Cisco / Snort Team
 date: 2026-05-27
 size: medium
 path: ~/workspace/github/snort3/src/actions/ ~/workspace/github/snort3/src/connectors/
-summary: "Snort3 IPS 动作系统（alert/log/pass/drop/block/reject/react/rewrite）和数据导出 Connector 框架（file/tcp/unix/stdio）"
+summary: Snort3 IPS 动作系统（alert/log/pass/drop/block/reject/react/rewrite）和数据导出 Connector 框架（file/tcp/unix/stdio）
+created: 2026-05-27
+tags: []
 ---
-
 # GitHub: snort3 src/actions/ & src/connectors/
 
 ## 核心内容

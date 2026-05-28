@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "MLIR编译器基础设施模糊测试"
-author: "赵英全"
+title: MLIR编译器基础设施模糊测试
+author: 赵英全
 date: 2024
 size: small
 path: raw/PDFs/slides/赵英全_MLIR编译器基础设施模糊测试.pdf
-summary: "赵英全：MLIR编译器模糊测试实践，基于覆盖率引导的fuzzing发现编译器bug"
+summary: 赵英全：MLIR编译器模糊测试实践，基于覆盖率引导的fuzzing发现编译器bug
 tags: [mlir, compiler, fuzzing, llvm, testing, ai, cpp-slides]
+created: 2024
 ---
-
 # MLIR编译器基础设施模糊测试
 
 ## 核心内容

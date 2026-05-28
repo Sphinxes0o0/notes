@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Nonlinear Dynamics and Chaos"
-author: "Steven H. Strogatz"
+title: Nonlinear Dynamics and Chaos
+author: Steven H. Strogatz
 date: 2018
 size: large
 path: raw/PDFs/books/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.pdf
-summary: "Strogatz非线性动力学与混沌，物理/生物/化学/工程应用"
+summary: Strogatz非线性动力学与混沌，物理/生物/化学/工程应用
+created: 2018
+tags: []
 ---
-
 # Nonlinear Dynamics and Chaos
 
 ## 核心内容

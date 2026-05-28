@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Linux高性能服务器编程"
-author: "游圆"
+title: Linux高性能服务器编程
+author: 游圆
 date: 2012
 size: large
 path: raw/PDFs/books/Linux高性能服务器编程.pdf
-summary: "Linux高性能服务器编程（游圆），涵盖TCP/IP协议、socket编程、并发模型"
+summary: Linux高性能服务器编程（游圆），涵盖TCP/IP协议、socket编程、并发模型
+created: 2012
+tags: [linux]
 ---
-
 # Linux高性能服务器编程
 
 ## 核心内容

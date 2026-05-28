@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Data Structures and Algorithms in C++, 2nd Edition"
-author: "Michael T. Goodrich"
+title: Data Structures and Algorithms in C++, 2nd Edition
+author: Michael T. Goodrich
 date: 2011
 size: large
-path:raw/PDFs/books/Data Structures & Algorithms SECOND EDITION in C++.pdf
+path: raw/PDFs/books/Data Structures & Algorithms SECOND EDITION in C++.pdf
 pages: 738
-summary: "Goodrich & Tamassia 《Data Structures and Algorithms in C++》第二版：向量/链表/树/图/哈希表等数据结构与算法分析，用 C++ 实现。"
+summary: Goodrich & Tamassia 《Data Structures and Algorithms in C++》第二版：向量/链表/树/图/哈希表等数据结构与算法分析，用 C++ 实现。
+created: 2011
+tags: [cpp]
 ---
-
 # Data Structures and Algorithms in C++, 2nd Edition
 
 ## Metadata

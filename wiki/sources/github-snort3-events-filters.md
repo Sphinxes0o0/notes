@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Snort3 — events/, host_tracker/, filters/"
-author: "Snort Team (Cisco)"
+title: Snort3 — events/, host_tracker/, filters/
+author: Snort Team (Cisco)
 date: 2026-05-27
 size: medium
 path: ~/workspace/github/snort3/src/events/ ~/workspace/github/snort3/src/host_tracker/ ~/workspace/github/snort3/src/filters/
-summary: "Snort3 事件队列/主机追踪/过滤器框架源码分析：eventq memcap、host profiler (TCP/UDP/ICMP stats)、三层过滤架构 (detection/rate/event filter)"
+summary: Snort3 事件队列/主机追踪/过滤器框架源码分析：eventq memcap、host profiler (TCP/UDP/ICMP stats)、三层过滤架构 (detection/rate/event filter)
+created: 2026-05-27
+tags: []
 ---
-
 # Snort3 — events/ host_tracker/ filters/
 
 **Repo**: `snort3` (Cisco) | **Commit**: `72675d1ab` (master, 3.10.0.0 tag) | **Files**: 26 个源文件

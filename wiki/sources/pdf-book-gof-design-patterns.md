@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "GoF设计模式精解附C++实现"
-author: "Eckel (译者：晓伟)"
+title: GoF设计模式精解附C++实现
+author: Eckel (译者：晓伟)
 date: 2015
 size: small
 path: raw/PDFs/books/GoF+23种设计解析附C++实现.pdf
 pages: 105
-summary: "GoF 23种设计模式解析 C++ 实现版：创建型（Factory/AbstractFactory/Singleton/Builder/Prototype）、结构型（Bridge/Adapter/Decorator/Composite/Facade/Flyweight/Proxy）、行为型（Command/Iterator/Mediator/Observer/State/Strategy/TemplateMethod/Visitor）共23模式，附完整C++源码。"
+summary: GoF 23种设计模式解析 C++ 实现版：创建型（Factory/AbstractFactory/Singleton/Builder/Prototype）、结构型（Bridge/Adapter/Decorator/Composite/Facade/Flyweight/Proxy）、行为型（Command/Iterator/Mediator/Observer/State/Strategy/TemplateMethod/Visitor）共23模式，附完整C++源码。
+created: 2015
+tags: [design-patterns]
 ---
-
 # GoF设计模式精解附C++实现
 
 ## Metadata

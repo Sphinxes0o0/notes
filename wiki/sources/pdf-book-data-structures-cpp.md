@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "数据结构（C++语言版）第3版"
-author: "邓俊辉（清华大学）"
+title: 数据结构（C++语言版）第3版
+author: 邓俊辉（清华大学）
 date: 2013
 size: large
 path: raw/PDFs/books/dsacpp-3rd-edn.pdf
 pages: 669
-summary: "邓俊辉《数据结构（C++语言版）》第3版（669页）：清华大学985名优教材，全面覆盖数据结构与算法——向量、链表、树、图、排序、查找、哈希、优先队列（堆）、字符串算法，所有实现使用C++。"
+summary: 邓俊辉《数据结构（C++语言版）》第3版（669页）：清华大学985名优教材，全面覆盖数据结构与算法——向量、链表、树、图、排序、查找、哈希、优先队列（堆）、字符串算法，所有实现使用C++。
+created: 2013
+tags: [cpp]
 ---
-
 # 数据结构（C++语言版）第3版
 
 ## Metadata

@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "面向RISC-V大模型推理AI编译器设计与实现"
-author: "张洪滨 (中国科学院软件研究所)"
+title: 面向RISC-V大模型推理AI编译器设计与实现
+author: 张洪滨 (中国科学院软件研究所)
 date: 2024
 size: medium
 path: raw/PDFs/slides/张洪滨_面向RISC-V大模型推理AI编译器设计与实现.pdf
-summary: "张洪滨：RISC-V AI编译器设计，软硬件协同优化，DNN算子库，代价模型，自动调优"
+summary: 张洪滨：RISC-V AI编译器设计，软硬件协同优化，DNN算子库，代价模型，自动调优
 tags: [risc-v, ai, compiler, riscv64, optimization, ai-slides]
+created: 2024
 ---
-
 # 面向RISC-V大模型推理AI编译器设计与实现
 
 ## 核心内容

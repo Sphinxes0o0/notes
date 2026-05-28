@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "To Be or Not to Be - On Object Lifetime"
-author: "吴咏炜 (Wu Yongwei)"
+title: To Be or Not to Be - On Object Lifetime
+author: 吴咏炜 (Wu Yongwei)
 date: 2024
 size: small
 path: raw/PDFs/slides/吴咏炜To Be or Not to Be - On Object Lifetime.pdf
-summary: "吴咏炜：C++对象生命周期深度解析，placement new、RAII、内存映射、对象状态管理"
+summary: 吴咏炜：C++对象生命周期深度解析，placement new、RAII、内存映射、对象状态管理
 tags: [cpp, object-lifetime, placement-new, raii, memory, cpp-slides]
+created: 2024
 ---
-
 # To Be or Not to Be — On Object Lifetime
 
 ## 核心内容

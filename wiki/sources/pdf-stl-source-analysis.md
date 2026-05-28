@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "STL源码剖析"
-author: "侯捷"
+title: STL源码剖析
+author: 侯捷
 date: 2002
 size: large
 path: raw/PDFs/books/STL源码剖析简体中文完整版(清晰扫描带目录).pdf
 pages: 437
-summary: "侯捷 STL 源码剖析：SGI STL 5（GCC 2.95.3）完整注释版，逐行解析 STL六大组件（容器/迭代器/算法/仿函数/适配器/配置器）的底层实现，含 GCC STL 源码全文。"
+summary: 侯捷 STL 源码剖析：SGI STL 5（GCC 2.95.3）完整注释版，逐行解析 STL六大组件（容器/迭代器/算法/仿函数/适配器/配置器）的底层实现，含 GCC STL 源码全文。
+created: 2002
+tags: []
 ---
-
 # STL源码剖析
 
 ## Metadata

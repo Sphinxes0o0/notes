@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Linux高性能服务器编程"
-author: "游双"
+title: Linux高性能服务器编程
+author: 游双
 date: 2013
 size: medium
 path: raw/PDFs/books/Linux高性能服务器编程.pdf
-summary: "Linux 高性能网络编程：I/O 模型/多进程多线程/TCP/UDP/高性能服务器架构"
+summary: Linux 高性能网络编程：I/O 模型/多进程多线程/TCP/UDP/高性能服务器架构
+created: 2013
+tags: [linux]
 ---
-
 # Linux高性能服务器编程
 
 ## 核心内容

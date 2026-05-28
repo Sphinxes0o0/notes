@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "手机安全和可信应用开发指南：TrustZone 与 OP-TEE 技术详解"
-author: "许伟, 陈维镛"
+title: 手机安全和可信应用开发指南：TrustZone 与 OP-TEE 技术详解
+author: 许伟, 陈维镛
 date: 2022
 size: medium
 path: raw/PDFs/books/手机安全和可信应用开发指南：TrustZone与OP-TEE技术详解.pdf
-summary: "ARM TrustZone 与 OP-TEE 安全实现：安全世界/TA 开发/安全启动/密钥管理"
+summary: ARM TrustZone 与 OP-TEE 安全实现：安全世界/TA 开发/安全启动/密钥管理
+created: 2022
+tags: []
 ---
-
 # 手机安全和可信应用开发指南：TrustZone 与 OP-TEE 技术详解
 
 ## 核心内容

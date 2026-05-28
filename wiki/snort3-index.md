@@ -21,7 +21,7 @@ created: 2026-05-27
 | [[entities/linux/snort3/snort3-connectors]] | 连接器 | file/tcp/unixdomain/std connector、双工通信、异步接收、Ring buffer、HA 数据导出 |
 | [[entities/linux/snort3/snort3-infrastructure]] | 基础设施 | XHash/ZHash/GHash、File API 三阶段管道、PDF/SWF/ZIP/OLE 解压、JS Normalization、MemCapAllocator |
 | [[entities/linux/snort3/snort3-codecs]] | 协议编解码 | Ethernet/VLAN/MPLS/IPv4/IPv6/TCP/UDP/ICMP/GTP/VXLAN/GENEVE 解码树、隧道旁路 |
-| [[snort3-control-startup]] | 控制与启动 | Lua Shell + ControlConn 双层架构、pig 状态机（NEW→INITIALIZED→STARTED→RUNNING）、零宕机配置重载、epoll/poll 事件驱动 |
+| [[entities/linux/snort3/snort3-control-startup]] | 控制与启动 | Lua Shell + ControlConn 双层架构、pig 状态机（NEW→INITIALIZED→STARTED→RUNNING）、零宕机配置重载、epoll/poll 事件驱动 |
 
 ## Cross-Reference Map
 

@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m07-concurrency — C++ Master: Concurrency Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m07-concurrency/SKILL.md
 summary: "C++ Master-level skill for concurrency. Core question: How do threads communicate? Covers std::thread, jthread, atomic, mutex, deadlock, race condition, memory model, and C++20 coroutines."
 tags: [cpp, master, concurrency, threads, atomic]
+created: 2026-05-27
 ---
-
 # m07-concurrency — C++ Concurrency
 
 ## 核心內容

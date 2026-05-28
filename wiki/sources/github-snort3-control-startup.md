@@ -1,14 +1,14 @@
 ---
 type: source
 source-type: github
-title: "Snort3 Control Channel & Main Entry Point Analysis"
+title: Snort3 Control Channel & Main Entry Point Analysis
 owner: snort-project
 repo: snort3
 path: ~/workspace/github/snort3/src/control/, ~/workspace/github/snort3/src/main/
-summary: "深度分析 Snort3 控制平面（ControlConn/Shell/Lua）与数据平面（Analyzer/Pig）的架构与启动序列"
+summary: 深度分析 Snort3 控制平面（ControlConn/Shell/Lua）与数据平面（Analyzer/Pig）的架构与启动序列
 created: 2026-05-27
+tags: []
 ---
-
 # GitHub: Snort3 Control Channel & Main Entry Point
 
 ## 来源信息

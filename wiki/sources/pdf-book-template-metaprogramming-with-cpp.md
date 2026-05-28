@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Template Metaprogramming with C++（中文翻译）"
-author: "Marius Bancila (译者：陈晓伟)"
+title: Template Metaprogramming with C++（中文翻译）
+author: Marius Bancila (译者：陈晓伟)
 date: 2023
 size: medium
 path: raw/PDFs/books/Template-Metaprogramming-with-C++-cn-20230401.pdf
 pages: 302
-summary: "Marius Bancila《Template Metaprogramming with C++》中文版（302页）：C++ 元编程实战——类型特征、条件编译、变参模板、模板递归、转发引用、C++20 约束(Concepts)、CRTP/Mixins/标签分派等元编程模式。"
+summary: Marius Bancila《Template Metaprogramming with C++》中文版（302页）：C++ 元编程实战——类型特征、条件编译、变参模板、模板递归、转发引用、C++20 约束(Concepts)、CRTP/Mixins/标签分派等元编程模式。
+created: 2023
+tags: [cpp]
 ---
-
 # Template Metaprogramming with C++（中文翻译）
 
 ## Metadata

@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Elements of Programming Interviews"
-author: "Adnan Aziz, Tsung-Hsien Lee, Amit Prakash"
+title: Elements of Programming Interviews
+author: Adnan Aziz, Tsung-Hsien Lee, Amit Prakash
 date: 2016
 size: small
 path: raw/PDFs/books/Elements of Programming Interviews.pdf
-summary: "算法面试题库，300+题目配图解代码，覆盖数组/树/图/动态规划等主题"
+summary: 算法面试题库，300+题目配图解代码，覆盖数组/树/图/动态规划等主题
+created: 2016
+tags: [cpp]
 ---
-
 # Elements of Programming Interviews
 
 ## 核心内容

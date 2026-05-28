@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Programming Rust, 2nd Edition"
-author: "Jim Blandy, Jason Orendorff"
+title: Programming Rust, 2nd Edition
+author: Jim Blandy, Jason Orendorff
 date: 2021
 size: small
 path: raw/PDFs/books/ProgrammingRust.pdf
-summary: "Rust 系统编程权威指南：所有权/生命周期/并发/Fearless Concurrency"
+summary: Rust 系统编程权威指南：所有权/生命周期/并发/Fearless Concurrency
+created: 2021
+tags: []
 ---
-
 # Programming Rust, 2nd Edition
 
 ## 核心内容

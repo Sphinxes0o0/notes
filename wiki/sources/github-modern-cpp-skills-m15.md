@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m15-anti-pattern — C++ Master: Anti-Patterns Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m15-anti-pattern/SKILL.md
 summary: "C++ Master-level skill for anti-patterns. Core question: Is this C or C++? Covers new/delete elimination, RAII, static_cast, constexpr vs macros, global variables, and reinterpret_cast avoidance."
 tags: [cpp, master, anti-pattern, modernization, c-style]
+created: 2026-05-27
 ---
-
 # m15-anti-pattern — C++ Anti-Patterns
 
 ## 核心內容

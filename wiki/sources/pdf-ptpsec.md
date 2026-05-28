@@ -2,14 +2,14 @@
 type: source
 source-type: pdf
 title: "PTPsec: Secure PTP for Time-Sensitive Networks"
-author: "Unknown (INFOCOM 2024)"
+author: Unknown (INFOCOM 2024)
 date: 2024
 size: medium
 path: raw/PDFs/papers/2024-INFOCOM-PTPsec.pdf
-summary: "PTPsec introduces cryptographic authentication to IEEE 1588 PTP to secure time synchronization in time-sensitive networks, addressing replay attacks and man-in-the-middle threats."
+summary: PTPsec introduces cryptographic authentication to IEEE 1588 PTP to secure time synchronization in time-sensitive networks, addressing replay attacks and man-in-the-middle threats.
 created: 2026-05-27
+tags: []
 ---
-
 # PTPsec: Secure PTP for Time-Sensitive Networks
 
 ## Core Content

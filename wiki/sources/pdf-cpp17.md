@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "C++17 标准与参考"
-author: "Various"
+title: C++17 标准与参考
+author: Various
 date: 2017-2024
 size: medium
 path: raw/PDFs/books/
-summary: "C++17 标准核心特性与参考文档"
+summary: C++17 标准核心特性与参考文档
 tags: [cpp, cpp17, standards, language-features]
+created: 2017-2024
 ---
-
 # C++17 标准与参考
 
 > C++17 标准核心参考资料，涵盖语言特性与标准库扩展。

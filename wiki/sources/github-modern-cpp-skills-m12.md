@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m12-lifecycle — C++ Master: Lifecycle Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m12-lifecycle/SKILL.md
 summary: "C++ Master-level skill for object lifecycle. Core question: When does this die? Covers Stack vs Heap vs Static, RAII, destructors, Rule of 5, static initialization order fiasco, and Meyers Singleton."
 tags: [cpp, master, lifecycle, raii, rule-of-5]
+created: 2026-05-27
 ---
-
 # m12-lifecycle — C++ Resource Lifecycle
 
 ## 核心內容

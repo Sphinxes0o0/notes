@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m05-type-driven — C++ Master: Type-Driven Design Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m05-type-driven/SKILL.md
 summary: "C++ Master-level skill for type-driven design. Core question: Can I make this bug a compile error? Covers strong types, phantom types, type-state pattern, builder pattern, and invalid state unrepresentable."
 tags: [cpp, master, type-driven, strong-types, type-safety]
+created: 2026-05-27
 ---
-
 # m05-type-driven — C++ Type-Driven Design
 
 ## 核心內容

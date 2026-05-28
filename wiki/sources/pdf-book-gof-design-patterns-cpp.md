@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "GoF设计模式：23种设计模式解析及C++实现"
-author: "刘长海"
+title: GoF设计模式：23种设计模式解析及C++实现
+author: 刘长海
 date: 2021
 size: small
 path: raw/PDFs/books/GoF+23种设计解析附C++实现.pdf
-summary: "GoF 23种设计模式中文详解，配详细C++实现代码与 UML 类图"
+summary: GoF 23种设计模式中文详解，配详细C++实现代码与 UML 类图
+created: 2021
+tags: [cpp, design-patterns]
 ---
-
 # GoF+23种设计解析附C++实现
 
 ## 核心内容

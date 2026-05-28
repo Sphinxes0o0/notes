@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "C++ 并发编程指南"
-author: "陈晓伟"
+title: C++ 并发编程指南
+author: 陈晓伟
 date: 2018
 size: medium
 path: raw/PDFs/books/C++并发编程指南.pdf
 pages: 528
-summary: "C++ 并发编程中文版：线程管理、互斥量、条件变量、异步编程、原子操作、内存模型，C++11/14/17 并发特性全覆盖。"
+summary: C++ 并发编程中文版：线程管理、互斥量、条件变量、异步编程、原子操作、内存模型，C++11/14/17 并发特性全覆盖。
+created: 2018
+tags: [cpp, concurrency]
 ---
-
 # C++ 并发编程指南
 
 ## Metadata

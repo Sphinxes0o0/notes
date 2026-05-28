@@ -1,12 +1,13 @@
 ---
 type: source
 source-type: github
-title: "网络流量分析文献综述"
+title: 网络流量分析文献综述
 date: 2026-05-25
 path: raw/github/notes/security/network-traffic-analysis/
-summary: "网络流量分析研究方向调研（62篇论文）：IDS/异常检测、加密流量分析、深度学习方法、IoT/5G流量、eBPF实时检测"
+summary: 网络流量分析研究方向调研（62篇论文）：IDS/异常检测、加密流量分析、深度学习方法、IoT/5G流量、eBPF实时检测
+created: 2026-05-25
+tags: []
 ---
-
 # 网络流量分析文献综述
 
 ## 核心内容

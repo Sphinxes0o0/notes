@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "C++ Template Metaprogramming — Template元编程"
-author: "David Vandevoorde, Nicolai M. Josuttis"
+title: C++ Template Metaprogramming — Template元编程
+author: David Vandevoorde, Nicolai M. Josuttis
 date: 2003
 size: small
 path: raw/PDFs/books/Template-Metaprogramming-with-C++-cn-20230401.pdf
-summary: "C++ 模板元编程深度指南：类型计算、SFINAE、type traits、constexpr"
+summary: C++ 模板元编程深度指南：类型计算、SFINAE、type traits、constexpr
+created: 2003
+tags: [cpp]
 ---
-
 # C++ Template Metaprogramming 中文版
 
 ## 核心内容

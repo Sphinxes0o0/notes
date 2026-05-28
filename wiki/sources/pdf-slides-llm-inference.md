@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: slides
-title: "LLM 推理优化 — Conference Slides (10 talks)"
+title: LLM 推理优化 — Conference Slides (10 talks)
 date: 2026-05
 size: large
 path: raw/PDFs/slides/
-summary: "杨珂/石新飞/刘童旋/黄石柱/王骁/王志宏/熬玉龙/王豪杰/麻津铭/范颂颂/易慧民 — Mooncake/RTP-LLM/xLLM/DeepSeek/端侧部署/LazyLLM/FlagScale/异构计算/RecIS推荐框架"
+summary: 杨珂/石新飞/刘童旋/黄石柱/王骁/王志宏/熬玉龙/王豪杰/麻津铭/范颂颂/易慧民 — Mooncake/RTP-LLM/xLLM/DeepSeek/端侧部署/LazyLLM/FlagScale/异构计算/RecIS推荐框架
+created: 2026-05
+tags: [slides]
 ---
-
 # LLM 推理优化 Slides (10 talks)
 
 ## 演讲列表

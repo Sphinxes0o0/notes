@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "snort3 flow + ips_options source code"
-author: "Cisco Talos (Snort Team)"
+title: snort3 flow + ips_options source code
+author: Cisco Talos (Snort Team)
 date: 2026-05-27
 size: medium
 path: ~/workspace/github/snort3/src/flow/ ~/workspace/github/snort3/src/ips_options/
-summary: "Snort3 源码分析：flow 模块（flow tracking、hash table、timeout、direction、state machine）和 ips_options 模块（content/pcre/byte_test 等检测选项、选项评估树、插件架构）"
+summary: Snort3 源码分析：flow 模块（flow tracking、hash table、timeout、direction、state machine）和 ips_options 模块（content/pcre/byte_test 等检测选项、选项评估树、插件架构）
+created: 2026-05-27
+tags: []
 ---
-
 # GitHub Snort3 — flow + ips_options 源码分析
 
 ## 核心内容

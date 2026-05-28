@@ -2,14 +2,14 @@
 type: source
 source-type: pdf
 title: "eBPF: Rethinking the Linux Kernel"
-author: "Brendan Gregg (Netflix)"
+author: Brendan Gregg (Netflix)
 date: 2020
 size: medium
 path: raw/PDFs/papers/bpf-rethinkingthelinuxkernel-200303183208.pdf
 summary: "Brendan Gregg's influential essay on how eBPF transforms Linux from a general-purpose OS into a customizable, observability-first platform — covering tracing, networking, and security applications."
 created: 2026-05-27
+tags: [linux, ebpf]
 ---
-
 # eBPF: Rethinking the Linux Kernel
 
 ## Core Content

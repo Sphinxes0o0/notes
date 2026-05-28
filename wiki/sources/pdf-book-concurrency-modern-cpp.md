@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Concurrency with Modern C++ (中文版)"
-author: "Rainer Grimm (译者：陈晓伟)"
+title: Concurrency with Modern C++ (中文版)
+author: Rainer Grimm (译者：陈晓伟)
 date: 2018
 size: medium
 path: raw/PDFs/books/Concurrency.with.Modern.C++-zh.pdf
 pages: 480
-summary: "Rainer Grimm 《Concurrency with Modern C++》中文版：C++ 多线程/并发/并行完整指南，涵盖 C++11 到 C++20 的所有并发特性。"
+summary: Rainer Grimm 《Concurrency with Modern C++》中文版：C++ 多线程/并发/并行完整指南，涵盖 C++11 到 C++20 的所有并发特性。
+created: 2018
+tags: [cpp, modern-cpp, concurrency]
 ---
-
 # Concurrency with Modern C++ (中文版)
 
 ## Metadata

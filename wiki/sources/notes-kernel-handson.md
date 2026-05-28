@@ -1,12 +1,13 @@
 ---
 type: source
 source-type: github
-title: "Linux Kernel 动手实验笔记"
+title: Linux Kernel 动手实验笔记
 date: 2026-05-25
 path: raw/github/notes/kernel/handson/
-summary: "Linux Kernel 动手实验：Rust 实现 RISC-V 裸机管理程序（boot/heap/trap）+ C 语言实现 1000 行操作系统（kernel/shell/user/disk）"
+summary: Linux Kernel 动手实验：Rust 实现 RISC-V 裸机管理程序（boot/heap/trap）+ C 语言实现 1000 行操作系统（kernel/shell/user/disk）
+created: 2026-05-25
+tags: []
 ---
-
 # Linux Kernel 动手实验笔记
 
 ## 核心内容

@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Snort3 Runtime Source"
-author: "Cisco"
+title: Snort3 Runtime Source
+author: Cisco
 date: 2024-01-01
 size: large
 path: ~/workspace/github/snort3/src/
 summary: "Snort3 runtime subsystems: managers (30), memory (12), profiler (30), latency (16), trace (15)"
+created: 2024-01-01
+tags: []
 ---
-
 # Snort3 Runtime Source
 
 ## 核心内容

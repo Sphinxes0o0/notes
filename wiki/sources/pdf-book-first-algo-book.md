@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "我的第一本算法书"
-author: "石田保辉、宫崎修一"
+title: 我的第一本算法书
+author: 石田保辉、宫崎修一
 date: 2018
 size: medium
 path: raw/PDFs/books/我的第一本算法书 石田保辉 宫崎修一.pdf
-summary: "图灵日本算法入门书，7个数据结构+26个基础算法，大量图片直观讲解"
+summary: 图灵日本算法入门书，7个数据结构+26个基础算法，大量图片直观讲解
+created: 2018
+tags: []
 ---
-
 # 我的第一本算法书
 
 ## 核心内容

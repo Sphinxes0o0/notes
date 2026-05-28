@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m03-mutability — C++ Master: Const Correctness Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m03-mutability/SKILL.md
 summary: "C++ Master-level skill for mutability and const correctness. Core question: Who is allowed to change this state? Covers const, mutable, logical vs bitwise const, and thread-safe mutable."
 tags: [cpp, master, mutability, const-correctness]
+created: 2026-05-27
 ---
-
 # m03-mutability — C++ Const Correctness & Mutability
 
 ## 核心內容

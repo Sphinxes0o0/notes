@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "OneDrive Batch P — 5 PDFs (OS + C++)"
-author: "Multiple"
+title: OneDrive Batch P — 5 PDFs (OS + C++)
+author: Multiple
 date: 2026-05-25
 size: large
 path: raw/PDFs/books/
 summary: "Batch P: 2 OS textbooks (Operating System Concepts + 现代操作系统) + 3 C++ books (Concurrency in Action + High Performance + Templates 2nd Ed)"
+created: 2026-05-25
+tags: []
 ---
-
 # OneDrive Batch P — 5 PDFs (OS + C++)
 
 ## 概述

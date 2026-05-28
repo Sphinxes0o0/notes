@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Mooncake：解耦式架构和以存换算，优化大模型推理"
-author: "杨珂 (趋境科技)"
+title: Mooncake：解耦式架构和以存换算，优化大模型推理
+author: 杨珂 (趋境科技)
 date: 2024
 size: medium
 path: raw/PDFs/slides/杨珂_Mooncake：解耦式架构和以存换算，优化大模型推理.pdf
-summary: "杨珂：Mooncake解耦式大模型推理架构，KVCache为中心的 disaggregated/prefetch 架构"
+summary: 杨珂：Mooncake解耦式大模型推理架构，KVCache为中心的 disaggregated/prefetch 架构
 tags: [llm, inference, mooncake, kv-cache, disaggregated, ai-slides]
+created: 2024
 ---
-
 # Mooncake：解耦式架构和以存换算，优化大模型推理
 
 ## 核心内容

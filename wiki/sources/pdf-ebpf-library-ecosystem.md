@@ -1,7 +1,5 @@
 ---
----
-tags: []
-created: 2026-05-26type: source
+type: source
 source-type: pdf
 title: "eBPF Library Ecosystem Overview in Go, Rust, Python, C and More"
 author: "Cilium / Isovalent Community"
@@ -9,7 +7,8 @@ date: 2023
 size: small
 path: raw/PDFs/papers/eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More.pdf
 summary: "A survey of the eBPF library ecosystem across 6 programming languages — comparing APIs, feature coverage, CO-RE support, and developer ergonomics."
-created: 2026-05-27
+tags: [ebpf, go, rust, python, c, libraries]
+created: 2026-05-28
 ---
 
 # eBPF Library Ecosystem Overview in Go, Rust, Python, C and More

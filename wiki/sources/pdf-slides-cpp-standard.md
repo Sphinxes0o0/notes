@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: slides
-title: "C++ 语言演进与标准化 — Conference Slides (8 talks)"
+title: C++ 语言演进与标准化 — Conference Slides (8 talks)
 date: 2026-05
 size: medium
 path: raw/PDFs/slides/
-summary: "Bjarne/John Lakos/Michael Spertus/Pete/彭博/吴咏炜/董俊杰/李彦博 — C++40年历史、安全profile、标准化、反射、对象生命周期、嵌入式、NuttX"
+summary: Bjarne/John Lakos/Michael Spertus/Pete/彭博/吴咏炜/董俊杰/李彦博 — C++40年历史、安全profile、标准化、反射、对象生命周期、嵌入式、NuttX
+created: 2026-05
+tags: [cpp, slides]
 ---
-
 # C++ 语言演进与标准化 Slides (8 talks)
 
 ## 演讲列表

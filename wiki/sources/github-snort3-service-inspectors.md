@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Snort3 Service Inspectors Source"
-author: "Cisco Talos (源作者), Open Source Community"
+title: Snort3 Service Inspectors Source
+author: Cisco Talos (源作者), Open Source Community
 date: 2026-05-27
 size: medium
 path: ~/workspace/github/snort3/src/service_inspectors/
-summary: "Snort3 IDS 服务层协议解析器源码（504文件），实现 HTTP/2/SSL/DNS/SMB 等协议的端口无关深度检测。"
+summary: Snort3 IDS 服务层协议解析器源码（504文件），实现 HTTP/2/SSL/DNS/SMB 等协议的端口无关深度检测。
+created: 2026-05-27
+tags: []
 ---
-
 # Snort3 Service Inspectors 源码分析
 
 ## 概述

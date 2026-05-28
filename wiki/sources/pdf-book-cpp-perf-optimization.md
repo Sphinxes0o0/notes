@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "C++ 性能优化指南"
+title: C++ 性能优化指南
 author: "Kurt Guntheroth (O'Reilly)"
 date: 2016
 size: medium
 path: raw/PDFs/books/C++性能优化指南.pdf
 pages: 310
 summary: "O'Reilly 《Optimized C++》中文版：性能分析工具、C++ 代码性能优化技巧（内存分配/算法/数据结构/并发），杨文轩翻译。"
+created: 2016
+tags: [cpp]
 ---
-
 # C++ 性能优化指南
 
 ## Metadata

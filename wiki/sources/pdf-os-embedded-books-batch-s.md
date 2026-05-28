@@ -2,14 +2,14 @@
 type: source
 source-type: pdf
 tags: [linux, kernel, os, embedded, arm, books]
-title: "Linux Kernel / OS / Embedded Books Batch S"
-author: "Multiple"
+title: Linux Kernel / OS / Embedded Books Batch S
+author: Multiple
 date: 2026-05-27
 size: large
 path: raw/PDFs/books/
-summary: "Linux内核 + 操作系统 + 嵌入式系统书籍批次：ARM Cortex-A9 TRM、ARMv8 ARM、A-profile架构手册、操作系统概念（Silberschatz）、现代操作系统原理与实现"
+summary: Linux内核 + 操作系统 + 嵌入式系统书籍批次：ARM Cortex-A9 TRM、ARMv8 ARM、A-profile架构手册、操作系统概念（Silberschatz）、现代操作系统原理与实现
+created: 2026-05-27
 ---
-
 # Linux Kernel / OS / Embedded Books Batch S
 
 ## 书目一览

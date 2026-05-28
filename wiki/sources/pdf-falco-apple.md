@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Think eBPF for Kernel Security Monitoring — Falco at Apple (eBPF Summit 2021)"
-author: "Eric Sage & Melissa Kilby"
+title: Think eBPF for Kernel Security Monitoring — Falco at Apple (eBPF Summit 2021)
+author: Eric Sage & Melissa Kilby
 date: 2021
 size: medium
 path: raw/PDFs/papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf
-summary: "Apple Falco团队eBPF Summit演讲：BPF vs内核模块优势、LSM hook、Ringbuf、高价值Syscall监控"
+summary: Apple Falco团队eBPF Summit演讲：BPF vs内核模块优势、LSM hook、Ringbuf、高价值Syscall监控
 tags: [security, ebpf, falco, apple, runtime-security, syscall, lsm, ringbuf]
+created: 2021
 ---
-
 # Think eBPF for Kernel Security Monitoring — Falco at Apple
 
 ## 核心内容

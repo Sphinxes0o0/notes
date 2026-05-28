@@ -2,14 +2,15 @@
 type: source
 source-type: pdf-book
 title: "C++ Templates: The Complete Guide, 2nd Edition (中文翻译版)"
-author: "David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor"
+author: David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor
 date: 2018
 size: large
 path: raw/PDFs/books/C++-Templates-The-Complete-Guide-zh-20220903.pdf
 pages: 667
-summary: "C++ 模板权威指南第二版中文翻译：C++11/14/17 模板新特性（可变参数包/泛型lambda/推导上下文/编译时if/转发引用/用户定义字面量），语言核心与最佳实践。"
+summary: C++ 模板权威指南第二版中文翻译：C++11/14/17 模板新特性（可变参数包/泛型lambda/推导上下文/编译时if/转发引用/用户定义字面量），语言核心与最佳实践。
+created: 2018
+tags: [cpp]
 ---
-
 # C++ Templates: The Complete Guide, 2nd Edition (中文翻译版)
 
 ## Metadata

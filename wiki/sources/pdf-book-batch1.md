@@ -1,11 +1,12 @@
 ---
 type: source
 source-type: pdf
-title: "PDF Books Batch 1 (Alphabetical, Part 1 of N)"
+title: PDF Books Batch 1 (Alphabetical, Part 1 of N)
 date: 2026-05-27
-summary: "First 10 books alphabetically from raw/PDFs/books/"
+summary: First 10 books alphabetically from raw/PDFs/books/
+created: 2026-05-27
+tags: []
 ---
-
 # PDF Books Batch 1 (Alphabetical)
 
 > Scanned: 2026-05-27 | Source dir: `raw/PDFs/books/` | Total files: ~60 | This batch: 1–10

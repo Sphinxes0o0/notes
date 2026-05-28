@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Design Patterns In Modern C++ (中文版)"
-author: "liuzengh (译者)"
+title: Design Patterns In Modern C++ (中文版)
+author: liuzengh (译者)
 date: 2024-01-01
 size: medium
 path: raw/github/design-pattern
-summary: "C++11/14/17 现代 C++ 实现 GoF 23 种设计模式，含完整可编译源码。"
+summary: C++11/14/17 现代 C++ 实现 GoF 23 种设计模式，含完整可编译源码。
+created: 2024-01-01
+tags: [design-patterns]
 ---
-
 # Design Patterns In Modern C++ 中文版
 
 GitHub: https://github.com/liuzengh/design-pattern

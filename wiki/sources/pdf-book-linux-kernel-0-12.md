@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Linux内核0.12完全注释"
-author: "赵炯 (Jiong Zhao)"
+title: Linux内核0.12完全注释
+author: 赵炯 (Jiong Zhao)
 date: 2019
 size: medium
 path: raw/PDFs/books/linux内核注释.pdf
-summary: "赵炯，Linux内核0.12完全注释，PC硬件基础、80x86汇编、C扩展、内核源码全面注释"
+summary: 赵炯，Linux内核0.12完全注释，PC硬件基础、80x86汇编、C扩展、内核源码全面注释
+created: 2019
+tags: [linux]
 ---
-
 # Linux内核0.12完全注释
 
 ## 核心内容

@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "eBPF技术实践 v2（龙蜥社区）"
-author: "龙蜥社区 (Anolis) 浪潮/阿里云/东南大学"
+title: eBPF技术实践 v2（龙蜥社区）
+author: 龙蜥社区 (Anolis) 浪潮/阿里云/东南大学
 date: 2023
 size: medium
 path: raw/PDFs/books/eBPF_technical_practice_v2.pdf
-summary: "龙蜥社区eBPF技术实践白皮书v2：100页系统讲解eBPF开发流程/工具链/应用场景，龙芯+阿里云+东南大学联合编写"
+summary: 龙蜥社区eBPF技术实践白皮书v2：100页系统讲解eBPF开发流程/工具链/应用场景，龙芯+阿里云+东南大学联合编写
 tags: [ebpf, linux-kernel, tools, cloud-native, books]
+created: 2023
 ---
-
 # eBPF技术实践 v2（龙蜥社区）
 
 ## 核心内容

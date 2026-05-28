@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "商用密码应用安全性评估考核题"
-author: "国家密码管理局"
+title: 商用密码应用安全性评估考核题
+author: 国家密码管理局
 date: 2020
 size: medium
 path: raw/PDFs/books/商用密码应用安全性评估考核题.pdf
-summary: "密码安全评估官方题库，含 SM2/SM3/SM4/国密体系与合规性评估要点"
+summary: 密码安全评估官方题库，含 SM2/SM3/SM4/国密体系与合规性评估要点
+created: 2020
+tags: []
 ---
-
 # 商用密码应用安全性评估考核题
 
 ## 核心内容

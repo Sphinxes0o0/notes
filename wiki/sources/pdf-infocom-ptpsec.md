@@ -2,14 +2,14 @@
 type: source
 source-type: pdf
 title: "PTPsec: Securing PTP Against Time Delay Attacks (INFOCOM 2024)"
-author: "Andreas Finkenzeller, Oliver Butowski, Emanuel Regnath, Mohammad Hamad, Sebastian Steinhorst"
+author: Andreas Finkenzeller, Oliver Butowski, Emanuel Regnath, Mohammad Hamad, Sebastian Steinhorst
 date: 2024
 size: medium
 path: raw/PDFs/papers/2024-INFOCOM-PTPsec.pdf
 summary: "INFOCOM 2024: 利用循环路径不对称分析检测和缓解IEEE 1588 PTP时间同步协议中的微秒级延迟攻击"
 tags: [security, ptp, ieee1588, time-sync, tsn, smart-grid, delay-attack]
+created: 2024
 ---
-
 # PTPsec: Securing PTP Against Time Delay Attacks
 
 ## 核心内容

@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: slides
-title: "C++ & Compiler Conference Slides (58 talks total)"
+title: C++ & Compiler Conference Slides (58 talks total)
 date: 2026-05
 size: large
 path: raw/PDFs/slides/
-summary: "C++ 生态大会slides汇总：语言标准化、安全编程、AI Coding Agent、LLM推理优化、AI编译器、嵌入式、RISC-V生态"
+summary: C++ 生态大会slides汇总：语言标准化、安全编程、AI Coding Agent、LLM推理优化、AI编译器、嵌入式、RISC-V生态
+created: 2026-05
+tags: [slides]
 ---
-
 # C++ & Compiler Conference Slides (58 talks)
 
 > 37 new slides (Batch N) + 21 existing (Batch M). 来源: `raw/PDFs/slides/`

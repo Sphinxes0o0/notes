@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Threads and Locks"
-author: "Chris Phoon"
+title: Threads and Locks
+author: Chris Phoon
 date: 2020
 size: small
 path: raw/PDFs/books/threads-locks.pdf
-summary: "C++ 多线程与锁速查：mutex/condition_variable/future/原子操作/死锁避免"
+summary: C++ 多线程与锁速查：mutex/condition_variable/future/原子操作/死锁避免
+created: 2020
+tags: []
 ---
-
 # Threads and Locks
 
 ## 核心内容

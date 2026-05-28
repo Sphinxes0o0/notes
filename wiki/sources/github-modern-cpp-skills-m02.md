@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m02-resource — C++ Master: Smart Pointers Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m02-resource/SKILL.md
 summary: "C++ Master-level skill for smart pointers. Core question: How many owners does this resource have? Covers unique_ptr (90%), shared_ptr, weak_ptr, make_unique, custom deleters, and cycle detection."
 tags: [cpp, master, resource, smart-pointers]
+created: 2026-05-27
 ---
-
 # m02-resource — C++ Smart Pointers
 
 ## 核心內容

@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "统一算力，释放智能：FlagScale在FlagOS生态中的演进"
-author: "熬玉龙"
+title: 统一算力，释放智能：FlagScale在FlagOS生态中的演进
+author: 熬玉龙
 date: 2024
 size: small
 path: raw/PDFs/slides/熬玉龙_统一算力，释放智能：FlagScale在FlagOS生态中的演进.pdf
-summary: "熬玉龙：FlagScale大模型训练推理框架，FlagCX统一通信库，FlagOS多AI芯片统一软件栈"
+summary: 熬玉龙：FlagScale大模型训练推理框架，FlagCX统一通信库，FlagOS多AI芯片统一软件栈
 tags: [llm, training, inference, flag-scale, distributed, ai-slides]
+created: 2024
 ---
-
 # 统一算力，释放智能：FlagScale在FlagOS生态中的演进
 
 ## 核心内容

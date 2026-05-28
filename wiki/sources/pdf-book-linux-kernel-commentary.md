@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Linux内核注释（第三版）"
-author: "赵昸"
+title: Linux内核注释（第三版）
+author: 赵昸
 date: 2014
 size: medium
 path: raw/PDFs/books/linux内核注释.pdf
-summary: "Linux 2.6 内核核心源码注释：进程调度/内存管理/文件系统/设备驱动"
+summary: Linux 2.6 内核核心源码注释：进程调度/内存管理/文件系统/设备驱动
+created: 2014
+tags: [linux]
 ---
-
 # Linux内核注释（第三版）
 
 ## 核心内容

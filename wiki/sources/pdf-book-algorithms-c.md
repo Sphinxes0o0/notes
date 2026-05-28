@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Algorithms in C, 3rd Edition"
-author: "Robert Sedgewick"
+title: Algorithms in C, 3rd Edition
+author: Robert Sedgewick
 date: 1998
 size: large
 path: raw/PDFs/books/Algorithms in C.pdf
 pages: 672
-summary: "Sedgewick 算法经典 C 语言版：排序、查找、图算法、数据结构与应用。Part 1-4 合一扫描版，672 页。"
+summary: Sedgewick 算法经典 C 语言版：排序、查找、图算法、数据结构与应用。Part 1-4 合一扫描版，672 页。
+created: 1998
+tags: []
 ---
-
 # Algorithms in C, 3rd Edition
 
 ## Metadata

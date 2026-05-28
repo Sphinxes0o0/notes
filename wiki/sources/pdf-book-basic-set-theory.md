@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "基础集合论"
-author: "徐明"
+title: 基础集合论
+author: 徐明
 date: 2010
 size: small
 path: raw/PDFs/books/基础集合论.pdf
-summary: "离散数学基础：集合/关系/函数/势/序数/公理集合论入门"
+summary: 离散数学基础：集合/关系/函数/势/序数/公理集合论入门
+created: 2010
+tags: []
 ---
-
 # 基础集合论
 
 ## 核心内容

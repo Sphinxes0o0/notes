@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m13-domain-error — C++ Master: Domain Errors Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m13-domain-error/SKILL.md
 summary: "C++ Master-level skill for domain errors. Core question: Who catches this? Covers std::runtime_error, std::logic_error, std::expected, exception hierarchies, and system errors with std::error_code."
 tags: [cpp, master, domain-error, exception-hierarchy]
+created: 2026-05-27
 ---
-
 # m13-domain-error — C++ Domain Errors
 
 ## 核心內容

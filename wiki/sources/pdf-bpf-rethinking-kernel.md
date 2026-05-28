@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Rethinking the Linux Kernel — eBPF as a Microkernel (Thomas Graf, 2020)"
-author: "Thomas Graf"
+title: Rethinking the Linux Kernel — eBPF as a Microkernel (Thomas Graf, 2020)
+author: Thomas Graf
 date: 2020
 size: medium
 path: raw/PDFs/papers/bpf-rethinkingthelinuxkernel-200303183208.pdf
-summary: "Cilium创始人Thomas Graf里程碑演讲：eBPF将Linux内核转变为微内核+可组合服务层，解决内核分层抽象代价和20年API碎片化问题"
+summary: Cilium创始人Thomas Graf里程碑演讲：eBPF将Linux内核转变为微内核+可组合服务层，解决内核分层抽象代价和20年API碎片化问题
 tags: [ebpf, cilium, linux-kernel, networking, kubernetes, microkernel]
+created: 2020
 ---
-
 # Rethinking the Linux Kernel — eBPF as a Microkernel
 
 ## 核心内容

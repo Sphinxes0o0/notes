@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Professional C++ 第6版（中文翻译）"
-author: "Marc Gregoire (译者：陈晓伟)"
+title: Professional C++ 第6版（中文翻译）
+author: Marc Gregoire (译者：陈晓伟)
 date: 2024
 size: large
 path: raw/PDFs/books/Professional-C++-6ed-zh-20241122.pdf
 pages: 1247
-summary: "Marc Gregoire《Professional C++》第6版中文翻译（1247页）：从 C++ 基础、C++ 标准库、OOP 设计模式到 C++20 新特性（Concepts/Modules/Coroutines/Ranges），最全面的 C++ 专业教程之一。"
+summary: Marc Gregoire《Professional C++》第6版中文翻译（1247页）：从 C++ 基础、C++ 标准库、OOP 设计模式到 C++20 新特性（Concepts/Modules/Coroutines/Ranges），最全面的 C++ 专业教程之一。
+created: 2024
+tags: [cpp]
 ---
-
 # Professional C++ 第6版（中文翻译）
 
 ## Metadata

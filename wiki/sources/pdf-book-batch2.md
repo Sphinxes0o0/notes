@@ -1,10 +1,10 @@
 ---
 type: source
 source-type: pdf-book-batch
-title: "Books Batch 2 (raw/PDFs/books/ 11-20, alphabetical)"
+title: Books Batch 2 (raw/PDFs/books/ 11-20, alphabetical)
 created: 2026-05-27
+tags: []
 ---
-
 # Books Batch 2 (Books 11–20, alphabetical)
 
 | # | Title | Author | One-line |

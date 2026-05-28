@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "深入理解Linux内核"
-author: "Daniel P. Bovet, Marco Cesati"
+title: 深入理解Linux内核
+author: Daniel P. Bovet, Marco Cesati
 date: 2000
 size: medium
 path: raw/PDFs/books/深入理解Linuxkenrle.pdf
-summary: "Understanding the Linux Kernel, Bovet/Cesati，Linux内核设计与实现经典教材"
+summary: Understanding the Linux Kernel, Bovet/Cesati，Linux内核设计与实现经典教材
+created: 2000
+tags: [linux]
 ---
-
 # 深入理解Linux内核
 
 ## 核心内容

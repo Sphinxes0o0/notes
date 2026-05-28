@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Fast-Packet-Processing using eBPF and XDP (UFMG)"
-author: "Marcos A. M. Vieira"
+title: Fast-Packet-Processing using eBPF and XDP (UFMG)
+author: Marcos A. M. Vieira
 date: 2021
 size: medium
 path: raw/PDFs/papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf
-summary: "UFMG论文：XDP高速数据包处理技术，BPF指令格式详解，XDP~20Mpps vs TC~5Mpps vs Netfilter~1Mpps性能对比"
+summary: UFMG论文：XDP高速数据包处理技术，BPF指令格式详解，XDP~20Mpps vs TC~5Mpps vs Netfilter~1Mpps性能对比
 tags: [ebpf, xdp, networking, packet-processing, performance, linux]
+created: 2021
 ---
-
 # Fast-Packet-Processing using eBPF and XDP
 
 ## 核心内容

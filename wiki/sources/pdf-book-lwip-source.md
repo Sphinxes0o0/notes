@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "LwIP 协议栈源码详解"
-author: "黄志洪, 廖文杰"
+title: LwIP 协议栈源码详解
+author: 黄志洪, 廖文杰
 date: 2017
 size: small
 path: raw/PDFs/books/LwIP 协议栈源码详解.pdf
-summary: "LwIP 轻量级 TCP/IP 协议栈源码分析：内存管理/网络接口/RAW API/线程模型"
+summary: LwIP 轻量级 TCP/IP 协议栈源码分析：内存管理/网络接口/RAW API/线程模型
+created: 2017
+tags: []
 ---
-
 # LwIP 协议栈源码详解
 
 ## 核心内容

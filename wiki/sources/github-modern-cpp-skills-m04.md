@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m04-zero-cost — C++ Master: Zero-Cost Abstractions Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m04-zero-cost/SKILL.md
 summary: "C++ Master-level skill for zero-cost abstractions. Core question: When do we determine the type? Covers templates, concepts, CRTP, virtual functions, std::variant, and static vs dynamic polymorphism."
 tags: [cpp, master, zero-cost, templates, polymorphism]
+created: 2026-05-27
 ---
-
 # m04-zero-cost — C++ Zero-Cost Abstractions
 
 ## 核心內容

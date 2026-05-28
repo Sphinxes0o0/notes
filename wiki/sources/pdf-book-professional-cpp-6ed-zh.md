@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Professional C++, 6th Edition (Chinese)"
-author: "Marc Gregoire"
+title: Professional C++, 6th Edition (Chinese)
+author: Marc Gregoire
 date: 2024
 size: medium
 path: raw/PDFs/books/Professional-C++-6ed-zh-20241122.pdf
-summary: "Professional C++ 第6版中文：现代 C++ 特性、工程实践、并发、设计模式"
+summary: Professional C++ 第6版中文：现代 C++ 特性、工程实践、并发、设计模式
+created: 2024
+tags: [cpp]
 ---
-
 # Professional C++ 第六版（中文）
 
 ## 核心内容

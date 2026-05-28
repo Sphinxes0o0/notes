@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Modern C++ Tutorial（C++11/14/17/20）"
-author: "Changkun (欧长坤)"
+title: Modern C++ Tutorial（C++11/14/17/20）
+author: Changkun (欧长坤)
 date: 2024
 size: small
 path: raw/PDFs/books/modern-cpp-tutorial-zh-cn.pdf
 pages: 83
-summary: "欧长坤《Modern C++ Tutorial》中文版（83页）：C++11/14/17/20 核心特性速览——nullptr、constexpr、auto/decltype、lambda、智能指针、RAII、移动语义、委托构造、继承构造、变参模板、if constexpr、统一初始化、右值引用、完美转发。"
+summary: 欧长坤《Modern C++ Tutorial》中文版（83页）：C++11/14/17/20 核心特性速览——nullptr、constexpr、auto/decltype、lambda、智能指针、RAII、移动语义、委托构造、继承构造、变参模板、if constexpr、统一初始化、右值引用、完美转发。
+created: 2024
+tags: [cpp, modern-cpp]
 ---
-
 # Modern C++ Tutorial（C++11/14/17/20）
 
 ## Metadata

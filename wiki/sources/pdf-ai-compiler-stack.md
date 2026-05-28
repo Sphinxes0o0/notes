@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "编译技术在AI软件栈中的实践分享"
-author: "崔慧敏"
+title: 编译技术在AI软件栈中的实践分享
+author: 崔慧敏
 date: 2024
 size: medium
 path: raw/PDFs/slides/崔慧敏_编译技术在AI软件栈中的实践分享.pdf
-summary: "崔慧敏：AI基础设施挑战、SigInfer编译推理引擎、国产卡CUDA兼容、AI编译器自动生成"
+summary: 崔慧敏：AI基础设施挑战、SigInfer编译推理引擎、国产卡CUDA兼容、AI编译器自动生成
 tags: [ai, compiler, inference, mlir, tvm, xla, cuda, cpp-slides]
+created: 2024
 ---
-
 # 编译技术在AI软件栈中的实践分享
 
 ## 核心内容

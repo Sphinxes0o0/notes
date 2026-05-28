@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "C++ 模板（第二版）"
-author: "David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor"
+title: C++ 模板（第二版）
+author: David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor
 date: 2019
 size: medium
 path: raw/PDFs/books/C++模板_第二版.pdf
 pages: 377
-summary: "五车书馆翻译版 C++ Templates 第二版：modern C++ 模板完整指南，对应第一版翻译的精简更新，覆盖 C++11 及更新标准。"
+summary: 五车书馆翻译版 C++ Templates 第二版：modern C++ 模板完整指南，对应第一版翻译的精简更新，覆盖 C++11 及更新标准。
+created: 2019
+tags: [cpp]
 ---
-
 # C++ 模板（第二版）
 
 ## Metadata

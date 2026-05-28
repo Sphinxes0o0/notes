@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "The Book of Modern C++"
-author: "Klaus Iglberger"
+title: The Book of Modern C++
+author: Klaus Iglberger
 date: 2022
 size: medium
 path: raw/PDFs/books/The.Book.of.Modern.C++.-.Electronic.Edition.pdf
-summary: "现代 C++ 工程实践：RVO/emplace/移动语义/类型安全/C++23 新特性"
+summary: 现代 C++ 工程实践：RVO/emplace/移动语义/类型安全/C++23 新特性
+created: 2022
+tags: [cpp, modern-cpp]
 ---
-
 # The Book of Modern C++
 
 ## 核心内容

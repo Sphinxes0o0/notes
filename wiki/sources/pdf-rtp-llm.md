@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "RTP-LLM：阿里大模型推理引擎"
-author: "石新飞"
+title: RTP-LLM：阿里大模型推理引擎
+author: 石新飞
 date: 2024
 size: small
 path: raw/PDFs/slides/石新飞_RTP-LLM：阿里大模型推理引擎.pdf
-summary: "石新飞：RTP-LLM阿里巴巴大模型推理引擎，MOE专家模型、投机采样、分布式架构"
+summary: 石新飞：RTP-LLM阿里巴巴大模型推理引擎，MOE专家模型、投机采样、分布式架构
 tags: [llm, inference, moe, speculative-decoding, distributed, ai-slides]
+created: 2024
 ---
-
 # RTP-LLM：阿里大模型推理引擎
 
 ## 核心内容

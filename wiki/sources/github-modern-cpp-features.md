@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Modern C++ Features Reference (C++11/14/17/20/23)"
+title: Modern C++ Features Reference (C++11/14/17/20/23)
 author: Anthony Calandra
 date: 2024
 path: raw/github/modern-cpp-features/README.md
 size: large
 summary: "Comprehensive feature reference covering C++11 through C++23 — 100+ language and library features with examples. Anthony Calandra's curated reference."
+created: 2024
+tags: [cpp, modern-cpp]
 ---
-
 # Modern C++ Features Reference (C++11/14/17/20/23)
 
 ## Overview

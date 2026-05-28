@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Unix Programming Tools"
-author: "Tom Parete, Stephen Gildea, Bob McNamara, Mike Loukides, Larry Grant"
+title: Unix Programming Tools
+author: Tom Parete, Stephen Gildea, Bob McNamara, Mike Loukides, Larry Grant
 date: 1998
 size: small
 path: raw/PDFs/books/UnixProgrammingTools.pdf
 summary: "Stanford CS education doc on Unix programming tools: gcc, make, gdb, emacs, shell"
+created: 1998
+tags: []
 ---
-
 # Unix Programming Tools
 
 ## 核心内容

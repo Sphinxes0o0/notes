@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Cortex-A9 Technical Reference Manual (Revision r4p0)"
-author: "ARM Limited"
+title: Cortex-A9 Technical Reference Manual (Revision r4p0)
+author: ARM Limited
 date: 2012
 size: small
 path: raw/PDFs/books/DDI0388H_cortex_a9_r4p0_trm.pdf
 pages: 213
-summary: "ARM Cortex-A9 TRM：超标量双发射流水线、Néon SIMD/VFPv3、PMU 性能单元、TrustZone、AMBA 总线接口、L1/L2 Cache 控制器技术参考。"
+summary: ARM Cortex-A9 TRM：超标量双发射流水线、Néon SIMD/VFPv3、PMU 性能单元、TrustZone、AMBA 总线接口、L1/L2 Cache 控制器技术参考。
+created: 2012
+tags: []
 ---
-
 # Cortex-A9 Technical Reference Manual (Revision r4p0)
 
 ## Metadata

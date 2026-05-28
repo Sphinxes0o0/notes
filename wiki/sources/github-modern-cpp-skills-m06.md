@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m06-error-handling — C++ Master: Error Handling Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m06-error-handling/SKILL.md
 summary: "C++ Master-level skill for error handling. Core question: Is this error recoverable? Covers std::optional, std::expected, exceptions, asserts, noexcept, and [[nodiscard]]."
 tags: [cpp, master, error-handling, exceptions, expected]
+created: 2026-05-27
 ---
-
 # m06-error-handling — C++ Error Handling
 
 ## 核心內容

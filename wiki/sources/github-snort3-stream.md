@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "snort3 stream/TCP reassembly source code"
-author: "Cisco Talos (Snort Team)"
+title: snort3 stream/TCP reassembly source code
+author: Cisco Talos (Snort Team)
 date: 2026-05-27
 size: medium
 path: ~/workspace/github/snort3/src/stream/tcp/
-summary: "Snort3 源码分析：TCP stream 追踪（TcpStreamTracker）、分段重组（TcpReassemblySegments）、刷新策略（PAF/IDS/IPS）、重叠处理（13种OS策略）、PAWS时间戳、状态机（14个状态）"
+summary: Snort3 源码分析：TCP stream 追踪（TcpStreamTracker）、分段重组（TcpReassemblySegments）、刷新策略（PAF/IDS/IPS）、重叠处理（13种OS策略）、PAWS时间戳、状态机（14个状态）
+created: 2026-05-27
+tags: []
 ---
-
 # GitHub Snort3 — stream/TCP reassembly 源码分析
 
 ## 核心内容

@@ -1,15 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "高性能C/C++系统性能优化 从理论到实践"
-author: "吴晓飞 (阿里云RDS MySQL内核负责人)"
+title: 高性能C/C++系统性能优化 从理论到实践
+author: 吴晓飞 (阿里云RDS MySQL内核负责人)
 date: 2024
 size: small
 path: raw/PDFs/slides/吴晓飞_高性能CC++系统性能优化 从理论到实践.pdf
-summary: "吴晓飞：PolarDB TPCC登顶性能优化实战，从理论到工具的完整性能优化方法论"
+summary: 吴晓飞：PolarDB TPCC登顶性能优化实战，从理论到工具的完整性能优化方法论
 tags: [cpp, performance, optimization, polar-db, mysql, linux, cpp-slides]
+created: 2024
 ---
-
 # 高性能C/C++系统性能优化：从理论到实践
 
 ## 核心内容

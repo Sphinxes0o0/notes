@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: github
-title: "snort3/src/codecs — Protocol Decoder Tree"
-author: "Cisco / Snort Team"
+title: snort3/src/codecs — Protocol Decoder Tree
+author: Cisco / Snort Team
 date: 2024-2025
 path: ~/workspace/github/snort3/src/codecs/
-summary: "Snort3 网络协议解码器 codec 框架：Ethernet→IP→TCP/UDP/ICMP 完整协议树、codec 注册机制、层叠解析顺序"
+summary: Snort3 网络协议解码器 codec 框架：Ethernet→IP→TCP/UDP/ICMP 完整协议树、codec 注册机制、层叠解析顺序
+created: 2024-2025
+tags: []
 ---
-
 # snort3/src/codecs
 
 ## 核心定位

@@ -1,13 +1,14 @@
 ---
 type: source
 source-type: slides
-title: "Linux Kernel / 调试工具 — Slides (3 talks)"
+title: Linux Kernel / 调试工具 — Slides (3 talks)
 date: 2026-05
 size: medium
 path: raw/PDFs/slides/
-summary: "CS744 kernel-bypass/邹涛 CRASH_NG/李勇 Btree索引/田文鑫 具身机器人构建 — Linux内核、调试工具、块设备、源码构建"
+summary: CS744 kernel-bypass/邹涛 CRASH_NG/李勇 Btree索引/田文鑫 具身机器人构建 — Linux内核、调试工具、块设备、源码构建
+created: 2026-05
+tags: [slides]
 ---
-
 # Linux Kernel / 调试工具 Slides (3 talks)
 
 ## 演讲列表

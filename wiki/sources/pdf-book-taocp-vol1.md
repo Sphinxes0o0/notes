@@ -2,13 +2,14 @@
 type: source
 source-type: pdf
 title: "The Art of Computer Programming, Vol 1: Fundamental Algorithms, 3rd Edition"
-author: "Donald E. Knuth"
+author: Donald E. Knuth
 date: 1997
 size: small
 path: raw/PDFs/books/The Art of Computer Programming,Vol.1 Fundamental Algorithms, 3rd Edition.pdf
-summary: "TAOCP 第1卷：基本算法（数学基础+数据结构+递归+随机数）"
+summary: TAOCP 第1卷：基本算法（数学基础+数据结构+递归+随机数）
+created: 1997
+tags: []
 ---
-
 # The Art of Computer Programming, Vol 1 (3rd Edition)
 
 ## 核心内容

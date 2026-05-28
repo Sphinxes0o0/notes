@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Snort3 Intrusion Detection System — Framework Module"
-author: "Cisco / Snort Team"
+title: Snort3 Intrusion Detection System — Framework Module
+author: Cisco / Snort Team
 date: 2026-04-08
 size: medium
 path: ~/workspace/github/snort3/src/framework/
-summary: "Snort3 核心框架源码分析：插件系统 (Inspector/Codec/IpsOption)、Module 生命周期、数据驱动配置、Packet Thread (pig)、Shell 命令接口、DataBus 事件系统"
+summary: Snort3 核心框架源码分析：插件系统 (Inspector/Codec/IpsOption)、Module 生命周期、数据驱动配置、Packet Thread (pig)、Shell 命令接口、DataBus 事件系统
+created: 2026-04-08
+tags: []
 ---
-
 # Snort3 Framework 源码分析
 
 ## 核心文件列表

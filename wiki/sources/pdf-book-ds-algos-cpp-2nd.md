@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Data Structures and Algorithms in C++, 2nd Edition"
-author: "Adam Drozdek"
+title: Data Structures and Algorithms in C++, 2nd Edition
+author: Adam Drozdek
 date: 2013
 size: medium
 path: raw/PDFs/books/Data Structures & Algorithms SECOND EDITION in C++.pdf
-summary: "C++ 实现的数据结构与算法：树/图/哈希/排序/动态规划/算法分析"
+summary: C++ 实现的数据结构与算法：树/图/哈希/排序/动态规划/算法分析
+created: 2013
+tags: [cpp]
 ---
-
 # Data Structures and Algorithms in C++, 2nd Edition
 
 ## 核心内容

@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "Modern C++ Tutorial (C++11/14/17/20)"
-author: "Chujie Zeng"
+title: Modern C++ Tutorial (C++11/14/17/20)
+author: Chujie Zeng
 date: 2022
 size: small
 path: raw/PDFs/books/modern-cpp-tutorial-zh-cn.pdf
-summary: "现代 C++ 快速上手指南：lambda/variant/optional/Concepts/ Ranges/ Coroutines"
+summary: 现代 C++ 快速上手指南：lambda/variant/optional/Concepts/ Ranges/ Coroutines
+created: 2022
+tags: [cpp, modern-cpp]
 ---
-
 # Modern C++ Tutorial 中文版
 
 ## 核心内容

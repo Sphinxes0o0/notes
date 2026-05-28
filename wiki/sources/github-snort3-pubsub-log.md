@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: github
-title: "Snort3 pub_sub + Protocols + Log — 源码分析"
-author: "Cisco / Snort Team"
+title: Snort3 pub_sub + Protocols + Log — 源码分析
+author: Cisco / Snort Team
 date: 2026-05-27
 size: medium
 path: ~/workspace/github/snort3/src/pub_sub/ ~/workspace/github/snort3/src/protocols/ ~/workspace/github/snort3/src/log/ ~/workspace/github/snort3/src/loggers/
-summary: "Snort3 DataBus 发布-订阅事件系统、协议头定义、网络包解析架构、日志框架与 12 种输出插件的完整源码分析"
+summary: Snort3 DataBus 发布-订阅事件系统、协议头定义、网络包解析架构、日志框架与 12 种输出插件的完整源码分析
+created: 2026-05-27
+tags: []
 ---
-
 # Snort3 pub_sub / Protocols / Log 源码分析
 
 ## 核心文件列表

@@ -2,14 +2,14 @@
 type: source
 source-type: pdf
 title: "BPF: Turning Linux into a Microservices-aware OS (Thomas Graf)"
-author: "Thomas Graf"
+author: Thomas Graf
 date: 2018
 size: medium
 path: raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf
-summary: "Thomas Graf扩展版演讲：Linux微服务感知操作系统，Cilium Hubble可观测性，Cilium功能矩阵(网络/LB/安全/Mesh加速)"
+summary: Thomas Graf扩展版演讲：Linux微服务感知操作系统，Cilium Hubble可观测性，Cilium功能矩阵(网络/LB/安全/Mesh加速)
 tags: [ebpf, cilium, hubble, kubernetes, microservices, networking, service-mesh]
+created: 2018
 ---
-
 # BPF: Turning Linux into a Microservices-aware OS
 
 ## 核心内容

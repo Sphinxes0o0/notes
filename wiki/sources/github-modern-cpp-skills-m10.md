@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m10-performance — C++ Master: Performance Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m10-performance/SKILL.md
 summary: "C++ Master-level skill for performance. Core question: Where is the data? Covers cache locality, heap allocation, inlining, SIMD, standard layout, string_view, reserve, and PMR."
 tags: [cpp, master, performance, cache-locality, allocation]
+created: 2026-05-27
 ---
-
 # m10-performance — C++ Performance
 
 ## 核心內容

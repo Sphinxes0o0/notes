@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m09-domain — C++ Master: Domain Modeling (DDD) Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m09-domain/SKILL.md
 summary: "C++ Master-level skill for domain modeling (DDD). Core question: Identity or Value? Covers Value Objects, Entities, Aggregates, Repository pattern, Pimpl, and invariant enforcement."
 tags: [cpp, master, domain-modeling, ddd, entity-value-object]
+created: 2026-05-27
 ---
-
 # m09-domain — C++ Domain Modeling (DDD)
 
 ## 核心內容

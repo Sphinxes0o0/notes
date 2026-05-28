@@ -2,14 +2,14 @@
 type: source
 source-type: github
 title: "m11-ecosystem — C++ Master: Ecosystem Mental Model"
-author: "Sphinx Shi"
+author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m11-ecosystem/SKILL.md
 summary: "C++ Master-level skill for C++ ecosystem. Core question: How do I build and maintain this? Covers CMake, vcpkg, Conan, sanitizers (ASan/TSan/UBSan), and Clang-Tidy."
 tags: [cpp, master, ecosystem, cmake, build-tool]
+created: 2026-05-27
 ---
-
 # m11-ecosystem — C++ Ecosystem
 
 ## 核心內容

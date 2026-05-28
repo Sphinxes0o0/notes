@@ -1,15 +1,16 @@
 ---
 type: source
 source-type: pdf-book
-title: "Effective STL (中文版)"
-author: "Scott Meyers (译者：抚琴舞剑)"
+title: Effective STL (中文版)
+author: Scott Meyers (译者：抚琴舞剑)
 date: 2017
 size: small
 path: raw/PDFs/books/Effective STL简体中文版.pdf
 pages: 245
-summary: "Meyers 《Effective STL》中文版：50 条 STL 使用规则，容器/迭代器/算法/仿函数/容器适配器的正确用法与常见陷阱，STL 学习必读。"
+summary: Meyers 《Effective STL》中文版：50 条 STL 使用规则，容器/迭代器/算法/仿函数/容器适配器的正确用法与常见陷阱，STL 学习必读。
+created: 2017
+tags: []
 ---
-
 # Effective STL (中文版)
 
 ## Metadata

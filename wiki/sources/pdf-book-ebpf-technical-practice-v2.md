@@ -1,14 +1,15 @@
 ---
 type: source
 source-type: pdf
-title: "eBPF 权威指南：技术实践与内核源码分析（第2版）"
-author: "倪宏飞"
+title: eBPF 权威指南：技术实践与内核源码分析（第2版）
+author: 倪宏飞
 date: 2022
 size: medium
 path: raw/PDFs/books/eBPF_technical_practice_v2.pdf
-summary: "eBPF 进阶实战：CO-RE/尾调用/RingBuf/安全审计/网络/可观测性"
+summary: eBPF 进阶实战：CO-RE/尾调用/RingBuf/安全审计/网络/可观测性
+created: 2022
+tags: [ebpf]
 ---
-
 # eBPF 技术实践（第二版）
 
 ## 核心内容
