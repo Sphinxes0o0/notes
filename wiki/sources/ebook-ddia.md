@@ -95,5 +95,8 @@ created: 2026-05-28
 
 ## Related Concepts
 
-- [[entities/distributed-systems]] — (待创建)
+- [[entities/distributed-systems/replication]] — 复制 (Ch6)
+- [[entities/distributed-systems/partitioning]] — 分片 (Ch7)
+- [[entities/distributed-systems/transactions]] — 事务 (Ch8)
+- [[entities/distributed-systems/distributed-consensus]] — 一致性与共识 (Ch10)
 - [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 网络协议栈
