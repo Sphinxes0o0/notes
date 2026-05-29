@@ -2,7 +2,7 @@
 type: entity
 tags: [storage, LSM-tree, key-value, write-optimized, database]
 created: 2026-05-28
-sources: [bookmark-leveldb-handbook]
+sources: [bookmark-leveldb-handbook, handson-mini-lsm]
 ---
 
 # LSM-tree
@@ -55,3 +55,4 @@ LSM-tree（Log Structured Merge Tree）是一种写优化的存储数据结构�
 ## 来源详情
 
 - [[sources/bookmark-leveldb-handbook]] — LevelDB Handbook：LSM-tree架构与读写流程
+- [[handson-mini-lsm]] — mini-lsm：Rust 实现完整 LSM-tree + MVCC，Week 1-2 逐步构建存储引擎
