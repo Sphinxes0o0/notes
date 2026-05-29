@@ -4,6 +4,54 @@
 
 ---
 
+## [2026-05-29] ingest | reading/ bookmarks — top 15 scan (partial complete)
+
+### Completed (7 sources):
+1. **bookmark-hld-handbook** — HLD Handbook system design curriculum
+2. **bookmark-bevy-engine-guide** — Bevy Engine Guide (Rust ECS)
+3. **bookmark-cmu-15-445** — CMU 15-445 Intro to Database Systems
+4. **bookmark-linux-namespace-cgroup** — Linux Namespace/Cgroup deep dive
+5. **bookmark-parallel-programming-intro** — HPC Wiki parallel programming intro
+6. **bookmark-visual-computing-foundations** — Visual Computing online book
+7. **bookmark-oscca-crypto-popularization** — 国家密码管理局 cryptography education
+
+### New entities created:
+- ecs-architecture.md — Entity Component System pattern
+- parallel-computing.md — Parallel computing fundamentals
+- container-namespace-cgroup.md — Container isolation (Namespace + Cgroup)
+- visual-computing.md — Visual computing domain
+
+### Partially blocked (403/timeout):
+- ARM64 Hypervisor (CSDN, 微信) — 需备选源
+- Linux Buddy Allocator (微信 403)
+- lianglianglee 分布式/编译原理/架构系列 (403)
+- zhihu.com 系列 (403)
+- DSP 101 (Analog Devices, timeout)
+- thiscute.world 密码基础 (403)
+
+## [2026-05-29] ingest | 8× OS & kernel handson tutorials
+
+- **来源** (8个教程):
+  1. handson-lkmpg — Linux Kernel Module Programming Guide (sysprog21, v5.10+)
+  2. handson-os-in-rust-phil-opp — Writing an OS in Rust (Philipp Oppermann)
+  3. handson-how-to-create-os-samypesse — How to Create an OS (Sammy Pesse)
+  4. handson-kernels-101-arjun — Kernels 101 (Arjun Sreedharan)
+  5. handson-os-in-1000-lines — OS in 1000 Lines C (RISC-V, os6xx)
+  6. handson-io-uring-shuveb — io_uring Tutorial (Shuveb Hussain)
+  7. handson-brans-kernel-dev — Bran's Kernel Development Tutorial
+  8. handson-dpdk-getting-started — DPDK Linux Getting Started Guide
+- **操作**:
+  - 创建 8 个 source pages in `wiki/sources/handson-*.md`
+  - 创建 3 个 entity pages in `wiki/entities/linux/kernel/handson/`:
+    - linux-kernel-module-programming.md — LKMPG kernel module/char driver/sync/memory/interrupt
+    - linux-kernel-boot-process.md — x86 boot/GRUB/multiboot/protected mode
+    - linux-kernel-packet-processing-userspace.md — DPDK/io_uring/zero-copy/kernel-bypass
+  - tutorial-notes 存于 `~/workspace/tutorial-notes/*.md`
+- **Cross-link**: 模块编程→syscall/mm/VFS/net subsystem; boot→KVM/sel4; packet-processing→net subsystem/io_uring/virtio/safeos/snort3
+- **未 commit**
+
+---
+
 ## [2026-05-28] ingest | ebook-ddia + ebook-linux-insides — 2 ebooks ingested
 
 - **来源**:

@@ -89,10 +89,23 @@ created: 2026-05-22
 | [[wiki/sources/bookmark-linux-inside]] | Linux Inside：内核入门经典，boot/interrupt/sync/memory/Cgroups |
 | [[wiki/sources/bookmark-linux-source-code-analyze]] | Linux内核源码分析 (liexusong, 1.6k stars)：60+文档覆盖进程/内存/网络/容器/eBPF |
 | [[wiki/sources/bookmark-linux-interrupt-loyenwang]] | Linux中断子系统 (LoyenWang)：ARM64 Kernel 4.14，控制器/softirq/tasklet/workqueue |
+| [[wiki/sources/bookmark-linux-namespace-cgroup]] | Linux Namespace/Cgroup deep dive：容器隔离六类Namespace+Cgroup资源控制 |
+| [[wiki/sources/bookmark-oscca-crypto-popularization]] | 国家密码管理局科普园地：密码的奥秘/趣谈系列，面向公众的密码学教育 |
 | [[wiki/sources/bookmark-linux-kernel-map]] | Interactive Kernel Map：SVG可缩放80倍，从硬件接口到系统调用的内核组件地图 |
 | [[wiki/sources/bookmark-linux-kernel-labs]] | Linux内核教学 (中文)：理论+实验，内存/调度/系统调用/interrupt/lock/VM |
 | [[wiki/sources/bookmark-linux-kernel-explorer]] | Linux Kernel Explorer (Reverser.dev)：在线内核源码浏览器，符号搜索/XREF导航 |
+| [[wiki/sources/bookmark-parallel-programming-intro]] | HPC Wiki并行编程导论：CPU power wall/共享内存(Pthreads/OpenMP)/消息传递(MPI)/Foster方法论 |
+| [[wiki/sources/bookmark-visual-computing-foundations]] | Foundations of Visual Computing：人眼视觉/渲染/成像/显示技术跨学科教材 |
+| [[wiki/sources/bookmark-bevy-engine-guide]] | Bevy Engine Guide (Rust ECS)：Rust游戏引擎架构，插件开发/反射/并行图/渲染管线 |
 | [[wiki/sources/bookmark-edsionte-kernel-beginner]] | 内核新手区 (Edsionte)：最低门槛内核入门，进程/内存/VFS/设备驱动/系统调用 |
+| [[wiki/sources/handson-lkmpg]] | Linux Kernel Module Programming Guide (sysprog21)：v5.10+字符设备/中断/sync/mm/DMA/GPIO/PCI |
+| [[wiki/sources/handson-os-in-rust-phil-opp]] | Writing an OS in Rust (Philipp Oppermann)：64-bit x86 no_std kernel，boot/paging/heap/async |
+| [[wiki/sources/handson-how-to-create-os-samypesse]] | How to Create an OS (Sammy Pesse)：C++ UNIX OS，boot/GRUB multiboot/protected mode/shell |
+| [[wiki/sources/handson-kernels-101-arjun]] | Kernels 101 (Arjun Sreedharan)：x86 minimal kernel，boot/NASM/GRUB/VGA text |
+| [[wiki/sources/handson-os-in-1000-lines]] | OS in 1000 Lines C (os6xx)：RISC-V OS，boot/trap/heap/context switch/page table/syscall/FAT |
+| [[wiki/sources/handson-io-uring-shuveb]] | io_uring Tutorial (Shuveb Hussain)：SQ/CQ rings/polling mode/zero-copy/syscall batching |
+| [[wiki/sources/handson-brans-kernel-dev]] | Bran's Kernel Dev：x86 bare metal，GDT/IDT/IRQ/paging/heap/VFS/userland |
+| [[wiki/sources/handson-dpdk-getting-started]] | DPDK Linux Getting Started：kernel-bypass packet processing，hugepages/EAL/PMD/NUMA |
 | [[wiki/sources/notes-tools]] | 工具使用笔记：tcpdump、netcat、masscan/nmap |
 | [[wiki/sources/notes-openbmc]] | OpenBMC 深度技术分析 |
 | [[wiki/sources/pdf-cpp-modern-tutorial]] | Modern C++ Tutorial (C++11/14/17/20) |
@@ -112,7 +125,9 @@ created: 2026-05-22
 | [[wiki/sources/bookmark-cpp-design-patterns]] | C++ 设计模式：GoF 23种+7种额外模式，30个C++实现，2.6k stars |
 | [[wiki/sources/bookmark-modern-cmake]] | Modern CMake 教程（中文版）：3.1+ 构建系统最佳实践，纠正网上错误用法 |
 | [[wiki/sources/bookmark-effective-modern-cpp]] | Effective Modern C++ 中文版：Scott Meyers 42条款覆盖移动语义/lambda/并发/智能指针 |
+| [[wiki/sources/bookmark-cmu-15-445]] | CMU 15-445 Intro to Database Systems：存储/索引/查询处理/MVCC/ARIES恢复 |
 | [[wiki/sources/bookmark-cpp-concurrency-in-action]] | C++ Concurrency in Action 第2版 (Web版)：C++20 jthread/semaphore/barrier 补充 |
+| [[wiki/sources/bookmark-hld-handbook]] | HLD Handbook system design：开源系统设计课程，架构模式/可扩展性/案例研究 |
 | [[wiki/sources/bookmark-modern-cpp-programming]] | Modern C++ Programming：Federico Busato 课程，29章节含性能优化/二进制大小/构建工程 |
 | [[wiki/sources/bookmark-hacking-cpp]] | Hacking C++：代码示例+信息图表快速参考，可视化 cheat sheets |
 | [[wiki/sources/github-snort3-infrastructure]] | Snort3 infrastructure: hash/XHash/ZHash, file_api, decompress, js_norm |
