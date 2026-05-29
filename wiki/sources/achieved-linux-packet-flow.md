@@ -72,6 +72,6 @@ created: 2026-05-28
 ## 相关页面
 
 - [[entities/linux/network/net-stack-deep-dive]] — 网络栈全路径深度分析
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 网络子系统框架
+- [[entities/linux/kernel/net]] — 网络子系统框架
 - [[entities/linux/kernel/net/skbuff-deep-dive]] — SKB内存管理详解
 - [[entities/linux/network/linux-network-protocols]] — TCP/UDP协议实现

@@ -112,8 +112,8 @@ Cloudflare 最早使用 XDP，在配置良好的服务器上 iptables 仅处理 
 
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF 核心架构（Verifier/JIT/Maps/CO-RE）
 - [[entities/linux/ebpf/ebpf-networking]] — TC 流量控制与 Cilium
-- [[kernel-net-index]] — Linux 网络子系统（sk_buff/Netfilter/Conntrack）
-- [[kernel-protocols-index]] — 网络协议（TCP/IP/路由）
+- [[entities/linux/kernel/index#networking]] — Linux 网络子系统（sk_buff/Netfilter/Conntrack）
+- [[entities/linux/kernel/index#network-protocols--physical-layer]] — 网络协议（TCP/IP/路由）
 
 ## 来源详情
 

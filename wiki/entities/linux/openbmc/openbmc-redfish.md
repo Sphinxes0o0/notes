@@ -87,4 +87,4 @@ Intel 在 OpenBMC 中添加的 OEM 路径：`/redfish/v1/Managers/bmc/Intel/`，
 - [[entities/linux/openbmc/openbmc-overview]] — OpenBMC 整体架构，Redfish 为其上层管理接口
 - [[entities/linux/openbmc/openbmc-ipmi]] — 传统 IPMI 协议，Redfish 的对比和补充
 - [[entities/linux/openbmc/openbmc-boot]] — 通过 Redfish UpdateService 实现固件在线更新
-- [[entities/linux/kernel/netfilter/linux-kernel-netfilter-framework]] — Netfilter，BMC 网络安全基础
+- [[entities/linux/kernel/netfilter]] — Netfilter，BMC 网络安全基础

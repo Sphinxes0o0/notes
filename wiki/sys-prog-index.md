@@ -20,6 +20,6 @@ created: 2026-05-22
 ## Cross-References
 
 - [[cpp-index]] — C/C++ system programming is the shared foundation; modern C++ idioms apply directly
-- [[kernel-subsystems-index]] — Linux kernel subsystems (IPC, locking) are the kernel-space counterpart to userspace sys programming
+- [[entities/linux/kernel/index]] — Linux kernel subsystems (IPC, locking) are the kernel-space counterpart to userspace sys programming
 - [[interview-index]] — System programming knowledge is a core interview topic (IPC, memory, concurrency)
 - [[datastructure-index]] — System programs rely on efficient data structures and algorithms

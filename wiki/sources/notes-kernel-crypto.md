@@ -34,4 +34,4 @@ created: 2026-05-20
 - 同步/异步: blocking vs callback
 
 ## 相关页面
-- [[entities/linux/kernel/crypto/linux-kernel-crypto-core]]
+- [[entities/linux/kernel/linux-kernel-crypto-core]]

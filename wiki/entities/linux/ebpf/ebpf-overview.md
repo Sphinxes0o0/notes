@@ -90,8 +90,8 @@ CO-RE 通过 BTF 捕获内核类型信息，Clang 记录字段重定位信息（
 - [[entities/linux/ebpf/ebpf-ecosystem]] — eBPF 生态库
 - [[ebpf-sdn-guide]] — eBPF在SDN中的角色（TC/XDP/firewall/tc-ebpf-direct-action）
 - [[xdp-sdn-guide]] — XDP深度（SDN指南）
-- [[kernel-subsystems-index]] — Linux 内核子系统（crypto/locking/IPC/RCU）
-- [[kernel-net-index]] — Linux 网络子系统（sk_buff/Netfilter/TCP）
+- [[entities/linux/kernel/index]] — Linux 内核子系统（crypto/locking/IPC/RCU）
+- [[entities/linux/kernel/index#networking]] — Linux 网络子系统（sk_buff/Netfilter/TCP）
 - [[tools-index]] — 工具索引（tcpdump/bpftool）
 
 ## 来源详情

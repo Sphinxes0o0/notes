@@ -40,7 +40,7 @@ created: 2026-05-27
 
 ## 相关页面
 
-- [[kernel-books-index]] — Linux/Kernel 书籍总索引
+- [[entities/linux/kernel/index]] — Linux/Kernel 书籍总索引
 - [[sources/pdf-arm-architecture]] — ARM 架构文档合集
 - [[os-index]] — 操作系统综合索引
 - [[entities/os/os-concept]] — Operating System Concepts 概念页

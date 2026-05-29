@@ -86,7 +86,7 @@ ZooKeeper / etcd / Consul 提供：
 - [[entities/distributed-systems/replication]] — 共识与复制协同（领导者选举）
 - [[entities/distributed-systems/transactions]] — 分布式事务依赖共识
 - [[entities/distributed-systems/distributed-troubles]] — 共识解决的正是这些问题
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — 内核锁原语（单机对比分布式共识）
+- [[entities/linux/kernel/linux-kernel-locking-core]] — 内核锁原语（单机对比分布式共识）
 
 ## 来源详情
 

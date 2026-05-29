@@ -177,7 +177,7 @@ CONFIG_TEST_BPF=m        # BPF 自我测试
 
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF 核心架构
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP 网络处理
-- [[kernel-subsystems-index]] — Linux 内核子系统
+- [[entities/linux/kernel/index]] — Linux 内核子系统
 - [[tools-index]] — 工具索引
 
 ## 来源详情

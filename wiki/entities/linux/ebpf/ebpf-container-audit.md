@@ -57,7 +57,7 @@ saBPF 修改内核以支持在 cgroup 层级附加 eBPF 程序：
 - [[entities/linux/ebpf/ebpf-security]] — eBPF 安全监控与 Rootkit 防御
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF 核心架构
 - [[entities/linux/ebpf/ebpf-ecosystem]] — eBPF 生态库对比
-- [[kernel-subsystems-index]] — Linux 安全子系统
+- [[entities/linux/kernel/index]] — Linux 安全子系统
 
 ## 来源详情
 

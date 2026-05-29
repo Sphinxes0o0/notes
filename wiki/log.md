@@ -326,10 +326,10 @@ Updated wiki/index.md with new source entries.
 ## [2026-05-20] ingest | github-notes-virt, github-notes-io_uring, github-notes-vfs
 
 Added entity pages:
-- wiki/entities/linux/kernel/virt/linux-kernel-virt-kvm.md — KVM 虚拟化核心
-- wiki/entities/linux/kernel/virt/linux-kernel-virt-virtio.md — Virtio 半虚拟化框架
-- wiki/entities/linux/kernel/io_uring/linux-kernel-io-uring-core.md — io_uring 异步 I/O
-- wiki/entities/linux/kernel/vfs/linux-kernel-vfs-core.md — VFS 虚拟文件系统
+- wiki/entities/linux/kernel/virt-kvm.md — KVM 虚拟化核心
+- wiki/entities/linux/kernel/virt-virtio.md — Virtio 半虚拟化框架
+- wiki/entities/linux/kernel/linux-kernel-io-uring-core.md — io_uring 异步 I/O
+- wiki/entities/linux/kernel/linux-kernel-vfs-core.md — VFS 虚拟文件系统
 
 Cross-linked to existing linux/kernel entities (sched, mm, block).
 Updated wiki/index.md with new sections and cross-reference index.
@@ -337,8 +337,8 @@ Updated wiki/index.md with new sections and cross-reference index.
 ## [2026-05-20] ingest | github-notes-net, github-notes-netfilter, github-notes-network
 
 Added entity pages:
-- wiki/entities/linux/kernel/net/linux-kernel-net-subsystem.md — Linux 网络子系统核心（Socket/sk_buff/Netdevice/Routing/TCP）
-- wiki/entities/linux/kernel/netfilter/linux-kernel-netfilter-framework.md — Netfilter 框架（iptables/nftables/conntrack/NAT）
+- wiki/entities/linux/kernel/net.md — Linux 网络子系统核心（Socket/sk_buff/Netdevice/Routing/TCP）
+- wiki/entities/linux/kernel/netfilter.md — Netfilter 框架（iptables/nftables/conntrack/NAT）
 - wiki/entities/linux/network/linux-network-protocols.md — 网络协议实现（TCP/UDP/IPv4/IPv6/BPF/XDP/桥接）
 
 Added source pages:

@@ -97,6 +97,6 @@ struct fat32_fs {
 ## 来源详情
 
 - **在线阅读**: operating-system-in-1000-lines.vercel.app/zh/
-- **相关**: [[entities/linux/kernel/syscall/linux-kernel-syscall]] — Linux syscall 机制
+- **相关**: [[entities/linux/kernel/linux-kernel-syscall]] — Linux syscall 机制
 - **相关**: [[entities/linux/kernel/mm/linux-kernel-mm]] — 分页/内存管理
 - **相关**: [[entities/linux/kernel/virt/linux-kernel-kvm]] — KVM 虚拟化（VirtIO 相关）

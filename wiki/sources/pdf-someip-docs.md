@@ -59,7 +59,7 @@ Netmap 高性能用户态数据包处理框架（非 SOME/IP 相关内容）。
 - [[entities/midware]] — 中间件概念页（DoIP、SOME/IP）
 - [[entities/sys]] — TCP/IP 协议栈基础
 - [[entities/cpp/cpp-templates]] — C++ 模板（CommonAPI 使用）
-- [[kernel-net-index]] — Linux 网络子系统
+- [[entities/linux/kernel/index#networking]] — Linux 网络子系统
 
 ## 其他 notes/docs 评估
 

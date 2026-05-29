@@ -36,7 +36,7 @@ PTPsec是基于IEEE 1588-2019标准的安全时间同步协议，通过循环路
 - 在真实硬件上验证微秒级精度检测
 
 ## 相关概念
-- [[kernel-subsystems-index]] — Linux内核时间子系统
+- [[entities/linux/kernel/index]] — Linux内核时间子系统
 - [[security-index]] — 安全模块总览
 - [[sources/pdf-ptp-security]] — PTPsec原始论文来源
 

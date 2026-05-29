@@ -36,7 +36,7 @@ ARM TrustZone is a hardware security extension that creates a **Trusted Executio
 
 - [[sources/pdf-arm-architecture]] — ARM architecture reference
 - [[entities/security]] — Security tools and concepts
-- [[kernel-subsystems-index]] — Kernel crypto subsystem
+- [[entities/linux/kernel/index]] — Kernel crypto subsystem
 - [[sources/pdf-trustzone-optee]] — 手机安全和可信应用开发指南（786页权威著作）
 - [[sources/pdf-commercial-crypto-assessment]] — 商用密码评估考核题
 - [[entities/security-commercial-crypto-assessment]] — 中国商用密码应用安全性评估

@@ -51,4 +51,4 @@ created: 2024
 - [[entities/cpp/cpp-llm-inference]] — C++ LLM推理优化
 - [[entities/cpp/cpp-memory-management]] — 内存管理
 - [[cpp-index]] — Modern C++ 模块索引
-- [[kernel-mm-index]] — Linux内存管理（存储相关）
+- [[entities/linux/kernel/index#memory-management]] — Linux内存管理（存储相关）

@@ -57,4 +57,4 @@ summary: "Linux 网络抓包（tcpdump）、网络工具（netcat）、端口扫
 - [[entities/tools/linux-network-tools]] — tcpdump + netcat 网络诊断工具
 - [[entities/tools/port-scanning]] — masscan + nmap 端口扫描
 - [[entities/security]] — Masscan 在安全扫描中的角色
-- [[kernel-net-index]] — 网络抓包依赖内核网络协议栈
+- [[entities/linux/kernel/index#networking]] — 网络抓包依赖内核网络协议栈

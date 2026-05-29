@@ -201,6 +201,6 @@ Michael Kerrisk 的权威 Linux/UNIX 系统编程手册，1556页，是 Linux �
 - [[sources/notes-sys]] — System programming notes (TTY/Shell/ELF/IPC)
 - [[sources/notes-kernel]] — Linux kernel subsystem notes
 - System Call Interface — System call interface entity
-- [[kernel-subsystems-index]] — Kernel subsystems (locking, IPC, RCU, time)
+- [[entities/linux/kernel/index]] — Kernel subsystems (locking, IPC, RCU, time)
 - [[os-index]] — Operating system fundamentals
 - [[sources/notes-os]] — Linux OS notes (VFS/scheduler/SLUB/cgroups)

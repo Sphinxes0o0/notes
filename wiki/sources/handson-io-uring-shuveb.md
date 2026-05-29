@@ -128,5 +128,5 @@ io_uring_submit(&ring);
 
 - **作者博客**: shuveb.github.io
 - **原文**: linuxjournal.com 连载
-- **相关**: [[entities/linux/kernel/io_uring/linux-kernel-io-uring-core]] — Linux io_uring 核心
-- **相关**: [[entities/linux/kernel/syscall/linux-kernel-syscall]] — syscall 机制
+- **相关**: [[entities/linux/kernel/linux-kernel-io-uring-core]] — Linux io_uring 核心
+- **相关**: [[entities/linux/kernel/linux-kernel-syscall]] — syscall 机制

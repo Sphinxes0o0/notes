@@ -64,7 +64,7 @@ sources: [pdf-computer-systems-programmers-perspective, pdf-the-linux-programmin
 
 ## 相关概念
 
-- [[kernel-mm-index]] — Linux 内存管理子系统索引
+- [[entities/linux/kernel/index#memory-management]] — Linux 内存管理子系统索引
 - [[entities/linux/kernel/mm/linux-kernel-mm-slab-allocator]] — SLUB 分配器
 - [[entities/linux/kernel/mm/linux-kernel-mm-page-fault]] — 缺页中断处理
 - [[entities/linux/kernel/mm/linux-kernel-mm-mmap]] — mmap 虚拟内存区域

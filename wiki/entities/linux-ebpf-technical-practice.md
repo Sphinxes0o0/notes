@@ -45,7 +45,7 @@ eBPF Technical Practice v2 is a 100-page white paper authored by the Anolis Comm
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF核心架构
 - [[sources/pdf-ebpf-books]] — eBPF书籍索引
 - [[sources/pdf-ebpf-papers]] — eBPF论文索引
-- [[kernel-net-index]] — Linux网络子系统
+- [[entities/linux/kernel/index#networking]] — Linux网络子系统
 
 ## Source Details
 

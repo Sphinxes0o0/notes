@@ -113,10 +113,10 @@ The definitive guide to parallel programming for Linux kernel developers and per
 
 ## Related Pages
 
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — Kernel locking mechanisms
-- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]] — RCU subsystem
+- [[entities/linux/kernel/linux-kernel-locking-core]] — Kernel locking mechanisms
+- [[entities/linux/kernel/linux-kernel-rcu-core]] — RCU subsystem
 - [[entities/linux/kernel/sched/linux-kernel-sched-core]] — CPU scheduling
-- [[kernel-subsystems-index]] — Kernel subsystems
+- [[entities/linux/kernel/index]] — Kernel subsystems
 - [[entities/cpp/concurrency]] — C++ concurrency
 - [[entities/cpp/cpp-perf-optimization]] — C++ performance optimization
 - [[entities/os/os-process-thread]] — Process and thread model

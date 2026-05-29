@@ -53,5 +53,5 @@ tags: [security, ebpf, rootkit, falco, google, krsi, linux-kernel]
 ## 相关页面
 - [[entities/linux/ebpf/ebpf-security-observability]]
 - [[entities/linux/security/linux-security-observability-ebpf]]
-- [[kernel-subsystems-index]]
+- [[entities/linux/kernel/index]]
 - [[sources/pdf-ebpf-papers]]

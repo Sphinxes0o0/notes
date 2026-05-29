@@ -39,7 +39,7 @@ mbedtls (formerly PolarSSL) is a lightweight, portable cryptographic library des
 
 - [[entities/arm/trustzone-op-tee]] — Hardware TEE for IoT
 - [[entities/security]] — Security tools
-- [[kernel-subsystems-index]] — Kernel crypto subsystem (comparison with mbedtls)
+- [[entities/linux/kernel/index]] — Kernel crypto subsystem (comparison with mbedtls)
 
 ## Source Details
 

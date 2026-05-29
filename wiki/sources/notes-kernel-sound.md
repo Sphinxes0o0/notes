@@ -34,4 +34,4 @@ created: 2026-05-20
 - PCM: 采样率、位深、周期、缓冲区DMA
 
 ## 相关页面
-- [[entities/linux/kernel/sound/linux-kernel-sound-core]]
+- [[entities/linux/kernel/linux-kernel-sound-core]]

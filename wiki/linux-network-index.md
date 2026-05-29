@@ -24,4 +24,4 @@ created: 2026-05-29
 
 - [[linux-ebpf-xdp]] — XDP provides high-performance packet processing
 - [[linux-network-tc-ebpf-direct-action]] — TC Direct Action works with XDP pipeline
-- [[kernel-net-index]] — Linux kernel network protocol implementation
+- [[entities/linux/kernel/index#networking]] — Linux kernel network protocol implementation

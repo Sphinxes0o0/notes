@@ -17,7 +17,7 @@ created: 2026-05-22
 
 ## Cross-References
 
-- [[kernel-net-index]] — tcpdump 抓包和端口扫描依赖内核网络协议栈（Socket/sk_buff/TCP）
+- [[entities/linux/kernel/index#networking]] — tcpdump 抓包和端口扫描依赖内核网络协议栈（Socket/sk_buff/TCP）
 - [[entities/security]] — masscan 架构分析（无状态扫描、BlackRock 随机化、SYN Cookie）在安全领域深度应用
 - [[sys-prog-index]] — 安全工具属于系统编程中 security 子域
 - [[os-index]] — netcat 的 socket 编程是 OS I/O 模型的核心概念

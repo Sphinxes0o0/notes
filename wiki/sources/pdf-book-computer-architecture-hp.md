@@ -37,4 +37,4 @@ created: 2026-05-27
 - [[sources/pdf-book-armv8-arm]] — ARMv8 架构
 - [[sources/pdf-book-cortex-a9-trm]] — Cortex-A9 微架构
 - [[sources/pdf-book-cache-memory]] — Cache 体系结构
-- [[kernel-books-index]] — 体系结构书籍索引
+- [[entities/linux/kernel/index]] — 体系结构书籍索引

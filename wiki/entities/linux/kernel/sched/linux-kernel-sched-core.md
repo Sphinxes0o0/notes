@@ -67,13 +67,13 @@ struct task_struct {
 - [[entities/linux/kernel/sched/linux-kernel-sched-cfs]] — CFS 调度器实现
 - [[entities/linux/kernel/sched/linux-kernel-sched-context-switch]] — context_switch() 执行 CPU 切换
 - [[entities/linux/kernel/sched/linux-kernel-sched-load-balance]] — 多 CPU 间负载均衡
-- [[entities/linux/kernel/smp/linux-kernel-smp]] — SMP 多核系统，per-CPU 调度实体
+- [[entities/linux/kernel/linux-kernel-smp]] — SMP 多核系统，per-CPU 调度实体
 
 ## 来源详情
 
 - [[sources/notes-kernel]] — sched_core.md
 ## Related Concepts
 
-- [[entities/linux/kernel/time/linux-kernel-time-core]] — 时间管理是调度器的核心依赖
-- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]] — RCU用于调度器数据保护
-- [[entities/linux/kernel/virt/linux-kernel-virt-kvm]] — vCPU调度是KVM虚拟化的核心
+- [[entities/linux/kernel/linux-kernel-time-core]] — 时间管理是调度器的核心依赖
+- [[entities/linux/kernel/linux-kernel-rcu-core]] — RCU用于调度器数据保护
+- [[entities/linux/kernel/virt-kvm]] — vCPU调度是KVM虚拟化的核心

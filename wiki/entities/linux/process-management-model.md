@@ -106,7 +106,7 @@ R (Running) ←→ S (Sleeping/Interruptible)
 - [[os-index]] — 操作系统基础
 - [[sys-prog-index]] — 系统编程导航
 - Virtual Memory Systems — 虚拟内存
-- [[kernel-sched-index]] — CPU 调度
+- [[entities/linux/kernel/index#scheduler]] — CPU 调度
 - [[sources/notes-kernel]] — Linux 内核子系统
 - [[sources/pdf-concurrency-perf]] — 并发与 RCU
 

@@ -51,5 +51,5 @@ created: 2018
 ## 相关页面
 - [[entities/arm/trustzone-op-tee]] — TrustZone & OP-TEE entity
 - [[entities/linux/security/linux-security-observability-ebpf]] — 安全可观测性
-- [[kernel-subsystems-index]] — 内核子系统
+- [[entities/linux/kernel/index]] — 内核子系统
 - [[sources/pdf-security-crypto-books]] — 安全密码学书籍合集

@@ -33,7 +33,7 @@ The **Commercial Cryptography Application Security Assessment** (商用密码应
 
 - [[entities/security/mbedtls-crypto]] — mbedtls supports SM2/SM3/SM4
 - [[entities/arm/trustzone-op-tee]] — TEE for secure key storage (PKI/国密)
-- [[kernel-subsystems-index]] — Linux kernel crypto (SM algorithms support)
+- [[entities/linux/kernel/index]] — Linux kernel crypto (SM algorithms support)
 
 ## Source Details
 

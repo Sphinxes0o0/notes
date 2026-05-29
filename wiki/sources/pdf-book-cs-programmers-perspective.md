@@ -36,4 +36,4 @@ created: 2026-05-27
 - [[sources/pdf-computer-systems-programmers-perspective]] — CSAPP 相关页面
 - [[sources/pdf-linux-sysprog]] — Linux 系统编程
 - [[sources/pdf-book-linux-kernel-deep]] — 深入理解 Linux 内核
-- [[kernel-books-index]] — 系统书籍索引
+- [[entities/linux/kernel/index]] — 系统书籍索引

@@ -102,6 +102,6 @@ put_user(val, ptr);
 - **原始维护者**: sysprog21 (modern fork for kernel v5.10+)
 - **许可证**: Open Software License
 - **测试环境**: QEMU (推荐，安全测试内核模块)
-- **相关**: [[entities/linux/kernel/syscall/linux-kernel-syscall]] — syscall 接口
+- **相关**: [[entities/linux/kernel/linux-kernel-syscall]] — syscall 接口
 - **相关**: [[entities/linux/kernel/mm/linux-kernel-mm]] — 内存管理
-- **相关**: [[entities/linux/kernel/vfs/linux-kernel-vfs-core]] — 字符设备/VFS
+- **相关**: [[entities/linux/kernel/linux-kernel-vfs-core]] — 字符设备/VFS

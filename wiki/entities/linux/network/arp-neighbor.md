@@ -83,8 +83,8 @@ cat /proc/sys/net/ipv4/neigh/eth0/gc_stale_time
 
 - [[entities/linux/network/net-stack-deep-dive]] — 网络栈全路径（neigh_resolve_output 位置）
 - [[entities/linux/network/linux-network-protocols]] — IPv4 路由与邻居查找
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 网络子系统框架
-- [[entities/linux/kernel/netfilter/linux-kernel-netfilter-framework]] — Netfilter 钩子（PREROUTING/POSTROUTING 与邻居子系统交互）
+- [[entities/linux/kernel/net]] — 网络子系统框架
+- [[entities/linux/kernel/netfilter]] — Netfilter 钩子（PREROUTING/POSTROUTING 与邻居子系统交互）
 
 ## 来源详情
 

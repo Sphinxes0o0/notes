@@ -161,9 +161,9 @@ RTO    = srtt + 4 × rttvar
 
 ## 相关概念
 
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 网络子系统整体架构
+- [[entities/linux/kernel/net]] — 网络子系统整体架构
 - [[entities/linux/kernel/net/skbuff-deep-dive]] — SKB 内存管理与 Clone/Copy 详解
-- [[entities/linux/kernel/netfilter/linux-kernel-netfilter-framework]] — Netfilter/iptables/nftables/conntrack
+- [[entities/linux/kernel/netfilter]] — Netfilter/iptables/nftables/conntrack
 - [[entities/linux/network/linux-network-protocols]] — TCP/UDP/IPv4/IPv6 协议实现细节
 - [[entities/linux/network/osi-physical-layer]] — 底部 PHY/MAC 层与驱动接口
 

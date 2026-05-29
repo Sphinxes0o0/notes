@@ -20,15 +20,15 @@ created: 2026-05-22
 ### Linux Kernel
 | Index | Domain | Entities |
 |-------|--------|----------|
-| [[kernel-virt-index]] | KVM, Virtio virtualization | 2 |
-| [[kernel-io-index]] | io_uring, VFS | 2 |
-| [[kernel-net-index]] | Socket/sk_buff, Netfilter, TCP/IP protocols | 4 |
-| [[kernel-protocols-index]] | Protocol details, full-stack path, PHY/MAC layer | 3 |
-| [[kernel-mm-index]] | SLUB, page fault, swap, reclaim, mmap | 5 |
-| [[kernel-sched-index]] | CFS, context switch, load balancing | 4 |
-| [[kernel-block-index]] | bio/request, blk-mq, IO schedulers | 3 |
-| [[kernel-subsystems-index]] | Crypto, locking, IPC, RCU, time, sound | 6 |
-| [[kernel-books-index]] | Linux/Kernel书籍索引：内核/TLPI/APUE/CSAPP/网络/并发 (9 books) | 3 |
+| [[entities/linux/kernel/index#virtualization]] | KVM, Virtio virtualization | 2 |
+| [[entities/linux/kernel/index#io-uring--vfs]] | io_uring, VFS | 2 |
+| [[entities/linux/kernel/index#networking]] | Socket/sk_buff, Netfilter, TCP/IP protocols | 4 |
+| [[entities/linux/kernel/index#network-protocols--physical-layer]] | Protocol details, full-stack path, PHY/MAC layer | 3 |
+| [[entities/linux/kernel/index#memory-management]] | SLUB, page fault, swap, reclaim, mmap | 5 |
+| [[entities/linux/kernel/index#scheduler]] | CFS, context switch, load balancing | 4 |
+| [[entities/linux/kernel/index#block-layer]] | bio/request, blk-mq, IO schedulers | 3 |
+| [[entities/linux/kernel/index]] | Crypto, locking, IPC, RCU, time, sound | 6 |
+| [[entities/linux/kernel/index]] | Linux/Kernel书籍索引：内核/TLPI/APUE/CSAPP/网络/并发 (9 books) | 3 |
 | [[ebpf-index]] | XDP, TC, Cilium, Falco, CO-RE, eBPF ecosystem, saBPF, Security Observability, 10 papers | 7 |
 
 ### Embedded Network

@@ -115,5 +115,5 @@ created: 2026-05-27
 - [[cpp-index]] — C++ 模块索引
 - [[datastructure-index]] — 数据结构与算法模块索引
 - [[interview-index]] — 编程面试模块索引
-- [[kernel-books-index]] — Linux/Kernel 书籍索引（含 ARM 子节）
+- [[entities/linux/kernel/index]] — Linux/Kernel 书籍索引（含 ARM 子节）
 - [[ebpf-index]] — eBPF 模块索引

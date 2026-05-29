@@ -74,7 +74,7 @@ RCU（Read-Copy-Update）是Linux内核一种高效的无锁同步机制，允�
 | rcupdate | kernel/rcu/rcupdate.c |
 
 ## 相关概念
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — 锁机制对比
+- [[entities/linux/kernel/linux-kernel-locking-core]] — 锁机制对比
 - [[entities/linux/kernel/sched/linux-kernel-sched-core]] — 调度与RCU关系
 
 ## 来源详情

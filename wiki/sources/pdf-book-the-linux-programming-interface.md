@@ -40,4 +40,4 @@ created: 2026-05-27
 - [[sources/pdf-unix-environment-advanced-programming]] — APUE（Unix 环境高级编程）
 - [[sources/pdf-linux-sysprog]] — Linux 系统编程
 - [[sources/pdf-linux-net-server]] — Linux 高性能服务器
-- [[kernel-books-index]] — 系统/Kernel 书籍索引
+- [[entities/linux/kernel/index]] — 系统/Kernel 书籍索引

@@ -32,4 +32,4 @@ created: 2026-05-27
 - [[sources/pdf-book-the-linux-programming-interface]] — TLPI
 - [[sources/pdf-unix-environment-advanced-programming]] — Unix 高级编程
 - [[sources/pdf-linux-sysprog]] — Linux 系统编程
-- [[kernel-books-index]] — 系统工具书籍索引
+- [[entities/linux/kernel/index]] — 系统工具书籍索引

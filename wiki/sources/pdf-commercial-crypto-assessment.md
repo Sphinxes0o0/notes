@@ -44,6 +44,6 @@ created: 2023
 
 ## 相关页面
 - [[sources/pdf-security-crypto-books]] — 安全密码学书籍合集
-- [[kernel-subsystems-index]] — 内核密码学子系统
+- [[entities/linux/kernel/index]] — 内核密码学子系统
 - [[entities/linux/security/linux-security-observability-ebpf]] — 安全监控
 - [[sys-prog-index]] — 系统编程导航

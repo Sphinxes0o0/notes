@@ -97,12 +97,12 @@ The definitive textbook bridging computer architecture and systems programming.
 - [[entities/os/os-virtual-memory]] — Virtual memory
 - [[entities/os/os-io-model]] — I/O models (select/poll/epoll)
 - [[entities/os/linux-vfs]] — VFS and file I/O
-- [[entities/linux/kernel/io_uring/linux-kernel-io-uring-core]] — io_uring async I/O
+- [[entities/linux/kernel/linux-kernel-io-uring-core]] — io_uring async I/O
 - [[entities/linux/kernel/sched/linux-kernel-sched-context-switch]] — Context switching
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — Kernel locking
-- [[entities/linux/kernel/ipc/linux-kernel-ipc-core]] — Kernel IPC
+- [[entities/linux/kernel/linux-kernel-locking-core]] — Kernel locking
+- [[entities/linux/kernel/linux-kernel-ipc-core]] — Kernel IPC
 - [[entities/cpp/smart-pointers]] — RAII and resource management
 - [[entities/cpp/concurrency]] — C++ concurrency
 - [[entities/cpp/cpp-stl-containers]] — STL containers
 - [[cpp-index]] — Modern C++ and STL
-- [[kernel-net-index]] — Kernel networking
+- [[entities/linux/kernel/index#networking]] — Kernel networking

@@ -45,5 +45,5 @@ created: 2024
 ## 相关页面
 - [[entities/cpp/cpp-perf-optimization]] — C++性能优化
 - [[entities/cpp/cpp-memory-management]] — 内存性能
-- [[kernel-subsystems-index]] — Linux内核子系统（性能相关）
+- [[entities/linux/kernel/index]] — Linux内核子系统（性能相关）
 - [[cpp-index]] — Modern C++ 模块索引

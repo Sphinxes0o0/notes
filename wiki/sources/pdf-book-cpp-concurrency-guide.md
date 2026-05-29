@@ -26,4 +26,4 @@ C++ 并发编程中文版（528页）：线程管理、互斥量（mutex/lock_gu
 - [[sources/pdf-book-concurrency-modern-cpp]] — Concurrency with Modern C++ (480页中文版)
 - [[sources/pdf-book-advanced-memory-mgmt-cpp]] — Advanced C++ memory management
 - [[sources/pdf-book-modern-cpp]] — Modern C++ books
-- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]] — Linux RCU
+- [[entities/linux/kernel/linux-kernel-rcu-core]] — Linux RCU

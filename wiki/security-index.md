@@ -34,7 +34,7 @@ updated: 2026-05-25
 
 ## Cross-References
 
-- [[kernel-subsystems-index]] — Linux kernel crypto subsystem (crypto_alg, skcipher, aead)
+- [[entities/linux/kernel/index]] — Linux kernel crypto subsystem (crypto_alg, skcipher, aead)
 - [[arm-index]] — TrustZone & OP-TEE for hardware security isolation
 - [[ebpf-index]] — eBPF security observability (Falco, KRSI, LSM)
 - [[sources/notes-security]] — Security tools (Masscan, Falco, Snort)

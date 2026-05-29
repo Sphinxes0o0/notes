@@ -33,4 +33,4 @@ created: 2026-05-20
 - NOCB: No-CB RCU，减少锁竞争
 
 ## 相关页面
-- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]]
+- [[entities/linux/kernel/linux-kernel-rcu-core]]

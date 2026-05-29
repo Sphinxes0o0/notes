@@ -57,7 +57,7 @@ Bulletproof TLS and PKI是Ivan Ristić(Feisty Duck)所著的权威TLS/DTLS/PKI�
 - [[entities/security/mbedtls-crypto]] — 嵌入式TLS/DTLS库
 - [[entities/security/commercial-cryptography]] — 国密SM2/SM3/SM4
 - [[security-index]] — 安全模块总览
-- [[kernel-subsystems-index]] — Linux内核crypto子系统
+- [[entities/linux/kernel/index]] — Linux内核crypto子系统
 
 ## 来源
 - [[sources/pdf-security-crypto-books-updated]] — Bulletproof TLS/PKI, OpenSSL攻略, mbedtls开发实战

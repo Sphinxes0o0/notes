@@ -59,6 +59,6 @@ tags: [security, ebpf, container, kubernetes, audit, lsm, saBPF, provenance]
 ## 相关页面
 - [[entities/linux/ebpf/ebpf-container-audit]]
 - [[entities/linux/security/linux-security-observability-ebpf]]
-- [[kernel-subsystems-index]]
+- [[entities/linux/kernel/index]]
 - [[sources/pdf-ebpf-papers]]
 - [[ebpf-index]]

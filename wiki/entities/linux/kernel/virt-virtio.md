@@ -81,9 +81,9 @@ ACKNOWLEDGE → DRIVER → DRIVER_OK
 
 ## 相关概念
 
-- [[entities/linux/kernel/virt/linux-kernel-virt-kvm]]: KVM 虚拟机监控器（通常作为 Virtio 的 host 端）
+- [[entities/linux/kernel/virt-kvm]]: KVM 虚拟机监控器（通常作为 Virtio 的 host 端）
 - [[entities/linux/kernel/block/linux-kernel-block-core]]: 块设备层（virtio-blk 的后端）
-- [[entities/linux/kernel/io_uring/linux-kernel-io-uring-core]]: io_uring（现代异步 I/O，可与 Virtio 协同）
+- [[entities/linux/kernel/linux-kernel-io-uring-core]]: io_uring（现代异步 I/O，可与 Virtio 协同）
 
 ## 来源详情
 
@@ -94,4 +94,4 @@ ACKNOWLEDGE → DRIVER → DRIVER_OK
 - `raw/github/notes/virt/linux_kernel/virtio_device_drivers.md`
 ## Related Concepts
 
-- [[entities/linux/kernel/sound/linux-kernel-sound-core]] — Virtio音频设备驱动
+- [[entities/linux/kernel/linux-kernel-sound-core]] — Virtio音频设备驱动

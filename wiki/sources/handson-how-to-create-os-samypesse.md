@@ -82,5 +82,5 @@ SECTIONS {
 ## 来源详情
 
 - **GitHub**: `SamyPesse/how-to-create-an-operating-system`
-- **相关**: [[entities/linux/kernel/syscall/linux-kernel-syscall]] — syscall 接口
+- **相关**: [[entities/linux/kernel/linux-kernel-syscall]] — syscall 接口
 - **相关**: [[entities/os/os-concept]] — 操作系统概念

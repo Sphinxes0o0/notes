@@ -99,6 +99,6 @@ if (bpf_core_field_exists(task->real_parent))
 
 - [[entities/linux/ebpf/ebpf-security]] — eBPF 安全监控与 Rootkit
 - [[entities/linux/security/linux-security-observability-ebpf]] — eBPF 安全可观测性
-- [[kernel-subsystems-index]] — Linux 内核子系统
+- [[entities/linux/kernel/index]] — Linux 内核子系统
 - [[sources/pdf-ebpf-papers]] — eBPF 论文集（含本篇）
 - [[ebpf-index]] — eBPF 模块索引

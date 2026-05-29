@@ -103,8 +103,8 @@ struct boot_params {
 ## 相关概念
 
 - [[entities/os/os-concept]] — 操作系统概念（进程/内存/文件抽象）
-- [[entities/linux/kernel/syscall/linux-kernel-syscall]] — 系统调用（内核就绪后第一条 syscall）
-- [[entities/linux/kernel/virt/linux-kernel-virt-kvm]] — KVM 虚拟化（虚拟机 boot 过程）
+- [[entities/linux/kernel/linux-kernel-syscall]] — 系统调用（内核就绪后第一条 syscall）
+- [[entities/linux/kernel/virt-kvm]] — KVM 虚拟化（虚拟机 boot 过程）
 - [[entities/linux/kernel/mm/linux-kernel-mm]] — 内存管理（boot 后初始化）
 - [[entities/linux/safeos/safeos-architecture]] — SafeOS 架构
 

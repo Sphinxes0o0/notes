@@ -93,4 +93,4 @@ struct file {
 
 - **来源**: osdever.net
 - **相关**: [[entities/os/os-concept]] — 操作系统概念
-- **相关**: [[entities/linux/kernel/vfs/linux-kernel-vfs-core]] — Linux VFS
+- **相关**: [[entities/linux/kernel/linux-kernel-vfs-core]] — Linux VFS

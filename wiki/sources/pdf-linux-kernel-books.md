@@ -105,16 +105,16 @@ A comprehensive line-by-line Chinese annotation of the Linux kernel v0.12 source
 
 ## Related Pages
 
-- [[kernel-books-index]] — 完整 Linux/Kernel 书籍索引（Batch K 更新）
-- [[kernel-sched-index]] — Scheduler internals
-- [[kernel-mm-index]] — Memory management internals
-- [[kernel-io-index]] — I/O subsystem
-- [[kernel-virt-index]] — KVM/Virtio virtualization
-- [[kernel-net-index]] — Network subsystem
-- [[kernel-subsystems-index]] — Locking, IPC, RCU, time
+- [[entities/linux/kernel/index]] — 完整 Linux/Kernel 书籍索引（Batch K 更新）
+- [[entities/linux/kernel/index#scheduler]] — Scheduler internals
+- [[entities/linux/kernel/index#memory-management]] — Memory management internals
+- [[entities/linux/kernel/index#io-uring--vfs]] — I/O subsystem
+- [[entities/linux/kernel/index#virtualization]] — KVM/Virtio virtualization
+- [[entities/linux/kernel/index#networking]] — Network subsystem
+- [[entities/linux/kernel/index]] — Locking, IPC, RCU, time
 - [[entities/linux/kernel/sched/linux-kernel-sched-core]] — Process scheduling
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — Kernel locking mechanisms
-- [[entities/linux/kernel/ipc/linux-kernel-ipc-core]] — IPC subsystem
+- [[entities/linux/kernel/linux-kernel-locking-core]] — Kernel locking mechanisms
+- [[entities/linux/kernel/linux-kernel-ipc-core]] — IPC subsystem
 - [[entities/linux/kernel/block/linux-kernel-block-core]] — Block I/O layer
 - [[os-index]] — Operating system fundamentals
 - [[sys-prog-index]] — System programming

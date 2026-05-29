@@ -108,7 +108,7 @@ tcpdump -i eth0 'tcp[tcpflags] & tcp-rst != 0'
 
 - [[entities/tools/port-scanning]] — 端口扫描（masscan + nmap）与网络诊断互补
 - [[entities/security]] — tcpdump 广泛用于安全审计和取证
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 网络抓包依赖内核 sk_buff 和协议栈
+- [[entities/linux/kernel/net]] — 网络抓包依赖内核 sk_buff 和协议栈
 - [[entities/os/os-io-model]] — netcat 的 I/O 模型涉及阻塞式 socket 编程
 
 ## 来源详情

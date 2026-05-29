@@ -46,7 +46,7 @@ sources: [pdf-security-papers-ebpf, pdf-isovalent-security-observability, pdf-sa
 ## 相关概念
 - [[entities/linux/ebpf/ebpf-security-observability]] — eBPF安全可观测性（Isovalent）
 - [[entities/linux/ebpf/ebpf-container-audit]] — saBPF容器审计
-- [[kernel-subsystems-index]] — Linux内核密码学子系统(crypto_alg, skcipher, aead)
+- [[entities/linux/kernel/index]] — Linux内核密码学子系统(crypto_alg, skcipher, aead)
 - [[ebpf-index]] — eBPF总体索引(XDP/TC/Cilium/Falco/CO-RE)
 - [[sources/notes-security]] — 安全工具(Masscan, Falco, Snort)
 

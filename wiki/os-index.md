@@ -25,8 +25,8 @@ created: 2026-05-22
 
 ## Cross-References
 
-- [[kernel-sched-index]] — Deep-dive into scheduler internals
-- [[kernel-mm-index]] — Deep-dive into memory management internals
-- [[kernel-io-index]] — Deep-dive into VFS and io_uring
-- [[kernel-subsystems-index]] — Locking and IPC are core OS subsystems
+- [[entities/linux/kernel/index#scheduler]] — Deep-dive into scheduler internals
+- [[entities/linux/kernel/index#memory-management]] — Deep-dive into memory management internals
+- [[entities/linux/kernel/index#io-uring--vfs]] — Deep-dive into VFS and io_uring
+- [[entities/linux/kernel/index]] — Locking and IPC are core OS subsystems
 - [[synthesis/topic-os-fundamentals]] — OS fundamentals synthesis combining all above

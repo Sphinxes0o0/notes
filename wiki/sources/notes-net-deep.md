@@ -47,9 +47,9 @@ sources: [notes-net-deep]
 
 ## 相关页面
 
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 已 ingest 的网络子系统概览
+- [[entities/linux/kernel/net]] — 已 ingest 的网络子系统概览
 - [[entities/linux/kernel/net/skbuff-deep-dive]] — SKB 内存管理深度分析
-- [[entities/linux/kernel/netfilter/linux-kernel-netfilter-framework]] — Netfilter 框架
+- [[entities/linux/kernel/netfilter]] — Netfilter 框架
 - [[entities/linux/network/linux-network-protocols]] — 协议层实现
 - [[entities/linux/network/osi-physical-layer]] — PHY/MAC 物理层
 - [[entities/linux/network/net-stack-deep-dive]] — 网络栈全路径分析

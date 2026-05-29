@@ -33,4 +33,4 @@ created: 2026-05-20
 - lockdep: 依赖追踪检测死锁
 
 ## 相关页面
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]]
+- [[entities/linux/kernel/linux-kernel-locking-core]]

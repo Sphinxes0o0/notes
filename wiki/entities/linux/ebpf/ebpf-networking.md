@@ -111,8 +111,8 @@ BPF 程序拦截 socket 操作，动态设置 TCP 参数。15 个 hook 点覆盖
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF 核心架构
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP 高速数据路径
 - [[entities/linux/ebpf/ebpf-security]] — eBPF 安全监控（Falco/KRSI）
-- [[kernel-net-index]] — Linux 网络子系统（Netfilter/Conntrack/sk_buff）
-- [[kernel-protocols-index]] — 网络协议（TCP/路由）
+- [[entities/linux/kernel/index#networking]] — Linux 网络子系统（Netfilter/Conntrack/sk_buff）
+- [[entities/linux/kernel/index#network-protocols--physical-layer]] — 网络协议（TCP/路由）
 
 ## 来源详情
 

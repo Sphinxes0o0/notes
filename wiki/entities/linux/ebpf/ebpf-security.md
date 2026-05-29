@@ -115,7 +115,7 @@ eBPF rootkit 利用 eBPF 实现**内核级**攻击，且无需加载内核模块
 
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF 核心架构（Verifier/JIT/Maps）
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP 网络处理（数据包层安全）
-- [[kernel-subsystems-index]] — Linux 内核安全子系统（crypto/LSM/seccomp）
+- [[entities/linux/kernel/index]] — Linux 内核安全子系统（crypto/LSM/seccomp）
 - [[sources/notes-security]] — 安全工具（Masscan/Falco/Snort）
 
 ## 来源详情

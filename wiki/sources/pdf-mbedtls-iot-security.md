@@ -215,5 +215,5 @@ sources: []
 - [[sources/pdf-security-crypto-books-updated]] — mbedtls/OpenSSL/Bulletproof TLS 系列
 - [[sources/pdf-crypto-books]] — 图解密码技术 + OpenSSL Cookbook
 - [[entities/security/commercial-cryptography]] — 国密算法 SM2/SM3/SM4
-- [[kernel-subsystems-index]] — 内核密码学子系统（crypto API）
+- [[entities/linux/kernel/index]] — 内核密码学子系统（crypto API）
 - [[lwip-index]] — lwIP 嵌入式协议栈（可与 mbedtls 集成）

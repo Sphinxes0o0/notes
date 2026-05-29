@@ -56,5 +56,5 @@ OpenBMC 采用三层架构：
 - [[entities/linux/openbmc/openbmc-ipmi]] — IPMI 2.0 协议栈实现，KCS/SMIC 接口
 - [[entities/linux/openbmc/openbmc-redfish]] — Redfish RESTful API 接口，会话认证
 - [[entities/linux/openbmc/openbmc-boot]] — 启动控制、A/B 双镜像固件更新
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — Linux 内核锁机制，D-Bus 内部依赖
+- [[entities/linux/kernel/linux-kernel-locking-core]] — Linux 内核锁机制，D-Bus 内部依赖
 - [[entities/linux/kernel/sched/linux-kernel-sched-core]] — 调度器，systemd 服务调度基础

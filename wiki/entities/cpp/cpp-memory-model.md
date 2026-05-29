@@ -28,8 +28,8 @@ The formal specification of how threads interact through shared memory, defining
 ## Related Concepts
 
 - [[entities/cpp/concurrency]] — C++ concurrency primitives
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — Kernel locking mechanisms
-- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]] — RCU synchronization
+- [[entities/linux/kernel/linux-kernel-locking-core]] — Kernel locking mechanisms
+- [[entities/linux/kernel/linux-kernel-rcu-core]] — RCU synchronization
 - [[entities/cpp/cpp-perf-optimization]] — Performance optimization
 - [[cpp-index]] — Modern C++
 

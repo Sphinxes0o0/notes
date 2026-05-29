@@ -29,5 +29,5 @@ created: 2026-05-23
 
 - [[qemu-index]] — QEMU simulates ARM Cortex-A9 and ARMv8-A CPUs
 - [[os-index]] — ARM processors run Linux OS with MMU, cache coherency
-- [[kernel-virt-index]] — ARM virtualization extensions (EL2, KVM)
+- [[entities/linux/kernel/index#virtualization]] — ARM virtualization extensions (EL2, KVM)
 - [[security-index]] — TrustZone for hardware security isolation

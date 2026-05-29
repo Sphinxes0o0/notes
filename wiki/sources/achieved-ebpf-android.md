@@ -64,4 +64,4 @@ if (enabledRules & (DROP_IF_SET | DROP_IF_UNSET) & (uidRules ^ DROP_IF_UNSET))
 
 - [[entities/linux/ebpf/ebpf-networking]] — eBPF网络多层次Hook（XDP/TC/Sock_ops）
 - [[entities/linux/network/linux-network-protocols]] — TCP协议实现细节
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Linux网络子系统
+- [[entities/linux/kernel/net]] — Linux网络子系统

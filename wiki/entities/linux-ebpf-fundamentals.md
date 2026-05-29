@@ -45,7 +45,7 @@ BPF Maps/programs are kernel resources (anonymous inodes). Pinning exposes them 
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF核心架构（详细）
 - [[sources/pdf-ebpf-books]] — eBPF书籍索引
 - [[sources/pdf-ebpf-technical-practice]] — eBPF技术实践白皮书
-- [[kernel-net-index]] — Linux网络子系统
+- [[entities/linux/kernel/index#networking]] — Linux网络子系统
 
 ## Source Details
 

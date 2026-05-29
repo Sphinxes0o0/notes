@@ -135,9 +135,9 @@ created: 2026-05-28
 
 ## Related Concepts
 
-- [[entities/linux/kernel/vfs/linux-kernel-vfs-core]] — VFS (系统调用接口)
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — 锁原语 (同步原语)
-- [[entities/linux/kernel/time/linux-kernel-time-core]] — 时间管理 (定时器)
-- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]] — RCU (同步原语)
-- [[entities/linux/kernel/smp/linux-kernel-smp]] — SMP 多核 (per-CPU 变量、CPU masks)
-- [[entities/linux/kernel/syscall/linux-kernel-syscall]] — 系统调用机制 (entry_SYSCALL_64, sys_call_table)
+- [[entities/linux/kernel/linux-kernel-vfs-core]] — VFS (系统调用接口)
+- [[entities/linux/kernel/linux-kernel-locking-core]] — 锁原语 (同步原语)
+- [[entities/linux/kernel/linux-kernel-time-core]] — 时间管理 (定时器)
+- [[entities/linux/kernel/linux-kernel-rcu-core]] — RCU (同步原语)
+- [[entities/linux/kernel/linux-kernel-smp]] — SMP 多核 (per-CPU 变量、CPU masks)
+- [[entities/linux/kernel/linux-kernel-syscall]] — 系统调用机制 (entry_SYSCALL_64, sys_call_table)

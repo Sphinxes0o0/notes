@@ -111,6 +111,6 @@ struct rte_mempool *pool = rte_pktmbuf_pool_create(
 ## 来源详情
 
 - **官方文档**: doc.dpdk.org
-- **相关**: [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Linux 网络栈
+- **相关**: [[entities/linux/kernel/net]] — Linux 网络栈
 - **相关**: [[entities/linux/kernel/net/linux-kernel-io-uring-core]] — io_uring（异步 I/O）
 - **相关**: [[entities/linux/kernel/mm/linux-kernel-mm]] — 内存/hugepages

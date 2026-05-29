@@ -91,7 +91,7 @@ dev_queue_xmit() → netdev_start_xmit() → NIC DMA
 
 ## 相关概念
 
-- [[entities/linux/kernel/netfilter/linux-kernel-netfilter-framework]] — Netfilter 钩子框架
+- [[entities/linux/kernel/netfilter]] — Netfilter 钩子框架
 - [[entities/linux/network/linux-network-protocols]] — 协议层实现（TCP/UDP/IPv4/IPv6）
 - [[entities/linux/kernel/sched/linux-kernel-sched-cfs]] — 调度与网络 softirq 抢占
 - [[entities/linux/network/arp-neighbor]] — ARP/Neighbor 表老化机制
@@ -105,4 +105,4 @@ dev_queue_xmit() → netdev_start_xmit() → NIC DMA
 
 ## Related Concepts
 
-- [[entities/linux/kernel/crypto/linux-kernel-crypto-core]] — 网络协议栈依赖内核加密API实现TLS/IPsec
+- [[entities/linux/kernel/linux-kernel-crypto-core]] — 网络协议栈依赖内核加密API实现TLS/IPsec

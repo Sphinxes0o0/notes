@@ -62,7 +62,7 @@ PTP (Precision Time Protocol, IEEE 1588) 是智能电网、TSN（时间敏感网
 ## 相关页面
 
 - [[security-index]] — 安全模块入口
-- [[kernel-protocols-index]] — 网络协议与物理层
+- [[entities/linux/kernel/index#network-protocols--physical-layer]] — 网络协议与物理层
 - [[entities/linux/ebpf/ebpf-security]] — eBPF 网络安全监控
 - [[sources/notes-net]] — Linux 网络子系统
 - [[sources/notes-security]] — 安全工具笔记

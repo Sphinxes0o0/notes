@@ -33,4 +33,4 @@ created: 2026-05-20
 - NTP: 网络时间协议校正
 
 ## 相关页面
-- [[entities/linux/kernel/time/linux-kernel-time-core]]
+- [[entities/linux/kernel/linux-kernel-time-core]]

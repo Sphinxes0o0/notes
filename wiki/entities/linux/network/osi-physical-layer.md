@@ -85,7 +85,7 @@ PHY ←→ 物理介质    (RJ45/SFP)
 
 ## 相关概念
 
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Linux 内核 net_device 抽象，驱动通过此接口对接 MAC
+- [[entities/linux/kernel/net]] — Linux 内核 net_device 抽象，驱动通过此接口对接 MAC
 - [[entities/linux/network/linux-network-protocols]] — 以太网帧格式与协议栈上层处理
 - [[entities/linux/network/net-stack-deep-dive]] — 从 PHY 到应用层的全栈路径
 

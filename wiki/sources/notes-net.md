@@ -38,6 +38,6 @@ created: 2026-05-20
 
 ## 相关页面
 
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]]
-- [[entities/linux/kernel/netfilter/linux-kernel-netfilter-framework]]
+- [[entities/linux/kernel/net]]
+- [[entities/linux/kernel/netfilter]]
 - [[entities/linux/network/linux-network-protocols]]

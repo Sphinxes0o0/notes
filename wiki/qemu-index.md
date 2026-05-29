@@ -20,7 +20,7 @@ created: 2026-05-22
 
 ## Cross-References
 
-- [[kernel-virt-index]] — QEMU runs KVM as the hypervisor backend; TCG for userspace emulation
-- [[kernel-block-index]] — QEMU block layer emulates storage controllers that interact with kernel block layer
-- [[kernel-io-index]] — QEMU virtio-blk backed by io_uring on the host for high-performance storage
+- [[entities/linux/kernel/index#virtualization]] — QEMU runs KVM as the hypervisor backend; TCG for userspace emulation
+- [[entities/linux/kernel/index#block-layer]] — QEMU block layer emulates storage controllers that interact with kernel block layer
+- [[entities/linux/kernel/index#io-uring--vfs]] — QEMU virtio-blk backed by io_uring on the host for high-performance storage
 - [[os-index]] — QEMU emulates full system; understanding OS concepts helps grasp its abstractions

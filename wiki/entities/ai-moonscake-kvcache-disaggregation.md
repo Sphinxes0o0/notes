@@ -49,7 +49,7 @@ Prefill Node(s)  ──→  KVCache Pool (multi-tier storage)  ──→  Decode
 - [[entities/cpp/cpp-llm-inference]] — LLM推理引擎的通用架构模式
 - [[entities/cpp/cpp-high-performance]] — C++高性能计算（存储优化相关）
 - [[entities/ai-mlir-compilation]] — AI编译基础设施（MLIR/Triton）
-- [[kernel-mm-index]] — Linux内存管理（存储分层相关）
+- [[entities/linux/kernel/index#memory-management]] — Linux内存管理（存储分层相关）
 
 ## Source Details
 

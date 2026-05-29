@@ -25,6 +25,6 @@ created: 2026-05-22
 
 ## Cross-References
 
-- [[kernel-subsystems-index]] — OpenBMC 运行在 Linux 内核之上，依赖 crypto、locking、time 等子系统
+- [[entities/linux/kernel/index]] — OpenBMC 运行在 Linux 内核之上，依赖 crypto、locking、time 等子系统
 - [[os-index]] — systemd/D-Bus 是 OpenBMC 的进程管理和 IPC 基础设施
-- [[kernel-net-index]] — BMC 网络接口依赖内核网络栈
+- [[entities/linux/kernel/index#networking]] — BMC 网络接口依赖内核网络栈

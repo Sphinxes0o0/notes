@@ -144,7 +144,7 @@ sources: []
 
 - [[sources/pdf-computer-systems-programmers-perspective]] — CS:APP 缓存层级与内存山
 - [[sources/pdf-cpp-perf-books]] — C++ 性能优化（Cache 友好代码）
-- [[kernel-subsystems-index]] — 内核子系统（内存管理）
+- [[entities/linux/kernel/index]] — 内核子系统（内存管理）
 - [[entities/os/os-memory-management]] — 操作系统内存管理
 - [[arm-index]] — ARM 体系结构（Cache 实现）
 - [[sys-prog-index]] — 系统编程（Cache 感知编程）

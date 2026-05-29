@@ -18,6 +18,6 @@ created: 2026-05-29
 
 ## Cross-References
 
-- [[kernel-mm-index]] — Boot and module programming interact with memory management
-- [[kernel-subsystems-index]] — Hands-on topics span all kernel subsystems
-- [[kernel-virt-index]] — KVM virtualization builds on kernel fundamentals
+- [[entities/linux/kernel/index#memory-management]] — Boot and module programming interact with memory management
+- [[entities/linux/kernel/index]] — Hands-on topics span all kernel subsystems
+- [[entities/linux/kernel/index#virtualization]] — KVM virtualization builds on kernel fundamentals

@@ -106,6 +106,6 @@ ip link set dev eth0 xdp obj prog.o sec xdp
 
 - [[entities/linux/ebpf/ebpf-xdp]] — XDP 高速数据面
 - [[entities/linux/ebpf/ebpf-overview]] — eBPF 核心架构
-- [[kernel-net-index]] — Linux 网络子系统
+- [[entities/linux/kernel/index#networking]] — Linux 网络子系统
 - [[sources/pdf-ebpf-papers]] — eBPF 论文集（含本篇）
 - [[ebpf-index]] — eBPF 模块索引

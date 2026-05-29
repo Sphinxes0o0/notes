@@ -115,7 +115,7 @@ Netfilter 是 Linux 内核提供的数据包过滤和修改框架，通过在网
 
 ## 相关概念
 
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 网络子系统整体架构
+- [[entities/linux/kernel/net]] — 网络子系统整体架构
 - [[entities/linux/network/linux-network-protocols]] — 协议层与 conntrack 集成
 
 ## 来源详情

@@ -102,12 +102,12 @@ A detailed annotation of the LwIP (Lightweight TCP/IP) protocol stack, focusing 
 
 ## Related Pages
 
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Linux kernel network subsystem
+- [[entities/linux/kernel/net]] — Linux kernel network subsystem
 - [[entities/linux/network/linux-network-protocols]] — Network protocol implementation
 - [[entities/linux/network/net-stack-deep-dive]] — Network stack deep dive
 - [[entities/os/os-io-model]] — I/O models
-- [[kernel-net-index]] — Kernel networking index
-- [[kernel-protocols-index]] — Protocol details
+- [[entities/linux/kernel/index#networking]] — Kernel networking index
+- [[entities/linux/kernel/index#network-protocols--physical-layer]] — Protocol details
 - [[entities/cpp/concurrency]] — C++ concurrency
 - [[entities/cpp/smart-pointers]] — Smart pointers for lifetime management
 - [[entities/cpp/raii]] — RAII resource management

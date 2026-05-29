@@ -71,4 +71,4 @@ tags: [security, crypto, tls, pki, mbedtls, trustzone, op-tee, openssl, sm2, sm3
 - [[entities/security/mbedtls-crypto]]
 - [[entities/security/commercial-cryptography]]
 - [[security-index]]
-- [[kernel-subsystems-index]]
+- [[entities/linux/kernel/index]]

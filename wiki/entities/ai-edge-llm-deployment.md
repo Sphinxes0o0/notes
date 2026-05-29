@@ -50,7 +50,7 @@ AI-integrated OS layers for edge AI:
 
 - [[entities/cpp/cpp-llm-inference]] — LLM推理引擎通用架构
 - [[entities/cpp/cpp-memory-management]] — 内存管理（KVCache层级）
-- [[kernel-mm-index]] — Linux内存管理子系统
+- [[entities/linux/kernel/index#memory-management]] — Linux内存管理子系统
 - [[entities/ai-mlir-compilation]] — 编译优化减少模型体积
 
 ## Source Details

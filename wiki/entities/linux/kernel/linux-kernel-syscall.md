@@ -135,10 +135,10 @@ ENTRY(entry_SYSCALL_64)
 
 ## 相关概念
 
-- [[entities/linux/kernel/vfs/linux-kernel-vfs-core]] — VFS 层 socket/file 接口 (syscall 的应用层)
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 网络 syscall (socket, bind, connect)
-- [[entities/linux/kernel/smp/linux-kernel-smp]] — per-CPU 变量 (rsp_scratch, irq_stack_union)
-- [[entities/linux/kernel/time/linux-kernel-time-core]] — 时钟相关 syscall (clock_gettime)
+- [[entities/linux/kernel/linux-kernel-vfs-core]] — VFS 层 socket/file 接口 (syscall 的应用层)
+- [[entities/linux/kernel/net]] — 网络 syscall (socket, bind, connect)
+- [[entities/linux/kernel/linux-kernel-smp]] — per-CPU 变量 (rsp_scratch, irq_stack_union)
+- [[entities/linux/kernel/linux-kernel-time-core]] — 时钟相关 syscall (clock_gettime)
 
 ## 来源详情
 

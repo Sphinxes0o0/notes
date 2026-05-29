@@ -63,6 +63,6 @@ created: 2026-05-28
 ## 相关页面
 
 - [[entities/linux/network/linux-network-protocols]] — TCP/UDP协议实现
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Linux网络子系统
+- [[entities/linux/kernel/net]] — Linux网络子系统
 - [[entities/linux/ebpf/ebpf-networking]] — eBPF网络
 - [[entities/cpp/cpp-perf-optimization]] — C++性能优化

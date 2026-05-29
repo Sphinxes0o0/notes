@@ -213,4 +213,4 @@ Isovalent/Cilium 团队撰写的 eBPF 安全可观测性报告。
 - [[entities/linux/ebpf/ebpf-ecosystem]] — 生态库对比
 - [[entities/linux/ebpf/ebpf-container-audit]] — saBPF 容器审计
 - [[entities/linux/ebpf/ebpf-security-observability]] — eBPF 安全可观测性
-- [[kernel-net-index]] — Linux 网络子系统
+- [[entities/linux/kernel/index#networking]] — Linux 网络子系统

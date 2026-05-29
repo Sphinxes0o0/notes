@@ -32,5 +32,5 @@ tags: [slides]
 ## 相关页面
 
 - [[pdf-slides]] — 总入口
-- [[kernel-block-index]] — Linux Block Layer
-- [[kernel-net-index]] — Linux Network
+- [[entities/linux/kernel/index#block-layer]] — Linux Block Layer
+- [[entities/linux/kernel/index#networking]] — Linux Network

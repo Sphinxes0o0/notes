@@ -120,9 +120,9 @@ io_uring_prep_read_fixed(sqe, fd, buf, 4096, off, buf_index);
 
 ## 相关概念
 
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Linux 网络栈（传统路径）
-- [[entities/linux/kernel/io_uring/linux-kernel-io-uring-core]] — io_uring 核心实现
-- [[entities/linux/kernel/virt/linux-kernel-virt-virtio]] — VirtIO（VM 数据包 I/O）
+- [[entities/linux/kernel/net]] — Linux 网络栈（传统路径）
+- [[entities/linux/kernel/linux-kernel-io-uring-core]] — io_uring 核心实现
+- [[entities/linux/kernel/virt-virtio]] — VirtIO（VM 数据包 I/O）
 - [[entities/linux/safeos/safeos-nsv]] — SafeOS NSv（用户态网络栈）
 - [[entities/linux/snort3/snort3]] — Snort3（IDS，可使用 DPDK 抓包）
 - [[entities/linux/kernel/mm/linux-kernel-mm]] — Hugepages 内存管理

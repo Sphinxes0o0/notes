@@ -55,4 +55,4 @@ Software packet merging — combines similar packets before protocol stack deliv
 - [[entities/linux/network/net-stack-overview]] — High-level overview
 - [[entities/linux/kernel/irq-softirq]] — Softirq mechanics
 - [[entities/linux/kernel/skbuff-deep-dive]] — sk_buff structure
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — Kernel network subsystem
+- [[entities/linux/kernel/net]] — Kernel network subsystem

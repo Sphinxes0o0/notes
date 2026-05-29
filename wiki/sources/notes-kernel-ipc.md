@@ -33,4 +33,4 @@ created: 2026-05-20
 - mqueue: 红黑树按优先级、通知机制SIGEV_*
 
 ## 相关页面
-- [[entities/linux/kernel/ipc/linux-kernel-ipc-core]]
+- [[entities/linux/kernel/linux-kernel-ipc-core]]

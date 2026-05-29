@@ -107,7 +107,7 @@ nmap -sV -sC -p $ports 10.0.0.0/24 -oA detail_scan
 
 - [[entities/tools/linux-network-tools]] — tcpdump 抓包 + netcat 连接与端口扫描互补
 - [[entities/security]] — Masscan 架构深度分析（无状态扫描、BlackRock 随机化、SYN Cookie）
-- [[entities/linux/kernel/net/linux-kernel-net-subsystem]] — 端口扫描依赖内核 Socket/sk_buff 层和 TCP 协议栈
+- [[entities/linux/kernel/net]] — 端口扫描依赖内核 Socket/sk_buff 层和 TCP 协议栈
 - [[entities/os/os-io-model]] — nmap 多种扫描类型涉及不同 I/O 模型和 socket 操作
 
 ## 来源详情

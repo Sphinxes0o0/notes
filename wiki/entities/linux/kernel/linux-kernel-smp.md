@@ -113,10 +113,10 @@ DECLARE_PER_CPU_FIRST(union irq_stack_union, irq_stack_union) __visible;
 
 ## 相关概念
 
-- [[entities/linux/kernel/locking/linux-kernel-locking-core]] — spinlock/ticket lock/queue spinlock
+- [[entities/linux/kernel/linux-kernel-locking-core]] — spinlock/ticket lock/queue spinlock
 - [[entities/linux/kernel/sched/linux-kernel-sched-core]] — 多核调度与负载均衡
-- [[entities/linux/kernel/time/linux-kernel-time-core]] — per-CPU 定时器基数 (tvec_base)
-- [[entities/linux/kernel/rcu/linux-kernel-rcu-core]] — RCU 无锁读取（多核同步）
+- [[entities/linux/kernel/linux-kernel-time-core]] — per-CPU 定时器基数 (tvec_base)
+- [[entities/linux/kernel/linux-kernel-rcu-core]] — RCU 无锁读取（多核同步）
 
 ## 来源详情
 

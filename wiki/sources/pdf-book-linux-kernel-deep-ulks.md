@@ -38,4 +38,4 @@ created: 2026-05-27
 - [[sources/pdf-book-linux-kernel-deep]] — 深入理解 Linux 内核
 - [[sources/pdf-book-linux-kernel-0-12]] — Linux 内核 0.12 注释版
 - [[sources/pdf-linux-kernel-books]] — Linux 内核书籍合集
-- [[kernel-books-index]] — Linux/Kernel 书籍索引
+- [[entities/linux/kernel/index]] — Linux/Kernel 书籍索引
