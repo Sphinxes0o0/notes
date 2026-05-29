@@ -213,8 +213,8 @@ service_inspectors/
 
 ## 相关概念
 
-- [[snort3-architecture]] - Snort3 整体架构
-- [[snort3-wizard]] - 服务发现引擎详解
+- [[snort3-deep-architecture]] - Snort3 整体架构
+- [[snort3-service-inspectors]] - 服务发现引擎详解
 - [[intrusion-detection-systems]] - IDS 基础
 - [[network-monitoring]] - 网络监控
 

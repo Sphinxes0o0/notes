@@ -362,5 +362,5 @@ HttpInspect::configure(snort::SnortConfig* config) {
 ## 相关页面
 
 - [[snort3-service-inspectors]] - Service Inspector 架构概念
-- [[snort3-wizard]] - Wizard 服务发现详解
-- [[snort3-architecture]] - 整体架构
+- [[snort3-service-inspectors]] - Wizard 服务发现详解
+- [[snort3-deep-architecture]] - 整体架构

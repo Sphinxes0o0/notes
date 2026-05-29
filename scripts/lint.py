@@ -70,14 +70,34 @@ def extract_wikilinks(body):
 def check_broken_links(all_files, contents):
     issues = []
     valid = {rel.replace('.md', '') for rel, _ in all_files}
+    # Build basename → full-path mapping for fuzzy resolution (Obsidian-style search)
+    basename_to_full = defaultdict(set)
+    for v in valid:
+        bn = v.rsplit('/', 1)[-1]
+        basename_to_full[bn].add(v)
+
     outbound = {}
     for rel, _ in all_files:
         _, body = parse_frontmatter(contents[rel])
         links = extract_wikilinks(body)
         outbound[rel] = links
         for t in links:
-            if t not in valid:
-                issues.append((rel, t))
+            if t in valid:
+                continue  # exact match — always OK
+            # Fuzzy: try basename match (Obsidian searches by filename)
+            bn = t.rsplit('/', 1)[-1]
+            if bn in basename_to_full:
+                continue  # resolved via basename
+            # Fuzzy: try suffix match (e.g. link to "mm" resolves to "linux/kernel/mm/...")
+            matched = False
+            for v in valid:
+                if v.endswith('/' + t) or v.endswith(t):
+                    matched = True
+                    break
+            if matched:
+                continue
+            issues.append((rel, t))
+
     # Group by target for impact scoring
     by_target = defaultdict(list)
     for src, tgt in issues:
