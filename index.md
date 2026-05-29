@@ -96,8 +96,10 @@ created: 2026-05-22
 | [[wiki/sources/bookmark-linux-kernel-explorer]] | Linux Kernel Explorer (Reverser.dev)：在线内核源码浏览器，符号搜索/XREF导航 |
 | [[wiki/sources/bookmark-parallel-programming-intro]] | HPC Wiki并行编程导论：CPU power wall/共享内存(Pthreads/OpenMP)/消息传递(MPI)/Foster方法论 |
 | [[wiki/sources/bookmark-visual-computing-foundations]] | Foundations of Visual Computing：人眼视觉/渲染/成像/显示技术跨学科教材 |
+| [[wiki/sources/bookmark-webrtc]] | WebRTC 实时通信 (Prescod & Uberti)：浏览器P2P实时通信，ICE/STUN/TURN/SDP/SRTP协议栈 |
 | [[wiki/sources/bookmark-bevy-engine-guide]] | Bevy Engine Guide (Rust ECS)：Rust游戏引擎架构，插件开发/反射/并行图/渲染管线 |
 | [[wiki/sources/bookmark-edsionte-kernel-beginner]] | 内核新手区 (Edsionte)：最低门槛内核入门，进程/内存/VFS/设备驱动/系统调用 |
+| [[wiki/sources/bookmark-rust-embedded-drivers]] | Rust Embedded Drivers (RED)：embedded HAL/PAC/RTIC，DHT22/MAX7219/DS1307实战驱动开发 |
 | [[wiki/sources/handson-lkmpg]] | Linux Kernel Module Programming Guide (sysprog21)：v5.10+字符设备/中断/sync/mm/DMA/GPIO/PCI |
 | [[wiki/sources/handson-os-in-rust-phil-opp]] | Writing an OS in Rust (Philipp Oppermann)：64-bit x86 no_std kernel，boot/paging/heap/async |
 | [[wiki/sources/handson-how-to-create-os-samypesse]] | How to Create an OS (Sammy Pesse)：C++ UNIX OS，boot/GRUB multiboot/protected mode/shell |

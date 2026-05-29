@@ -4,6 +4,32 @@
 
 ---
 
+## [2026-05-29] ingest | bookmark-webrtc + bookmark-rust-embedded-drivers — 2 ebooks ingested
+
+- **来源**:
+  1. **bookmark-webrtc** — WebRTC 实时通信 (Prescod & Uberti, a-wing 译, CC BY-NC 4.0)
+  2. **bookmark-rust-embedded-drivers** — Rust Embedded Drivers (ImplFerris, MIT/Apache 2.0)
+- **WebRTC 操作**:
+  - 创建 source page: `wiki/sources/bookmark-webrtc.md`
+  - 创建 4 个 entity pages in `wiki/entities/linux/network/`:
+    - `webrtc-protocol-stack.md` — ICE/STUN/TURN、SDP、DTLS/SRTP、SCTP 协议栈
+    - `webrtc-peer-connection.md` — RTCPeerConnection API、DataChannel、SCTP 关联
+    - `webrtc-signaling.md` — 信令通道、SDP offer/answer、JSEP、SIP 梯形对比
+    - `webrtc-media-handling.md` — getUserMedia、MediaStream、SRTP 媒体传输、编解码协商
+  - Cross-link: 每个 entity ≥2 wikilinks → [[tcp-congestion-control]], [[load-balancing]], [[net-stack-overview]], [[rust-language]]
+- **Rust Embedded 操作**:
+  - 创建 source page: `wiki/sources/bookmark-rust-embedded-drivers.md`
+  - 创建 4 个 entity pages in `wiki/entities/rust/`:
+    - `embedded-rust-hal.md` — embedded-hal trait 系统（GPIO/I2C/SPI/UART）
+    - `embedded-rust-pac.md` — PAC 寄存器编程，svd2rust 自动生成
+    - `embedded-rust-rtic.md` — RTIC 实时并发，任务调度，资源管理
+    - `embedded-rust-drivers.md` — DHT22/MAX7219/DS1307 驱动实战
+  - Cross-link: 每个 entity ≥2 wikilinks → [[rust-language]], [[armv8-architecture]], [[net-stack-overview]]
+- **更新**: index.md (+2 source entries)
+- **未 commit**
+
+---
+
 ## [2026-05-29] ingest | reading/ bookmarks — top 15 scan (partial complete)
 
 ### Completed (7 sources):
