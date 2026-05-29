@@ -2,7 +2,7 @@
 type: entity
 tags: [linux-kernel, async-io, io-subsystem]
 created: 2026-05-20
-sources: [github-notes-io-uring-core, github-notes-io-uring-operations, github-notes-io-uring-memory, github-notes-io-uring-features]
+sources: [github-notes-io-uring-core, github-notes-io-uring-operations, github-notes-io-uring-memory, github-notes-io-uring-features, handson-io-uring-shuveb]
 ---
 
 # Linux Kernel io_uring
