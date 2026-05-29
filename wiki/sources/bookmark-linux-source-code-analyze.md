@@ -54,8 +54,8 @@ created: 2026-05-28
 
 ## 相关页面
 
-- [[wiki/sources/notes-kernel]] — Sphinx 内核笔记（更多细分话题）
-- [[wiki/sources/bookmark-wowotech-linux-kernel]] — 蜗窝科技（ARM64视角）
-- [[wiki/sources/bookmark-linux-kernel-labs]] — Linux Kernel Labs（教学+实验）
+- [[notes-kernel]] — Sphinx 内核笔记（更多细分话题）
+- [[bookmark-wowotech-linux-kernel]] — 蜗窝科技（ARM64视角）
+- [[bookmark-linux-kernel-labs]] — Linux Kernel Labs（教学+实验）
 - [[wiki/kernel-net-index]] — 网络子系统索引
 - [[wiki/ebpf-index]] — eBPF生态索引

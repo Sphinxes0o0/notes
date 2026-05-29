@@ -143,4 +143,4 @@ ENTRY(entry_SYSCALL_64)
 ## 来源详情
 
 - [[sources/ebook-linux-insides]] — SysCall 章节 (27-syscall-2, 29-syscall-4)
-- [[wiki/sources/bookmark-linux-inside]] — Linux Inside bookmark
+- [[bookmark-linux-inside]] — Linux Inside bookmark

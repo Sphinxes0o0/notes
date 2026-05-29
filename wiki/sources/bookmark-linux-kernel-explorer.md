@@ -38,6 +38,6 @@ created: 2026-05-28
 
 ## 相关页面
 
-- [[wiki/sources/bookmark-linux-kernel-map]] — Interactive Kernel Map（架构可视化）
-- [[wiki/sources/notes-kernel]] — Sphinx 内核笔记（整理过的知识）
-- [[wiki/sources/bookmark-linux-source-code-analyze]] — liexusong（分析过的源码）
+- [[bookmark-linux-kernel-map]] — Interactive Kernel Map（架构可视化）
+- [[notes-kernel]] — Sphinx 内核笔记（整理过的知识）
+- [[bookmark-linux-source-code-analyze]] — liexusong（分析过的源码）

@@ -42,5 +42,5 @@ nids-relevance: 3
 
 ## 相关页面
 
-- [[wiki/sources/notes-net-deep]] — 网络深度笔记
+- [[notes-net-deep]] — 网络深度笔记
 - [[wiki/synthesis/topic-nids-architecture]] — NIDS架构综合

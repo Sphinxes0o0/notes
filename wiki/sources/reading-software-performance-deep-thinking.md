@@ -75,5 +75,5 @@ Worker pool防止处理并发网络流时goroutine爆炸
 ## 相关页面
 
 - [[wiki/entities/kernel-bypass-dpdk]] — Kernel bypass性能提升
-- [[wiki/sources/reading-af-xdp-technical]] — 零拷贝减少拷贝开销
-- [[wiki/sources/reading-linux-performance-engineering]] — Linux性能工具链
+- [[reading-af-xdp-technical]] — 零拷贝减少拷贝开销
+- [[reading-linux-performance-engineering]] — Linux性能工具链

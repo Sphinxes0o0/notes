@@ -47,6 +47,6 @@ created: 2026-05-28
 
 ## 相关页面
 
-- [[wiki/sources/notes-kernel]] — Sphinx 内核笔记（更全面，涵盖 mm/sched/block/net）
-- [[wiki/sources/bookmark-linux-inside]] — Linux Inside（另一内核入门经典）
-- [[wiki/sources/bookmark-linux-kernel-labs]] — Linux Kernel Labs（教学向）
+- [[notes-kernel]] — Sphinx 内核笔记（更全面，涵盖 mm/sched/block/net）
+- [[bookmark-linux-inside]] — Linux Inside（另一内核入门经典）
+- [[bookmark-linux-kernel-labs]] — Linux Kernel Labs（教学向）

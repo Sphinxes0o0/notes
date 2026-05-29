@@ -87,7 +87,7 @@ tc qdisc add dev eth0 root netem delay 100ms 10ms
 
 ## 相关页面
 
-- [[wiki/sources/reading-linux-tc-traffic-control]] — NoPanic TC详解
-- [[wiki/sources/notes-netfilter]] — Netfilter/iptables/nftables
-- [[wiki/sources/arthurchiao-tc-da-mode]] — TC eBPF direct-action mode
+- [[reading-linux-tc-traffic-control]] — NoPanic TC详解
+- [[notes-netfilter]] — Netfilter/iptables/nftables
+- [[arthurchiao-tc-da-mode]] — TC eBPF direct-action mode
 - [[wiki/synthesis/topic-nids-architecture]] — NIDS架构综合

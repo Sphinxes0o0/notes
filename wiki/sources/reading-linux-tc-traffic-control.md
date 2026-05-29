@@ -65,6 +65,6 @@ tc qdisc add dev eth0 root netem delay 10ms reorder 25%
 
 ## 相关页面
 
-- [[wiki/sources/reading-linux-advanced-routing-tc]] — lartc.org更全面的HOWTO
-- [[wiki/sources/arthurchiao-tc-da-mode]] — TC eBPF direct-action mode
+- [[reading-linux-advanced-routing-tc]] — lartc.org更全面的HOWTO
+- [[arthurchiao-tc-da-mode]] — TC eBPF direct-action mode
 - [[wiki/synthesis/topic-nids-architecture]] — NIDS架构综合

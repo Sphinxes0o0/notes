@@ -43,5 +43,5 @@ created: 2026-05-28
 
 - [[wiki/entities/linux/kernel/irq-softirq]] — 中断实体页（基于 arthurchiao）
 - [[wiki/kernel-subsystems-index]] — 内核子系统总览
-- [[wiki/sources/bookmark-linux-inside]] — Linux Inside（包含中断章节）
-- [[wiki/sources/bookmark-linux-source-code-analyze]] — liexusong（中断处理话题）
+- [[bookmark-linux-inside]] — Linux Inside（包含中断章节）
+- [[bookmark-linux-source-code-analyze]] — liexusong（中断处理话题）

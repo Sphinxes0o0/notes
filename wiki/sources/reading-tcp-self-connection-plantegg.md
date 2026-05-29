@@ -55,7 +55,7 @@ Simultaneous open产生异常handshake（SYN交换而非SYN-SYN/ACK-SYN）：
 
 ## 相关页面
 
-- [[wiki/sources/notes-net-deep]] — TCP状态机
-- [[wiki/sources/notes-netfilter]] — 连接跟踪
-- [[wiki/sources/reading-tcp-troubleshooting-plantegg]] — TCP故障排查
+- [[notes-net-deep]] — TCP状态机
+- [[notes-netfilter]] — 连接跟踪
+- [[reading-tcp-troubleshooting-plantegg]] — TCP故障排查
 - [[wiki/entities/linux/snort3/snort3-flow]] — Snort3 flow tracking

@@ -38,10 +38,10 @@ created: 2026-05-28
 ## 与现有资源互补
 
 - 最低门槛的内核入门资源
-- 适合在阅读 [[wiki/sources/bookmark-linux-inside]] 或 [[wiki/sources/bookmark-linux-kernel-labs]] 之前打基础
+- 适合在阅读 [[bookmark-linux-inside]] 或 [[bookmark-linux-kernel-labs]] 之前打基础
 
 ## 相关页面
 
-- [[wiki/sources/bookmark-linux-inside]] — Linux Inside（进阶入门）
-- [[wiki/sources/bookmark-linux-kernel-labs]] — Linux Kernel Labs（教学+实验）
+- [[bookmark-linux-inside]] — Linux Inside（进阶入门）
+- [[bookmark-linux-kernel-labs]] — Linux Kernel Labs（教学+实验）
 - [[wiki/os-index]] — OS基础索引
