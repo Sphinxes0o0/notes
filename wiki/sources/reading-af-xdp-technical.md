@@ -64,7 +64,7 @@ XDP程序检查queue是否有绑定的AF_XDP socket，有则重定向。
 
 ## 相关页面
 
-- [[wiki/entities/kernel-bypass-dpdk]] — Kernel bypass对比
-- [[wiki/entities/linux-ebpf-fundamentals]] — XDP/eBPF基础
+- [[entities/kernel-bypass-dpdk]] — Kernel bypass对比
+- [[entities/linux-ebpf-fundamentals]] — XDP/eBPF基础
 - [[reading-ebpf-how-ebpf-work]] — eBPF深入理解
 - [nids-architecture-overview]] — NIDS架构综合

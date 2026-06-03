@@ -59,4 +59,4 @@ nids-relevance: 4
 - [[arthurchiao-linux-net-stack]] — Linux网络栈概览
 - [[arthurchiao-linux-irq-softirq]] — IRQ/softirq机制
 - [[reading-software-performance-deep-thinking]] — 软件性能理论
-- [[wiki/entities/kernel-bypass-dpdk]] — Kernel bypass性能提升
+- [[entities/kernel-bypass-dpdk]] — Kernel bypass性能提升

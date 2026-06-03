@@ -40,10 +40,10 @@ created: 2026-05-28
 
 ## 关键页面
 
-- [[wiki/kernel-block-index]] — 块设备层索引
-- [[wiki/kernel-mm-index]] — 内存管理索引
-- [[wiki/kernel-sched-index]] — 调度器索引
-- [[wiki/kernel-net-index]] — 网络子系统索引
+- [[kernel-block-index]] — 块设备层索引
+- [[kernel-mm-index]] — 内存管理索引
+- [[kernel-sched-index]] — 调度器索引
+- [[kernel-net-index]] — 网络子系统索引
 
 ## 相关页面
 

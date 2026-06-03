@@ -1,0 +1,64 @@
+# 虚拟内存空间
+
+终于又要开新的一章了，这次我们来聊聊内存相关但又相对独立的一块 -- 虚拟内存空间。
+
+从我现在的角度去看，内核中的内存管理可以分成两个重要的部分：
+
+* 物理内存分配回收
+* 虚拟内存空间管理
+
+其中第一部分在[自底而上话内存](/kernel-exploring/nei-cun-guan-li/00-memory_a_bottom_up_view.md)一章中做了描述，第二部分将在这章展开。
+
+其实这两部分并不是完全分割的，而是你中有我，我中有你。只是在一定层次上看，第一部分的内容已经相对完整可以自成一个体系了。
+
+虽然在本章中将紧密得引用第一部分的内容，尤其是struct page，但是我们还是可以尽量将本章分成一下几个部分来描述。
+
+* 页表
+* vma
+* 反向映射
+* mapcount
+* THP
+
+## 页表
+
+可以说虚拟内存空间的物理根本就是页表了，所以开篇的头一个小节我们来看看页表的样子，以及页表构造和释放的过程。
+
+[页表和缺页中断](/kernel-exploring/nei-cun-guan-li/00-index/03-page_table_fault.md)
+
+## vma
+
+除了有硬件上的页表做虚拟空间的映射，在软件上也有对应的数据结构来区分虚拟地址空间的属性，而这个数据结构就是:
+
+[虚拟地址空间的管家--vma](/kernel-exploring/nei-cun-guan-li/00-index/05-vma.md)
+
+PS: 在引入maple tree之前的[版本](/kernel-exploring/nei-cun-guan-li/00-index/deprecate-vma.md)
+
+## 反向映射
+
+反向映射是用来搜索对于某一个内存页，都有哪些进程在使用。其中分成了匿名页和文件页。
+
+反向映射的架构也是经历了一番周折才定型为现在的样子。首先我们来说说[匿名反向映射的前世今生](/kernel-exploring/nei-cun-guan-li/00-index/19-rmap/01-anon_rmap_history.md)
+
+了解了历史后，我们深入学习一下现状 [图解匿名反向映射](/kernel-exploring/nei-cun-guan-li/00-index/19-rmap/01-anon_rmap_history/06-anon_rmap_usage.md)
+
+## mapcount
+
+看了上文后，大家一定对反向映射有了概念性的认识。但是你一定想不到在学习反向映射的过程中有一个非常繁琐的内容 -- mapcount。
+
+从概念上看这个值的含义是表示当前页映射到页表的个数，案例是比较好理解的。但是当这个数遇到了透明大页(THP)后就产生了各种纠缠不清的恩恩怨怨。在[THP和mapcount之间的恩恩怨怨](/kernel-exploring/nei-cun-guan-li/00-index/02-thp_mapcount.md)文章中，我将给大家尝试理清楚这中间的是是非非。
+
+最后我们尝试全面了解一下page结构中，跟踪作为进程内存被页表映射的各种情况[page mapcount](/kernel-exploring/nei-cun-guan-li/00-index/02-thp_mapcount/09-mapcount.md)。
+
+## THP
+
+透明大页(THP)是一种能够加速页表查询的方法。很有意思，在这里简要说一下我的理解。
+
+[透明大页的玄机](/kernel-exploring/nei-cun-guan-li/00-index/04-thp.md)
+
+## NUMA策略
+
+当系统中存在多个numa节点时，内存从哪个numa节点上分配就变得有些重要了。因为这会影响到系统运行的性能。
+
+内核中为了应对这个问题，提出了[NUMA策略](/kernel-exploring/nei-cun-guan-li/00-index/07-mempolicy.md)
+
+同时为了保持进程迁移过程中内存策略的一致，内核还提供了[numa balance](/kernel-exploring/nei-cun-guan-li/00-index/08-numa_balance.md)。

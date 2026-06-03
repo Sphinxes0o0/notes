@@ -61,8 +61,8 @@ nids-relevance: 5
 
 ## 相关页面
 
-- [[wiki/entities/linux-ebpf-fundamentals]] — eBPF基础概念
-- [[wiki/entities/linux-ebpf-technical-practice]] — eBPF技术实践
-- [[wiki/entities/kernel-bypass-dpdk]] — Kernel bypass对比
+- [[entities/linux-ebpf-fundamentals]] — eBPF基础概念
+- [[entities/linux-ebpf-technical-practice]] — eBPF技术实践
+- [[entities/kernel-bypass-dpdk]] — Kernel bypass对比
 - [[pdf-ebpf-technical-practice]] — 龙蜥eBPF白皮书
 - [nids-architecture-overview]] — NIDS架构综合

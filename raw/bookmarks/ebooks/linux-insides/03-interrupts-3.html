@@ -1,0 +1,1922 @@
+<!DOCTYPE html><html lang="zh"><head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>&#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406; &#xB7; Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xinqiu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-comment/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://gstatic.gitbook.com/images/b1c4c86ca817a71628d2debe73be9a64.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="linux-interrupts-4.html">
+    
+    
+    <link rel="prev" href="linux-interrupts-2.html">
+    
+
+    
+<style>
+    .book .book-summary .book-search,
+    .book .book-summary ul.summary {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    .book-summary {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        overflow-y: auto;
+    }
+    .book-summary > nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+    .gl-wrapper {
+        margin: 0;
+        display: block;
+        padding: 0;
+        position: relative;
+        line-height: 15px;
+        background: #fafafa;
+    }
+    .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        background: -moz-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        top: -24px;
+        width: 100%;
+        height: 24px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+    }
+    .book.color-theme-1 .gl-wrapper {
+        background: #121212;
+    }
+    .book.color-theme-1 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: -moz-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+    }
+    .book.color-theme-2 .gl-wrapper {
+        background: #2e3243;
+    }
+    .book.color-theme-2 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: -moz-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+    }
+    .gl-wrapper .gitbook-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        color: #9DAAB6;
+        margin: 16px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin-left: 32px;
+        padding-top: 8px;
+        padding-left: 16px;
+        border-radius: 3px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        background-color: #E6ECF1;
+        -webkit-box-align: center;
+    }
+    .gl-wrapper .tm-logo {
+        margin: 0;
+        display: block;
+        padding: 0;
+        font-size: 40px;
+    }
+    .gl-wrapper .tm-content {
+        flex: 1;
+        margin: 0;
+        display: block;
+        padding: 0;
+        padding-left: 16px;
+    }
+    .gl-wrapper .tm-content .container {
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+    .gl-wrapper .tm-content .tm-container .tm-text {
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 1.625;
+    }
+</style></head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="&#x8F38;&#x5165;&#x4E26;&#x641C;&#x5C0B;">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://legacy.gitbook.com/book/xinqiu/linux-insides-cn" target="_blank" class="custom-link">Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Booting/">
+            
+                <a href="../Booting/">
+            
+                    
+                    &#x5F15;&#x5BFC;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Booting/linux-bootstrap-1.html">
+            
+                <a href="../Booting/linux-bootstrap-1.html">
+            
+                    
+                    &#x4ECE;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x5185;&#x6838;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Booting/linux-bootstrap-2.html">
+            
+                <a href="../Booting/linux-bootstrap-2.html">
+            
+                    
+                    &#x5728;&#x5185;&#x6838;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x7684;&#x7B2C;&#x4E00;&#x6B65;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Booting/linux-bootstrap-3.html">
+            
+                <a href="../Booting/linux-bootstrap-3.html">
+            
+                    
+                    &#x89C6;&#x9891;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x548C;&#x8F6C;&#x6362;&#x5230;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Booting/linux-bootstrap-4.html">
+            
+                <a href="../Booting/linux-bootstrap-4.html">
+            
+                    
+                    &#x8FC7;&#x6E21;&#x5230; 64 &#x4F4D;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Booting/linux-bootstrap-5.html">
+            
+                <a href="../Booting/linux-bootstrap-5.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x7F29;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Initialization/">
+            
+                <a href="../Initialization/">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Initialization/linux-initialization-1.html">
+            
+                <a href="../Initialization/linux-initialization-1.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x4E4B;&#x540E;&#x7684;&#x9996;&#x8981;&#x6B65;&#x9AA4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Initialization/linux-initialization-2.html">
+            
+                <a href="../Initialization/linux-initialization-2.html">
+            
+                    
+                    &#x65E9;&#x671F;&#x7684;&#x4E2D;&#x65AD;&#x548C;&#x5F02;&#x5E38;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Initialization/linux-initialization-3.html">
+            
+                <a href="../Initialization/linux-initialization-3.html">
+            
+                    
+                    &#x5728;&#x5230;&#x8FBE;&#x5185;&#x6838;&#x5165;&#x53E3;&#x4E4B;&#x524D;&#x6700;&#x540E;&#x7684;&#x51C6;&#x5907;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Initialization/linux-initialization-4.html">
+            
+                <a href="../Initialization/linux-initialization-4.html">
+            
+                    
+                    &#x5185;&#x6838;&#x5165;&#x53E3; - start_kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Initialization/linux-initialization-5.html">
+            
+                <a href="../Initialization/linux-initialization-5.html">
+            
+                    
+                    &#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Initialization/linux-initialization-6.html">
+            
+                <a href="../Initialization/linux-initialization-6.html">
+            
+                    
+                    &#x8FDB;&#x4E00;&#x6B65;&#x521D;&#x59CB;&#x5316;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Initialization/linux-initialization-7.html">
+            
+                <a href="../Initialization/linux-initialization-7.html">
+            
+                    
+                    &#x6700;&#x540E;&#x5BF9;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Initialization/linux-initialization-8.html">
+            
+                <a href="../Initialization/linux-initialization-8.html">
+            
+                    
+                    &#x8C03;&#x5EA6;&#x5668;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Initialization/linux-initialization-9.html">
+            
+                <a href="../Initialization/linux-initialization-9.html">
+            
+                    
+                    RCU &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Initialization/linux-initialization-10.html">
+            
+                <a href="../Initialization/linux-initialization-10.html">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x675F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    &#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="linux-interrupts-1.html">
+            
+                <a href="linux-interrupts-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x548C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="linux-interrupts-2.html">
+            
+                <a href="linux-interrupts-2.html">
+            
+                    
+                    &#x6DF1;&#x5165; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="linux-interrupts-3.html">
+            
+                <a href="linux-interrupts-3.html">
+            
+                    
+                    &#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="linux-interrupts-4.html">
+            
+                <a href="linux-interrupts-4.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="linux-interrupts-5.html">
+            
+                <a href="linux-interrupts-5.html">
+            
+                    
+                    &#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="linux-interrupts-6.html">
+            
+                <a href="linux-interrupts-6.html">
+            
+                    
+                    &#x5904;&#x7406;&#x4E0D;&#x53EF;&#x5C4F;&#x853D;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="linux-interrupts-7.html">
+            
+                <a href="linux-interrupts-7.html">
+            
+                    
+                    &#x6DF1;&#x5165;&#x5916;&#x90E8;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="linux-interrupts-8.html">
+            
+                <a href="linux-interrupts-8.html">
+            
+                    
+                    IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="linux-interrupts-9.html">
+            
+                <a href="linux-interrupts-9.html">
+            
+                    
+                    Softirq, Tasklets and Workqueues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="linux-interrupts-10.html">
+            
+                <a href="linux-interrupts-10.html">
+            
+                    
+                    &#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SysCall/">
+            
+                <a href="../SysCall/">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../SysCall/linux-syscall-1.html">
+            
+                <a href="../SysCall/linux-syscall-1.html">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6982;&#x5FF5;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../SysCall/linux-syscall-2.html">
+            
+                <a href="../SysCall/linux-syscall-2.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../SysCall/linux-syscall-3.html">
+            
+                <a href="../SysCall/linux-syscall-3.html">
+            
+                    
+                    vsyscall and vDSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../SysCall/linux-syscall-4.html">
+            
+                <a href="../SysCall/linux-syscall-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../SysCall/linux-syscall-5.html">
+            
+                <a href="../SysCall/linux-syscall-5.html">
+            
+                    
+                    open &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../SysCall/linux-syscall-6.html">
+            
+                <span>
+            
+                    
+                    Linux &#x8D44;&#x6E90;&#x9650;&#x5236;
+            
+                
+            
+
+            
+        </span></li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Timers/">
+            
+                <a href="../Timers/">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x548C;&#x65F6;&#x949F;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Timers/linux-timers-1.html">
+            
+                <a href="../Timers/linux-timers-1.html">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Timers/linux-timers-2.html">
+            
+                <a href="../Timers/linux-timers-2.html">
+            
+                    
+                    &#x65F6;&#x949F;&#x6E90;&#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Timers/linux-timers-3.html">
+            
+                <a href="../Timers/linux-timers-3.html">
+            
+                    
+                    The tick broadcast framework and dyntick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Timers/linux-timers-4.html">
+            
+                <a href="../Timers/linux-timers-4.html">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x4ECB;&#x7ECD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Timers/linux-timers-5.html">
+            
+                <a href="../Timers/linux-timers-5.html">
+            
+                    
+                    Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Timers/linux-timers-6.html">
+            
+                <a href="../Timers/linux-timers-6.html">
+            
+                    
+                    x86 &#x76F8;&#x5173;&#x7684;&#x65F6;&#x949F;&#x6E90;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Timers/linux-timers-7.html">
+            
+                <a href="../Timers/linux-timers-7.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x4E0E;&#x65F6;&#x949F;&#x76F8;&#x5173;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SyncPrim/">
+            
+                <a href="../SyncPrim/">
+            
+                    
+                    &#x540C;&#x6B65;&#x539F;&#x8BED;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SyncPrim/linux-sync-1.html">
+            
+                <a href="../SyncPrim/linux-sync-1.html">
+            
+                    
+                    &#x81EA;&#x65CB;&#x9501;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SyncPrim/linux-sync-2.html">
+            
+                <a href="../SyncPrim/linux-sync-2.html">
+            
+                    
+                    &#x961F;&#x5217;&#x81EA;&#x65CB;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SyncPrim/linux-sync-3.html">
+            
+                <a href="../SyncPrim/linux-sync-3.html">
+            
+                    
+                    &#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SyncPrim/linux-sync-4.html">
+            
+                <a href="../SyncPrim/linux-sync-4.html">
+            
+                    
+                    &#x4E92;&#x65A5;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SyncPrim/linux-sync-5.html">
+            
+                <a href="../SyncPrim/linux-sync-5.html">
+            
+                    
+                    &#x8BFB;&#x8005;/&#x5199;&#x8005;&#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SyncPrim/linux-sync-6.html">
+            
+                <a href="../SyncPrim/linux-sync-6.html">
+            
+                    
+                    &#x987A;&#x5E8F;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7">
+            
+                <span>
+            
+                    
+                    RCU
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8">
+            
+                <span>
+            
+                    
+                    Lockdep
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MM/">
+            
+                <a href="../MM/">
+            
+                    
+                    &#x5185;&#x5B58;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MM/linux-mm-1.html">
+            
+                <a href="../MM/linux-mm-1.html">
+            
+                    
+                    &#x5185;&#x5B58;&#x5757;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../MM/linux-mm-2.html">
+            
+                <a href="../MM/linux-mm-2.html">
+            
+                    
+                    &#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x548C; ioremap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../MM/linux-mm-3.html">
+            
+                <a href="../MM/linux-mm-3.html">
+            
+                    
+                    kmemcheck
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cgroups/">
+            
+                <a href="../Cgroups/">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Cgroups/linux-cgroups-1.html">
+            
+                <a href="../Cgroups/linux-cgroups-1.html">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10">
+            
+                <span>
+            
+                    
+                    SMP
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Concepts/">
+            
+                <a href="../Concepts/">
+            
+                    
+                    &#x6982;&#x5FF5;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Concepts/linux-cpu-1.html">
+            
+                <a href="../Concepts/linux-cpu-1.html">
+            
+                    
+                    &#x6BCF;&#x4E2A; CPU &#x7684;&#x53D8;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Concepts/linux-cpu-2.html">
+            
+                <a href="../Concepts/linux-cpu-2.html">
+            
+                    
+                    CPU &#x63A9;&#x7801;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Concepts/linux-cpu-3.html">
+            
+                <a href="../Concepts/linux-cpu-3.html">
+            
+                    
+                    initcall &#x673A;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Concepts/linux-cpu-4.html">
+            
+                <a href="../Concepts/linux-cpu-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x7684;&#x901A;&#x77E5;&#x94FE;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../DataStructures/">
+            
+                <a href="../DataStructures/">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../DataStructures/linux-datastructures-1.html">
+            
+                <a href="../DataStructures/linux-datastructures-1.html">
+            
+                    
+                    &#x53CC;&#x5411;&#x94FE;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../DataStructures/linux-datastructures-2.html">
+            
+                <a href="../DataStructures/linux-datastructures-2.html">
+            
+                    
+                    &#x57FA;&#x6570;&#x6811;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../DataStructures/linux-datastructures-3.html">
+            
+                <a href="../DataStructures/linux-datastructures-3.html">
+            
+                    
+                    &#x4F4D;&#x6570;&#x7EC4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Theory/">
+            
+                <a href="../Theory/">
+            
+                    
+                    &#x7406;&#x8BBA;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Theory/linux-theory-1.html">
+            
+                <a href="../Theory/linux-theory-1.html">
+            
+                    
+                    &#x5206;&#x9875;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Theory/linux-theory-2.html">
+            
+                <a href="../Theory/linux-theory-2.html">
+            
+                    
+                    ELF &#x6587;&#x4EF6;&#x683C;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Theory/linux-theory-3.html">
+            
+                <a href="../Theory/linux-theory-3.html">
+            
+                    
+                    &#x5167;&#x8054;&#x6C47;&#x7F16;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4">
+            
+                <span>
+            
+                    
+                    CPUID
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5">
+            
+                <span>
+            
+                    
+                    MSR
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14">
+            
+                <span>
+            
+                    
+                    Initial ram disk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1">
+            
+                <span>
+            
+                    
+                    initrd
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Misc/">
+            
+                <a href="../Misc/">
+            
+                    
+                    &#x6742;&#x9879;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../Misc/linux-misc-1.html">
+            
+                <a href="../Misc/linux-misc-1.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5F00;&#x53D1;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../Misc/linux-misc-2.html">
+            
+                <a href="../Misc/linux-misc-2.html">
+            
+                    
+                    &#x5185;&#x6838;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../Misc/linux-misc-3.html">
+            
+                <a href="../Misc/linux-misc-3.html">
+            
+                    
+                    &#x94FE;&#x63A5;&#x5668;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../Misc/linux-misc-4.html">
+            
+                <a href="../Misc/linux-misc-4.html">
+            
+                    
+                    &#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5">
+            
+                <span>
+            
+                    
+                    &#x4E66;&#x5199;&#x5E76;&#x63D0;&#x4EA4;&#x4F60;&#x7B2C;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x8865;&#x4E01;
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../KernelStructures/">
+            
+                <a href="../KernelStructures/">
+            
+                    
+                    &#x5185;&#x6838;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../KernelStructures/linux-kernelstructure-1.html">
+            
+                <a href="../KernelStructures/linux-kernelstructure-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x63CF;&#x8FF0;&#x7B26;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../LINKS.html">
+            
+                <a href="../LINKS.html">
+            
+                    
+                    &#x6709;&#x5E2E;&#x52A9;&#x7684;&#x94FE;&#x63A5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../CONTRIBUTORS.html">
+            
+                <a href="../CONTRIBUTORS.html">
+            
+                    
+                    &#x8D21;&#x732E;&#x8005;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    
+<div class="gl-wrapper">
+    <a class="gitbook-link" href="https://www.gitbook.com?utm_source=public_site_legacy&amp;utm_medium=referral&amp;utm_campaign=trademark&amp;utm_term=xinqiu&amp;utm_content=powered_by" target="blank">
+        <div class="tm-logo">
+            <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="currentColor" viewBox="0 0 1067 769" xmlns="http://www.w3.org/2000/svg" stroke="none" class="icon-7f6730be--text-3f89f380"><g><path d="M480.026 640.677c17.205 0 31.2 13.997 31.2 31.194s-13.995 31.193-31.2 31.193c-17.197 0-31.193-13.996-31.193-31.193 0-17.197 13.996-31.194 31.193-31.194m489.93-193.226c-17.203 0-31.2-13.998-31.2-31.195 0-17.204 13.997-31.2 31.2-31.2 17.198 0 31.194 13.996 31.194 31.2 0 17.197-13.996 31.195-31.193 31.195m0-127.804c-53.269 0-96.609 43.34-96.609 96.609 0 10.373 1.723 20.702 5.123 30.741L559.328 616.879c-18.132-26.128-47.521-41.617-79.302-41.617-36.821 0-70.391 21.065-86.63 54.003L106.68 478.109c-30.288-15.927-52.965-65.817-50.56-111.223 1.248-23.687 9.438-42.071 21.897-49.17 7.916-4.493 17.436-4.099 27.526 1.188l1.916 1.01c75.96 40.022 324.6 170.981 335.063 175.844 16.157 7.47 25.14 10.5 52.659-2.547l513.958-267.3c7.53-2.844 16.315-10.062 16.315-21.023 0-15.205-15.72-21.199-15.765-21.199-29.218-14.018-74.163-35.054-117.987-55.57C798.033 84.26 691.861 34.547 645.23 10.132c-40.253-21.072-72.655-3.311-78.432.282l-11.227 5.555C345.727 119.743 64.898 258.826 48.911 268.553 20.278 285.973 2.547 320.679.252 363.768c-3.586 68.304 31.261 139.506 81.069 165.634l303.172 156.354c6.83 47.306 47.55 82.725 95.532 82.725 52.78 0 95.808-42.546 96.603-95.14L910.541 492.38c16.93 13.233 37.92 20.486 59.416 20.486 53.268 0 96.61-43.341 96.61-96.61s-43.342-96.61-96.61-96.61" fill-rule="evenodd"/></g></svg>
+        </div>
+        <div class="tm-content">
+            <div class="tm-container">
+                <span class="tm-text">
+                    Powered by <b>GitBook</b>
+                </span>
+            </div>
+        </div>
+    </a>
+</div></div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">&#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406;</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="interrupts-and-interrupt-handling-part-3">Interrupts and Interrupt Handling. Part 3.</h1>
+<h2 id="exception-handling">Exception Handling</h2>
+<p>This is the third part of the <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/index.html" target="_blank">chapter</a> about an interrupts and an exceptions handling in the Linux kernel and in the previous <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/index.html" target="_blank">part</a> we stopped at the <code>setup_arch</code> function from the <a href="https://github.com/torvalds/linux/blame/master/arch/x86/kernel/setup.c" target="_blank">arch/x86/kernel/setup.c</a> source code file.</p>
+<p>We already know that this function executes initialization of architecture-specific stuff. In our case the <code>setup_arch</code> function does <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a> architecture related initializations. The <code>setup_arch</code> is big function, and in the previous part we stopped on the setting of the two exceptions handlers for the two following exceptions:</p>
+<ul>
+<li><code>#DB</code> - debug exception, transfers control from the interrupted process to the debug handler;</li>
+<li><code>#BP</code> - breakpoint exception, caused by the <code>int 3</code> instruction.</li>
+</ul>
+<p>These exceptions allow the <code>x86_64</code> architecture to have early exception processing for the purpose of debugging via the <a href="https://en.wikipedia.org/wiki/KGDB" target="_blank">kgdb</a>.</p>
+<p>As you can remember we set these exceptions handlers in the <code>early_trap_init</code> function:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">early_trap_init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+        set_intr_gate_ist(X86_TRAP_DB, &amp;debug, DEBUG_STACK);
+        set_system_intr_gate_ist(X86_TRAP_BP, &amp;int3, DEBUG_STACK);
+        load_idt(&amp;idt_descr);
+}
+</code></pre>
+<p>from the <a href="https://github.com/torvalds/linux/tree/master/arch/x86/kernel/traps.c" target="_blank">arch/x86/kernel/traps.c</a>. We already saw implementation of the <code>set_intr_gate_ist</code> and <code>set_system_intr_gate_ist</code> functions in the previous part and now we will look on the implementation of these two exceptions handlers.</p>
+<h2 id="debug-and-breakpoint-exceptions">Debug and Breakpoint exceptions</h2>
+<p>Ok, we setup exception handlers in the <code>early_trap_init</code> function for the <code>#DB</code> and <code>#BP</code> exceptions and now time is to consider their implementations. But before we will do this, first of all let&apos;s look on details of these exceptions.</p>
+<p>The first exceptions - <code>#DB</code> or <code>debug</code> exception occurs when a debug event occurs. For example - attempt to change the contents of a <a href="http://en.wikipedia.org/wiki/X86_debug_register" target="_blank">debug register</a>. Debug registers are special registers that were presented in <code>x86</code> processors starting from the <a href="http://en.wikipedia.org/wiki/Intel_80386" target="_blank">Intel 80386</a> processor and as you can understand from name of this CPU extension, main purpose of these registers is debugging.</p>
+<p>These registers allow to set breakpoints on the code and read or write data to trace it. Debug registers may be accessed only in the privileged mode and an attempt to read or write the debug registers when executing at any other privilege level causes a <a href="https://en.wikipedia.org/wiki/General_protection_fault" target="_blank">general protection fault</a> exception. That&apos;s why we have used <code>set_intr_gate_ist</code> for the <code>#DB</code> exception, but not the <code>set_system_intr_gate_ist</code>.</p>
+<p>The verctor number of the <code>#DB</code> exceptions is <code>1</code> (we pass it as <code>X86_TRAP_DB</code>) and as we may read in specification, this exception has no error code:</p>
+<pre><code>+-----------------------------------------------------+
+|Vector|Mnemonic|Description         |Type |Error Code|
++-----------------------------------------------------+
+|1     | #DB    |Reserved            |F/T  |NO        |
++-----------------------------------------------------+
+</code></pre><p>The second exception is <code>#BP</code> or <code>breakpoint</code> exception occurs when processor executes the <a href="http://en.wikipedia.org/wiki/INT_%28x86_instruction%29#INT_3" target="_blank">int 3</a> instruction. Unlike the <code>DB</code> exception, the <code>#BP</code> exception may occur in userspace. We can add it anywhere in our code, for example let&apos;s look on the simple program:</p>
+<pre><code class="lang-C"><span class="hljs-comment">// breakpoint.c</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">6</span>){
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;i equal to: %d\n&quot;</span>, i);
+        __asm__(<span class="hljs-string">&quot;int3&quot;</span>);
+        ++i;
+    }
+}
+</code></pre>
+<p>If we will compile and run this program, we will see following output:</p>
+<pre><code>$ gcc breakpoint.c -o breakpoint
+i equal to: 0
+Trace/breakpoint trap
+</code></pre><p>But if will run it with gdb, we will see our breakpoint and can continue execution of our program:</p>
+<pre><code>$ gdb breakpoint
+...
+...
+...
+(gdb) run
+Starting program: /home/alex/breakpoints 
+i equal to: 0
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x0000000000400585 in main ()
+=&gt; 0x0000000000400585 &lt;main+31&gt;:    83 45 fc 01    add    DWORD PTR [rbp-0x4],0x1
+(gdb) c
+Continuing.
+i equal to: 1
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x0000000000400585 in main ()
+=&gt; 0x0000000000400585 &lt;main+31&gt;:    83 45 fc 01    add    DWORD PTR [rbp-0x4],0x1
+(gdb) c
+Continuing.
+i equal to: 2
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x0000000000400585 in main ()
+=&gt; 0x0000000000400585 &lt;main+31&gt;:    83 45 fc 01    add    DWORD PTR [rbp-0x4],0x1
+...
+...
+...
+</code></pre><p>From this moment we know a little about these two exceptions and we can move on to consideration of their handlers.</p>
+<h2 id="preparation-before-an-exception-handler">Preparation before an exception handler</h2>
+<p>As you may note before, the <code>set_intr_gate_ist</code> and <code>set_system_intr_gate_ist</code> functions takes an addresses of exceptions handlers in theirs second parameter. In or case our two exception handlers will be:</p>
+<ul>
+<li><code>debug</code>;</li>
+<li><code>int3</code>.</li>
+</ul>
+<p>You will not find these functions in the C code. all of that could be found in the kernel&apos;s <code>*.c/*.h</code> files only definition of these functions which are located in the <a href="https://github.com/torvalds/linux/tree/master/arch/x86/include/asm/traps.h" target="_blank">arch/x86/include/asm/traps.h</a> kernel header file:</p>
+<pre><code class="lang-C"><span class="hljs-function">asmlinkage <span class="hljs-keyword">void</span> <span class="hljs-title">debug</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</code></pre>
+<p>and</p>
+<pre><code class="lang-C"><span class="hljs-function">asmlinkage <span class="hljs-keyword">void</span> <span class="hljs-title">int3</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</code></pre>
+<p>You may note <code>asmlinkage</code> directive in definitions of these functions. The directive is the special specificator of the <a href="http://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">gcc</a>. Actually for a <code>C</code> functions which are called from assembly, we need in explicit declaration of the function calling convention. In our case, if function made with <code>asmlinkage</code> descriptor, then <code>gcc</code> will compile the function to retrieve parameters from stack.</p>
+<p>So, both handlers are defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/entry/entry_64.S" target="_blank">arch/x86/entry/entry_64.S</a> assembly source code file with the <code>idtentry</code> macro:</p>
+<pre><code class="lang-assembly">idtentry debug do_debug has_error_code=0 paranoid=1 shift_ist=DEBUG_STACK
+</code></pre>
+<p>and</p>
+<pre><code class="lang-assembly">idtentry int3 do_int3 has_error_code=0 paranoid=1 shift_ist=DEBUG_STACK
+</code></pre>
+<p>Each exception handler may be consists from two parts. The first part is generic part and it is the same for all exception handlers. An exception handler should to save  <a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank">general purpose registers</a> on the stack, switch to kernel stack if an exception came from userspace and transfer control to the second part of an exception handler. The second part of an exception handler does certain work depends on certain exception. For example page fault exception handler should find virtual page for given address, invalid opcode exception handler should send <code>SIGILL</code> <a href="https://en.wikipedia.org/wiki/Unix_signal" target="_blank">signal</a> and etc.</p>
+<p>As we just saw, an exception handler starts from definition of the <code>idtentry</code> macro from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/entry_64.S" target="_blank">arch/x86/kernel/entry_64.S</a> assembly source code file, so let&apos;s look at implementation of this macro. As we may see, the <code>idtentry</code> macro takes five arguments:</p>
+<ul>
+<li><code>sym</code> - defines global symbol with the <code>.globl name</code> which will be an an entry of exception handler;</li>
+<li><code>do_sym</code> - symbol name which represents a secondary entry of an exception handler;</li>
+<li><code>has_error_code</code> - information about existence of an error code of exception.</li>
+</ul>
+<p>The last two parameters are optional:</p>
+<ul>
+<li><code>paranoid</code> - shows us how we need to check current mode (will see explanation in details later);</li>
+<li><code>shift_ist</code> - shows us is an exception running at <code>Interrupt Stack Table</code>.</li>
+</ul>
+<p>Definition of the <code>.idtentry</code> macro looks:</p>
+<pre><code class="lang-assembly">.macro idtentry sym do_sym has_error_code:req paranoid=0 shift_ist=-1
+ENTRY(\sym)
+...
+...
+...
+END(\sym)
+.endm
+</code></pre>
+<p>Before we will consider internals of the <code>idtentry</code> macro, we should to know state of stack when an exception occurs. As we may read in the <a href="http://www.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html" target="_blank">Intel&#xAE; 64 and IA-32 Architectures Software Developer&#x2019;s Manual 3A</a>, the state of stack when an exception occurs is following:</p>
+<pre><code>    +------------+
++40 | %SS        |
++32 | %RSP       |
++24 | %RFLAGS    |
++16 | %CS        |
+ +8 | %RIP       |
+  0 | ERROR CODE | &lt;-- %RSP
+    +------------+
+</code></pre><p>Now we may start to consider implementation of the <code>idtmacro</code>. Both <code>#DB</code> and <code>BP</code> exception handlers are defined as:</p>
+<pre><code class="lang-assembly">idtentry debug do_debug has_error_code=0 paranoid=1 shift_ist=DEBUG_STACK
+idtentry int3 do_int3 has_error_code=0 paranoid=1 shift_ist=DEBUG_STACK
+</code></pre>
+<p>If we will look at these definitions, we may know that compiler will generate two routines with <code>debug</code> and <code>int3</code> names and both of these exception handlers will call <code>do_debug</code> and <code>do_int3</code> secondary handlers after some preparation. The third parameter defines existence of error code and as we may see both our exception do not have them. As we may see on the diagram above, processor pushes error code on stack if an exception provides it. In our case, the <code>debug</code> and <code>int3</code> exception do not have error codes. This may bring some difficulties because stack will look differently for exceptions which provides error code and for exceptions which not. That&apos;s why implementation of the <code>idtentry</code> macro starts from putting a fake error code to the stack if an exception does not provide it:</p>
+<pre><code class="lang-assembly">.ifeq \has_error_code
+    pushq    $-1
+.endif
+</code></pre>
+<p>But it is not only fake error-code. Moreover the <code>-1</code> also represents invalid system call number, so that the system call restart logic will not be triggered.</p>
+<p>The last two parameters of the <code>idtentry</code> macro <code>shift_ist</code> and <code>paranoid</code> allow to know do an exception handler runned at stack from <code>Interrupt Stack Table</code> or not. You already may know that each kernel thread in the system has own stack. In addition to these stacks, there are some specialized stacks associated with each processor in the system. One of these stacks is - exception stack. The <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a> architecture provides special feature which is called - <code>Interrupt Stack Table</code>. This feature allows to switch to a new stack for designated events such as an atomic exceptions like <code>double fault</code> and etc. So the <code>shift_ist</code> parameter allows us to know do we need to switch on <code>IST</code> stack for an exception handler or not.</p>
+<p>The second parameter - <code>paranoid</code> defines the method which helps us to know did we come from userspace or not to an exception handler. The easiest way to determine this is to via <code>CPL</code> or <code>Current Privilege Level</code> in <code>CS</code> segment register. If it is equal to <code>3</code>, we came from userspace, if zero we came from kernel space:</p>
+<pre><code>testl $3,CS(%rsp)
+jnz userspace
+...
+...
+...
+// we are from the kernel space
+</code></pre><p>But unfortunately this method does not give a 100% guarantee. As described in the kernel documentation:</p>
+<blockquote>
+<p>if we are in an NMI/MCE/DEBUG/whatever super-atomic entry context,
+which might have triggered right after a normal entry wrote CS to the
+stack but before we executed SWAPGS, then the only safe way to check
+for GS is the slower method: the RDMSR.</p>
+</blockquote>
+<p>In other words for example <code>NMI</code> could happen inside the critical section of a <a href="http://www.felixcloutier.com/x86/SWAPGS.html" target="_blank">swapgs</a> instruction. In this way we should check value of the <code>MSR_GS_BASE</code> <a href="https://en.wikipedia.org/wiki/Model-specific_register" target="_blank">model specific register</a> which stores pointer to the start of per-cpu area. So to check did we come from userspace or not, we should to check value of the <code>MSR_GS_BASE</code> model specific register and if it is negative we came from kernel space, in other way we came from userspace:</p>
+<pre><code class="lang-assembly">movl $MSR_GS_BASE,%ecx
+rdmsr
+testl %edx,%edx
+js 1f
+</code></pre>
+<p>In first two lines of code we read value of the <code>MSR_GS_BASE</code> model specific register into <code>edx:eax</code> pair. We can&apos;t set negative value to the <code>gs</code> from userspace. But from other side we know that direct mapping of the physical memory starts from the <code>0xffff880000000000</code> virtual address. In this way, <code>MSR_GS_BASE</code> will contain an address from <code>0xffff880000000000</code> to <code>0xffffc7ffffffffff</code>. After the <code>rdmsr</code> instruction will be executed, the smallest possible value in the <code>%edx</code> register will be - <code>0xffff8800</code> which is <code>-30720</code> in unsigned 4 bytes. That&apos;s why kernel space <code>gs</code> which points to start of <code>per-cpu</code> area will contain negative value.</p>
+<p>After we pushed fake error code on the stack, we should allocate space for general purpose registers with:</p>
+<pre><code class="lang-assembly">ALLOC_PT_GPREGS_ON_STACK
+</code></pre>
+<p>macro which is defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/entry/calling.h" target="_blank">arch/x86/entry/calling.h</a> header file. This macro just allocates 15*8 bytes space on the stack to preserve general purpose registers:</p>
+<pre><code class="lang-assembly">.macro ALLOC_PT_GPREGS_ON_STACK addskip=0
+    addq    $-(15*8+\addskip), %rsp
+.endm
+</code></pre>
+<p>So the stack will look like this after execution of the <code>ALLOC_PT_GPREGS_ON_STACK</code>:</p>
+<pre><code>     +------------+
++160 | %SS        |
++152 | %RSP       |
++144 | %RFLAGS    |
++136 | %CS        |
++128 | %RIP       |
++120 | ERROR CODE |
+     |------------|
++112 |            |
++104 |            |
+ +96 |            |
+ +88 |            |
+ +80 |            |
+ +72 |            |
+ +64 |            |
+ +56 |            |
+ +48 |            |
+ +40 |            |
+ +32 |            |
+ +24 |            |
+ +16 |            |
+  +8 |            |
+  +0 |            | &lt;- %RSP
+     +------------+
+</code></pre><p>After we allocated space for general purpose registers, we do some checks to understand did an exception come from userspace or not and if yes, we should move back to an interrupted process stack or stay on exception stack:</p>
+<pre><code class="lang-assembly">.if \paranoid
+    .if \paranoid == 1
+        testb    $3, CS(%rsp)
+        jnz    1f
+    .endif
+    call    paranoid_entry
+.else
+    call    error_entry
+.endif
+</code></pre>
+<p>Let&apos;s consider all of these there cases in course.</p>
+<h2 id="an-exception-occured-in-userspace">An exception occured in userspace</h2>
+<p>In the first let&apos;s consider a case when an exception has <code>paranoid=1</code> like our <code>debug</code> and <code>int3</code> exceptions. In this case we check selector from <code>CS</code> segment register and jump at <code>1f</code> label if we came from userspace or the <code>paranoid_entry</code> will be called in other way.</p>
+<p>Let&apos;s consider first case when we came from userspace to an exception handler. As described above we should jump at <code>1</code> label. The <code>1</code> label starts from the call of the</p>
+<pre><code class="lang-assembly">call    error_entry
+</code></pre>
+<p>routine which saves all general purpose registers in the previously allocated area on the stack:</p>
+<pre><code class="lang-assembly">SAVE_C_REGS 8
+SAVE_EXTRA_REGS 8
+</code></pre>
+<p>These both macros are defined in the  <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/entry/calling.h" target="_blank">arch/x86/entry/calling.h</a> header file and just move values of general purpose registers to a certain place at the stack, for example:</p>
+<pre><code class="lang-assembly">.macro SAVE_EXTRA_REGS offset=0
+    movq %r15, 0*8+\offset(%rsp)
+    movq %r14, 1*8+\offset(%rsp)
+    movq %r13, 2*8+\offset(%rsp)
+    movq %r12, 3*8+\offset(%rsp)
+    movq %rbp, 4*8+\offset(%rsp)
+    movq %rbx, 5*8+\offset(%rsp)
+.endm
+</code></pre>
+<p>After execution of <code>SAVE_C_REGS</code> and <code>SAVE_EXTRA_REGS</code> the stack will look:</p>
+<pre><code>     +------------+
++160 | %SS        |
++152 | %RSP       |
++144 | %RFLAGS    |
++136 | %CS        |
++128 | %RIP       |
++120 | ERROR CODE |
+     |------------|
++112 | %RDI       |
++104 | %RSI       |
+ +96 | %RDX       |
+ +88 | %RCX       |
+ +80 | %RAX       |
+ +72 | %R8        |
+ +64 | %R9        |
+ +56 | %R10       |
+ +48 | %R11       |
+ +40 | %RBX       |
+ +32 | %RBP       |
+ +24 | %R12       |
+ +16 | %R13       |
+  +8 | %R14       |
+  +0 | %R15       | &lt;- %RSP
+     +------------+
+</code></pre><p>After the kernel saved general purpose registers at the stack, we should check that we came from userspace space again with:</p>
+<pre><code class="lang-assembly">testb    $3, CS+8(%rsp)
+jz    .Lerror_kernelspace
+</code></pre>
+<p>because we may have potentially fault if as described in documentation truncated <code>%RIP</code> was reported. Anyway, in both cases the <a href="http://www.felixcloutier.com/x86/SWAPGS.html" target="_blank">SWAPGS</a> instruction will be executed and values from <code>MSR_KERNEL_GS_BASE</code> and <code>MSR_GS_BASE</code> will be swapped. From this moment the <code>%gs</code> register will point to the base address of kernel structures. So, the <code>SWAPGS</code> instruction is called and it was main point of the <code>error_entry</code> routing.</p>
+<p>Now we can back to the <code>idtentry</code> macro. We may see following assembler code after the call of <code>error_entry</code>:</p>
+<pre><code class="lang-assembly">movq    %rsp, %rdi
+call    sync_regs
+</code></pre>
+<p>Here we put base address of stack pointer <code>%rdi</code> register which will be first argument (according to <a href="https://www.uclibc.org/docs/psABI-x86_64.pdf" target="_blank">x86_64 ABI</a>) of the <code>sync_regs</code> function and call this function which is defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/traps.c" target="_blank">arch/x86/kernel/traps.c</a> source code file:</p>
+<pre><code class="lang-C">asmlinkage __<span class="hljs-function">visible notrace <span class="hljs-keyword">struct</span> pt_regs *<span class="hljs-title">sync_regs</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs *eregs)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> pt_regs *regs = task_pt_regs(current);
+    *regs = *eregs;
+    <span class="hljs-keyword">return</span> regs;
+}
+</code></pre>
+<p>This function takes the result of the <code>task_ptr_regs</code> macro which is defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/asm/processor.h" target="_blank">arch/x86/include/asm/processor.h</a> header file, stores it in the stack pointer and return it. The <code>task_ptr_regs</code> macro expands to the address of <code>thread.sp0</code> which represents pointer to the normal kernel stack:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> task_pt_regs(tsk)       ((struct pt_regs *)(tsk)-&gt;thread.sp0 - 1)</span>
+</code></pre>
+<p>As we came from userspace, this means that exception handler will run in real process context. After we got stack pointer from the <code>sync_regs</code> we switch stack:</p>
+<pre><code class="lang-assembly">movq    %rax, %rsp
+</code></pre>
+<p>The last two steps before an exception handler will call secondary handler are:</p>
+<ol>
+<li>Passing pointer to <code>pt_regs</code> structure which contains preserved general purpose registers to the <code>%rdi</code> register:</li>
+</ol>
+<pre><code class="lang-assembly">movq    %rsp, %rdi
+</code></pre>
+<p>as it will be passed as first parameter of secondary exception handler.</p>
+<ol>
+<li>Pass error code to the <code>%rsi</code> register as it will be second argument of an exception handler and set it to <code>-1</code> on the stack for the same purpose as we did it before - to prevent restart of a system call:</li>
+</ol>
+<pre><code>.if \has_error_code
+    movq    ORIG_RAX(%rsp), %rsi
+    movq    $-1, ORIG_RAX(%rsp)
+.else
+    xorl    %esi, %esi
+.endif
+</code></pre><p>Additionally you may see that we zeroed the <code>%esi</code> register above in a case if an exception does not provide error code. </p>
+<p>In the end we just call secondary exception handler:</p>
+<pre><code class="lang-assembly">call    \do_sym
+</code></pre>
+<p>which:</p>
+<pre><code class="lang-C"><span class="hljs-function">dotraplinkage <span class="hljs-keyword">void</span> <span class="hljs-title">do_debug</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs *regs, <span class="hljs-keyword">long</span> error_code)</span></span>;
+</code></pre>
+<p>will be for <code>debug</code> exception and:</p>
+<pre><code class="lang-C"><span class="hljs-function">dotraplinkage <span class="hljs-keyword">void</span> notrace <span class="hljs-title">do_int3</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs *regs, <span class="hljs-keyword">long</span> error_code)</span></span>;
+</code></pre>
+<p>will be for <code>int 3</code> exception. In this part we will not see implementations of secondary handlers, because of they are very specific, but will see some of them in one of next parts.</p>
+<p>We just considered first case when an exception occurred in userspace. Let&apos;s consider last two.</p>
+<h2 id="an-exception-with-paranoid--0-occurred-in-kernelspace">An exception with paranoid &gt; 0 occurred in kernelspace</h2>
+<p>In this case an exception was occurred in kernelspace and <code>idtentry</code> macro is defined with <code>paranoid=1</code> for this exception. This value of <code>paranoid</code> means that we should use slower way that we saw in the beginning of this part to check do we really came from kernelspace or not. The <code>paranoid_entry</code> routing allows us to know this:</p>
+<pre><code class="lang-assembly">ENTRY(paranoid_entry)
+    cld
+    SAVE_C_REGS 8
+    SAVE_EXTRA_REGS 8
+    movl    $1, %ebx
+    movl    $MSR_GS_BASE, %ecx
+    rdmsr
+    testl    %edx, %edx
+    js    1f
+    SWAPGS
+    xorl    %ebx, %ebx
+1:    ret
+END(paranoid_entry)
+</code></pre>
+<p>As you may see, this function represents the same that we covered before. We use second (slow) method to get information about previous state of an interrupted task. As we checked this and executed <code>SWAPGS</code> in a case if we came from userspace, we should to do the same that we did before: We need to put pointer to a structure which holds general purpose registers to the <code>%rdi</code> (which will be first parameter of a secondary handler) and put error code if an exception provides it to the <code>%rsi</code> (which will be second parameter of a secondary handler):</p>
+<pre><code class="lang-assembly">movq    %rsp, %rdi
+
+.if \has_error_code
+    movq    ORIG_RAX(%rsp), %rsi
+    movq    $-1, ORIG_RAX(%rsp)
+.else
+    xorl    %esi, %esi
+.endif
+</code></pre>
+<p>The last step before a secondary handler of an exception will be called is cleanup of new <code>IST</code> stack fram:</p>
+<pre><code class="lang-assembly">.if \shift_ist != -1
+    subq    $EXCEPTION_STKSZ, CPU_TSS_IST(\shift_ist)
+.endif
+</code></pre>
+<p>You may remember that we passed the <code>shift_ist</code> as argument of the <code>idtentry</code> macro. Here we check its value and if its not equal to <code>-1</code>, we get pointer to a stack from <code>Interrupt Stack Table</code> by <code>shift_ist</code> index and setup it.</p>
+<p>In the end of this second way we just call secondary exception handler as we did it before:</p>
+<pre><code class="lang-assembly">call    \do_sym
+</code></pre>
+<p>The last method is similar to previous both, but an exception occured with <code>paranoid=0</code> and we may use fast method determination of where we are from.</p>
+<h2 id="exit-from-an-exception-handler">Exit from an exception handler</h2>
+<p>After secondary handler will finish its works, we will return to the <code>idtentry</code> macro and the next step will be jump to the <code>error_exit</code>:</p>
+<pre><code class="lang-assembly">jmp    error_exit
+</code></pre>
+<p>routine. The <code>error_exit</code> function defined in the same <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/entry/entry_64.S" target="_blank">arch/x86/entry/entry_64.S</a> assembly source code file and the main goal of this function is to know where we are from (from userspace or kernelspace) and execute <code>SWPAGS</code> depends on this. Restore registers to previous state and execute <code>iret</code> instruction to transfer control to an interrupted task.</p>
+<p>That&apos;s all.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>It is the end of the third part about interrupts and interrupt handling in the Linux kernel. We saw the initialization of the <a href="https://en.wikipedia.org/wiki/Interrupt_descriptor_table" target="_blank">Interrupt descriptor table</a> in the previous part with the <code>#DB</code> and <code>#BP</code> gates and started to dive into preparation before control will be transferred to an exception handler and implementation of some interrupt handlers in this part. In the next part we will continue to dive into this theme and will go next by the <code>setup_arch</code> function and will try to understand interrupts handling related stuff.</p>
+<p>If you have any questions or suggestions write me a comment or ping me at <a href="https://twitter.com/0xAX" target="_blank">twitter</a>.</p>
+<p><strong>Please note that English is not my first language, And I am really sorry for any inconvenience. If you find any mistakes please send me PR to <a href="https://github.com/0xAX/linux-insides" target="_blank">linux-insides</a>.</strong></p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/X86_debug_register" target="_blank">Debug registers</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Intel_80386" target="_blank">Intel 80385</a></li>
+<li><a href="http://en.wikipedia.org/wiki/INT_%28x86_instruction%29#INT_3" target="_blank">INT 3</a></li>
+<li><a href="http://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">gcc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Task_state_segment" target="_blank">TSS</a></li>
+<li><a href="https://sourceware.org/binutils/docs/as/Error.html#Error" target="_blank">GNU assembly .error directive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DWARF" target="_blank">dwarf2</a></li>
+<li><a href="https://sourceware.org/binutils/docs/as/CFI-directives.html" target="_blank">CFI directives</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Interrupt_request_%28PC_architecture%29" target="_blank">IRQ</a></li>
+<li><a href="http://en.wikipedia.org/wiki/System_call" target="_blank">system call</a></li>
+<li><a href="http://www.felixcloutier.com/x86/SWAPGS.html" target="_blank">swapgs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Unix_signal#SIGTRAP" target="_blank">SIGTRAP</a></li>
+<li><a href="http://0xax.gitbooks.io/linux-insides/content/Concepts/per-cpu.html" target="_blank">Per-CPU variables</a></li>
+<li><a href="https://en.wikipedia.org/wiki/KGDB" target="_blank">kgdb</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface" target="_blank">ACPI</a></li>
+<li><a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/index.html" target="_blank">Previous part</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class="search-results-count"></span> results matching &quot;<span class="search-query"></span>&quot;</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching &quot;<span class="search-query"></span>&quot;</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux-interrupts-2.html" class="navigation navigation-prev " aria-label="Previous page: &#x6DF1;&#x5165; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="linux-interrupts-4.html" class="navigation navigation-next " aria-label="Next page: &#x4E2D;&#x65AD;&#x5904;&#x7406;">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"初步中断处理","level":"1.4.3","depth":2,"next":{"title":"中断处理","level":"1.4.4","depth":2,"path":"Interrupts/linux-interrupts-4.md","ref":"Interrupts/linux-interrupts-4.md","articles":[]},"previous":{"title":"深入 Linux 内核中的中断","level":"1.4.2","depth":2,"path":"Interrupts/linux-interrupts-2.md","ref":"Interrupts/linux-interrupts-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["comment"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"comment":{"highlightCommented":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"MintCN/linux-insides-zh","theme":"default","author":"xinqiu","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux ­Insides­中文","language":"zh","links":{"sidebar":{"Linux ­Insides­中文":"https://legacy.gitbook.com/book/xinqiu/linux-insides-cn"},"gitbook":true},"gitbook":"*","description":"linux内核揭密    Translated By MintCN"},"file":{"path":"Interrupts/linux-interrupts-3.md","mtime":"2020-03-17T07:53:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T07:56:09.393Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-comment/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+
+</body></html>

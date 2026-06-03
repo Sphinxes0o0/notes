@@ -44,4 +44,4 @@ created: 2026-05-28
 
 - [[bookmark-linux-inside]] — Linux Inside（进阶入门）
 - [[bookmark-linux-kernel-labs]] — Linux Kernel Labs（教学+实验）
-- [[wiki/os-index]] — OS基础索引
+- [[os-index]] — OS基础索引

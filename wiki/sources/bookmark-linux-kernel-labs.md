@@ -47,8 +47,8 @@ created: 2026-05-28
 
 ## 相关页面
 
-- [[wiki/kernel-mm-index]] — 内存管理索引
-- [[wiki/kernel-sched-index]] — 调度器索引
-- [[wiki/kernel-subsystems-index]] — 内核子系统总览
+- [[kernel-mm-index]] — 内存管理索引
+- [[kernel-sched-index]] — 调度器索引
+- [[kernel-subsystems-index]] — 内核子系统总览
 - [[bookmark-linux-inside]] — Linux Inside（理论为主）
 - [[notes-kernel]] — Sphinx 内核笔记（源码深度）

@@ -171,6 +171,7 @@ created: 2026-05-22
 | [[wiki/sources/arthurchiao-facebook-xdp-to-socket]] | Facebook XDP/eBPF: Katran L4 LB, Maglev hashing, bpf_sk_reuseport |
 | [[wiki/sources/arthurchiao-pki]] | PKI and certificates: CA hierarchy, trust stores, mTLS, certificate chain |
 | [[wiki/sources/arthurchiao-modern-lb-proxy]] | Modern load balancing: L4 vs L7, topology, ECMP, service mesh |
+| [[wiki/sources/chatgpt-labgrid-analysis]] | ChatGPT Labgrid 框架分析：多 ECU 层次化建模、VehicleStrategy、Resource Domain |
 | [[wiki/sources/arthurchiao-tc-da-mode]] | TC eBPF direct-action mode: clsact, action verdicts, cls_bpf filter |
 | [[wiki/sources/arthurchiao-conntrack-design]] | Conntrack design: netfilter hooks, two-phase creation, NAT dependency |
 | [[wiki/sources/arthurchiao-sockmap-ebpf]] | eBPF sockmap: socket redirection bypassing TCP/IP stack, sockops/sk_msg |
@@ -198,3 +199,5 @@ created: 2026-05-22
 |-------|-------------|
 | [[wiki/synthesis/topic-os-fundamentals]] | OS fundamentals synthesis |
 | [[wiki/synthesis/topic-network-fundamentals]] | Network fundamentals synthesis |
+| [[wiki/synthesis/labgrid-bench-analysis]] | Labgrid Bench Management 分析：Power/Serial/SSH/Reservation 替换 |
+| [[wiki/synthesis/labgrid-automotive-scenario]] | Labgrid 车载多 ECU 场景：Hierarchical Place、Resource Domain、VehicleStrategy |

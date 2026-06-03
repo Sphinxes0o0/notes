@@ -227,7 +227,7 @@ Place 的层次化设计支持多粒度资源管理：
 
 ## 与 labgrid-bench-analysis 的关系
 
-本分析补充了 labgrid 在**车载多 ECU 场景**的设计思路，而 [[wiki/synthesis/labgrid-bench-analysis]] 更侧重于 bench management 场景（Power/Serial/SSH/Reservation）。
+本分析补充了 labgrid 在**车载多 ECU 场景**的设计思路，而 [[synthesis/labgrid-bench-analysis]] 更侧重于 bench management 场景（Power/Serial/SSH/Reservation）。
 
 | 维度 | labgrid-bench-analysis | 本分析 |
 |------|----------------------|--------|
@@ -241,6 +241,6 @@ Place 的层次化设计支持多粒度资源管理：
 
 ## 相关页面
 
-- [[wiki/synthesis/labgrid-bench-analysis]] — Bench management 场景分析
-- [[wiki/entities/linux/safeos/safeos-packet-mmap]] — safeOS 网络相关
-- [[wiki/entities/linux/lwip/lwip-sel4-function]] — lwIP on seL4
+- [[synthesis/labgrid-bench-analysis]] — Bench management 场景分析
+- [[entities/linux/safeos/safeos-packet-mmap]] — safeOS 网络相关
+- [[entities/linux/lwip/lwip-sel4-function]] — lwIP on seL4

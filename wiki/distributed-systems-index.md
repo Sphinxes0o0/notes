@@ -42,4 +42,4 @@ sources: [ebook-ddia]
 
 - [[sources/ebook-systems-approach]] — Systems Approach (Peterson & Davie)，网络与分布式系统教材
 - [[sources/workflow-engine]] — Sogou Workflow (分布式任务流引擎)
-- [[wiki/os-index]] — 操作系统基础（进程/线程/内存等）
+- [[os-index]] — 操作系统基础（进程/线程/内存等）

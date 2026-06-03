@@ -1,0 +1,1875 @@
+<!DOCTYPE html><html lang="zh"><head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>kmemcheck &#xB7; Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xinqiu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-comment/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://gstatic.gitbook.com/images/b1c4c86ca817a71628d2debe73be9a64.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Cgroups/">
+    
+    
+    <link rel="prev" href="linux-mm-2.html">
+    
+
+    
+<style>
+    .book .book-summary .book-search,
+    .book .book-summary ul.summary {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    .book-summary {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        overflow-y: auto;
+    }
+    .book-summary > nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+    .gl-wrapper {
+        margin: 0;
+        display: block;
+        padding: 0;
+        position: relative;
+        line-height: 15px;
+        background: #fafafa;
+    }
+    .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        background: -moz-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        top: -24px;
+        width: 100%;
+        height: 24px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+    }
+    .book.color-theme-1 .gl-wrapper {
+        background: #121212;
+    }
+    .book.color-theme-1 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: -moz-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+    }
+    .book.color-theme-2 .gl-wrapper {
+        background: #2e3243;
+    }
+    .book.color-theme-2 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: -moz-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+    }
+    .gl-wrapper .gitbook-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        color: #9DAAB6;
+        margin: 16px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin-left: 32px;
+        padding-top: 8px;
+        padding-left: 16px;
+        border-radius: 3px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        background-color: #E6ECF1;
+        -webkit-box-align: center;
+    }
+    .gl-wrapper .tm-logo {
+        margin: 0;
+        display: block;
+        padding: 0;
+        font-size: 40px;
+    }
+    .gl-wrapper .tm-content {
+        flex: 1;
+        margin: 0;
+        display: block;
+        padding: 0;
+        padding-left: 16px;
+    }
+    .gl-wrapper .tm-content .container {
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+    .gl-wrapper .tm-content .tm-container .tm-text {
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 1.625;
+    }
+</style></head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="&#x8F38;&#x5165;&#x4E26;&#x641C;&#x5C0B;">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://legacy.gitbook.com/book/xinqiu/linux-insides-cn" target="_blank" class="custom-link">Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Booting/">
+            
+                <a href="../Booting/">
+            
+                    
+                    &#x5F15;&#x5BFC;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Booting/linux-bootstrap-1.html">
+            
+                <a href="../Booting/linux-bootstrap-1.html">
+            
+                    
+                    &#x4ECE;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x5185;&#x6838;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Booting/linux-bootstrap-2.html">
+            
+                <a href="../Booting/linux-bootstrap-2.html">
+            
+                    
+                    &#x5728;&#x5185;&#x6838;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x7684;&#x7B2C;&#x4E00;&#x6B65;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Booting/linux-bootstrap-3.html">
+            
+                <a href="../Booting/linux-bootstrap-3.html">
+            
+                    
+                    &#x89C6;&#x9891;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x548C;&#x8F6C;&#x6362;&#x5230;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Booting/linux-bootstrap-4.html">
+            
+                <a href="../Booting/linux-bootstrap-4.html">
+            
+                    
+                    &#x8FC7;&#x6E21;&#x5230; 64 &#x4F4D;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Booting/linux-bootstrap-5.html">
+            
+                <a href="../Booting/linux-bootstrap-5.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x7F29;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Initialization/">
+            
+                <a href="../Initialization/">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Initialization/linux-initialization-1.html">
+            
+                <a href="../Initialization/linux-initialization-1.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x4E4B;&#x540E;&#x7684;&#x9996;&#x8981;&#x6B65;&#x9AA4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Initialization/linux-initialization-2.html">
+            
+                <a href="../Initialization/linux-initialization-2.html">
+            
+                    
+                    &#x65E9;&#x671F;&#x7684;&#x4E2D;&#x65AD;&#x548C;&#x5F02;&#x5E38;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Initialization/linux-initialization-3.html">
+            
+                <a href="../Initialization/linux-initialization-3.html">
+            
+                    
+                    &#x5728;&#x5230;&#x8FBE;&#x5185;&#x6838;&#x5165;&#x53E3;&#x4E4B;&#x524D;&#x6700;&#x540E;&#x7684;&#x51C6;&#x5907;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Initialization/linux-initialization-4.html">
+            
+                <a href="../Initialization/linux-initialization-4.html">
+            
+                    
+                    &#x5185;&#x6838;&#x5165;&#x53E3; - start_kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Initialization/linux-initialization-5.html">
+            
+                <a href="../Initialization/linux-initialization-5.html">
+            
+                    
+                    &#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Initialization/linux-initialization-6.html">
+            
+                <a href="../Initialization/linux-initialization-6.html">
+            
+                    
+                    &#x8FDB;&#x4E00;&#x6B65;&#x521D;&#x59CB;&#x5316;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Initialization/linux-initialization-7.html">
+            
+                <a href="../Initialization/linux-initialization-7.html">
+            
+                    
+                    &#x6700;&#x540E;&#x5BF9;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Initialization/linux-initialization-8.html">
+            
+                <a href="../Initialization/linux-initialization-8.html">
+            
+                    
+                    &#x8C03;&#x5EA6;&#x5668;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Initialization/linux-initialization-9.html">
+            
+                <a href="../Initialization/linux-initialization-9.html">
+            
+                    
+                    RCU &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Initialization/linux-initialization-10.html">
+            
+                <a href="../Initialization/linux-initialization-10.html">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x675F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Interrupts/">
+            
+                <a href="../Interrupts/">
+            
+                    
+                    &#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Interrupts/linux-interrupts-1.html">
+            
+                <a href="../Interrupts/linux-interrupts-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x548C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Interrupts/linux-interrupts-2.html">
+            
+                <a href="../Interrupts/linux-interrupts-2.html">
+            
+                    
+                    &#x6DF1;&#x5165; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Interrupts/linux-interrupts-3.html">
+            
+                <a href="../Interrupts/linux-interrupts-3.html">
+            
+                    
+                    &#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Interrupts/linux-interrupts-4.html">
+            
+                <a href="../Interrupts/linux-interrupts-4.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Interrupts/linux-interrupts-5.html">
+            
+                <a href="../Interrupts/linux-interrupts-5.html">
+            
+                    
+                    &#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Interrupts/linux-interrupts-6.html">
+            
+                <a href="../Interrupts/linux-interrupts-6.html">
+            
+                    
+                    &#x5904;&#x7406;&#x4E0D;&#x53EF;&#x5C4F;&#x853D;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Interrupts/linux-interrupts-7.html">
+            
+                <a href="../Interrupts/linux-interrupts-7.html">
+            
+                    
+                    &#x6DF1;&#x5165;&#x5916;&#x90E8;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Interrupts/linux-interrupts-8.html">
+            
+                <a href="../Interrupts/linux-interrupts-8.html">
+            
+                    
+                    IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../Interrupts/linux-interrupts-9.html">
+            
+                <a href="../Interrupts/linux-interrupts-9.html">
+            
+                    
+                    Softirq, Tasklets and Workqueues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../Interrupts/linux-interrupts-10.html">
+            
+                <a href="../Interrupts/linux-interrupts-10.html">
+            
+                    
+                    &#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SysCall/">
+            
+                <a href="../SysCall/">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../SysCall/linux-syscall-1.html">
+            
+                <a href="../SysCall/linux-syscall-1.html">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6982;&#x5FF5;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../SysCall/linux-syscall-2.html">
+            
+                <a href="../SysCall/linux-syscall-2.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../SysCall/linux-syscall-3.html">
+            
+                <a href="../SysCall/linux-syscall-3.html">
+            
+                    
+                    vsyscall and vDSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../SysCall/linux-syscall-4.html">
+            
+                <a href="../SysCall/linux-syscall-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../SysCall/linux-syscall-5.html">
+            
+                <a href="../SysCall/linux-syscall-5.html">
+            
+                    
+                    open &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../SysCall/linux-syscall-6.html">
+            
+                <span>
+            
+                    
+                    Linux &#x8D44;&#x6E90;&#x9650;&#x5236;
+            
+                
+            
+
+            
+        </span></li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Timers/">
+            
+                <a href="../Timers/">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x548C;&#x65F6;&#x949F;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Timers/linux-timers-1.html">
+            
+                <a href="../Timers/linux-timers-1.html">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Timers/linux-timers-2.html">
+            
+                <a href="../Timers/linux-timers-2.html">
+            
+                    
+                    &#x65F6;&#x949F;&#x6E90;&#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Timers/linux-timers-3.html">
+            
+                <a href="../Timers/linux-timers-3.html">
+            
+                    
+                    The tick broadcast framework and dyntick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Timers/linux-timers-4.html">
+            
+                <a href="../Timers/linux-timers-4.html">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x4ECB;&#x7ECD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Timers/linux-timers-5.html">
+            
+                <a href="../Timers/linux-timers-5.html">
+            
+                    
+                    Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Timers/linux-timers-6.html">
+            
+                <a href="../Timers/linux-timers-6.html">
+            
+                    
+                    x86 &#x76F8;&#x5173;&#x7684;&#x65F6;&#x949F;&#x6E90;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Timers/linux-timers-7.html">
+            
+                <a href="../Timers/linux-timers-7.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x4E0E;&#x65F6;&#x949F;&#x76F8;&#x5173;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SyncPrim/">
+            
+                <a href="../SyncPrim/">
+            
+                    
+                    &#x540C;&#x6B65;&#x539F;&#x8BED;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SyncPrim/linux-sync-1.html">
+            
+                <a href="../SyncPrim/linux-sync-1.html">
+            
+                    
+                    &#x81EA;&#x65CB;&#x9501;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SyncPrim/linux-sync-2.html">
+            
+                <a href="../SyncPrim/linux-sync-2.html">
+            
+                    
+                    &#x961F;&#x5217;&#x81EA;&#x65CB;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SyncPrim/linux-sync-3.html">
+            
+                <a href="../SyncPrim/linux-sync-3.html">
+            
+                    
+                    &#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SyncPrim/linux-sync-4.html">
+            
+                <a href="../SyncPrim/linux-sync-4.html">
+            
+                    
+                    &#x4E92;&#x65A5;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SyncPrim/linux-sync-5.html">
+            
+                <a href="../SyncPrim/linux-sync-5.html">
+            
+                    
+                    &#x8BFB;&#x8005;/&#x5199;&#x8005;&#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SyncPrim/linux-sync-6.html">
+            
+                <a href="../SyncPrim/linux-sync-6.html">
+            
+                    
+                    &#x987A;&#x5E8F;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7">
+            
+                <span>
+            
+                    
+                    RCU
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8">
+            
+                <span>
+            
+                    
+                    Lockdep
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    &#x5185;&#x5B58;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="linux-mm-1.html">
+            
+                <a href="linux-mm-1.html">
+            
+                    
+                    &#x5185;&#x5B58;&#x5757;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="linux-mm-2.html">
+            
+                <a href="linux-mm-2.html">
+            
+                    
+                    &#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x548C; ioremap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.3" data-path="linux-mm-3.html">
+            
+                <a href="linux-mm-3.html">
+            
+                    
+                    kmemcheck
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cgroups/">
+            
+                <a href="../Cgroups/">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Cgroups/linux-cgroups-1.html">
+            
+                <a href="../Cgroups/linux-cgroups-1.html">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10">
+            
+                <span>
+            
+                    
+                    SMP
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Concepts/">
+            
+                <a href="../Concepts/">
+            
+                    
+                    &#x6982;&#x5FF5;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Concepts/linux-cpu-1.html">
+            
+                <a href="../Concepts/linux-cpu-1.html">
+            
+                    
+                    &#x6BCF;&#x4E2A; CPU &#x7684;&#x53D8;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Concepts/linux-cpu-2.html">
+            
+                <a href="../Concepts/linux-cpu-2.html">
+            
+                    
+                    CPU &#x63A9;&#x7801;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Concepts/linux-cpu-3.html">
+            
+                <a href="../Concepts/linux-cpu-3.html">
+            
+                    
+                    initcall &#x673A;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Concepts/linux-cpu-4.html">
+            
+                <a href="../Concepts/linux-cpu-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x7684;&#x901A;&#x77E5;&#x94FE;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../DataStructures/">
+            
+                <a href="../DataStructures/">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../DataStructures/linux-datastructures-1.html">
+            
+                <a href="../DataStructures/linux-datastructures-1.html">
+            
+                    
+                    &#x53CC;&#x5411;&#x94FE;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../DataStructures/linux-datastructures-2.html">
+            
+                <a href="../DataStructures/linux-datastructures-2.html">
+            
+                    
+                    &#x57FA;&#x6570;&#x6811;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../DataStructures/linux-datastructures-3.html">
+            
+                <a href="../DataStructures/linux-datastructures-3.html">
+            
+                    
+                    &#x4F4D;&#x6570;&#x7EC4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Theory/">
+            
+                <a href="../Theory/">
+            
+                    
+                    &#x7406;&#x8BBA;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Theory/linux-theory-1.html">
+            
+                <a href="../Theory/linux-theory-1.html">
+            
+                    
+                    &#x5206;&#x9875;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Theory/linux-theory-2.html">
+            
+                <a href="../Theory/linux-theory-2.html">
+            
+                    
+                    ELF &#x6587;&#x4EF6;&#x683C;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Theory/linux-theory-3.html">
+            
+                <a href="../Theory/linux-theory-3.html">
+            
+                    
+                    &#x5167;&#x8054;&#x6C47;&#x7F16;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4">
+            
+                <span>
+            
+                    
+                    CPUID
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5">
+            
+                <span>
+            
+                    
+                    MSR
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14">
+            
+                <span>
+            
+                    
+                    Initial ram disk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1">
+            
+                <span>
+            
+                    
+                    initrd
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Misc/">
+            
+                <a href="../Misc/">
+            
+                    
+                    &#x6742;&#x9879;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../Misc/linux-misc-1.html">
+            
+                <a href="../Misc/linux-misc-1.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5F00;&#x53D1;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../Misc/linux-misc-2.html">
+            
+                <a href="../Misc/linux-misc-2.html">
+            
+                    
+                    &#x5185;&#x6838;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../Misc/linux-misc-3.html">
+            
+                <a href="../Misc/linux-misc-3.html">
+            
+                    
+                    &#x94FE;&#x63A5;&#x5668;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../Misc/linux-misc-4.html">
+            
+                <a href="../Misc/linux-misc-4.html">
+            
+                    
+                    &#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5">
+            
+                <span>
+            
+                    
+                    &#x4E66;&#x5199;&#x5E76;&#x63D0;&#x4EA4;&#x4F60;&#x7B2C;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x8865;&#x4E01;
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../KernelStructures/">
+            
+                <a href="../KernelStructures/">
+            
+                    
+                    &#x5185;&#x6838;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../KernelStructures/linux-kernelstructure-1.html">
+            
+                <a href="../KernelStructures/linux-kernelstructure-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x63CF;&#x8FF0;&#x7B26;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../LINKS.html">
+            
+                <a href="../LINKS.html">
+            
+                    
+                    &#x6709;&#x5E2E;&#x52A9;&#x7684;&#x94FE;&#x63A5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../CONTRIBUTORS.html">
+            
+                <a href="../CONTRIBUTORS.html">
+            
+                    
+                    &#x8D21;&#x732E;&#x8005;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    
+<div class="gl-wrapper">
+    <a class="gitbook-link" href="https://www.gitbook.com?utm_source=public_site_legacy&amp;utm_medium=referral&amp;utm_campaign=trademark&amp;utm_term=xinqiu&amp;utm_content=powered_by" target="blank">
+        <div class="tm-logo">
+            <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="currentColor" viewBox="0 0 1067 769" xmlns="http://www.w3.org/2000/svg" stroke="none" class="icon-7f6730be--text-3f89f380"><g><path d="M480.026 640.677c17.205 0 31.2 13.997 31.2 31.194s-13.995 31.193-31.2 31.193c-17.197 0-31.193-13.996-31.193-31.193 0-17.197 13.996-31.194 31.193-31.194m489.93-193.226c-17.203 0-31.2-13.998-31.2-31.195 0-17.204 13.997-31.2 31.2-31.2 17.198 0 31.194 13.996 31.194 31.2 0 17.197-13.996 31.195-31.193 31.195m0-127.804c-53.269 0-96.609 43.34-96.609 96.609 0 10.373 1.723 20.702 5.123 30.741L559.328 616.879c-18.132-26.128-47.521-41.617-79.302-41.617-36.821 0-70.391 21.065-86.63 54.003L106.68 478.109c-30.288-15.927-52.965-65.817-50.56-111.223 1.248-23.687 9.438-42.071 21.897-49.17 7.916-4.493 17.436-4.099 27.526 1.188l1.916 1.01c75.96 40.022 324.6 170.981 335.063 175.844 16.157 7.47 25.14 10.5 52.659-2.547l513.958-267.3c7.53-2.844 16.315-10.062 16.315-21.023 0-15.205-15.72-21.199-15.765-21.199-29.218-14.018-74.163-35.054-117.987-55.57C798.033 84.26 691.861 34.547 645.23 10.132c-40.253-21.072-72.655-3.311-78.432.282l-11.227 5.555C345.727 119.743 64.898 258.826 48.911 268.553 20.278 285.973 2.547 320.679.252 363.768c-3.586 68.304 31.261 139.506 81.069 165.634l303.172 156.354c6.83 47.306 47.55 82.725 95.532 82.725 52.78 0 95.808-42.546 96.603-95.14L910.541 492.38c16.93 13.233 37.92 20.486 59.416 20.486 53.268 0 96.61-43.341 96.61-96.61s-43.342-96.61-96.61-96.61" fill-rule="evenodd"/></g></svg>
+        </div>
+        <div class="tm-content">
+            <div class="tm-container">
+                <span class="tm-text">
+                    Powered by <b>GitBook</b>
+                </span>
+            </div>
+        </div>
+    </a>
+</div></div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">kmemcheck</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="linux&#x5185;&#x6838;&#x5185;&#x5B58;&#x7BA1;&#x7406;-&#x7B2C;&#x4E09;&#x8282;">Linux&#x5185;&#x6838;&#x5185;&#x5B58;&#x7BA1;&#x7406; &#x7B2C;&#x4E09;&#x8282;</h1>
+<h2 id="&#x5185;&#x6838;&#x4E2D;-kmemcheck-&#x4ECB;&#x7ECD;">&#x5185;&#x6838;&#x4E2D; kmemcheck &#x4ECB;&#x7ECD;</h2>
+<p>Linux&#x5185;&#x5B58;&#x7BA1;&#x7406;<a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/MM/" target="_blank">&#x7AE0;&#x8282;</a>&#x63CF;&#x8FF0;&#x4E86;Linux&#x5185;&#x6838;&#x4E2D;<a href="https://en.wikipedia.org/wiki/Memory_management" target="_blank">&#x5185;&#x5B58;&#x7BA1;&#x7406;</a>&#xFF1B;&#x672C;&#x5C0F;&#x8282;&#x662F;&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#x3002; &#x5728;&#x672C;&#x7AE0;<a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/MM/linux-mm-2.html" target="_blank">&#x7B2C;&#x4E8C;&#x8282;</a>&#x4E2D;&#x6211;&#x4EEC;&#x9047;&#x5230;&#x4E86;&#x4E24;&#x4E2A;&#x4E0E;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x76F8;&#x5173;&#x7684;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li><code>&#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;</code>;</li>
+<li><code>&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x91CD;&#x6620;&#x5C04;</code>.</li>
+</ul>
+<p>&#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x4EE3;&#x8868;<a href="https://en.wikipedia.org/wiki/Virtual_memory" target="_blank">&#x865A;&#x62DF;&#x5185;&#x5B58;</a>&#x4E2D;&#x7684;&#x4E00;&#x7C7B;&#x7279;&#x6B8A;&#x533A;&#x57DF;&#xFF0C; &#x8FD9;&#x7C7B;&#x5730;&#x5740;&#x7684;&#x7269;&#x7406;&#x6620;&#x5C04;&#x5730;&#x5740;&#x662F;&#x5728;<a href="https://en.wikipedia.org/wiki/Compile_time" target="_blank">&#x7F16;&#x8BD1;</a>&#x671F;&#x95F4;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x3002;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x91CD;&#x6620;&#x5C04;&#x8868;&#x793A;&#x628A;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5B58;&#x6620;&#x5C04;&#x5230;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x67E5;&#x770B;<code>/proc/iomem</code>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>$ sudo cat /proc/iomem
+
+00000000-00000fff : reserved
+00001000-0009d7ff : System RAM
+0009d800-0009ffff : reserved
+000a0000-000bffff : PCI Bus 0000:00
+000c0000-000cffff : Video ROM
+000d0000-000d3fff : PCI Bus 0000:00
+000d4000-000d7fff : PCI Bus 0000:00
+000d8000-000dbfff : PCI Bus 0000:00
+000dc000-000dffff : PCI Bus 0000:00
+000e0000-000fffff : reserved
+...
+...
+...
+</code></pre><p><code>iomem</code> &#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x663E;&#x793A;&#x4E86;&#x7CFB;&#x7EDF;&#x4E2D;&#x6BCF;&#x4E2A;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x6240;&#x6620;&#x5C04;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x3002;&#x7B2C;&#x4E00;&#x5217;&#x4E3A;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#xFF0C;&#x7B2C;&#x4E8C;&#x5217;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x3002;&#x518D;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>$ sudo cat /proc/ioports
+
+0000-0cf7 : PCI Bus 0000:00
+  0000-001f : dma1
+  0020-0021 : pic1
+  0040-0043 : timer0
+  0050-0053 : timer1
+  0060-0060 : keyboard
+  0064-0064 : keyboard
+  0070-0077 : rtc0
+  0080-008f : dma page reg
+  00a0-00a1 : pic2
+  00c0-00df : dma2
+  00f0-00ff : fpu
+    00f0-00f0 : PNP0C04:00
+  03c0-03df : vga+
+  03f8-03ff : serial
+  04d0-04d1 : pnp 00:06
+  0800-087f : pnp 00:01
+  0a00-0a0f : pnp 00:04
+  0a20-0a2f : pnp 00:04
+  0a30-0a3f : pnp 00:04
+...
+...
+...
+</code></pre><p><code>ioports</code> &#x7684;&#x8F93;&#x51FA;&#x5217;&#x51FA;&#x4E86;&#x7CFB;&#x7EDF;&#x4E2D;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x6240;&#x6CE8;&#x518C;&#x7684;&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x7684;I/O&#x7AEF;&#x53E3;&#x3002;&#x5185;&#x6838;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x8BBE;&#x5907;&#x7684;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#x5730;&#x5740;&#x3002;&#x5728;&#x5185;&#x6838;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5185;&#x5B58;&#x4E4B;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x5C06;&#x8FD9;&#x4E9B;&#x5730;&#x5740;&#x6620;&#x5C04;&#x5230;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;<code>io remap</code>&#x673A;&#x5236;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x3002;&#x5728;&#x524D;&#x9762;<a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/MM/linux-mm-2.html" target="_blank">&#x7B2C;&#x4E8C;&#x8282;</a>&#x4E2D;&#x53EA;&#x4ECB;&#x7ECD;&#x4E86;&#x65E9;&#x671F;&#x7684; <code>io remap</code> &#x3002;&#x5F88;&#x5FEB;&#x6211;&#x4EEC;&#x5C31;&#x8981;&#x6765;&#x770B;&#x4E00;&#x770B;&#x5E38;&#x89C4;&#x7684; <code>io remap</code> &#x5B9E;&#x73B0;&#x673A;&#x5236;&#x3002;&#x4F46;&#x5728;&#x6B64;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B66;&#x4E60;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x77E5;&#x8BC6;&#xFF0C;&#x4F8B;&#x5982;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5185;&#x5B58;&#x5206;&#x914D;&#x5668;&#x7B49;&#xFF0C;&#x4E0D;&#x7136;&#x7684;&#x8BDD;&#x6211;&#x4EEC;&#x5F88;&#x96BE;&#x7406;&#x89E3;&#x8BE5;&#x673A;&#x5236;&#x3002;</p>
+<p>&#x5728;&#x8FDB;&#x5165;Linux&#x5185;&#x6838;&#x5E38;&#x89C4;&#x671F;&#x7684;<a href="https://en.wikipedia.org/wiki/Memory_management" target="_blank">&#x5185;&#x5B58;&#x7BA1;&#x7406;</a>&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x770B;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x5185;&#x5B58;&#x673A;&#x5236;&#xFF0C;&#x4F8B;&#x5982;<a href="https://en.wikipedia.org/wiki/Debugging" target="_blank">&#x8C03;&#x8BD5;</a>&#xFF0C;&#x68C0;&#x67E5;<a href="https://en.wikipedia.org/wiki/Memory_leak" target="_blank">&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</a>&#xFF0C;&#x5185;&#x5B58;&#x63A7;&#x5236;&#x7B49;&#x7B49;&#x3002;&#x5B66;&#x4E60;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x6709;&#x52A9;&#x4E8E;&#x6211;&#x4EEC;&#x7406;&#x89E3;Linux&#x5185;&#x6838;&#x7684;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x3002;</p>
+<p>&#x4ECE;&#x672C;&#x8282;&#x7684;&#x6807;&#x9898;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x770B;&#x51FA;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x4ECE;<a href="https://www.kernel.org/doc/Documentation/kmemcheck.txt" target="_blank">kmemcheck</a>&#x5F00;&#x59CB;&#x4E86;&#x89E3;&#x5185;&#x5B58;&#x673A;&#x5236;&#x3002;&#x548C;&#x524D;&#x9762;&#x7684;<a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/" target="_blank">&#x7AE0;&#x8282;</a>&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4ECE;&#x7406;&#x8BBA;&#x4E0A;&#x5B66;&#x4E60;&#x4EC0;&#x4E48;&#x662F; <code>kmemcheck</code> &#xFF0C;&#x7136;&#x540E;&#x518D;&#x6765;&#x770B;Linux&#x5185;&#x6838;&#x4E2D;&#x662F;&#x600E;&#x4E48;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x673A;&#x5236;&#x7684;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5427;&#x3002;Linux&#x5185;&#x6838;&#x4E2D;&#x7684; <code>kmemcheck</code> &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x4ECE;&#x8BE5;&#x673A;&#x5236;&#x7684;&#x540D;&#x79F0;&#x4E0A;&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x731C;&#x5230;&#xFF0C; <code>kmemcheck</code> &#x662F;&#x68C0;&#x67E5;&#x5185;&#x5B58;&#x7684;&#x3002;&#x4F60;&#x731C;&#x7684;&#x5F88;&#x5BF9;&#x3002;<code>kmemcheck</code> &#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x7528;&#x6765;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x5185;&#x6838;&#x4EE3;&#x7801;&#x8BBF;&#x95EE; <code>&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58;</code> &#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684; <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29" target="_blank">C</a> &#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-keyword">struct</span> A {
+        <span class="hljs-keyword">int</span> a;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span> </span>{
+        <span class="hljs-keyword">struct</span> A *a = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> A));
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a-&gt;a = %d\n&quot;</span>, a-&gt;a);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#x6211;&#x4EEC;&#x7ED9;&#x7ED3;&#x6784;&#x4F53;<code>A</code>&#x5206;&#x914D;&#x4E86;&#x5185;&#x5B58;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x6253;&#x5370;&#x5B83;&#x7684;&#x6210;&#x5458;<code>a</code>&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x6765;&#x7F16;&#x8BD1;&#x8BE5;&#x7A0B;&#x5E8F;&#xFF1A; </p>
+<pre><code>gcc test.c -o test
+</code></pre><p><a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">&#x7F16;&#x8BD1;&#x5668;</a>&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x6210;&#x5458; <code>a</code> &#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x5DE5;&#x5177;<a href="https://en.wikipedia.org/wiki/Valgrind" target="_blank">valgrind</a>&#x6765;&#x8FD0;&#x884C;&#x8BE5;&#x7A0B;&#x5E8F;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code>~$   valgrind --leak-check=yes ./test
+==28469== Memcheck, a memory error detector
+==28469== Copyright (C) 2002-2015, and GNU GPL&apos;d, by Julian Seward et al.
+==28469== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==28469== Command: ./test
+==28469== 
+==28469== Conditional jump or move depends on uninitialised value(s)
+==28469==    at 0x4E820EA: vfprintf (in /usr/lib64/libc-2.22.so)
+==28469==    by 0x4E88D48: printf (in /usr/lib64/libc-2.22.so)
+==28469==    by 0x4005B9: main (in /home/alex/test)
+==28469== 
+==28469== Use of uninitialised value of size 8
+==28469==    at 0x4E7E0BB: _itoa_word (in /usr/lib64/libc-2.22.so)
+==28469==    by 0x4E8262F: vfprintf (in /usr/lib64/libc-2.22.so)
+==28469==    by 0x4E88D48: printf (in /usr/lib64/libc-2.22.so)
+==28469==    by 0x4005B9: main (in /home/alex/test)
+...
+...
+...
+</code></pre><p>&#x5B9E;&#x9645;&#x4E0A; <code>kmemcheck</code> &#x5728;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x548C; <code>valgrind</code> &#x5728;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x90FD;&#x662F;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58;&#x3002;</p>
+<p>&#x8981;&#x60F3;&#x5728;&#x5185;&#x6838;&#x4E2D;&#x542F;&#x7528;&#x8BE5;&#x673A;&#x5236;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#x5185;&#x6838;&#x65F6;&#x5F00;&#x542F; <code>CONFIG_KMEMCHECK</code> &#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>Kernel hacking
+  -&gt; Memory Debugging
+</code></pre><p><img src="http://oi63.tinypic.com/2pzbog7.jpg" alt="kernel configuration menu"></p>
+<p><code>kmemcheck</code> &#x673A;&#x5236;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x5185;&#x6838;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4E0B;&#x4E00;&#x4E2A;&#x6BB5;&#x843D;&#x4E2D;&#x770B;&#x5230;&#x6240;&#x6709;&#x7684;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3002;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<code>kmemcheck</code> &#x4EC5;&#x5728; <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a> &#x4F53;&#x7CFB;&#x4E2D;&#x5B9E;&#x73B0;&#x4E86;&#x3002;&#x4E3A;&#x4E86;&#x786E;&#x4FE1;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x67E5;&#x770B; <code>x86</code> &#x7684;&#x5185;&#x6838;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="https://github.com/torvalds/linux/blob/master/arch/x86/Kconfig" target="_blank">arch/x86/Kconfig</a>&#xFF1A;</p>
+<pre><code>config X86
+  ...
+  ...
+  ...
+  select HAVE_ARCH_KMEMCHECK
+  ...
+  ...
+  ...
+</code></pre><p>&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7684;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x6765;&#x8BF4;&#x662F;&#x6CA1;&#x6709; <code>kmemcheck</code> &#x529F;&#x80FD;&#x7684;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E86; <code>kmemcheck</code> &#x53EF;&#x4EE5;&#x68C0;&#x6D4B;&#x5185;&#x6838;&#x4E2D;<code>&#x672A;&#x521D;&#x59CB;&#x5316;&#x5185;&#x5B58;</code>&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x4E5F;&#x77E5;&#x9053;&#x4E86;&#x5982;&#x4F55;&#x5F00;&#x542F;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;&#x90A3;&#x4E48; <code>kmemcheck</code> &#x662F;&#x600E;&#x4E48;&#x505A;&#x68C0;&#x6D4B;&#x7684;&#x5462;&#xFF1F;&#x5F53;&#x5185;&#x6838;&#x5C1D;&#x8BD5;&#x5206;&#x914D;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x4F8B;&#x5982;&#x5982;&#x4E0B;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>struct my_struct *my_struct = kmalloc(sizeof(struct my_struct), GFP_KERNEL);
+</code></pre><p>&#x6216;&#x8005;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5728;&#x5185;&#x6838;&#x8BBF;&#x95EE; <a href="https://en.wikipedia.org/wiki/Page_%28computer_memory%29" target="_blank">page</a> &#x65F6;&#x4F1A;&#x53D1;&#x751F;<a href="https://en.wikipedia.org/wiki/Page_fault" target="_blank">&#x7F3A;&#x9875;&#x4E2D;&#x65AD;</a>&#x3002;&#x8FD9;&#x662F;&#x7531;&#x4E8E; <code>kmemcheck</code> &#x5C06;&#x5185;&#x5B58;&#x9875;&#x6807;&#x8BB0;&#x4E3A;<code>&#x4E0D;&#x5B58;&#x5728;</code>&#xFF08;&#x5173;&#x4E8E;Linux&#x5185;&#x5B58;&#x5206;&#x9875;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://0xax.gitbooks.io/linux-insides/content/Theory/linux-theory-1.html" target="_blank">&#x5206;&#x9875;</a>&#xFF09;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;<code>&#x7F3A;&#x9875;&#x4E2D;&#x65AD;</code>&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x4E86;&#xFF0C;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4F1A;&#x6765;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x5982;&#x679C;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x68C0;&#x6D4B;&#x5230;&#x5185;&#x6838;&#x4F7F;&#x80FD;&#x4E86; <code>kmemcheck</code>&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x5C06;&#x63A7;&#x5236;&#x6743;&#x63D0;&#x4EA4;&#x7ED9; <code>kmemcheck</code> &#x6765;&#x5904;&#x7406;&#xFF1B;<code>kmemcheck</code> &#x68C0;&#x67E5;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x8BE5;&#x5185;&#x5B58;&#x9875;&#x4F1A;&#x88AB;&#x6807;&#x8BB0;&#x4E3A; <code>present</code>&#xFF0C;&#x7136;&#x540E;&#x88AB;&#x4E2D;&#x65AD;&#x7684;&#x7A0B;&#x5E8F;&#x5F97;&#x4EE5;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x4E0B;&#x53BB;&#x3002; &#x8FD9;&#x91CC;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x6BD4;&#x8F83;&#x5DE7;&#x5999;&#xFF0C;&#x88AB;&#x4E2D;&#x65AD;&#x7A0B;&#x5E8F;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x6267;&#x884C;&#x65F6;&#xFF0C;<code>kmemcheck</code> &#x53C8;&#x4F1A;&#x6807;&#x8BB0;&#x5185;&#x5B58;&#x9875;&#x4E3A; <code>not present</code>&#xFF0C;&#x6309;&#x7167;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0B;&#x4E00;&#x4E2A;&#x5BF9;&#x5185;&#x5B58;&#x9875;&#x7684;&#x8BBF;&#x95EE;&#x4E5F;&#x4F1A;&#x88AB;&#x6355;&#x83B7;&#x3002; </p>
+<p>&#x76EE;&#x524D;&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x4ECE;&#x7406;&#x8BBA;&#x5C42;&#x9762;&#x8003;&#x5BDF;&#x4E86; <code>kmemcheck</code>&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;Linux&#x5185;&#x6838;&#x662F;&#x600E;&#x4E48;&#x6765;&#x5B9E;&#x73B0;&#x8BE5;&#x673A;&#x5236;&#x7684;&#x3002;</p>
+<h2 id="kmemcheck-&#x673A;&#x5236;&#x5728;linux&#x5185;&#x6838;&#x4E2D;&#x7684;&#x5B9E;&#x73B0;"><code>kmemcheck</code> &#x673A;&#x5236;&#x5728;Linux&#x5185;&#x6838;&#x4E2D;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3; <code>kmemcheck</code> &#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#x4EE5;&#x53CA;&#x5B83;&#x5728;Linux&#x5185;&#x6838;&#x4E2D;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x73B0;&#x5728;&#x662F;&#x65F6;&#x5019;&#x770B;&#x4E00;&#x4E0B;&#x5B83;&#x5728;Linux&#x5185;&#x6838;&#x4E2D;&#x7684;&#x5B9E;&#x73B0;&#x3002; <code>kmemcheck</code> &#x5728;&#x5185;&#x6838;&#x7684;&#x5B9E;&#x73B0;&#x5206;&#x4E3A;&#x4E24;&#x90E8;&#x5206;&#x3002;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x662F;&#x67B6;&#x6784;&#x65E0;&#x5173;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4F4D;&#x4E8E;&#x6E90;&#x7801; <a href="https://github.com/torvalds/linux/blob/master/mm/kmemcheck.c" target="_blank">mm/kmemcheck.c</a>&#xFF1B;&#x7B2C;&#x4E8C;&#x90E8;&#x5206; <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a>&#x67B6;&#x6784;&#x76F8;&#x5173;&#x7684;&#x90E8;&#x5206;&#x4F4D;&#x4E8E;&#x76EE;&#x5F55;<a href="https://github.com/torvalds/linux/tree/master/arch/x86/mm/kmemcheck" target="_blank">arch/x86/mm/kmemcheck</a>&#x4E2D;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x5206;&#x6790;&#x8BE5;&#x673A;&#x5236;&#x7684;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x3002;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x8981;&#x5728;&#x5185;&#x6838;&#x4E2D;&#x4F7F;&#x80FD; <code>kmemcheck</code> &#x673A;&#x5236;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x542F;&#x5185;&#x6838;&#x7684;<code>CONFIG_KMEMCHECK</code> &#x914D;&#x7F6E;&#x9879;&#x3002;&#x9664;&#x4E86;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x7ED9;&#x5185;&#x6838;command line&#x4F20;&#x9012;&#x4E00;&#x4E2A; <code>kmemcheck</code> &#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>kmemcheck=0 (disabled)</li>
+<li>kmemcheck=1 (enabled)</li>
+<li>kmemcheck=2 (one-shot mode)</li>
+</ul>
+<p>&#x524D;&#x9762;&#x4E24;&#x4E2A;&#x503C;&#x5F97;&#x542B;&#x4E49;&#x5F88;&#x660E;&#x786E;&#xFF0C;&#x4F46;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x89E3;&#x91CA;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x4F1A;&#x4F7F; <code>kmemcheck</code> &#x8FDB;&#x5165;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x6A21;&#x5F0F;&#xFF1A;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x68C0;&#x6D4B;&#x5230;&#x672A;&#x521D;&#x59CB;&#x5316;&#x5185;&#x5B58;&#x7684;&#x4F7F;&#x7528;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x5173;&#x95ED; <code>kmemcheck</code> &#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x8BE5;&#x6A21;&#x5F0F;&#x662F;&#x5185;&#x6838;&#x7684;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#xFF1A;</p>
+<p><img src="http://oi66.tinypic.com/y2eeh.jpg" alt="kernel configuration menu"></p>
+<p>&#x4ECE;Linux&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x7AE0;&#x8282;&#x7684;&#x7B2C;&#x4E03;&#x8282; <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Initialization/linux-initialization-7.html" target="_blank">part</a> &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x5728;&#x5185;&#x6838;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4F1A;&#x5728;  <code>do_initcall_level</code> ,  <code>do_early_param</code> &#x7B49;&#x51FD;&#x6570;&#x4E2D;&#x89E3;&#x6790;&#x5185;&#x6838; command line&#x3002;&#x524D;&#x9762;&#x4E5F;&#x63D0;&#x5230;&#x8FC7;  <code>kmemcheck</code> &#x5B50;&#x7CFB;&#x7EDF;&#x7531;&#x4E24;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x542F;&#x52A8;&#x6BD4;&#x8F83;&#x65E9;&#x3002;&#x5728;&#x6E90;&#x7801;  <a href="https://github.com/torvalds/linux/blob/master/mm/kmemcheck.c" target="_blank">mm/kmemcheck.c</a> &#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x51FD;&#x6570; <code>param_kmemcheck</code> &#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5728;command line&#x89E3;&#x6790;&#x65F6;&#x5C31;&#x4F1A;&#x7528;&#x5230;: </p>
+<pre><code class="lang-C"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> __<span class="hljs-function">init <span class="hljs-title">param_kmemcheck</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *str)</span>
+</span>{
+    <span class="hljs-keyword">int</span> val;
+    <span class="hljs-keyword">int</span> ret;
+
+    <span class="hljs-keyword">if</span> (!str)
+        <span class="hljs-keyword">return</span> -EINVAL;
+
+    ret = kstrtoint(str, <span class="hljs-number">0</span>, &amp;val);
+    <span class="hljs-keyword">if</span> (ret)
+        <span class="hljs-keyword">return</span> ret;
+    kmemcheck_enabled = val;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+early_param(<span class="hljs-string">&quot;kmemcheck&quot;</span>, param_kmemcheck);
+</code></pre>
+<p>&#x4ECE;&#x524D;&#x9762;&#x7684;&#x4ECB;&#x7ECD;&#x6211;&#x4EEC;&#x77E5;&#x9053; <code>param_kmemcheck</code> &#x53EF;&#x80FD;&#x5B58;&#x5728;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;<code>0</code> (&#x4F7F;&#x80FD;), <code>1</code> (&#x7981;&#x6B62;) or <code>2</code> (&#x4E00;&#x6B21;&#x6027;)&#x3002; <code>param_kmemcheck</code> &#x7684;&#x5B9E;&#x73B0;&#x5F88;&#x7B80;&#x5355;&#xFF1A;&#x5C06;command line&#x4F20;&#x9012;&#x7684; <code>kmemcheck</code> &#x53C2;&#x6570;&#x7684;&#x503C;&#x7531;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF; <code>kmemcheck_enabled</code> &#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x9636;&#x6BB5;&#x5728;&#x5185;&#x6838;&#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;&#x6267;&#x884C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B; <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Concepts/linux-cpu-3.html" target="_blank">initcalls</a> &#x3002;&#x7B2C;&#x4E8C;&#x9636;&#x65AD;&#x7684;&#x8FC7;&#x7A0B;&#x4F53;&#x73B0;&#x5728; <code>kmemcheck_init</code> : </p>
+<pre><code class="lang-C"><span class="hljs-keyword">int</span> __<span class="hljs-function">init <span class="hljs-title">kmemcheck_init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    ...
+    ...
+    ...
+}
+
+early_initcall(kmemcheck_init);
+</code></pre>
+<p><code>kmemcheck_init</code> &#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x8C03;&#x7528; <code>kmemcheck_selftest</code> &#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x68C0;&#x67E5;&#x5B83;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (!kmemcheck_selftest()) {
+    printk(KERN_INFO <span class="hljs-string">&quot;kmemcheck: self-tests failed; disabling\n&quot;</span>);
+    kmemcheck_enabled = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> -EINVAL;
+}
+
+printk(KERN_INFO <span class="hljs-string">&quot;kmemcheck: Initialized\n&quot;</span>);
+</code></pre>
+<p>&#x5982;&#x679C; <code>kmemcheck_init</code> &#x68C0;&#x6D4B;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE; <code>EINVAL</code> &#x3002; <code>kmemcheck_selftest</code> &#x51FD;&#x6570;&#x4F1A;&#x68C0;&#x6D4B;&#x5185;&#x5B58;&#x8BBF;&#x95EE;&#x76F8;&#x5173;&#x7684;<a href="https://en.wikipedia.org/wiki/Opcode" target="_blank">&#x64CD;&#x4F5C;&#x7801;</a>&#xFF08;&#x4F8B;&#x5982; <code>rep movsb</code>, <code>movzwq</code>)&#x7684;&#x5927;&#x5C0F;&#x3002;&#x5982;&#x679C;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x5927;&#x5C0F;&#x7684;&#x5B9E;&#x9645;&#x5927;&#x5C0F;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;<code>kmemcheck_selftest</code> &#x8FD4;&#x56DE; <code>true</code>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>false</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x88AB;&#x8C03;&#x7528;:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> my_struct *my_struct = kmalloc(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> my_struct), GFP_KERNEL);
+</code></pre>
+<p>&#x7ECF;&#x8FC7;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;<code>kmem_getpages</code> &#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x5230;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x5728;&#x6E90;&#x7801; <a href="https://github.com/torvalds/linux/blob/master/mm/slab.c" target="_blank">mm/slab.c</a> &#x4E2D;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x5C1D;&#x8BD5;&#x6309;&#x7167;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x9700;&#x6C42;&#x5206;&#x914D;<a href="https://en.wikipedia.org/wiki/Paging" target="_blank">&#x5185;&#x5B58;&#x9875;</a>&#x3002;&#x5728;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x7ED3;&#x5C3E;&#x5904;&#x6709;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (kmemcheck_enabled &amp;&amp; !(cachep-&gt;flags &amp; SLAB_NOTRACK)) {
+    kmemcheck_alloc_shadow(page, cachep-&gt;gfporder, flags, nodeid);
+
+    <span class="hljs-keyword">if</span> (cachep-&gt;ctor)
+        kmemcheck_mark_uninitialized_pages(page, nr_pages);
+    <span class="hljs-keyword">else</span>
+        kmemcheck_mark_unallocated_pages(page, nr_pages);
+}
+</code></pre>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5224;&#x65AD;&#x5982;&#x679C; <code>kmemcheck</code> &#x4F7F;&#x80FD;&#xFF0C;&#x5E76;&#x4E14;&#x53C2;&#x6570;&#x4E2D;&#x672A;&#x8BBE;&#x7F6E; <code>SLAB_NOTRACK</code> &#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x7ED9;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x9875;&#x8BBE;&#x7F6E; <code>non-present</code> &#x6807;&#x8BB0;&#x3002;<code>SLAB_NOTRACK</code> &#x6807;&#x8BB0;&#x7684;&#x542B;&#x4E49;&#x662F;&#x4E0D;&#x8DDF;&#x8E2A;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x5BF9;&#x8C61;&#x6709;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF08;&#x7EC6;&#x8282;&#x5728;&#x4E0B;&#x9762;&#x63CF;&#x8FF0;&#xFF09;&#xFF0C;&#x6240;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x9875;&#x6807;&#x8BB0;&#x4E3A;&#x672A;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5426;&#x5219;&#x6807;&#x8BB0;&#x4E3A;&#x672A;&#x5206;&#x914D;&#x3002;<code>kmemcheck_alloc_shadow</code> &#x51FD;&#x6570;&#x5728;&#x6E90;&#x7801; <a href="https://github.com/torvalds/linux/blob/master/mm/kmemcheck.c" target="_blank">mm/kmemcheck.c</a> &#x4E2D;&#xFF0C;&#x5176;&#x57FA;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">kmemcheck_alloc_shadow</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> page *page, <span class="hljs-keyword">int</span> order, gfp_t flags, <span class="hljs-keyword">int</span> node)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> page *shadow;
+
+       shadow = alloc_pages_node(node, flags | __GFP_NOTRACK, order);
+
+       <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; pages; ++i)
+        page[i].shadow = page_address(&amp;shadow[i]);
+
+       kmemcheck_hide_pages(page, pages);
+}
+</code></pre>
+<p>&#x9996;&#x5148;&#x4E3A; shadow bits &#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x4E3A;&#x5185;&#x5B58;&#x9875;&#x8BBE;&#x7F6E; shadow &#x4F4D;&#x3002;&#x5982;&#x679C;&#x5185;&#x5B58;&#x9875;&#x8BBE;&#x7F6E;&#x4E86;&#x8BE5;&#x6807;&#x8BB0;&#xFF0C;&#x5C31;&#x610F;&#x5473;&#x7740;  <code>kmemcheck</code> &#x4F1A;&#x8DDF;&#x8E2A;&#x8FD9;&#x4E2A;&#x5185;&#x5B58;&#x9875;&#x3002;&#x6700;&#x540E;&#x8C03;&#x7528; <code>kmemcheck_hide_pages</code> &#x51FD;&#x6570;&#x3002; <code>kmemcheck_hide_pages</code> &#x662F;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x76F8;&#x5173;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4EE3;&#x7801;&#x5728; <a href="https://github.com/torvalds/linux/tree/master/arch/x86/mm/kmemcheck/kmemcheck.c" target="_blank">arch/x86/mm/kmemcheck/kmemcheck.c</a> &#x6E90;&#x7801;&#x4E2D;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;&#x662F;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x5185;&#x5B58;&#x9875;&#x8BBE;&#x7F6E; <code>non-present</code> &#x6807;&#x8BB0;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">kmemcheck_hide_pages</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> page *p, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> n)</span>
+</span>{
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i;
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; n; ++i) {
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> address;
+        <span class="hljs-keyword">pte_t</span> *pte;
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> level;
+
+        address = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) page_address(&amp;p[i]);
+        pte = lookup_address(address, &amp;level);
+        BUG_ON(!pte);
+        BUG_ON(level != PG_LEVEL_4K);
+
+        set_pte(pte, __pte(pte_val(*pte) &amp; ~_PAGE_PRESENT));
+        set_pte(pte, __pte(pte_val(*pte) | _PAGE_HIDDEN));
+        __flush_tlb_one(address);
+    }
+}
+</code></pre>
+<p>&#x8BE5;&#x51FD;&#x6570;&#x904D;&#x5386;&#x53C2;&#x6570;&#x4EE3;&#x8868;&#x7684;&#x6240;&#x6709;&#x5185;&#x5B58;&#x9875;&#xFF0C;&#x5E76;&#x5C1D;&#x8BD5;&#x83B7;&#x53D6;&#x6BCF;&#x4E2A;&#x5185;&#x5B58;&#x9875;&#x7684; <code>&#x9875;&#x8868;&#x9879;</code> &#x3002;&#x5982;&#x679C;&#x83B7;&#x53D6;&#x6210;&#x529F;&#xFF0C;&#x6E05;&#x7406;&#x9875;&#x8868;&#x9879;&#x7684;present &#x6807;&#x8BB0;&#xFF0C;&#x8BBE;&#x7F6E;&#x9875;&#x8868;&#x9879;&#x7684; hidden &#x6807;&#x8BB0;&#x3002;&#x5728;&#x6700;&#x540E;&#x8FD8;&#x9700;&#x8981;&#x5237;&#x65B0; <a href="https://en.wikipedia.org/wiki/Translation_lookaside_buffer" target="_blank">TLB</a> ,&#x56E0;&#x4E3A;&#x6709;&#x4E00;&#x4E9B;&#x5185;&#x5B58;&#x9875;&#x5DF2;&#x7ECF;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#x3002;&#x4ECE;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x5F00;&#x59CB;&#xFF0C;&#x5185;&#x5B58;&#x9875;&#x5C31;&#x8FDB;&#x5165; <code>kmemcheck</code> &#x7684;&#x8DDF;&#x8E2A;&#x7CFB;&#x7EDF;&#x3002;&#x7531;&#x4E8E;&#x5185;&#x5B58;&#x9875;&#x7684; <code>present</code> &#x6807;&#x8BB0;&#x88AB;&#x6E05;&#x9664;&#x4E86;&#xFF0C;&#x4E00;&#x65E6; <code>kmalloc</code> &#x8FD4;&#x56DE;&#x4E86;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x4EE3;&#x7801;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;<a href="https://en.wikipedia.org/wiki/Page_fault" target="_blank">&#x7F3A;&#x9875;&#x4E2D;&#x65AD;</a>&#x3002;</p>
+<p>&#x5728;Linux&#x5185;&#x6838;&#x521D;&#x59CB;&#x5316;&#x7684;<a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Initialization/linux-initialization-2.html" target="_blank">&#x7B2C;&#x4E8C;&#x8282;</a>&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;<code>&#x7F3A;&#x9875;&#x4E2D;&#x65AD;</code>&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x662F; <a href="https://github.com/torvalds/linux/blob/master/arch/x86/mm/fault.c" target="_blank">arch/x86/mm/fault.c</a> &#x7684;  <code>do_page_fault</code> &#x51FD;&#x6570;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5F00;&#x59CB;&#x90E8;&#x5206;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">static</span> noinline <span class="hljs-keyword">void</span>
+__do_page_fault(<span class="hljs-keyword">struct</span> pt_regs *regs, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> error_code,
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> address)
+{
+    ...
+    ...
+    ...
+    <span class="hljs-keyword">if</span> (kmemcheck_active(regs))
+        kmemcheck_hide(regs);
+    ...
+    ...
+    ...
+}
+</code></pre>
+<p><code>kmemcheck_active</code> &#x51FD;&#x6570;&#x83B7;&#x53D6; <code>kmemcheck_context</code> <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Concepts/linux-cpu-1.html" target="_blank">per-cpu</a> &#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458; <code>balance</code> &#x548C;0&#x7684;&#x6BD4;&#x8F83;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>bool kmemcheck_active(struct pt_regs *regs)
+{
+    struct kmemcheck_context *data = this_cpu_ptr(&amp;kmemcheck_context);
+
+    return data-&gt;balance &gt; 0;
+}
+</code></pre><p><code>kmemcheck_context</code> &#x7ED3;&#x6784;&#x4F53;&#x4EE3;&#x8868; <code>kmemcheck</code> &#x673A;&#x5236;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x3002;&#x5176;&#x5185;&#x90E8;&#x4FDD;&#x5B58;&#x4E86;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5730;&#x5740;&#x7684;&#x6570;&#x91CF;&#x7B49;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x6210;&#x5458; <code>balance</code> &#x4EE3;&#x8868;&#x4E86; <code>kmemcheck</code> &#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;<code>balance</code> &#x8868;&#x793A; <code>kmemcheck</code> &#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x9690;&#x85CF;&#x4E86;&#x5185;&#x5B58;&#x9875;&#x3002;&#x5982;&#x679C; <code>data-&gt;balance</code> &#x5927;&#x4E8E;0&#xFF0C; <code>kmemcheck_hide</code> &#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740; <code>kmemecheck</code> &#x5DF2;&#x7ECF;&#x8BBE;&#x7F6E;&#x4E86;&#x5185;&#x5B58;&#x9875;&#x7684; <code>present</code> &#x6807;&#x8BB0;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x518D;&#x6B21;&#x9690;&#x85CF;&#x5185;&#x5B58;&#x9875;&#x4EE5;&#x4FBF;&#x89E6;&#x53D1;&#x4E0B;&#x4E00;&#x6B21;&#x7684;&#x7F3A;&#x9875;&#x4E2D;&#x65AD;&#x3002; <code>kmemcheck_hide</code> &#x51FD;&#x6570;&#x4F1A;&#x6E05;&#x7406;&#x5185;&#x5B58;&#x9875;&#x7684; <code>present</code> &#x6807;&#x8BB0;&#xFF0C;&#x8FD9;&#x8868;&#x793A;&#x4E00;&#x6B21; <code>kmemcheck</code> &#x4F1A;&#x8BDD;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#xFF0C;&#x65B0;&#x7684;&#x7F3A;&#x9875;&#x4E2D;&#x65AD;&#x4F1A;&#x518D;&#x6B21;&#x88AB;&#x89E6;&#x53D1;&#x3002;&#x5728;&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x7531;&#x4E8E; <code>data-&gt;balance</code> &#x503C;&#x4E3A;0&#xFF0C;&#x6240;&#x4EE5; <code>kmemcheck_active</code> &#x4F1A;&#x8FD4;&#x56DE;false&#xFF0C;&#x6240;&#x4EE5; <code>kmemcheck_hide</code> &#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x770B; <code>do_page_fault</code> &#x7684;&#x4E0B;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (kmemcheck_fault(regs, address, error_code))
+        <span class="hljs-keyword">return</span>;
+</code></pre>
+<p>&#x9996;&#x5148; <code>kmemcheck_fault</code> &#x51FD;&#x6570;&#x68C0;&#x67E5;&#x5F15;&#x8D77;&#x9519;&#x8BEF;&#x7684;&#x771F;&#x5B9E;&#x539F;&#x56E0;&#x3002;&#x7B2C;&#x4E00;&#x6B65;&#x5148;&#x68C0;&#x67E5;<a href="https://en.wikipedia.org/wiki/FLAGS_register" target="_blank">&#x6807;&#x8BB0;&#x5BC4;&#x5B58;&#x5668;</a>&#x4EE5;&#x786E;&#x8BA4;&#x8FDB;&#x7A0B;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x6B63;&#x5E38;&#x7684;&#x5185;&#x6838;&#x6001;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (regs-&gt;flags &amp; X86_VM_MASK)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">if</span> (regs-&gt;cs != __KERNEL_CS)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+</code></pre>
+<p>&#x5982;&#x679C;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#xFF0C;&#x8868;&#x660E;&#x8FD9;&#x4E0D;&#x662F; <code>kmemcheck</code> &#x76F8;&#x5173;&#x7684;&#x7F3A;&#x9875;&#x4E2D;&#x65AD;&#xFF0C;<code>kmemcheck_fault</code> &#x4F1A;&#x8FD4;&#x56DE;false&#x3002;&#x5982;&#x679C;&#x68C0;&#x6D4B;&#x6210;&#x529F;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x67E5;&#x627E;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x7684;&#x5730;&#x5740;&#x7684;<code>&#x9875;&#x8868;&#x9879;</code>&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x9875;&#x8868;&#x9879;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;false:</p>
+<pre><code class="lang-C">pte = kmemcheck_pte_lookup(address);
+<span class="hljs-keyword">if</span> (!pte)
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+</code></pre>
+<p><code>kmemcheck_fault</code> &#x6700;&#x540E;&#x4E00;&#x6B65;&#x662F;&#x8C03;&#x7528; <code>kmemcheck_access</code> &#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x68C0;&#x67E5;&#x5BF9;&#x6307;&#x5B9A;&#x5185;&#x5B58;&#x9875;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x8BE5;&#x5185;&#x5B58;&#x9875;&#x7684;present&#x6807;&#x8BB0;&#x3002; <code>kmemcheck_access</code> &#x51FD;&#x6570;&#x505A;&#x4E86;&#x5927;&#x90E8;&#x5206;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B83;&#x68C0;&#x67E5;&#x5F15;&#x8D77;&#x7F3A;&#x9875;&#x5F02;&#x5E38;&#x7684;&#x5F53;&#x524D;&#x6307;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x68C0;&#x67E5;&#x5230;&#x4E86;&#x9519;&#x8BEF;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x628A;&#x8BE5;&#x9519;&#x8BEF;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4FDD;&#x5B58;&#x5230;&#x73AF;&#x5F62;&#x961F;&#x5217;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> kmemcheck_error error_fifo[CONFIG_KMEMCHECK_QUEUE_SIZE];
+</code></pre>
+<p><code>kmemcheck</code> &#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684; <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Interrupts/linux-interrupts-9.html" target="_blank">tasklet</a> :</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-title">DECLARE_TASKLET</span><span class="hljs-params">(kmemcheck_tasklet, &amp;do_wakeup, <span class="hljs-number">0</span>)</span></span>;
+</code></pre>
+<p>&#x8BE5;tasklet&#x88AB;&#x8C03;&#x5EA6;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; <code>do_wakeup</code> &#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4F4D;&#x4E8E; <a href="https://github.com/torvalds/linux/blob/master/arch/x86/mm/kmemcheck/error.c" target="_blank">arch/x86/mm/kmemcheck/error.c</a> &#x6587;&#x4EF6;&#x4E2D;&#x3002; </p>
+<p><code>do_wakeup</code> &#x51FD;&#x6570;&#x8C03;&#x7528; <code>kmemcheck_error_recall</code> &#x51FD;&#x6570;&#x4EE5;&#x4FBF;&#x5C06; <code>kmemcheck</code> &#x68C0;&#x6D4B;&#x5230;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x8F93;&#x51FA;&#x3002;</p>
+<pre><code class="lang-C">kmemcheck_show(regs);
+</code></pre>
+<p><code>kmemcheck_fault</code> &#x51FD;&#x6570;&#x7ED3;&#x675F;&#x65F6;&#x4F1A;&#x8C03;&#x7528; <code>kmemcheck_show</code> &#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x518D;&#x6B21;&#x8BBE;&#x7F6E;&#x5185;&#x5B58;&#x9875;&#x7684;present&#x6807;&#x8BB0;&#x3002;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (unlikely(data-&gt;balance != <span class="hljs-number">0</span>)) {
+    kmemcheck_show_all();
+    kmemcheck_error_save_bug(regs);
+    data-&gt;balance = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span>;
+}
+</code></pre>
+<p><code>kmemcheck_show_all</code> &#x51FD;&#x6570;&#x4F1A;&#x9488;&#x5BF9;&#x6BCF;&#x4E2A;&#x5730;&#x5740;&#x8C03;&#x7528; <code>kmemcheck_show_addr</code> &#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> <span class="hljs-title">kmemcheck_show_all</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> kmemcheck_context *data = this_cpu_ptr(&amp;kmemcheck_context);
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> n;
+
+    n = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; data-&gt;n_addrs; ++i)
+        n += kmemcheck_show_addr(data-&gt;addr[i]);
+
+    <span class="hljs-keyword">return</span> n;
+}
+</code></pre>
+<p><code>kmemcheck_show_addr</code> &#x51FD;&#x6570;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">kmemcheck_show_addr</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> address)</span>
+</span>{
+    <span class="hljs-keyword">pte_t</span> *pte;
+
+    pte = kmemcheck_pte_lookup(address);
+    <span class="hljs-keyword">if</span> (!pte)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    set_pte(pte, __pte(pte_val(*pte) | _PAGE_PRESENT));
+    __flush_tlb_one(address);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>&#x5728;&#x51FD;&#x6570; <code>kmemcheck_show</code> &#x7684;&#x7ED3;&#x5C3E;&#x5904;&#x4F1A;&#x8BBE;&#x7F6E; <a href="https://en.wikipedia.org/wiki/Trap_flag" target="_blank">TF</a> &#x6807;&#x8BB0;&#xFF1A;</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (!(regs-&gt;flags &amp; X86_EFLAGS_TF))
+    data-&gt;flags = regs-&gt;flags;
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4E4B;&#x6240;&#x4EE5;&#x8FD9;&#x4E48;&#x5904;&#x7406;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5728;&#x5185;&#x5B58;&#x9875;&#x7684;&#x7F3A;&#x9875;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5B8C;&#x540E;&#x9700;&#x8981;&#x518D;&#x6B21;&#x9690;&#x85CF;&#x5185;&#x5B58;&#x9875;&#x3002;&#x5F53; <code>TF</code> &#x6807;&#x8BB0;&#x88AB;&#x8BBE;&#x7F6E;&#x540E;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x5728;&#x6267;&#x884C;&#x88AB;&#x4E2D;&#x65AD;&#x7A0B;&#x5E8F;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x65F6;&#x4F1A;&#x8FDB;&#x5165;&#x5355;&#x6B65;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x4F1A;&#x89E6;&#x53D1; <code>debug</code> &#x5F02;&#x5E38;&#x3002;&#x4ECE;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x5F00;&#x59CB;&#xFF0C;&#x5185;&#x5B58;&#x9875;&#x4F1A;&#x88AB;&#x9690;&#x85CF;&#x8D77;&#x6765;&#xFF0C;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x7EE7;&#x7EED;&#x3002;&#x7531;&#x4E8E;&#x5185;&#x5B58;&#x9875;&#x4E0D;&#x53EF;&#x89C1;&#xFF0C;&#x90A3;&#x4E48;&#x8BBF;&#x95EE;&#x5185;&#x5B58;&#x9875;&#x7684;&#x65F6;&#x5019;&#x53C8;&#x4F1A;&#x89E6;&#x53D1;&#x7F3A;&#x9875;&#x4E2D;&#x65AD;&#xFF0C;&#x7136;&#x540E;<code>kmemcheck</code> &#x5C31;&#x6709;&#x673A;&#x4F1A;&#x7EE7;&#x7EED;&#x68C0;&#x6D4B;/&#x6536;&#x96C6;&#x5E76;&#x663E;&#x793A;&#x5185;&#x5B58;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5230;&#x8FD9;&#x91CC; <code>kmemcheck</code> &#x7684;&#x5DE5;&#x4F5C;&#x673A;&#x5236;&#x5C31;&#x4ECB;&#x7ECD;&#x5B8C;&#x6BD5;&#x4E86;&#x3002;</p>
+<h2 id="&#x7ED3;&#x675F;&#x8BED;">&#x7ED3;&#x675F;&#x8BED;</h2>
+<p>Linux&#x5185;&#x6838;<a href="https://en.wikipedia.org/wiki/Memory_management" target="_blank">&#x5185;&#x5B58;&#x7BA1;&#x7406;</a>&#x7B2C;&#x4E09;&#x8282;&#x4ECB;&#x7ECD;&#x5230;&#x6B64;&#x4E3A;&#x6B62;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6709;&#x4EFB;&#x4F55;&#x7591;&#x95EE;&#x6216;&#x8005;&#x5EFA;&#x8BAE;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7ED9;&#x6211;<a href="https://twitter.com/0xAX" target="_blank">0xAX</a>&#x53D1;&#x6D88;&#x606F;&#xFF0C; &#x53D1;<a href="anotherworldofworld@gmail.com">&#x90AE;&#x4EF6;</a>&#xFF0C;&#x6216;&#x8005;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <a href="https://github.com/0xAX/linux-insides/issues/new" target="_blank">issue</a> &#x3002; &#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x5C0F;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x53E6;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x8C03;&#x8BD5;&#x5DE5;&#x5177; - <code>kmemleak</code> &#x3002;</p>
+<p><strong>&#x82F1;&#x6587;&#x4E0D;&#x662F;&#x6211;&#x7684;&#x6BCD;&#x8BED;&#x3002;&#x5982;&#x679C;&#x4F60;&#x53D1;&#x73B0;&#x6211;&#x7684;&#x82F1;&#x6587;&#x63CF;&#x8FF0;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x8BF7;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;PR&#x5230; <a href="https://github.com/0xAX/linux-insides" target="_blank">linux-insides</a>.</strong></p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Memory_management" target="_blank">memory management</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Debugging" target="_blank">debugging</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Memory_leak" target="_blank">memory leaks</a></li>
+<li><a href="https://www.kernel.org/doc/Documentation/kmemcheck.txt" target="_blank">kmemcheck documentation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Valgrind" target="_blank">valgrind</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Page_fault" target="_blank">page fault</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Concepts/linux-cpu-3.html" target="_blank">initcalls</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Opcode" target="_blank">opcode</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Translation_lookaside_buffer" target="_blank">translation lookaside buffer</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Concepts/linux-cpu-1.html" target="_blank">per-cpu variables</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FLAGS_register" target="_blank">flags register</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Interrupts/linux-interrupts-9.html" target="_blank">tasklet</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Theory/linux-theory-1.html" target="_blank">Paging</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/MM/linux-mm-2.html" target="_blank">Previous part</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class="search-results-count"></span> results matching &quot;<span class="search-query"></span>&quot;</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching &quot;<span class="search-query"></span>&quot;</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux-mm-2.html" class="navigation navigation-prev " aria-label="Previous page: &#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x548C; ioremap">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Cgroups/" class="navigation navigation-next " aria-label="Next page: &#x63A7;&#x5236;&#x7EC4;">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"kmemcheck","level":"1.8.3","depth":2,"next":{"title":"控制组","level":"1.9","depth":1,"path":"Cgroups/README.md","ref":"Cgroups/README.md","articles":[{"title":"控制组简介","level":"1.9.1","depth":2,"path":"Cgroups/linux-cgroups-1.md","ref":"Cgroups/linux-cgroups-1.md","articles":[]}]},"previous":{"title":"固定映射地址和 ioremap","level":"1.8.2","depth":2,"path":"MM/linux-mm-2.md","ref":"MM/linux-mm-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["comment"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"comment":{"highlightCommented":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"MintCN/linux-insides-zh","theme":"default","author":"xinqiu","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux ­Insides­中文","language":"zh","links":{"sidebar":{"Linux ­Insides­中文":"https://legacy.gitbook.com/book/xinqiu/linux-insides-cn"},"gitbook":true},"gitbook":"*","description":"linux内核揭密    Translated By MintCN"},"file":{"path":"MM/linux-mm-3.md","mtime":"2020-03-17T07:53:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T07:56:09.393Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-comment/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+
+</body></html>

@@ -1,0 +1,1869 @@
+<!DOCTYPE html><html lang="zh"><head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F; &#xB7; Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xinqiu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-comment/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://gstatic.gitbook.com/images/b1c4c86ca817a71628d2debe73be9a64.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="linux-syscall-5.html">
+    
+    
+    <link rel="prev" href="linux-syscall-3.html">
+    
+
+    
+<style>
+    .book .book-summary .book-search,
+    .book .book-summary ul.summary {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    .book-summary {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        overflow-y: auto;
+    }
+    .book-summary > nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+    .gl-wrapper {
+        margin: 0;
+        display: block;
+        padding: 0;
+        position: relative;
+        line-height: 15px;
+        background: #fafafa;
+    }
+    .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        background: -moz-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        top: -24px;
+        width: 100%;
+        height: 24px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+    }
+    .book.color-theme-1 .gl-wrapper {
+        background: #121212;
+    }
+    .book.color-theme-1 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: -moz-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+    }
+    .book.color-theme-2 .gl-wrapper {
+        background: #2e3243;
+    }
+    .book.color-theme-2 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: -moz-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+    }
+    .gl-wrapper .gitbook-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        color: #9DAAB6;
+        margin: 16px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin-left: 32px;
+        padding-top: 8px;
+        padding-left: 16px;
+        border-radius: 3px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        background-color: #E6ECF1;
+        -webkit-box-align: center;
+    }
+    .gl-wrapper .tm-logo {
+        margin: 0;
+        display: block;
+        padding: 0;
+        font-size: 40px;
+    }
+    .gl-wrapper .tm-content {
+        flex: 1;
+        margin: 0;
+        display: block;
+        padding: 0;
+        padding-left: 16px;
+    }
+    .gl-wrapper .tm-content .container {
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+    .gl-wrapper .tm-content .tm-container .tm-text {
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 1.625;
+    }
+</style></head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="&#x8F38;&#x5165;&#x4E26;&#x641C;&#x5C0B;">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://legacy.gitbook.com/book/xinqiu/linux-insides-cn" target="_blank" class="custom-link">Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Booting/">
+            
+                <a href="../Booting/">
+            
+                    
+                    &#x5F15;&#x5BFC;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Booting/linux-bootstrap-1.html">
+            
+                <a href="../Booting/linux-bootstrap-1.html">
+            
+                    
+                    &#x4ECE;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x5185;&#x6838;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Booting/linux-bootstrap-2.html">
+            
+                <a href="../Booting/linux-bootstrap-2.html">
+            
+                    
+                    &#x5728;&#x5185;&#x6838;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x7684;&#x7B2C;&#x4E00;&#x6B65;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Booting/linux-bootstrap-3.html">
+            
+                <a href="../Booting/linux-bootstrap-3.html">
+            
+                    
+                    &#x89C6;&#x9891;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x548C;&#x8F6C;&#x6362;&#x5230;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Booting/linux-bootstrap-4.html">
+            
+                <a href="../Booting/linux-bootstrap-4.html">
+            
+                    
+                    &#x8FC7;&#x6E21;&#x5230; 64 &#x4F4D;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Booting/linux-bootstrap-5.html">
+            
+                <a href="../Booting/linux-bootstrap-5.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x7F29;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Initialization/">
+            
+                <a href="../Initialization/">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Initialization/linux-initialization-1.html">
+            
+                <a href="../Initialization/linux-initialization-1.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x4E4B;&#x540E;&#x7684;&#x9996;&#x8981;&#x6B65;&#x9AA4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Initialization/linux-initialization-2.html">
+            
+                <a href="../Initialization/linux-initialization-2.html">
+            
+                    
+                    &#x65E9;&#x671F;&#x7684;&#x4E2D;&#x65AD;&#x548C;&#x5F02;&#x5E38;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Initialization/linux-initialization-3.html">
+            
+                <a href="../Initialization/linux-initialization-3.html">
+            
+                    
+                    &#x5728;&#x5230;&#x8FBE;&#x5185;&#x6838;&#x5165;&#x53E3;&#x4E4B;&#x524D;&#x6700;&#x540E;&#x7684;&#x51C6;&#x5907;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Initialization/linux-initialization-4.html">
+            
+                <a href="../Initialization/linux-initialization-4.html">
+            
+                    
+                    &#x5185;&#x6838;&#x5165;&#x53E3; - start_kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Initialization/linux-initialization-5.html">
+            
+                <a href="../Initialization/linux-initialization-5.html">
+            
+                    
+                    &#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Initialization/linux-initialization-6.html">
+            
+                <a href="../Initialization/linux-initialization-6.html">
+            
+                    
+                    &#x8FDB;&#x4E00;&#x6B65;&#x521D;&#x59CB;&#x5316;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Initialization/linux-initialization-7.html">
+            
+                <a href="../Initialization/linux-initialization-7.html">
+            
+                    
+                    &#x6700;&#x540E;&#x5BF9;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Initialization/linux-initialization-8.html">
+            
+                <a href="../Initialization/linux-initialization-8.html">
+            
+                    
+                    &#x8C03;&#x5EA6;&#x5668;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Initialization/linux-initialization-9.html">
+            
+                <a href="../Initialization/linux-initialization-9.html">
+            
+                    
+                    RCU &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Initialization/linux-initialization-10.html">
+            
+                <a href="../Initialization/linux-initialization-10.html">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x675F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Interrupts/">
+            
+                <a href="../Interrupts/">
+            
+                    
+                    &#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Interrupts/linux-interrupts-1.html">
+            
+                <a href="../Interrupts/linux-interrupts-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x548C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Interrupts/linux-interrupts-2.html">
+            
+                <a href="../Interrupts/linux-interrupts-2.html">
+            
+                    
+                    &#x6DF1;&#x5165; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Interrupts/linux-interrupts-3.html">
+            
+                <a href="../Interrupts/linux-interrupts-3.html">
+            
+                    
+                    &#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Interrupts/linux-interrupts-4.html">
+            
+                <a href="../Interrupts/linux-interrupts-4.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Interrupts/linux-interrupts-5.html">
+            
+                <a href="../Interrupts/linux-interrupts-5.html">
+            
+                    
+                    &#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Interrupts/linux-interrupts-6.html">
+            
+                <a href="../Interrupts/linux-interrupts-6.html">
+            
+                    
+                    &#x5904;&#x7406;&#x4E0D;&#x53EF;&#x5C4F;&#x853D;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Interrupts/linux-interrupts-7.html">
+            
+                <a href="../Interrupts/linux-interrupts-7.html">
+            
+                    
+                    &#x6DF1;&#x5165;&#x5916;&#x90E8;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Interrupts/linux-interrupts-8.html">
+            
+                <a href="../Interrupts/linux-interrupts-8.html">
+            
+                    
+                    IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../Interrupts/linux-interrupts-9.html">
+            
+                <a href="../Interrupts/linux-interrupts-9.html">
+            
+                    
+                    Softirq, Tasklets and Workqueues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../Interrupts/linux-interrupts-10.html">
+            
+                <a href="../Interrupts/linux-interrupts-10.html">
+            
+                    
+                    &#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="linux-syscall-1.html">
+            
+                <a href="linux-syscall-1.html">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6982;&#x5FF5;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="linux-syscall-2.html">
+            
+                <a href="linux-syscall-2.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="linux-syscall-3.html">
+            
+                <a href="linux-syscall-3.html">
+            
+                    
+                    vsyscall and vDSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="linux-syscall-4.html">
+            
+                <a href="linux-syscall-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="linux-syscall-5.html">
+            
+                <a href="linux-syscall-5.html">
+            
+                    
+                    open &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="linux-syscall-6.html">
+            
+                <span>
+            
+                    
+                    Linux &#x8D44;&#x6E90;&#x9650;&#x5236;
+            
+                
+            
+
+            
+        </span></li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Timers/">
+            
+                <a href="../Timers/">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x548C;&#x65F6;&#x949F;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Timers/linux-timers-1.html">
+            
+                <a href="../Timers/linux-timers-1.html">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Timers/linux-timers-2.html">
+            
+                <a href="../Timers/linux-timers-2.html">
+            
+                    
+                    &#x65F6;&#x949F;&#x6E90;&#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Timers/linux-timers-3.html">
+            
+                <a href="../Timers/linux-timers-3.html">
+            
+                    
+                    The tick broadcast framework and dyntick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Timers/linux-timers-4.html">
+            
+                <a href="../Timers/linux-timers-4.html">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x4ECB;&#x7ECD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Timers/linux-timers-5.html">
+            
+                <a href="../Timers/linux-timers-5.html">
+            
+                    
+                    Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Timers/linux-timers-6.html">
+            
+                <a href="../Timers/linux-timers-6.html">
+            
+                    
+                    x86 &#x76F8;&#x5173;&#x7684;&#x65F6;&#x949F;&#x6E90;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Timers/linux-timers-7.html">
+            
+                <a href="../Timers/linux-timers-7.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x4E0E;&#x65F6;&#x949F;&#x76F8;&#x5173;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SyncPrim/">
+            
+                <a href="../SyncPrim/">
+            
+                    
+                    &#x540C;&#x6B65;&#x539F;&#x8BED;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SyncPrim/linux-sync-1.html">
+            
+                <a href="../SyncPrim/linux-sync-1.html">
+            
+                    
+                    &#x81EA;&#x65CB;&#x9501;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SyncPrim/linux-sync-2.html">
+            
+                <a href="../SyncPrim/linux-sync-2.html">
+            
+                    
+                    &#x961F;&#x5217;&#x81EA;&#x65CB;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SyncPrim/linux-sync-3.html">
+            
+                <a href="../SyncPrim/linux-sync-3.html">
+            
+                    
+                    &#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SyncPrim/linux-sync-4.html">
+            
+                <a href="../SyncPrim/linux-sync-4.html">
+            
+                    
+                    &#x4E92;&#x65A5;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SyncPrim/linux-sync-5.html">
+            
+                <a href="../SyncPrim/linux-sync-5.html">
+            
+                    
+                    &#x8BFB;&#x8005;/&#x5199;&#x8005;&#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SyncPrim/linux-sync-6.html">
+            
+                <a href="../SyncPrim/linux-sync-6.html">
+            
+                    
+                    &#x987A;&#x5E8F;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7">
+            
+                <span>
+            
+                    
+                    RCU
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8">
+            
+                <span>
+            
+                    
+                    Lockdep
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MM/">
+            
+                <a href="../MM/">
+            
+                    
+                    &#x5185;&#x5B58;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MM/linux-mm-1.html">
+            
+                <a href="../MM/linux-mm-1.html">
+            
+                    
+                    &#x5185;&#x5B58;&#x5757;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../MM/linux-mm-2.html">
+            
+                <a href="../MM/linux-mm-2.html">
+            
+                    
+                    &#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x548C; ioremap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../MM/linux-mm-3.html">
+            
+                <a href="../MM/linux-mm-3.html">
+            
+                    
+                    kmemcheck
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cgroups/">
+            
+                <a href="../Cgroups/">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Cgroups/linux-cgroups-1.html">
+            
+                <a href="../Cgroups/linux-cgroups-1.html">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10">
+            
+                <span>
+            
+                    
+                    SMP
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Concepts/">
+            
+                <a href="../Concepts/">
+            
+                    
+                    &#x6982;&#x5FF5;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Concepts/linux-cpu-1.html">
+            
+                <a href="../Concepts/linux-cpu-1.html">
+            
+                    
+                    &#x6BCF;&#x4E2A; CPU &#x7684;&#x53D8;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Concepts/linux-cpu-2.html">
+            
+                <a href="../Concepts/linux-cpu-2.html">
+            
+                    
+                    CPU &#x63A9;&#x7801;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Concepts/linux-cpu-3.html">
+            
+                <a href="../Concepts/linux-cpu-3.html">
+            
+                    
+                    initcall &#x673A;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Concepts/linux-cpu-4.html">
+            
+                <a href="../Concepts/linux-cpu-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x7684;&#x901A;&#x77E5;&#x94FE;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../DataStructures/">
+            
+                <a href="../DataStructures/">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../DataStructures/linux-datastructures-1.html">
+            
+                <a href="../DataStructures/linux-datastructures-1.html">
+            
+                    
+                    &#x53CC;&#x5411;&#x94FE;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../DataStructures/linux-datastructures-2.html">
+            
+                <a href="../DataStructures/linux-datastructures-2.html">
+            
+                    
+                    &#x57FA;&#x6570;&#x6811;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../DataStructures/linux-datastructures-3.html">
+            
+                <a href="../DataStructures/linux-datastructures-3.html">
+            
+                    
+                    &#x4F4D;&#x6570;&#x7EC4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Theory/">
+            
+                <a href="../Theory/">
+            
+                    
+                    &#x7406;&#x8BBA;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Theory/linux-theory-1.html">
+            
+                <a href="../Theory/linux-theory-1.html">
+            
+                    
+                    &#x5206;&#x9875;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Theory/linux-theory-2.html">
+            
+                <a href="../Theory/linux-theory-2.html">
+            
+                    
+                    ELF &#x6587;&#x4EF6;&#x683C;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Theory/linux-theory-3.html">
+            
+                <a href="../Theory/linux-theory-3.html">
+            
+                    
+                    &#x5167;&#x8054;&#x6C47;&#x7F16;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4">
+            
+                <span>
+            
+                    
+                    CPUID
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5">
+            
+                <span>
+            
+                    
+                    MSR
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14">
+            
+                <span>
+            
+                    
+                    Initial ram disk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1">
+            
+                <span>
+            
+                    
+                    initrd
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Misc/">
+            
+                <a href="../Misc/">
+            
+                    
+                    &#x6742;&#x9879;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../Misc/linux-misc-1.html">
+            
+                <a href="../Misc/linux-misc-1.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5F00;&#x53D1;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../Misc/linux-misc-2.html">
+            
+                <a href="../Misc/linux-misc-2.html">
+            
+                    
+                    &#x5185;&#x6838;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../Misc/linux-misc-3.html">
+            
+                <a href="../Misc/linux-misc-3.html">
+            
+                    
+                    &#x94FE;&#x63A5;&#x5668;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../Misc/linux-misc-4.html">
+            
+                <a href="../Misc/linux-misc-4.html">
+            
+                    
+                    &#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5">
+            
+                <span>
+            
+                    
+                    &#x4E66;&#x5199;&#x5E76;&#x63D0;&#x4EA4;&#x4F60;&#x7B2C;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x8865;&#x4E01;
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../KernelStructures/">
+            
+                <a href="../KernelStructures/">
+            
+                    
+                    &#x5185;&#x6838;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../KernelStructures/linux-kernelstructure-1.html">
+            
+                <a href="../KernelStructures/linux-kernelstructure-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x63CF;&#x8FF0;&#x7B26;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../LINKS.html">
+            
+                <a href="../LINKS.html">
+            
+                    
+                    &#x6709;&#x5E2E;&#x52A9;&#x7684;&#x94FE;&#x63A5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../CONTRIBUTORS.html">
+            
+                <a href="../CONTRIBUTORS.html">
+            
+                    
+                    &#x8D21;&#x732E;&#x8005;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    
+<div class="gl-wrapper">
+    <a class="gitbook-link" href="https://www.gitbook.com?utm_source=public_site_legacy&amp;utm_medium=referral&amp;utm_campaign=trademark&amp;utm_term=xinqiu&amp;utm_content=powered_by" target="blank">
+        <div class="tm-logo">
+            <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="currentColor" viewBox="0 0 1067 769" xmlns="http://www.w3.org/2000/svg" stroke="none" class="icon-7f6730be--text-3f89f380"><g><path d="M480.026 640.677c17.205 0 31.2 13.997 31.2 31.194s-13.995 31.193-31.2 31.193c-17.197 0-31.193-13.996-31.193-31.193 0-17.197 13.996-31.194 31.193-31.194m489.93-193.226c-17.203 0-31.2-13.998-31.2-31.195 0-17.204 13.997-31.2 31.2-31.2 17.198 0 31.194 13.996 31.194 31.2 0 17.197-13.996 31.195-31.193 31.195m0-127.804c-53.269 0-96.609 43.34-96.609 96.609 0 10.373 1.723 20.702 5.123 30.741L559.328 616.879c-18.132-26.128-47.521-41.617-79.302-41.617-36.821 0-70.391 21.065-86.63 54.003L106.68 478.109c-30.288-15.927-52.965-65.817-50.56-111.223 1.248-23.687 9.438-42.071 21.897-49.17 7.916-4.493 17.436-4.099 27.526 1.188l1.916 1.01c75.96 40.022 324.6 170.981 335.063 175.844 16.157 7.47 25.14 10.5 52.659-2.547l513.958-267.3c7.53-2.844 16.315-10.062 16.315-21.023 0-15.205-15.72-21.199-15.765-21.199-29.218-14.018-74.163-35.054-117.987-55.57C798.033 84.26 691.861 34.547 645.23 10.132c-40.253-21.072-72.655-3.311-78.432.282l-11.227 5.555C345.727 119.743 64.898 258.826 48.911 268.553 20.278 285.973 2.547 320.679.252 363.768c-3.586 68.304 31.261 139.506 81.069 165.634l303.172 156.354c6.83 47.306 47.55 82.725 95.532 82.725 52.78 0 95.808-42.546 96.603-95.14L910.541 492.38c16.93 13.233 37.92 20.486 59.416 20.486 53.268 0 96.61-43.341 96.61-96.61s-43.342-96.61-96.61-96.61" fill-rule="evenodd"/></g></svg>
+        </div>
+        <div class="tm-content">
+            <div class="tm-container">
+                <span class="tm-text">
+                    Powered by <b>GitBook</b>
+                </span>
+            </div>
+        </div>
+    </a>
+</div></div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="system-calls-in-the-linux-kernel-part-4">System calls in the Linux kernel. Part 4.</h1>
+<h2 id="how-does-the-linux-kernel-run-a-program">How does the Linux kernel run a program</h2>
+<p>This is the fourth part of the <a href="http://xinqiu.gitbooks.io/linux-insides-cn/content/SysCall/index.html" target="_blank">chapter</a> that describes <a href="https://en.wikipedia.org/wiki/System_call" target="_blank">system calls</a> in the Linux kernel and as I wrote in the conclusion of the <a href="http://xinqiu.gitbooks.io/linux-insides-cn/content/SysCall/linux-syscall-3.html" target="_blank">previous</a> - this part will be last in this chapter. In the previous part we stopped at the two new concepts:</p>
+<ul>
+<li><code>vsyscall</code>;</li>
+<li><code>vDSO</code>;</li>
+</ul>
+<p>that are related and very similar on system call concept.</p>
+<p>This part will be last part in this chapter and as you can understand from the part&apos;s title - we will see what does occur in the Linux kernel when we run our programs. So, let&apos;s start.</p>
+<h2 id="how-do-we-launch-our-programs">how do we launch our programs?</h2>
+<p>There are many different ways to launch an application from an user perspective. For example we can run a program from the <a href="https://en.wikipedia.org/wiki/Unix_shell" target="_blank">shell</a> or double-click on the application icon. It does not matter. The Linux kernel handles application launch regardless how we do launch this application.</p>
+<p>In this part we will consider the way when we just launch an application from the shell. As you know, the standard way to launch an application from shell is the following: We just launch a <a href="https://en.wikipedia.org/wiki/Terminal_emulator" target="_blank">terminal emulator</a> application and just write the name of the program and pass or not arguments to our program, for example:</p>
+<p><img src="http://s14.postimg.org/d6jgidc7l/Screenshot_from_2015_09_07_17_31_55.png" alt="ls shell"></p>
+<p>Let&apos;s consider what does occur when we launch an application from the shell, what does shell do when we write program name, what does Linux kernel do etc. But before we will start to consider these interesting things, I want to warn that this book is about the Linux kernel. That&apos;s why we will see Linux kernel insides related stuff mostly in this part. We will not consider in details what does shell do, we will not consider complex cases, for example subshells etc.</p>
+<p>My default shell is - <a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29" target="_blank">bash</a>, so I will consider how do bash shell launches a program. So let&apos;s start. The <code>bash</code> shell as well as any program that written with <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29" target="_blank">C</a> programming language starts from the <a href="https://en.wikipedia.org/wiki/Entry_point" target="_blank">main</a> function. If you will look on the source code of the <code>bash</code> shell, you will find the <code>main</code> function in the <a href="https://github.com/bminor/bash/blob/master/shell.c#L357" target="_blank">shell.c</a> source code file. This function makes many different things before the main thread loop of the <code>bash</code> started to work. For example this function:</p>
+<ul>
+<li>checks and tries to open <code>/dev/tty</code>;</li>
+<li>check that shell running in debug mode;</li>
+<li>parses command line arguments;</li>
+<li>reads shell environment;</li>
+<li>loads <code>.bashrc</code>, <code>.profile</code> and other configuration files;</li>
+<li>and many many more.</li>
+</ul>
+<p>After all of these operations we can see the call of the <code>reader_loop</code> function. This function defined in the <a href="https://github.com/bminor/bash/blob/master/eval.c#L67" target="_blank">eval.c</a> source code file and represents main thread loop or in other words it reads and executes commands. As the <code>reader_loop</code> function made all checks and read the given program name and arguments, it calls the <code>execute_command</code> function from the <a href="https://github.com/bminor/bash/blob/master/execute_cmd.c#L378" target="_blank">execute_cmd.c</a> source code file. The <code>execute_command</code> function through the chain of the functions calls:</p>
+<pre><code>execute_command
+--&gt; execute_command_internal
+----&gt; execute_simple_command
+------&gt; execute_disk_command
+--------&gt; shell_execve
+</code></pre><p>makes different checks like do we need to start <code>subshell</code>, was it builtin <code>bash</code> function or not etc. As I already wrote above, we will not consider all details about things that are not related to the Linux kernel. In the end of this process, the <code>shell_execve</code> function calls the <code>execve</code> system call:</p>
+<pre><code class="lang-C">execve (command, args, env);
+</code></pre>
+<p>The <code>execve</code> system call has the following signature:</p>
+<pre><code>int execve(const char *filename, char *const argv [], char *const envp[]);
+</code></pre><p>and executes a program by the given filename, with the given arguments and <a href="https://en.wikipedia.org/wiki/Environment_variable" target="_blank">environment variables</a>. This system call is the first in our case and only, for example:</p>
+<pre><code>$ strace ls
+execve(&quot;/bin/ls&quot;, [&quot;ls&quot;], [/* 62 vars */]) = 0
+
+$ strace echo
+execve(&quot;/bin/echo&quot;, [&quot;echo&quot;], [/* 62 vars */]) = 0
+
+$ strace uname
+execve(&quot;/bin/uname&quot;, [&quot;uname&quot;], [/* 62 vars */]) = 0
+</code></pre><p>So, an user application (<code>bash</code> in our case) calls the system call and as we already know the next step is Linux kernel.</p>
+<h2 id="execve-system-call">execve system call</h2>
+<p>We saw preparation before a system call called by an user application and after a system call handler finished its work in the second <a href="http://xinqiu.gitbooks.io/linux-insides-cn/content/SysCall/linux-syscall-2.html" target="_blank">part</a> of this chapter. We stopped at the call of the <code>execve</code> system call in the previous paragraph. This system call defined in the <a href="https://github.com/torvalds/linux/blob/master/fs/exec.c" target="_blank">fs/exec.c</a> source code file and as we already know it takes three arguments:</p>
+<pre><code>SYSCALL_DEFINE3(execve,
+        const char __user *, filename,
+        const char __user *const __user *, argv,
+        const char __user *const __user *, envp)
+{
+    return do_execve(getname(filename), argv, envp);
+}
+</code></pre><p>Implementation of the <code>execve</code> is pretty simple here, as we can see it just returns the result of the <code>do_execve</code> function. The <code>do_execve</code> function defined in the same source code file and do the following things:</p>
+<ul>
+<li>Initialize two pointers on a userspace data with the given arguments and environment variables;</li>
+<li>return the result of the <code>do_execveat_common</code>.</li>
+</ul>
+<p>We can see its implementation:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> user_arg_ptr argv = { .ptr.native = __argv };
+<span class="hljs-keyword">struct</span> user_arg_ptr envp = { .ptr.native = __envp };
+<span class="hljs-keyword">return</span> do_execveat_common(AT_FDCWD, filename, argv, envp, <span class="hljs-number">0</span>);
+</code></pre>
+<p>The <code>do_execveat_common</code> function does main work - it executes a new program. This function takes similar set of arguments, but as you can see it takes five arguments instead of three. The first argument is the file descriptor that represent directory with our application, in our case the <code>AT_FDCWD</code> means that the given pathname is interpreted relative to the current working directory of the calling process. The fifth argument is flags. In our case we passed <code>0</code> to the <code>do_execveat_common</code>. We will check in a next step, so will see it latter.</p>
+<p>First of all the <code>do_execveat_common</code> function checks the <code>filename</code> pointer and returns if it is <code>NULL</code>. After this we check flags of the current process that limit of running processes is not exceed:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (IS_ERR(filename))
+    <span class="hljs-keyword">return</span> PTR_ERR(filename);
+
+<span class="hljs-keyword">if</span> ((current-&gt;flags &amp; PF_NPROC_EXCEEDED) &amp;&amp;
+    atomic_read(&amp;current_user()-&gt;processes) &gt; rlimit(RLIMIT_NPROC)) {
+    retval = -EAGAIN;
+    <span class="hljs-keyword">goto</span> out_ret;
+}
+
+current-&gt;flags &amp;= ~PF_NPROC_EXCEEDED;
+</code></pre>
+<p>If these two checks were successful we unset <code>PF_NPROC_EXCEEDED</code> flag in the flags of the current process to prevent fail of the <code>execve</code>. You can see that in the next step we call the <code>unshare_files</code> function that defined in the <a href="https://github.com/torvalds/linux/blob/master/kernel/fork.c" target="_blank">kernel/fork.c</a> and unshares the files of the current task and check the result of this function:</p>
+<pre><code class="lang-C">retval = unshare_files(&amp;displaced);
+<span class="hljs-keyword">if</span> (retval)
+    <span class="hljs-keyword">goto</span> out_ret;
+</code></pre>
+<p>We need to call this function to eliminate potential leak of the execve&apos;d binary&apos;s <a href="https://en.wikipedia.org/wiki/File_descriptor" target="_blank">file descriptor</a>. In the next step we start preparation of the <code>bprm</code> that represented by the <code>struct linux_binprm</code> structure (defined in the <a href="https://github.com/torvalds/linux/blob/master/linux/binfmts.h" target="_blank">include/linux/binfmts.h</a> header file). The <code>linux_binprm</code> structure is used to hold the arguments that are used when loading binaries. For example it contains <code>vma</code> field which has <code>vm_area_struct</code> type and represents single memory area over a contiguous interval in a given address space where our application will be loaded, <code>mm</code> field which is memory descriptor of the binary, pointer to the top of memory and many other different fields.</p>
+<p>First of all we allocate memory for this structure with the <code>kzalloc</code> function and check the result of the allocation:</p>
+<pre><code class="lang-C">bprm = kzalloc(<span class="hljs-keyword">sizeof</span>(*bprm), GFP_KERNEL);
+<span class="hljs-keyword">if</span> (!bprm)
+    <span class="hljs-keyword">goto</span> out_files;
+</code></pre>
+<p>After this we start to prepare the <code>binprm</code> credentials with the call of the <code>prepare_bprm_creds</code> function:</p>
+<pre><code class="lang-C">retval = prepare_bprm_creds(bprm);
+    <span class="hljs-keyword">if</span> (retval)
+        <span class="hljs-keyword">goto</span> out_free;
+
+check_unsafe_exec(bprm);
+current-&gt;in_execve = <span class="hljs-number">1</span>;
+</code></pre>
+<p>Initialization of the <code>binprm</code> credentials in other words is initialization of the <code>cred</code> structure that stored inside of the <code>linux_binprm</code> structure. The <code>cred</code> structure contains the security context of a task for example <a href="https://en.wikipedia.org/wiki/User_identifier#Real_user_ID" target="_blank">real uid</a> of the task, real <a href="https://en.wikipedia.org/wiki/Globally_unique_identifier" target="_blank">guid</a> of the task, <code>uid</code> and <code>guid</code> for the <a href="https://en.wikipedia.org/wiki/Virtual_file_system" target="_blank">virtual file system</a> operations etc. In the next step as we executed preparation of the <code>bprm</code> credentials we check that now we can safely execute a program with the call of the <code>check_unsafe_exec</code> function and set the current process to the <code>in_execve</code> state.</p>
+<p>After all of these operations we call the <code>do_open_execat</code> function that checks the flags that we passed to the <code>do_execveat_common</code> function (remember that we have <code>0</code> in the <code>flags</code>) and searches and opens executable file on disk, checks that our we will load a binary file from <code>noexec</code> mount points (we need to avoid execute a binary from filesystems that do not contain executable binaries like <a href="https://en.wikipedia.org/wiki/Procfs" target="_blank">proc</a> or <a href="https://en.wikipedia.org/wiki/Sysfs" target="_blank">sysfs</a>), intializes <code>file</code> structure and returns pointer on this structure. Next we can see the call the <code>sched_exec</code> after this:</p>
+<pre><code class="lang-C">file = do_open_execat(fd, filename, flags);
+retval = PTR_ERR(file);
+<span class="hljs-keyword">if</span> (IS_ERR(file))
+    <span class="hljs-keyword">goto</span> out_unmark;
+
+sched_exec();
+</code></pre>
+<p>The <code>sched_exec</code> function is used to determine the least loaded processor that can execute the new program and to migrate the current process to it.</p>
+<p>After this we need to check <a href="https://en.wikipedia.org/wiki/File_descriptor" target="_blank">file descriptor</a> of the give executable binary. We try to check does the name of the our binary file starts from the <code>/</code> symbol or does the path of the given executable binary is interpreted relative to the current working directory of the calling process or in other words file descriptor is <code>AT_FDCWD</code> (read above about this).</p>
+<p>If one of these checks is successfull we set the binary parameter filename:</p>
+<pre><code class="lang-C">bprm-&gt;file = file;
+
+<span class="hljs-keyword">if</span> (fd == AT_FDCWD || filename-&gt;name[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;/&apos;</span>) {
+    bprm-&gt;filename = filename-&gt;name;
+}
+</code></pre>
+<p>Otherwise if the filename is empty we set the binary parameter filename to the <code>/dev/fd/%d</code> or <code>/dev/fd/%d/%s</code> depends on the filename of the given executable binary which means that we will execute the file to which the file descriptor refers:</p>
+<pre><code class="lang-C">} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">if</span> (filename-&gt;name[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;\0&apos;</span>)
+        pathbuf = kasprintf(GFP_TEMPORARY, <span class="hljs-string">&quot;/dev/fd/%d&quot;</span>, fd);
+    <span class="hljs-keyword">else</span>
+        pathbuf = kasprintf(GFP_TEMPORARY, <span class="hljs-string">&quot;/dev/fd/%d/%s&quot;</span>,
+                            fd, filename-&gt;name);
+    <span class="hljs-keyword">if</span> (!pathbuf) {
+        retval = -ENOMEM;
+        <span class="hljs-keyword">goto</span> out_unmark;
+    }
+
+    bprm-&gt;filename = pathbuf;
+}
+
+bprm-&gt;interp = bprm-&gt;filename;
+</code></pre>
+<p>Note that we set not only the <code>bprm-&gt;filename</code> but also <code>bprm-&gt;interp</code> that will contain name of the program interpreter. For now we just write the same name there, but later it will be updated with the real name of the program interpreter depends on binary format of a program. You can read above that we already prepared <code>cred</code> for the <code>linux_binprm</code>. The next step is initalization of other fields of the <code>linux_binprm</code>.  First of all we call the <code>bprm_mm_init</code> function and pass the <code>bprm</code> to it:</p>
+<pre><code class="lang-C">retval = bprm_mm_init(bprm);
+<span class="hljs-keyword">if</span> (retval)
+    <span class="hljs-keyword">goto</span> out_unmark;
+</code></pre>
+<p>The <code>bprm_mm_init</code> defined in the same source code file and as we can understand from the function&apos;s name, it makes initialization of the memory descriptor or in other words the <code>bprm_mm_init</code> function initializes <code>mm_struct</code> structure. This structure defined in the <a href="https://github.com/torvalds/linux/blob/master/include/mm_types.h" target="_blank">include/linux/mm_types.h</a> header file and represents address space of a process. We will not consider implementation of the <code>bprm_mm_init</code> function because we do not know many important stuff related to the Linux kernel memory manager, but we just need to know that this function initializes <code>mm_struct</code> and populate it with a temporary stack <code>vm_area_struct</code>.</p>
+<p>After this we calculate the count of the command line arguments which are were passed to the our executable binary, the count of the environment variables and set it to the <code>bprm-&gt;argc</code> and <code>bprm-&gt;envc</code> respectively:</p>
+<pre><code class="lang-C">bprm-&gt;argc = count(argv, MAX_ARG_STRINGS);
+<span class="hljs-keyword">if</span> ((retval = bprm-&gt;argc) &lt; <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">goto</span> out;
+
+bprm-&gt;envc = count(envp, MAX_ARG_STRINGS);
+<span class="hljs-keyword">if</span> ((retval = bprm-&gt;envc) &lt; <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>As you can see we do this operations with the help of the <code>count</code> function that defined in the <a href="https://github.com/torvalds/linux/blob/master/fs/exec.c" target="_blank">same</a> source code file and calculates the count of strings in the <code>argv</code> array. The <code>MAX_ARG_STRINGS</code> macro defined in the <a href="https://github.com/torvalds/linux/blob/master/include/uapi/linux/binfmts.h" target="_blank">include/uapi/linux/binfmts.h</a> header file and as we can understand from the macro&apos;s name, it represents maximum number of strings that were passed to the <code>execve</code> system call. The value of the <code>MAX_ARG_STRINGS</code>:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAX_ARG_STRINGS 0x7FFFFFFF</span>
+</code></pre>
+<p>After we calculated the number of the command line arguments and environment variables, we call the <code>prepare_binprm</code> function. We already call the function with the similar name before this moment. This function is called <code>prepare_binprm_cred</code> and we remember that this function initializes <code>cred</code> structure in the <code>linux_bprm</code>. Now the <code>prepare_binprm</code> function:</p>
+<pre><code class="lang-C">retval = prepare_binprm(bprm);
+<span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>fills the <code>linux_binprm</code> structure with the <code>uid</code> from <a href="https://en.wikipedia.org/wiki/Inode" target="_blank">inode</a> and read <code>128</code> bytes from the binary executable file. We read only first <code>128</code> from the executable file because we need to check a type of our executable. We will read the rest of the executable file in the later step. After the preparation of the <code>linux_bprm</code> structure we copy the filename of the executable binary file, command line arguments and enviroment variables to the <code>linux_bprm</code> with the call of the <code>copy_strings_kernel</code> function:</p>
+<pre><code class="lang-C">retval = copy_strings_kernel(<span class="hljs-number">1</span>, &amp;bprm-&gt;filename, bprm);
+<span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">goto</span> out;
+
+retval = copy_strings(bprm-&gt;envc, envp, bprm);
+<span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">goto</span> out;
+
+retval = copy_strings(bprm-&gt;argc, argv, bprm);
+<span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>And set the pointer to the top of new program&apos;s stack that we set in the <code>bprm_mm_init</code> function:</p>
+<pre><code class="lang-C">bprm-&gt;exec = bprm-&gt;p;
+</code></pre>
+<p>The top of the stack will contain the program filename and we store this fileneme tothe <code>exec</code> field of the <code>linux_bprm</code> structure.</p>
+<p>Now we have filled <code>linux_bprm</code> structure, we call the <code>exec_binprm</code> function:</p>
+<pre><code class="lang-C">retval = exec_binprm(bprm);
+<span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>First of all we store the <a href="https://en.wikipedia.org/wiki/Process_identifier" target="_blank">pid</a> and <code>pid</code> that seen from the <a href="https://en.wikipedia.org/wiki/Cgroups" target="_blank">namespace</a> of the current task in the <code>exec_binprm</code>:</p>
+<pre><code class="lang-C">old_pid = current-&gt;pid;
+rcu_read_lock();
+old_vpid = task_pid_nr_ns(current, task_active_pid_ns(current-&gt;parent));
+rcu_read_unlock();
+</code></pre>
+<p>and call the:</p>
+<pre><code class="lang-C">search_binary_handler(bprm);
+</code></pre>
+<p>function. This function goes through the list of handlers that contains different binary formats. Currently the Linux kernel supports following binary formats:</p>
+<ul>
+<li><code>binfmt_script</code> - support for interpreted scripts that are starts from the <a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29" target="_blank">#!</a> line;</li>
+<li><code>binfmt_misc</code> - support differnt binary formats, according to runtime configuration of the Linux kernel;</li>
+<li><code>binfmt_elf</code> - support <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format" target="_blank">elf</a> format;</li>
+<li><code>binfmt_aout</code> - support <a href="https://en.wikipedia.org/wiki/A.out" target="_blank">a.out</a> format;</li>
+<li><code>binfmt_flat</code> - support for <a href="https://en.wikipedia.org/wiki/Binary_file#Structure" target="_blank">flat</a> format;</li>
+<li><code>binfmt_elf_fdpic</code> - Support for <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format" target="_blank">elf</a> <a href="http://elinux.org/UClinux_Shared_Library#FDPIC_ELF" target="_blank">FDPIC</a> binaries;</li>
+<li><code>binfmt_em86</code> - support for Intel <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format" target="_blank">elf</a> binaries running on <a href="https://en.wikipedia.org/wiki/DEC_Alpha" target="_blank">Alpha</a> machines.</li>
+</ul>
+<p>So, the search-binary_handler tries to call the <code>load_binary</code> function and pass <code>linux_binprm</code> to it. If the binary handler supports the given executable file format, it starts to prepare the executable binary for execution:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">search_binary_handler</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> linux_binprm *bprm)</span>
+</span>{
+    ...
+    ...
+    ...
+    list_for_each_entry(fmt, &amp;formats, lh) {
+        retval = fmt-&gt;load_binary(bprm);
+        <span class="hljs-keyword">if</span> (retval &lt; <span class="hljs-number">0</span> &amp;&amp; !bprm-&gt;mm) {
+            force_sigsegv(SIGSEGV, current);
+            <span class="hljs-keyword">return</span> retval;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> retval;
+</code></pre>
+<p>Where the <code>load_binary</code> for example for the <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format" target="_blank">elf</a> checks the magic number (each <code>elf</code> binary file contains magic number in the header) in the <code>linux_bprm</code> buffer (remember that we read first <code>128</code> bytes from the executable binary file): and exit if it is not <code>elf</code> binary:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">load_elf_binary</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> linux_binprm *bprm)</span>
+</span>{
+    ...
+    ...
+    ...
+    loc-&gt;elf_ex = *((<span class="hljs-keyword">struct</span> elfhdr *)bprm-&gt;buf);
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">memcmp</span>(elf_ex.e_ident, ELFMAG, SELFMAG) != <span class="hljs-number">0</span>)
+        <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>If the given executable file is in <code>elf</code> format, the <code>load_elf_binary</code> continues to execute. The <code>load_elf_binary</code> does many different things to prepare on execution executable file. For example it checks the architecture and type of the executable file:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (loc-&gt;elf_ex.e_type != ET_EXEC &amp;&amp; loc-&gt;elf_ex.e_type != ET_DYN)
+    <span class="hljs-keyword">goto</span> out;
+<span class="hljs-keyword">if</span> (!elf_check_arch(&amp;loc-&gt;elf_ex))
+    <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>and exit if there is wrong architecture and executable file non executable non shared. Tries to load the <code>program header table</code>:</p>
+<pre><code class="lang-C">elf_phdata = load_elf_phdrs(&amp;loc-&gt;elf_ex, bprm-&gt;file);
+<span class="hljs-keyword">if</span> (!elf_phdata)
+    <span class="hljs-keyword">goto</span> out;
+</code></pre>
+<p>that describes <a href="https://en.wikipedia.org/wiki/Memory_segmentation" target="_blank">segments</a>. Read the <code>program interpreter</code> and libraries that linked with the our executable binary file from disk and load it to memory. The <code>program interpreter</code> specified in the <code>.interp</code> section of the executable file and as you can read in the part that describes <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Misc/linux-misc-3.html" target="_blank">Linkers</a> it is - <code>/lib64/ld-linux-x86-64.so.2</code> for the <code>x86_64</code>. It setups the stack and map <code>elf</code> binary into the correct location in memory. It maps the <a href="https://en.wikipedia.org/wiki/.bss" target="_blank">bss</a> and the <a href="http://man7.org/linux/man-pages/man2/sbrk.2.html" target="_blank">brk</a> sections and does many many other different things to prepare executable file to execute.</p>
+<p>In the end of the execution of the <code>load_elf_binary</code> we call the <code>start_thread</code> function and pass three arguments to it:</p>
+<pre><code class="lang-C">    start_thread(regs, elf_entry, bprm-&gt;p);
+    retval = <span class="hljs-number">0</span>;
+out:
+    kfree(loc);
+out_ret:
+    <span class="hljs-keyword">return</span> retval;
+</code></pre>
+<p>These arguments are:</p>
+<ul>
+<li>Set of <a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank">registers</a> for the new task;</li>
+<li>Address of the entry point of the new task;</li>
+<li>Address of the top of the stack for the new task.</li>
+</ul>
+<p>As we can understand from the function&apos;s name, it starts new thread, but it is not so. The <code>start_thread</code> function just prepares new task&apos;s registers to be ready to run. Let&apos;s look on the implementation of this function:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span>
+<span class="hljs-title">start_thread</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs *regs, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> new_ip, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> new_sp)</span>
+</span>{
+        start_thread_common(regs, new_ip, new_sp,
+                            __USER_CS, __USER_DS, <span class="hljs-number">0</span>);
+}
+</code></pre>
+<p>As we can see the <code>start_thread</code> function just makes a call of the <code>start_thread_common</code> function that will do all for us:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span>
+<span class="hljs-title">start_thread_common</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs *regs, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> new_ip,
+                    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> new_sp,
+                    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> _cs, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> _ss, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> _ds)</span>
+</span>{
+        loadsegment(fs, <span class="hljs-number">0</span>);
+        loadsegment(es, _ds);
+        loadsegment(ds, _ds);
+        load_gs_index(<span class="hljs-number">0</span>);
+        regs-&gt;ip                = new_ip;
+        regs-&gt;sp                = new_sp;
+        regs-&gt;cs                = _cs;
+        regs-&gt;ss                = _ss;
+        regs-&gt;flags             = X86_EFLAGS_IF;
+        force_iret();
+}
+</code></pre>
+<p>The <code>start_thread_common</code> function fills <code>fs</code> segment register with zero and <code>es</code> and <code>ds</code> with the value of the data segment register. After this we set new values to the <a href="https://en.wikipedia.org/wiki/Program_counter" target="_blank">instruction pointer</a>, <code>cs</code> segments etc. In the end of the <code>start_thread_common</code> function we can see the <code>force_iret</code> macro that force a system call return via <code>iret</code> instruction. Ok, we prepared new thread to run in userspace and now we can return from the <code>exec_binprm</code> and now we are in the <code>do_execveat_common</code> again. After the <code>exec_binprm</code> will finish its execution we release memory for structures that was allocated before and return.</p>
+<p>After we returned from the <code>execve</code> system call handler, execution of our program will be started. We can do it, because all context related information already configured for this purpose. As we saw the <code>execve</code> system call does not return control to a process, but code, data and other segments of the caller process are just overwritten of the program segments. The exit from our application will be implemented through the <code>exit</code> system call.</p>
+<p>That&apos;s all. From this point our programm will be executed.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is the end of the fourth and last part of the about the system calls concept in the Linux kernel. We saw almost all related stuff to the <code>system call</code> concept in these four parts. We started from the understanding of the <code>system call</code> concept, we have learned what is it and why do users applications need in this concept. Next we saw how does the Linux handle a system call from an user application. We met two similar concepts to the <code>system call</code> concept, they are <code>vsyscall</code> and <code>vDSO</code> and finally we saw how does Linux kernel run an user program.</p>
+<p>If you have questions or suggestions, feel free to ping me in twitter <a href="https://twitter.com/0xAX" target="_blank">0xAX</a>, drop me <a href="anotherworldofworld@gmail.com">email</a> or just create <a href="https://github.com/MintCN/linux-insides-zh/issues/new" target="_blank">issue</a>.</p>
+<p><strong>Please note that English is not my first language and I am really sorry for any inconvenience. If you found any mistakes please send me PR to <a href="https://github.com/MintCN/linux-insides-zh" target="_blank">linux-insides</a>.</strong></p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/System_call" target="_blank">System call</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Unix_shell" target="_blank">shell</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29" target="_blank">bash</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Entry_point" target="_blank">entry point</a> </li>
+<li><a href="https://en.wikipedia.org/wiki/C_%28programming_language%29" target="_blank">C</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Environment_variable" target="_blank">environment variables</a></li>
+<li><a href="https://en.wikipedia.org/wiki/File_descriptor" target="_blank">file descriptor</a></li>
+<li><a href="https://en.wikipedia.org/wiki/User_identifier#Real_user_ID" target="_blank">real uid</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_file_system" target="_blank">virtual file system</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Procfs" target="_blank">procfs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sysfs" target="_blank">sysfs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Inode" target="_blank">inode</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Process_identifier" target="_blank">pid</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cgroups" target="_blank">namespace</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29" target="_blank">#!</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format" target="_blank">elf</a></li>
+<li><a href="https://en.wikipedia.org/wiki/A.out" target="_blank">a.out</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binary_file#Structure" target="_blank">flat</a> </li>
+<li><a href="https://en.wikipedia.org/wiki/DEC_Alpha" target="_blank">Alpha</a></li>
+<li><a href="http://elinux.org/UClinux_Shared_Library#FDPIC_ELF" target="_blank">FDPIC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Memory_segmentation" target="_blank">segments</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Misc/linux-misc-3.html" target="_blank">Linkers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank">Processor register</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Program_counter" target="_blank">instruction pointer</a></li>
+<li><a href="http://xinqiu.gitbooks.io/linux-insides-cn/content/SysCall/linux-syscall-3.html" target="_blank">Previous part</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class="search-results-count"></span> results matching &quot;<span class="search-query"></span>&quot;</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching &quot;<span class="search-query"></span>&quot;</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux-syscall-3.html" class="navigation navigation-prev " aria-label="Previous page: vsyscall and vDSO">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="linux-syscall-5.html" class="navigation navigation-next " aria-label="Next page: open &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5B9E;&#x73B0;">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux 内核如何运行程序","level":"1.5.4","depth":2,"next":{"title":"open 系统调用的实现","level":"1.5.5","depth":2,"path":"SysCall/linux-syscall-5.md","ref":"SysCall/linux-syscall-5.md","articles":[]},"previous":{"title":"vsyscall and vDSO","level":"1.5.3","depth":2,"path":"SysCall/linux-syscall-3.md","ref":"SysCall/linux-syscall-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["comment"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"comment":{"highlightCommented":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"MintCN/linux-insides-zh","theme":"default","author":"xinqiu","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux ­Insides­中文","language":"zh","links":{"sidebar":{"Linux ­Insides­中文":"https://legacy.gitbook.com/book/xinqiu/linux-insides-cn"},"gitbook":true},"gitbook":"*","description":"linux内核揭密    Translated By MintCN"},"file":{"path":"SysCall/linux-syscall-4.md","mtime":"2020-03-17T07:53:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T07:56:09.393Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-comment/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+
+</body></html>

@@ -158,20 +158,50 @@ print("\n=== 2b. BROKEN WIKILINKS ===")
 # Build a set of valid targets (without .md extension)
 valid_targets = set()
 valid_target_with_path = {}
+# Basename-only index for fuzzy short-name resolution (Obsidian-style)
+basename_index = {}
 for rel, _ in all_files:
     base = rel.replace('.md', '')
     valid_targets.add(base)
     valid_target_with_path[base] = rel
+    bn = os.path.basename(base)
+    # Multiple files may share basename; prefer shortest path (most root-local)
+    if bn not in basename_index or len(rel) < len(basename_index[bn]):
+        basename_index[bn] = rel
+
+# Track broken-with-fuzzy-match separately for diagnostics
+broken_links = []
+fuzzy_resolved = []
+
+# Detect "wiki/xxx" prefix from old wikilink format — those targets are valid
+# when stripped of the "wiki/" prefix (wiki/ was the vault root in old Obsidian)
+def resolve_target(t):
+    if t in valid_targets:
+        return ("exact", t)
+    # Strip legacy "wiki/" prefix
+    if t.startswith("wiki/"):
+        stripped = t[5:]
+        if stripped in valid_targets:
+            return ("legacy_prefix", stripped)
+    # Fuzzy basename match
+    if t in basename_index:
+        return ("fuzzy", basename_index[t])
+    return None
 
 for src_rel, targets in outbound_links.items():
     for t in targets:
-        # Check if this target exists (as a wiki page base)
-        if t not in valid_targets:
+        res = resolve_target(t)
+        if res is None:
             broken_links.append((src_rel, t))
+        elif res[0] == "exact":
+            pass  # already valid
+        else:
+            fuzzy_resolved.append((src_rel, t, res[1], res[0]))
 
 print(f"Broken wikilinks: {len(broken_links)}")
-for src, tgt in sorted(broken_links, key=lambda x: (x[0], x[1])):
-    print(f"  {src} -> [[{tgt}]]")
+print(f"Resolved via fuzzy/legacy (basename/prefix match): {len(fuzzy_resolved)}")
+for src, tgt, resolved_via, kind in sorted(fuzzy_resolved, key=lambda x: (x[0], x[1]))[:10]:
+    print(f"  {kind.upper():14s}  {src} -> [[{tgt}]]  →  wiki/{resolved_via}")
 
 # ──────────────────────────────────────────────
 # 2c. INDEX COMPLETENESS

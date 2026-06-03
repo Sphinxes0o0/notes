@@ -129,7 +129,7 @@ created: 2026-05-28
 ## 相关页面
 
 - [[bookmark-linux-inside]] — Linux Inside bookmark 源
-- [[wiki/kernel-subsystems-index]] — 内核子系统总览
+- [[kernel-subsystems-index]] — 内核子系统总览
 - [[notes-kernel]] — Sphinx 内核笔记（源码级深度）
 - [[bookmark-wowotech-linux-kernel]] — 蜗窝科技（ARM64/嵌入式视角）
 

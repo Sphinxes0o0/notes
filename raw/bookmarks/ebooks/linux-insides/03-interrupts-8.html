@@ -1,0 +1,1953 @@
+<!DOCTYPE html><html lang="zh"><head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316; &#xB7; Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xinqiu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-comment/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://gstatic.gitbook.com/images/b1c4c86ca817a71628d2debe73be9a64.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="linux-interrupts-9.html">
+    
+    
+    <link rel="prev" href="linux-interrupts-7.html">
+    
+
+    
+<style>
+    .book .book-summary .book-search,
+    .book .book-summary ul.summary {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    .book-summary {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        overflow-y: auto;
+    }
+    .book-summary > nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+    .gl-wrapper {
+        margin: 0;
+        display: block;
+        padding: 0;
+        position: relative;
+        line-height: 15px;
+        background: #fafafa;
+    }
+    .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        background: -moz-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        top: -24px;
+        width: 100%;
+        height: 24px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+    }
+    .book.color-theme-1 .gl-wrapper {
+        background: #121212;
+    }
+    .book.color-theme-1 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: -moz-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+    }
+    .book.color-theme-2 .gl-wrapper {
+        background: #2e3243;
+    }
+    .book.color-theme-2 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: -moz-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+    }
+    .gl-wrapper .gitbook-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        color: #9DAAB6;
+        margin: 16px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin-left: 32px;
+        padding-top: 8px;
+        padding-left: 16px;
+        border-radius: 3px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        background-color: #E6ECF1;
+        -webkit-box-align: center;
+    }
+    .gl-wrapper .tm-logo {
+        margin: 0;
+        display: block;
+        padding: 0;
+        font-size: 40px;
+    }
+    .gl-wrapper .tm-content {
+        flex: 1;
+        margin: 0;
+        display: block;
+        padding: 0;
+        padding-left: 16px;
+    }
+    .gl-wrapper .tm-content .container {
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+    .gl-wrapper .tm-content .tm-container .tm-text {
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 1.625;
+    }
+</style></head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="&#x8F38;&#x5165;&#x4E26;&#x641C;&#x5C0B;">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://legacy.gitbook.com/book/xinqiu/linux-insides-cn" target="_blank" class="custom-link">Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Booting/">
+            
+                <a href="../Booting/">
+            
+                    
+                    &#x5F15;&#x5BFC;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Booting/linux-bootstrap-1.html">
+            
+                <a href="../Booting/linux-bootstrap-1.html">
+            
+                    
+                    &#x4ECE;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x5185;&#x6838;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Booting/linux-bootstrap-2.html">
+            
+                <a href="../Booting/linux-bootstrap-2.html">
+            
+                    
+                    &#x5728;&#x5185;&#x6838;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x7684;&#x7B2C;&#x4E00;&#x6B65;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Booting/linux-bootstrap-3.html">
+            
+                <a href="../Booting/linux-bootstrap-3.html">
+            
+                    
+                    &#x89C6;&#x9891;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x548C;&#x8F6C;&#x6362;&#x5230;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Booting/linux-bootstrap-4.html">
+            
+                <a href="../Booting/linux-bootstrap-4.html">
+            
+                    
+                    &#x8FC7;&#x6E21;&#x5230; 64 &#x4F4D;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Booting/linux-bootstrap-5.html">
+            
+                <a href="../Booting/linux-bootstrap-5.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x7F29;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Initialization/">
+            
+                <a href="../Initialization/">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Initialization/linux-initialization-1.html">
+            
+                <a href="../Initialization/linux-initialization-1.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x4E4B;&#x540E;&#x7684;&#x9996;&#x8981;&#x6B65;&#x9AA4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Initialization/linux-initialization-2.html">
+            
+                <a href="../Initialization/linux-initialization-2.html">
+            
+                    
+                    &#x65E9;&#x671F;&#x7684;&#x4E2D;&#x65AD;&#x548C;&#x5F02;&#x5E38;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Initialization/linux-initialization-3.html">
+            
+                <a href="../Initialization/linux-initialization-3.html">
+            
+                    
+                    &#x5728;&#x5230;&#x8FBE;&#x5185;&#x6838;&#x5165;&#x53E3;&#x4E4B;&#x524D;&#x6700;&#x540E;&#x7684;&#x51C6;&#x5907;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Initialization/linux-initialization-4.html">
+            
+                <a href="../Initialization/linux-initialization-4.html">
+            
+                    
+                    &#x5185;&#x6838;&#x5165;&#x53E3; - start_kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Initialization/linux-initialization-5.html">
+            
+                <a href="../Initialization/linux-initialization-5.html">
+            
+                    
+                    &#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Initialization/linux-initialization-6.html">
+            
+                <a href="../Initialization/linux-initialization-6.html">
+            
+                    
+                    &#x8FDB;&#x4E00;&#x6B65;&#x521D;&#x59CB;&#x5316;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Initialization/linux-initialization-7.html">
+            
+                <a href="../Initialization/linux-initialization-7.html">
+            
+                    
+                    &#x6700;&#x540E;&#x5BF9;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Initialization/linux-initialization-8.html">
+            
+                <a href="../Initialization/linux-initialization-8.html">
+            
+                    
+                    &#x8C03;&#x5EA6;&#x5668;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Initialization/linux-initialization-9.html">
+            
+                <a href="../Initialization/linux-initialization-9.html">
+            
+                    
+                    RCU &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Initialization/linux-initialization-10.html">
+            
+                <a href="../Initialization/linux-initialization-10.html">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x675F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    &#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="linux-interrupts-1.html">
+            
+                <a href="linux-interrupts-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x548C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="linux-interrupts-2.html">
+            
+                <a href="linux-interrupts-2.html">
+            
+                    
+                    &#x6DF1;&#x5165; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="linux-interrupts-3.html">
+            
+                <a href="linux-interrupts-3.html">
+            
+                    
+                    &#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="linux-interrupts-4.html">
+            
+                <a href="linux-interrupts-4.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="linux-interrupts-5.html">
+            
+                <a href="linux-interrupts-5.html">
+            
+                    
+                    &#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="linux-interrupts-6.html">
+            
+                <a href="linux-interrupts-6.html">
+            
+                    
+                    &#x5904;&#x7406;&#x4E0D;&#x53EF;&#x5C4F;&#x853D;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="linux-interrupts-7.html">
+            
+                <a href="linux-interrupts-7.html">
+            
+                    
+                    &#x6DF1;&#x5165;&#x5916;&#x90E8;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.8" data-path="linux-interrupts-8.html">
+            
+                <a href="linux-interrupts-8.html">
+            
+                    
+                    IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="linux-interrupts-9.html">
+            
+                <a href="linux-interrupts-9.html">
+            
+                    
+                    Softirq, Tasklets and Workqueues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="linux-interrupts-10.html">
+            
+                <a href="linux-interrupts-10.html">
+            
+                    
+                    &#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SysCall/">
+            
+                <a href="../SysCall/">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../SysCall/linux-syscall-1.html">
+            
+                <a href="../SysCall/linux-syscall-1.html">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6982;&#x5FF5;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../SysCall/linux-syscall-2.html">
+            
+                <a href="../SysCall/linux-syscall-2.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../SysCall/linux-syscall-3.html">
+            
+                <a href="../SysCall/linux-syscall-3.html">
+            
+                    
+                    vsyscall and vDSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../SysCall/linux-syscall-4.html">
+            
+                <a href="../SysCall/linux-syscall-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../SysCall/linux-syscall-5.html">
+            
+                <a href="../SysCall/linux-syscall-5.html">
+            
+                    
+                    open &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../SysCall/linux-syscall-6.html">
+            
+                <span>
+            
+                    
+                    Linux &#x8D44;&#x6E90;&#x9650;&#x5236;
+            
+                
+            
+
+            
+        </span></li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Timers/">
+            
+                <a href="../Timers/">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x548C;&#x65F6;&#x949F;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Timers/linux-timers-1.html">
+            
+                <a href="../Timers/linux-timers-1.html">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Timers/linux-timers-2.html">
+            
+                <a href="../Timers/linux-timers-2.html">
+            
+                    
+                    &#x65F6;&#x949F;&#x6E90;&#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Timers/linux-timers-3.html">
+            
+                <a href="../Timers/linux-timers-3.html">
+            
+                    
+                    The tick broadcast framework and dyntick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Timers/linux-timers-4.html">
+            
+                <a href="../Timers/linux-timers-4.html">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x4ECB;&#x7ECD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Timers/linux-timers-5.html">
+            
+                <a href="../Timers/linux-timers-5.html">
+            
+                    
+                    Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Timers/linux-timers-6.html">
+            
+                <a href="../Timers/linux-timers-6.html">
+            
+                    
+                    x86 &#x76F8;&#x5173;&#x7684;&#x65F6;&#x949F;&#x6E90;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Timers/linux-timers-7.html">
+            
+                <a href="../Timers/linux-timers-7.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x4E0E;&#x65F6;&#x949F;&#x76F8;&#x5173;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SyncPrim/">
+            
+                <a href="../SyncPrim/">
+            
+                    
+                    &#x540C;&#x6B65;&#x539F;&#x8BED;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SyncPrim/linux-sync-1.html">
+            
+                <a href="../SyncPrim/linux-sync-1.html">
+            
+                    
+                    &#x81EA;&#x65CB;&#x9501;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SyncPrim/linux-sync-2.html">
+            
+                <a href="../SyncPrim/linux-sync-2.html">
+            
+                    
+                    &#x961F;&#x5217;&#x81EA;&#x65CB;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SyncPrim/linux-sync-3.html">
+            
+                <a href="../SyncPrim/linux-sync-3.html">
+            
+                    
+                    &#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SyncPrim/linux-sync-4.html">
+            
+                <a href="../SyncPrim/linux-sync-4.html">
+            
+                    
+                    &#x4E92;&#x65A5;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SyncPrim/linux-sync-5.html">
+            
+                <a href="../SyncPrim/linux-sync-5.html">
+            
+                    
+                    &#x8BFB;&#x8005;/&#x5199;&#x8005;&#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SyncPrim/linux-sync-6.html">
+            
+                <a href="../SyncPrim/linux-sync-6.html">
+            
+                    
+                    &#x987A;&#x5E8F;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7">
+            
+                <span>
+            
+                    
+                    RCU
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8">
+            
+                <span>
+            
+                    
+                    Lockdep
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MM/">
+            
+                <a href="../MM/">
+            
+                    
+                    &#x5185;&#x5B58;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MM/linux-mm-1.html">
+            
+                <a href="../MM/linux-mm-1.html">
+            
+                    
+                    &#x5185;&#x5B58;&#x5757;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../MM/linux-mm-2.html">
+            
+                <a href="../MM/linux-mm-2.html">
+            
+                    
+                    &#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x548C; ioremap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../MM/linux-mm-3.html">
+            
+                <a href="../MM/linux-mm-3.html">
+            
+                    
+                    kmemcheck
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cgroups/">
+            
+                <a href="../Cgroups/">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Cgroups/linux-cgroups-1.html">
+            
+                <a href="../Cgroups/linux-cgroups-1.html">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10">
+            
+                <span>
+            
+                    
+                    SMP
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Concepts/">
+            
+                <a href="../Concepts/">
+            
+                    
+                    &#x6982;&#x5FF5;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Concepts/linux-cpu-1.html">
+            
+                <a href="../Concepts/linux-cpu-1.html">
+            
+                    
+                    &#x6BCF;&#x4E2A; CPU &#x7684;&#x53D8;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Concepts/linux-cpu-2.html">
+            
+                <a href="../Concepts/linux-cpu-2.html">
+            
+                    
+                    CPU &#x63A9;&#x7801;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Concepts/linux-cpu-3.html">
+            
+                <a href="../Concepts/linux-cpu-3.html">
+            
+                    
+                    initcall &#x673A;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Concepts/linux-cpu-4.html">
+            
+                <a href="../Concepts/linux-cpu-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x7684;&#x901A;&#x77E5;&#x94FE;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../DataStructures/">
+            
+                <a href="../DataStructures/">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../DataStructures/linux-datastructures-1.html">
+            
+                <a href="../DataStructures/linux-datastructures-1.html">
+            
+                    
+                    &#x53CC;&#x5411;&#x94FE;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../DataStructures/linux-datastructures-2.html">
+            
+                <a href="../DataStructures/linux-datastructures-2.html">
+            
+                    
+                    &#x57FA;&#x6570;&#x6811;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../DataStructures/linux-datastructures-3.html">
+            
+                <a href="../DataStructures/linux-datastructures-3.html">
+            
+                    
+                    &#x4F4D;&#x6570;&#x7EC4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Theory/">
+            
+                <a href="../Theory/">
+            
+                    
+                    &#x7406;&#x8BBA;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Theory/linux-theory-1.html">
+            
+                <a href="../Theory/linux-theory-1.html">
+            
+                    
+                    &#x5206;&#x9875;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Theory/linux-theory-2.html">
+            
+                <a href="../Theory/linux-theory-2.html">
+            
+                    
+                    ELF &#x6587;&#x4EF6;&#x683C;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Theory/linux-theory-3.html">
+            
+                <a href="../Theory/linux-theory-3.html">
+            
+                    
+                    &#x5167;&#x8054;&#x6C47;&#x7F16;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4">
+            
+                <span>
+            
+                    
+                    CPUID
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5">
+            
+                <span>
+            
+                    
+                    MSR
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14">
+            
+                <span>
+            
+                    
+                    Initial ram disk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1">
+            
+                <span>
+            
+                    
+                    initrd
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Misc/">
+            
+                <a href="../Misc/">
+            
+                    
+                    &#x6742;&#x9879;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../Misc/linux-misc-1.html">
+            
+                <a href="../Misc/linux-misc-1.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5F00;&#x53D1;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../Misc/linux-misc-2.html">
+            
+                <a href="../Misc/linux-misc-2.html">
+            
+                    
+                    &#x5185;&#x6838;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../Misc/linux-misc-3.html">
+            
+                <a href="../Misc/linux-misc-3.html">
+            
+                    
+                    &#x94FE;&#x63A5;&#x5668;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../Misc/linux-misc-4.html">
+            
+                <a href="../Misc/linux-misc-4.html">
+            
+                    
+                    &#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5">
+            
+                <span>
+            
+                    
+                    &#x4E66;&#x5199;&#x5E76;&#x63D0;&#x4EA4;&#x4F60;&#x7B2C;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x8865;&#x4E01;
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../KernelStructures/">
+            
+                <a href="../KernelStructures/">
+            
+                    
+                    &#x5185;&#x6838;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../KernelStructures/linux-kernelstructure-1.html">
+            
+                <a href="../KernelStructures/linux-kernelstructure-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x63CF;&#x8FF0;&#x7B26;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../LINKS.html">
+            
+                <a href="../LINKS.html">
+            
+                    
+                    &#x6709;&#x5E2E;&#x52A9;&#x7684;&#x94FE;&#x63A5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../CONTRIBUTORS.html">
+            
+                <a href="../CONTRIBUTORS.html">
+            
+                    
+                    &#x8D21;&#x732E;&#x8005;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    
+<div class="gl-wrapper">
+    <a class="gitbook-link" href="https://www.gitbook.com?utm_source=public_site_legacy&amp;utm_medium=referral&amp;utm_campaign=trademark&amp;utm_term=xinqiu&amp;utm_content=powered_by" target="blank">
+        <div class="tm-logo">
+            <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="currentColor" viewBox="0 0 1067 769" xmlns="http://www.w3.org/2000/svg" stroke="none" class="icon-7f6730be--text-3f89f380"><g><path d="M480.026 640.677c17.205 0 31.2 13.997 31.2 31.194s-13.995 31.193-31.2 31.193c-17.197 0-31.193-13.996-31.193-31.193 0-17.197 13.996-31.194 31.193-31.194m489.93-193.226c-17.203 0-31.2-13.998-31.2-31.195 0-17.204 13.997-31.2 31.2-31.2 17.198 0 31.194 13.996 31.194 31.2 0 17.197-13.996 31.195-31.193 31.195m0-127.804c-53.269 0-96.609 43.34-96.609 96.609 0 10.373 1.723 20.702 5.123 30.741L559.328 616.879c-18.132-26.128-47.521-41.617-79.302-41.617-36.821 0-70.391 21.065-86.63 54.003L106.68 478.109c-30.288-15.927-52.965-65.817-50.56-111.223 1.248-23.687 9.438-42.071 21.897-49.17 7.916-4.493 17.436-4.099 27.526 1.188l1.916 1.01c75.96 40.022 324.6 170.981 335.063 175.844 16.157 7.47 25.14 10.5 52.659-2.547l513.958-267.3c7.53-2.844 16.315-10.062 16.315-21.023 0-15.205-15.72-21.199-15.765-21.199-29.218-14.018-74.163-35.054-117.987-55.57C798.033 84.26 691.861 34.547 645.23 10.132c-40.253-21.072-72.655-3.311-78.432.282l-11.227 5.555C345.727 119.743 64.898 258.826 48.911 268.553 20.278 285.973 2.547 320.679.252 363.768c-3.586 68.304 31.261 139.506 81.069 165.634l303.172 156.354c6.83 47.306 47.55 82.725 95.532 82.725 52.78 0 95.808-42.546 96.603-95.14L910.541 492.38c16.93 13.233 37.92 20.486 59.416 20.486 53.268 0 96.61-43.341 96.61-96.61s-43.342-96.61-96.61-96.61" fill-rule="evenodd"/></g></svg>
+        </div>
+        <div class="tm-content">
+            <div class="tm-container">
+                <span class="tm-text">
+                    Powered by <b>GitBook</b>
+                </span>
+            </div>
+        </div>
+    </a>
+</div></div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="interrupts-and-interrupt-handling-part-8">Interrupts and Interrupt Handling. Part 8.</h1>
+<h2 id="non-early-initialization-of-the-irqs">Non-early initialization of the IRQs</h2>
+<p>This is the eighth part of the Interrupts and Interrupt Handling in the Linux kernel <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/index.html" target="_blank">chapter</a> and in the previous <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/interrupts-7.html" target="_blank">part</a> we started to dive into the external hardware <a href="https://en.wikipedia.org/wiki/Interrupt_request_%28PC_architecture%29" target="_blank">interrupts</a>. We looked on the implementation of the <code>early_irq_init</code> function from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/kernel/irq/irqdesc.c" target="_blank">kernel/irq/irqdesc.c</a> source code file and saw the initialization of the <code>irq_desc</code> structure in this function. Remind that <code>irq_desc</code> structure (defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/include/linux/irqdesc.h#L46" target="_blank">include/linux/irqdesc.h</a> is the foundation of interrupt management code in the Linux kernel and represents an interrupt descriptor. In this part we will continue to dive into the initialization stuff which is related to the external hardware interrupts.</p>
+<p>Right after the call of the <code>early_irq_init</code> function in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/init/main.c" target="_blank">init/main.c</a> we can see the call of the <code>init_IRQ</code> function. This function is architecture-specific and defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/kernel/irqinit.c" target="_blank">arch/x86/kernel/irqinit.c</a>. The <code>init_IRQ</code> function makes initialization of the <code>vector_irq</code> <a href="http://0xax.gitbooks.io/linux-insides/content/Concepts/per-cpu.html" target="_blank">percpu</a> variable that defined in the same <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/kernel/irqinit.c" target="_blank">arch/x86/kernel/irqinit.c</a> source code file:</p>
+<pre><code class="lang-C">...
+DEFINE_PER_CPU(<span class="hljs-keyword">vector_irq_t</span>, vector_irq) = {
+         [<span class="hljs-number">0</span> ... NR_VECTORS - <span class="hljs-number">1</span>] = <span class="hljs-number">-1</span>,
+};
+...
+</code></pre>
+<p>and represents <code>percpu</code> array of the interrupt vector numbers. The <code>vector_irq_t</code> defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/asm/hw_irq.h" target="_blank">arch/x86/include/asm/hw_irq.h</a> and expands to the:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> <span class="hljs-keyword">vector_irq_t</span>[NR_VECTORS];
+</code></pre>
+<p>where <code>NR_VECTORS</code> is count of the vector number and as you can remember from the first <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/interrupts-1.html" target="_blank">part</a> of this chapter it is <code>256</code> for the <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a>:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NR_VECTORS                       256</span>
+</code></pre>
+<p>So, in the start of the <code>init_IRQ</code> function we fill the <code>vector_irq</code> <a href="http://0xax.gitbooks.io/linux-insides/content/Concepts/per-cpu.html" target="_blank">percpu</a> array with the vector number of the <code>legacy</code> interrupts:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">init_IRQ</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">int</span> i;
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; nr_legacy_irqs(); i++)
+        per_cpu(vector_irq, <span class="hljs-number">0</span>)[IRQ0_VECTOR + i] = i;
+...
+...
+...
+}
+</code></pre>
+<p>This <code>vector_irq</code> will be used during the first steps of an external hardware interrupt handling in the <code>do_IRQ</code> function from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/irq.c" target="_blank">arch/x86/kernel/irq.c</a>:</p>
+<pre><code class="lang-C">__visible <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> __<span class="hljs-function">irq_entry <span class="hljs-title">do_IRQ</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pt_regs *regs)</span>
+</span>{
+    ...
+    ...
+    ...
+    irq = __this_cpu_read(vector_irq[<span class="hljs-built_in">vector</span>]);
+
+    <span class="hljs-keyword">if</span> (!handle_irq(irq, regs)) {
+        ...
+        ...
+        ...
+    }
+
+    exiting_irq();
+    ...
+    ...
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>Why is <code>legacy</code> here? Actually all interrupts are handled by the modern <a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#I.2FO_APICs" target="_blank">IO-APIC</a> controller. But these interrupts (from <code>0x30</code> to <code>0x3f</code>) by legacy interrupt-controllers like <a href="https://en.wikipedia.org/wiki/Programmable_Interrupt_Controller" target="_blank">Programmable Interrupt Controller</a>. If these interrupts are handled by the <code>I/O APIC</code> then this vector space will be freed and re-used. Let&apos;s look on this code closer. First of all the <code>nr_legacy_irqs</code> defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/asm/i8259.h" target="_blank">arch/x86/include/asm/i8259.h</a> and just returns the <code>nr_legacy_irqs</code> field from the <code>legacy_pic</code> structure:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">nr_legacy_irqs</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+        <span class="hljs-keyword">return</span> legacy_pic-&gt;nr_legacy_irqs;
+}
+</code></pre>
+<p>This structure defined in the same header file and represents non-modern programmable interrupts controller:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> legacy_pic {
+        <span class="hljs-keyword">int</span> nr_legacy_irqs;
+        <span class="hljs-keyword">struct</span> irq_chip *chip;
+        <span class="hljs-keyword">void</span> (*mask)(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> irq);
+        <span class="hljs-keyword">void</span> (*unmask)(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> irq);
+        <span class="hljs-keyword">void</span> (*mask_all)(<span class="hljs-keyword">void</span>);
+        <span class="hljs-keyword">void</span> (*restore_mask)(<span class="hljs-keyword">void</span>);
+        <span class="hljs-keyword">void</span> (*init)(<span class="hljs-keyword">int</span> auto_eoi);
+        <span class="hljs-keyword">int</span> (*irq_pending)(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> irq);
+        <span class="hljs-keyword">void</span> (*make_irq)(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> irq);
+};
+</code></pre>
+<p>Actual default maximum number of the legacy interrupts represented by the <code>NR_IRQ_LEGACY</code> macro from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/asm/irq_vectors.h" target="_blank">arch/x86/include/asm/irq_vectors.h</a>:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NR_IRQS_LEGACY                    16</span>
+</code></pre>
+<p>In the loop we are accessing the <code>vecto_irq</code> per-cpu array with the <code>per_cpu</code> macro by the <code>IRQ0_VECTOR + i</code> index and write the legacy vector number there. The <code>IRQ0_VECTOR</code> macro defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/asm/irq_vectors.h" target="_blank">arch/x86/include/asm/irq_vectors.h</a> header file and expands to the <code>0x30</code>:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FIRST_EXTERNAL_VECTOR           0x20</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IRQ0_VECTOR                     ((FIRST_EXTERNAL_VECTOR + 16) &amp; ~15)</span>
+</code></pre>
+<p>Why is <code>0x30</code> here? You can remember from the first <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/interrupts-1.html" target="_blank">part</a> of this chapter that first 32 vector numbers from <code>0</code> to <code>31</code> are reserved by the processor and used for the processing of architecture-defined exceptions and interrupts. Vector numbers from <code>0x30</code> to <code>0x3f</code> are reserved for the <a href="https://en.wikipedia.org/wiki/Industry_Standard_Architecture" target="_blank">ISA</a>. So, it means that we fill the <code>vector_irq</code> from the <code>IRQ0_VECTOR</code> which is equal to the <code>32</code> to the <code>IRQ0_VECTOR + 16</code> (before the <code>0x30</code>).</p>
+<p>In the end of the <code>init_IRQ</code> function we can see the call of the following function:</p>
+<pre><code class="lang-C">x86_init.irqs.intr_init();
+</code></pre>
+<p>from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/x86_init.c" target="_blank">arch/x86/kernel/x86_init.c</a> source code file. If you have read <a href="http://0xax.gitbooks.io/linux-insides/content/Initialization/index.html" target="_blank">chapter</a> about the Linux kernel initialization process, you can remember the <code>x86_init</code> structure. This structure contains a couple of files which are points to the function related to the platform setup (<code>x86_64</code> in our case), for example <code>resources</code> - related with the memory resources, <code>mpparse</code> - related with the parsing of the <a href="https://en.wikipedia.org/wiki/MultiProcessor_Specification" target="_blank">MultiProcessor Configuration Table</a> table and etc.). As we can see the <code>x86_init</code> also contains the <code>irqs</code> field which contains three following fields:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> x86_init_ops x86_init __initdata 
+{
+    ...
+    ...
+    ...
+    .irqs = {
+                .pre_vector_init        = init_ISA_irqs,
+                .intr_init              = native_init_IRQ,
+                .trap_init              = x86_init_noop,
+    },
+    ...
+    ...
+    ...
+}
+</code></pre>
+<p>Now, we are interesting in the <code>native_init_IRQ</code>. As we can note, the name of the <code>native_init_IRQ</code> function contains the <code>native_</code> prefix which means that this function is architecture-specific. It defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/kernel/irqinit.c" target="_blank">arch/x86/kernel/irqinit.c</a> and executes general initialization of the <a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#Integrated_local_APICs" target="_blank">Local APIC</a> and initialization of the <a href="https://en.wikipedia.org/wiki/Industry_Standard_Architecture" target="_blank">ISA</a> irqs. Let&apos;s look on the implementation of the <code>native_init_IRQ</code> function and will try to understand what occurs there. The <code>native_init_IRQ</code> function starts from the execution of the following function:</p>
+<pre><code class="lang-C">x86_init.irqs.pre_vector_init();
+</code></pre>
+<p>As we can see above, the <code>pre_vector_init</code> points to the <code>init_ISA_irqs</code> function that defined in the same <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/kernel/irqinit.c" target="_blank">source code</a> file and as we can understand from the function&apos;s name, it makes initialization of the <code>ISA</code> related interrupts. The <code>init_ISA_irqs</code> function starts from the definition of the <code>chip</code> variable which has a <code>irq_chip</code> type:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">init_ISA_irqs</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> irq_chip *chip = legacy_pic-&gt;chip;
+    ...
+    ...
+    ...
+</code></pre>
+<p>The <code>irq_chip</code> structure defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/include/linux/irq.h" target="_blank">include/linux/irq.h</a> header file and represents hardware interrupt chip descriptor. It contains:</p>
+<ul>
+<li><code>name</code> - name of a device. Used in the <code>/proc/interrupts</code>:</li>
+</ul>
+<pre><code class="lang-C">$ cat /proc/interrupts
+           CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
+  <span class="hljs-number">0</span>:         <span class="hljs-number">16</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>   IO-APIC   <span class="hljs-number">2</span>-edge      timer
+  <span class="hljs-number">1</span>:          <span class="hljs-number">2</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>   IO-APIC   <span class="hljs-number">1</span>-edge      i8042
+  <span class="hljs-number">8</span>:          <span class="hljs-number">1</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>          <span class="hljs-number">0</span>   IO-APIC   <span class="hljs-number">8</span>-edge      rtc0
+</code></pre>
+<p>look on the last column;</p>
+<ul>
+<li><code>(*irq_mask)(struct irq_data *data)</code>  - mask an interrupt source;</li>
+<li><code>(*irq_ack)(struct irq_data *data)</code> - start of a new interrupt;</li>
+<li><code>(*irq_startup)(struct irq_data *data)</code> - start up the interrupt;</li>
+<li><code>(*irq_shutdown)(struct irq_data *data)</code> - shutdown the interrupt</li>
+<li>and etc.</li>
+</ul>
+<p>fields. Note that the <code>irq_data</code> structure represents set of the per irq chip data passed down to chip functions. It contains <code>mask</code> - precomputed bitmask for accessing the chip registers, <code>irq</code> - interrupt number, <code>hwirq</code> - hardware interrupt number, local to the interrupt domain chip low level interrupt hardware access and etc.</p>
+<p>After this depends on the <code>CONFIG_X86_64</code> and <code>CONFIG_X86_LOCAL_APIC</code> kernel configuration option call the <code>init_bsp_APIC</code> function from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/apic/apic.c" target="_blank">arch/x86/kernel/apic/apic.c</a>:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> defined(CONFIG_X86_64) || defined(CONFIG_X86_LOCAL_APIC)</span>
+    init_bsp_APIC();
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>This function makes initialization of the <a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller" target="_blank">APIC</a> of <code>bootstrap processor</code> (or processor which starts first). It starts from the check that we found <a href="https://en.wikipedia.org/wiki/Symmetric_multiprocessing" target="_blank">SMP</a> config (read more about it in the sixth <a href="http://0xax.gitbooks.io/linux-insides/content/Initialization/linux-initialization-6.html" target="_blank">part</a> of the Linux kernel initialization process chapter) and the processor has <code>APIC</code>:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (smp_found_config || !cpu_has_apic)
+    <span class="hljs-keyword">return</span>;
+</code></pre>
+<p>In other way we return from this function. In the next step we call the <code>clear_local_APIC</code> function from the same source code file that shutdowns the local <code>APIC</code> (more about it will be in the chapter about the <code>Advanced Programmable Interrupt Controller</code>) and enable <code>APIC</code> of the first processor by the setting <code>unsigned int value</code> to the <code>APIC_SPIV_APIC_ENABLED</code>: </p>
+<pre><code class="lang-C">value = apic_read(APIC_SPIV);
+value &amp;= ~APIC_VECTOR_MASK;
+value |= APIC_SPIV_APIC_ENABLED;
+</code></pre>
+<p>and writing it with the help of the <code>apic_write</code> function:</p>
+<pre><code class="lang-C">apic_write(APIC_SPIV, value);
+</code></pre>
+<p>After we have enabled <code>APIC</code> for the bootstrap processor, we return to the <code>init_ISA_irqs</code> function and in the next step we initialize legacy <code>Programmable Interrupt Controller</code> and set the legacy chip and handler for the each legacy irq:</p>
+<pre><code class="lang-C">legacy_pic-&gt;init(<span class="hljs-number">0</span>);
+
+<span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; nr_legacy_irqs(); i++)
+    irq_set_chip_and_handler(i, chip, handle_level_irq);
+</code></pre>
+<p>Where can we find <code>init</code> function? The <code>legacy_pic</code> defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/i8259.c" target="_blank">arch/x86/kernel/i8259.c</a> and it is:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> legacy_pic *legacy_pic = &amp;default_legacy_pic;
+</code></pre>
+<p>Where the <code>default_legacy_pic</code> is:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> legacy_pic default_legacy_pic = {
+    ...
+    ...
+    ...
+    .init = init_8259A,
+    ...
+    ...
+    ...
+}
+</code></pre>
+<p>The <code>init_8259A</code> function defined in the same source code file and executes initialization of the <a href="https://en.wikipedia.org/wiki/Intel_8259" target="_blank">Intel 8259</a> <code>`Programmable Interrupt Controller</code> (more about it will be in the separate chapter about <code>Programmable Interrupt Controllers</code> and <code>APIC</code>).</p>
+<p>Now we can return to the <code>native_init_IRQ</code> function, after the <code>init_ISA_irqs</code> function finished its work. The next step is the call of the <code>apic_intr_init</code> function that allocates special interrupt gates which are used by the <a href="https://en.wikipedia.org/wiki/Symmetric_multiprocessing" target="_blank">SMP</a> architecture for the <a href="https://en.wikipedia.org/wiki/Inter-processor_interrupt" target="_blank">Inter-processor interrupt</a>. The <code>alloc_intr_gate</code> macro from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/asm/desc.h" target="_blank">arch/x86/include/asm/desc.h</a> used for the interrupt descriptor allocation:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> alloc_intr_gate(n, addr)                        \
+do {                                                    \
+        alloc_system_vector(n);                         \
+        set_intr_gate(n, addr);                         \
+} while (0)</span>
+</code></pre>
+<p>As we can see, first of all it expands to the call of the <code>alloc_system_vector</code> function that checks the given vector number in the <code>used_vectors</code> bitmap (read previous <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/interrupts-7.html" target="_blank">part</a> about it) and if it is not set in the <code>used_vectors</code> bitmap we set it. After this we test that the <code>first_system_vector</code> is greater than given interrupt vector number and if it is greater we assign it:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (!test_bit(<span class="hljs-built_in">vector</span>, used_vectors)) {
+    set_bit(<span class="hljs-built_in">vector</span>, used_vectors);
+    <span class="hljs-keyword">if</span> (first_system_vector &gt; <span class="hljs-built_in">vector</span>)
+        first_system_vector = <span class="hljs-built_in">vector</span>;
+} <span class="hljs-keyword">else</span> {
+    BUG();
+}
+</code></pre>
+<p>We already saw the <code>set_bit</code> macro, now let&apos;s look on the <code>test_bit</code> and the <code>first_system_vector</code>. The first <code>test_bit</code> macro defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/bitops.h" target="_blank">arch/x86/include/asm/bitops.h</a> and looks like this:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> test_bit(nr, addr)                      \
+        (__builtin_constant_p((nr))             \
+         ? constant_test_bit((nr), (addr))      \
+         : variable_test_bit((nr), (addr)))</span>
+</code></pre>
+<p>We can see the <a href="https://en.wikipedia.org/wiki/Ternary_operation" target="_blank">ternary operator</a> here make a test with the <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">gcc</a> built-in function <code>__builtin_constant_p</code> tests that given vector number (<code>nr</code>) is known at compile time. If you&apos;re feeling misunderstanding of the <code>__builtin_constant_p</code>, we can make simple test:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PREDEFINED_VAL 1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;__builtin_constant_p(i) is %d\n&quot;</span>, __builtin_constant_p(i));
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;__builtin_constant_p(PREDEFINED_VAL) is %d\n&quot;</span>, __builtin_constant_p(PREDEFINED_VAL));
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;__builtin_constant_p(100) is %d\n&quot;</span>, __builtin_constant_p(<span class="hljs-number">100</span>));
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>and look on the result:</p>
+<pre><code>$ gcc test.c -o test
+$ ./test
+__builtin_constant_p(i) is 0
+__builtin_constant_p(PREDEFINED_VAL) is 1
+__builtin_constant_p(100) is 1
+</code></pre><p>Now I think it must be clear for you. Let&apos;s get back to the <code>test_bit</code> macro. If the <code>__builtin_constant_p</code> will return non-zero, we call <code>constant_test_bit</code> function:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">constant_test_bit</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nr, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *addr)</span>
+</span>{
+    <span class="hljs-keyword">const</span> u32 *p = (<span class="hljs-keyword">const</span> u32 *)addr;
+
+    <span class="hljs-keyword">return</span> ((<span class="hljs-number">1U</span>L &lt;&lt; (nr &amp; <span class="hljs-number">31</span>)) &amp; (p[nr &gt;&gt; <span class="hljs-number">5</span>])) != <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>and the <code>variable_test_bit</code> in other way:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">variable_test_bit</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nr, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *addr)</span>
+</span>{
+        u8 v;
+        <span class="hljs-keyword">const</span> u32 *p = (<span class="hljs-keyword">const</span> u32 *)addr;
+
+        <span class="hljs-keyword">asm</span>(<span class="hljs-string">&quot;btl %2,%1; setc %0&quot;</span> : <span class="hljs-string">&quot;=qm&quot;</span> (v) : <span class="hljs-string">&quot;m&quot;</span> (*p), <span class="hljs-string">&quot;Ir&quot;</span> (nr));
+        <span class="hljs-keyword">return</span> v;
+}
+</code></pre>
+<p>What&apos;s the difference between two these functions and why do we need in two different functions for the same purpose? As you already can guess main purpose is optimization. If we will write simple example with these functions:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CONST 25</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> nr = <span class="hljs-number">24</span>;
+    variable_test_bit(nr, (<span class="hljs-keyword">int</span>*)<span class="hljs-number">0x10000000</span>);
+    constant_test_bit(CONST, (<span class="hljs-keyword">int</span>*)<span class="hljs-number">0x10000000</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>and will look on the assembly output of our example we will see following assembly code:</p>
+<pre><code class="lang-assembly">pushq    %rbp
+movq    %rsp, %rbp
+
+movl    $268435456, %esi
+movl    $25, %edi
+call    constant_test_bit
+</code></pre>
+<p>for the <code>constant_test_bit</code>, and:</p>
+<pre><code class="lang-assembly">pushq    %rbp
+movq    %rsp, %rbp
+
+subq    $16, %rsp
+movl    $24, -4(%rbp)
+movl    -4(%rbp), %eax
+movl    $268435456, %esi
+movl    %eax, %edi
+call    variable_test_bit
+</code></pre>
+<p>for the <code>variable_test_bit</code>. These two code listings starts with the same part, first of all we save base of the current stack frame in the <code>%rbp</code> register. But after this code for both examples is different. In the first example we put <code>$268435456</code> (here the <code>$268435456</code> is our second parameter - <code>0x10000000</code>) to the <code>esi</code> and <code>$25</code> (our first parameter) to the <code>edi</code> register and call <code>constant_test_bit</code>. We put function parameters to the <code>esi</code> and <code>edi</code> registers because as we are learning Linux kernel for the <code>x86_64</code> architecture we use <code>System V AMD64 ABI</code> <a href="https://en.wikipedia.org/wiki/X86_calling_conventions" target="_blank">calling convention</a>. All is pretty simple. When we are using predefined constant, the compiler can just substitute its value. Now let&apos;s look on the second part. As you can see here, the compiler can not substitute value from the <code>nr</code> variable. In this case compiler must calculate its offset on the program&apos;s <a href="https://en.wikipedia.org/wiki/Call_stack" target="_blank">stack frame</a>. We subtract <code>16</code> from the <code>rsp</code> register to allocate stack for the local variables data and put the <code>$24</code> (value of the <code>nr</code> variable) to the <code>rbp</code> with offset <code>-4</code>. Our stack frame will be like this:</p>
+<pre><code>         &lt;- stack grows 
+
+              %[rbp]
+                 |
++----------+ +---------+ +---------+ +--------+
+|          | |         | | return  | |        |
+|    nr    |-|         |-|         |-|  argc  |
+|          | |         | | address | |        |
++----------+ +---------+ +---------+ +--------+
+                 |
+              %[rsp]
+</code></pre><p>After this we put this value to the <code>eax</code>, so <code>eax</code> register now contains value of the <code>nr</code>. In the end we do the same that in the first example, we put the <code>$268435456</code> (the first parameter of the <code>variable_test_bit</code> function) and the value of the <code>eax</code> (value of <code>nr</code>) to the <code>edi</code> register (the second parameter of the <code>variable_test_bit function</code>). </p>
+<p>The next step after the <code>apic_intr_init</code> function will finish its work is the setting interrupt gates from the <code>FIRST_EXTERNAL_VECTOR</code> or <code>0x20</code> to the <code>0x256</code>:</p>
+<pre><code class="lang-C">i = FIRST_EXTERNAL_VECTOR;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> CONFIG_X86_LOCAL_APIC</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> first_system_vector NR_VECTORS</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+for_each_clear_bit_from(i, used_vectors, first_system_vector) {
+    set_intr_gate(i, irq_entries_start + <span class="hljs-number">8</span> * (i - FIRST_EXTERNAL_VECTOR));
+}
+</code></pre>
+<p>But as we are using the <code>for_each_clear_bit_from</code> helper, we set only non-initialized interrupt gates. After this we use the same <code>for_each_clear_bit_from</code> helper to fill the non-filled interrupt gates in the interrupt table with the <code>spurious_interrupt</code>:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_X86_LOCAL_APIC</span>
+for_each_clear_bit_from(i, used_vectors, NR_VECTORS)
+    set_intr_gate(i, spurious_interrupt);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>Where the <code>spurious_interrupt</code> function represent interrupt handler for the <code>spurious</code> interrupt. Here the <code>used_vectors</code> is the <code>unsigned long</code> that contains already initialized interrupt gates. We already filled first <code>32</code> interrupt vectors in the <code>trap_init</code> function from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/setup.c" target="_blank">arch/x86/kernel/setup.c</a> source code file:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; FIRST_EXTERNAL_VECTOR; i++)
+    set_bit(i, used_vectors);
+</code></pre>
+<p>You can remember how we did it in the sixth <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/interrupts-6.html" target="_blank">part</a> of this chapter.</p>
+<p>In the end of the <code>native_init_IRQ</code> function we can see the following check:</p>
+<pre><code class="lang-C">if (!acpi_ioapic &amp;&amp; !of_ioapic &amp;&amp; nr_legacy_irqs())
+    setup_irq(2, &amp;irq2);
+</code></pre>
+<p>First of all let&apos;s deal with the condition. The <code>acpi_ioapic</code> variable represents existence of <a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#I.2FO_APICs" target="_blank">I/O APIC</a>. It defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/acpi/boot.c" target="_blank">arch/x86/kernel/acpi/boot.c</a>. This variable set in the <code>acpi_set_irq_model_ioapic</code> function that called during the processing <code>Multiple APIC Description Table</code>. This occurs during initialization of the architecture-specific stuff in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/setup.c" target="_blank">arch/x86/kernel/setup.c</a> (more about it we will know in the other chapter about <a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller" target="_blank">APIC</a>). Note that the value of the <code>acpi_ioapic</code> variable depends on the <code>CONFIG_ACPI</code> and <code>CONFIG_X86_LOCAL_APIC</code> Linux kernel configuration options. If these options did not set, this variable will be just zero:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> acpi_ioapic 0</span>
+</code></pre>
+<p>The second condition - <code>!of_ioapic &amp;&amp; nr_legacy_irqs()</code> checks that we do not use <a href="https://en.wikipedia.org/wiki/Open_Firmware" target="_blank">Open Firmware</a> <code>I/O APIC</code> and legacy interrupt controller. We already know about the <code>nr_legacy_irqs</code>. The second is <code>of_ioapic</code> variable defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/devicetree.c" target="_blank">arch/x86/kernel/devicetree.c</a> and initialized in the <code>dtb_ioapic_setup</code> function that build information about <code>APICs</code> in the <a href="https://en.wikipedia.org/wiki/Device_tree" target="_blank">devicetree</a>. Note that <code>of_ioapic</code> variable depends on the <code>CONFIG_OF</code> Linux kernel configuration option. If this option is not set, the value of the <code>of_ioapic</code> will be zero too:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_OF</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-keyword">int</span> of_ioapic;
+...
+...
+...
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> of_ioapic 0</span>
+...
+...
+...
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</code></pre>
+<p>If the condition will return non-zero value we call the:</p>
+<pre><code class="lang-C">setup_irq(<span class="hljs-number">2</span>, &amp;irq2);
+</code></pre>
+<p>function. First of all about the <code>irq2</code>. The <code>irq2</code> is the <code>irqaction</code> structure that defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/kernel/irqinit.c" target="_blank">arch/x86/kernel/irqinit.c</a> source code file and represents <code>IRQ 2</code> line that is used to query devices connected cascade:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> irqaction irq2 = {
+    .handler = no_action,
+    .name = <span class="hljs-string">&quot;cascade&quot;</span>,
+    .flags = IRQF_NO_THREAD,
+};
+</code></pre>
+<p>Some time ago interrupt controller consisted of two chips and one was connected to second. The second chip that was connected to the first chip via this <code>IRQ 2</code> line. This chip serviced lines from <code>8</code> to <code>15</code> and after this lines of the first chip. So, for example <a href="https://en.wikipedia.org/wiki/Intel_8259" target="_blank">Intel 8259A</a> has following lines:</p>
+<ul>
+<li><code>IRQ 0</code>  - system time;</li>
+<li><code>IRQ 1</code>  - keyboard;</li>
+<li><code>IRQ 2</code>  - used for devices which are cascade connected;</li>
+<li><code>IRQ 8</code>  - <a href="https://en.wikipedia.org/wiki/Real-time_clock" target="_blank">RTC</a>;</li>
+<li><code>IRQ 9</code>  - reserved;</li>
+<li><code>IRQ 10</code> - reserved;</li>
+<li><code>IRQ 11</code> - reserved;</li>
+<li><code>IRQ 12</code> - <code>ps/2</code> mouse;</li>
+<li><code>IRQ 13</code> - coprocessor;</li>
+<li><code>IRQ 14</code> - hard drive controller;</li>
+<li><code>IRQ 1</code>  - reserved;</li>
+<li><code>IRQ 3</code>  - <code>COM2</code> and <code>COM4</code>;</li>
+<li><code>IRQ 4</code>  - <code>COM1</code> and <code>COM3</code>;</li>
+<li><code>IRQ 5</code>  - <code>LPT2</code>;</li>
+<li><code>IRQ 6</code>  - drive controller;</li>
+<li><code>IRQ 7</code>  - <code>LPT1</code>.</li>
+</ul>
+<p>The <code>setup_irq</code> function defined in the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/kernel/irq/manage.c" target="_blank">kernel/irq/manage.c</a> and takes two parameters:</p>
+<ul>
+<li>vector number of an interrupt;</li>
+<li><code>irqaction</code> structure related with an interrupt.</li>
+</ul>
+<p>This function initializes interrupt descriptor from the given vector number at the beginning:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> irq_desc *desc = irq_to_desc(irq);
+</code></pre>
+<p>And call the <code>__setup_irq</code> function that setups given interrupt: </p>
+<pre><code class="lang-C">chip_bus_lock(desc);
+retval = __setup_irq(irq, desc, act);
+chip_bus_sync_unlock(desc);
+<span class="hljs-keyword">return</span> retval;
+</code></pre>
+<p>Note that the interrupt descriptor is locked during <code>__setup_irq</code> function will work. The <code>__setup_irq</code> function makes many different things: It creates a handler thread when a thread function is supplied and the interrupt does not nest into another interrupt thread, sets the flags of the chip, fills the <code>irqaction</code> structure and many many more.</p>
+<p>All of the above it creates <code>/prov/vector_number</code> directory and fills it, but if you are using modern computer all values will be zero there:</p>
+<pre><code>$ cat /proc/irq/2/node
+0
+
+$cat /proc/irq/2/affinity_hint 
+00
+
+cat /proc/irq/2/spurious 
+count 0
+unhandled 0
+last_unhandled 0 ms
+</code></pre><p>because probably <code>APIC</code> handles interrupts on the our machine.</p>
+<p>That&apos;s all.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>It is the end of the eighth part of the <a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/index.html" target="_blank">Interrupts and Interrupt Handling</a> chapter and we continued to dive into external hardware interrupts in this part. In the previous part we started to do it and saw early initialization of the <code>IRQs</code>. In this part we already saw non-early interrupts initialization in the <code>init_IRQ</code> function. We saw initialization of the <code>vector_irq</code> per-cpu array which is store vector numbers of the interrupts and will be used during interrupt handling and initialization of other stuff which is related to the external hardware interrupts.</p>
+<p>In the next part we will continue to learn interrupts handling related stuff and will see initialization of the <code>softirqs</code>.</p>
+<p>If you have any questions or suggestions write me a comment or ping me at <a href="https://twitter.com/0xAX" target="_blank">twitter</a>.</p>
+<p><strong>Please note that English is not my first language, And I am really sorry for any inconvenience. If you find any mistakes please send me PR to <a href="https://github.com/0xAX/linux-insides" target="_blank">linux-insides</a>.</strong></p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Interrupt_request_%28PC_architecture%29" target="_blank">IRQ</a></li>
+<li><a href="http://0xax.gitbooks.io/linux-insides/content/Concepts/per-cpu.html" target="_blank">percpu</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Intel_8259" target="_blank">Intel 8259</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Programmable_Interrupt_Controller" target="_blank">Programmable Interrupt Controller</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Industry_Standard_Architecture" target="_blank">ISA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MultiProcessor_Specification" target="_blank">MultiProcessor Configuration Table</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#Integrated_local_APICs" target="_blank">Local APIC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#I.2FO_APICs" target="_blank">I/O APIC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Symmetric_multiprocessing" target="_blank">SMP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Inter-processor_interrupt" target="_blank">Inter-processor interrupt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ternary_operation" target="_blank">ternary operator</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">gcc</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X86_calling_conventions" target="_blank">calling convention</a></li>
+<li><a href="http://x86-64.org/documentation/abi.pdf" target="_blank">PDF. System V Application Binary Interface AMD64</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Call_stack" target="_blank">Call stack</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Open_Firmware" target="_blank">Open Firmware</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Device_tree" target="_blank">devicetree</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Real-time_clock" target="_blank">RTC</a></li>
+<li><a href="http://0xax.gitbooks.io/linux-insides/content/interrupts/interrupts-7.html" target="_blank">Previous part</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class="search-results-count"></span> results matching &quot;<span class="search-query"></span>&quot;</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching &quot;<span class="search-query"></span>&quot;</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux-interrupts-7.html" class="navigation navigation-prev " aria-label="Previous page: &#x6DF1;&#x5165;&#x5916;&#x90E8;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="linux-interrupts-9.html" class="navigation navigation-next " aria-label="Next page: Softirq, Tasklets and Workqueues">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"IRQs的非早期初始化","level":"1.4.8","depth":2,"next":{"title":"Softirq, Tasklets and Workqueues","level":"1.4.9","depth":2,"path":"Interrupts/linux-interrupts-9.md","ref":"Interrupts/linux-interrupts-9.md","articles":[]},"previous":{"title":"深入外部硬件中断","level":"1.4.7","depth":2,"path":"Interrupts/linux-interrupts-7.md","ref":"Interrupts/linux-interrupts-7.md","articles":[]},"dir":"ltr"},"config":{"plugins":["comment"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"comment":{"highlightCommented":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"MintCN/linux-insides-zh","theme":"default","author":"xinqiu","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux ­Insides­中文","language":"zh","links":{"sidebar":{"Linux ­Insides­中文":"https://legacy.gitbook.com/book/xinqiu/linux-insides-cn"},"gitbook":true},"gitbook":"*","description":"linux内核揭密    Translated By MintCN"},"file":{"path":"Interrupts/linux-interrupts-8.md","mtime":"2020-03-17T07:53:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T07:56:09.393Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-comment/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+
+</body></html>

@@ -1,0 +1,11 @@
+# 内核加载全流程
+
+一般认为start_kernel是整个内核代码开始的地方。但你有没有好奇过在这个之前都发生了什么。
+
+就好像应用程序main函数在执行之前，加载器会做准备工作一样。在内核真正运行前也要有很多准备工作。这里我们就详细探索一下内核加载的全流程。
+
+首先我们用bochs探索[bootloader如何加载bzImage](/kernel-exploring/00_index-2/02_how_bzimage_loaded.md)。
+
+然后我们看看[内核压缩与解压](/kernel-exploring/00_index-2/04_compress_decompress_kernel.md)
+
+最后记录一些学习过程中的[保护模式内核代码赏析](/kernel-exploring/00_index-2/03_analysis_protected_kernel.md)

@@ -1,0 +1,1854 @@
+<!DOCTYPE html><html lang="zh"><head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB; &#xB7; Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xinqiu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-comment/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://gstatic.gitbook.com/images/b1c4c86ca817a71628d2debe73be9a64.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="linux-timers-6.html">
+    
+    
+    <link rel="prev" href="linux-timers-4.html">
+    
+
+    
+<style>
+    .book .book-summary .book-search,
+    .book .book-summary ul.summary {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    .book-summary {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        overflow-y: auto;
+    }
+    .book-summary > nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+    .gl-wrapper {
+        margin: 0;
+        display: block;
+        padding: 0;
+        position: relative;
+        line-height: 15px;
+        background: #fafafa;
+    }
+    .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        background: -moz-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        top: -24px;
+        width: 100%;
+        height: 24px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+    }
+    .book.color-theme-1 .gl-wrapper {
+        background: #121212;
+    }
+    .book.color-theme-1 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: -moz-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+    }
+    .book.color-theme-2 .gl-wrapper {
+        background: #2e3243;
+    }
+    .book.color-theme-2 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: -moz-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+    }
+    .gl-wrapper .gitbook-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        color: #9DAAB6;
+        margin: 16px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin-left: 32px;
+        padding-top: 8px;
+        padding-left: 16px;
+        border-radius: 3px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        background-color: #E6ECF1;
+        -webkit-box-align: center;
+    }
+    .gl-wrapper .tm-logo {
+        margin: 0;
+        display: block;
+        padding: 0;
+        font-size: 40px;
+    }
+    .gl-wrapper .tm-content {
+        flex: 1;
+        margin: 0;
+        display: block;
+        padding: 0;
+        padding-left: 16px;
+    }
+    .gl-wrapper .tm-content .container {
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+    .gl-wrapper .tm-content .tm-container .tm-text {
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 1.625;
+    }
+</style></head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="&#x8F38;&#x5165;&#x4E26;&#x641C;&#x5C0B;">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://legacy.gitbook.com/book/xinqiu/linux-insides-cn" target="_blank" class="custom-link">Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Booting/">
+            
+                <a href="../Booting/">
+            
+                    
+                    &#x5F15;&#x5BFC;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Booting/linux-bootstrap-1.html">
+            
+                <a href="../Booting/linux-bootstrap-1.html">
+            
+                    
+                    &#x4ECE;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x5185;&#x6838;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Booting/linux-bootstrap-2.html">
+            
+                <a href="../Booting/linux-bootstrap-2.html">
+            
+                    
+                    &#x5728;&#x5185;&#x6838;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x7684;&#x7B2C;&#x4E00;&#x6B65;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Booting/linux-bootstrap-3.html">
+            
+                <a href="../Booting/linux-bootstrap-3.html">
+            
+                    
+                    &#x89C6;&#x9891;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x548C;&#x8F6C;&#x6362;&#x5230;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Booting/linux-bootstrap-4.html">
+            
+                <a href="../Booting/linux-bootstrap-4.html">
+            
+                    
+                    &#x8FC7;&#x6E21;&#x5230; 64 &#x4F4D;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Booting/linux-bootstrap-5.html">
+            
+                <a href="../Booting/linux-bootstrap-5.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x7F29;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Initialization/">
+            
+                <a href="../Initialization/">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Initialization/linux-initialization-1.html">
+            
+                <a href="../Initialization/linux-initialization-1.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x4E4B;&#x540E;&#x7684;&#x9996;&#x8981;&#x6B65;&#x9AA4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Initialization/linux-initialization-2.html">
+            
+                <a href="../Initialization/linux-initialization-2.html">
+            
+                    
+                    &#x65E9;&#x671F;&#x7684;&#x4E2D;&#x65AD;&#x548C;&#x5F02;&#x5E38;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Initialization/linux-initialization-3.html">
+            
+                <a href="../Initialization/linux-initialization-3.html">
+            
+                    
+                    &#x5728;&#x5230;&#x8FBE;&#x5185;&#x6838;&#x5165;&#x53E3;&#x4E4B;&#x524D;&#x6700;&#x540E;&#x7684;&#x51C6;&#x5907;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Initialization/linux-initialization-4.html">
+            
+                <a href="../Initialization/linux-initialization-4.html">
+            
+                    
+                    &#x5185;&#x6838;&#x5165;&#x53E3; - start_kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Initialization/linux-initialization-5.html">
+            
+                <a href="../Initialization/linux-initialization-5.html">
+            
+                    
+                    &#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Initialization/linux-initialization-6.html">
+            
+                <a href="../Initialization/linux-initialization-6.html">
+            
+                    
+                    &#x8FDB;&#x4E00;&#x6B65;&#x521D;&#x59CB;&#x5316;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Initialization/linux-initialization-7.html">
+            
+                <a href="../Initialization/linux-initialization-7.html">
+            
+                    
+                    &#x6700;&#x540E;&#x5BF9;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Initialization/linux-initialization-8.html">
+            
+                <a href="../Initialization/linux-initialization-8.html">
+            
+                    
+                    &#x8C03;&#x5EA6;&#x5668;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Initialization/linux-initialization-9.html">
+            
+                <a href="../Initialization/linux-initialization-9.html">
+            
+                    
+                    RCU &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Initialization/linux-initialization-10.html">
+            
+                <a href="../Initialization/linux-initialization-10.html">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x675F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Interrupts/">
+            
+                <a href="../Interrupts/">
+            
+                    
+                    &#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Interrupts/linux-interrupts-1.html">
+            
+                <a href="../Interrupts/linux-interrupts-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x548C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Interrupts/linux-interrupts-2.html">
+            
+                <a href="../Interrupts/linux-interrupts-2.html">
+            
+                    
+                    &#x6DF1;&#x5165; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Interrupts/linux-interrupts-3.html">
+            
+                <a href="../Interrupts/linux-interrupts-3.html">
+            
+                    
+                    &#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Interrupts/linux-interrupts-4.html">
+            
+                <a href="../Interrupts/linux-interrupts-4.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Interrupts/linux-interrupts-5.html">
+            
+                <a href="../Interrupts/linux-interrupts-5.html">
+            
+                    
+                    &#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Interrupts/linux-interrupts-6.html">
+            
+                <a href="../Interrupts/linux-interrupts-6.html">
+            
+                    
+                    &#x5904;&#x7406;&#x4E0D;&#x53EF;&#x5C4F;&#x853D;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Interrupts/linux-interrupts-7.html">
+            
+                <a href="../Interrupts/linux-interrupts-7.html">
+            
+                    
+                    &#x6DF1;&#x5165;&#x5916;&#x90E8;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Interrupts/linux-interrupts-8.html">
+            
+                <a href="../Interrupts/linux-interrupts-8.html">
+            
+                    
+                    IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../Interrupts/linux-interrupts-9.html">
+            
+                <a href="../Interrupts/linux-interrupts-9.html">
+            
+                    
+                    Softirq, Tasklets and Workqueues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../Interrupts/linux-interrupts-10.html">
+            
+                <a href="../Interrupts/linux-interrupts-10.html">
+            
+                    
+                    &#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SysCall/">
+            
+                <a href="../SysCall/">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../SysCall/linux-syscall-1.html">
+            
+                <a href="../SysCall/linux-syscall-1.html">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6982;&#x5FF5;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../SysCall/linux-syscall-2.html">
+            
+                <a href="../SysCall/linux-syscall-2.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../SysCall/linux-syscall-3.html">
+            
+                <a href="../SysCall/linux-syscall-3.html">
+            
+                    
+                    vsyscall and vDSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../SysCall/linux-syscall-4.html">
+            
+                <a href="../SysCall/linux-syscall-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../SysCall/linux-syscall-5.html">
+            
+                <a href="../SysCall/linux-syscall-5.html">
+            
+                    
+                    open &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../SysCall/linux-syscall-6.html">
+            
+                <span>
+            
+                    
+                    Linux &#x8D44;&#x6E90;&#x9650;&#x5236;
+            
+                
+            
+
+            
+        </span></li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x548C;&#x65F6;&#x949F;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="linux-timers-1.html">
+            
+                <a href="linux-timers-1.html">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="linux-timers-2.html">
+            
+                <a href="linux-timers-2.html">
+            
+                    
+                    &#x65F6;&#x949F;&#x6E90;&#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="linux-timers-3.html">
+            
+                <a href="linux-timers-3.html">
+            
+                    
+                    The tick broadcast framework and dyntick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="linux-timers-4.html">
+            
+                <a href="linux-timers-4.html">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x4ECB;&#x7ECD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.5" data-path="linux-timers-5.html">
+            
+                <a href="linux-timers-5.html">
+            
+                    
+                    Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="linux-timers-6.html">
+            
+                <a href="linux-timers-6.html">
+            
+                    
+                    x86 &#x76F8;&#x5173;&#x7684;&#x65F6;&#x949F;&#x6E90;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="linux-timers-7.html">
+            
+                <a href="linux-timers-7.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x4E0E;&#x65F6;&#x949F;&#x76F8;&#x5173;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SyncPrim/">
+            
+                <a href="../SyncPrim/">
+            
+                    
+                    &#x540C;&#x6B65;&#x539F;&#x8BED;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SyncPrim/linux-sync-1.html">
+            
+                <a href="../SyncPrim/linux-sync-1.html">
+            
+                    
+                    &#x81EA;&#x65CB;&#x9501;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SyncPrim/linux-sync-2.html">
+            
+                <a href="../SyncPrim/linux-sync-2.html">
+            
+                    
+                    &#x961F;&#x5217;&#x81EA;&#x65CB;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SyncPrim/linux-sync-3.html">
+            
+                <a href="../SyncPrim/linux-sync-3.html">
+            
+                    
+                    &#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SyncPrim/linux-sync-4.html">
+            
+                <a href="../SyncPrim/linux-sync-4.html">
+            
+                    
+                    &#x4E92;&#x65A5;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SyncPrim/linux-sync-5.html">
+            
+                <a href="../SyncPrim/linux-sync-5.html">
+            
+                    
+                    &#x8BFB;&#x8005;/&#x5199;&#x8005;&#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SyncPrim/linux-sync-6.html">
+            
+                <a href="../SyncPrim/linux-sync-6.html">
+            
+                    
+                    &#x987A;&#x5E8F;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7">
+            
+                <span>
+            
+                    
+                    RCU
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8">
+            
+                <span>
+            
+                    
+                    Lockdep
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MM/">
+            
+                <a href="../MM/">
+            
+                    
+                    &#x5185;&#x5B58;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MM/linux-mm-1.html">
+            
+                <a href="../MM/linux-mm-1.html">
+            
+                    
+                    &#x5185;&#x5B58;&#x5757;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../MM/linux-mm-2.html">
+            
+                <a href="../MM/linux-mm-2.html">
+            
+                    
+                    &#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x548C; ioremap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../MM/linux-mm-3.html">
+            
+                <a href="../MM/linux-mm-3.html">
+            
+                    
+                    kmemcheck
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cgroups/">
+            
+                <a href="../Cgroups/">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Cgroups/linux-cgroups-1.html">
+            
+                <a href="../Cgroups/linux-cgroups-1.html">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10">
+            
+                <span>
+            
+                    
+                    SMP
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Concepts/">
+            
+                <a href="../Concepts/">
+            
+                    
+                    &#x6982;&#x5FF5;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Concepts/linux-cpu-1.html">
+            
+                <a href="../Concepts/linux-cpu-1.html">
+            
+                    
+                    &#x6BCF;&#x4E2A; CPU &#x7684;&#x53D8;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Concepts/linux-cpu-2.html">
+            
+                <a href="../Concepts/linux-cpu-2.html">
+            
+                    
+                    CPU &#x63A9;&#x7801;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Concepts/linux-cpu-3.html">
+            
+                <a href="../Concepts/linux-cpu-3.html">
+            
+                    
+                    initcall &#x673A;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Concepts/linux-cpu-4.html">
+            
+                <a href="../Concepts/linux-cpu-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x7684;&#x901A;&#x77E5;&#x94FE;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../DataStructures/">
+            
+                <a href="../DataStructures/">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../DataStructures/linux-datastructures-1.html">
+            
+                <a href="../DataStructures/linux-datastructures-1.html">
+            
+                    
+                    &#x53CC;&#x5411;&#x94FE;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../DataStructures/linux-datastructures-2.html">
+            
+                <a href="../DataStructures/linux-datastructures-2.html">
+            
+                    
+                    &#x57FA;&#x6570;&#x6811;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../DataStructures/linux-datastructures-3.html">
+            
+                <a href="../DataStructures/linux-datastructures-3.html">
+            
+                    
+                    &#x4F4D;&#x6570;&#x7EC4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Theory/">
+            
+                <a href="../Theory/">
+            
+                    
+                    &#x7406;&#x8BBA;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Theory/linux-theory-1.html">
+            
+                <a href="../Theory/linux-theory-1.html">
+            
+                    
+                    &#x5206;&#x9875;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Theory/linux-theory-2.html">
+            
+                <a href="../Theory/linux-theory-2.html">
+            
+                    
+                    ELF &#x6587;&#x4EF6;&#x683C;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Theory/linux-theory-3.html">
+            
+                <a href="../Theory/linux-theory-3.html">
+            
+                    
+                    &#x5167;&#x8054;&#x6C47;&#x7F16;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4">
+            
+                <span>
+            
+                    
+                    CPUID
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5">
+            
+                <span>
+            
+                    
+                    MSR
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14">
+            
+                <span>
+            
+                    
+                    Initial ram disk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1">
+            
+                <span>
+            
+                    
+                    initrd
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Misc/">
+            
+                <a href="../Misc/">
+            
+                    
+                    &#x6742;&#x9879;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../Misc/linux-misc-1.html">
+            
+                <a href="../Misc/linux-misc-1.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5F00;&#x53D1;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../Misc/linux-misc-2.html">
+            
+                <a href="../Misc/linux-misc-2.html">
+            
+                    
+                    &#x5185;&#x6838;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../Misc/linux-misc-3.html">
+            
+                <a href="../Misc/linux-misc-3.html">
+            
+                    
+                    &#x94FE;&#x63A5;&#x5668;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../Misc/linux-misc-4.html">
+            
+                <a href="../Misc/linux-misc-4.html">
+            
+                    
+                    &#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5">
+            
+                <span>
+            
+                    
+                    &#x4E66;&#x5199;&#x5E76;&#x63D0;&#x4EA4;&#x4F60;&#x7B2C;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x8865;&#x4E01;
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../KernelStructures/">
+            
+                <a href="../KernelStructures/">
+            
+                    
+                    &#x5185;&#x6838;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../KernelStructures/linux-kernelstructure-1.html">
+            
+                <a href="../KernelStructures/linux-kernelstructure-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x63CF;&#x8FF0;&#x7B26;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../LINKS.html">
+            
+                <a href="../LINKS.html">
+            
+                    
+                    &#x6709;&#x5E2E;&#x52A9;&#x7684;&#x94FE;&#x63A5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../CONTRIBUTORS.html">
+            
+                <a href="../CONTRIBUTORS.html">
+            
+                    
+                    &#x8D21;&#x732E;&#x8005;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    
+<div class="gl-wrapper">
+    <a class="gitbook-link" href="https://www.gitbook.com?utm_source=public_site_legacy&amp;utm_medium=referral&amp;utm_campaign=trademark&amp;utm_term=xinqiu&amp;utm_content=powered_by" target="blank">
+        <div class="tm-logo">
+            <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="currentColor" viewBox="0 0 1067 769" xmlns="http://www.w3.org/2000/svg" stroke="none" class="icon-7f6730be--text-3f89f380"><g><path d="M480.026 640.677c17.205 0 31.2 13.997 31.2 31.194s-13.995 31.193-31.2 31.193c-17.197 0-31.193-13.996-31.193-31.193 0-17.197 13.996-31.194 31.193-31.194m489.93-193.226c-17.203 0-31.2-13.998-31.2-31.195 0-17.204 13.997-31.2 31.2-31.2 17.198 0 31.194 13.996 31.194 31.2 0 17.197-13.996 31.195-31.193 31.195m0-127.804c-53.269 0-96.609 43.34-96.609 96.609 0 10.373 1.723 20.702 5.123 30.741L559.328 616.879c-18.132-26.128-47.521-41.617-79.302-41.617-36.821 0-70.391 21.065-86.63 54.003L106.68 478.109c-30.288-15.927-52.965-65.817-50.56-111.223 1.248-23.687 9.438-42.071 21.897-49.17 7.916-4.493 17.436-4.099 27.526 1.188l1.916 1.01c75.96 40.022 324.6 170.981 335.063 175.844 16.157 7.47 25.14 10.5 52.659-2.547l513.958-267.3c7.53-2.844 16.315-10.062 16.315-21.023 0-15.205-15.72-21.199-15.765-21.199-29.218-14.018-74.163-35.054-117.987-55.57C798.033 84.26 691.861 34.547 645.23 10.132c-40.253-21.072-72.655-3.311-78.432.282l-11.227 5.555C345.727 119.743 64.898 258.826 48.911 268.553 20.278 285.973 2.547 320.679.252 363.768c-3.586 68.304 31.261 139.506 81.069 165.634l303.172 156.354c6.83 47.306 47.55 82.725 95.532 82.725 52.78 0 95.808-42.546 96.603-95.14L910.541 492.38c16.93 13.233 37.92 20.486 59.416 20.486 53.268 0 96.61-43.341 96.61-96.61s-43.342-96.61-96.61-96.61" fill-rule="evenodd"/></g></svg>
+        </div>
+        <div class="tm-content">
+            <div class="tm-container">
+                <span class="tm-text">
+                    Powered by <b>GitBook</b>
+                </span>
+            </div>
+        </div>
+    </a>
+</div></div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB;</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="timers-and-time-management-in-the-linux-kernel-part-5">Timers and time management in the Linux kernel. Part 5.</h1>
+<h2 id="introduction-to-the-clockevents-framework">Introduction to the <code>clockevents</code> framework</h2>
+<p>This is fifth part of the <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Timers/index.html" target="_blank">chapter</a> which describes timers and time management related stuff in the Linux kernel. As you might noted from the title of this part, the <code>clockevents</code> framework will be discussed. We already saw one framework in the <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Timers/linux-timers-2.html" target="_blank">second</a> part of this chapter. It was <code>clocksource</code> framework. Both of these frameworks represent timekeeping abstractions in the Linux kernel.</p>
+<p>At first let&apos;s refresh your memory and try to remember what is it <code>clocksource</code> framework and and what its purpose. The main goal of the <code>clocksource</code> framework is to provide <code>timeline</code>. As described in the <a href="https://github.com/0xAX/linux/blob/master/Documentation/timers/timekeeping.txt" target="_blank">documentation</a>:</p>
+<blockquote>
+<p>For example issuing the command &apos;date&apos; on a Linux system will eventually read the clock source to determine exactly what time it is.</p>
+</blockquote>
+<p>The Linux kernel supports many different clock sources. You can find some of them in the <a href="https://github.com/torvalds/linux/tree/master/drivers/clocksource" target="_blank">drivers/closksource</a>. For example old good <a href="https://en.wikipedia.org/wiki/Intel_8253" target="_blank">Intel 8253</a> - <a href="https://en.wikipedia.org/wiki/Programmable_interval_timer" target="_blank">programmable interval timer</a> with <code>1193182</code> Hz frequency, yet another one - <a href="http://uefi.org/sites/default/files/resources/ACPI_5.pdf" target="_blank">ACPI PM</a> timer with <code>3579545</code> Hz frequency. Besides the <a href="https://github.com/torvalds/linux/tree/master/drivers/clocksource" target="_blank">drivers/closksource</a> directory, each architecture may provide own architecture-specific clock sources. For example <a href="https://en.wikipedia.org/wiki/X86" target="_blank">x86</a> architecture provides <a href="https://en.wikipedia.org/wiki/High_Precision_Event_Timer" target="_blank">High Precision Event Timer</a>, or for example <a href="https://en.wikipedia.org/wiki/PowerPC" target="_blank">powerpc</a> provides access to the processor timer through <code>timebase</code> register.</p>
+<p>Each clock source provides monotonic atomic counter. As I already wrote, the Linux kernel supports a huge set of different clock source and each clock source has own parameters like <a href="https://en.wikipedia.org/wiki/Frequency" target="_blank">frequency</a>. The main goal of the <code>clocksource</code> framework is to provide <a href="https://en.wikipedia.org/wiki/Application_programming_interface" target="_blank">API</a> to select best available clock source in the system i.e. a clock source with the highest frequency. Additional goal of the <code>clocksource</code> framework is to represent an atomic counter provided by a clock source in human units. In this time, nanoseconds are the favorite choice for the time value units of the given clock source in the Linux kernel.</p>
+<p>The <code>clocksource</code> framework represented by the <code>clocksource</code> structure which is defined in the <a href="https://github.com/torvalds/linux/blob/master/include/linux/clocksource.h" target="_blank">include/linux/clocksource.h</a> header code file which contains <code>name</code> of a clock source, rating of certain clock source in the system (a clock source with the higher frequency has the biggest rating in the system), <code>list</code> of all registered clock source in the system, <code>enable</code> and <code>disable</code> fields to enable and disable a clock source, pointer to the <code>read</code> function which must return an atomic counter of a clock source and etc.</p>
+<p>Additionally the <code>clocksource</code> structure provides two fields: <code>mult</code> and <code>shift</code> which are needed for translation of an atomic counter which is provided by a certain clock source to the human units, i.e. <a href="https://en.wikipedia.org/wiki/Nanosecond" target="_blank">nanoseconds</a>. Translation occurs via following formula:</p>
+<pre><code>ns ~= (clocksource * mult) &gt;&gt; shift
+</code></pre><p>As we already know, besides the <code>clocksource</code> structure, the <code>clocksource</code> framework provides an API for registration of clock source with different frequency scale factor:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">clocksource_register_hz</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> clocksource *cs, u32 hz)</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">clocksource_register_khz</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> clocksource *cs, u32 khz)</span>
+</span></code></pre>
+<p>A clock source unregistration:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">clocksource_unregister</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> clocksource *cs)</span>
+</span></code></pre>
+<p>and etc.</p>
+<p>Additionally to the <code>clocksource</code> framework, the Linux kernel provides <code>clockevents</code> framework. As described in the <a href="https://github.com/0xAX/linux/blob/master/Documentation/timers/timekeeping.txt" target="_blank">documentation</a>:</p>
+<blockquote>
+<p>Clock events are the conceptual reverse of clock sources</p>
+</blockquote>
+<p>Main goal of the is to manage clock event devices or in other words - to manage devices that allow to register an event or in other words <a href="https://en.wikipedia.org/wiki/Interrupt" target="_blank">interrupt</a> that is going to happen at a defined point of time in the future.</p>
+<p>Now we know a little about the <code>clockevents</code> framework in the Linux kernel, and now time is to see on it <a href="https://en.wikipedia.org/wiki/Application_programming_interface" target="_blank">API</a>.</p>
+<h2 id="api-of-clockevents-framework">API of <code>clockevents</code> framework</h2>
+<p>The main structure which described a clock event device is <code>clock_event_device</code> structure. This structure is defined in the <a href="https://github.com/torvalds/linux/blob/master/include/linux/clockchips.h" target="_blank">include/linux/clockchips.h</a> header file and contains a huge set of fields. as well as the <code>clocksource</code> structure it has <code>name</code> fields which contains human readable name of a clock event device, for example <a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller" target="_blank">local APIC</a> timer:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">static</span> <span class="hljs-keyword">struct</span> clock_event_device lapic_clockevent = {
+    .name                   = <span class="hljs-string">&quot;lapic&quot;</span>,
+    ...
+    ...
+    ...
+}
+</code></pre>
+<p>Addresses of the <code>event_handler</code>, <code>set_next_event</code>, <code>next_event</code> functions for a certain clock event device which are an <a href="https://en.wikipedia.org/wiki/Interrupt_handler" target="_blank">interrupt handler</a>, setter of next event and local storage for next event respectively. Yet another field of the <code>clock_event_device</code> structure is - <code>features</code> field. Its value maybe on of the following generic features:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CLOCK_EVT_FEAT_PERIODIC    0x000001</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CLOCK_EVT_FEAT_ONESHOT        0x000002</span>
+</code></pre>
+<p>Where the <code>CLOCK_EVT_FEAT_PERIODIC</code> represents device which may be programmed to generate events periodically. The <code>CLOCK_EVT_FEAT_ONESHOT</code> represents device which may generate an event only once. Besides these two features, there are also architecture-specific features. For example <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a> supports two additional features:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CLOCK_EVT_FEAT_C3STOP        0x000008</span>
+</code></pre>
+<p>The first <code>CLOCK_EVT_FEAT_C3STOP</code> means that a clock event device will be stopped in the <a href="https://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface#Device_states" target="_blank">C3</a> state. Additionally the <code>clock_event_device</code> structure has <code>mult</code> and <code>shift</code> fields as well as <code>clocksource</code> structure. The <code>clocksource</code> structure also contains other fields, but we will consider it later.</p>
+<p>After we considered part of the <code>clock_event_device</code> structure, time is to look at the <code>API</code> of the <code>clockevents</code> framework. To work with a clock event device, first of all we need to initialize <code>clock_event_device</code> structure and register a clock events device. The <code>clockevents</code> framework provides following <code>API</code> for registration of clock event devices:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clockevents_register_device</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> clock_event_device *dev)</span>
+</span>{
+   ...
+   ...
+   ...
+}
+</code></pre>
+<p>This function defined in the <a href="https://github.com/torvalds/linux/blob/master/kernel/time/clockevents.c" target="_blank">kernel/time/clockevents.c</a> source code file and as we may see, the <code>clockevents_register_device</code> function takes only one parameter:</p>
+<ul>
+<li>address of a <code>clock_event_device</code> structure which represents a clock event device.</li>
+</ul>
+<p>So, to register a clock event device, at first we need to initialize <code>clock_event_device</code> structure with parameters of a certain clock event device. Let&apos;s take a look at one random clock event device in the Linux kernel source code. We can find one in the <a href="https://github.com/torvalds/linux/tree/master/drivers/clocksource" target="_blank">drivers/closksource</a> directory or try to take a look at an architecture-specific clock event device. Let&apos;s take for example - <a href="http://www.atmel.com/Images/doc6062.pdf" target="_blank">Periodic Interval Timer (PIT) for at91sam926x</a>. You can find its implementation in the <a href="https://github.com/torvalds/linux/tree/master/drivers/clocksource/timer-atmel-pit.c" target="_blank">drivers/closksource</a>.</p>
+<p>First of all let&apos;s look at initialization of the <code>clock_event_device</code> structure. This occurs in the <code>at91sam926x_pit_common_init</code> function:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">struct</span> pit_data {
+    ...
+    ...
+    <span class="hljs-keyword">struct</span> clock_event_device       clkevt;
+    ...
+    ...
+};
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> __<span class="hljs-function">init <span class="hljs-title">at91sam926x_pit_common_init</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> pit_data *data)</span>
+</span>{
+    ...
+    ...
+    ...
+    data-&gt;clkevt.name = <span class="hljs-string">&quot;pit&quot;</span>;
+    data-&gt;clkevt.features = CLOCK_EVT_FEAT_PERIODIC;
+    data-&gt;clkevt.shift = <span class="hljs-number">32</span>;
+    data-&gt;clkevt.mult = div_sc(pit_rate, NSEC_PER_SEC, data-&gt;clkevt.shift);
+    data-&gt;clkevt.rating = <span class="hljs-number">100</span>;
+    data-&gt;clkevt.cpumask = cpumask_of(<span class="hljs-number">0</span>);
+
+    data-&gt;clkevt.set_state_shutdown = pit_clkevt_shutdown;
+    data-&gt;clkevt.set_state_periodic = pit_clkevt_set_periodic;
+    data-&gt;clkevt.resume = at91sam926x_pit_resume;
+    data-&gt;clkevt.suspend = at91sam926x_pit_suspend;
+    ...
+}
+</code></pre>
+<p>Here we can see that <code>at91sam926x_pit_common_init</code> takes one parameter - pointer to the <code>pit_data</code> structure which contains <code>clock_event_device</code> structure which will contain clock event related information of the <code>at91sam926x</code> <a href="https://en.wikipedia.org/wiki/Programmable_interval_timer" target="_blank">periodic Interval Timer</a>. At the start we fill <code>name</code> of the timer device and its <code>features</code>. In our case we deal with periodic timer which as we already know may be programmed to generate events periodically.</p>
+<p>The next two fields <code>shift</code> and <code>mult</code> are familiar to us. They will be used to translate counter of our timer to nanoseconds. After this we set rating of the timer  to <code>100</code>. This means if there will not be timers with higher rating in the system, this timer will be used for timekeeping. The next field - <code>cpumask</code> indicates for which processors in the system the device will work. In our case, the device will work for the first processor. The <code>cpumask_of</code> macro defined in the <a href="https://github.com/torvalds/linux/tree/master/include/linux/cpumask.h" target="_blank">include/linux/cpumask.h</a> header file and just expands to the call of the:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> cpumask_of(cpu) (get_cpu_mask(cpu))</span>
+</code></pre>
+<p>Where the <code>get_cpu_mask</code> returns the cpumask containing just a given <code>cpu</code> number. More about <code>cpumasks</code> concept you may read in the <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Concepts/linux-cpu-2.html" target="_blank">CPU masks in the Linux kernel</a> part. In the last four lines of code we set callbacks for the clock event device suspend/resume, device shutdown and update of the clock event device state.</p>
+<p>After we finished with the initialization of the <code>at91sam926x</code> periodic timer, we can register it by the call of the following functions:</p>
+<pre><code class="lang-C">clockevents_register_device(&amp;data-&gt;clkevt);
+</code></pre>
+<p>Now we can consider implementation of the <code>clockevent_register_device</code> function. As I already wrote above, this function is defined in the <a href="https://github.com/torvalds/linux/blob/master/kernel/time/clockevents.c" target="_blank">kernel/time/clockevents.c</a> source code file and starts from the initialization of the initial event device state:</p>
+<pre><code class="lang-C">clockevent_set_state(dev, CLOCK_EVT_STATE_DETACHED);
+</code></pre>
+<p>Actually, an event device may be in one of this states:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">enum</span> clock_event_state {
+    CLOCK_EVT_STATE_DETACHED,
+    CLOCK_EVT_STATE_SHUTDOWN,
+    CLOCK_EVT_STATE_PERIODIC,
+    CLOCK_EVT_STATE_ONESHOT,
+    CLOCK_EVT_STATE_ONESHOT_STOPPED,
+};
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><code>CLOCK_EVT_STATE_DETACHED</code> - a clock event device is not not used by <code>clockevents</code> framework. Actually it is initial state of all clock event devices;</li>
+<li><code>CLOCK_EVT_STATE_SHUTDOWN</code> - a clock event device is powered-off;</li>
+<li><code>CLOCK_EVT_STATE_PERIODIC</code> - a clock event device may be programmed to generate event periodically;</li>
+<li><code>CLOCK_EVT_STATE_ONESHOT</code>  - a clock event device may be programmed to generate event only once;</li>
+<li><code>CLOCK_EVT_STATE_ONESHOT_STOPPED</code> - a clock event device was programmed to generate event only once and now it is temporary stopped.</li>
+</ul>
+<p>The implementation of the <code>clock_event_set_state</code> function is pretty easy:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">clockevent_set_state</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> clock_event_device *dev,
+                    <span class="hljs-keyword">enum</span> clock_event_state state)</span>
+</span>{
+    dev-&gt;state_use_accessors = state;
+}
+</code></pre>
+<p>As we can see, it just fills the <code>state_use_accessors</code> field of the given <code>clock_event_device</code> structure with the given value which is in our case is <code>CLOCK_EVT_STATE_DETACHED</code>. Actually all clock event devices has this initial state during registration. The <code>state_use_accessors</code> field of the <code>clock_event_device</code> structure provides <code>current</code> state of the clock event device.</p>
+<p>After we have set initial state of the given <code>clock_event_device</code> structure we check that the <code>cpumask</code> of the given clock event device is not zero:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (!dev-&gt;cpumask) {
+    WARN_ON(num_possible_cpus() &gt; <span class="hljs-number">1</span>);
+    dev-&gt;cpumask = cpumask_of(smp_processor_id());
+}
+</code></pre>
+<p>Remember that we have set the <code>cpumask</code> of the <code>at91sam926x</code> periodic timer to first processor. If the <code>cpumask</code> field is zero, we check the number of possible processors in the system and print warning message if it is less than on. Additionally we set the <code>cpumask</code> of the given clock event device to the current processor. If you are interested in how the <code>smp_processor_id</code> macro is implemented, you can read more about it in the fourth <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Initialization/linux-initialization-4.html" target="_blank">part</a> of the Linux kernel initialization process chapter.</p>
+<p>After this check we lock the actual code of the clock event device registration by the call following macros:</p>
+<pre><code class="lang-C">raw_spin_lock_irqsave(&amp;clockevents_lock, flags);
+...
+...
+...
+raw_spin_unlock_irqrestore(&amp;clockevents_lock, flags);
+</code></pre>
+<p>Additionally the <code>raw_spin_lock_irqsave</code> and the <code>raw_spin_unlock_irqrestore</code> macros disable local interrupts, however interrupts on other processors still may occur. We need to do it to prevent potential <a href="https://en.wikipedia.org/wiki/Deadlock" target="_blank">deadlock</a> if we adding new clock event device to the list of clock event devices and an interrupt occurs from other clock event device.</p>
+<p>We can see following code of clock event device registration between the <code>raw_spin_lock_irqsave</code> and <code>raw_spin_unlock_irqrestore</code> macros:</p>
+<pre><code class="lang-C">list_add(&amp;dev-&gt;<span class="hljs-built_in">list</span>, &amp;clockevent_devices);
+tick_check_new_device(dev);
+clockevents_notify_released();
+</code></pre>
+<p>First of all we add the given clock event device to the list of clock event devices which is represented by the <code>clockevent_devices</code>:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-title">LIST_HEAD</span><span class="hljs-params">(clockevent_devices)</span></span>;
+</code></pre>
+<p>At the next step we call the <code>tick_check_new_device</code> function which is defined in the <a href="https://github.com/torvalds/linux/blob/master/kernel/time/tick-common.c" target="_blank">kernel/time/tick-common.c</a> source code file and checks do the new registered clock event device should be used or not. The <code>tick_check_new_device</code> function checks the given <code>clock_event_device</code> gets the current registered tick device which is represented by the <code>tick_device</code> structure and compares their ratings and features. Actually <code>CLOCK_EVT_STATE_ONESHOT</code> is preferred:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">tick_check_preferred</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> clock_event_device *curdev,
+                 <span class="hljs-keyword">struct</span> clock_event_device *newdev)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (!(newdev-&gt;features &amp; CLOCK_EVT_FEAT_ONESHOT)) {
+        <span class="hljs-keyword">if</span> (curdev &amp;&amp; (curdev-&gt;features &amp; CLOCK_EVT_FEAT_ONESHOT))
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> (tick_oneshot_mode_active())
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-keyword">return</span> !curdev ||
+        newdev-&gt;rating &gt; curdev-&gt;rating ||
+           !cpumask_equal(curdev-&gt;cpumask, newdev-&gt;cpumask);
+}
+</code></pre>
+<p>If the new registered clock event device is more preferred than old tick device, we exchange old and new registered devices and install new device:</p>
+<pre><code class="lang-C">clockevents_exchange_device(curdev, newdev);
+tick_setup_device(td, newdev, cpu, cpumask_of(cpu));
+</code></pre>
+<p>The <code>clockevents_exchange_device</code> function releases or in other words deleted the old clock event device from the <code>clockevent_devices</code> list. The next function - <code>tick_setup_device</code> as we may understand from its name, setups new tick device. This function check the mode of the new registered clock event device and call the <code>tick_setup_periodic</code> function or the <code>tick_setup_oneshot</code> depends on the tick device mode:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (td-&gt;mode == TICKDEV_MODE_PERIODIC)
+    tick_setup_periodic(newdev, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">else</span>
+    tick_setup_oneshot(newdev, handler, next_event);
+</code></pre>
+<p>Both of this functions calls the <code>clockevents_switch_state</code> to change state of the clock event device and the <code>clockevents_program_event</code> function to set next event of clock event device based on delta between the maximum and minimum difference current time and time for the next event. The <code>tick_setup_periodic</code>:</p>
+<pre><code class="lang-C">clockevents_switch_state(dev, CLOCK_EVT_STATE_PERIODIC);
+clockevents_program_event(dev, next, <span class="hljs-literal">false</span>))
+</code></pre>
+<p>and the <code>tick_setup_oneshot_periodic</code>:</p>
+<pre><code class="lang-C">clockevents_switch_state(newdev, CLOCK_EVT_STATE_ONESHOT);
+clockevents_program_event(newdev, next_event, <span class="hljs-literal">true</span>);
+</code></pre>
+<p>The <code>clockevents_switch_state</code> function checks that the clock event device is not in the given state and calls the <code>__clockevents_switch_state</code> function from the same source code file:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">if</span> (clockevent_get_state(dev) != state) {
+    <span class="hljs-keyword">if</span> (__clockevents_switch_state(dev, state))
+        <span class="hljs-keyword">return</span>;
+</code></pre>
+<p>The <code>__clockevents_switch_state</code> function just makes a call of the certain callback depends on the given state:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> __clockevents_switch_state(<span class="hljs-keyword">struct</span> clock_event_device *dev,
+                      <span class="hljs-keyword">enum</span> clock_event_state state)
+{
+    <span class="hljs-keyword">if</span> (dev-&gt;features &amp; CLOCK_EVT_FEAT_DUMMY)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">switch</span> (state) {
+    <span class="hljs-keyword">case</span> CLOCK_EVT_STATE_DETACHED:
+    <span class="hljs-keyword">case</span> CLOCK_EVT_STATE_SHUTDOWN:
+        <span class="hljs-keyword">if</span> (dev-&gt;set_state_shutdown)
+            <span class="hljs-keyword">return</span> dev-&gt;set_state_shutdown(dev);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">case</span> CLOCK_EVT_STATE_PERIODIC:
+        <span class="hljs-keyword">if</span> (!(dev-&gt;features &amp; CLOCK_EVT_FEAT_PERIODIC))
+            <span class="hljs-keyword">return</span> -ENOSYS;
+        <span class="hljs-keyword">if</span> (dev-&gt;set_state_periodic)
+            <span class="hljs-keyword">return</span> dev-&gt;set_state_periodic(dev);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    ...
+    ...
+    ...
+</code></pre>
+<p>In our case for <code>at91sam926x</code> periodic timer, the state is the <code>CLOCK_EVT_FEAT_PERIODIC</code>:</p>
+<pre><code class="lang-C">data-&gt;clkevt.features = CLOCK_EVT_FEAT_PERIODIC;
+data-&gt;clkevt.set_state_periodic = pit_clkevt_set_periodic;
+</code></pre>
+<p>So, for the <code>pit_clkevt_set_periodic</code> callback will be called. If we will read the documentation of the <a href="http://www.atmel.com/Images/doc6062.pdf" target="_blank">Periodic Interval Timer (PIT) for at91sam926x</a>, we will see that there is <code>Periodic Interval Timer Mode Register</code> which allows us to control of periodic interval timer.</p>
+<p>It looks like:</p>
+<pre><code>31                                                   25        24
++---------------------------------------------------------------+
+|                                          |  PITIEN  |  PITEN  |
++---------------------------------------------------------------+
+23                            19                               16
++---------------------------------------------------------------+
+|                             |               PIV               |
++---------------------------------------------------------------+
+15                                                              8
++---------------------------------------------------------------+
+|                            PIV                                |
++---------------------------------------------------------------+
+7                                                               0
++---------------------------------------------------------------+
+|                            PIV                                |
++---------------------------------------------------------------+
+</code></pre><p>Where <code>PIV</code> or <code>Periodic Interval Value</code> - defines the value compared with the primary <code>20-bit</code> counter of the Periodic Interval Timer. The <code>PITEN</code> or <code>Period Interval Timer Enabled</code> if the bit is <code>1</code> and the <code>PITIEN</code> or <code>Periodic Interval Timer Interrupt Enable</code> if the bit is <code>1</code>. So, to set periodic mode, we need to set <code>24</code>, <code>25</code> bits in the <code>Periodic Interval Timer Mode Register</code>. And we are doing it in the <code>pit_clkevt_set_periodic</code> function:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">pit_clkevt_set_periodic</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> clock_event_device *dev)</span>
+</span>{
+        <span class="hljs-keyword">struct</span> pit_data *data = clkevt_to_pit_data(dev);
+        ...
+        ...
+        ...
+        pit_write(data-&gt;base, AT91_PIT_MR,
+                  (data-&gt;cycle - <span class="hljs-number">1</span>) | AT91_PIT_PITEN | AT91_PIT_PITIEN);
+
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>Where the <code>AT91_PT_MR</code>, <code>AT91_PT_PITEN</code> and the <code>AT91_PIT_PITIEN</code> are declared as:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AT91_PIT_MR             0x00</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AT91_PIT_PITIEN       BIT(25)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> AT91_PIT_PITEN        BIT(24)</span>
+</code></pre>
+<p>After the setup of the new clock event device is finished, we can return to the <code>clockevents_register_device</code> function. The last function in the <code>clockevents_register_device</code> function is:</p>
+<pre><code class="lang-C">clockevents_notify_released();
+</code></pre>
+<p>This function checks the <code>clockevents_released</code> list which contains released clock event devices (remember that they may occur after the call of the <code>clockevents_exchange_device</code> function). If this list is not empty, we go through clock event devices from the <code>clock_events_released</code> list and delete it from the <code>clockevent_devices</code>:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">clockevents_notify_released</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">struct</span> clock_event_device *dev;
+
+    <span class="hljs-keyword">while</span> (!list_empty(&amp;clockevents_released)) {
+        dev = list_entry(clockevents_released.next,
+                 <span class="hljs-keyword">struct</span> clock_event_device, <span class="hljs-built_in">list</span>);
+        list_del(&amp;dev-&gt;<span class="hljs-built_in">list</span>);
+        list_add(&amp;dev-&gt;<span class="hljs-built_in">list</span>, &amp;clockevent_devices);
+        tick_check_new_device(dev);
+    }
+}
+</code></pre>
+<p>That&apos;s all. From this moment we have registered new clock event device. So the usage of the <code>clockevents</code> framework is simple and clear. Architectures registered their clock event devices, in the clock events core. Users of the clockevents core can get clock event devices for their use. The <code>clockevents</code> framework provides notification mechanisms for various clock related management events like a clock event device registered or unregistered, a processor is offlined in system which supports <a href="https://www.kernel.org/doc/Documentation/cpu-hotplug.txt" target="_blank">CPU hotplug</a> and etc.</p>
+<p>We saw implementation only of the <code>clockevents_register_device</code> function. But generally, the clock event layer <a href="https://en.wikipedia.org/wiki/Application_programming_interface" target="_blank">API</a> is small. Besides the <code>API</code> for clock event device registration, the <code>clockevents</code> framework provides functions to schedule the next event interrupt, clock event device notification service and support for suspend and resume for clock event devices.</p>
+<p>If you want to know more about <code>clockevents</code> API you can start to research following source code and header files: <a href="https://github.com/torvalds/linux/blob/master/kernel/time/tick-common.c" target="_blank">kernel/time/tick-common.c</a>, <a href="https://github.com/torvalds/linux/blob/master/kernel/time/clockevents.c" target="_blank">kernel/time/clockevents.c</a> and <a href="https://github.com/torvalds/linux/blob/master/include/linux/clockchips.h" target="_blank">include/linux/clockchips.h</a>.</p>
+<p>That&apos;s all.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is the end of the fifth part of the <a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Timers/index.html" target="_blank">chapter</a> that describes timers and timer management related stuff in the Linux kernel. In the previous part got acquainted with the <code>timers</code> concept. In this part we continued to learn time management related stuff in the Linux kernel and saw a little about yet another framework - <code>clockevents</code>.</p>
+<p>If you have questions or suggestions, feel free to ping me in twitter <a href="https://twitter.com/0xAX" target="_blank">0xAX</a>, drop me <a href="anotherworldofworld@gmail.com">email</a> or just create <a href="https://github.com/MintCN/linux-insides-zh/issues/new" target="_blank">issue</a>.</p>
+<p><strong>Please note that English is not my first language and I am really sorry for any inconvenience. If you found any mistakes please send me PR to <a href="https://github.com/MintCN/linux-insides-zh" target="_blank">linux-insides</a>.</strong></p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/0xAX/linux/blob/master/Documentation/timers/timekeeping.txt" target="_blank">timekeeping documentation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Intel_8253" target="_blank">Intel 8253</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Programmable_interval_timer" target="_blank">programmable interval timer</a></li>
+<li><a href="http://uefi.org/sites/default/files/resources/ACPI_5.pdf" target="_blank">ACPI pdf</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X86" target="_blank">x86</a></li>
+<li><a href="https://en.wikipedia.org/wiki/High_Precision_Event_Timer" target="_blank">High Precision Event Timer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PowerPC" target="_blank">powerpc</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Frequency" target="_blank">frequency</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Application_programming_interface" target="_blank">API</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nanosecond" target="_blank">nanoseconds</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interrupt" target="_blank">interrupt</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interrupt_handler" target="_blank">interrupt handler</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller" target="_blank">local APIC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface#Device_states" target="_blank">C3 state</a> </li>
+<li><a href="http://www.atmel.com/Images/doc6062.pdf" target="_blank">Periodic Interval Timer (PIT) for at91sam926x</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Concepts/linux-cpu-2.html" target="_blank">CPU masks in the Linux kernel</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Deadlock" target="_blank">deadlock</a></li>
+<li><a href="https://www.kernel.org/doc/Documentation/cpu-hotplug.txt" target="_blank">CPU hotplug</a></li>
+<li><a href="https://xinqiu.gitbooks.io/linux-insides-cn/content/Timers/linux-timers-3.html" target="_blank">previous part</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class="search-results-count"></span> results matching &quot;<span class="search-query"></span>&quot;</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching &quot;<span class="search-query"></span>&quot;</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux-timers-4.html" class="navigation navigation-prev " aria-label="Previous page: &#x5B9A;&#x65F6;&#x5668;&#x4ECB;&#x7ECD;">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="linux-timers-6.html" class="navigation navigation-next " aria-label="Next page: x86 &#x76F8;&#x5173;&#x7684;&#x65F6;&#x949F;&#x6E90;">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Clockevents 框架简介","level":"1.6.5","depth":2,"next":{"title":"x86 相关的时钟源","level":"1.6.6","depth":2,"path":"Timers/linux-timers-6.md","ref":"Timers/linux-timers-6.md","articles":[]},"previous":{"title":"定时器介绍","level":"1.6.4","depth":2,"path":"Timers/linux-timers-4.md","ref":"Timers/linux-timers-4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["comment"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"comment":{"highlightCommented":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"MintCN/linux-insides-zh","theme":"default","author":"xinqiu","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux ­Insides­中文","language":"zh","links":{"sidebar":{"Linux ­Insides­中文":"https://legacy.gitbook.com/book/xinqiu/linux-insides-cn"},"gitbook":true},"gitbook":"*","description":"linux内核揭密    Translated By MintCN"},"file":{"path":"Timers/linux-timers-5.md","mtime":"2020-03-17T07:53:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T07:56:09.393Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-comment/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+
+</body></html>

@@ -1,0 +1,135 @@
+---
+source: https://book.systemsapproach.org/congestion/trend.html
+title: "Perspective: Software-Defined Traffic Engineering &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation"
+type: ebook-section
+---
+
+# Perspective: Software-Defined Traffic Engineering &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation
+
+Perspective: Software-Defined Traffic Engineering — Computer Networks: A Systems Approach Version 6.2-dev documentation
+      -
+          [
+            Computer Networks: A Systems Approach
+          ](../index.html)
+    *
+              Table of Contents
+[Foreword](../foreword.html)
+- [Foreword to the First Edition](../foreword_1e.html)
+- [Preface](../preface.html)
+- [Chapter 1:  Foundation](../foundation.html)
+- [Chapter 2:  Direct Links](../direct.html)
+- [Chapter 3:  Internetworking](../internetworking.html)
+- [Chapter 4:  Advanced Internetworking](../scaling.html)
+- [Chapter 5:  End-to-End Protocols](../e2e.html)
+- [Chapter 6:  Congestion Control](../congestion.html)
+[Problem: Allocating Resources](problem.html)
+- [6.1 Issues in Resource Allocation](issues.html)
+- [6.2 Queuing Disciplines](queuing.html)
+- [6.3 TCP Congestion Control](tcpcc.html)
+- [6.4 Advanced Congestion Control](avoidance.html)
+- [6.5 Quality of Service](qos.html)
+- Perspective: Software-Defined Traffic Engineering
+- [Chapter 7: End-to-End Data](../data.html)
+- [Chapter 8: Network Security](../security.html)
+- [Chapter 9: Applications](../applications.html)
+- [About This Book](../README.html)
+- [Read the Latest!](../latest.html)
+- [Print Copies](../print.html)
+          *
+          [Computer Networks: A Systems Approach](../index.html)
+      - [](../index.html)
+          - [Chapter 6:  Congestion Control](../congestion.html)
+      - Perspective: Software-Defined Traffic Engineering
+      -
+            [ View page source](../_sources/congestion/trend.rst.txt)
+        [ Previous](qos.html)
+        [Next ](../data.html)
+# Perspective: Software-Defined Traffic Engineering
+The overarching problem this chapter addresses is how to allocate the
+available network bandwidth to a set of end-to-end flows. Whether it’s
+TCP congestion control, integrated services, or differentiated services,
+there is an assumption that the underlying network bandwidth being
+allocated is fixed: a 1-Gbps link between site A and site B is always a
+1-Gbps link, and the algorithms focus on how to best share that 1-Gbps
+among competing users. But what if that’s not the case? What if you
+could “instantly” acquire additional capacity, so the 1-Gbps link is
+upgraded to a 10-Gbps link, or perhaps you could add a new link between
+two sites that had not previously been connected?
+This possibility is real, and it’s a topic that’s usually referred to as
+*traffic engineering*, a term that dates back to the early days of
+networking when operators would analyze the traffic workloads on their
+network, and periodically re-engineer their networks to add capacity
+when the existing links became chronically overloaded. In those early
+days, the decision to add capacity was not taken lightly; you needed to
+be sure the usage trend you observed was not just a passing blip since
+it would take a significant amount of time and money to change the
+network. In the worse case, it might involve laying cable across an
+ocean or launching a satellite into space.
+But with the advent of technologies like DWDM ([Section 3.1](../internetworking/switching.html#switching-basics)) and MPLS ([Section 4.4](../scaling/mpls.html#multiprotocol-label-switching)), we don’t always have to lay more fiber,
+but can instead turn on additional wavelengths or establish new circuits
+between any pair of sites. (These sites need not be directly connected
+by fiber. For example, a wavelength between Boston and San Francisco
+might run through ROADMs in Chicago and Denver, but from the perspective
+of the L2/L3 network topology, Boston and San Francisco are connected by
+a direct link.) This dramatically lowers the time-to-availability, but
+reconfiguring hardware still requires manual intervention, and so our
+definition of “instantly” is still measured in days, if not weeks.
+After all, there are requisition forms to be filled out, in triplicate!
+But as we have seen again and again, once you provide the right
+programmatic interfaces, software can be brought to bear on the problem,
+and “instantly” can, for all practical purposes, be truly instantaneous.
+This is effectively what cloud providers do with the private backbones
+they build to interconnect their datacenters. For example, Google has
+publicly described their private WAN, called B4, which is built entirely
+using bare-metal switches and SDN. B4 does not add/drop wavelengths to
+adjust inter-node bandwidth—it dynamically builds end-to-end tunnels
+using a technique called *Equal-Cost Multipath* (ECMP), an alternative
+to CSPF introduced in [Section 4.4](../scaling/mpls.html#multiprotocol-label-switching)—but the flexibility it affords is similar.
+A Traffic Engineering (TE) control program then provisions the network
+according to the needs of various classes of applications. B4 identifies
+three such classes: (1) copying user data (e.g., email, documents,
+audio/video) to remote datacenters for availability; (2) accessing
+remote storage by computations that run over distributed data sources;
+and (3) pushing large-scale data to synchronize state across multiple
+datacenters. These classes are ordered in increasing volume, decreasing
+latency sensitivity, and decreasing overall priority. For example,
+user-data represents the lowest volume on B4, is the most latency
+sensitive, and is of the highest priority.
+By centralizing the decision-making process, which is one of the claimed
+advantages of SDN, Google has been able to drive their link utilizations
+to near 100%. This is two to three times better than the 30-40% average
+utilization that WAN links are typically provisioned for, which is
+necessary to allow those networks to deal with both traffic bursts and
+link/switch failures. If you can centrally decide how to allocate
+resources across the entire network, it is possible to run the network
+much closer to maximum utilization. Keep in mind that provisioning links
+in the network is done for coarse-grain application classes. TCP
+congestion control still operates on a connection-by-connection basis,
+and routing decisions are still made on top of the B4 topology. (As an
+aside, it is worth noting that because B4 is a private WAN, Google is
+free to run their own congestion control algorithm, such as BBR, without
+fear that it will unfairly disadvantage other algorithms.)
+One lesson to take away from systems like B4 is that the line between
+traffic engineering and congestion control (as well as between traffic
+engineering and routing) is fuzzy. There are different mechanisms
+working to address the same general problem, and so there is no
+fixed-and-hard line that says where one mechanism stops and another
+begins. In short, layer boundaries become soft (and easy to move) when
+the layers are implemented in software rather than hardware. This is
+increasingly becoming the norm.
+Broader Perspective
+To continue reading about the cloudification of the Internet, see
+[Perspective: Big Data and Analytics](../data/trend.html#perspective-big-data-and-analytics).
+To learn more about the B4, we recommend: [B4: Experience with a
+Globally Deployed Software Defined
+WAN](https://cseweb.ucsd.edu/~vahdat/papers/b4-sigcomm13.pdf),
+August 2013.
+For a more comprehensive view of congestion control, including some
+of the newer developments related to TCP, see our companion book:
+[TCP Congestion Control: A Systems Approach](https://tcpcc.systemsapproach.org).
+        [ Previous](qos.html)
+        [Next ](../data.html)
+    © Copyright 2024.
+  Built with [Sphinx](https://www.sphinx-doc.org/) using a
+    [theme](https://github.com/readthedocs/sphinx_rtd_theme)
+    provided by [Read the Docs](https://readthedocs.org).

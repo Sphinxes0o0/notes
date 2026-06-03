@@ -72,5 +72,5 @@ somaxconn/net.core.somaxconn配置影响NIDS处理连接的能力
 
 - [[notes-net-deep]] — 网络深度笔记
 - [[notes-network-fundamentals]] — TCP/IP协议栈
-- [[wiki/entities/linux/snort3/snort3-flow]] — Snort3 flow tracking
+- [[entities/linux/snort3/snort3-flow]] — Snort3 flow tracking
 - [[reading-tcp-self-connection-plantegg]] — TCP自连接

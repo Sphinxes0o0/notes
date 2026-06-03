@@ -1,0 +1,1875 @@
+<!DOCTYPE html><html lang="zh"><head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>&#x5167;&#x8054;&#x6C47;&#x7F16; &#xB7; Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content>
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xinqiu">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-comment/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="https://gstatic.gitbook.com/images/b1c4c86ca817a71628d2debe73be9a64.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="linux-theory-2.html">
+    
+
+    
+<style>
+    .book .book-summary .book-search,
+    .book .book-summary ul.summary {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    .book-summary {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        overflow-y: auto;
+    }
+    .book-summary > nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+    .gl-wrapper {
+        margin: 0;
+        display: block;
+        padding: 0;
+        position: relative;
+        line-height: 15px;
+        background: #fafafa;
+    }
+    .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        background: -moz-linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+        top: -24px;
+        width: 100%;
+        height: 24px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(250,250,250,0) 0%, #fafafa 100%);
+    }
+    .book.color-theme-1 .gl-wrapper {
+        background: #121212;
+    }
+    .book.color-theme-1 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: -moz-linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 0%, #121212 100%);
+    }
+    .book.color-theme-2 .gl-wrapper {
+        background: #2e3243;
+    }
+    .book.color-theme-2 .gl-wrapper:before {
+        background: -webkit-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: -moz-linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+        background: linear-gradient(to bottom, rgba(46,50,67,0) 0%, #2e3243 100%);
+    }
+    .gl-wrapper .gitbook-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        color: #9DAAB6;
+        margin: 16px;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin-left: 32px;
+        padding-top: 8px;
+        padding-left: 16px;
+        border-radius: 3px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        background-color: #E6ECF1;
+        -webkit-box-align: center;
+    }
+    .gl-wrapper .tm-logo {
+        margin: 0;
+        display: block;
+        padding: 0;
+        font-size: 40px;
+    }
+    .gl-wrapper .tm-content {
+        flex: 1;
+        margin: 0;
+        display: block;
+        padding: 0;
+        padding-left: 16px;
+    }
+    .gl-wrapper .tm-content .container {
+        margin: 0;
+        display: block;
+        padding: 0;
+    }
+    .gl-wrapper .tm-content .tm-container .tm-text {
+        font-size: 12px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        line-height: 1.625;
+    }
+</style></head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="&#x8F38;&#x5165;&#x4E26;&#x641C;&#x5C0B;">
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://legacy.gitbook.com/book/xinqiu/linux-insides-cn" target="_blank" class="custom-link">Linux &#xAD;Insides&#xAD;&#x4E2D;&#x6587;</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Booting/">
+            
+                <a href="../Booting/">
+            
+                    
+                    &#x5F15;&#x5BFC;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Booting/linux-bootstrap-1.html">
+            
+                <a href="../Booting/linux-bootstrap-1.html">
+            
+                    
+                    &#x4ECE;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x5185;&#x6838;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Booting/linux-bootstrap-2.html">
+            
+                <a href="../Booting/linux-bootstrap-2.html">
+            
+                    
+                    &#x5728;&#x5185;&#x6838;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x7684;&#x7B2C;&#x4E00;&#x6B65;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Booting/linux-bootstrap-3.html">
+            
+                <a href="../Booting/linux-bootstrap-3.html">
+            
+                    
+                    &#x89C6;&#x9891;&#x6A21;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x548C;&#x8F6C;&#x6362;&#x5230;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Booting/linux-bootstrap-4.html">
+            
+                <a href="../Booting/linux-bootstrap-4.html">
+            
+                    
+                    &#x8FC7;&#x6E21;&#x5230; 64 &#x4F4D;&#x6A21;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Booting/linux-bootstrap-5.html">
+            
+                <a href="../Booting/linux-bootstrap-5.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x7F29;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Initialization/">
+            
+                <a href="../Initialization/">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Initialization/linux-initialization-1.html">
+            
+                <a href="../Initialization/linux-initialization-1.html">
+            
+                    
+                    &#x5185;&#x6838;&#x89E3;&#x538B;&#x4E4B;&#x540E;&#x7684;&#x9996;&#x8981;&#x6B65;&#x9AA4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Initialization/linux-initialization-2.html">
+            
+                <a href="../Initialization/linux-initialization-2.html">
+            
+                    
+                    &#x65E9;&#x671F;&#x7684;&#x4E2D;&#x65AD;&#x548C;&#x5F02;&#x5E38;&#x63A7;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Initialization/linux-initialization-3.html">
+            
+                <a href="../Initialization/linux-initialization-3.html">
+            
+                    
+                    &#x5728;&#x5230;&#x8FBE;&#x5185;&#x6838;&#x5165;&#x53E3;&#x4E4B;&#x524D;&#x6700;&#x540E;&#x7684;&#x51C6;&#x5907;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Initialization/linux-initialization-4.html">
+            
+                <a href="../Initialization/linux-initialization-4.html">
+            
+                    
+                    &#x5185;&#x6838;&#x5165;&#x53E3; - start_kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Initialization/linux-initialization-5.html">
+            
+                <a href="../Initialization/linux-initialization-5.html">
+            
+                    
+                    &#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Initialization/linux-initialization-6.html">
+            
+                <a href="../Initialization/linux-initialization-6.html">
+            
+                    
+                    &#x8FDB;&#x4E00;&#x6B65;&#x521D;&#x59CB;&#x5316;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Initialization/linux-initialization-7.html">
+            
+                <a href="../Initialization/linux-initialization-7.html">
+            
+                    
+                    &#x6700;&#x540E;&#x5BF9;&#x6307;&#x5B9A;&#x4F53;&#x7CFB;&#x67B6;&#x6784;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Initialization/linux-initialization-8.html">
+            
+                <a href="../Initialization/linux-initialization-8.html">
+            
+                    
+                    &#x8C03;&#x5EA6;&#x5668;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Initialization/linux-initialization-9.html">
+            
+                <a href="../Initialization/linux-initialization-9.html">
+            
+                    
+                    RCU &#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../Initialization/linux-initialization-10.html">
+            
+                <a href="../Initialization/linux-initialization-10.html">
+            
+                    
+                    &#x521D;&#x59CB;&#x5316;&#x7ED3;&#x675F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Interrupts/">
+            
+                <a href="../Interrupts/">
+            
+                    
+                    &#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Interrupts/linux-interrupts-1.html">
+            
+                <a href="../Interrupts/linux-interrupts-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x548C;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Interrupts/linux-interrupts-2.html">
+            
+                <a href="../Interrupts/linux-interrupts-2.html">
+            
+                    
+                    &#x6DF1;&#x5165; Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Interrupts/linux-interrupts-3.html">
+            
+                <a href="../Interrupts/linux-interrupts-3.html">
+            
+                    
+                    &#x521D;&#x6B65;&#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Interrupts/linux-interrupts-4.html">
+            
+                <a href="../Interrupts/linux-interrupts-4.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x5904;&#x7406;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Interrupts/linux-interrupts-5.html">
+            
+                <a href="../Interrupts/linux-interrupts-5.html">
+            
+                    
+                    &#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Interrupts/linux-interrupts-6.html">
+            
+                <a href="../Interrupts/linux-interrupts-6.html">
+            
+                    
+                    &#x5904;&#x7406;&#x4E0D;&#x53EF;&#x5C4F;&#x853D;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Interrupts/linux-interrupts-7.html">
+            
+                <a href="../Interrupts/linux-interrupts-7.html">
+            
+                    
+                    &#x6DF1;&#x5165;&#x5916;&#x90E8;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Interrupts/linux-interrupts-8.html">
+            
+                <a href="../Interrupts/linux-interrupts-8.html">
+            
+                    
+                    IRQs&#x7684;&#x975E;&#x65E9;&#x671F;&#x521D;&#x59CB;&#x5316;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../Interrupts/linux-interrupts-9.html">
+            
+                <a href="../Interrupts/linux-interrupts-9.html">
+            
+                    
+                    Softirq, Tasklets and Workqueues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../Interrupts/linux-interrupts-10.html">
+            
+                <a href="../Interrupts/linux-interrupts-10.html">
+            
+                    
+                    &#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SysCall/">
+            
+                <a href="../SysCall/">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../SysCall/linux-syscall-1.html">
+            
+                <a href="../SysCall/linux-syscall-1.html">
+            
+                    
+                    &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6982;&#x5FF5;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../SysCall/linux-syscall-2.html">
+            
+                <a href="../SysCall/linux-syscall-2.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../SysCall/linux-syscall-3.html">
+            
+                <a href="../SysCall/linux-syscall-3.html">
+            
+                    
+                    vsyscall and vDSO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../SysCall/linux-syscall-4.html">
+            
+                <a href="../SysCall/linux-syscall-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../SysCall/linux-syscall-5.html">
+            
+                <a href="../SysCall/linux-syscall-5.html">
+            
+                    
+                    open &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x5B9E;&#x73B0;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../SysCall/linux-syscall-6.html">
+            
+                <span>
+            
+                    
+                    Linux &#x8D44;&#x6E90;&#x9650;&#x5236;
+            
+                
+            
+
+            
+        </span></li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Timers/">
+            
+                <a href="../Timers/">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x548C;&#x65F6;&#x949F;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Timers/linux-timers-1.html">
+            
+                <a href="../Timers/linux-timers-1.html">
+            
+                    
+                    &#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Timers/linux-timers-2.html">
+            
+                <a href="../Timers/linux-timers-2.html">
+            
+                    
+                    &#x65F6;&#x949F;&#x6E90;&#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Timers/linux-timers-3.html">
+            
+                <a href="../Timers/linux-timers-3.html">
+            
+                    
+                    The tick broadcast framework and dyntick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Timers/linux-timers-4.html">
+            
+                <a href="../Timers/linux-timers-4.html">
+            
+                    
+                    &#x5B9A;&#x65F6;&#x5668;&#x4ECB;&#x7ECD;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Timers/linux-timers-5.html">
+            
+                <a href="../Timers/linux-timers-5.html">
+            
+                    
+                    Clockevents &#x6846;&#x67B6;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Timers/linux-timers-6.html">
+            
+                <a href="../Timers/linux-timers-6.html">
+            
+                    
+                    x86 &#x76F8;&#x5173;&#x7684;&#x65F6;&#x949F;&#x6E90;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Timers/linux-timers-7.html">
+            
+                <a href="../Timers/linux-timers-7.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x4E0E;&#x65F6;&#x949F;&#x76F8;&#x5173;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SyncPrim/">
+            
+                <a href="../SyncPrim/">
+            
+                    
+                    &#x540C;&#x6B65;&#x539F;&#x8BED;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SyncPrim/linux-sync-1.html">
+            
+                <a href="../SyncPrim/linux-sync-1.html">
+            
+                    
+                    &#x81EA;&#x65CB;&#x9501;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SyncPrim/linux-sync-2.html">
+            
+                <a href="../SyncPrim/linux-sync-2.html">
+            
+                    
+                    &#x961F;&#x5217;&#x81EA;&#x65CB;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SyncPrim/linux-sync-3.html">
+            
+                <a href="../SyncPrim/linux-sync-3.html">
+            
+                    
+                    &#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SyncPrim/linux-sync-4.html">
+            
+                <a href="../SyncPrim/linux-sync-4.html">
+            
+                    
+                    &#x4E92;&#x65A5;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SyncPrim/linux-sync-5.html">
+            
+                <a href="../SyncPrim/linux-sync-5.html">
+            
+                    
+                    &#x8BFB;&#x8005;/&#x5199;&#x8005;&#x4FE1;&#x53F7;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SyncPrim/linux-sync-6.html">
+            
+                <a href="../SyncPrim/linux-sync-6.html">
+            
+                    
+                    &#x987A;&#x5E8F;&#x9501;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7">
+            
+                <span>
+            
+                    
+                    RCU
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8">
+            
+                <span>
+            
+                    
+                    Lockdep
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../MM/">
+            
+                <a href="../MM/">
+            
+                    
+                    &#x5185;&#x5B58;&#x7BA1;&#x7406;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../MM/linux-mm-1.html">
+            
+                <a href="../MM/linux-mm-1.html">
+            
+                    
+                    &#x5185;&#x5B58;&#x5757;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../MM/linux-mm-2.html">
+            
+                <a href="../MM/linux-mm-2.html">
+            
+                    
+                    &#x56FA;&#x5B9A;&#x6620;&#x5C04;&#x5730;&#x5740;&#x548C; ioremap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../MM/linux-mm-3.html">
+            
+                <a href="../MM/linux-mm-3.html">
+            
+                    
+                    kmemcheck
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cgroups/">
+            
+                <a href="../Cgroups/">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Cgroups/linux-cgroups-1.html">
+            
+                <a href="../Cgroups/linux-cgroups-1.html">
+            
+                    
+                    &#x63A7;&#x5236;&#x7EC4;&#x7B80;&#x4ECB;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10">
+            
+                <span>
+            
+                    
+                    SMP
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Concepts/">
+            
+                <a href="../Concepts/">
+            
+                    
+                    &#x6982;&#x5FF5;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Concepts/linux-cpu-1.html">
+            
+                <a href="../Concepts/linux-cpu-1.html">
+            
+                    
+                    &#x6BCF;&#x4E2A; CPU &#x7684;&#x53D8;&#x91CF;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Concepts/linux-cpu-2.html">
+            
+                <a href="../Concepts/linux-cpu-2.html">
+            
+                    
+                    CPU &#x63A9;&#x7801;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Concepts/linux-cpu-3.html">
+            
+                <a href="../Concepts/linux-cpu-3.html">
+            
+                    
+                    initcall &#x673A;&#x5236;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Concepts/linux-cpu-4.html">
+            
+                <a href="../Concepts/linux-cpu-4.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x7684;&#x901A;&#x77E5;&#x94FE;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../DataStructures/">
+            
+                <a href="../DataStructures/">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../DataStructures/linux-datastructures-1.html">
+            
+                <a href="../DataStructures/linux-datastructures-1.html">
+            
+                    
+                    &#x53CC;&#x5411;&#x94FE;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../DataStructures/linux-datastructures-2.html">
+            
+                <a href="../DataStructures/linux-datastructures-2.html">
+            
+                    
+                    &#x57FA;&#x6570;&#x6811;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../DataStructures/linux-datastructures-3.html">
+            
+                <a href="../DataStructures/linux-datastructures-3.html">
+            
+                    
+                    &#x4F4D;&#x6570;&#x7EC4;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    &#x7406;&#x8BBA;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="linux-theory-1.html">
+            
+                <a href="linux-theory-1.html">
+            
+                    
+                    &#x5206;&#x9875;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="linux-theory-2.html">
+            
+                <a href="linux-theory-2.html">
+            
+                    
+                    ELF &#x6587;&#x4EF6;&#x683C;&#x5F0F;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13.3" data-path="linux-theory-3.html">
+            
+                <a href="linux-theory-3.html">
+            
+                    
+                    &#x5167;&#x8054;&#x6C47;&#x7F16;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4">
+            
+                <span>
+            
+                    
+                    CPUID
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5">
+            
+                <span>
+            
+                    
+                    MSR
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14">
+            
+                <span>
+            
+                    
+                    Initial ram disk
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1">
+            
+                <span>
+            
+                    
+                    initrd
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Misc/">
+            
+                <a href="../Misc/">
+            
+                    
+                    &#x6742;&#x9879;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../Misc/linux-misc-1.html">
+            
+                <a href="../Misc/linux-misc-1.html">
+            
+                    
+                    Linux &#x5185;&#x6838;&#x5F00;&#x53D1;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../Misc/linux-misc-2.html">
+            
+                <a href="../Misc/linux-misc-2.html">
+            
+                    
+                    &#x5185;&#x6838;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../Misc/linux-misc-3.html">
+            
+                <a href="../Misc/linux-misc-3.html">
+            
+                    
+                    &#x94FE;&#x63A5;&#x5668;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../Misc/linux-misc-4.html">
+            
+                <a href="../Misc/linux-misc-4.html">
+            
+                    
+                    &#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x8FC7;&#x7A0B;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5">
+            
+                <span>
+            
+                    
+                    &#x4E66;&#x5199;&#x5E76;&#x63D0;&#x4EA4;&#x4F60;&#x7B2C;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x8865;&#x4E01;
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../KernelStructures/">
+            
+                <a href="../KernelStructures/">
+            
+                    
+                    &#x5185;&#x6838;&#x6570;&#x636E;&#x7ED3;&#x6784;
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../KernelStructures/linux-kernelstructure-1.html">
+            
+                <a href="../KernelStructures/linux-kernelstructure-1.html">
+            
+                    
+                    &#x4E2D;&#x65AD;&#x63CF;&#x8FF0;&#x7B26;&#x8868;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../LINKS.html">
+            
+                <a href="../LINKS.html">
+            
+                    
+                    &#x6709;&#x5E2E;&#x52A9;&#x7684;&#x94FE;&#x63A5;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../CONTRIBUTORS.html">
+            
+                <a href="../CONTRIBUTORS.html">
+            
+                    
+                    &#x8D21;&#x732E;&#x8005;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    
+<div class="gl-wrapper">
+    <a class="gitbook-link" href="https://www.gitbook.com?utm_source=public_site_legacy&amp;utm_medium=referral&amp;utm_campaign=trademark&amp;utm_term=xinqiu&amp;utm_content=powered_by" target="blank">
+        <div class="tm-logo">
+            <svg preserveAspectRatio="xMidYMid meet" height="1em" width="1em" fill="currentColor" viewBox="0 0 1067 769" xmlns="http://www.w3.org/2000/svg" stroke="none" class="icon-7f6730be--text-3f89f380"><g><path d="M480.026 640.677c17.205 0 31.2 13.997 31.2 31.194s-13.995 31.193-31.2 31.193c-17.197 0-31.193-13.996-31.193-31.193 0-17.197 13.996-31.194 31.193-31.194m489.93-193.226c-17.203 0-31.2-13.998-31.2-31.195 0-17.204 13.997-31.2 31.2-31.2 17.198 0 31.194 13.996 31.194 31.2 0 17.197-13.996 31.195-31.193 31.195m0-127.804c-53.269 0-96.609 43.34-96.609 96.609 0 10.373 1.723 20.702 5.123 30.741L559.328 616.879c-18.132-26.128-47.521-41.617-79.302-41.617-36.821 0-70.391 21.065-86.63 54.003L106.68 478.109c-30.288-15.927-52.965-65.817-50.56-111.223 1.248-23.687 9.438-42.071 21.897-49.17 7.916-4.493 17.436-4.099 27.526 1.188l1.916 1.01c75.96 40.022 324.6 170.981 335.063 175.844 16.157 7.47 25.14 10.5 52.659-2.547l513.958-267.3c7.53-2.844 16.315-10.062 16.315-21.023 0-15.205-15.72-21.199-15.765-21.199-29.218-14.018-74.163-35.054-117.987-55.57C798.033 84.26 691.861 34.547 645.23 10.132c-40.253-21.072-72.655-3.311-78.432.282l-11.227 5.555C345.727 119.743 64.898 258.826 48.911 268.553 20.278 285.973 2.547 320.679.252 363.768c-3.586 68.304 31.261 139.506 81.069 165.634l303.172 156.354c6.83 47.306 47.55 82.725 95.532 82.725 52.78 0 95.808-42.546 96.603-95.14L910.541 492.38c16.93 13.233 37.92 20.486 59.416 20.486 53.268 0 96.61-43.341 96.61-96.61s-43.342-96.61-96.61-96.61" fill-rule="evenodd"/></g></svg>
+        </div>
+        <div class="tm-content">
+            <div class="tm-container">
+                <span class="tm-text">
+                    Powered by <b>GitBook</b>
+                </span>
+            </div>
+        </div>
+    </a>
+</div></div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="..">&#x5167;&#x8054;&#x6C47;&#x7F16;</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="inline-assembly">Inline assembly</h1>
+<h2 id="introduction">Introduction</h2>
+<p>While reading source code in the <a href="https://github.com/torvalds/linux" target="_blank">Linux kernel</a>, I often see statements like this:</p>
+<pre><code class="lang-C">__asm__(<span class="hljs-string">&quot;andq %%rsp,%0; &quot;</span>:<span class="hljs-string">&quot;=r&quot;</span> (ti) : <span class="hljs-string">&quot;0&quot;</span> (CURRENT_MASK));
+</code></pre>
+<p>Yes, this is <a href="https://en.wikipedia.org/wiki/Inline_assembler" target="_blank">inline assembly</a> or in other words assembler code which is integrated in a high level programming language. In this case the high level programming language is <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29" target="_blank">C</a>. Yes, the <code>C</code> programming language is not very high-level, but still.</p>
+<p>If you are familiar with the <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">assembly</a> programming language, you may notice that <code>inline assembly</code> is not very different from normal assembler. Moreover, the special form of inline assembly which is called <code>basic form</code> is exactly the same. For example:</p>
+<pre><code class="lang-C">__asm__(<span class="hljs-string">&quot;movq %rax, %rsp&quot;</span>);
+</code></pre>
+<p>or:</p>
+<pre><code class="lang-C">__asm__(<span class="hljs-string">&quot;hlt&quot;</span>);
+</code></pre>
+<p>The same code (of course without <code>__asm__</code> prefix) you might see in plain assembly code. Yes, this is very similar, but not so simple as it might seem at first glance. Actually, the <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">GCC</a> supports two forms of inline assembly statements:</p>
+<ul>
+<li><code>basic</code>;</li>
+<li><code>extended</code>.</li>
+</ul>
+<p>The basic form consists of only two things: the <code>__asm__</code> keyword and the string with valid assembler instructions. For example it may look something like this:</p>
+<pre><code class="lang-C">__asm__(<span class="hljs-string">&quot;movq    $3, %rax\t\n&quot;</span>
+        <span class="hljs-string">&quot;movq    %rsi, %rdi&quot;</span>);
+</code></pre>
+<p>The <code>asm</code> keyword may be used in place of <code>__asm__</code>, however <code>__asm__</code> is portable whereas the <code>asm</code> keyword is a <code>GNU</code> <a href="https://gcc.gnu.org/onlinedocs/gcc/C-Extensions.html" target="_blank">extension</a>. In further examples I will only use the <code>__asm__</code> variant.</p>
+<p>If you know assembly programming language this looks pretty familiar. The main problem is in the second form of inline assembly statements - <code>extended</code>. This form allows us to pass parameters to an assembly statement, perform <a href="https://en.wikipedia.org/wiki/Branch_%28computer_science%29" target="_blank">jumps</a> etc. Does not sound difficult, but requires knowledge of special rules in addition to knowledge of the assembly language. Every time I see yet another piece of inline assembly code in the Linux kernel, I need to refer to the official <a href="https://gcc.gnu.org/onlinedocs/" target="_blank">documentation</a> of <code>GCC</code> to remember how a particular <code>qualifier</code> behaves or what the meaning of <code>=&amp;r</code> is for example.</p>
+<p>I&apos;ve decided to write this part to consolidate my knowledge related to the inline assembly, as inline assembly statements are quite common in the Linux kernel and we may see them in <a href="https://0xax.gitbooks.io/linux-insides/content/" target="_blank">linux-insides</a> parts sometimes. I thought that it would be useful if we have a special part which contains information on more important aspects of the inline assembly. Of course you may find comprehensive information about inline assembly in the official <a href="https://gcc.gnu.org/onlinedocs/gcc/Using-Assembly-Language-with-C.html#Using-Assembly-Language-with-C" target="_blank">documentation</a>, but I like to put everything in one place.</p>
+<p><strong> Note: This part will not provide guide for assembly programming. It is not intended to teach you to write programs with assembler or to know what one or another assembler instruction means. Just a little memo for extended asm. </strong></p>
+<h2 id="introduction-to-extended-inline-assembly">Introduction to extended inline assembly</h2>
+<p>So, let&apos;s start. As I already mentioned above, the <code>basic</code> assembly statement consists of the <code>asm</code> or <code>__asm__</code> keyword and set of assembly instructions. This form is in no way different from &quot;normal&quot; assembly. The most interesting part is inline assembler with operands, or <code>extended</code> assembler. An extended assembly statement looks more complicated and consists of more than two parts:</p>
+<pre><code class="lang-assembly">__asm__ [volatile] [goto] (AssemblerTemplate
+                           [ : OutputOperands ]
+                           [ : InputOperands  ]
+                           [ : Clobbers       ]
+                           [ : GotoLabels     ]);
+</code></pre>
+<p>All parameters which are marked with squared brackets are optional. You may notice that if we skip the optional parameters and the modifiers <code>volatile</code> and <code>goto</code> we obtain the <code>basic</code> form. </p>
+<p>Let&apos;s start to consider this in order. The first optional <code>qualifier</code> is <code>volatile</code>. This specifier tells the compiler that an assembly statement may produce <code>side effects</code>. In this case we need to prevent compiler optimizations related to the given assembly statement. In simple terms the <code>volatile</code> specifier instructs the compiler not to modify the statement and place it exactly where it was in the original code. As an example let&apos;s look at the following function from the <a href="https://github.com/torvalds/linux/blob/16f73eb02d7e1765ccab3d2018e0bd98eb93d973/arch/x86/include/asm/desc.h" target="_blank">Linux kernel</a>:</p>
+<pre><code class="lang-C">static inline void native_load_gdt(const struct desc_ptr *dtr)
+{
+    asm volatile(&quot;lgdt %0&quot;::&quot;m&quot; (*dtr));
+}
+</code></pre>
+<p>Here we see the <code>native_load_gdt</code> function which loads a base address from the <a href="https://en.wikipedia.org/wiki/Global_Descriptor_Table" target="_blank">Global Descriptor Table</a> to the <code>GDTR</code> register with the <code>lgdt</code> instruction. This assembly statement is marked with <code>volatile</code> qualifier. It is very important that the compiler does not change the original place of this assembly statement in the resulting code. Otherwise the <code>GDTR</code> register may contain wrong address for the <code>Global Descriptor Table</code> or the address may be correct, but the structure has not been filled yet. This can lead to an exception being generated, preventing the kernel from booting correctly.</p>
+<p>The second optional <code>qualifier</code> is the <code>goto</code>. This qualifier tells the compiler that the given assembly statement may perform a jump to one of the labels which are listed in the <code>GotoLabels</code>. For example:</p>
+<pre><code class="lang-C">__<span class="hljs-function">asm__ <span class="hljs-title">goto</span><span class="hljs-params">(<span class="hljs-string">&quot;jmp %l[label]&quot;</span> : : : : label)</span></span>;
+</code></pre>
+<p>Since we finished with these two qualifiers, let&apos;s look at the main part of an assembly statement body. As we have seen above, the main part of an assembly statement consists of the following four parts:</p>
+<ul>
+<li>set of assembly instructions;</li>
+<li>output parameters;</li>
+<li>input parameters;</li>
+<li>clobbers.</li>
+</ul>
+<p>The first represents a string which contains a set of valid assembly instructions which may be separated by the <code>\t\n</code> sequence. Names of processor <a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank">registers</a> must be prefixed with the <code>%%</code> sequence in <code>extended</code> form and other symbols like immediates must start with the <code>$</code> symbol. The <code>OutputOperands</code> and <code>InputOperands</code> are comma-separated lists of <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29" target="_blank">C</a> variables which may be provided with &quot;constraints&quot; and the <code>Clobbers</code> is a list of registers or other values which are modified by the assembler instructions from the <code>AssemblerTemplate</code> beyond those listed in the <code>OutputOperands</code>. Before we dive into the examples we have to know a little bit about <code>constraints</code>. A constraint is a string which specifies placement of an operand. For example the value of an operand may be written to a processor register or read from memory etc.</p>
+<p>Consider the following simple example:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> a = <span class="hljs-number">5</span>;
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> b = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> sum = <span class="hljs-number">0</span>;
+
+        __asm__(<span class="hljs-string">&quot;addq %1,%2&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span> (sum) : <span class="hljs-string">&quot;r&quot;</span> (a), <span class="hljs-string">&quot;0&quot;</span> (b));
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a + b = %lu\n&quot;</span>, sum);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>Let&apos;s compile and run it to be sure that it works as expected:</p>
+<pre><code>$ gcc test.c -o test
+./test
+a + b = 15
+</code></pre><p>Ok, great. It works. Now let&apos;s look at this example in detail. Here we see a simple <code>C</code> program which calculates the sum of two variables placing the result into the <code>sum</code> variable and in the end we print the result. This example consists of three parts. The first is the assembly statement with the <a href="http://x86.renejeschke.de/html/file_module_x86_id_5.html" target="_blank">add</a> instruction. It adds the value of the source operand together with the value of the destination operand and stores the result in the destination operand. In our case:</p>
+<pre><code class="lang-assembly">addq %1, %2
+</code></pre>
+<p>will be expanded to the:</p>
+<pre><code class="lang-assembly">addq a, b
+</code></pre>
+<p>Variables and expressions which are listed in the <code>OutputOperands</code> and <code>InputOperands</code> may be matched in the <code>AssemblerTemplate</code>. An input/output operand is designated as <code>%N</code> where the <code>N</code> is the number of operand from left to right beginning from <code>zero</code>. The second part of the our assembly statement is located after the first <code>:</code> symbol and contains the definition of the output value:</p>
+<pre><code class="lang-assembly">&quot;=r&quot; (sum)
+</code></pre>
+<p>Notice that the <code>sum</code> is marked with two special symbols: <code>=r</code>. This is the first constraint that we have encountered. The actual constraint here is only <code>r</code> itself. The <code>=</code> symbol is <code>modifier</code> which denotes output value. This tells to compiler that the previous value will be discarded and replaced by the new data. Besides the <code>=</code> modifier, <code>GCC</code> provides support for following three modifiers:</p>
+<ul>
+<li><code>+</code> - an operand is read and written by an instruction;</li>
+<li><code>&amp;</code> - output register shouldn&apos;t overlap an input register and should be used only for output;</li>
+<li><code>%</code> - tells the compiler that operands may be <a href="https://en.wikipedia.org/wiki/Commutative_property" target="_blank">commutative</a>.</li>
+</ul>
+<p>Now let&apos;s go back to the <code>r</code> qualifier. As I mentioned above, a qualifier denotes the placement of an operand. The <code>r</code> symbol means a value will be stored in one of the <a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank">general purpose register</a>. The last part of our assembly statement:</p>
+<pre><code class="lang-assembly">&quot;r&quot; (a), &quot;0&quot; (b)
+</code></pre>
+<p>These are input operands - variables <code>a</code> and <code>b</code>. We already know what the <code>r</code> qualifier does. Now we can have a look at the constraint for the variable <code>b</code>. The <code>0</code> or any other digit from <code>1</code> to <code>9</code> is called &quot;matching constraint&quot;. With this a single operand can be used for multiple roles. The value of the constraint is the source operand index. In our case <code>0</code> will match <code>sum</code>. If we look at assembly output of our program:</p>
+<pre><code class="lang-C"><span class="hljs-number">0000000000400400</span> &lt;main&gt;:
+  ...
+  ...
+  ...
+  <span class="hljs-number">4004f</span>e:       <span class="hljs-number">48</span> c7 <span class="hljs-number">45</span> f8 <span class="hljs-number">05</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span>    movq   $<span class="hljs-number">0x5</span>,<span class="hljs-number">-0x8</span>(%rbp)
+  <span class="hljs-number">400506</span>:       <span class="hljs-number">48</span> c7 <span class="hljs-number">45</span> f0 <span class="hljs-number">0</span>a <span class="hljs-number">00</span> <span class="hljs-number">00</span>    movq   $<span class="hljs-number">0xa</span>,<span class="hljs-number">-0x10</span>(%rbp)
+
+  <span class="hljs-number">400516</span>:       <span class="hljs-number">48</span> <span class="hljs-number">8</span>b <span class="hljs-number">55</span> f8             mov    <span class="hljs-number">-0x8</span>(%rbp),%rdx
+  <span class="hljs-number">40051</span>a:       <span class="hljs-number">48</span> <span class="hljs-number">8</span>b <span class="hljs-number">45</span> f0             mov    <span class="hljs-number">-0x10</span>(%rbp),%rax
+  <span class="hljs-number">40051</span>e:       <span class="hljs-number">48</span> <span class="hljs-number">01</span> d0                add    %rdx,%rax
+</code></pre>
+<p>First of all our values <code>5</code> and <code>10</code> will be put at the stack and then these values will be moved to the two general purpose registers: <code>%rdx</code> and <code>%rax</code>.</p>
+<p>This way the <code>%rax</code> register is used for storing the value of the <code>b</code> as well as storing the result of the calculation. <strong>NOTE</strong> that I&apos;ve used <code>gcc 6.3.1</code> version, so the resulted code of your compiler may differ. </p>
+<p>We have looked at input and output parameters of an inline assembly statement. Before we move on to other constraints supported by <code>gcc</code>, there is one remaining part of the inline assembly statement we have not discussed yet - <code>clobbers</code>.</p>
+<h2 id="clobbers">Clobbers</h2>
+<p>As mentioned above, the &quot;clobbered&quot; part should contain a comma-separated list of registers whose content will be modified by the assembler code. This is useful if our assembly expression needs additional registers for calculation. If we add clobbered registers to the inline assembly statement, the compiler take this into account and the register in question will not simultaneously be used by the compiler.</p>
+<p>Consider the example from before, but we will add an additional, simple assembler instruction:</p>
+<pre><code class="lang-C">__asm__(<span class="hljs-string">&quot;movq $100, %%rdx\t\n&quot;</span>
+        <span class="hljs-string">&quot;addq %1,%2&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span> (sum) : <span class="hljs-string">&quot;r&quot;</span> (a), <span class="hljs-string">&quot;0&quot;</span> (b));
+</code></pre>
+<p>If we look at the assembly output:</p>
+<pre><code class="lang-C"><span class="hljs-number">0000000000400400</span> &lt;main&gt;:
+  ...
+  ...
+  ...
+  <span class="hljs-number">4004f</span>e:       <span class="hljs-number">48</span> c7 <span class="hljs-number">45</span> f8 <span class="hljs-number">05</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span>    movq   $<span class="hljs-number">0x5</span>,<span class="hljs-number">-0x8</span>(%rbp)
+  <span class="hljs-number">400506</span>:       <span class="hljs-number">48</span> c7 <span class="hljs-number">45</span> f0 <span class="hljs-number">0</span>a <span class="hljs-number">00</span> <span class="hljs-number">00</span>    movq   $<span class="hljs-number">0xa</span>,<span class="hljs-number">-0x10</span>(%rbp)
+
+  <span class="hljs-number">400516</span>:       <span class="hljs-number">48</span> <span class="hljs-number">8</span>b <span class="hljs-number">55</span> f8             mov    <span class="hljs-number">-0x8</span>(%rbp),%rdx
+  <span class="hljs-number">40051</span>a:       <span class="hljs-number">48</span> <span class="hljs-number">8</span>b <span class="hljs-number">45</span> f0             mov    <span class="hljs-number">-0x10</span>(%rbp),%rax
+
+  <span class="hljs-number">40051</span>e:       <span class="hljs-number">48</span> c7 c2 <span class="hljs-number">64</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span>    mov    $<span class="hljs-number">0x64</span>,%rdx
+  <span class="hljs-number">400525</span>:       <span class="hljs-number">48</span> <span class="hljs-number">01</span> d0                add    %rdx,%rax
+</code></pre>
+<p>we will see that the <code>%rdx</code> register is overwritten with <code>0x64</code> or <code>100</code> and the result will be <code>110</code> instead of <code>10</code>. Now if we add the <code>%rdx</code> register to the list of <code>clobbered</code> registers:</p>
+<pre><code class="lang-C">__asm__(<span class="hljs-string">&quot;movq $100, %%rdx\t\n&quot;</span>
+        <span class="hljs-string">&quot;addq %1,%2&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span> (sum) : <span class="hljs-string">&quot;r&quot;</span> (a), <span class="hljs-string">&quot;0&quot;</span> (b) : <span class="hljs-string">&quot;%rdx&quot;</span>);
+</code></pre>
+<p>and look at the assembler output again:</p>
+<pre><code class="lang-C"><span class="hljs-number">0000000000400400</span> &lt;main&gt;:
+  <span class="hljs-number">4004f</span>e:       <span class="hljs-number">48</span> c7 <span class="hljs-number">45</span> f8 <span class="hljs-number">05</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span>    movq   $<span class="hljs-number">0x5</span>,<span class="hljs-number">-0x8</span>(%rbp)
+  <span class="hljs-number">400506</span>:       <span class="hljs-number">48</span> c7 <span class="hljs-number">45</span> f0 <span class="hljs-number">0</span>a <span class="hljs-number">00</span> <span class="hljs-number">00</span>    movq   $<span class="hljs-number">0xa</span>,<span class="hljs-number">-0x10</span>(%rbp)
+
+  <span class="hljs-number">400516</span>:       <span class="hljs-number">48</span> <span class="hljs-number">8</span>b <span class="hljs-number">4</span>d f8             mov    <span class="hljs-number">-0x8</span>(%rbp),%rcx
+  <span class="hljs-number">40051</span>a:       <span class="hljs-number">48</span> <span class="hljs-number">8</span>b <span class="hljs-number">45</span> f0             mov    <span class="hljs-number">-0x10</span>(%rbp),%rax
+
+  <span class="hljs-number">40051</span>e:       <span class="hljs-number">48</span> c7 c2 <span class="hljs-number">64</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span>    mov    $<span class="hljs-number">0x64</span>,%rdx
+  <span class="hljs-number">400525</span>:       <span class="hljs-number">48</span> <span class="hljs-number">01</span> c8                add    %rcx,%rax
+</code></pre>
+<p>the <code>%rcx</code> register will be used for <code>sum</code> calculation, preserving the intended semantics of the program. Besides general purpose registers, we may pass two special specifiers. They are:</p>
+<ul>
+<li><code>cc</code>;</li>
+<li><code>memory</code>.</li>
+</ul>
+<p>The first - <code>cc</code> indicates that an assembler code modifies <a href="https://en.wikipedia.org/wiki/FLAGS_register" target="_blank">flags</a> register. This is typically used if the assembly within contains arithmetic or logic instructions:</p>
+<pre><code class="lang-C">__asm__(<span class="hljs-string">&quot;incq %0&quot;</span> ::<span class="hljs-string">&quot;&quot;</span>(variable): <span class="hljs-string">&quot;cc&quot;</span>);
+</code></pre>
+<p>The second <code>memory</code> specifier tells the compiler that the given inline assembly statement executes read/write operations on memory not specified by operands in the output list. This prevents the compiler from keeping memory values loaded and cached in registers. Let&apos;s take a look at the following example:</p>
+<pre><code class="lang-C">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+        unsigned long a[3] = {10000000000, 0, 1};
+        unsigned long b = 5;
+
+        __asm__ volatile(&quot;incq %0&quot; :: &quot;m&quot; (a[0]));
+
+        printf(&quot;a[0] - b = %lu\n&quot;, a[0] - b);
+        return 0;
+}
+</code></pre>
+<p>This example may be artificial, but it illustrates the main idea. Here we have an array of integers and one integer variable. The example is pretty simple, we take the first element of <code>a</code> and increment its value. After this we subtract the value of <code>b</code> from the  first element of <code>a</code>. In the end we print the result. If we compile and run this simple example the result may surprise you:</p>
+<pre><code>~$ gcc -O3  test.c -o test
+~$ ./test
+a[0] - b = 9999999995
+</code></pre><p>The result is <code>a[0] - b = 9999999995</code> here, but why? We incremented <code>a[0]</code> and subtracted <code>b</code>, so the result should be <code>a[0] - b = 9999999996</code> here.</p>
+<p>If we have a look at the assembler output for this example:</p>
+<pre><code class="lang-assembly">00000000004004f6 &lt;main&gt;:
+  4004b4:       48 b8 00 e4 0b 54 02    movabs $0x2540be400,%rax
+  4004be:       48 89 04 24             mov    %rax,(%rsp)
+  ...
+  ...
+  ...
+  40050e:       ff 44 24 f0             incq   (%rsp)
+
+  4004d8:       48 be fb e3 0b 54 02    movabs $0x2540be3fb,%rsi
+</code></pre>
+<p>we will see that the first element of the <code>a</code> contains the value <code>0x2540be400</code> (<code>10000000000</code>). The last two lines of code are the actual calculations.</p>
+<p>We see our increment instruction with <code>incq</code> but then just a move of <code>0x2540be3fb</code> (<code>9999999995</code>) to the <code>%rsi</code> register. This looks strange.</p>
+<p>The problem is we have passed the <code>-O3</code> flag to <code>gcc</code>, so the compiler did some constant folding and propagation to determine the result of <code>a[0] - 5</code> at compile time and reduced it to a <code>movabs</code> with a constant <code>0x2540be3fb</code> or <code>9999999995</code> in runtime.</p>
+<p>Let&apos;s now add <code>memory</code> to the clobbers list:</p>
+<pre><code class="lang-C">__asm__ volatile(&quot;incq %0&quot; :: &quot;m&quot; (a[0]) : &quot;memory&quot;);
+</code></pre>
+<p>and the new result of running this is:</p>
+<pre><code>~$ gcc -O3  test.c -o test
+~$ ./test
+a[0] - b = 9999999996
+</code></pre><p>Now the result is correct. If we look at the assembly output again:</p>
+<pre><code class="lang-assembly">00000000004004f6 &lt;main&gt;:
+  400404:       48 b8 00 e4 0b 54 02    movabs $0x2540be400,%rax
+  40040b:       00 00 00 
+  40040e:       48 89 04 24             mov    %rax,(%rsp)
+  400412:       48 c7 44 24 08 00 00    movq   $0x0,0x8(%rsp)
+  400419:       00 00 
+  40041b:       48 c7 44 24 10 01 00    movq   $0x1,0x10(%rsp)
+  400422:       00 00 
+  400424:       48 ff 04 24             incq   (%rsp)
+  400428:       48 8b 04 24             mov    (%rsp),%rax
+  400431:       48 8d 70 fb             lea    -0x5(%rax),%rsi
+</code></pre>
+<p>we will see one difference here which is in the last two lines:</p>
+<pre><code class="lang-assembly">  400428:       48 8b 04 24             mov    (%rsp),%rax
+  400431:       48 8d 70 fb             lea    -0x5(%rax),%rsi
+</code></pre>
+<p>Instead of constant folding, <code>GCC</code> now preserves calculations in the assembly and places the value of <code>a[0]</code> in the <code>%rax</code> register afterwards. In the end it just subtracts the constant value of <code>b</code> from the <code>%rax</code> register and puts result to the <code>%rsi</code>.</p>
+<p>Besides the <code>memory</code> specifier, we also see a new constraint here - <code>m</code>. This constraint tells the compiler to use the address of <code>a[0]</code>, instead of its value. So, now we are finished with <code>clobbers</code> and we may continue by looking at other constraints supported by <code>GCC</code> besides <code>r</code> and <code>m</code> which we have already seen.</p>
+<h2 id="constraints">Constraints</h2>
+<p>Now that we are finished with all three parts of an inline assembly statement, let&apos;s return to constraints. We already saw some constraints in the previous parts, like <code>r</code> which represents a <code>register</code> operand, <code>m</code> which represents a memory operand and <code>0-9</code> which represent an reused, indexed operand. Besides these <code>GCC</code> provides support for other constraints. For example the <code>i</code> constraint represents an <code>immediate</code> integer operand with know value:</p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">0</span>;
+
+        __asm__(<span class="hljs-string">&quot;movl %1, %0&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span>(a) : <span class="hljs-string">&quot;i&quot;</span>(<span class="hljs-number">100</span>));
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d\n&quot;</span>, a);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>The result is:</p>
+<pre><code>~$ gcc test.c -o test
+~$ ./test
+a = 100
+</code></pre><p>Or for example <code>I</code> which represents an immediate 32-bit integer. The difference between <code>i</code> and <code>I</code> is that <code>i</code> is general, whereas <code>I</code> is strictly specified to 32-bit integer data. For example if you try to compile the following code:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-title">test_asm</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nr)</span>
+</span>{
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> a = <span class="hljs-number">0</span>;
+
+        __asm__(<span class="hljs-string">&quot;movq %1, %0&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span>(a) : <span class="hljs-string">&quot;I&quot;</span>(<span class="hljs-number">0xffffffffffff</span>));
+        <span class="hljs-keyword">return</span> a;
+}
+</code></pre>
+<p>you will get an error:</p>
+<pre><code>$ gcc -O3 test.c -o test
+test.c: In function &#x2018;test_asm&#x2019;:
+test.c:7:9: warning: asm operand 1 probably doesn&#x2019;t match constraints
+         __asm__(&quot;movq %1, %0&quot; : &quot;=r&quot;(a) : &quot;I&quot;(0xffffffffffff));
+         ^
+test.c:7:9: error: impossible constraint in &#x2018;asm&#x2019;
+</code></pre><p>when at the same time:</p>
+<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-title">test_asm</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nr)</span>
+</span>{
+        <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> a = <span class="hljs-number">0</span>;
+
+        __asm__(<span class="hljs-string">&quot;movq %1, %0&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span>(a) : <span class="hljs-string">&quot;i&quot;</span>(<span class="hljs-number">0xffffffffffff</span>));
+        <span class="hljs-keyword">return</span> a;
+}
+</code></pre>
+<p>works perfectly:</p>
+<pre><code>~$ gcc -O3 test.c -o test
+~$ echo $?
+0
+</code></pre><p><code>GCC</code> also supports <code>J</code>, <code>K</code>, <code>N</code> constraints for integer constants in the range of 0-63 bits, signed 8-bit integer constants and unsigned 8-bit integer constants respectively. The <code>o</code> constraint represents a memory operand with an <code>offsetable</code> memory address. For example:</p>
+<pre><code class="lang-C">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+        static unsigned long arr[3] = {0, 1, 2};
+        static unsigned long element;
+
+        __asm__ volatile(&quot;movq 16+%1, %0&quot; : &quot;=r&quot;(element) : &quot;o&quot;(arr));
+        printf(&quot;%lu\n&quot;, element);
+        return 0;
+}
+</code></pre>
+<p>The result, as expected:</p>
+<pre><code>~$ gcc -O3 test.c -o test
+~$ ./test
+2
+</code></pre><p>All of these constraints may be combined (so long as they do not conflict). In this case the compiler will choose the best one for a certain situation. For example:</p>
+<pre><code class="lang-C"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> a = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> b = <span class="hljs-number">20</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    __asm__ (<span class="hljs-string">&quot;movq %1,%0&quot;</span> : <span class="hljs-string">&quot;=mr&quot;</span>(b) : <span class="hljs-string">&quot;rm&quot;</span>(a));
+}
+</code></pre>
+<p>will use a memory operand:</p>
+<pre><code class="lang-assembly">main:
+        movq a(%rip),b(%rip)
+        ret
+b:
+        .quad   20
+a:
+        .quad   10
+</code></pre>
+<p>instead of direct usage of general purpose registers.</p>
+<p>That&apos;s about all of the commonly used constraints in inline assembly statements. You can find more in the official <a href="https://gcc.gnu.org/onlinedocs/gcc/Simple-Constraints.html#Simple-Constraints" target="_blank">documentation</a>.</p>
+<h2 id="architecture-specific-constraints">Architecture specific constraints</h2>
+<p>Before we finish, let&apos;s look at the set of special constraints. These constrains are architecture specific and as this book is specific to the <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a> architecture, we will look at constraints related to it. First of all the set of <code>a</code> ... <code>d</code> and also <code>S</code> and <code>D</code> constraints represent <a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank">generic purpose</a> registers. In this case the <code>a</code> constraint corresponds to <code>%al</code>, <code>%ax</code>, <code>%eax</code> or <code>%rax</code> register depending on instruction size. The <code>S</code> and <code>D</code> constraints are <code>%si</code> and <code>%di</code> registers respectively. For example let&apos;s take our previous example. We can see in its assembly output that value of the <code>a</code> variable is stored in the <code>%eax</code> register. Now let&apos;s look at the assembly output of the same assembly, but with other constraint: </p>
+<pre><code class="lang-C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-keyword">int</span> a = <span class="hljs-number">1</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+        <span class="hljs-keyword">int</span> b;
+        __asm__ (<span class="hljs-string">&quot;movq %1,%0&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span>(b) : <span class="hljs-string">&quot;d&quot;</span>(a));
+        <span class="hljs-keyword">return</span> b;
+}
+</code></pre>
+<p>Now we see that value of the <code>a</code> variable will be stored in the <code>%rax</code> register:</p>
+<pre><code class="lang-assembly">0000000000400400 &lt;main&gt;:
+  4004aa:       48 8b 05 6f 0b 20 00    mov    0x200b6f(%rip),%rax        # 601020 &lt;a&gt;
+</code></pre>
+<p>The <code>f</code> and <code>t</code> constraints represent any floating point stack register - <code>%st</code> and the top of the floating point stack respectively. The <code>u</code> constraint represents the second value from the top of the floating point stack.</p>
+<p>That&apos;s all. You may find more details about <a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a> and general constraints in the official <a href="https://gcc.gnu.org/onlinedocs/gcc/Machine-Constraints.html#Machine-Constraints" target="_blank">documentation</a>.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://github.com/torvalds/linux" target="_blank">Linux kernel source code</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank">assembly programming language</a> </li>
+<li><a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">GCC</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc/C-Extensions.html" target="_blank">GNU extension</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Global_Descriptor_Table" target="_blank">Global Descriptor Table</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Processor_register" target="_blank">Processor registers</a></li>
+<li><a href="http://x86.renejeschke.de/html/file_module_x86_id_5.html" target="_blank">add instruction</a></li>
+<li><a href="https://en.wikipedia.org/wiki/FLAGS_register" target="_blank">flags register</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X86-64" target="_blank">x86_64</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc/Machine-Constraints.html#Machine-Constraints" target="_blank">constraints</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class="search-results-count"></span> results matching &quot;<span class="search-query"></span>&quot;</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching &quot;<span class="search-query"></span>&quot;</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux-theory-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ELF &#x6587;&#x4EF6;&#x683C;&#x5F0F;">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"內联汇编","level":"1.13.3","depth":2,"next":{"title":"CPUID","level":"1.13.4","depth":2,"ref":"","articles":[]},"previous":{"title":"ELF 文件格式","level":"1.13.2","depth":2,"path":"Theory/linux-theory-2.md","ref":"Theory/linux-theory-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["comment"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"comment":{"highlightCommented":true},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"MintCN/linux-insides-zh","theme":"default","author":"xinqiu","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux ­Insides­中文","language":"zh","links":{"sidebar":{"Linux ­Insides­中文":"https://legacy.gitbook.com/book/xinqiu/linux-insides-cn"},"gitbook":true},"gitbook":"*","description":"linux内核揭密    Translated By MintCN"},"file":{"path":"Theory/linux-theory-3.md","mtime":"2020-03-17T07:53:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T07:56:09.393Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-comment/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+
+</body></html>
