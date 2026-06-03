@@ -256,7 +256,8 @@ export default defineConfig({
             { text: '位操作', link: '/ccpp/common_bit_operations' },
             { text: '编译过程', link: '/ccpp/compilation_process' },
             { text: '序列化', link: '/ccpp/serialization' },
-            { text: 'Hermes Agent Memory 系统设计 + 最佳实践', link: '/ccpp/hermes_memory_design' }
+            { text: 'Hermes Agent Memory 系统设计 + 最佳实践', link: '/ccpp/hermes_memory_design' },
+            { text: 'Hermes Memory 论文 + 开源项目 (2026H1)', link: '/ccpp/hermes_memory_research_2026h1' }
           ]
         }
       ],
