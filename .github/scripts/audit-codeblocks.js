@@ -100,6 +100,7 @@ function findCodeBlocks(content) {
 
   let inCodeBlock = false;
   let blockStartLine = 0;
+  let blockStartLang = '';
   let language = '';
   let codeLines = [];
 
@@ -110,17 +111,22 @@ function findCodeBlocks(content) {
       if (!inCodeBlock) {
         inCodeBlock = true;
         blockStartLine = i + 1;
-        language = line.slice(3).trim();
+        blockStartLang = line.slice(3).trim();
+        language = blockStartLang;
         codeLines = [];
       } else {
+        // Closing backticks: prefer the language from the opening line
+        // (defensive against markdown where opening ``` had no language
+        // and the closing one picked up a different one)
         blocks.push({
           startLine: blockStartLine,
           endLine: i + 1,
-          language: language,
+          language: blockStartLang,
           lines: codeLines,
           hasClosing: true
         });
         inCodeBlock = false;
+        blockStartLang = '';
         codeLines = [];
         language = '';
       }
@@ -133,7 +139,7 @@ function findCodeBlocks(content) {
     blocks.push({
       startLine: blockStartLine,
       endLine: lines.length,
-      language: language,
+      language: blockStartLang,
       lines: codeLines,
       hasClosing: false
     });

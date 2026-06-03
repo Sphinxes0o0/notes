@@ -24,7 +24,7 @@ The core philosophy is to stay small at its core while being extensible through 
 
 The main repository is a TypeScript monorepo with these key packages:
 
-```
+```bash
 @earendil-works/pi-coding-agent  # Interactive CLI for the coding agent
 @earendil-works/pi-agent-core   # Agent runtime with tool calling & state management
 @earendil-works/pi-ai            # Unified multi-provider LLM API
@@ -1256,7 +1256,6 @@ export class DapClient {
     // ...
   }
 }
-```
 
 **Socket 模式**支持（如 `dlv`）：Linux 上用 Unix domain socket `--listen=unix:<path>`，macOS 上用 TCP listener `--client-addr=127.0.0.1:<port>`
 
@@ -1459,7 +1458,7 @@ npm install -g --ignore-scripts my-checksum-extension
 # 或本地开发
 npm link  # 在扩展目录中运行
 pi-agent  # 启动交互模式
-```
+```bash
 
 Agent 内调用: `checksum { "path": "/etc/hosts", "algorithm": "sha256" }`
 
