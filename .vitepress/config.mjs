@@ -235,7 +235,22 @@ export default defineConfig({
                     { text: 'map', link: '/ccpp/cpp/containers/map' },
                     { text: 'unordered_map', link: '/ccpp/cpp/containers/unordered_map' }
                   ]
+                },
+                {
+                  text: 'C++23/26 新特性',
+                  collapsed: true,
+                  items: [
+                    { text: 'std::expected 错误处理', link: '/ccpp/cpp/cpp23/expected_error_handling' },
+                    { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/cpp/concurrency/cpp20_26_async_io' }
+                  ]
                 }
+              ]
+            },
+            {
+              text: 'Rust',
+              collapsed: true,
+              items: [
+                { text: 'Async / Tokio 实战指南', link: '/ccpp/rust/async_tokio_guide' }
               ]
             },
             { text: '位操作', link: '/ccpp/common_bit_operations' },
