@@ -1,6 +1,6 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "Fast-Packet-Processing-using-eBPF-and-XDP"
 path: papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf
 size: 1402 KB
@@ -677,7 +677,7 @@ return XDP_DROP;                                                  r1 = *(u8 *)(r
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 

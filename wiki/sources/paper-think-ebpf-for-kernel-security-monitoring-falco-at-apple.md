@@ -1,6 +1,6 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple"
 path: papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf
 size: 8850 KB
@@ -544,7 +544,7 @@ TM and © 2021 Apple Inc. All rights reserved.
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 

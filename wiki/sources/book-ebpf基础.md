@@ -3907,7 +3907,7 @@ perf_events是内核2.6+的一部分，用户空间工具perf在包linux-tools-c
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 

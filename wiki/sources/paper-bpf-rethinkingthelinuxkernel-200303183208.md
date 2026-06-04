@@ -1,6 +1,6 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "bpf-rethinkingthelinuxkernel-200303183208"
 path: papers/bpf-rethinkingthelinuxkernel-200303183208.pdf
 size: 2807 KB
@@ -503,7 +503,7 @@ Jesper Brouer, Toke Høiland-Jørgensen              @tgraf__
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 

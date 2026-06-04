@@ -1,6 +1,6 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "2021-Secure_Namespaced_Kernel_Audit_for_Containers"
 path: papers/2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf
 size: 773 KB
@@ -891,7 +891,7 @@ ment Architecture. In Security Symposium, Vol. 13. USENIX, 223–238.           
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 

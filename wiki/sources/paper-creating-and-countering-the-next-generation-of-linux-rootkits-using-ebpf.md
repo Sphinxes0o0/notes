@@ -1,6 +1,6 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF"
 path: papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf
 size: 1854 KB
@@ -657,7 +657,7 @@ path[at]tofile[dot]dev
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 

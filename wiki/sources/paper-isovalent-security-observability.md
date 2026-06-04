@@ -1,6 +1,6 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "isovalent_security_observability"
 path: papers/isovalent_security_observability.pdf
 size: 2955 KB
@@ -2419,7 +2419,7 @@ to know new cultures.
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 

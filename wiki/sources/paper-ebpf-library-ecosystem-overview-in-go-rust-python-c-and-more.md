@@ -1,6 +1,6 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More"
 path: papers/eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More.pdf
 size: 275 KB
@@ -428,7 +428,7 @@ Security
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-ebpf-fundamentals]]
 
 ## Source
 
