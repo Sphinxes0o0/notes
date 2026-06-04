@@ -55762,7 +55762,7 @@ mount /dev/fd1 /mnt1
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-kernel-index]]
 
 ## Source
 

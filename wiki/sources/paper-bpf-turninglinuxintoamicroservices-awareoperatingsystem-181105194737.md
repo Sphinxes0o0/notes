@@ -520,7 +520,7 @@ https://cilium.io/
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-kernel-index]]
 
 ## Source
 

@@ -6620,7 +6620,7 @@ Linux 多线程服务端编程：使用 muduo C++ 网络库 (excerpt) http://www
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[linux-kernel-index]]
 
 ## Source
 
