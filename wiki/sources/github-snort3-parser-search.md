@@ -214,3 +214,8 @@ if (fp->get_offload_search_api() && (len >= sc->offload_limit) &&
 - [[snort3]] — Snort3 整体文档
 - [[linux-intrusion-detection]] — Linux IDS/IPS 生态
 - [[hyperscan]] — Intel RE 模式匹配库
+
+
+## Related pages
+
+- [[entities/linux/snort3/snort3-parser-search]]

@@ -168,3 +168,8 @@ void Active::inject_data(Packet*, EncodeFlags, const uint8_t* buf, uint32_t len)
 
 - [[snort3-net-inspectors]] — 架构概念页
 - [[snort3]] — Snort3 总览
+
+
+## Related pages
+
+- [[entities/linux/snort3/snort3-net-inspectors]]

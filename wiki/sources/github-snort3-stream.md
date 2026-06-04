@@ -207,3 +207,8 @@ update_paws_timestamps():
 - [[entities/linux/snort3/snort3-flow]] — Flow 追踪与会话管理
 - [[entities/linux/snort3/snort3-detection-engine]] — 检测引擎
 - [[entities/linux/snort3/snort3-framework]] — Snort3 框架概览
+
+
+## Related pages
+
+- [[entities/linux/snort3/snort3-stream]]

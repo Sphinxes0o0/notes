@@ -143,3 +143,10 @@ PluginManager (加载入口)
 - [[snort3-runtime]] — 运行时系统实体页
 - [[snort3-stream]] — Stream TCP重组
 - [[entities/linux/snort3/snort3-detection-engine]] — 规则检测引擎
+
+
+## Related pages
+
+- [[entities/linux/snort3/snort3-stream]]
+
+- [[entities/linux/snort3/snort3-runtime]]
