@@ -56,3 +56,7 @@ created: 2017
 - [[entities/cpp/cpp-perf-optimization]] — C++性能优化（涉及CPU）
 - [[os-index]] — 操作系统
 - [[sources/pdf-computer-systems-programmers-perspective]] — CS:APP
+
+## Related pages
+
+- [[entities/cpu-architecture]]

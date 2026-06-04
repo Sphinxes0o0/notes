@@ -149,3 +149,7 @@ sources: []
 - [[entities/os/os-memory-management]] — 操作系统内存管理
 - [[arm-index]] — ARM 体系结构（Cache 实现）
 - [[sys-prog-index]] — 系统编程（Cache 感知编程）
+
+## Related pages
+
+- [[entities/memory-hierarchy]]

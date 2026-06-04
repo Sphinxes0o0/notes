@@ -68,3 +68,8 @@ summary: "4册ARM/硬件体系结构权威文档：ARMv8 Architecture Reference 
 - [[entities/linux/qemu/qemu-cpu]] — QEMU CPU模拟
 - [[sys-prog-index]] — 系统编程导航
 - [[os-index]] — 操作系统基础（与体系结构紧密相关）
+
+
+## Related pages
+
+- [[entities/cpu-architecture]]

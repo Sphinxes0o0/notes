@@ -28,3 +28,7 @@ tags: []
 - [[entities/cpp/cpp-llm-inference]] — LLM inference (memory bandwidth bound)
 - [[entities/cpp/cpp-memory-model]] — C++ memory model
 - [[entities/arm/computer-architecture]] — ARM computer architecture
+
+## Related pages
+
+- [[entities/memory-hierarchy]]

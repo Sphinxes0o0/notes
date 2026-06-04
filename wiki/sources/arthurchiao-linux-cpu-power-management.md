@@ -90,3 +90,8 @@ flowchart TD
     style Core1 fill:#e8f5e9
     style Core2 fill:#e8f5e9
 ```
+
+
+## Related pages
+
+- [[entities/cpu-architecture]]
