@@ -6,6 +6,7 @@ author: 中国商用密码检测中心
 date: 2023
 size: medium
 path: raw/PDFs/books/商用密码应用安全性评估考核题.pdf
+source-md5: 9ed489d3a91cff5719179c5db67ed360
 summary: 中国商用密码检测中心密评从业人员考核题库622页，覆盖密码算法/密钥管理/密码产品/评估方法
 tags: [security, crypto, commercial-crypto, china, pki, gm-cipher, books]
 created: 2023

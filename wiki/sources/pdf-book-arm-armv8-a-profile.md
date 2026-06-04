@@ -6,6 +6,7 @@ author: ARM Limited
 date: 2023
 size: large
 path: raw/PDFs/books/DDI0487_M_a_a_a-profile_architecture_reference_manual.pdf
+source-md5: 10277600eb6809d2d4b500611b925f52
 pages: 16825
 summary: ARM A-profile 架构参考手册（M.a.a 修订版，16825页）：ARMv8.x-A 最新架构特性、扩展功能与长期演进规范，超大规模权威文档。
 created: 2023

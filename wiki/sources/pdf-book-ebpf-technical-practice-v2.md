@@ -6,6 +6,7 @@ author: 倪宏飞
 date: 2022
 size: medium
 path: raw/PDFs/books/eBPF_technical_practice_v2.pdf
+source-md5: 012a07bbc600009afefc714b0e308e4a
 summary: eBPF 进阶实战：CO-RE/尾调用/RingBuf/安全审计/网络/可观测性
 created: 2022
 tags: [ebpf]

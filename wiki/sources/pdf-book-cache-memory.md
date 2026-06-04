@@ -6,6 +6,7 @@ author: Wang Qi, Yang Xi, Zhu Yuhao (et al.)
 date: 2021
 size: small
 path: raw/PDFs/books/CacheMemory.pdf
+source-md5: 937cc75097b1a11d7fdd5c1371e2aa07
 pages: 111
 summary: 现代处理器 Cache 体系结构：Cache hierarchy (L1/L2/L3)、TLB、Superscalar/OOO 执行、Memory Disambiguation、Cache 一致性与优化策略。
 created: 2021

@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "人月神话_40周年纪念版"
 path: books/人月神话_40周年纪念版.pdf
+source-md5: 79059ef6a79da7448efdb96b64d0db6f
 size: 84301 KB
 category: book
 ingested: 2026-06-04

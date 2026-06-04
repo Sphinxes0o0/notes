@@ -6,6 +6,7 @@ author: 崔慧敏
 date: 2024
 size: medium
 path: raw/PDFs/slides/崔慧敏_编译技术在AI软件栈中的实践分享.pdf
+source-md5: c8936d33b8fd7729f03578c9732f2502
 summary: 崔慧敏：AI基础设施挑战、SigInfer编译推理引擎、国产卡CUDA兼容、AI编译器自动生成
 tags: [ai, compiler, inference, mlir, tvm, xla, cuda, cpp-slides]
 created: 2024

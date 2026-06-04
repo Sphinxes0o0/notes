@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "C++-Templates-The-Complete-Guide-zh-20220903"
 path: books/C++-Templates-The-Complete-Guide-zh-20220903.pdf
+source-md5: ce49e3f46eaa73ab81ccd56e99310380
 size: 5535 KB
 category: book
 ingested: 2026-06-04

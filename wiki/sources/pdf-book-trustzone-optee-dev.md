@@ -6,6 +6,7 @@ author: 帅峰云、黄腾、宋洋
 date: 2018
 size: medium
 path: raw/PDFs/books/手机安全和可信应用开发指南：TrustZone与OP-TEE技术详解.pdf
+source-md5: 5bdb1da53cbd35c29c354e6a77d28043
 summary: 手机安全与可信应用开发指南，TrustZone硬件安全与OP-TEE软件框架详解
 created: 2018
 tags: []

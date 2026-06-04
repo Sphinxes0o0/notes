@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "熬玉龙_统一算力，释放智能：FlagScale在FlagOS生态中的演进"
 path: slides/熬玉龙_统一算力，释放智能：FlagScale在FlagOS生态中的演进.pdf
+source-md5: a63312849dcf1fe611cbff5f4f74ff4f
 size: 9771 KB
 category: slide
 ingested: 2026-06-04

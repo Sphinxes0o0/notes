@@ -6,6 +6,7 @@ author: 刘童旋
 date: 2024
 size: small
 path: raw/PDFs/slides/刘童旋_基于C++构建大模型推理优化框架xLLM实践.pdf
+source-md5: fdbcec275a27fff7e1d48b03e8a0cb01
 summary: 刘童旋：xLLM大模型推理引擎C++实现，电商场景多模型推理优化，DAG调度
 tags: [llm, inference, cpp, xllm, optimization, ai, cpp-slides]
 created: 2024

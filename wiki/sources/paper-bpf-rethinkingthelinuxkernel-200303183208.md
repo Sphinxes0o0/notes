@@ -3,6 +3,7 @@ type: source
 source-type: paper
 title: "bpf-rethinkingthelinuxkernel-200303183208"
 path: papers/bpf-rethinkingthelinuxkernel-200303183208.pdf
+source-md5: 86d84df0fb39bfb82e2561947be54412
 size: 2807 KB
 category: paper
 ingested: 2026-06-04

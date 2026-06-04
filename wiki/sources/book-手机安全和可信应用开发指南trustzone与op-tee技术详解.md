@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "手机安全和可信应用开发指南：TrustZone与OP-TEE技术详解"
 path: books/手机安全和可信应用开发指南：TrustZone与OP-TEE技术详解.pdf
+source-md5: 5bdb1da53cbd35c29c354e6a77d28043
 size: 19549 KB
 category: book
 ingested: 2026-06-04

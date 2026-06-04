@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "UnixProgrammingTools"
 path: books/UnixProgrammingTools.pdf
+source-md5: 6ad86221b1be2a90803cbe05d5cabf58
 size: 127 KB
 category: book
 ingested: 2026-06-04

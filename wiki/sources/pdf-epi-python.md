@@ -8,6 +8,7 @@ author: "Adnan Aziz, Tsung-Hsien Lee, Amit Prakash"
 date: 2017
 size: medium
 path: raw/PDFs/slides/epilight_python_new.pdf
+source-md5: 3a41a882721e20c0ef4614ad52500a95
 summary: "A sampler of 'Elements of Programming Interviews in Python' (EPI Python) — a comprehensive programming interview preparation book covering DS&A, design problems, language questions, and OOD, with problems in Python"
 tags: [python, interview, books]
 ---

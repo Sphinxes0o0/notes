@@ -6,6 +6,7 @@ author: Chujie Zeng
 date: 2022
 size: small
 path: raw/PDFs/books/modern-cpp-tutorial-zh-cn.pdf
+source-md5: 14e10eebc1ff6a53f77c382b40feb4a1
 summary: 现代 C++ 快速上手指南：lambda/variant/optional/Concepts/ Ranges/ Coroutines
 created: 2022
 tags: [cpp, modern-cpp]

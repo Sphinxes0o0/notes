@@ -3,6 +3,7 @@ type: source
 source-type: paper
 title: "Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple"
 path: papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf
+source-md5: d12429e52ce80a5885f0d9c5522014fd
 size: 8850 KB
 category: paper
 ingested: 2026-06-04

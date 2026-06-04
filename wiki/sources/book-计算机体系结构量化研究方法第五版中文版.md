@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "计算机体系结构：量化研究方法（第五版）（中文版）"
 path: books/计算机体系结构：量化研究方法（第五版）（中文版）.pdf
+source-md5: c530bfbdc03038aa3149a1b13c6d1d6b
 size: 24118 KB
 category: book
 ingested: 2026-06-04

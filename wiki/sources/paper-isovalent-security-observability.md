@@ -3,6 +3,7 @@ type: source
 source-type: paper
 title: "isovalent_security_observability"
 path: papers/isovalent_security_observability.pdf
+source-md5: d53256f9b6bd7772664bc0327782dea3
 size: 2955 KB
 category: paper
 ingested: 2026-06-04

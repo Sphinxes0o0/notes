@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "epilight_python_new"
 path: slides/epilight_python_new.pdf
+source-md5: 3a41a882721e20c0ef4614ad52500a95
 size: 643 KB
 category: slide
 ingested: 2026-06-04

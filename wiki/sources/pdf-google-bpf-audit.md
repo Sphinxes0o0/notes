@@ -6,6 +6,7 @@ author: Brendan Jackman
 date: 2021
 size: medium
 path: raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf
+source-md5: c2a7a7d5af16c050502d4f17353e569b
 summary: Google Brendan Jackman：KRSI BPF LSM安全遥测、BPF Atomics原子操作、Ringbuf promise机制、跨内核版本CO-RE兼容性
 tags: [security, ebpf, google, krsi, lsm, atomics, ringbuf, bpf]
 created: 2021

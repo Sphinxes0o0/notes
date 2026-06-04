@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "C++模板_第二版"
 path: books/C++模板_第二版.pdf
+source-md5: c3b070013d71d10cf16e964a4d82c995
 size: 2532 KB
 category: book
 ingested: 2026-06-04

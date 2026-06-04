@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "STL源码剖析简体中文完整版(清晰扫描带目录)"
 path: books/STL源码剖析简体中文完整版(清晰扫描带目录).pdf
+source-md5: 9cd0ccc7c291da42cd85ac632b9e1000
 size: 18203 KB
 category: book
 ingested: 2026-06-04

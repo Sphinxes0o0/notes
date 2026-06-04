@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "bulletproof-tls-and-pki-2nbsped-9781907117091"
 path: books/bulletproof-tls-and-pki-2nbsped-9781907117091.pdf
+source-md5: f8a9142095c95e3f09105be8afdbb4a3
 size: 8177 KB
 category: book
 ingested: 2026-06-04

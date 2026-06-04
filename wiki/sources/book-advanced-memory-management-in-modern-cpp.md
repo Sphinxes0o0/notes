@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Advanced_Memory_Management_in_Modern_Cpp"
 path: books/Advanced_Memory_Management_in_Modern_Cpp.pdf
+source-md5: b4ca4a13558932a1d9f83c8cf99ac15b
 size: 2605 KB
 category: book
 ingested: 2026-06-04

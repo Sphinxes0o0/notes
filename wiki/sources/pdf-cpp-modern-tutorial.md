@@ -7,6 +7,7 @@ author: "Changkun (hi[at]changkun.de)"
 date: 2024-06-01
 size: medium
 path: raw/PDFs/books/modern-cpp-tutorial-zh-cn.pdf
+source-md5: 14e10eebc1ff6a53f77c382b40feb4a1
 summary: "现代C++教程，系统讲解C++11/14/17/20核心特性：Lambda、智能指针、RAII、并发、Move语义、模板变参、if constexpr等"
 tags: [cpp, modern-cpp, programming]
 created: 2026-05-20

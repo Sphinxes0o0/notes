@@ -6,6 +6,7 @@ author: Unknown (INFOCOM 2024)
 date: 2024
 size: medium
 path: raw/PDFs/papers/2024-INFOCOM-PTPsec.pdf
+source-md5: 8531dd60fab96f1cf2fd9ec3e1c7232b
 summary: PTPsec introduces cryptographic authentication to IEEE 1588 PTP to secure time synchronization in time-sensitive networks, addressing replay attacks and man-in-the-middle threats.
 created: 2026-05-27
 tags: []

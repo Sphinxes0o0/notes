@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "石新飞_RTP-LLM：阿里大模型推理引擎"
 path: slides/石新飞_RTP-LLM：阿里大模型推理引擎.pdf
+source-md5: 743fe3e6c2adb59a2c3b187c1de38a07
 size: 6891 KB
 category: slide
 ingested: 2026-06-04

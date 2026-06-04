@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "张洪滨_面向RISC-V大模型推理AI编译器设计与实现"
 path: slides/张洪滨_面向RISC-V大模型推理AI编译器设计与实现.pdf
+source-md5: 49fd9635ce9a0412f1c788ea1f1f9704
 size: 23373 KB
 category: slide
 ingested: 2026-06-04

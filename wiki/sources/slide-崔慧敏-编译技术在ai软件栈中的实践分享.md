@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "崔慧敏_编译技术在AI软件栈中的实践分享"
 path: slides/崔慧敏_编译技术在AI软件栈中的实践分享.pdf
+source-md5: c8936d33b8fd7729f03578c9732f2502
 size: 14286 KB
 category: slide
 ingested: 2026-06-04

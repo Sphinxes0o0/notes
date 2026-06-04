@@ -6,6 +6,7 @@ author: "Randal E. Bryant, David R. O'Hallaron"
 date: 2016
 size: large
 path: raw/PDFs/books/computer_systems_a_programmers_perspective.pdf
+source-md5: a72a5f3225b52c3269544b18ea6b2fe0
 summary: "CSAPP 第3版：系统级程序员必读，涵盖整数/浮点表示、汇编、程序优化、内存层次、网络、并发"
 tags: [books, computer-systems, systems-programming, assembly, memory, networking]
 created: 2026-05-27

@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz"
 path: books/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.pdf
+source-md5: 15b5f471a72f08b7a217642e4d1d6f6b
 size: 28229 KB
 category: book
 ingested: 2026-06-04

@@ -6,6 +6,7 @@ author: Thomas Graf
 date: 2018
 size: medium
 path: raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf
+source-md5: fc529bada5bc975cce0a74fbddc60f6a
 summary: Thomas Graf扩展版演讲：Linux微服务感知操作系统，Cilium Hubble可观测性，Cilium功能矩阵(网络/LB/安全/Mesh加速)
 tags: [ebpf, cilium, hubble, kubernetes, microservices, networking, service-mesh]
 created: 2018

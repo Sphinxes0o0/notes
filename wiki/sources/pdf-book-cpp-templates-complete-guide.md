@@ -6,6 +6,7 @@ author: David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor
 date: 2018
 size: large
 path: raw/PDFs/books/C++-Templates-The-Complete-Guide-zh-20220903.pdf
+source-md5: ce49e3f46eaa73ab81ccd56e99310380
 pages: 667
 summary: C++ 模板权威指南第二版中文翻译：C++11/14/17 模板新特性（可变参数包/泛型lambda/推导上下文/编译时if/转发引用/用户定义字面量），语言核心与最佳实践。
 created: 2018

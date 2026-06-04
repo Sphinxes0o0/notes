@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "computer_systems_a_programmers_perspective"
 path: books/computer_systems_a_programmers_perspective.pdf
+source-md5: a72a5f3225b52c3269544b18ea6b2fe0
 size: 6913 KB
 category: book
 ingested: 2026-06-04

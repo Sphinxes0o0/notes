@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "王志宏_从原型到生产：LazyLLM的三阶段架构演化实践"
 path: slides/王志宏_从原型到生产：LazyLLM的三阶段架构演化实践.pdf
+source-md5: 7f3a17b2349007e22bdeda2496f13fc0
 size: 8940 KB
 category: slide
 ingested: 2026-06-04

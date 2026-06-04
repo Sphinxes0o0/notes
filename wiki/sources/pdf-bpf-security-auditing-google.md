@@ -6,6 +6,7 @@ author: Brendan Jackman (Google)
 date: 2023
 size: medium
 path: raw/PDFs/papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf
+source-md5: c2a7a7d5af16c050502d4f17353e569b
 summary: "A practitioner's account of auditing eBPF for security vulnerabilities inside Google — covering the bug classes found, the audit methodology, and the hardening efforts that followed."
 created: 2026-05-27
 tags: [ebpf]

@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "彭博_C++反射的核心原理实践与最新进展"
 path: slides/彭博_C++反射的核心原理实践与最新进展.pdf
+source-md5: 3ab844063960c548d4f28ff9313b01fb
 size: 3901 KB
 category: slide
 ingested: 2026-06-04

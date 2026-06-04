@@ -8,6 +8,7 @@ author: "k_eckel (blog.mscenter.edu.cn)"
 date: 2026-05-23
 size: small
 path: raw/PDFs/books/GoF+23种设计解析附C++实现.pdf
+source-md5: 5d0d02d9304aeafe557227bf2b1f4cec
 summary: "GoF 23种设计模式精解：创建型5种、结构型7种、行为型11种，每模式附带完整C++实现源码和解析"
 tags: [design-patterns, cpp, books]
 ---

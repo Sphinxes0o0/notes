@@ -6,6 +6,7 @@ author: Tom Parete, Stephen Gildea, Bob McNamara, Mike Loukides, Larry Grant
 date: 1998
 size: small
 path: raw/PDFs/books/UnixProgrammingTools.pdf
+source-md5: 6ad86221b1be2a90803cbe05d5cabf58
 summary: "Stanford CS education doc on Unix programming tools: gcc, make, gdb, emacs, shell"
 created: 1998
 tags: []

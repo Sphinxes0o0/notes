@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Concurrency.with.Modern.C++-zh"
 path: books/Concurrency.with.Modern.C++-zh.pdf
+source-md5: 8245ce8cb5d9112f9b9785a15b3087a2
 size: 25336 KB
 category: book
 ingested: 2026-06-04

@@ -6,6 +6,7 @@ author: Jim Blandy, Jason Orendorff
 date: 2021
 size: small
 path: raw/PDFs/books/ProgrammingRust.pdf
+source-md5: cc73722f3362e01314494f0eb572d599
 summary: Rust 系统编程权威指南：所有权/生命周期/并发/Fearless Concurrency
 created: 2021
 tags: []

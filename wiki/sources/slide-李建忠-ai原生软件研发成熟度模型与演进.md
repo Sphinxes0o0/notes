@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "李建忠_AI原生软件研发成熟度模型与演进"
 path: slides/李建忠_AI原生软件研发成熟度模型与演进.pdf
+source-md5: bd53de2987a651f3f1d9308b10464817
 size: 6513 KB
 category: slide
 ingested: 2026-06-04

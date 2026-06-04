@@ -6,6 +6,7 @@ author: "中国密码学会"
 date: 2022
 size: medium
 path: raw/PDFs/books/商用密码应用安全性评估考核题.pdf
+source-md5: 9ed489d3a91cff5719179c5db67ed360
 summary: "商用密码应用安全性评估考核题库：GM/T 系列密码标准、密码算法、密钥管理、PKI 体系"
 tags: [books, cryptography, china-gm, security-assessment, pki, 商用密码]
 created: 2026-05-27

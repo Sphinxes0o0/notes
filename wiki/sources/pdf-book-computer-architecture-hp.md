@@ -6,6 +6,7 @@ author: "John L. Hennessy, David A. Patterson"
 date: 2017
 size: large
 path: raw/PDFs/books/计算机体系结构：量化研究方法（第五版）（中文版）.pdf
+source-md5: c530bfbdc03038aa3149a1b13c6d1d6b
 summary: "CS:APP/H&P 计算机体系结构量化研究方法第五版（中文）：RISC-V 架构，覆盖 ISA 设计、流水线、Cache、并行、多核"
 tags: [books, computer-architecture, risc-v, pipeline, cache, parallelism, simd]
 created: 2026-05-27

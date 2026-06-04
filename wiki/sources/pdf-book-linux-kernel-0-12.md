@@ -6,6 +6,7 @@ author: 赵炯 (Jiong Zhao)
 date: 2019
 size: medium
 path: raw/PDFs/books/linux内核注释.pdf
+source-md5: 1fde53fd41490cc6734d0e46112b9d43
 summary: 赵炯，Linux内核0.12完全注释，PC硬件基础、80x86汇编、C扩展、内核源码全面注释
 created: 2019
 tags: [linux]

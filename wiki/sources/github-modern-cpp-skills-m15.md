@@ -6,6 +6,7 @@ author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m15-anti-pattern/SKILL.md
+source-md5: 6dd16dc19dcb707fcf01f51ba78bf391
 summary: "C++ Master-level skill for anti-patterns. Core question: Is this C or C++? Covers new/delete elimination, RAII, static_cast, constexpr vs macros, global variables, and reinterpret_cast avoidance."
 tags: [cpp, master, anti-pattern, modernization, c-style]
 created: 2026-05-27

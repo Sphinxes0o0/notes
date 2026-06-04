@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "eBPF_technical_practice_v2"
 path: books/eBPF_technical_practice_v2.pdf
+source-md5: 012a07bbc600009afefc714b0e308e4a
 size: 10233 KB
 category: book
 ingested: 2026-06-04

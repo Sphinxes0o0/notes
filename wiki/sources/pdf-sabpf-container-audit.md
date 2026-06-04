@@ -7,6 +7,7 @@ author: "Soo Yee Lim, Bogdan Stelea, Xueyuan Han, Thomas Pasquier"
 date: 2021
 size: medium
 path: raw/PDFs/papers/2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf
+source-md5: 350b737470e48d91627ae26dd7141e95
 summary: "UBC/Harvard/Bristol: saBPF扩展eBPF框架实现容器级LSM审计，零内核修改"
 tags: [security, ebpf, container, kubernetes, audit, lsm, saBPF, provenance]
 ---

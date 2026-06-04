@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "Michael_新的AI使命：面向智能体时代的全栈C++标准化"
 path: slides/Michael_新的AI使命：面向智能体时代的全栈C++标准化.pdf
+source-md5: 74680704a3dc4a872d51c23410043a6c
 size: 5652 KB
 category: slide
 ingested: 2026-06-04

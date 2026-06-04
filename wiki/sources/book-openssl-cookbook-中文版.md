@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "openssl-cookbook-中文版"
 path: books/openssl-cookbook-中文版.pdf
+source-md5: 91ee6c6c1106c6b650db4335e5123132
 size: 1128 KB
 category: book
 ingested: 2026-06-04

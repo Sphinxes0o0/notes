@@ -6,6 +6,7 @@ author: "Jens Gustedt"
 date: 2020
 size: large
 path: raw/PDFs/books/ModernC.pdf
+source-md5: f40f1227544388f7c2de7f52aee1c663
 summary: "Modern C：现代 C 语言编程（C11/C17），由 INRIA/MPI-SWS 的 Jens Gustedt 撰写，覆盖泛型、并发、内存模型"
 tags: [books, c, modern-c, c11, c17, concurrency]
 created: 2026-05-27

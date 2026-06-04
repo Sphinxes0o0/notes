@@ -6,6 +6,7 @@ author: Rainer Grimm (译者：陈晓伟)
 date: 2018
 size: medium
 path: raw/PDFs/books/Concurrency.with.Modern.C++-zh.pdf
+source-md5: 8245ce8cb5d9112f9b9785a15b3087a2
 pages: 480
 summary: Rainer Grimm 《Concurrency with Modern C++》中文版：C++ 多线程/并发/并行完整指南，涵盖 C++11 到 C++20 的所有并发特性。
 created: 2018

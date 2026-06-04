@@ -3,6 +3,7 @@ type: source
 source-type: paper
 title: "2021-Secure_Namespaced_Kernel_Audit_for_Containers"
 path: papers/2021-Secure_Namespaced_Kernel_Audit_for_Containers.pdf
+source-md5: 350b737470e48d91627ae26dd7141e95
 size: 773 KB
 category: paper
 ingested: 2026-06-04

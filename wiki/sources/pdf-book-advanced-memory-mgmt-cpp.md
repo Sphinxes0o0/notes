@@ -6,6 +6,7 @@ author: Ayman Alheraki (simplifycpp.org)
 date: 2024-12
 size: small
 path: raw/PDFs/books/Advanced_Memory_Management_in_Modern_Cpp.pdf
+source-md5: b4ca4a13558932a1d9f83c8cf99ac15b
 pages: 119
 summary: C++ 内存管理进化史：stack vs heap、smart pointers、allocator、设计模式与最佳实践，覆盖 C++17 及更新标准。
 created: 2024-12

@@ -7,6 +7,7 @@ author: "Brendan Gregg (Netflix)"
 date: 2018
 size: medium
 path: raw/PDFs/papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf
+source-md5: fc529bada5bc975cce0a74fbddc60f6a
 summary: "Gregg's earlier essay framing eBPF as the technology that finally gives the Linux kernel awareness of microservice-level entities — services, connections, and latency — without application code changes."
 created: 2026-05-27
 ---

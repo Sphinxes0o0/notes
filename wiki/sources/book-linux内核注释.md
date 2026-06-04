@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "linux内核注释"
 path: books/linux内核注释.pdf
+source-md5: 1fde53fd41490cc6734d0e46112b9d43
 size: 11916 KB
 category: book
 ingested: 2026-06-04

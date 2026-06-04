@@ -6,6 +6,7 @@ author: "徐凯, 崔红鹏"
 date: 2019
 size: large
 path: raw/PDFs/books/密码技术与物联网安全mbedtls开发实战.pdf
+source-md5: 24203e6da3d8bf4b9dfa916559a535fe
 summary: "707页 mbedtls 嵌入式密码学实战指南（机械工业出版社），16章覆盖：密码学基础 → 单向散列/SHA → 对称加密AES → 消息认证码/CCM/GCM → 随机数/CTR_DRBG → RSA/ECDH/ECDSA → X.509证书 → TLS/DTLS/CoAPs 全栈，配套 Zephyr RTOS 移植示例"
 tags: [security, cryptography, mbedtls, tls, iot, embedded, books]
 created: 2026-05-27

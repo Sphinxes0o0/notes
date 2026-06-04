@@ -6,6 +6,7 @@ author: Bjarne Stroustrup
 date: 2012
 size: small
 path: raw/PDFs/books/21st-Century-C++.pdf
+source-md5: b66944d375b5cb4c4064f2a43f76aa32
 pages: 26
 summary: Stroustrup 2012 CACM 文章：modern C++ 的核心思想 — 简洁性、价值语义、类型安全、零开销抽象、C++11 标准特性。
 created: 2012

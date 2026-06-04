@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "threads-locks"
 path: books/threads-locks.pdf
+source-md5: 81b74a2e5a91242503300556345a3d2c
 size: 173 KB
 category: book
 ingested: 2026-06-04

@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Packt.Cplusplus.Memory.Management"
 path: books/Packt.Cplusplus.Memory.Management.pdf
+source-md5: 18ed8748d47cb0e41e7435a12dae4643
 size: 33659 KB
 category: book
 ingested: 2026-06-04

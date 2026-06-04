@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "范颂颂_超越并行化：缓存与分布式计算如何重新定义算力加速"
 path: slides/范颂颂_超越并行化：缓存与分布式计算如何重新定义算力加速.pdf
+source-md5: 2d5054d5f7e4537c735fa8dffde94c17
 size: 6486 KB
 category: slide
 ingested: 2026-06-04

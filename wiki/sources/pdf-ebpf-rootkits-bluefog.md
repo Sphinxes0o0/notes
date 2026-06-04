@@ -7,6 +7,7 @@ author: "BlueFog / Doyensec Research"
 date: 2023
 size: medium
 path: raw/PDFs/papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf
+source-md5: 4f3ff844cc2fd4f765c02b5bf8184583
 summary: "Demonstrates how eBPF can be weaponized to build kernel-level rootkits with unprecedented stealth, then proposes detection countermeasures using eBPF-based integrity monitoring."
 created: 2026-05-27
 ---

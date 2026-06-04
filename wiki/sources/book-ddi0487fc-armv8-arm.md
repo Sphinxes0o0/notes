@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "DDI0487Fc_armv8_arm"
 path: books/DDI0487Fc_armv8_arm.pdf
+source-md5: 13263dafeb720f12f3c67126d65eacf0
 size: 49147 KB
 category: book
 ingested: 2026-06-04

@@ -6,6 +6,7 @@ author: Anthony Williams (译者：陈晓伟)
 date: 2019
 size: large
 path: raw/PDFs/books/C++并发编程指南.pdf
+source-md5: 88f7d831a8af6fbca3181103b9845e7c
 pages: 528
 summary: "Anthony Williams《C++ Concurrency in Action》中文版（528页）：C++ 并发编程领域经典著作，从 std::thread/ mutex/ atomic 基础，到内存模型、原子操作、锁和无锁数据结构、线程池、多线程测试与调试，全面覆盖 C++11/14/17 并发特性。"
 created: 2019

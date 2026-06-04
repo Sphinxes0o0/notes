@@ -6,6 +6,7 @@ author: "Randal E. Bryant, David R. O'Hallaron"
 date: 2015
 size: large
 path: raw/PDFs/books/computer_systems_a_programmers_perspective.pdf
+source-md5: a72a5f3225b52c3269544b18ea6b2fe0
 summary: "CMU 15-213 教材，1078页，计算机系统百科：数据表示/机器码/处理器/优化/内存层级/链接/异常控制流/虚拟内存/并发，Bryant & O'Hallaron 经典著作"
 tags: [computer-systems, computer-architecture, memory-hierarchy, machine-code, books]
 created: 2026-05-25

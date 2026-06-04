@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "商用密码应用安全性评估考核题"
 path: books/商用密码应用安全性评估考核题.pdf
+source-md5: 9ed489d3a91cff5719179c5db67ed360
 size: 11724 KB
 category: book
 ingested: 2026-06-04

@@ -6,6 +6,7 @@ author: John L. Hennessy, David A. Patterson
 date: 2017
 size: large
 path: raw/PDFs/books/计算机体系结构：量化研究方法（第五版）（中文版）.pdf
+source-md5: c530bfbdc03038aa3149a1b13c6d1d6b
 summary: "CS:APP Architecture（Hennessy & Patterson）第五版：612页计算机体系结构权威教材量化研究方法经典"
 tags: [computer-architecture, cpu, gpu, performance, quantitative, books]
 created: 2017

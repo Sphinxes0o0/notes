@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Professional-C++-6ed-zh-20241122"
 path: books/Professional-C++-6ed-zh-20241122.pdf
+source-md5: 8b3acbe775fff38601f712cb8f69b523
 size: 12355 KB
 category: book
 ingested: 2026-06-04

@@ -1,8 +1,9 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "2024-INFOCOM-PTPsec"
 path: papers/2024-INFOCOM-PTPsec.pdf
+source-md5: 8531dd60fab96f1cf2fd9ec3e1c7232b
 size: 838 KB
 category: paper
 ingested: 2026-06-04

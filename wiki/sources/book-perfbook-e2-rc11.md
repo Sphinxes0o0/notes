@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "perfbook-e2-rc11"
 path: books/perfbook-e2-rc11.pdf
+source-md5: ed1617fc321d32ea6933ac4951e2e037
 size: 8003 KB
 category: book
 ingested: 2026-06-04

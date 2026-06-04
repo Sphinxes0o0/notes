@@ -6,6 +6,7 @@ author: Marc Gregoire
 date: 2024
 size: medium
 path: raw/PDFs/books/Professional-C++-6ed-zh-20241122.pdf
+source-md5: 8b3acbe775fff38601f712cb8f69b523
 summary: Professional C++ 第6版中文：现代 C++ 特性、工程实践、并发、设计模式
 created: 2024
 tags: [cpp]

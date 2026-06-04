@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "田文鑫_具身机器人多仓源码构建体系"
 path: slides/田文鑫_具身机器人多仓源码构建体系.pdf
+source-md5: 27572cd7e19b66563f9b2bcf1b3c4b1b
 size: 8274 KB
 category: slide
 ingested: 2026-06-04

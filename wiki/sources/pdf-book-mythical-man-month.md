@@ -6,6 +6,7 @@ author: "Frederick Brooks"
 date: 2019
 size: medium
 path: raw/PDFs/books/人月神话_40周年纪念版.pdf
+source-md5: 79059ef6a79da7448efdb96b64d0db6f
 summary: "人月神话：软件工程经典，Brooks 的项目管理洞见，40 周年纪念版新增章节"
 tags: [books, software-engineering, project-management, classics]
 created: 2026-05-27

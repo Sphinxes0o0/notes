@@ -6,6 +6,7 @@ author: "Isovalent / Liz Rice"
 date: 2024
 size: small
 path: raw/PDFs/books/Beginners_guide_to_eBPF_programming_for_networking.pdf
+source-md5: 15f1e587e801356c25a822be862a075a
 summary: "eBPF 网络编程入门指南（Isovalent 出品）：XDP、TC、socket redirect 等网络 datapath"
 tags: [books, ebpf, networking, xdp, bpf, datapath]
 created: 2026-05-27

@@ -6,6 +6,7 @@ author: 陈晓伟 (中文翻译版)
 date: 2019
 size: medium
 path: raw/PDFs/books/Cpp17.pdf
+source-md5: 7c49297e29af125c5b2435ff86bb6fe8
 pages: 400
 summary: C++17 标准完整指南中文版：陈晓伟翻译，覆盖 language features（结构化绑定/if-init/折叠表达式/constexpr if）与 library extensions（variant/optional/any/string_view/filesystem/并行 STL）等核心变更。
 created: 2019

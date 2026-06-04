@@ -6,6 +6,7 @@ author: Liz Rice (Isovalent)
 date: 2023
 size: small
 path: raw/PDFs/books/Beginners_guide_to_eBPF_programming_for_networking.pdf
+source-md5: 15f1e587e801356c25a822be862a075a
 pages: 37
 slides: true
 summary: Liz Rice 编写的 eBPF 入门幻灯片：eBPF 核心概念（map/hook/prog types）、CO-RE、libbpf、容器网络场景。

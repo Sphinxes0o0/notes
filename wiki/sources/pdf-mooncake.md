@@ -6,6 +6,7 @@ author: 杨珂 (趋境科技)
 date: 2024
 size: medium
 path: raw/PDFs/slides/杨珂_Mooncake：解耦式架构和以存换算，优化大模型推理.pdf
+source-md5: cba28171993bef953e07adbb80c4bd84
 summary: 杨珂：Mooncake解耦式大模型推理架构，KVCache为中心的 disaggregated/prefetch 架构
 tags: [llm, inference, mooncake, kv-cache, disaggregated, ai-slides]
 created: 2024

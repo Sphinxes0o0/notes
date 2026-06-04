@@ -6,6 +6,7 @@ author: W. Richard Stevens, Stephen A. Rago
 date: 2013
 size: large
 path: raw/PDFs/books/UNIX环境高级编程(第三版).pdf
+source-md5: 1f7b3cfdfc5f024e293a65d94902243a
 summary: APUE第三版，Stevens/Rago，Unix系统编程权威指南（扫描版，无文字提取）
 created: 2013
 tags: []

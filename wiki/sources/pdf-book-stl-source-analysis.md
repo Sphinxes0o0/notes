@@ -6,6 +6,7 @@ author: "侯捷"
 date: 2002
 size: large
 path: raw/PDFs/books/STL源码剖析简体中文完整版(清晰扫描带目录).pdf
+source-md5: 9cd0ccc7c291da42cd85ac632b9e1000
 summary: "STL 源码剖析（侯捷译）：SGI STL 实现分析，涵盖空间配置器、迭代器、容器、算法、函数对象"
 tags: [books, cpp, stl, source-code, templates, algorithms]
 created: 2026-05-27

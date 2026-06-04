@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "深入理解Linuxkenrle"
 path: books/深入理解Linuxkenrle.pdf
+source-md5: 775d4ed83d0594d512502afeae328860
 size: 5477 KB
 category: book
 ingested: 2026-06-04

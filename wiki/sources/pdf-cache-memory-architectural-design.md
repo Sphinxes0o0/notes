@@ -6,6 +6,7 @@ author: "王奇, 杨希, 朱宇皓, 朱彦海 (中文原创)"
 date: 2026-05-27
 size: medium
 path: raw/PDFs/books/CacheMemory.pdf
+source-md5: 937cc75097b1a11d7fdd5c1371e2aa07
 summary: "中文原创 Cache Memory 深度分析（111页），涵盖 x86/Power/UltraSPARC Alpha 四类处理器 Cache 架构：存储层次、TLB、Cache 结构、预取、写策略、一致性协议、带宽优化"
 tags: [computer-architecture, cache-memory, memory-hierarchy, performance, books]
 created: 2026-05-27

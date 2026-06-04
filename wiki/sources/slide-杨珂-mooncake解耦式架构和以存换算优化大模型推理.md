@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "杨珂_Mooncake：解耦式架构和以存换算，优化大模型推理"
 path: slides/杨珂_Mooncake：解耦式架构和以存换算，优化大模型推理.pdf
+source-md5: cba28171993bef953e07adbb80c4bd84
 size: 12722 KB
 category: slide
 ingested: 2026-06-04

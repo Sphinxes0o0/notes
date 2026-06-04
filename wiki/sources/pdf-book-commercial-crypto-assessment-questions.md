@@ -6,6 +6,7 @@ author: 国家密码管理局
 date: 2020
 size: medium
 path: raw/PDFs/books/商用密码应用安全性评估考核题.pdf
+source-md5: 9ed489d3a91cff5719179c5db67ed360
 summary: 密码安全评估官方题库，含 SM2/SM3/SM4/国密体系与合规性评估要点
 created: 2020
 tags: []

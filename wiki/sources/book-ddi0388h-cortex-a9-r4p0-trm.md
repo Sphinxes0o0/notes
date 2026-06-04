@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "DDI0388H_cortex_a9_r4p0_trm"
 path: books/DDI0388H_cortex_a9_r4p0_trm.pdf
+source-md5: 16ecc62033a17ced63b829d0b7acf44b
 size: 1460 KB
 category: book
 ingested: 2026-06-04

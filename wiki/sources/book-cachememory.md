@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "CacheMemory"
 path: books/CacheMemory.pdf
+source-md5: 937cc75097b1a11d7fdd5c1371e2aa07
 size: 4199 KB
 category: book
 ingested: 2026-06-04

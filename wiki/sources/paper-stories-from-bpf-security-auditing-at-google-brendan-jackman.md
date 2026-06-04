@@ -1,8 +1,9 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman"
 path: papers/Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman.pdf
+source-md5: c2a7a7d5af16c050502d4f17353e569b
 size: 748 KB
 category: paper
 ingested: 2026-06-04

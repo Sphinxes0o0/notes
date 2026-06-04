@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "21st-Century-C++"
 path: books/21st-Century-C++.pdf
+source-md5: b66944d375b5cb4c4064f2a43f76aa32
 size: 470 KB
 category: book
 ingested: 2026-06-04

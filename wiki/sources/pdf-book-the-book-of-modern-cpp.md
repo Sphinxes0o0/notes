@@ -6,6 +6,7 @@ author: Klaus Iglberger
 date: 2022
 size: medium
 path: raw/PDFs/books/The.Book.of.Modern.C++.-.Electronic.Edition.pdf
+source-md5: 421fc04ce49ecb5e7abb60d47c83b988
 summary: 现代 C++ 工程实践：RVO/emplace/移动语义/类型安全/C++23 新特性
 created: 2022
 tags: [cpp, modern-cpp]

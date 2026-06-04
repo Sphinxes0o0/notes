@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "UNIX环境高级编程(第三版)"
 path: books/UNIX环境高级编程(第三版).pdf
+source-md5: 1f7b3cfdfc5f024e293a65d94902243a
 size: 22762 KB
 category: book
 ingested: 2026-06-04

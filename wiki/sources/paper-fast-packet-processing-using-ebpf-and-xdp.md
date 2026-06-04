@@ -3,6 +3,7 @@ type: source
 source-type: paper
 title: "Fast-Packet-Processing-using-eBPF-and-XDP"
 path: papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf
+source-md5: 45d7688ed3ca64788911c0bd730addc0
 size: 1402 KB
 category: paper
 ingested: 2026-06-04

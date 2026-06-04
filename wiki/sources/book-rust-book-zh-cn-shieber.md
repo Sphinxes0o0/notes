@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "rust-book-zh-cn-shieber"
 path: books/rust-book-zh-cn-shieber.pdf
+source-md5: c822e512ee37bf3e39ec2f045851f5c6
 size: 4008 KB
 category: book
 ingested: 2026-06-04

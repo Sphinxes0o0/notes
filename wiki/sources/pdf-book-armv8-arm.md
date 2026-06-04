@@ -6,6 +6,7 @@ author: ARM Limited
 date: 2020
 size: large
 path: raw/PDFs/books/DDI0487Fc_armv8_arm.pdf
+source-md5: 13263dafeb720f12f3c67126d65eacf0
 pages: 8248
 summary: ARMv8-A 架构参考手册（8248页）：AArch64/AArch32 执行状态、寄存器、系统指令、MMU/Cache/TLB、异常处理、内存模型、Power Management、GIC/SMMU。
 created: 2020

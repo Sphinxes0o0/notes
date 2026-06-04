@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "Pete_软件工程进阶金字塔"
 path: slides/Pete_软件工程进阶金字塔.pdf
+source-md5: e2f9088863f55b8b212778e5818a9675
 size: 3058 KB
 category: slide
 ingested: 2026-06-04

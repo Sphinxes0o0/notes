@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "王豪杰_面向异构计算的统一智能计算架构及开源生态"
 path: slides/王豪杰_面向异构计算的统一智能计算架构及开源生态.pdf
+source-md5: 254901973daab01ea5e017795dc6fc9d
 size: 7299 KB
 category: slide
 ingested: 2026-06-04

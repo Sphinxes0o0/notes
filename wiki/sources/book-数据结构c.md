@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "数据结构C++"
 path: books/数据结构C++.pdf
+source-md5: 04bd307cbcaf8a97ec1d21d72189cde0
 size: 42975 KB
 category: book
 ingested: 2026-06-04

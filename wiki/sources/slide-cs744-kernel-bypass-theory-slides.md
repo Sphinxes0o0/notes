@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "CS744_kernel-bypass_theory_slides"
 path: slides/CS744_kernel-bypass_theory_slides.pdf
+source-md5: 23ec375c5129e4b3e993e215f5b8d75c
 size: 383 KB
 category: slide
 ingested: 2026-06-04

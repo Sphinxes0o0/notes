@@ -6,6 +6,7 @@ author: "Marc Gregoire（陈晓伟 译）"
 date: 2024-11-22
 size: large
 path: raw/PDFs/books/Professional-C++-6ed-zh-20241122.pdf
+source-md5: 8b3acbe775fff38601f712cb8f69b523
 summary: "Professional C++ 第6版（1247页）：系统讲解 C++ 现代特性，从语言基础到工程实践，覆盖 C++20 modules/concepts/coroutines/_ranges，附编译环境配置与完整源代码。"
 tags: [cpp, cpp20, cpp17, modern-cpp, professional, oop, stl]
 created: 2026-05-27

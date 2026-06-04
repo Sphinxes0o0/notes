@@ -6,6 +6,7 @@ author: "Jean-Philippe Luers"
 date: 2015
 size: small
 path: raw/PDFs/books/UnixProgrammingTools.pdf
+source-md5: 6ad86221b1be2a90803cbe05d5cabf58
 summary: "Unix 工具链速查：make/cmake/git/sed/awk/perl 等开发工具的实战用法"
 tags: [books, unix, tools, shell, make, git, debugging]
 created: 2026-05-27

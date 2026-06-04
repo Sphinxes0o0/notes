@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "邹涛_CRASH_NG：基于AI和内核调试的自动化Linux系统宕机诊断工具"
 path: slides/邹涛_CRASH_NG：基于AI和内核调试的自动化Linux系统宕机诊断工具.pdf
+source-md5: 3ed4b63482e428d360978ddada8dfa67
 size: 4117 KB
 category: slide
 ingested: 2026-06-04

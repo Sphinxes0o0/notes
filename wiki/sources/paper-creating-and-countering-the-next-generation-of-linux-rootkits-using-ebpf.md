@@ -3,6 +3,7 @@ type: source
 source-type: paper
 title: "Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF"
 path: papers/Creating_and_countering_the_next_generation_of_Linux_rootkits_using_eBPF.pdf
+source-md5: 4f3ff844cc2fd4f765c02b5bf8184583
 size: 1854 KB
 category: paper
 ingested: 2026-06-04

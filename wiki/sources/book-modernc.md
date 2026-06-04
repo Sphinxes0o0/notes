@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "ModernC"
 path: books/ModernC.pdf
+source-md5: f40f1227544388f7c2de7f52aee1c663
 size: 1940 KB
 category: book
 ingested: 2026-06-04

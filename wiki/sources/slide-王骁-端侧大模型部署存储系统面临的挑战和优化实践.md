@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "王骁_端侧大模型部署：存储系统面临的挑战和优化实践"
 path: slides/王骁_端侧大模型部署：存储系统面临的挑战和优化实践.pdf
+source-md5: efb9c834a1f0f65d0451cb9f8a5291f5
 size: 6445 KB
 category: slide
 ingested: 2026-06-04

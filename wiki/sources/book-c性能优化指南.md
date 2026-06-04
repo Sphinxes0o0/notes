@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "C++性能优化指南"
 path: books/C++性能优化指南.pdf
+source-md5: 529ee4bdaaa99ba6ba2f3ce45d698453
 size: 24672 KB
 category: book
 ingested: 2026-06-04

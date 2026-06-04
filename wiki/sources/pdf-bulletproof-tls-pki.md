@@ -6,6 +6,7 @@ author: "Ivan Ristić"
 date: 2022
 size: medium
 path: raw/PDFs/books/bulletproof-tls-and-pki-2nbsped-9781907117091.pdf
+source-md5: f8a9142095c95e3f09105be8afdbb4a3
 summary: "Feisty Duck 权威 TLS/PKI 部署指南（504页），涵盖 SSL/TLS 密码学基础、TLS 1.2/1.3 协议、TLS 配置、HTTPS 部署、PKI 证书管理、OpenSSL 实战、安全评估与攻击防护"
 tags: [security, tls, ssl, pki, cryptography, books]
 created: 2026-05-27

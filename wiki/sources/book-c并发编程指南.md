@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "C++并发编程指南"
 path: books/C++并发编程指南.pdf
+source-md5: 88f7d831a8af6fbca3181103b9845e7c
 size: 4795 KB
 category: book
 ingested: 2026-06-04

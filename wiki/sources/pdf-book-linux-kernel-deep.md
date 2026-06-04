@@ -6,6 +6,7 @@ author: Daniel P. Bovet, Marco Cesati
 date: 2000
 size: medium
 path: raw/PDFs/books/深入理解Linuxkenrle.pdf
+source-md5: 775d4ed83d0594d512502afeae328860
 summary: Understanding the Linux Kernel, Bovet/Cesati，Linux内核设计与实现经典教材
 created: 2000
 tags: [linux]

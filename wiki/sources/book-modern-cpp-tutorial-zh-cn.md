@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "modern-cpp-tutorial-zh-cn"
 path: books/modern-cpp-tutorial-zh-cn.pdf
+source-md5: 14e10eebc1ff6a53f77c382b40feb4a1
 size: 2482 KB
 category: book
 ingested: 2026-06-04

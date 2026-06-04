@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "刘童旋_基于C++构建大模型推理优化框架xLLM实践"
 path: slides/刘童旋_基于C++构建大模型推理优化框架xLLM实践.pdf
+source-md5: fdbcec275a27fff7e1d48b03e8a0cb01
 size: 5922 KB
 category: slide
 ingested: 2026-06-04

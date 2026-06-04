@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "Bjarne_C++跨越40载的成功经验与未来演进"
 path: slides/Bjarne_C++跨越40载的成功经验与未来演进.pdf
+source-md5: 450a3b3b394433511934dd5b431004ec
 size: 6520 KB
 category: slide
 ingested: 2026-06-04

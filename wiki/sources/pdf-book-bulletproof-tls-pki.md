@@ -6,6 +6,7 @@ author: Ivan Ristic
 date: 2018
 size: small
 path: raw/PDFs/books/bulletproof-tls-and-pki-2nbsped-9781907117091.pdf
+source-md5: f8a9142095c95e3f09105be8afdbb4a3
 summary: TLS/PKI 安全权威指南：协议细节/密码套件/证书管理/部署安全/测试
 created: 2018
 tags: []

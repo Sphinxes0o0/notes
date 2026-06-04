@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "密码技术与物联网安全mbedtls开发实战"
 path: books/密码技术与物联网安全mbedtls开发实战.pdf
+source-md5: 24203e6da3d8bf4b9dfa916559a535fe
 size: 26820 KB
 category: book
 ingested: 2026-06-04

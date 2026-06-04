@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Cpp17"
 path: books/Cpp17.pdf
+source-md5: 7c49297e29af125c5b2435ff86bb6fe8
 size: 2193 KB
 category: book
 ingested: 2026-06-04

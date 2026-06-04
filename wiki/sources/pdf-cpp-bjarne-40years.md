@@ -6,6 +6,7 @@ author: Bjarne Stroustrup
 date: 2024
 size: medium
 path: raw/PDFs/slides/Bjarne_C++跨越40载的成功经验与未来演进.pdf
+source-md5: 450a3b3b394433511934dd5b431004ec
 summary: Bjarne Stroustrup C++40周年演讲：语言历史、成功因素、未来方向与AI时代C++定位
 tags: [cpp, history, standards, bjarne, ai, future]
 created: 2024

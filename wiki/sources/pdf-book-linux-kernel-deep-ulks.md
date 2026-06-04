@@ -6,6 +6,7 @@ author: "Daniel P. Bovet, Marco Cesati / 陈莉君 译"
 date: 2005
 size: large
 path: raw/PDFs/books/深入理解Linuxkenrle.pdf
+source-md5: 775d4ed83d0594d512502afeae328860
 summary: "深入理解 Linux 内核（ULK）：Linux 内核核心机制，进程调度、内存管理、文件系统、设备驱动、内核同步"
 tags: [books, linux-kernel, memory-management, process-scheduling, vfs, device-drivers]
 created: 2026-05-27

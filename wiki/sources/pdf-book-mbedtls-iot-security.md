@@ -6,6 +6,7 @@ author: "徐凯 / 刘金国"
 date: 2022
 size: medium
 path: raw/PDFs/books/密码技术与物联网安全mbedtls开发实战.pdf
+source-md5: 24203e6da3d8bf4b9dfa916559a535fe
 summary: "mbedTLS 开发实战：嵌入式 TLS/DTLS 协议栈实现，物联网安全应用"
 tags: [books, iot, security, mbedtls, tls, embedded, cryptography]
 created: 2026-05-27

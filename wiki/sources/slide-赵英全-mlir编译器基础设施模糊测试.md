@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "赵英全_MLIR编译器基础设施模糊测试"
 path: slides/赵英全_MLIR编译器基础设施模糊测试.pdf
+source-md5: 3abfb3cda16c3555d718dcab2fea1b3e
 size: 7690 KB
 category: slide
 ingested: 2026-06-04

@@ -6,6 +6,7 @@ author: "Ayman Alheraki"
 date: 2024
 size: small
 path: raw/PDFs/books/Advanced_Memory_Management_in_Modern_Cpp.pdf
+source-md5: b4ca4a13558932a1d9f83c8cf99ac15b
 summary: "Modern C++ 内存管理进阶：smart pointers、custom allocators、memory pool、arena allocation"
 tags: [books, cpp, memory-management, smart-pointer, allocator]
 created: 2026-05-27

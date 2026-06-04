@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "基础集合论"
 path: books/基础集合论.pdf
+source-md5: 9ccda51a0f64a2319dd13e9ecbb0af4d
 size: 3312 KB
 category: book
 ingested: 2026-06-04

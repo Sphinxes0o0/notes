@@ -6,6 +6,7 @@ author: "Rainer Grimm"
 date: 2021
 size: large
 path: raw/PDFs/books/Concurrency.with.Modern.C++-zh.pdf
+source-md5: 8245ce8cb5d9112f9b9785a15b3087a2
 summary: "C++ 并发编程（C++11-23）：中文翻译版，涵盖线程、锁、async/future、内存模型、无锁编程"
 tags: [books, cpp, concurrency, threading, lock-free, atomic, cpp20]
 created: 2026-05-27

@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "The.Book.of.Modern.C++.-.Electronic.Edition"
 path: books/The.Book.of.Modern.C++.-.Electronic.Edition.pdf
+source-md5: 421fc04ce49ecb5e7abb60d47c83b988
 size: 15368 KB
 category: book
 ingested: 2026-06-04

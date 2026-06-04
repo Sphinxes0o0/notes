@@ -6,6 +6,7 @@ author: Leonardo Di Donato, Mark Stemm, Leonardo Grasso (Apple / Sysdig)
 date: 2023
 size: large
 path: raw/PDFs/papers/Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple.pdf
+source-md5: d12429e52ce80a5885f0d9c5522014fd
 summary: "Falco's journey replacing its kernel module driver with an eBPF probe — enabling safer, more portable, kernel-level security monitoring without CAP_SYS_ADMIN."
 created: 2026-05-27
 tags: [ebpf]

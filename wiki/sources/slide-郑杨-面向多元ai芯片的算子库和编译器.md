@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "郑杨_面向多元AI芯片的算子库和编译器"
 path: slides/郑杨_面向多元AI芯片的算子库和编译器.pdf
+source-md5: e0b959bf725dd24b616e18dfd4f45d70
 size: 6721 KB
 category: slide
 ingested: 2026-06-04

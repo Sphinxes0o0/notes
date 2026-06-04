@@ -6,6 +6,7 @@ author: Steven H. Strogatz
 date: 2018
 size: large
 path: raw/PDFs/books/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.pdf
+source-md5: 15b5f471a72f08b7a217642e4d1d6f6b
 summary: Strogatz非线性动力学与混沌，物理/生物/化学/工程应用
 created: 2018
 tags: []

@@ -6,6 +6,7 @@ author: Bjarne Stroustrup
 date: 2022
 size: small
 path: raw/PDFs/books/21st-Century-C++.pdf
+source-md5: b66944d375b5cb4c4064f2a43f76aa32
 pages: 26
 summary: Bjarne Stroustrup CACM 论文（26页）：阐述21世纪 C++ 核心设计理念——资源管理、生命周期安全、错误处理、模块化、泛型编程。强调类型安全与性能的统一，介绍 C++ Core Guidelines 和 Profiles。
 created: 2022

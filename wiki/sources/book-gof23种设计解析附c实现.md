@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "GoF+23种设计解析附C++实现"
 path: books/GoF+23种设计解析附C++实现.pdf
+source-md5: 5d0d02d9304aeafe557227bf2b1f4cec
 size: 1675 KB
 category: book
 ingested: 2026-06-04

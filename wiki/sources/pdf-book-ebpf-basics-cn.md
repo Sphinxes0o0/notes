@@ -6,6 +6,7 @@ author: 方院生
 date: 2023
 size: small
 path: raw/PDFs/books/eBPF基础.pdf
+source-md5: 2308e77d0d680a38022a0f36cfdb71ff
 summary: eBPF 入门书：原理/工具链/CO-RE/常用场景（网络/安全/观测）
 created: 2023
 tags: [ebpf]

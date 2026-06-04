@@ -6,6 +6,7 @@ author: David Vandevoorde, Nicolai M. Josuttis
 date: 2003
 size: small
 path: raw/PDFs/books/Template-Metaprogramming-with-C++-cn-20230401.pdf
+source-md5: b9792ff29457fd77cc8ed05eb41479d1
 summary: C++ 模板元编程深度指南：类型计算、SFINAE、type traits、constexpr
 created: 2003
 tags: [cpp]

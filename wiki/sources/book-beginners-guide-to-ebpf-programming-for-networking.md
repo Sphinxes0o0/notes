@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Beginners_guide_to_eBPF_programming_for_networking"
 path: books/Beginners_guide_to_eBPF_programming_for_networking.pdf
+source-md5: 15f1e587e801356c25a822be862a075a
 size: 1026 KB
 category: book
 ingested: 2026-06-04

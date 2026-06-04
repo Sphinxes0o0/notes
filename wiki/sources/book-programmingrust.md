@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "ProgrammingRust"
 path: books/ProgrammingRust.pdf
+source-md5: cc73722f3362e01314494f0eb572d599
 size: 8252 KB
 category: book
 ingested: 2026-06-04

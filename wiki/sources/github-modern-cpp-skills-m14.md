@@ -6,6 +6,7 @@ author: Sphinx Shi
 date: 2026-05-27
 size: small
 path: raw/Modern-Cpp-Skills/m14-mental-model/SKILL.md
+source-md5: c5ba27b7c705da82ab794687c3768765
 summary: "C++ Master-level skill for C++ mental models. Core question: What happens in memory? Covers value vs reference vs pointer, initialization, undefined behavior, and std::move semantics."
 tags: [cpp, master, mental-model, pointer, reference, undefined-behavior]
 created: 2026-05-27

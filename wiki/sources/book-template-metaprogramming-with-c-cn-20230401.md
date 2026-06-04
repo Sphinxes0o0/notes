@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Template-Metaprogramming-with-C++-cn-20230401"
 path: books/Template-Metaprogramming-with-C++-cn-20230401.pdf
+source-md5: b9792ff29457fd77cc8ed05eb41479d1
 size: 3961 KB
 category: book
 ingested: 2026-06-04

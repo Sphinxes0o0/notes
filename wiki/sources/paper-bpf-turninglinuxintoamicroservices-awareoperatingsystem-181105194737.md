@@ -1,8 +1,9 @@
 ---
 type: source
-source-type: pdf
+source-type: paper
 title: "bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737"
 path: papers/bpf-turninglinuxintoamicroservices-awareoperatingsystem-181105194737.pdf
+source-md5: fc529bada5bc975cce0a74fbddc60f6a
 size: 878 KB
 category: paper
 ingested: 2026-06-04

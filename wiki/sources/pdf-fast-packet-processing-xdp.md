@@ -7,6 +7,7 @@ author: "Unknown"
 date: 2020
 size: medium
 path: raw/PDFs/papers/Fast-Packet-Processing-using-eBPF-and-XDP.pdf
+source-md5: 45d7688ed3ca64788911c0bd730addc0
 summary: "Technical deep-dive into XDP (eXpress Data Path) — eBPF's high-performance packet processing hook — covering architecture, use cases, and performance benchmarks."
 created: 2026-05-27
 ---
