@@ -100,3 +100,8 @@ flowchart LR
     style XDP fill:#c8e6c9
     style SOCKMAP fill:#bbdefb
 ```
+
+
+## Related pages
+
+- [[entities/linux/kernel/net]]

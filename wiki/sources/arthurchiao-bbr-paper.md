@@ -96,3 +96,8 @@ stateDiagram-v2
         pacing rate
     end note
 ```
+
+
+## Related pages
+
+- [[entities/linux/kernel/net]]

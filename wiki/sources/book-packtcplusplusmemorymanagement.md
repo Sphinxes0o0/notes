@@ -16850,3 +16850,5 @@ excellent quality content.
 ## Source
 
 - Local path: ``
+
+- [[entities/cpp/cpp-stl-containers]]

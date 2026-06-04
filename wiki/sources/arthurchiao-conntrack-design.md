@@ -119,3 +119,8 @@ flowchart TD
     style Hooks fill:#fff3e0
     style States fill:#e8f5e9
 ```
+
+
+## Related pages
+
+- [[entities/linux/kernel/net]]

@@ -26,3 +26,7 @@ tags: [cpp, design-patterns]
 - [[pdf-book-effective-stl]]
 - [[pdf-book-modern-cpp]]
 - [[pdf-book-cpp17]]
+
+## Related pages
+
+- [[entities/cpp/cpp-stl-containers]]

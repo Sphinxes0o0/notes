@@ -600,3 +600,5 @@ ebpf.io | cilium.io | isovalent.com
 ## Source
 
 - Local path: `[[books/Beginners_guide_to_eBPF_programming_for_networking.pdf]]`
+
+- [[entities/linux/ebpf/ebpf-networking]]

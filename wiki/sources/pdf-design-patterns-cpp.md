@@ -134,3 +134,8 @@ A Chinese-language deep-dive into the 23 Gang of Four (GoF) design patterns, eac
 - [[entities/cpp/cpp-stl-iterators]] — STL iterators (iterator pattern)
 - [[cpp-index]] — Modern C++
 - [[sys-prog-index]] — System programming
+
+
+## Related pages
+
+- [[entities/cpp/cpp-stl-containers]]
