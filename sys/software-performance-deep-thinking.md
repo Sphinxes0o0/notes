@@ -38,5 +38,5 @@
 > "Good compilation optimization makes programs fast before they even run"
 
 ## 关联概念
-- [[kernel-bypass-dpdk]] — 内核旁路提升性能
+-  — 内核旁路提升性能
 - [[af-xdp-technical]] — 零拷贝减少拷贝开销

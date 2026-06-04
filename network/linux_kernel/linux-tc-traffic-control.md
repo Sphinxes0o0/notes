@@ -38,5 +38,5 @@
 
 ## 关联概念
 - [[linux-advanced-routing-tc]] — lartc.org HOWTO更全面
-- [[linux-ebpf-technical-practice]] — TC eBPF direct-action mode
+-  — TC eBPF direct-action mode
 - NIDS架构: tc netem → 流量仿真 → Snort3测试

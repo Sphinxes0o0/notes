@@ -43,6 +43,6 @@ Tracing: **Tracepoint > Fentry/Fexit > Kprobe > Uprobe**
 > "XDP operates at the network driver layer, enabling ~10-20 million packets per second processing"
 
 ## 关联概念
-- [[linux-ebpf-fundamentals]] — 已有entity，复用
-- [[kernel-bypass-dpdk]] — XDP是in-kernel bypass
+-  — 已有entity，复用
+-  — XDP是in-kernel bypass
 - NIDS架构: XDP预过滤 → TC完整检测 →用户态Snort3
