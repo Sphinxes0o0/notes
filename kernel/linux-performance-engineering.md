@@ -38,5 +38,5 @@
 5. **缓存优化**: NIDS flow table缓存命中率影响检测性能
 
 ## 关联概念
-- [[wiki/sources/arthurchiao-linux-net-stack]] — Linux网络栈概览
-- [[wiki/sources/arthurchiao-linux-irq-softirq]] — IRQ/softirq机制
+-  — Linux网络栈概览
+-  — IRQ/softirq机制

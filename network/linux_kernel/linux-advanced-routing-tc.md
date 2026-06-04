@@ -52,5 +52,5 @@
 5. **netem**: 模拟网络损伤测试NIDS检测准确性
 
 ## 关联概念
-- [[linux-ebpf-technical-practice]] — TC eBPF direct-action mode
+-  — TC eBPF direct-action mode
 - NIDS架构: tc filter → packet classification → Snort3

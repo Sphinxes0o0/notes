@@ -39,6 +39,6 @@ XDP程序检查queue是否有绑定的AF_XDP socket，有则重定向。
 > "RX和TX可以共享同一UMEM，因此不必在RX和TX之间复制数据包"
 
 ## 关联概念
-- [[kernel-bypass-dpdk]] — DPDK是另一种kernel bypass方案
-- [[linux-ebpf-fundamentals]] — XDP/eBPF基础
+-  — DPDK是另一种kernel bypass方案
+-  — XDP/eBPF基础
 - NIDS架构: AF_XDP → Snort3 inline detection

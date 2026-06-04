@@ -31,5 +31,5 @@ TCP连接要求唯一的`(src-ip, src-port, dest-ip, dest-port)`四元组，而�
 4. **Port Exhaustion**: 理解端口复用机制揭示了基于端口的连接限制常被高估
 
 ## 关联概念
-- [[wiki/sources/notes-net-deep]] — TCP状态机
-- [[wiki/sources/notes-netfilter]] — 连接跟踪
+-  — TCP状态机
+-  — 连接跟踪

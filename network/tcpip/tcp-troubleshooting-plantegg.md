@@ -40,5 +40,5 @@
 4. **Queue监控**: 半连接队列爆满是SYN flood的典型症状
 
 ## 关联概念
-- [[wiki/sources/notes-net-deep]] — 网络深度笔记
-- [[wiki/entities/linux/snort3/snort3-flow]] — Snort3 flow tracking
+-  — 网络深度笔记
+-  — Snort3 flow tracking
