@@ -513,4 +513,4 @@ _To be filled by downstream LLM agent during entity/synthesis ingest._
 
 ## Source
 
-- Local path: `[[slides/李彦博_从自动化到智能化 AI重塑C++软件测试未来.pdf]]`
+- Local path: ``

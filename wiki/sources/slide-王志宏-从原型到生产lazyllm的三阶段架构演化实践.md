@@ -795,4 +795,4 @@ _To be filled by downstream LLM agent during entity/synthesis ingest._
 
 ## Source
 
-- Local path: `[[slides/王志宏_从原型到生产：LazyLLM的三阶段架构演化实践.pdf]]`
+- Local path: ``

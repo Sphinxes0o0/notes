@@ -23,5 +23,5 @@ tags: []
 Sedgewick 算法经典 C 语言实现版（3rd Edition）：排序算法、查找算法、图算法（DFS/BFS/最小生成树/最短路径）、优先队列、哈希表等数据结构与应用。Part 1-4 合订本，672页扫描版。
 
 ## Related Pages
-- [[sources/pdf-sedgewick-graph-algos]] — Sedgewick Graph Algorithms (Part 5)
+-  — Sedgewick Graph Algorithms (Part 5)
 -  — Data Structures & Algorithms in C++

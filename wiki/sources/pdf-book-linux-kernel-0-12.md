@@ -30,5 +30,5 @@ tags: [linux]
 
 ## 相关页面
 - [[pdf-book-linux-kernel-deep]]
-- [[pdf-book-computer-systems-perspective]]
-- [[pdf-book-linux-sysprog]]
+- 
+- 

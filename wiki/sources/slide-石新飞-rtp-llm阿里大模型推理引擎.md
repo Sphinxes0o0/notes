@@ -302,4 +302,4 @@ _To be filled by downstream LLM agent during entity/synthesis ingest._
 
 ## Source
 
-- Local path: `[[slides/石新飞_RTP-LLM：阿里大模型推理引擎.pdf]]`
+- Local path: ``

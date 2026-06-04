@@ -33,4 +33,4 @@ Distributed systems is the field of study about multiple independent computers t
 
 ## Sources
 - [[bookmark-hld-handbook]] — System Design resources
-- [[book-ddia]] — Designing Data-Intensive Applications
+-  — Designing Data-Intensive Applications

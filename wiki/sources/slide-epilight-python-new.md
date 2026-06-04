@@ -5167,4 +5167,4 @@ _To be filled by downstream LLM agent during entity/synthesis ingest._
 
 ## Source
 
-- Local path: `[[slides/epilight_python_new.pdf]]`
+- Local path: ``

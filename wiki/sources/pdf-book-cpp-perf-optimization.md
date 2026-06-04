@@ -29,4 +29,4 @@ O'Reilly 《Optimized C++》中文版：性能分析工具与测量方法、C++ 
 - [[sources/pdf-book-concurrency-modern-cpp]] — Concurrency with Modern C++
 - [[sources/pdf-book-advanced-memory-mgmt-cpp]] — Advanced C++ memory management
 - [[sources/pdf-book-modern-cpp]] — Modern C++ books
-- [[sources/pdf-cpp-perf-optimization]] — C++ performance optimization (another source)
+-  — C++ performance optimization (another source)

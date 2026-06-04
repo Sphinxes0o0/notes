@@ -742,4 +742,4 @@ _To be filled by downstream LLM agent during entity/synthesis ingest._
 
 ## Source
 
-- Local path: `[[slides/杨珂_Mooncake：解耦式架构和以存换算，优化大模型推理.pdf]]`
+- Local path: ``

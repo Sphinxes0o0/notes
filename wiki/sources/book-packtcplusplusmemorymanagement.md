@@ -16849,4 +16849,4 @@ excellent quality content.
 
 ## Source
 
-- Local path: `[[books/Packt.Cplusplus.Memory.Management.pdf]]`
+- Local path: ``

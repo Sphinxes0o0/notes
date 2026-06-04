@@ -31,7 +31,7 @@ Linux intrusion detection systems (IDS/IPS) monitor network traffic or system ca
 
 - [[intrusion-detection-system]] — General IDS entity
 - [[snort3-deep-architecture]] — Snort3 NIDS architecture
-- [[linux-ebpf-security]] — eBPF for security observability
+-  — eBPF for security observability
 
 ## Sources
 - [[github-snort3-detection]]

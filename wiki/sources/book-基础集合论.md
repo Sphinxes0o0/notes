@@ -998,4 +998,4 @@ _To be filled by downstream LLM agent during entity/synthesis ingest._
 
 ## Source
 
-- Local path: `[[books/基础集合论.pdf]]`
+- Local path: ``

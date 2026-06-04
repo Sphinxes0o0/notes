@@ -31,7 +31,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology (3.18+) that
 
 - [[linux-ebpf-xdp]] — XDP (eBPF for high-speed networking)
 - [[linux-network-tc-ebpf-direct-action]] — TC Direct Action mode
-- [[linux-ebpf-security]] — eBPF for security enforcement
+-  — eBPF for security enforcement
 
 ## Sources
 - [[bookmark-sdn-guide]]

@@ -17,7 +17,7 @@ created: 2026-05-29
 | [[entities/linux/kernel/mm/linux-kernel-mm]] | Memory Management: SLUB, page fault, swap, mmap | [[entities/linux/kernel/index#memory-management]] |
 | [[entities/linux/kernel/sched/linux-kernel-sched-core]] | Scheduler: CFS, context switch, load balance | [[entities/linux/kernel/index#scheduler]] |
 | [[entities/linux/kernel/block/linux-kernel-block-core]] | Block Layer: bio, blk-mq, I/O schedulers | [[entities/linux/kernel/index#block-layer]] |
-| [[entities/linux/kernel/net.md]] | Networking: Socket, sk_buff, Netfilter | [[entities/linux/kernel/index#networking]] |
+|  | Networking: Socket, sk_buff, Netfilter | [[entities/linux/kernel/index#networking]] |
 | [[entities/linux/kernel/virt-kvm]] | Virtualization: KVM, Virtio | [[entities/linux/kernel/index#virtualization]] |
 | [[entities/linux/kernel/linux-kernel-io-uring-core]] | Async I/O: io_uring | [[entities/linux/kernel/index#io-uring--vfs]] |
 | [[entities/linux/kernel/linux-kernel-vfs-core]] | VFS: inode, dentry, super_block | [[entities/linux/kernel/index#io-uring--vfs]] |
@@ -74,7 +74,7 @@ created: 2026-05-29
 
 | Entity | Description | Tags |
 |--------|-------------|------|
-| [[entities/linux/kernel/net.md]] | Socket Layer, sk_buff, Netdevice, Routing, TCP/UDP implementation | linux-kernel, networking, socket |
+|  | Socket Layer, sk_buff, Netdevice, Routing, TCP/UDP implementation | linux-kernel, networking, socket |
 | [[entities/linux/kernel/skbuff-deep-dive]] | SKB memory management: head/data/tail/end layout, clone/copy, scatter-gather, dataref | linux-kernel, networking, skbuff |
 | [[entities/linux/kernel/netfilter.md]] | Netfilter: iptables, nftables, conntrack, NAT, hook points | linux-kernel, networking, netfilter |
 

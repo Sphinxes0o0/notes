@@ -41,4 +41,4 @@ Distributed system troubleshooting covers the diagnosis and resolution of failur
 - [[paxos-consensus]] — Paxos algorithm
 
 ## Sources
-- [[book-ddia]] — Designing Data-Intensive Applications
+-  — Designing Data-Intensive Applications

@@ -26,5 +26,5 @@ C++ 内存管理从传统到现代的全面覆盖：stack vs heap、RAII、smart
 ## Related Pages
 - [[sources/pdf-book-modern-cpp]] — Modern C++ books
 - [[sources/pdf-cpp-concurrency]] — C++ concurrency guide
-- [[sources/pdf-cpp-perf-optimization]] — C++ performance optimization
+-  — C++ performance optimization
 - [[entities/cpp/cpp-memory-model]] — C++ memory model

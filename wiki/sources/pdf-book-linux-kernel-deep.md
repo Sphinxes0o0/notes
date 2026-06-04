@@ -33,5 +33,5 @@ Linux 内核经典教材（Bovet & Cesati）：
 
 ## 相关页面
 - [[pdf-book-linux-kernel-0-12]]
-- [[pdf-book-computer-systems-perspective]]
-- [[pdf-book-linux-sysprog]]
+- 
+- 

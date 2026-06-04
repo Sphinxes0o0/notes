@@ -18,7 +18,7 @@ updated: 2026-05-27
 | [[entities/cpp/design-patterns/factory-pattern]] | Simple/Factory Method/Abstract Factory |
 | [[entities/cpp/design-patterns/builder-pattern]] | Step-by-step object construction |
 | [[entities/cpp/design-patterns/prototype-pattern]] | Clone to create objects |
-| [[entities/cpp/design-patterns/abstract-factory-pattern]] | Create families of related objects |
+|  | Create families of related objects |
 
 ### Structural (7)
 | Entity | Description |

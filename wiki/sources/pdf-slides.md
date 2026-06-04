@@ -18,7 +18,7 @@ tags: [slides]
 | 分类 | 源页面 | 数量 |
 |------|--------|------|
 | [[pdf-slides-cpp-standard]] | C++ 语言演进与标准化 | 8 |
-| [[pdf-slides-ai-coding]] | AI Coding / Coding Agent | 5 |
+|  | AI Coding / Coding Agent | 5 |
 | [[pdf-slides-ai-compiler]] | AI Compiler / MLIR | 5 |
 | [[pdf-slides-llm-inference]] | LLM 推理优化 | 10 |
 | [[pdf-slides-kernel]] | Linux Kernel / 调试工具 | 3 |
@@ -77,7 +77,7 @@ tags: [slides]
 ## 来源详情
 
 - [[pdf-slides-cpp-standard]]
-- [[pdf-slides-ai-coding]]
+- 
 - [[pdf-slides-ai-compiler]]
 - [[pdf-slides-llm-inference]]
 - [[pdf-slides-kernel]]
