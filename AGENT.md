@@ -48,11 +48,28 @@ pyramid/
 - 不强制 clone，只在需要时读取
 - `.meta.md` 包含：仓库描述、主要语言、最后更新时间、关键文件列表
 
-### PDF 文件
-- 路径：`raw/PDFs/{papers,books,slides}/`
-- LLM 读取 PDF 内容，提取关键信息
-- 生成摘要页：`wiki/sources/pdf-<slug>.md`
-- 大文件（>50MB）标记到 frontmatter 的 `size: large`
+### PDF / DOCX / XLSX / PPTX / 图片 文件
+- 路径：`raw/PDFs/{papers,books,slides}/` (或顶层任意子目录)
+- 使用 `scripts/ingest_pdf.py` (基于 [run-llama/liteparse](https://github.com/run-llama/liteparse)) 提取
+  - 支持: PDF / DOCX / XLSX / PPTX / 图片 (PNG/JPG/TIFF)
+  - 速度快 (本地 Rust 核心, 无云/无 LLM 依赖)
+  - 内置 OCR (Tesseract) + 可选 HTTP OCR server
+  - 输出格式: JSON / Text / Screenshots
+- 用法:
+  ```bash
+  # 单文件
+  python3 scripts/ingest_pdf.py raw/PDFs/papers/foo.pdf
+
+  # 批量
+  python3 scripts/ingest_pdf.py --batch raw/PDFs/papers/
+
+  # 截图 (给 VLM 看)
+  python3 scripts/ingest_pdf.py --screenshot raw/PDFs/papers/foo.pdf
+  ```
+- 生成: `wiki/sources/<type>-<slug>.md` 含 frontmatter (`source-type: pdf|docx|xlsx|pptx|image`)
+- 大文件 (>50MB) 标记到 frontmatter 的 `size: large`
+- 视觉辅助: 装 `liteparse` agent skill (`.hermes/skills/devops/liteparse/SKILL.md`)
+  - 通过 `npx skills add run-llama/llamaparse-agent-skills --skill liteparse` 同步上游
 
 ### 浏览器书签
 - 路径：`raw/bookmarks/*.md`
