@@ -14,3 +14,4 @@ raw/**/.vscode/
 raw/**/.claude/
 raw/**/.husky/
 raw/bookmarks/ebooks/
+__pycache__/

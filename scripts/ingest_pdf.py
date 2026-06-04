@@ -84,10 +84,14 @@ def slugify(name: str) -> str:
 
 
 def file_type(p: Path) -> str:
-    """Return source-type bucket for the file: 'pdf' | 'docx' | 'pptx' | 'xlsx' | 'image'."""
+    """Return source-type bucket for the file.
+
+    For PDF, the bucket is refined by the subdirectory under raw/PDFs/:
+    papers/ -> 'paper', slides/ -> 'slide', books/ -> 'book', else 'pdf'.
+    This avoids slug collisions between the 3 buckets and gives wiki
+    readers a clearer signal than a flat 'pdf-' prefix.
+    """
     ext = p.suffix.lower()
-    if ext == ".pdf":
-        return "pdf"
     if ext in (".docx", ".doc"):
         return "docx"
     if ext in (".pptx", ".ppt"):
@@ -96,6 +100,8 @@ def file_type(p: Path) -> str:
         return "xlsx"
     if ext in (".png", ".jpg", ".jpeg", ".tiff", ".bmp"):
         return "image"
+    if ext == ".pdf":
+        return category_from_path(p) if category_from_path(p) != "misc" else "pdf"
     return ext.lstrip(".") or "unknown"
 
 
