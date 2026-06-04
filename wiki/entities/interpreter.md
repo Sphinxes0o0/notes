@@ -64,7 +64,7 @@ Runtime (VM / Native)
 ## 相关概念
 
 - [[virtual-machine]] — 字节码解释器运行在 VM 之上
-- [[compiler-from-scratch]] — 编译器是解释器的上游，生成字节码或机器码
+-  — 编译器是解释器的上游，生成字节码或机器码
 - [[memory-hierarchy]] — 解释器的堆分配和 GC 是内存层次的应用
 
 ## 来源详情

@@ -25,4 +25,4 @@ CTCI 第6版（708页）：189 道编程题 + 解题思路与代码实现，涵�
 ## Related Pages
 - [[sources/pdf-book-algorithms-c]] — Algorithms in C (Sedgewick)
 - [[sources/pdf-book-ds-algos-cpp]] — Data Structures & Algorithms in C++
-- [[sources/pdf-elements-of-programming-interviews]] — Elements of Programming Interviews
+-  — Elements of Programming Interviews

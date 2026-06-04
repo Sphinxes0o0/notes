@@ -19,7 +19,7 @@ updated: 2026-05-27
 | 分类 | 源页面 | 演讲数 |
 |------|--------|--------|
 | C++ 语言演进与标准化 | [[sources/pdf-slides-cpp-standard]] | 8 |
-| AI Coding / Coding Agent | [[sources/pdf-slides-ai-coding]] | 6 |
+| AI Coding / Coding Agent |  | 6 |
 | AI Compiler / MLIR | [[sources/pdf-slides-ai-compiler]] | 5 |
 | LLM 推理优化 | [[sources/pdf-slides-llm-inference]] | 11 |
 | Linux Kernel / 调试工具 | [[sources/pdf-slides-kernel]] | 4 |

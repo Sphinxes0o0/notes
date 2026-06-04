@@ -26,4 +26,4 @@ Stroustrup's CACM article on the philosophy of modern C++: simplicity, value sem
 ## Related Pages
 - [[sources/pdf-cpp17]] — C++17 complete guide
 - [[sources/pdf-book-modern-cpp]] — Modern C++ books collection
-- [[sources/pdf-cpp-templates-v2]] — C++ Templates (2nd ed)
+-  — C++ Templates (2nd ed)

@@ -26,4 +26,4 @@ Goodrich & Tamassia 算法教材 C++ 实现版（738页）：向量/链表/栈/�
 - [[sources/pdf-book-algorithms-c]] — Algorithms in C (Sedgewick)
 - [[sources/pdf-book-sedgewick-graph-algos]] — Sedgewick Graph Algorithms
 - [[sources/pdf-book-cracking-coding-interview]] — CTCI interview prep
-- [[sources/pdf-elements-of-programming-interviews]] — EPI
+-  — EPI

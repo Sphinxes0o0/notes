@@ -52,5 +52,5 @@ sources: [pdf-security-papers-ebpf, pdf-isovalent-security-observability, pdf-sa
 
 ## 来源
 - [[sources/pdf-security-papers-ebpf]] — Rootkit Defense, Falco at Apple, Google BPF Audit
-- [[sources/pdf-isovalent-security-observability]] — Isovalent O'Reilly报告
+-  — Isovalent O'Reilly报告
 - [[sources/pdf-sabpf-container-audit]] — saBPF SoCC 2021论文

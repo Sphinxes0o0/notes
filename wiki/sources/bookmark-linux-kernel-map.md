@@ -41,7 +41,7 @@ created: 2026-05-28
 
 ## 相关页面
 
-- [[kernel-subsystems-index]] — 内核子系统总览
+-  — 内核子系统总览
 - [[notes-kernel]] — Sphinx 内核笔记（源码级细节）
 - [[bookmark-linux-kernel-explorer]] — Reverser Kernel Explorer（另一个交互工具）
 - [[bookmark-linux-inside]] — Linux Inside（文字版全局介绍）

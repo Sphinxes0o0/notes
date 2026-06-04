@@ -47729,7 +47729,7 @@ Server sends                               Server reads
 
 ## Related pages
 
-- [[linux-kernel-index]]
+- 
 
 ## Source
 

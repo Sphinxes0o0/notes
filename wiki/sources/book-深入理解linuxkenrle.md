@@ -47164,7 +47164,7 @@ _(no text content on this page)_
 
 ## Related pages
 
-- [[linux-kernel-index]]
+- 
 
 ## Source
 

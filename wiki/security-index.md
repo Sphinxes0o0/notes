@@ -27,7 +27,7 @@ updated: 2026-05-25
 | [[sources/pdf-security-crypto-books-updated]] | 安全与密码学更新3册：mbedtls开发实战、OpenSSL攻略、Bulletproof TLS/PKI | 2026-05 |
 | [[sources/pdf-security-crypto-books]] | 安全与密码学6册（历史）：Bulletproof TLS/PKI、mbedtls、TrustZone/OP-TEE、商用密码考核 | 2026-05 |
 | [[sources/pdf-security-papers-ebpf]] | eBPF安全论文3篇：Rootkit攻防、Apple Falco、Google KRSI BPF审计 | 2021-2024 |
-| [[sources/pdf-isovalent-security-observability]] | Isovalent O'Reilly报告：eBPF Four Golden Signals云原生安全可观测性 | 2022 |
+|  | Isovalent O'Reilly报告：eBPF Four Golden Signals云原生安全可观测性 | 2022 |
 | [[sources/pdf-sabpf-container-audit]] | saBPF SoCC 2021论文：eBPF容器级LSM审计，零内核修改 | 2021 |
 | [[sources/pdf-ptp-security]] | PTPsec INFOCOM 2024：IEEE 1588时间同步延迟攻击检测与缓解 | 2024 |
 | [[sources/pdf-infocom-ptpsec]] | PTPsec 详解：循环路径不对称分析、Meas消息、冗余路径RTT测量、静态/增量攻击缓解 | 2024 |

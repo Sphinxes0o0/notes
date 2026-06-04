@@ -25,6 +25,6 @@ tags: [cpp]
 C++ 模板权威指南第二版：陈晓伟翻译版，667页。C++11/14/17 模板新特性（可变参数包/泛型 lambda/推导上下文/编译时 if/转发引用/用户定义字面量/概念），涵盖语言核心、库实现与最佳实践。EDG 编译器团队技术负责人主笔。
 
 ## Related Pages
-- [[sources/pdf-cpp-templates-v2]] — C++ Templates 2nd (另一翻译)
+-  — C++ Templates 2nd (另一翻译)
 - [[sources/pdf-cpp17]] — C++17 complete guide
 - [[sources/pdf-book-modern-cpp]] — Modern C++ books

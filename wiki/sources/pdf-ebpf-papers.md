@@ -194,15 +194,15 @@ Isovalent/Cilium 团队撰写的 eBPF 安全可观测性报告。
 
 | # | Paper | Source Page |
 |---|-------|------------|
-| 1 | Rethinking the Linux Kernel (Thomas Graf) | [[sources/pdf-bpf-rethinking-kernel]] |
+| 1 | Rethinking the Linux Kernel (Thomas Graf) |  |
 | 2 | BPF: Microservices-aware OS (Thomas Graf) | [[sources/pdf-bpf-microservices-os]] |
 | 3 | Linux Rootkits using eBPF (Black Hat) | (see §3 above) |
 | 4 | XDP Fast Packet Processing (UFMG) | [[sources/pdf-xdp-fast-packet]] |
 | 5 | BPF Security Auditing at Google | [[sources/pdf-google-bpf-audit]] |
 | 6 | Falco at Apple (eBPF Summit 2021) | [[sources/pdf-falco-apple]] |
-| 7 | eBPF Library Ecosystem (Kyle Quest) | [[sources/pdf-ebpf-library-ecosystem]] |
+| 7 | eBPF Library Ecosystem (Kyle Quest) |  |
 | 8 | saBPF Container Audit (SoCC 2021) | [[sources/pdf-sabpf-container-audit]] |
-| 9 | Security Observability with eBPF (Isovalent) | [[sources/pdf-isovalent-security-observability]] |
+| 9 | Security Observability with eBPF (Isovalent) |  |
 | 10 | PTPsec Time Sync (INFOCOM 2024) | [[sources/pdf-infocom-ptpsec]] |
 
 ## 相关页面

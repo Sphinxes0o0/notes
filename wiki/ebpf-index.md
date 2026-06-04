@@ -52,11 +52,11 @@ ebpf-ecosystem ───────→ tools-index (bpftool/tcpdump)
 |--------|-------------|------|------|
 | [[sources/pdf-ebpf-books]] | 3册eBPF书籍：龙蜥白皮书(架构/CO-RE)、技术实践(XDP/TC)、Liz Rice入门 | pdf | 2026-05 |
 | [[sources/pdf-ebpf-papers]] | 10篇eBPF论文：Thomas Graf微内核愿景/微服务感知OS/Apple Falco/Google KRSI/Black Hat Rootkit/UFMG XDP/生态库/saBPF容器审计/Isovalent安全可观测性/PTPsec | pdf | 2026-05 |
-| [[sources/pdf-bpf-rethinking-kernel]] | Rethinking Linux Kernel (Thomas Graf)：eBPF微内核愿景 | pdf | 2020 |
+|  | Rethinking Linux Kernel (Thomas Graf)：eBPF微内核愿景 | pdf | 2020 |
 | [[sources/pdf-bpf-microservices-os]] | BPF Microservices-aware OS (Thomas Graf)：Cilium/Hubble功能矩阵 | pdf | 2018 |
 | [[sources/pdf-google-bpf-audit]] | BPF Security Auditing at Google (Brendan Jackman)：KRSI/Atomics/Ringbuf | pdf | 2021 |
 | [[sources/pdf-falco-apple]] | Falco at Apple (eBPF Summit)：BPF vs内核模块/Syscall监控 | pdf | 2021 |
-| [[sources/pdf-ebpf-library-ecosystem]] | eBPF Library Ecosystem (Kyle Quest)：Go/Rust/Python/C生态库评测 | pdf | 2021 |
+|  | eBPF Library Ecosystem (Kyle Quest)：Go/Rust/Python/C生态库评测 | pdf | 2021 |
 | [[sources/pdf-xdp-fast-packet]] | XDP Fast Packet Processing (UFMG)：BPF指令格式/~20Mpps性能 | pdf | 2021 |
 | [[sources/pdf-infocom-ptpsec]] | PTPsec (INFOCOM 2024)：IEEE 1588延迟攻击检测与缓解 | pdf | 2024 |
 | [[sources/reading-ebpf-how-ebpf-work]] | eBPF深入理解 NoPanic：Verifier/JIT/Maps/Tail Call/XDP vs TC性能排名 | web | 2024 |

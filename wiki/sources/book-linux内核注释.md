@@ -55762,7 +55762,7 @@ mount /dev/fd1 /mnt1
 
 ## Related pages
 
-- [[linux-kernel-index]]
+- 
 
 ## Source
 

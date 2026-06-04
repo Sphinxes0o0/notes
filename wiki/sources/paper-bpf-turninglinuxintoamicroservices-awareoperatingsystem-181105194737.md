@@ -520,7 +520,7 @@ https://cilium.io/
 
 ## Related pages
 
-- [[linux-kernel-index]]
+- 
 
 ## Source
 

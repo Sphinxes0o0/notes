@@ -327,7 +327,7 @@ THANKS
 
 ## Related pages
 
-- [[linux-kernel-index]]
+- 
 
 ## Source
 

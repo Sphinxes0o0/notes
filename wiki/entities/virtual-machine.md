@@ -59,7 +59,7 @@ add r1, r2, r3    ; r1 = r2 + r3
 ## 相关概念
 
 - [[interpreter]] — 解释器是 VM 的上层封装，读取字节码并执行
-- [[compiler-from-scratch]] — 编译器前端生成字节码，后端对接 VM
+-  — 编译器前端生成字节码，后端对接 VM
 - [[database-internals]] — SQLite/LevelDB 等数据库内部都有字节码执行引擎（如 SQLite VM）
 
 ## 来源详情

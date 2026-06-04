@@ -41,7 +41,7 @@ path: raw/web/building-language-vm
 
 - [[virtual-machine]] — 语言虚拟机通用概念
 - [[interpreter]] — 解释器与 VM 的关系
-- [[compiler-from-scratch]] — 编译器前端（词法/语法/语义分析）
+-  — 编译器前端（词法/语法/语义分析）
 
 ## 来源详情
 

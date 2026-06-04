@@ -143,18 +143,18 @@ created: 2026-05-22
 | [[sources/pdf-cpp-safety-standards]] | C++安全标准与安全优先演进：安全开发路线图、AI原生研发成熟度 | 2026-05 | pdf |
 | [[sources/pdf-cpp-engineering-practices]] | C++工程实践：C++在Xiaomi Vela(嵌入式)、统一算力FlagScale/FlagOS、CodeBuddy终端、具身机器人多仓构建、AI重塑测试 | 2026-05 | pdf |
 | [[sources/pdf-slides-cpp-standard]] | C++语言演进与标准化 (8 talks)：Bjarne 40年/John Safe C++/Michael标准化/Pete工程/彭博反射/吴咏炜生命周期/董俊杰Vela/李彦博AI测试 | 2026-05 | pdf |
-| [[sources/pdf-slides-ai-coding]] | AI Coding与开发工具 (6 talks)：Coding Agent/马良焰企业实践/汪晟杰AI Spec Coding/李彦博AI测试/CRASH_NG/Qoder CLI | 2026-05 | pdf |
+|  | AI Coding与开发工具 (6 talks)：Coding Agent/马良焰企业实践/汪晟杰AI Spec Coding/李彦博AI测试/CRASH_NG/Qoder CLI | 2026-05 | pdf |
 | [[sources/pdf-slides-ai-compiler]] | AI编译器与MLIR (5 talks)：MLIR fuzzing/崔慧敏AI软件栈/郑杨多元AI芯片/张洪滨RISC-V AI编译/谢涛RISC-V全栈生态 | 2026-05 | pdf |
 | [[sources/pdf-slides-llm-inference]] | LLM推理优化 (11 talks)：Mooncake/RTP-LLM/xLLM/DeepSeek/王骁端侧部署/LazyLLM/FlagScale/王豪杰异构计算/麻津铭传输库/范颂颂缓存/RecIS | 2026-05 | pdf |
 | [[sources/pdf-slides-kernel]] | Linux内核与调试工具 (4 talks)：CS744 kernel-bypass/邹涛CRASH_NG AI诊断/李勇Btree块设备/田文鑫具身机器人构建 | 2026-05 | pdf |
 | [[sources/pdf-slides-tools]] | 工具与杂项 (2 talks)：EPI Python算法面试/徐亮亮Qoder CLI终端AI伙伴 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-books]] | eBPF书籍3册：龙蜥白皮书(XDP/TC/CO-RE)、技术实践、Cilium创始人Liz Rice入门 | 2026-05 | pdf |
 | [[sources/pdf-ebpf-papers]] | eBPF论文10篇：Thomas Graf微内核、微服务感知OS、Apple Falco、Google KRSI、Rootkit攻防、UFMG XDP、生态库、saBPF容器审计、Isovalent安全可观测性、PTPsec | 2026-05 | pdf |
-| [[sources/pdf-bpf-rethinking-kernel]] | Rethinking Linux Kernel (Thomas Graf 2020)：eBPF微内核+可组合服务层愿景 | 2020 | pdf |
+|  | Rethinking Linux Kernel (Thomas Graf 2020)：eBPF微内核+可组合服务层愿景 | 2020 | pdf |
 | [[sources/pdf-bpf-microservices-os]] | BPF Microservices-aware OS (Thomas Graf 2018)：Cilium/Hubble功能矩阵/Service Mesh加速 | 2018 | pdf |
 | [[sources/pdf-google-bpf-audit]] | BPF Security Auditing at Google (Brendan Jackman)：KRSI BPF LSM/Atomics原子/Ringbuf promise/CO-RE | 2021 | pdf |
 | [[sources/pdf-falco-apple]] | Falco at Apple (eBPF Summit 2021)：BPF vs内核模块优势/LSM hook/高价值Syscall监控列表 | 2021 | pdf |
-| [[sources/pdf-ebpf-library-ecosystem]] | eBPF Library Ecosystem (Kyle Quest)：Go/Rust/Python/C生态库：BCC/libbpf/cilium-ebpf/aya全面评测 | 2021 | pdf |
+|  | eBPF Library Ecosystem (Kyle Quest)：Go/Rust/Python/C生态库：BCC/libbpf/cilium-ebpf/aya全面评测 | 2021 | pdf |
 | [[sources/pdf-xdp-fast-packet]] | XDP Fast Packet Processing (UFMG)：BPF指令格式详解/~20Mpps性能/XDP Actions部署 | 2021 | pdf |
 | [[sources/pdf-infocom-ptpsec]] | PTPsec (INFOCOM 2024)：IEEE 1588时间同步循环路径不对称分析/静态增量延迟攻击缓解 | 2024 | pdf |
 | [[sources/pdf-ptp-security]] | PTPsec：IEEE 1588时间同步延迟攻击检测与缓解 (INFOCOM 2024) | 2024 | pdf |
@@ -195,7 +195,7 @@ created: 2026-05-22
 | [[sources/pdf-security-crypto-books]] | 安全与密码学6册：Bulletproof TLS/PKI、mbedtls、TrustZone/OP-TEE、商用密码考核 | 2026-05 | pdf |
 | [[sources/pdf-security-crypto-books-updated]] | 安全与密码学更新3册：mbedtls开发实战、OpenSSL攻略、Bulletproof TLS/PKI | 2026-05 | pdf |
 | [[sources/pdf-security-papers-ebpf]] | eBPF安全论文3篇：Rootkit攻防(2024)、Apple Falco运行时检测(2021)、Google KRSI审计 | 2021-2024 | pdf |
-| [[sources/pdf-isovalent-security-observability]] | Isovalent O'Reilly报告：eBPF Four Golden Signals云原生安全可观测性(Cilium/Hubble) | 2022 | pdf |
+|  | Isovalent O'Reilly报告：eBPF Four Golden Signals云原生安全可观测性(Cilium/Hubble) | 2022 | pdf |
 | [[sources/pdf-sabpf-container-audit]] | saBPF SoCC 2021论文：eBPF容器级LSM审计，零内核修改，provenance追踪 | 2021 | pdf |
 | [[sources/pdf-arm-architecture]] | ARM体系结构4册：Armv8/Armv9参考手册、Cortex-A9 TRM、量化研究方法 | 2026-05 | pdf |
 | [[sources/pdf-misc-books]] | 杂项3册：人月神话、非线性动力学与混沌、偏微分方程 | 2026-05 | pdf |
