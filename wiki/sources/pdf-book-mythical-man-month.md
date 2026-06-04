@@ -38,3 +38,7 @@ created: 2026-05-27
 ## 相关页面
 - [[sources/pdf-misc-books]] — 软件工程书籍
 - [[sources/pdf-remaining-books]] — 剩余参考书籍
+
+## Related pages
+
+- [[entities/software-engineering/mythical-man-month]]

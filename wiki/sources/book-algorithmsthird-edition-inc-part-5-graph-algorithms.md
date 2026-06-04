@@ -1916,7 +1916,7 @@ the adjacency-matrix representation is that it always uses space pro-
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[entities/datastructure/graph-algorithms]]
 
 ## Source
 

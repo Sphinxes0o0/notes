@@ -31,3 +31,7 @@ Steven H. Strogatz 的非线性动力学与混沌理论教材：
 
 ## 相关页面
 - [[pdf-misc-books]]
+
+## Related pages
+
+- [[entities/math/nonlinear-dynamics-chaos]]
