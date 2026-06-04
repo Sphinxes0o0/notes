@@ -38659,7 +38659,7 @@ and Will Deacon. Wayne deserves special thanks for his
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[cpp-perf-optimization]]
 
 ## Source
 

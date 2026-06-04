@@ -3997,7 +3997,7 @@ to date with the latest advancements in the language.
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[smart-pointers]]
 
 ## Source
 

@@ -15595,7 +15595,8 @@ volatile通常用于表示可以独立于常规程序流进行更改的对象。
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[concurrency]]
+- [[smart-pointers]]
 
 ## Source
 

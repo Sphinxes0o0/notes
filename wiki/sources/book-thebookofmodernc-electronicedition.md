@@ -47663,7 +47663,9 @@ Still, I am not entirely happy with the need to write so many tiny enums...
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[cpp-perf-optimization]]
+- [[cpp20-features]]
+- [[raii]]
 
 ## Source
 

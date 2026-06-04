@@ -1266,7 +1266,7 @@ standard profiles.
 
 ## Related pages
 
-_To be filled by downstream LLM agent during entity/synthesis ingest._
+- [[cpp20-features]]
 
 ## Source
 
