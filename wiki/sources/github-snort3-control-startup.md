@@ -85,3 +85,8 @@ snort_main()
 - [[entities/linux/snort3/snort3-framework]] — 插件系统与生命周期
 - [[entities/linux/snort3/snort3-actions]] — 9 种动作类型
 - [[entities/linux/snort3/snort3-connectors]] — 4 种连接器类型
+
+
+## Related pages
+
+- [[entities/linux/snort3/snort3-control-startup]]
