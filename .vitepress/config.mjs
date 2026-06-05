@@ -190,6 +190,7 @@ export default defineConfig({
       { text: '网络/协议', link: '/network/' },
       { text: '安全', link: '/security/' },
       { text: '工具', link: '/tools/' },
+      { text: 'AI 编码 Agent', link: '/coding_agent/' },
       {
         text: '课程',
         items: [
@@ -256,6 +257,43 @@ export default defineConfig({
             { text: '位操作', link: '/ccpp/common_bit_operations' },
             { text: '编译过程', link: '/ccpp/compilation_process' },
             { text: '序列化', link: '/ccpp/serialization' },
+            {
+              text: 'C++ 高级主题',
+              collapsed: true,
+              items: [
+                { text: '原子操作与内存序', link: '/ccpp/cpp/atomic' },
+                { text: '智能指针', link: '/ccpp/cpp/smart_pointers' },
+                { text: '虚函数原理', link: '/ccpp/cpp/virtual_functions' },
+                { text: 'RAII 资源管理', link: '/ccpp/cpp/raii' },
+                { text: '类型转换', link: '/ccpp/cpp/type_casting' },
+                { text: '拷贝语义', link: '/ccpp/cpp/copy_semantics' },
+                { text: '现代 C++（移动语义 / 完美转发）', link: '/ccpp/cpp/cpp_modern' },
+                { text: '内存池设计', link: '/ccpp/cpp/memory_pool' }
+              ]
+            },
+            {
+              text: 'C++ 并发',
+              collapsed: true,
+              items: [
+                { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/cpp/concurrency/cpp20_26_async_io' },
+                { text: 'future / promise / shared_future / async（源码示例）', link: '/ccpp/concurrency/future' },
+                { text: 'memory_order 演示（源码示例）', link: '/ccpp/concurrency/memory_order' },
+                { text: 'MPMC ring buffer（源码示例）', link: '/ccpp/concurrency/mpmc_ringbuffer' },
+                { text: '多线程 atexit（源码示例）', link: '/ccpp/concurrency/multithreads' },
+                { text: 'std::this_thread::yield（源码示例）', link: '/ccpp/concurrency/yield' }
+              ]
+            },
+            {
+              text: 'CodeWars 刷题笔记',
+              collapsed: true,
+              items: [
+                { text: 'C - Even or Odd', link: '/ccpp/codewar_notes/c/EvenorOdd' },
+                { text: 'C - Rock Paper Scissors', link: '/ccpp/codewar_notes/c/RockPaperScissors' },
+                { text: 'C++ - 240401', link: '/ccpp/codewar_notes/cpp/240401' },
+                { text: 'C++ - 轮转数组', link: '/ccpp/codewar_notes/cpp/rotate_array' }
+              ]
+            },
+            { text: 'test-ingest', link: '/ccpp/test-ingest' },
             { text: 'Hermes Agent Memory 系统设计 + 最佳实践', link: '/ccpp/hermes_memory_design' },
             { text: 'Hermes Memory 论文 + 开源项目 (2026H1)', link: '/ccpp/hermes_memory_research_2026h1' }
           ]
@@ -270,15 +308,6 @@ export default defineConfig({
               items: [
                 { text: '概述', link: '/sys/' },
                 { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
-                { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' },
-                { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' }
-              ]
-            },
-            {
-              text: '系统编程',
-              items: [
-                { text: '概述', link: '/sys/' },
-                                { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
                 { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' },
                 { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' }
               ]
@@ -329,17 +358,15 @@ export default defineConfig({
                   ]
                 },
                 {
-                  text: '网络核心',
-                  items: [
-                    { text: 'Socket 子系统', link: '/network/core/net_subsystem_socket' },
-                    { text: '连接跟踪', link: '/network/core/net_subsystem_conntrack' },
-                    { text: '路由', link: '/network/core/net_subsystem_routing' }
-                  ]
-                },
-                {
+                  // 合并：原“网络核心”（/network/core/）与“Linux 网络核心”（/network/linux_kernel/）
                   text: 'Linux 网络核心',
                   collapsed: true,
                   items: [
+                    // —— 核心架构（来源 /network/core/）——
+                    { text: 'Socket 子系统', link: '/network/core/net_subsystem_socket' },
+                    { text: '连接跟踪（核心架构）', link: '/network/core/net_subsystem_conntrack' },
+                    { text: '路由（核心架构）', link: '/network/core/net_subsystem_routing' },
+                    // —— 详解与实现（来源 /network/linux_kernel/）——
                     { text: 'Socket', link: '/network/linux_kernel/socket' },
                     { text: 'Socket Syscall', link: '/network/linux_kernel/socket_syscall' },
                     { text: 'TCP', link: '/network/linux_kernel/ipv4_tcp' },
@@ -373,19 +400,21 @@ export default defineConfig({
                   ]
                 }
               ]
-            },
+            }
+          ]
+        }
+      ],
+      '/midware/': [
+        {
+          text: '中间件',
+          items: [
+            { text: '概述', link: '/midware/' },
+            { text: 'DoIP', link: '/midware/doip' },
             {
-              text: '中间件',
+              text: 'SOME/IP',
               items: [
-                { text: '概述', link: '/midware/' },
-                { text: 'DoIP', link: '/midware/doip' },
-                {
-                  text: 'SOME/IP',
-                  items: [
-                    { text: 'vSOME/IP', link: '/midware/someip/vsomeip' },
-                    { text: 'SOME/IP 安全', link: '/midware/someip/security' }
-                  ]
-                }
+                { text: 'vSOME/IP', link: '/midware/someip/vsomeip' },
+                { text: 'SOME/IP 安全', link: '/midware/someip/security' }
               ]
             }
           ]
@@ -445,6 +474,18 @@ export default defineConfig({
             { text: '移除 Snap', link: '/tools/remove_snap' },
             { text: 'Tcpdump 使用', link: '/tools/tcpdump' },
                       ]
+        }
+      ]
+      '/coding_agent/': [
+        {
+          text: 'AI 编码 Agent',
+          items: [
+            { text: '概述', link: '/coding_agent/' },
+            { text: 'Pi Agent 总览', link: '/coding_agent/pi-agent' },
+            { text: 'Pi 扩展生态与能力', link: '/coding_agent/pi-agent-ecosystem' },
+            { text: 'Pi vs 其他 Agent 框架', link: '/coding_agent/pi-agent-comparison' },
+            { text: 'Pi 定制 workflow 实操', link: '/coding_agent/pi-agent-custom-workflow' }
+          ]
         }
       ],
       '/datastructure/': [
@@ -705,7 +746,8 @@ export default defineConfig({
               ]
             },
             {
-              text: '网络子系统',
+              // 交叉引用：网络子系统内容位于 /network/linux_kernel/，保留入口便于在 kernel 导航中跳转
+              text: '网络子系统 ↗',
               items: [
                 { text: '概述', link: '/network/linux_kernel/' },
                 { text: 'Socket 核心', link: '/network/linux_kernel/net_socket_core' },
@@ -716,7 +758,8 @@ export default defineConfig({
               ]
             },
             {
-              text: 'Netfilter',
+              // 交叉引用：Netfilter 内容位于 /network/linux_netfilter/
+              text: 'Netfilter ↗',
               items: [
                 { text: '概述', link: '/network/linux_netfilter/' },
                 { text: '子系统架构', link: '/network/linux_netfilter/netfilter_subsystem' }

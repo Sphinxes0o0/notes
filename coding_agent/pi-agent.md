@@ -1,4 +1,4 @@
-## Overview
+# Pi Agent
 
 **PI Agent** (π Agent) is a minimal, extensible terminal coding harness that adapts to your workflows rather than forcing you to change them. Originally created by Mario Zechner, it has grown into a full-featured AI agent framework with multiple implementations and a rich ecosystem.
 
