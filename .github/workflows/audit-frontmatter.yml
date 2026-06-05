@@ -1,0 +1,28 @@
+name: Audit Frontmatter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # 每周日 03:00 UTC 跑一次（可选）
+  schedule:
+    - cron: '0 3 * * 0'
+
+jobs:
+  audit-frontmatter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Audit frontmatter coverage
+        run: node .github/scripts/audit-frontmatter.js
+        # 默认是 audit 模式，只读；CI 中不会修改文件
+        # 本地需要补全时使用：node .github/scripts/audit-frontmatter.js --apply
