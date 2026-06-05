@@ -96,3 +96,6 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 .vitepress/.temp/
+
+# Editor local configs
+.obsidian/

@@ -388,7 +388,8 @@ export default defineConfig({
                     { text: '内核技巧', link: '/network/performance/net_subsystem_kernel_tricks' },
                     { text: '热路径', link: '/network/performance/net_subsystem_hotpath' },
                     { text: '高级特性', link: '/network/performance/net_subsystem_advanced' },
-                    { text: '定时器', link: '/network/performance/net_subsystem_timers' }
+                    { text: '定时器', link: '/network/performance/net_subsystem_timers' },
+                    { text: 'TCP Bypass Notes', link: '/network/performance/tcp-bypass-notes' }
                   ]
                 },
                 {
@@ -396,7 +397,17 @@ export default defineConfig({
                   items: [
                     { text: 'BPF Hooks', link: '/network/protocols/net_subsystem_bpf_hooks' },
                     { text: 'Netlink', link: '/network/protocols/net_subsystem_netlink' },
+                    { text: 'ARP 表老化机制', link: '/network/protocols/arp-table-aging' },
                     { text: 'RFC 实现', link: '/network/rfc/net_subsystem_rfc_impl' }
+                  ]
+                },
+                {
+                  text: '其他网络笔记',
+                  collapsed: true,
+                  items: [
+                    { text: 'OSI: PHY & MAC 层', link: '/network/osi_phy_mac' },
+                    { text: 'LwIP 网桥实现', link: '/network/lwip-bridge-implementation' },
+                    { text: 'plantegg - 举三反一', link: '/network/plantegg-three-from-one' }
                   ]
                 }
               ]
@@ -459,6 +470,71 @@ export default defineConfig({
                 { text: 'Security Deep Dive R1', link: '/security/linux_kernel/security_deep_dive_r1' },
                 { text: 'Security Deep Dive R2', link: '/security/linux_kernel/security_deep_dive_r2' }
               ]
+            },
+            {
+              text: '网络流量分析 (论文集)',
+              collapsed: true,
+              items: [
+                { text: '研究概述 (README)', link: '/security/network-traffic-analysis/README' },
+                { text: '2023-2026 文献综述', link: '/security/network-traffic-analysis/literature-review-2023-2026' },
+                { text: '方法对比', link: '/security/network-traffic-analysis/method-comparison' },
+                { text: '快速参考', link: '/security/network-traffic-analysis/quick-reference' },
+                { text: '研究时间线', link: '/security/network-traffic-analysis/research-timeline' },
+                { text: '研究笔记', link: '/security/network-traffic-analysis/research-notes' },
+                {
+                  text: '论文分类 (共 62 篇)',
+                  collapsed: true,
+                  items: [
+                    {
+                      text: '01. 入侵检测 (21)',
+                      items: [
+                        { text: 'NIDS 类不平衡问题', link: '/security/network-traffic-analysis/papers/01-IDS/paper-01-class-imbalance-deep-learning' },
+                        { text: 'SVM 恶意流量检测', link: '/security/network-traffic-analysis/papers/01-IDS/paper-02-SVM-malicious-traffic' },
+                        { text: '特征选择 + 集成学习', link: '/security/network-traffic-analysis/papers/01-IDS/paper-03-feature-selection-ensemble' }
+                      ]
+                    },
+                    {
+                      text: '02. 加密流量 (13)',
+                      items: [
+                        { text: 'TLS 特征 + 集成 (94.85%)', link: '/security/network-traffic-analysis/papers/02-Encrypted/paper-21-TLS-ensemble-94.85' },
+                        { text: 'BiLSTM + 自注意力 (96.71%)', link: '/security/network-traffic-analysis/papers/02-Encrypted/paper-22-TLS-BiLSTM-96.71' },
+                        { text: 'TLS + 随机森林恶意软件检测', link: '/security/network-traffic-analysis/papers/02-Encrypted/paper-23-TLS-RF-malware' }
+                      ]
+                    },
+                    {
+                      text: '03. 深度学习 (14)',
+                      items: [
+                        { text: 'CNN-LSTM 混合网络', link: '/security/network-traffic-analysis/papers/03-DeepLearning/paper-35-CNN-LSTM-hybrid-traffic' },
+                        { text: 'IoT 恶意软件可视化', link: '/security/network-traffic-analysis/papers/03-DeepLearning/paper-36-IoT-malware-visual' },
+                        { text: 'CNN+SE-Net 恶意流量识别', link: '/security/network-traffic-analysis/papers/03-DeepLearning/paper-37-CNN-SE-Net-malware' }
+                      ]
+                    },
+                    {
+                      text: '04. IoT / 5G (8)',
+                      items: [
+                        { text: '机器学习与 IoT 安全', link: '/security/network-traffic-analysis/papers/04-IoT-5G/paper-49-ML-IoT-security' },
+                        { text: 'N-BaIoT 数据集 DDOS 检测', link: '/security/network-traffic-analysis/papers/04-IoT-5G/paper-50-N-BaIoT-DDOS' },
+                        { text: '移动恶意软件流量检测', link: '/security/network-traffic-analysis/papers/04-IoT-5G/paper-51-mobile-malware-detection' }
+                      ]
+                    },
+                    {
+                      text: '05. 对抗样本 (4)',
+                      items: [
+                        { text: 'TAD - 多对抗检测', link: '/security/network-traffic-analysis/papers/05-Adversarial/paper-57-TAD-multi-adversarial' },
+                        { text: 'IDS 鲁棒性评估', link: '/security/network-traffic-analysis/papers/05-Adversarial/paper-58-IDS-robustness' },
+                        { text: 'GAN 突变流量检测', link: '/security/network-traffic-analysis/papers/05-Adversarial/paper-59-mutated-traffic-GAN' }
+                      ]
+                    },
+                    {
+                      text: '06. SDN (2)',
+                      items: [
+                        { text: 'SDN 动态扩散', link: '/security/network-traffic-analysis/papers/06-SDN/paper-61-SDN-dynamics-diffusion' },
+                        { text: 'SDN 5G/IoT 安全架构', link: '/security/network-traffic-analysis/papers/06-SDN/paper-62-SDN-security-architecture' }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -473,9 +549,9 @@ export default defineConfig({
             { text: '端口扫描器', link: '/tools/port_scanner' },
             { text: '移除 Snap', link: '/tools/remove_snap' },
             { text: 'Tcpdump 使用', link: '/tools/tcpdump' },
-                      ]
+          ]
         }
-      ]
+      ],
       '/coding_agent/': [
         {
           text: 'AI 编码 Agent',
