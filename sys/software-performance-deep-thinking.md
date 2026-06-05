@@ -39,4 +39,4 @@
 
 ## 关联概念
 -  — 内核旁路提升性能
-- [[af-xdp-technical]] — 零拷贝减少拷贝开销
+- [[kernel/ebpf/af-xdp-technical]] — 零拷贝减少拷贝开销
