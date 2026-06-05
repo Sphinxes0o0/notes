@@ -15,8 +15,8 @@ description: Linux 内核各子系统的深入分析笔记
 | [内存管理 (mm)](../kernel/mm/) | 内存分配、映射、回收、OOM 处理等 |
 | [虚拟文件系统 (VFS)](../kernel/vfs/) | 文件系统抽象层、inode、dentry、superblock 等 |
 | [块设备层 (block)](../kernel/block/) | 通用块层、I/O 调度器、多队列块层等 |
-| [网络子系统](../network/linux_kernel/) | Socket、TCP/IP、Netfilter、路由等 |
-| [Netfilter](../network/linux_netfilter/) | 包过滤、连接跟踪、NAT 等 |
+| [网络子系统 ↗](../network/linux_kernel/) | Socket、TCP/IP、Netfilter、路由等（内容位于 `/network/linux_kernel/`，内核侧边栏保留入口） |
+| [Netfilter ↗](../network/linux_netfilter/) | 包过滤、连接跟踪、NAT 等（内容位于 `/network/linux_netfilter/`） |
 | [调度器 (sched)](../kernel/sched/) | CFS、实时调度、负载均衡等 |
 | [同步机制 (locking)](../kernel/locking/) | 各种锁机制 |
 | [RCU](../kernel/rcu/) | Read-Copy-Update 同步机制 |
