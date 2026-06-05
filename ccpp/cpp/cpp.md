@@ -384,25 +384,16 @@ input IT                   output IT
 - [array](containers/array.md) - 固定大小数组
 - [vector](containers/vector.md) - 动态数组  
 - [deque](containers/deque.md) - 双端队列
-- [forward_list](containers/forward_list.md) - 单向链表
 - [list](containers/list.md) - 双向链表
 
 #### 容器适配器 (Container Adapters)
 - [stack](containers/stack.md) - 栈
-- [queue](containers/queue.md) - 队列
-- [priority_queue](containers/priority_queue.md) - 优先队列
 
 #### 关联容器 (Associative Containers)
-- [set](containers/set.md) - 集合
-- [multiset](containers/multiset.md) - 多重集合
 - [map](containers/map.md) - 映射
-- [multimap](containers/multimap.md) - 多重映射
 
 #### 无序关联容器 (Unordered Associative Containers)
-- [unordered_set](containers/unordered_set.md) - 无序集合
-- [unordered_multiset](containers/unordered_multiset.md) - 无序多重集合
 - [unordered_map](containers/unordered_map.md) - 无序映射
-- [unordered_multimap](containers/unordered_multimap.md) - 无序多重映射
 
 所有容器的详细对比表和完整功能说明请参考：**[STL 容器详解](containers/)**
 
