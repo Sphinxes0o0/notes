@@ -9,7 +9,7 @@ path: ../repos/notes/coding_agent/pi-agent.md
 summary: "Pi Agent 主体笔记：3 大实现 (earendil-works/pi / oh-my-pi / pi_agent_rust) 概览、架构、关键特性、扩展/自定义/源码剖析（中文 + 英文混合, 2171 行）"
 tags: [pi-agent, coding-agent, terminal-agent, typescript, rust]
 sources: [entity-pi-agent]
-related: [notes-pi-agent-comparison, notes-pi-agent-ecosystem, notes-pi-agent-custom-workflow]
+related: [synthesis/comparison-terminal-coding-agents-2026-06, notes-pi-agent-ecosystem, notes-pi-agent-custom-workflow]
 ---
 
 # Pi Agent — 主体笔记（Source）
@@ -32,7 +32,7 @@ related: [notes-pi-agent-comparison, notes-pi-agent-ecosystem, notes-pi-agent-cu
 
 ## 关键事实提取
 
-### 3 实现对比（数据来自原文表格，stars 数据需以 [[notes-pi-agent-comparison]] 的 2026-06-05 更新为准）
+### 3 实现对比（数据来自原文表格，stars 数据需以 [[synthesis/comparison-terminal-coding-agents-2026-06]] 的 2026-06-05 更新为准）
 
 | Implementation | Language | Stars (原文) | Stars (2026-06-05 更正) | 仓库 |
 |----------------|----------|------------|----------------------|------|
@@ -40,7 +40,7 @@ related: [notes-pi-agent-comparison, notes-pi-agent-ecosystem, notes-pi-agent-cu
 | can1357/oh-my-pi | TypeScript/Rust/Bun | 7.6k | 10.6k | https://github.com/can1357/oh-my-pi |
 | Dicklesworthstone/pi_agent_rust | Rust | 1.1k | 1.1k | https://github.com/Dicklesworthstone/pi_agent_rust |
 
-> 数据冲突: 主体笔记抓取时间早于 comparison/ecosystem/custom-workflow 的 2026-06-05 抓取, **以 [[notes-pi-agent-comparison]] 的 "重要更正" 节为准**。
+> 数据冲突: 主体笔记抓取时间早于 comparison/ecosystem/custom-workflow 的 2026-06-05 抓取, **以 [[synthesis/comparison-terminal-coding-agents-2026-06]] 的 "重要更正" 节为准**。
 
 ### Architecture 核心包
 
@@ -85,6 +85,6 @@ related: [notes-pi-agent-comparison, notes-pi-agent-ecosystem, notes-pi-agent-cu
 ## 相关页面
 
 - [[entity-pi-agent]] — Pi Agent 综合 entity 页 (本 wiki 唯一 entity)
-- [[notes-pi-agent-comparison]] — 7 个 terminal coding agent 横向对比
+- [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 个 terminal coding agent 横向对比
 - [[notes-pi-agent-ecosystem]] — 官方 9 扩展示例 + MCP 曲线救国 + SDK 嵌入
 - [[notes-pi-agent-custom-workflow]] — 扩展开发完整生命周期 + 5 个 workflow 配方

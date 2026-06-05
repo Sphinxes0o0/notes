@@ -9,7 +9,7 @@ path: ../repos/notes/coding_agent/pi-agent-ecosystem.md
 summary: "Pi 扩展生态深度：主仓 9 个官方 example extension 逐个解析（subagent / sandbox / gondolin / custom-provider-anthropic 详解）+ MCP 桥接（mcporter）+ SDK 嵌入案例 + 作者公开设计哲学"
 tags: [pi-agent, extension, mcp, mcporter, sdk, custom-provider, sandbox, gondolin]
 sources: [entity-pi-agent]
-related: [notes-pi-agent, notes-pi-agent-comparison, notes-pi-agent-custom-workflow]
+related: [notes-pi-agent, synthesis/comparison-terminal-coding-agents-2026-06, notes-pi-agent-custom-workflow]
 ---
 
 # Pi 扩展生态与能力（Source）
@@ -146,5 +146,5 @@ Pi 核心故意不含 (subagent / MCP / permission popup / plan mode / todo / ba
 
 - [[entity-pi-agent]] — Pi Agent entity
 - [[notes-pi-agent]] — 主体笔记
-- [[notes-pi-agent-comparison]] — 7 agent 横向对比
+- [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 agent 横向对比
 - [[notes-pi-agent-custom-workflow]] — 扩展开发生命周期 + 5 个 workflow 配方

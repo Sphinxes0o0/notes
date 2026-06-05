@@ -2,7 +2,7 @@
 type: entity
 tags: [pi-agent, coding-agent, terminal-agent, typescript, rust, extension, mcp, sdk, agent-framework]
 created: 2026-06-05
-sources: [notes-pi-agent, notes-pi-agent-comparison, notes-pi-agent-ecosystem, notes-pi-agent-custom-workflow]
+sources: [notes-pi-agent, synthesis/comparison-terminal-coding-agents-2026-06, notes-pi-agent-ecosystem, notes-pi-agent-custom-workflow]
 ---
 
 # Pi Agent (π Agent)
@@ -30,7 +30,7 @@ Pi Agent 的设计哲学: 给开发者**LLM 交互的最小积木** (context + t
 | `can1357/oh-my-pi` | TS + Rust + Bun | 10.6k | ~150ms | ~120MB | **32 内置** + subagent + DAP/LSP | IDE 集成, 多语言 sandbox |
 | `pi_agent_rust` | Rust | 1.1k | **<100ms** | **<50MB** (空闲) | 8 + QuickJS | 静态单二进制 ~21MB, capability-based 沙箱 |
 
-> 数据来源: [[notes-pi-agent]] + [[notes-pi-agent-comparison]] "重要更正" 节。
+> 数据来源: [[notes-pi-agent]] + [[synthesis/comparison-terminal-coding-agents-2026-06]] "重要更正" 节。
 
 ## 核心架构
 
@@ -75,7 +75,7 @@ Pi 核心刻意不含, 全部推到 example 层或社区:
 
 ## 与其他 Terminal Coding Agent 的对比
 
-> 完整 7 agent × 13 维度表见 [[notes-pi-agent-comparison]] 第 2 节
+> 完整 7 agent × 13 维度表见 [[synthesis/comparison-terminal-coding-agents-2026-06]] 第 2 节
 
 | 维度 | Pi | Claude Code | Aider | Codex CLI | Gemini CLI | Goose | OpenCode |
 |------|-----|------------|-------|-----------|-----------|-------|----------|
@@ -88,7 +88,7 @@ Pi 核心刻意不含, 全部推到 example 层或社区:
 | Plan/Todo | ❌ (plan-mode example) | ✅ 一等公民 | Architect 模式 | /plan + update_plan | /todo 命令 | /plan + recipe 步骤 | ✅ plan agent |
 | Primary use | 可组合 primitives | 人机协作 + Plan/Sandbox | git-as-checkpoint | OpenAI 生态 + CI | Gemini 1M context 入口 | MCP/Recipes 平台 | provider 无关 + 分享 |
 
-**5 个关键发现** ([[notes-pi-agent-comparison]] 第 5 节):
+**5 个关键发现** ([[synthesis/comparison-terminal-coding-agents-2026-06]] 第 5 节):
 
 1. **MCP 已成为事实标准**, 除 Aider 外所有 agent 都把 MCP 客户端作为一/二等公民;Pi 是唯一明确"不会支持 MCP"的。
 2. **Provider 无关性是新战场**: Pi, OpenCode, Aider 主打 75+ provider 自由切换;Claude Code / Codex CLI 是"全栈单家"代表。
@@ -96,7 +96,7 @@ Pi 核心刻意不含, 全部推到 example 层或社区:
 4. **Session 可分享是 OpenCode 的独门**: 原生 `/share` 公共 URL。
 5. **Pi 的定位是 "agent 操作系统内核"**, 让用户/团队 fork 出自己的 agent;**与 anomalyco/opencode 设计哲学同源,但 Pi 更小、约束更少、provider 适配更自由**。
 
-## 选型决策树 (转写自 [[notes-pi-agent-comparison]] 第 4 节)
+## 选型决策树 (转写自 [[synthesis/comparison-terminal-coding-agents-2026-06]] 第 4 节)
 
 ```
 1. 已订阅 ChatGPT/Claude/Gemini?
@@ -121,11 +121,11 @@ Pi 核心刻意不含, 全部推到 example 层或社区:
    └─ 是 → Pi (MIT + 扩展即代码 + provider 无关 + JSONL tree session)
 ```
 
-> **注**: 此决策树与 5 个关键发现均为 [[notes-pi-agent-comparison]] 笔记作者观点,本 wiki 不独立背书。
+> **注**: 此决策树与 5 个关键发现均为 [[synthesis/comparison-terminal-coding-agents-2026-06]] 笔记作者观点,本 wiki 不独立背书。
 
 ## 适用场景
 
-**适合用 Pi 的场景** ([[notes-pi-agent-comparison]] 3.x 节):
+**适合用 Pi 的场景** ([[synthesis/comparison-terminal-coding-agents-2026-06]] 3.x 节):
 - 需要把 agent 当 library / harness 嵌入自己产品
 - CI 跑长程任务且不想被单家 provider 锁定
 - 想直接 fork 出自己的 agent (MIT + 扩展即代码)
@@ -158,7 +158,7 @@ Pi 核心刻意不含, 全部推到 example 层或社区:
 ## 相关页面
 
 - [[notes-pi-agent]] — 主体笔记 (架构/特性/源码剖析)
-- [[notes-pi-agent-comparison]] — 7 agent × 13 维度横向对比 + 选型决策树
+- [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 agent × 13 维度横向对比 + 选型决策树
 - [[notes-pi-agent-ecosystem]] — 9 官方扩展示例 + MCP 桥接 + SDK 嵌入
 - [[notes-pi-agent-custom-workflow]] — 扩展开发完整生命周期 + 5 个 workflow 配方
 

@@ -36,16 +36,18 @@ created: 2026-05-28
 - 抓取日期: 2026-06-05 (含 "重要更正": badlogic/pi-mono 59.9k stars, Goose 迁 aaif-goose, OpenCode 迁 anomalyco)
 - 4 source pages (transcribe/中文转写, 不重写):
   - wiki/sources/notes-pi-agent.md (主笔记, 2171 行转写, 含 9 节原理剖析摘要)
-  - wiki/sources/notes-pi-agent-comparison.md (7 agent × 13 维度 + 选型决策树 + 5 关键发现)
+  - wiki/synthesis/comparison-terminal-coding-agents-2026-06.md (7 agent × 13 维度 + 选型决策树 + 5 关键发现)
   - wiki/sources/notes-pi-agent-ecosystem.md (9 官方 example extension 详解 + mcporter)
   - wiki/sources/notes-pi-agent-custom-workflow.md (扩展生命周期 + 5 配方)
 - 1 entity page (聚合):
   - wiki/entities/pi-agent.md (含 7 agent 横向对比表 + 选型决策树 + 5 关键发现 + 适用场景)
-- 交叉引用: 4 source + 1 entity 互链, entity 含 2+ inbound from sources
+- 1 synthesis page (跨 7 agent 二次综合):
+  - wiki/synthesis/comparison-terminal-coding-agents-2026-06.md (7 agent × 13 维度 + 选型决策树 + 5 关键发现)
+- 交叉引用: 3 source + 1 entity + 1 synthesis 互链, entity 含 2+ inbound from sources
 
 **未交叉引用现有 entity:** pyramid 现有 entities 无 pi-agent / coding-agent 主题 (已 grep `entities/`), 全部为新建页面。
 
-**未建 synthesis:** comparison/ecosystem/custom-workflow 本质是 source 文档, 不是二次综合 — 按 Karpathy Simplicity First 原则不强行拆 3 个 synthesis。
+**synthesis vs source 划分:** comparison/ecosystem/custom-workflow 三篇里 comparison 是**跨 7 个 agent 的二次综合** → synthesis;ecosystem/custom-workflow 是**单 agent (Pi) 的子视角转写** → source (保留原判断)。
 
 
 ## [2026-05-25] source | lwip-source-index + 5 core entity pages

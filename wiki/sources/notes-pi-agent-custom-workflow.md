@@ -9,7 +9,7 @@ path: ../repos/notes/coding_agent/pi-agent-custom-workflow.md
 summary: "Pi 定制 workflow 实战手册：扩展本质/事件清单/生命周期时序/ExtensionContext API/ExtensionAPI 全方法/自定义 UI + Skills/Prompt Templates/Themes/Pi Package 打包 + SDK/RPC/Print 三种嵌入 + 5 个真实 workflow 配方"
 tags: [pi-agent, extension-api, sdk, rpc, customization, recipe]
 sources: [entity-pi-agent]
-related: [notes-pi-agent, notes-pi-agent-comparison, notes-pi-agent-ecosystem]
+related: [notes-pi-agent, synthesis/comparison-terminal-coding-agents-2026-06, notes-pi-agent-ecosystem]
 ---
 
 # Pi 定制 Workflow 实操（Source）
@@ -175,5 +175,5 @@ const ok = await ctx.ui.confirm("Delete?", "Cannot be undone");
 
 - [[entity-pi-agent]] — Pi Agent entity
 - [[notes-pi-agent]] — 主体笔记
-- [[notes-pi-agent-comparison]] — 7 agent 横向对比
+- [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 agent 横向对比
 - [[notes-pi-agent-ecosystem]] — 9 扩展示例 + MCP 桥接
