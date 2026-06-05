@@ -824,14 +824,14 @@ export default defineConfig({
               text: 'OpenBMC',
               collapsed: true,
               items: [
-                { text: '概述', link: '/openbmc/linux_kernel/' },
-                { text: 'IPMI 协议栈', link: '/openbmc/linux_kernel/ipmi_protocol_stack' },
-                { text: 'Redfish 接口', link: '/openbmc/linux_kernel/redfish_interface' },
-                { text: 'D-Bus 服务', link: '/openbmc/linux_kernel/phosphor_dbus_services' },
-                { text: '网络安全', link: '/openbmc/linux_kernel/security_subsystem' },
-                { text: '硬件控制', link: '/openbmc/linux_kernel/hardware_control' },
-                { text: '网络通信服务', link: '/openbmc/linux_kernel/network_comm_services' },
-                { text: '固件更新', link: '/openbmc/linux_kernel/boot_firmware_update' }
+                { text: '概述', link: '/kernel/openbmc/' },
+                { text: 'IPMI 协议栈', link: '/kernel/openbmc/ipmi_protocol_stack' },
+                { text: 'Redfish 接口', link: '/kernel/openbmc/redfish_interface' },
+                { text: 'D-Bus 服务', link: '/kernel/openbmc/phosphor_dbus_services' },
+                { text: '网络安全', link: '/kernel/openbmc/security_subsystem' },
+                { text: '硬件控制', link: '/kernel/openbmc/hardware_control' },
+                { text: '网络通信服务', link: '/kernel/openbmc/network_comm_services' },
+                { text: '固件更新', link: '/kernel/openbmc/boot_firmware_update' }
               ]
             }
           ]
