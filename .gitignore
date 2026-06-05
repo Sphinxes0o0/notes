@@ -1,4 +1,7 @@
-# Obsidian workspace (personal per-machine config)
+# Obsidian — by-design tracked: community plugins (dataview, git-obsi-sync, graph-presets) +
+# their configs (app.json, appearance.json, community-plugins.json, core-plugins.json, graph.json)
+# are intentionally committed so the vault is recoverable on a new machine without manual
+# plugin reinstall. 7.4 MB as of 2026-06-05; do NOT git rm --cached.
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 wiki/.obsidian/workspace.json
