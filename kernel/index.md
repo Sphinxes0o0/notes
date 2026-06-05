@@ -28,4 +28,4 @@ description: Linux 内核各子系统的深入分析笔记
 | [音频子系统 (sound)](../kernel/sound/) | ALSA、音频驱动框架 |
 | [虚拟化 (virt)](../kernel/virt/) | KVM、Virtio 虚拟化技术 |
 | [eBPF](../kernel/ebpf/ebpf) | eBPF 虚拟机、工作原理、AF_XDP 等 |
-| [OpenBMC](../openbmc/) | BMC 管理相关技术 |
+| [OpenBMC](../openbmc/linux_kernel/) | BMC 管理相关技术 |
