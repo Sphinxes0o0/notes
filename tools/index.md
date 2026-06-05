@@ -14,3 +14,11 @@ title: Tools Notes
 
 ### 网络工具
 - [Netcat 使用](./netcat.md) - Netcat 网络工具的使用方法
+- [tcpdump 使用](./tcpdump.md) - 网络抓包分析
+- [端口扫描器](./port_scanner.md) - 端口扫描工具
+
+### AI 编码 Agent
+- [Pi Agent 总览](./pi-agent.md) - Pi 核心架构与三大实现（earendil-works/pi、oh-my-pi、pi_agent_rust）
+- [Pi 扩展生态与能力](./pi-agent-ecosystem.md) - 9 个官方扩展示例、MCP 桥接、SDK 消费者、设计哲学
+- [Pi vs 其他 Agent 框架](./pi-agent-comparison.md) - 与 Claude Code / Aider / Codex / Gemini / Goose / OpenCode 横向对比
+- [Pi 定制 workflow 实操](./pi-agent-custom-workflow.md) - 扩展开发全生命周期 + 5 个实战配方
