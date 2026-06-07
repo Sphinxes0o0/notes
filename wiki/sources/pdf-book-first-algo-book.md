@@ -6,6 +6,7 @@ author: 石田保辉、宫崎修一
 date: 2018
 size: medium
 path: raw/PDFs/books/我的第一本算法书 石田保辉 宫崎修一.pdf
+source-md5: 588f190c9ba2058b3969539b0d33b130
 summary: 图灵日本算法入门书，7个数据结构+26个基础算法，大量图片直观讲解
 created: 2018
 tags: []

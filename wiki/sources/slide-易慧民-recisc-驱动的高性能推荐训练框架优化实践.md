@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "易慧民_RecIS：C++ 驱动的高性能推荐训练框架优化实践"
 path: slides/易慧民_RecIS：C++ 驱动的高性能推荐训练框架优化实践.pdf
+source-md5: dbad804ee28ac3cd628d80bed0d38661
 size: 5447 KB
 category: slide
 ingested: 2026-06-04

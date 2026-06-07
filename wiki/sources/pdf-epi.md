@@ -6,6 +6,7 @@ author: "Adnan Aziz, Tsung-Hsien Lee, Amit Prakash"
 date: 2024-01-01
 size: small
 path: raw/PDFs/books/Elements of Programming Interviews.pdf
+source-md5: 8c64524dbd990bb9b7146ee6f5baa3fe
 summary: "EPI 采样本：191页，面向软件工程面试的数据结构、算法、系统设计、问题解决四板斧，附 C++11 解题代码与面试策略指南。"
 tags: [algorithms, data-structures, interview, system-design, problem-solving, cpp]
 created: 2026-05-27

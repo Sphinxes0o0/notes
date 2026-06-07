@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "李彦博_从自动化到智能化 AI重塑C++软件测试未来"
 path: slides/李彦博_从自动化到智能化 AI重塑C++软件测试未来.pdf
+source-md5: 0fadec207efdb9716458f4e2c06a67b0
 size: 10372 KB
 category: slide
 ingested: 2026-06-04

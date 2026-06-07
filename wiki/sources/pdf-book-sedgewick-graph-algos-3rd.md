@@ -6,6 +6,7 @@ author: Robert Sedgewick
 date: 2002
 size: small
 path: raw/PDFs/books/AlgorithmsTHIRD EDITION INC Part 5 GRAPH ALGORITHMS.pdf
+source-md5: db5cfeddcde2f1caf886535f6fe0273a
 summary: Sedgewick 图算法第三版：DFS/BFS/最小生成树/最短路径/网络流
 created: 2002
 tags: []

@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "LwIP 协议栈源码详解"
 path: books/LwIP 协议栈源码详解.pdf
+source-md5: f15c6fc8c5f8205e36606194e7636a6f
 size: 1354 KB
 category: book
 ingested: 2026-06-04

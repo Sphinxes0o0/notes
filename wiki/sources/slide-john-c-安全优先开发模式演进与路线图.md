@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "John_C++ “安全优先”开发模式演进与路线图"
 path: slides/John_C++ “安全优先”开发模式演进与路线图.pdf
+source-md5: a0ef16b62f0aa5b288ca642cdcbd1aee
 size: 5699 KB
 category: slide
 ingested: 2026-06-04

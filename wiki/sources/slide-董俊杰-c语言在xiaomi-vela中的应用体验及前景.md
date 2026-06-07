@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "董俊杰_C++语言在Xiaomi Vela中的应用、体验及前景"
 path: slides/董俊杰_C++语言在Xiaomi Vela中的应用、体验及前景.pdf
+source-md5: b405f11db109e94ebe37f953dc8d56bb
 size: 6480 KB
 category: slide
 ingested: 2026-06-04

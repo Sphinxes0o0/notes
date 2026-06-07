@@ -6,6 +6,7 @@ author: Michael T. Goodrich
 date: 2011
 size: large
 path: raw/PDFs/books/Data Structures & Algorithms SECOND EDITION in C++.pdf
+source-md5: 9610f5551ab358d6388a606df58be3fa
 pages: 738
 summary: Goodrich & Tamassia 《Data Structures and Algorithms in C++》第二版：向量/链表/树/图/哈希表等数据结构与算法分析，用 C++ 实现。
 created: 2011

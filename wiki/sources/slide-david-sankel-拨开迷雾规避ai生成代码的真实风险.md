@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "David Sankel_拨开迷雾：规避AI生成代码的真实风险"
 path: slides/David Sankel_拨开迷雾：规避AI生成代码的真实风险.pdf
+source-md5: 4ff4a5b76241b10fa2289a39c85357a1
 size: 2004 KB
 category: slide
 ingested: 2026-06-04

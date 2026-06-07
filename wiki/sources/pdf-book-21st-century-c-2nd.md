@@ -6,6 +6,7 @@ author: "Ben Klemens"
 date: 2024
 size: medium
 path: raw/PDFs/books/21st Century C, 2nd Edition.pdf
+source-md5: cecbceb284ac0f7b742d052141b66f29
 summary: "21st Century C 第二版：C 语言现代编程实践，涵盖 Autotools、第三方库、POSIX/GNU 扩展"
 tags: [books, c, system-programming, unix, autotools]
 created: 2026-05-27

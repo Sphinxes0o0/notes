@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "马良焰_AI Coding在企业内的实践分享"
 path: slides/马良焰_AI Coding在企业内的实践分享.pdf
+source-md5: d4d3ae767862fb7ae71f409556e58ec7
 size: 5367 KB
 category: slide
 ingested: 2026-06-04

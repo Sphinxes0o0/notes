@@ -6,6 +6,7 @@ author: Robert Sedgewick
 date: 1998
 size: large
 path: raw/PDFs/books/Algorithms in C.pdf
+source-md5: c4bcc4380a33df1330ed60ffefb7b1ba
 pages: 672
 summary: Sedgewick 算法经典 C 语言版：排序、查找、图算法、数据结构与应用。Part 1-4 合一扫描版，672 页。
 created: 1998

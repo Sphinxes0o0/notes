@@ -6,6 +6,7 @@ author: "John M. Lakos"
 date: 1996
 size: large
 path: raw/PDFs/books/Large-Scale C++ Software Design.pdf
+source-md5: 19f6e94539ffd5740dac46faf77d8b73
 summary: "Lakos 大规模 C++ 软件设计：组件划分、物理设计、依赖管理、可伸缩性原则"
 tags: [books, cpp, software-engineering, large-scale, design, dependency]
 created: 2026-05-27

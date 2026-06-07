@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Linux多线程服务端编程：使用muduo C++网络库"
 path: books/Linux多线程服务端编程：使用muduo C++网络库.pdf
+source-md5: 8913b75815f865db50ddea8858c1916d
 size: 3134 KB
 category: book
 ingested: 2026-06-04

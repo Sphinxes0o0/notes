@@ -6,6 +6,7 @@ author: "Michael Kerrisk"
 date: 2010
 size: large
 path: raw/PDFs/books/The Linux Programming Interface.pdf
+source-md5: 9284a2df85ff237153cff1e2b2803912
 summary: "Michael Kerrisk 编写，1556页Linux/UNIX系统编程权威手册，覆盖500+系统调用和库函数，200+示例程序，是Linux系统编程的百科全书"
 tags: [linux, unix, system-programming, syscalls, books]
 created: 2026-05-25

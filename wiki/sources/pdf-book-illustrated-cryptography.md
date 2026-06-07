@@ -6,6 +6,7 @@ author: "结城浩"
 date: 2021
 size: medium
 path: raw/PDFs/books/图解密码技术 第三版.pdf
+source-md5: e84fdcff2fc3c9e9b26430e3483ebbfe
 summary: "图解密码技术第三版：对称加密、公钥加密、哈希、数字签名、PKI、TLS 等密码学原理"
 tags: [books, cryptography, security, tls, symmetric, asymmetric]
 created: 2026-05-27

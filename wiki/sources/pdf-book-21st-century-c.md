@@ -6,6 +6,7 @@ author: Ben Klemens
 date: 2014
 size: medium
 path: raw/PDFs/books/21st Century C, 2nd Edition.pdf
+source-md5: cecbceb284ac0f7b742d052141b66f29
 pages: 408
 summary: "Modern C programming: POSIX/GNU extensions, GDB/DDD debuggers, Autotools, Git, and third-party libraries (GLib, libcsv, JSON).面向已有经验的程序员，讲解现代C的实践技巧。"
 created: 2014

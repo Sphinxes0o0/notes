@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "David Sankel_大规模安全 C++：纵深防御策略"
 path: slides/David Sankel_大规模安全 C++：纵深防御策略.pdf
+source-md5: 2d9bcfc7e9aa0a232bbb663dd9074f8d
 size: 2109 KB
 category: slide
 ingested: 2026-06-04

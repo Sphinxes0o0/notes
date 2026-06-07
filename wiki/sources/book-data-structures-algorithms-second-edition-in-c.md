@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Data Structures & Algorithms SECOND EDITION in C++"
 path: books/Data Structures & Algorithms SECOND EDITION in C++.pdf
+source-md5: 9610f5551ab358d6388a606df58be3fa
 size: 17430 KB
 category: book
 ingested: 2026-06-04

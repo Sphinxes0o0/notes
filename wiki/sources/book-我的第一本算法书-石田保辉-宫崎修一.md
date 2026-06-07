@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "我的第一本算法书 石田保辉 宫崎修一"
 path: books/我的第一本算法书 石田保辉 宫崎修一.pdf
+source-md5: 588f190c9ba2058b3969539b0d33b130
 size: 8672 KB
 category: book
 ingested: 2026-06-04

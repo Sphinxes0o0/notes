@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Elements of Programming Interviews"
 path: books/Elements of Programming Interviews.pdf
+source-md5: 8c64524dbd990bb9b7146ee6f5baa3fe
 size: 1099 KB
 category: book
 ingested: 2026-06-04

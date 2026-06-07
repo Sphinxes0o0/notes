@@ -151,6 +151,7 @@ created: 2026-05-22
 | [[sources/pdf-trustzone-optee]] | TrustZone与OP-TEE技术详解：786页ARM硬件安全扩展权威著作 |
 | [[sources/pdf-commercial-crypto-assessment]] | 商用密码应用安全性评估考核题：622页SM算法/密评/等级保护2.0 |
 | [[sources/pdf-openssl-cookbook]] | OpenSSL Cookbook中文版：72页密钥生成/证书管理/SSL测试实用手册 |
+| [[sources/book-图解密码技术-第三版]] | 图解密码技术 第三版（结城浩）：密码学入门经典，对称密码/公钥密码/哈希函数/PKI/SSL-TLS/PGP，76116 KB，OCR ingested 2026-06-07 |
 | [[sources/pdf-ebpf-technical-practice]] | eBPF技术实践v2（龙蜥社区）：100页XDP/TC/CO-RE工具链 |
 | [[sources/arthurchiao-linux-cpu-power-management]] | Linux CPU power management: P-states, C-states, TDP, hyperthreading |
 | [[sources/arthurchiao-linux-net-stack]] | Linux network stack overview: IRQ/softirq, RX/TX, BPF/XDP, monitoring |

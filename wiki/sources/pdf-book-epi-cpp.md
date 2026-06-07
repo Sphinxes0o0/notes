@@ -6,6 +6,7 @@ author: Adnan Aziz, Tsung-Hsien Lee, Amit Prakash
 date: 2016
 size: small
 path: raw/PDFs/books/Elements of Programming Interviews.pdf
+source-md5: 8c64524dbd990bb9b7146ee6f5baa3fe
 summary: 算法面试题库，300+题目配图解代码，覆盖数组/树/图/动态规划等主题
 created: 2016
 tags: [cpp]

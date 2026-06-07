@@ -6,6 +6,7 @@ author: "Scott Meyers"
 date: 2001-06-06
 size: medium
 path: raw/PDFs/books/Effective STL简体中文版.pdf
+source-md5: 5ed672efff273624b4a653d6731deca4
 summary: "Scott Meyers STL 最佳实践：50条提升C++标准库使用效率的专家指南，涵盖容器、迭代器、算法、函数对象、字符串和分配器。"
 tags: [cpp, stl, books]
 sources: [pdf-cpp-effective-stl]

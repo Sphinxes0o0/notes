@@ -6,6 +6,7 @@ author: Adam Drozdek
 date: 2013
 size: medium
 path: raw/PDFs/books/Data Structures & Algorithms SECOND EDITION in C++.pdf
+source-md5: 9610f5551ab358d6388a606df58be3fa
 summary: C++ 实现的数据结构与算法：树/图/哈希/排序/动态规划/算法分析
 created: 2013
 tags: [cpp]

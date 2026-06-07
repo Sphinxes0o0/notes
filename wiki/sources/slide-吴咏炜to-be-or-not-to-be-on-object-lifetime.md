@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "吴咏炜To Be or Not to Be - On Object Lifetime"
 path: slides/吴咏炜To Be or Not to Be - On Object Lifetime.pdf
+source-md5: 5fc588555481435c83c28cc7589cad93
 size: 9931 KB
 category: slide
 ingested: 2026-06-04

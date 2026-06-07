@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Effective STL简体中文版"
 path: books/Effective STL简体中文版.pdf
+source-md5: 5ed672efff273624b4a653d6731deca4
 size: 1064 KB
 category: book
 ingested: 2026-06-04

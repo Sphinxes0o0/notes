@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Large-Scale C++ Software Design"
 path: books/Large-Scale C++ Software Design.pdf
+source-md5: 19f6e94539ffd5740dac46faf77d8b73
 size: 45212 KB
 category: book
 ingested: 2026-06-04

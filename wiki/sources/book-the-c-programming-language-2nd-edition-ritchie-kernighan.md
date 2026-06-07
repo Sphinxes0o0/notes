@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "The C Programming Language - 2nd Edition - Ritchie Kernighan"
 path: books/The C Programming Language - 2nd Edition - Ritchie Kernighan.pdf
+source-md5: 9cac7c755eeab39c2a977131f69a6759
 size: 20798 KB
 category: book
 ingested: 2026-06-04

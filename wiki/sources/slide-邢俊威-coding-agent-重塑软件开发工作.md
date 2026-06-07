@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "邢俊威_Coding Agent 重塑软件开发工作"
 path: slides/邢俊威_Coding Agent 重塑软件开发工作.pdf
+source-md5: dcae15e15b0a1a56071e37ebad008429
 size: 6708 KB
 category: slide
 ingested: 2026-06-04

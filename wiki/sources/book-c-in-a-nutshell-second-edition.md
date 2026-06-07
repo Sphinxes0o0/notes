@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "C in a Nutshell, Second Edition"
 path: books/C in a Nutshell, Second Edition.pdf
+source-md5: c23382c0455c0709f70a432f867bcf79
 size: 10310 KB
 category: book
 ingested: 2026-06-04

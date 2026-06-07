@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Cracking the Coding Interview_ 189 Programming Questions and Solutions ( PDFDrive )"
 path: books/Cracking the Coding Interview_ 189 Programming Questions and Solutions ( PDFDrive ).pdf
+source-md5: fcb49f53d5e943ce8acdc4469f63dc5d
 size: 55104 KB
 category: book
 ingested: 2026-06-04

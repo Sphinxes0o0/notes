@@ -6,6 +6,7 @@ author: Robert Sedgewick
 date: 2002
 size: small
 path: raw/PDFs/books/AlgorithmsTHIRD EDITION INC Part 5 GRAPH ALGORITHMS.pdf
+source-md5: db5cfeddcde2f1caf886535f6fe0273a
 pages: 51
 summary: Sedgewick 图算法 Part 5：C 语言实现图搜索、最小生成树、最短路径算法，配 Princeton 大学原版图示。
 created: 2002

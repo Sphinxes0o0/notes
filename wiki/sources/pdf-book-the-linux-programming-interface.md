@@ -6,6 +6,7 @@ author: "Michael Kerrisk"
 date: 2010
 size: large
 path: raw/PDFs/books/The Linux Programming Interface.pdf
+source-md5: 9284a2df85ff237153cff1e2b2803912
 summary: "TLPI：Linux 系统编程权威指南，涵盖系统调用、文件、进程、信号、IPC、线程、socket、内存管理"
 tags: [books, linux, system-programming, syscalls, process, socket, ipc]
 created: 2026-05-27

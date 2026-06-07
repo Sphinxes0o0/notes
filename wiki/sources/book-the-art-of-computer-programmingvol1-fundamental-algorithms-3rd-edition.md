@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "The Art of Computer Programming,Vol.1 Fundamental Algorithms, 3rd Edition"
 path: books/The Art of Computer Programming,Vol.1 Fundamental Algorithms, 3rd Edition.pdf
+source-md5: 3612cebcee66e75a23440b97a1b560db
 size: 6557 KB
 category: book
 ingested: 2026-06-04

@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "徐亮亮_Qoder CLI - 终端里的智能伙伴"
 path: slides/徐亮亮_Qoder CLI - 终端里的智能伙伴.pdf
+source-md5: 667092f0bff63d8c60cf228265961e84
 size: 6630 KB
 category: slide
 ingested: 2026-06-04

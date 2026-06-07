@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "AlgorithmsTHIRD EDITION INC Part 5 GRAPH ALGORITHMS"
 path: books/AlgorithmsTHIRD EDITION INC Part 5 GRAPH ALGORITHMS.pdf
+source-md5: db5cfeddcde2f1caf886535f6fe0273a
 size: 1104 KB
 category: book
 ingested: 2026-06-04

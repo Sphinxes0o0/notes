@@ -3,6 +3,7 @@ type: source
 source-type: slide
 title: "汪晟杰_从上下文工程到AI Spec Coding：C++在无图形终端时代的下一站"
 path: slides/汪晟杰_从上下文工程到AI Spec Coding：C++在无图形终端时代的下一站.pdf
+source-md5: eb3f2ad4b61338ec559f96ca5c2fd924
 size: 5256 KB
 category: slide
 ingested: 2026-06-04

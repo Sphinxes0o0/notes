@@ -3,6 +3,7 @@ type: source
 source-type: book
 title: "Algorithms in C"
 path: books/Algorithms in C.pdf
+source-md5: c4bcc4380a33df1330ed60ffefb7b1ba
 size: 29663 KB
 category: book
 ingested: 2026-06-04

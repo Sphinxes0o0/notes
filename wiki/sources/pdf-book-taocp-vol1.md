@@ -6,6 +6,7 @@ author: Donald E. Knuth
 date: 1997
 size: small
 path: raw/PDFs/books/The Art of Computer Programming,Vol.1 Fundamental Algorithms, 3rd Edition.pdf
+source-md5: 3612cebcee66e75a23440b97a1b560db
 summary: TAOCP 第1卷：基本算法（数学基础+数据结构+递归+随机数）
 created: 1997
 tags: []
