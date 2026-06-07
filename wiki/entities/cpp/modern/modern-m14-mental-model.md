@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, master, mental-model, pointer, reference, undefined-behavior]
 created: 2026-05-27
-sources: [github-modern-cpp-skills-m14]
+sources: []
 ---
 
 # modern-m14-mental-model
@@ -41,7 +41,3 @@ C++ 內存心智模型的核心思維模型：**內存中發生了什麼？**
 - [[entities/cpp/modern/modern-m02-resource]] — 指針的所有權語義
 - [[entities/cpp/modern/modern-m15-anti-pattern]] — `void*`、`reinterpret_cast` 是 UB 的溫床
 - [[entities/cpp/modern/modern-m04-zero-cost]] — vtable 指針是運行時多態的底層
-
-## Source
-
-- [[sources/github-modern-cpp-skills-m14]]

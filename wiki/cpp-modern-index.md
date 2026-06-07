@@ -139,8 +139,7 @@ Master Anti-Pattern ────────────────────
 | [[sources/github-modern-cpp-skills-m11]] | m11-ecosystem |
 | [[sources/github-modern-cpp-skills-m12]] | m12-lifecycle |
 | [[sources/github-modern-cpp-skills-m13]] | m13-domain-error |
-| [[sources/github-modern-cpp-skills-m14]] | m14-mental-model |
-| [[sources/github-modern-cpp-skills-m15]] | m15-anti-pattern |
+| *(m14–m15: 原源仓库 Sphinxes0o0/Modern-Cpp-Skills 已弃用, 删除)* |  |
 
 ## Feature Reference Entities (15 entities from AnthonyCalandra/modern-cpp-features)
 

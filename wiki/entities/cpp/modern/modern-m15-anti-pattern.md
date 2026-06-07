@@ -2,7 +2,7 @@
 type: entity
 tags: [cpp, master, anti-pattern, modernization, c-style]
 created: 2026-05-27
-sources: [github-modern-cpp-skills-m15]
+sources: []
 ---
 
 # modern-m15-anti-pattern
@@ -49,7 +49,3 @@ C++ 常見 Anti-Pattern 識別與修正的核心思維模型：**這是 C 還是
 - [[entities/cpp/modern/modern-m14-mental-model]] — `void*` 缺乏類型信息
 - [[entities/cpp/modern/modern-m06-error-handling]] — 異常處理 vs 返回碼
 - [[entities/cpp/modern/modern-m10-performance]] — 手動內存管理 vs `std::vector`
-
-## Source
-
-- [[sources/github-modern-cpp-skills-m15]]
