@@ -11,10 +11,15 @@ Usage:
   python3 scripts/pdf_coverage.py --delete-orphans   # actually rm orphan PDFs
 
 Categories:
-  - covered:    PDF has a matching source md (md5 hit)
-  - orphan_pdf: PDF on disk with no matching source md (needs ingest)
-  - orphan_md:  source md whose md5 has no PDF on disk (PDF deleted
-                or re-downloaded; wiki page is stale)
+  - covered:      PDF has a matching source md (md5 hit)
+  - orphan_pdf:   PDF on disk with no matching source md (needs ingest)
+  - true_orphan:  source md whose md5 has no PDF on disk AND no
+                  resolvable `path:` field — the frontmatter is broken
+                  or the PDF was re-downloaded under a new name
+                  (wiki page is stale; needs fix)
+  - archived:     source md whose md5 has no PDF on disk BUT the
+                  `path:` field still points at a known-deleted file
+                  (md is kept as a historical record; NOT a bug)
 
 The `path:` field in legacy frontmatter is RELATIVE TO raw/PDFs/, e.g.
   path: books/foo.pdf
@@ -213,14 +218,49 @@ def coverage_report() -> dict:
             orphan_pdfs.append(p)
 
     orphan_mds: List[dict] = []
+    true_orphans: List[dict] = []
+    archived_mds: List[dict] = []
     for h, mds in md5_index.items():
         if h not in pdfs.values():
             for m in mds:
-                orphan_mds.append({
+                path_field = md_paths.get(m)
+                # Decide: is this a "true orphan" (broken/stale) or an
+                # "archived" record (PDF was deleted, md kept on purpose)?
+                #
+                # Heuristic: if `path:` resolves to a real file on disk,
+                # then the md5 must have changed (PDF was re-downloaded
+                # under a new name) and the page is stale — call it
+                # true_orphan.
+                #
+                # If `path:` does NOT resolve (file was deleted) AND the
+                # frontmatter at least claims a sensible-looking path,
+                # treat the md as an archive of a deleted source.
+                #
+                # If there is no `path:` field at all, treat as
+                # true_orphan (the page can't even hint at where its
+                # source went).
+                resolved = (
+                    resolve_md_path_to_disk(path_field) if path_field else None
+                )
+                entry = {
                     "md": str(m.relative_to(PYRAMID)),
                     "md5": h,
-                    "path_field": md_paths.get(m),
-                })
+                    "path_field": path_field,
+                }
+                orphan_mds.append(entry)
+                if resolved is not None:
+                    # md5 mismatch but path is alive → PDF was replaced
+                    # under a new name; the wiki page is stale.
+                    entry["reason"] = "md5-mismatch-path-alive"
+                    true_orphans.append(entry)
+                elif path_field:
+                    # PDF was deleted, md kept as archive.
+                    entry["reason"] = "pdf-deleted-archived"
+                    archived_mds.append(entry)
+                else:
+                    # No path field at all — frontmatter is broken.
+                    entry["reason"] = "no-path-field"
+                    true_orphans.append(entry)
 
     return {
         "total_pdfs": len(pdfs),
@@ -236,8 +276,17 @@ def coverage_report() -> dict:
         ],
         "orphan_pdf_count": len(orphan_pdfs),
         "orphan_pdf_total_bytes": sum(p.stat().st_size for p in orphan_pdfs),
+        # `orphan_mds` is the union (kept for backward compat — anyone
+        # grepping the JSON still finds all 245 in one place).
         "orphan_mds": orphan_mds,
         "orphan_md_count": len(orphan_mds),
+        # New: split by cause. `true_orphans` are the ones that need a
+        # human (broken frontmatter / re-downloaded PDF). `archived_mds`
+        # are kept intentionally as historical records.
+        "true_orphans": true_orphans,
+        "true_orphan_count": len(true_orphans),
+        "archived_mds": archived_mds,
+        "archived_count": len(archived_mds),
     }
 
 
@@ -245,23 +294,59 @@ def print_report(report: dict) -> None:
     total = report["total_pdfs"]
     cov = report["covered"]
     pct = 100 * cov / total if total else 0
+    true_n = report["true_orphan_count"]
+    arch_n = report["archived_count"]
     print(f"=== Pyramid PDF coverage ===")
     print(f"Total PDFs:       {total}")
     print(f"Covered:          {cov}  ({pct:.1f}%)")
     print(f"Orphan PDFs:      {report['orphan_pdf_count']}  "
           f"({report['orphan_pdf_total_bytes']/1e9:.2f} GB)")
     print(f"Orphan md pages:  {report['orphan_md_count']}")
+    print(f"  - [WARN]   True orphans (broken link / stale): {true_n}")
+    print(f"  - [ARCHIVE] Archived (PDF deleted, md kept):    {arch_n}")
 
     if report["orphan_pdfs"]:
         print(f"\n--- Orphan PDFs (no source page) ---")
         for o in report["orphan_pdfs"]:
             print(f"  {o['size_mb']:6.1f} MB  {o['path']}")
-    if report["orphan_mds"]:
-        print(f"\n--- Orphan md pages (md5 not on disk) ---")
-        for o in report["orphan_mds"][:20]:
-            print(f"  {o['md']}  (md5={o['md5'][:8]}…  path={o['path_field']})")
-        if len(report["orphan_mds"]) > 20:
-            print(f"  … and {len(report['orphan_mds']) - 20} more")
+
+    if true_n:
+        print(f"\n--- [WARN] True orphans (broken links to fix) ---")
+        for o in report["true_orphans"][:20]:
+            print(f"  {o['md']}  (md5={o['md5'][:8]}…  path={o['path_field']!r}  reason={o['reason']})")
+        if true_n > 20:
+            print(f"  … and {true_n - 20} more")
+
+    if arch_n:
+        print(f"\n--- [ARCHIVE] Archived (PDF deleted, md kept as record) ---")
+        # Group by canonical path so the user sees that e.g. 4 mds all
+        # reference the same deleted PDF, rather than 4 scary-looking
+        # lines. We canonicalize: strip leading "raw/PDFs/" since the
+        # `path:` field is documented as relative to raw/PDFs/.
+        from collections import defaultdict
+        grouped: dict[str, list[str]] = defaultdict(list)
+
+        def canonical(p: str) -> str:
+            if p.startswith("raw/PDFs/"):
+                return p[len("raw/PDFs/"):]
+            return p
+
+        for o in report["archived_mds"]:
+            key = canonical(o["path_field"] or "<no path>")
+            grouped[key].append(o["md"])
+        # Show first 10 distinct sources (each source may map to N mds)
+        items = list(grouped.items())
+        shown_md = sum(len(v) for _, v in items[:10])
+        for path, mds in items[:10]:
+            label = path if path else "<no path>"
+            print(f"  📁 {label}  ({len(mds)} md page{'s' if len(mds) != 1 else ''})")
+            for md in mds[:3]:
+                print(f"        - {md}")
+            if len(mds) > 3:
+                print(f"        - … and {len(mds) - 3} more md page(s)")
+        if len(grouped) > 10:
+            print(f"  📁 … and {len(grouped) - 10} more deleted source(s) "
+                  f"(covering {arch_n - shown_md} md pages)")
 
 
 def main() -> int:
