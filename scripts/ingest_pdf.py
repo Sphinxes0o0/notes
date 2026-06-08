@@ -75,6 +75,22 @@ GENERATE_SCREENSHOTS = os.environ.get("INGEST_GENERATE_SCREENSHOTS", "0") in ("1
 # File size warning threshold (bytes). 100MB files take ~2-5s/page
 # with OCR on; warn the user but proceed.
 SIZE_WARN_BYTES = int(os.environ.get("INGEST_SIZE_WARN_BYTES", str(100 * 1024 * 1024)))
+# OCR DPI. Default 150 is too low for Chinese/small text — tesseract
+# reports "Image too small to scale" and produces 0 text. 300 is the
+# safe default; raise INGEST_OCR_DPI for tiny fonts.
+OCR_DPI = int(os.environ.get("INGEST_OCR_DPI", "300"))
+# Tesseract traineddata directory. liteparse (tesseract-rs) defaults
+# to ~/Library/Application Support/tesseract-rs/tessdata/ which is
+# empty on a fresh macOS install. Auto-detect the brew prefix if
+# TESSDATA_PREFIX / INGEST_TESSDATA_PATH isn't already set.
+_TESSDATA_CANDIDATES = [
+    os.environ.get("TESSDATA_PREFIX"),
+    os.environ.get("INGEST_TESSDATA_PATH"),
+    "/opt/homebrew/share/tessdata",  # Apple Silicon brew
+    "/usr/local/share/tessdata",     # Intel brew
+    "/opt/local/share/tessdata",     # MacPorts
+]
+TESSDATA_PATH = next((p for p in _TESSDATA_CANDIDATES if p and os.path.isfile(os.path.join(p, "eng.traineddata"))), None)
 
 
 # ──────────────────────────────────────────────
@@ -254,6 +270,10 @@ def run_lit_parse(pdf_path: Path, fmt: str = "json", password: str = "") -> dict
         cmd.append("--no-ocr")
     else:
         cmd.extend(["--ocr-language", OCR_LANG])
+        if TESSDATA_PATH:
+            cmd.extend(["--tessdata-path", TESSDATA_PATH])
+        if OCR_DPI:
+            cmd.extend(["--dpi", str(OCR_DPI)])
     cmd.extend(["--max-pages", str(MAX_PAGES)])
     if password:
         cmd.extend(["--password", password])
