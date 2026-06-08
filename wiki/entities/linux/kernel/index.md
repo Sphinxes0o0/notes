@@ -76,7 +76,7 @@ created: 2026-05-29
 |--------|-------------|------|
 |  | Socket Layer, sk_buff, Netdevice, Routing, TCP/UDP implementation | linux-kernel, networking, socket |
 | [[entities/linux/kernel/skbuff-deep-dive]] | SKB memory management: head/data/tail/end layout, clone/copy, scatter-gather, dataref | linux-kernel, networking, skbuff |
-| [[entities/linux/kernel/netfilter.md]] | Netfilter: iptables, nftables, conntrack, NAT, hook points | linux-kernel, networking, netfilter |
+| [[entities/linux/kernel/netfilter]] | Netfilter: iptables, nftables, conntrack, NAT, hook points | linux-kernel, networking, netfilter |
 
 ---
 

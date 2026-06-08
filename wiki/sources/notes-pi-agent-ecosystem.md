@@ -146,7 +146,7 @@ Pi 核心故意不含 (subagent / MCP / permission popup / plan mode / todo / ba
 
 ## 相关页面
 
-- [[entities/pi-agent.md]] — Pi Agent entity
+- [[entities/pi-agent]] — Pi Agent entity
 - [[notes-pi-agent]] — 主体笔记
 - [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 agent 横向对比
 - [[notes-pi-agent-custom-workflow]] — 扩展开发生命周期 + 5 个 workflow 配方

@@ -106,7 +106,7 @@ struct boot_params {
 - [[entities/linux/kernel/linux-kernel-syscall]] — 系统调用（内核就绪后第一条 syscall）
 - [[entities/linux/kernel/virt-kvm]] — KVM 虚拟化（虚拟机 boot 过程）
 - [[entities/linux/kernel/mm/linux-kernel-mm]] — 内存管理（boot 后初始化）
-- [[sources/safeos-architecture.md]] — SafeOS 架构
+- [[sources/safeos-architecture]] — SafeOS 架构
 
 ## 来源详情
 

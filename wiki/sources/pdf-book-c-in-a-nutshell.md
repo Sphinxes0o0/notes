@@ -25,5 +25,5 @@ C 语言权威参考手册（C11 标准）：语言规范与语法、完整标�
 
 ## Related Pages
 - [[sources/pdf-book-21st-century-c]] — Modern C programming
-- [[sources/pdf-book-21st-century-cpp.md]] — Stroustrup on modern C++
+- [[sources/pdf-book-21st-century-cpp]] — Stroustrup on modern C++
 - [[entities/cpp/cpp-standard-library]] — C++ standard library

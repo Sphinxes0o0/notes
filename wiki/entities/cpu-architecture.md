@@ -44,8 +44,8 @@ CPU架构涵盖指令集体系结构（ISA）和微架构两个层面：ISA定�
 ## 相关概念
 
 - [[cache-memory-design]] — Cache是CPU与DRAM之间的速度桥梁，影响IPC
-- [[entities/arm/armv8-architecture.md]] — ARMv8-A是RISC ISA的典型代表
-- [[entities/arm/arm-cortex-a9.md]] — Cortex-A9微架构：超标量+乱序执行
+- [[entities/arm/armv8-architecture]] — ARMv8-A是RISC ISA的典型代表
+- [[entities/arm/arm-cortex-a9]] — Cortex-A9微架构：超标量+乱序执行
 - [[computer-architecture]] — 体系结构基础（已有综合页）
 - [[qemu-cpu]] — QEMU如何模拟CPU执行
 

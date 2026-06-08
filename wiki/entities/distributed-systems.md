@@ -14,9 +14,9 @@ Distributed systems is the field of study about multiple independent computers t
 ## Key Challenge Areas
 
 - **[[distributed-consensus]]** — Paxos, Raft, Byzantine fault tolerance
-- **[[entities/distributed-systems/transactions.md]]** — ACID, 2PC, Sagas
-- **[[entities/distributed-systems/replication.md]]** — Leader-based, multi-leader, leaderless
-- **[[entities/distributed-systems/partitioning.md]]** — Sharding strategies, consistent hashing
+- **[[entities/distributed-systems/transactions]]** — ACID, 2PC, Sagas
+- **[[entities/distributed-systems/replication]]** — Leader-based, multi-leader, leaderless
+- **[[entities/distributed-systems/partitioning]]** — Sharding strategies, consistent hashing
 
 ## Core Properties
 

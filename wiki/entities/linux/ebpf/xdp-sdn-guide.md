@@ -58,7 +58,7 @@ XDP程序 (eBPF, 运行在网卡驱动层)
 
 ## 相关概念
 - [[linux-ebpf-overview]] — eBPF基础
-- [[entities/linux/ebpf/ebpf-sdn-guide.md]] — eBPF（XDP的底层技术）
+- [[entities/linux/ebpf/ebpf-sdn-guide]] — eBPF（XDP的底层技术）
 - [[linux-network-tc-ebpf-direct-action]] — TC Direct Action（XDP配合TC）
 - [[kernel-bypass-dpdk]] — DPDK（另一种高性能方案）
 - [[linux-net-stack-overview]] — Linux网络协议栈

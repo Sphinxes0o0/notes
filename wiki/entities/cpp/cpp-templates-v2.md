@@ -78,7 +78,7 @@ David Vandevoorde, Nicolai M. Josuttis, Douglas Gregor 著《C++ Templates》第
 - [[entities/cpp/variadic-templates]] — 可变模板
 - [[entities/cpp/constexpr]] — constexpr 编译时求值
 - [[entities/cpp/if-constexpr]] — if constexpr 分支
-- [[entities/cpp/modern-cpp/cpp-concepts.md]] — C++20 Concepts（待创建）
+- [[entities/cpp/modern-cpp/cpp-concepts]] — C++20 Concepts（待创建）
 
 ## 来源详情
 

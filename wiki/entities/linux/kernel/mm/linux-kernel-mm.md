@@ -21,7 +21,7 @@ Linux kernel memory management (MM) subsystem handles physical and virtual memor
 
 ## Related Concepts
 
-- [[entities/linux/kernel/sched/linux-kernel-sched-core.md]] — Scheduling (uses MM for stack allocation)
+- [[entities/linux/kernel/sched/linux-kernel-sched-core]] — Scheduling (uses MM for stack allocation)
 - [[kernel-bypass-dpdk]] — DPDK (alternative to kernel MM for packet buffers)
 
 ## Sources

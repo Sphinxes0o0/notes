@@ -175,7 +175,7 @@ const ok = await ctx.ui.confirm("Delete?", "Cannot be undone");
 
 ## 相关页面
 
-- [[entities/pi-agent.md]] — Pi Agent entity
+- [[entities/pi-agent]] — Pi Agent entity
 - [[notes-pi-agent]] — 主体笔记
 - [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 agent 横向对比
 - [[notes-pi-agent-ecosystem]] — 9 扩展示例 + MCP 桥接

@@ -108,7 +108,7 @@ TCP_SKB_CB(skb)->sacked = (ptr - 2) - (unsigned char *) th;
 - [[entities/linux/network/linux-network-protocols]] — TCP 协议实现细节
 - [[entities/linux/network/net-stack-deep-dive]] — 网络栈全路径（tcp_ack 处理位置）
 - [[entities/linux/kernel/net]] — 网络子系统框架
-- [[entities/linux/kernel/skbuff-deep-dive.md]] — SKB 数据结构与 scoreboard
+- [[entities/linux/kernel/skbuff-deep-dive]] — SKB 数据结构与 scoreboard
 
 ## 来源详情
 
