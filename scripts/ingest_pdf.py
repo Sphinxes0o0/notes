@@ -278,7 +278,10 @@ def run_lit_parse(pdf_path: Path, fmt: str = "json", password: str = "") -> dict
     if password:
         cmd.extend(["--password", password])
 
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+    # 30 min — Chinese OCR scans can take 20+ min on 600-page books.
+    # If lit parse hangs longer than that, something is genuinely wrong;
+    # better to bail than to silently produce a partial output.
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
     if result.returncode != 0:
         # Detect encryption-specific error and re-raise with clearer msg
         stderr = result.stderr or ""
