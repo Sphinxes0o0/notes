@@ -63,13 +63,74 @@ def parse_frontmatter(content):
 # ──────────────────────────────────────────────
 # Helper: extract [[wikilinks]] from body (not frontmatter)
 # ──────────────────────────────────────────────
+def _is_cpp_attribute(target: str) -> bool:
+    """True if the wikilink target looks like a C++ attribute or std::regex
+    character class rather than a wiki page path. C++ attributes use
+    `[[name]]`, `[[ns::name]]`, `[[name(args)]]`, `[[name "msg"]]`, or
+    `[[.key="value"]]`; std::regex char classes use `[[:alpha:]]` etc.
+
+    Heuristic: targets that contain no `/` and no `.md` extension and that
+    match one of the known C++ attribute patterns are NOT wikilinks.
+
+    Conservative — false negatives (real page name without path) are
+    preferable to false positives (flagging every `[[maybe_unused]]` in
+    extracted source code).
+    """
+    if "/" in target:
+        return False
+    # `.` is OK only if it appears as the first char of a C++ named-argument
+    # attribute like `[[.color="red"]]`. Anywhere else, treat as a file.
+    if "." in target and not re.match(r"^\.[A-Za-z_]\w*\s*=\s*", target):
+        return False
+    # std::regex character class: [[:alpha:]], [[:digit:]], etc.
+    if target.startswith(":") and target.endswith(":") and len(target) > 2:
+        return True
+    # C++ attribute: name only, name(args), name "msg", or ns::name
+    if re.match(r"^[A-Za-z_][\w]*$", target):
+        return True
+    if re.match(r"^[A-Za-z_]\w*(::\w+)+$", target):
+        return True
+    # ns::name(args) or ns::name "msg" or ns::name(args).key="value"
+    if re.match(r"^[A-Za-z_]\w*(::\w+)+\s*\(.*\)$", target, re.DOTALL):
+        return True
+    if re.match(r"^[A-Za-z_]\w*(::\w+)+\s*\(.*\)\s*(,\s*[A-Za-z_]\w*(\s*\(.+\))?\s*)*$", target, re.DOTALL):
+        return True
+    if re.match(r"^[A-Za-z_]\w*\s*\(.*\)$", target, re.DOTALL):
+        return True
+    if re.match(r'^[A-Za-z_]\w*\s*"[^"]*"\s*(,\s*[A-Za-z_]\w*\s*)*$', target):
+        return True
+    if re.match(r'^\.[A-Za-z_]\w*\s*=\s*"[^"]*"\s*$', target):
+        return True
+    if re.match(r"^assume\s*\(.+\)$", target):
+        return True
+    if re.match(r'^deprecated\(".*"\)$', target):
+        return True
+    # Comma-separated attribute list: `[[nodiscard, nodiscard]]`
+    if re.match(r"^[A-Za-z_]\w*(\s*,\s*[A-Za-z_]\w*)+$", target):
+        return True
+    # Whitespace-separated attribute names: `[[cpp11 strongly typed enums]]` (rare)
+    if re.match(r"^[A-Za-z_]\w*(\s+[A-Za-z_]\w*){1,3}$", target):
+        return True
+    return False
+
+
 def extract_wikilinks(content):
     """Return set of link targets (without page anchor)."""
     # Remove frontmatter
     body = re.sub(r'^---\s*\n.*?\n---\s*\n', '', content, count=1, flags=re.DOTALL)
+    # Strip fenced code blocks (``` or ~~~) so we don't pick up C++ [[attr]]
+    # or Rust [[macro]] or shell [[ ]] test syntax as wikilinks.
+    body = re.sub(r'(^|\n)(```|~~~)[^\n]*\n.*?\n\2[ \t]*(?=\n|$)', '\n', body, flags=re.DOTALL)
+    # Strip indented code blocks (4+ leading spaces) — not perfect but catches
+    # the common case where a single line is doubly-indented inside a list item.
+    body = re.sub(r'(?m)(^[ \t]{4,}.*(\n|$))+', '\n', body)
+    # Strip inline code spans `...` so e.g. `[[foo]]` is not treated as a link.
+    body = re.sub(r'`[^`\n]*`', '', body)
     links = set()
     for m in re.finditer(r'\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]', body):
         target = m.group(1).strip()
+        if _is_cpp_attribute(target):
+            continue
         # Normalize: wiki paths are relative, no leading ./
         if target.startswith('./'):
             target = target[2:]
