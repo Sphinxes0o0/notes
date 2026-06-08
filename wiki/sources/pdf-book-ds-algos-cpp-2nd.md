@@ -24,6 +24,6 @@ tags: [cpp]
 - **C++ 实现**：每种数据结构都有完整可运行的 C++ 代码
 
 ## 相关页面
-- [[pdf-book-algorithms-c]]
+- [[pdf-algorithms-in-c]]
 - [[pdf-book-ds-algos-cpp]]
 - [[pdf-book-sedgewick-graph-algos]]

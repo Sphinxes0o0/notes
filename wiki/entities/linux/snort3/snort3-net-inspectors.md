@@ -182,9 +182,9 @@ const BaseApi* nin_arp_spoof[] = { &as_api.base, nullptr };
 
 - [[snort3-index]]
 - [[intrusion-detection-system]]
-- [[packet-capture]]
+- [[entities/linux/snort3/packet-capture]]
 - [[network-security-monitoring]]
-- [[stream-reassembly]]
+- [[entities/linux/snort3/stream-reassembly]]
 
 ## 来源详情
 

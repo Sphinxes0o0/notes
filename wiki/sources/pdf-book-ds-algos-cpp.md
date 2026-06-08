@@ -24,7 +24,7 @@ tags: [cpp]
 Goodrich & Tamassia 算法教材 C++ 实现版（738页）：向量/链表/栈/队列/优先队列/哈希表/树（AVL/红黑树/B树/伸展树）/图算法（DFS/BFS/最小生成树/最短路径/网络流）/算法分析/排序/字符串算法等，使用 C++ 模板实现。
 
 ## Related Pages
-- [[sources/pdf-book-algorithms-c]] — Algorithms in C (Sedgewick)
+- [[pdf-algorithms-in-c]] — Algorithms in C (Sedgewick)
 - [[sources/pdf-book-sedgewick-graph-algos]] — Sedgewick Graph Algorithms
 - [[sources/pdf-book-cracking-coding-interview]] — CTCI interview prep
 -  — EPI

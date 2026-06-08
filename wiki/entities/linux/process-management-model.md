@@ -114,4 +114,4 @@ R (Running) ←→ S (Sleeping/Interruptible)
 
 - [[sources/pdf-the-linux-programming-interface]] — TLPI Ch24-28 进程创建/终止/执行/监控
 - [[sources/pdf-computer-systems-programmers-perspective]] — CS:APP Ch8 异常控制流
-- [[sources/pdf-unix-environment-advanced-programming]] — APUE Ch8-9 进程控制/进程关系
+- [[pdf-unix环境高级编程第三版]] — APUE Ch8-9 进程控制/进程关系

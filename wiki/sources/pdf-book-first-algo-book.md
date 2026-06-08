@@ -28,6 +28,6 @@ tags: []
 - 图灵程序设计丛书日本引进版
 
 ## 相关页面
-- [[pdf-book-algo-ds-books]]
+- [[pdf-algo-ds-books]]
 - [[pdf-book-sedgewick-graph-algos]]
-- [[pdf-book-algorithms-c]]
+- [[pdf-algorithms-in-c]]

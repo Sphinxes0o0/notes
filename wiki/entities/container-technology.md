@@ -63,7 +63,7 @@ sources: [bookmark-thebyte]
 ## 相关概念
 - [[kubernetes-orchestration]] — Kubernetes（容器编排平台）
 - [[linux-cgroups]] — cgroups（容器资源隔离的底层支持）
-- [[linux-network-namespace]] — Network Namespace（容器网络隔离）
+- [[entities/linux/network-namespace]] — Network Namespace（容器网络隔离）
 - [[service-mesh]] — 服务网格（边车代理容器）
 
 ## 来源详情

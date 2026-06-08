@@ -29,5 +29,5 @@ tags: []
 > "Rust's ownership system is the key to memory safety without garbage collection, and concurrency without data races."
 
 ## 相关页面
-- [[pdf-book-rust-book-zh-cn]]
+- [[pdf-book-programming-rust]]
 - [[pdf-cpp-perf-books]]

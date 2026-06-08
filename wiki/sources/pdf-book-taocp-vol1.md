@@ -27,6 +27,6 @@ tags: []
 > "The goal of CS is to reduce complex human activity to mechanical procedures that can be executed automatically."
 
 ## 相关页面
-- [[pdf-book-algorithms-c]]
+- [[pdf-algorithms-in-c]]
 - [[pdf-algo-ds-books]]
 - [[pdf-book-sedgewick-graph-algos]]

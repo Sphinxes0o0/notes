@@ -61,4 +61,4 @@ sources: [pdf-computer-architecture-hp]
 
 ## Source Details
 
-- [[sources/pdf-computer-architecture-hp]] — 计算机体系结构：量化研究方法（第五版）
+- [[pdf-计算机体系结构量化研究方法第五版中文版]] — 计算机体系结构：量化研究方法（第五版）

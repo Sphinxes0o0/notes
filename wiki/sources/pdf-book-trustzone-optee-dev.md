@@ -31,5 +31,5 @@ tags: []
 
 ## 相关页面
 - [[pdf-book-armv8-arm]]
-- [[pdf-book-trustzone-optee]]
+- [[pdf-book-trustzone-optee-dev]]
 - [[pdf-security-crypto-books-updated]]

@@ -31,6 +31,6 @@ created: 2026-05-27
 
 ## 相关页面
 - [[sources/pdf-book-the-linux-programming-interface]] — TLPI
-- [[sources/pdf-unix-environment-advanced-programming]] — Unix 高级编程
+- [[pdf-unix环境高级编程第三版]] — Unix 高级编程
 - [[sources/pdf-linux-sysprog]] — Linux 系统编程
 - [[entities/linux/kernel/index]] — 系统工具书籍索引

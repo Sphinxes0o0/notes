@@ -45,7 +45,7 @@ created: 2026-05-27
 
 | 书名 | 作者 | 页数 | 核心主题 |
 |------|------|------|----------|
-| [[sources/pdf-book-algorithms-c]] | Robert Sedgewick | 672 | Sedgewick 算法 C 语言版（第3版，Part 1-4）|
+| [[pdf-algorithms-in-c]] | Robert Sedgewick | 672 | Sedgewick 算法 C 语言版（第3版，Part 1-4）|
 | [[sources/pdf-book-sedgewick-graph-algos]] | Robert Sedgewick | 51 | Sedgewick 图算法 Part 5（DFS/BFS/MST/最短路径）|
 | [[sources/pdf-book-ds-algos-cpp]] | Michael T. Goodrich | 738 | 数据结构与算法 C++ 实现（第2版）|
 
@@ -86,7 +86,7 @@ created: 2026-05-27
 - [[sources/pdf-book-ebpf-beginners-guide]] — eBPF
 
 ### Algorithms & Data Structures
-- [[sources/pdf-book-algorithms-c]] — Sedgewick C 版
+- [[pdf-algorithms-in-c]] — Sedgewick C 版
 - [[sources/pdf-book-sedgewick-graph-algos]] — 图算法
 - [[sources/pdf-book-ds-algos-cpp]] — Goodrich C++ 版
 

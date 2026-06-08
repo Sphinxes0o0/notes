@@ -72,4 +72,4 @@ STL 源码是 C++ 模板元编程的百科全书：
 - [[entities/cpp/cpp-templates]] — 模板基础
 
 ### Source 页面
-- [[sources/bookmark-cpp-template-tutorial]] — C++ Template Tutorial（配套）
+- [[bookmark-cpp-template-tutorial]] — C++ Template Tutorial（配套）

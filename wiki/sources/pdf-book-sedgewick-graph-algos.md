@@ -24,5 +24,5 @@ tags: []
 Sedgewick 图算法 C 语言版（Part 5）：图的基本表示、深度优先搜索、广度优先搜索、最小生成树（Kruskal/Prim）、最短路径（Dijkstra/Bellman-Ford）、网络流等。Princeton 大学原版教材图表丰富。
 
 ## Related Pages
-- [[sources/pdf-book-algorithms-c]] — Algorithms in C (full)
+- [[pdf-algorithms-in-c]] — Algorithms in C (full)
 -  — Data Structures & Algorithms in C++

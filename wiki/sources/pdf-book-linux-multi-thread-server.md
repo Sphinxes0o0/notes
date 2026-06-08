@@ -32,5 +32,5 @@ tags: [linux]
 ## 相关页面
 - [[pdf-book-cpp-concurrency-guide]]
 - [[pdf-book-concurrency-modern-cpp]]
-- [[pdf-book-linux-high-perf-server]]
+- [[pdf-linux高性能服务器编程]]
 - [[pdf-the-linux-programming-interface]]

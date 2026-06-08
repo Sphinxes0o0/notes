@@ -29,6 +29,6 @@ tags: []
 > "Understanding how the machine executes your program is the key to writing efficient and robust code."
 
 ## 相关页面
-- [[pdf-computer-architecture-hp]]
+- [[pdf-计算机体系结构量化研究方法第五版中文版]]
 - [[pdf-linux-sysprog]]
 - 

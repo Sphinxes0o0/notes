@@ -31,5 +31,5 @@ Stanford 课程文档，介绍 Unix 编程工具链的入门知识：
 
 ## 相关页面
 - [[pdf-the-linux-programming-interface]]
-- [[pdf-book-unix-advanced-programming]]
-- [[pdf-book-c-language]]
+- [[pdf-unix环境高级编程第三版]]
+- [[pdf-unix-programming-tools]]

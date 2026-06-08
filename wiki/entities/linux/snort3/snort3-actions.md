@@ -9,7 +9,7 @@ sources: [github-snort3-actions-connectors]
 
 ## 定义
 
-Snort3 IPS 动作是规则匹配时执行的操作。动作系统基于 [[ips_action.framework]] 基类，所有动作都是插件，通过 `PluginManager::load_plugins()` 动态加载。
+Snort3 IPS 动作是规则匹配时执行的操作。动作系统基于 [[entities/linux/snort3/ips-action-framework]] 基类，所有动作都是插件，通过 `PluginManager::load_plugins()` 动态加载。
 
 ## 动作类型
 

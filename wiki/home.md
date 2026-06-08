@@ -168,7 +168,7 @@ created: 2026-05-22
 | [[sources/pdf-cpp-perf-books]] | C++性能优化与架构2册：Optimized C++ (string/algorithm/memory优化) + Large-Scale C++ Software Design (物理设计/组件/层级) | 2016-2019 | pdf |
 | [[sources/pdf-c-language]] | C 语言编程 2册：K&R C 第2版 + C in a Nutshell 第2版 | 2015 | pdf |
 | [[sources/pdf-the-linux-programming-interface]] | TLPI (Michael Kerrisk, 1556页)：Linux/UNIX系统编程百科，500+系统调用，64章节覆盖进程/线程/内存/IPC/网络 | 2026-05 | pdf |
-| [[sources/pdf-unix-environment-advanced-programming]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程，POSIX标准系统编程经典（扫描版） | 2026-05 | pdf |
+| [[sources/pdf-unix环境高级编程第三版]] | APUE 第三版 (Stevens & Rago, 822页)：UNIX环境高级编程，POSIX标准系统编程经典（扫描版） | 2026-05 | pdf |
 | [[sources/pdf-computer-systems-programmers-perspective]] | CS:APP (Bryant & O'Hallaron, 1078页)：计算机系统程序员视角，机器码/缓存/虚拟内存/链接/并发，CMU 15-213 教材 | 2026-05 | pdf |
 | [[sources/pdf-linux-sysprog]] | Linux系统编程4册：TLPI+APUE+Unix工具+CSAPP深入理解计算机系统 | 2026-05 | pdf |
 | [[sources/pdf-linux-kernel-books]] | Linux内核2册：深入理解Linux内核(架构)+Linux内核0.12完全注释 | 2026-05 | pdf |
@@ -216,7 +216,7 @@ created: 2026-05-22
 | [[sources/pdf-openssl-cookbook]] | OpenSSL Cookbook中文版：72页密钥生成/证书管理/SSL测试/漏洞检测 | 2015 | pdf |
 | [[sources/pdf-ebpf-technical-practice]] | eBPF技术实践v2（龙蜥社区）：100页开发流程/工具链/应用场景 | 2023 | pdf |
 | [[sources/pdf-ebpf-basics]] | eBPF基础：80页入门/CO-RE/BTF/Maps/Pinning机制/11个64位寄存器 | 2023 | pdf |
-| [[sources/pdf-computer-architecture-hp]] | H&P计算机体系结构量化研究方法（第五版）：612页体系结构圣经 | 2017 | pdf |
+| [[sources/pdf-计算机体系结构量化研究方法第五版中文版]] | H&P计算机体系结构量化研究方法（第五版）：612页体系结构圣经 | 2017 | pdf |
 | [[sources/pdf-onedrive-batch1]] | OneDrive Batch P (5 PDFs): OS concepts + C++ concurrency/high-performance/templates-v2 | 2026-05 | pdf |
 | [[sources/notes-android]] | Android Treble 架构笔记（15篇）：HIDL/VNDK/VINTF/Stable-AIDL/HAL类型/模块化系统 | 2026-05 | github |
 | [[sources/notes-network-traffic-analysis]] | 网络流量分析文献综述（62篇论文）：IDS/加密流量/DL方法/eBPF实时检测 | 2026-05 | github |

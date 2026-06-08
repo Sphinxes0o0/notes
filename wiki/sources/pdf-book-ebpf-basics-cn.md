@@ -25,5 +25,5 @@ tags: [ebpf]
 ## 相关页面
 - [[pdf-book-ebpf-beginners-guide]]
 - [[pdf-ebpf-technical-practice]]
-- [[pdf-bpf-rethinking-kernel]]
+- [[pdf-book-ebpf-basics-cn]]
 - [[pdf-bpf-security-auditing-google]]

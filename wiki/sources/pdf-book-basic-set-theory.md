@@ -22,5 +22,5 @@ tags: []
 - **递归与序数**：超限归纳、序数算术
 
 ## 相关页面
-- [[pdf-book-algorithms-c]]
+- [[pdf-algorithms-in-c]]
 - [[pdf-algo-ds-books]]

@@ -38,7 +38,7 @@ created: 2026-05-27
 
 ## 相关页面
 - [[sources/pdf-the-linux-programming-interface]] — TLPI 资源页
-- [[sources/pdf-unix-environment-advanced-programming]] — APUE（Unix 环境高级编程）
+- [[pdf-unix环境高级编程第三版]] — APUE（Unix 环境高级编程）
 - [[sources/pdf-linux-sysprog]] — Linux 系统编程
 - [[sources/pdf-linux-net-server]] — Linux 高性能服务器
 - [[entities/linux/kernel/index]] — 系统/Kernel 书籍索引

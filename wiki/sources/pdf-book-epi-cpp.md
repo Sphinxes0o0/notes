@@ -28,6 +28,6 @@ tags: [cpp]
 
 ## 相关页面
 - [[pdf-book-cracking-coding-interview]]
-- [[pdf-book-algorithms-c]]
+- [[pdf-algorithms-in-c]]
 - [[pdf-book-ds-algos-cpp]]
 - [[pdf-interview-books]]
