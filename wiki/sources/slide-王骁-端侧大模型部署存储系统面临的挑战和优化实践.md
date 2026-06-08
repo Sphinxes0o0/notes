@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 王骁_端侧大模型部署：存储系统面临的挑战和优化实践

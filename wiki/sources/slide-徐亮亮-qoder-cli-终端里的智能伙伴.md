@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 徐亮亮_Qoder CLI - 终端里的智能伙伴

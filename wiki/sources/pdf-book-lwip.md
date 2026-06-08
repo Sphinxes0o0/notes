@@ -33,4 +33,4 @@ UESTC 老衲五木的 LwIP 协议栈学习笔记，覆盖：
 ## 相关页面
 - [[pdf-book-linux-high-perf-server]]
 - [[pdf-book-linux-multi-thread-server]]
-- [[pdf-book-ebpf-basics]]
+- [[sources/pdf-book-ebpf-basics-cn.md]]

@@ -10,13 +10,15 @@ summary: "Pi Agent 主体笔记：3 大实现 (earendil-works/pi / oh-my-pi / pi
 tags: [pi-agent, coding-agent, terminal-agent, typescript, rust]
 sources: [entity-pi-agent]
 related: [synthesis/comparison-terminal-coding-agents-2026-06, notes-pi-agent-ecosystem, notes-pi-agent-custom-workflow]
+created: 2026-06-05
+
 ---
 
 # Pi Agent — 主体笔记（Source）
 
 > Source: `~/workspace/repos/notes/coding_agent/pi-agent.md` (66KB / 2171 行)
 > 抓取日期: 2026-06-05
-> 注意: 本篇是源文档转写。具体 entity 概念见 [[entity-pi-agent]]
+> 注意: 本篇是源文档转写。具体 entity 概念见 [[entities/pi-agent.md]]
 
 ## 文档结构（原文 H2 顺序）
 
@@ -84,7 +86,7 @@ related: [synthesis/comparison-terminal-coding-agents-2026-06, notes-pi-agent-ec
 
 ## 相关页面
 
-- [[entity-pi-agent]] — Pi Agent 综合 entity 页 (本 wiki 唯一 entity)
+- [[entities/pi-agent.md]] — Pi Agent 综合 entity 页 (本 wiki 唯一 entity)
 - [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 个 terminal coding agent 横向对比
 - [[notes-pi-agent-ecosystem]] — 官方 9 扩展示例 + MCP 曲线救国 + SDK 嵌入
 - [[notes-pi-agent-custom-workflow]] — 扩展开发完整生命周期 + 5 个 workflow 配方

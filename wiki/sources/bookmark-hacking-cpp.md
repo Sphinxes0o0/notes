@@ -8,6 +8,8 @@ size: medium
 path: raw/github/hackingcpp/hackingcpp.com
 summary: "现代 C++ 代码示例、简洁解释和信息图表的快速参考网站，包含可视化的 cheat sheets，适合快速查阅和教学演示。"
 tags: [cpp, cheat-sheets, quick-reference, infographic, modern-cpp]
+created: 2026-05-29
+
 ---
 
 # Hacking C++

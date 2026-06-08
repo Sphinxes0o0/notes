@@ -7,6 +7,9 @@ date: 2026-05-29
 size: medium
 path: https://learnvisualcomputing.github.io/
 summary: "Online book covering visual computing: human vision, rendering, imaging, and display technologies — signal transduction across optical, analog, digital, and semantic domains."
+created: 2026-05-29
+tags: []
+
 ---
 
 # Foundations of Visual Computing

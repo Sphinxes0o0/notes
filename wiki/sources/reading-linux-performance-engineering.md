@@ -8,6 +8,9 @@ size: medium
 path: https://learn.lianglianglee.com/专栏/Linux性能优化实战
 summary: "Linux性能优化：CPU/内存/磁盘IO/网络perf工具链(perf/bpftrace/top/vmstat/iostat/sar/tcpdump/ss)及典型瓶颈场景"
 nids-relevance: 4
+created: 2026-06-03
+tags: []
+
 ---
 
 # Linux性能优化实战

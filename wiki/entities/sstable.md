@@ -67,7 +67,7 @@ SSTable（Sorted String Table）是LSM-tree的磁盘存储格式，以固定大�
 - [[lsm-tree]] — SSTable是LSM-tree的磁盘载体
 - [[bloomfilter]] — SSTable内置布隆过滤器加速查询（LevelDB Handbook单独章节）
 - [[cache]] — LevelDB Handbook覆盖，LRU分片缓存
-- [[linux/kernel/block/linux-kernel-block-core]] — Linux块设备层与SSTable的顺序写有相似思想
+- [[entities/linux/kernel/block/linux-kernel-block-core.md]] — Linux块设备层与SSTable的顺序写有相似思想
 
 ## 来源详情
 

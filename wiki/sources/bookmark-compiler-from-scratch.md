@@ -5,6 +5,9 @@ title: "Build a Compiler from Scratch"
 author: "Geoffrey Copin (Sylver)"
 date: 2025-06-26
 summary: "Rust实现从头构建编译器：Pylite语言→x86汇编，涵盖lexer/parser/语义分析/IR/优化/代码生成"
+created: 2026-05-29
+tags: []
+
 ---
 
 # Build a Compiler from Scratch

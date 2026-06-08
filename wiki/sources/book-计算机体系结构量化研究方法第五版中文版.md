@@ -9,6 +9,9 @@ category: book
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 计算机体系结构：量化研究方法（第五版）（中文版）

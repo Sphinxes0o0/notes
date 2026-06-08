@@ -9,6 +9,9 @@ category: book
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # DDI0487Fc_armv8_arm

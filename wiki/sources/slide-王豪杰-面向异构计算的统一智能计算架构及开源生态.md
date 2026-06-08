@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 王豪杰_面向异构计算的统一智能计算架构及开源生态

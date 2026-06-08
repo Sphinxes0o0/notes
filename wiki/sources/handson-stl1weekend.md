@@ -6,6 +6,9 @@ author: "parallel101"
 date: 2024-01-01
 summary: "C++新手教学项目，手把手实现STL核心组件：function/unique_ptr/vector/list/optional/map/shared_ptr/variant"
 path: raw/github/parallel101/stl1weekend
+created: 2026-06-04
+tags: []
+
 ---
 
 # Build Your Own STL in One Weekend

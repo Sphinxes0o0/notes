@@ -7,6 +7,9 @@ date: 2024
 size: medium
 path: raw/bookmarks/ebooks/systems-approach/
 summary: "Foundational networking textbook covering layered architecture, switching, IP/TCP/UDP, congestion control, routing, SDN, and network security. 61 chapters, 225 diagrams."
+created: 2026-05-29
+tags: []
+
 ---
 
 # Computer Networks: A Systems Approach

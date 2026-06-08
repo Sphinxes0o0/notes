@@ -9,6 +9,9 @@ category: paper
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # eBPF_Library_Ecosystem_Overview_in_Go_Rust_Python_C_and_More

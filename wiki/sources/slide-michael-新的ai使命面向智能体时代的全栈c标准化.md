@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # Michael_新的AI使命：面向智能体时代的全栈C++标准化

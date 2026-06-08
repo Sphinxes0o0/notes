@@ -7,6 +7,9 @@ date: 2026-05-29
 size: medium
 path: https://hpcwiki.io/parallel-programming/parallel-programming-intro/
 summary: "HPC Wiki introduction to parallel programming covering CPU power wall, shared memory (Pthreads/OpenMP) vs message passing (MPI), and Foster's design methodology."
+created: 2026-06-04
+tags: []
+
 ---
 
 # Parallel Programming Introduction

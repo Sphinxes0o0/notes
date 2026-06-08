@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 田文鑫_具身机器人多仓源码构建体系

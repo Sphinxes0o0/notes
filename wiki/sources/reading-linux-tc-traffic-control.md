@@ -8,6 +8,9 @@ size: small
 path: https://www.ilikejobs.com/posts/what-is-tc/
 summary: "Linux TC流量控制：qdisc(pfifo_fast/netem/tbf/htb/fq_codel)/classifier(u32/fw)/NIDS测试仿真"
 nids-relevance: 4
+created: 2026-06-04
+tags: []
+
 ---
 
 # Linux TC流量控制 (NoPanic)

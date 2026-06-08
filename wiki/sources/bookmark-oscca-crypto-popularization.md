@@ -7,6 +7,9 @@ date: 2026-05-29
 size: small
 path: https://www.oscca.gov.cn/sca/zxfw/kpyd.shtml
 summary: "Official Chinese cryptography administration public education section — 密码的奥秘 (6-part series) and 密码趣谈 (8-part series) covering classical to modern cryptography."
+created: 2026-05-29
+tags: []
+
 ---
 
 # 国家密码管理局 — 科普园地

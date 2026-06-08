@@ -7,6 +7,9 @@ date: 2026-05-29
 size: medium
 path: https://segmentfault.com/a/1190000009732550
 summary: "Deep dive into Linux Namespace (resource isolation) and Cgroup (resource control) — the two pillars of container technology."
+created: 2026-05-29
+tags: []
+
 ---
 
 # Linux Namespace and Cgroup

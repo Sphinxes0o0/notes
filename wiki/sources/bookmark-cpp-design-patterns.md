@@ -8,6 +8,8 @@ size: medium
 path: raw/github/liu-jianhao/Cpp-Design-Patterns
 summary: "30个GoF设计模式的C++实现，按「封装变化」分类组织，含SOLID原则、Head-First版本对比，2.6k stars。"
 tags: [cpp, design-patterns, GoF, SOLID, OOP]
+created: 2026-06-04
+
 ---
 
 # C++ 设计模式

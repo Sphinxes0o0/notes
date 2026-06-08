@@ -8,6 +8,9 @@ size: medium
 path: https://lartc.org/howto/index.html
 summary: "Linux高级路由与流量控制：iproute2/RPDB/qdisc(TBF/HTB/RED/netem)/classifier(u32/fw)/Netfilter集成/QoS实现"
 nids-relevance: 5
+created: 2026-05-29
+tags: []
+
 ---
 
 # Linux Advanced Routing & Traffic Control HOWTO

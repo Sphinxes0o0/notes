@@ -7,6 +7,9 @@ date: 2026-05-28
 size: small
 path: raw/bookmarks/ebooks/thebyte/
 summary: "isno 高可用系统实践指南，覆盖云原生/容器/K8s/负载均衡/一致性算法/Paxos/Raft/Service Mesh，10章系统设计"
+created: 2026-05-29
+tags: []
+
 ---
 
 # 深入高可用系统原理与设计

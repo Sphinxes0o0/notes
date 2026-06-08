@@ -9,6 +9,9 @@ category: book
 ingested: 2026-06-07
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-07
+tags: []
+
 ---
 
 # Let's Get Rusty!  -- Rust 入门指北_ 语言简介

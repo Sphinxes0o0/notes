@@ -66,7 +66,7 @@ match scause {
 ## 相关概念
 
 - [[notes-kernel-handson]] — 源码来源
-- [[linux-kernel-virt-kvm]] — KVM 虚拟化与本 hypervisor 概念相关
+- [[entities/linux/kernel/virt-kvm.md]] — KVM 虚拟化与本 hypervisor 概念相关
 - [[rust-language]] — Rust no_std/嵌入式编程能力
 - [[handson-os-in-rust-phil-opp]] — Writing an OS in Rust (phil-opp)，另一个 Rust OS 教程，对比学习
 

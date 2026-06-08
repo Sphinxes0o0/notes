@@ -7,6 +7,9 @@ date: 2026-05-29
 size: medium
 path: https://15445.courses.cs.cmu.edu/fall2025/
 summary: "CMU introductory database systems course covering DBMS internals: storage, indexing, query processing, transaction management, and recovery."
+created: 2026-05-29
+tags: []
+
 ---
 
 # CMU 15-445: Intro to Database Systems

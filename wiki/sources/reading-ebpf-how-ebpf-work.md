@@ -8,6 +8,9 @@ size: small
 path: https://www.ilikejobs.com/posts/how-ebpf-work/
 summary: "eBPF架构深度解析：Verifier/JIT/Maps/Hook点(XDP/TC/Socket Filter)，以及tail call、性能排名"
 nids-relevance: 5
+created: 2026-06-03
+tags: []
+
 ---
 
 # eBPF深入理解 — How eBPF Work

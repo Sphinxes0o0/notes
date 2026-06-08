@@ -9,6 +9,9 @@ category: paper
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # Think_eBPF_for_Kernel_Security_Monitoring_-_Falco_at_Apple

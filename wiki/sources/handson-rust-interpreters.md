@@ -6,6 +6,9 @@ author: "rust-hosted-langs"
 date: 2024-01-01
 summary: "Rust实现解释器：自定义分配器(Sticky Immix)/安全包装/编译器/虚拟机/GC，适合有Rust基础的进阶者"
 path: raw/web/rust-interpreters-book
+created: 2026-05-29
+tags: []
+
 ---
 
 # Writing Interpreters in Rust: A Guide

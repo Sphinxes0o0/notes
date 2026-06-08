@@ -6,6 +6,9 @@ author: "cstack"
 date: 2024-01-01
 summary: "用C语言从零实现SQLite：数据存储/B-Tree/事务/索引/虚拟机的数据库内核教程"
 path: raw/web/db_tutorial
+created: 2026-05-29
+tags: []
+
 ---
 
 # Write a SQLite Clone from Scratch in C

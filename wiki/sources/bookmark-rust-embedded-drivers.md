@@ -11,6 +11,8 @@ license:
   prose: CC-BY-SA v4.0
 summary: "通过实战项目（DHT22、MAX7219 LED、RTC）学习嵌入式 Rust 驱动开发，涵盖 HAL、PAC、RTIC 等核心概念"
 tags: [embedded-rust, drivers, esp32, hal, pac, rtic, no-std]
+created: 2026-06-04
+
 ---
 
 # Rust Embedded Drivers (RED) Book

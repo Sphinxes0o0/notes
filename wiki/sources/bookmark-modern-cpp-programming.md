@@ -8,6 +8,8 @@ size: large
 path: raw/github/federico-busato/Modern-CPP-Programming
 summary: "从基础到高级的 C++ 课程，29章节覆盖 OOP、模板元编程、并发、性能优化、软件设计、SOLID、构建工程（二进制大小、构建时间），被 NVIDIA 和 Verona 大学采用。"
 tags: [cpp, modern-cpp, professional-engineering, performance, software-design]
+created: 2026-05-29
+
 ---
 
 # Modern C++ Programming

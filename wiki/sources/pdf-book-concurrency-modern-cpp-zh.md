@@ -34,6 +34,6 @@ created: 2026-05-27
 
 ## 相关页面
 - [[sources/pdf-book-concurrency-modern-cpp]] — Concurrency with Modern C++ 英文版
-- [[sources/pdf-cpp-concurrency-guide]] — C++ 并发编程指南
+- [[sources/pdf-book-cpp-concurrency-guide.md]] — C++ 并发编程指南
 - [[sources/pdf-cpp-concurrency]] — 并发主题页
 - [[cpp-index]] — C++ 模块索引

@@ -54,8 +54,8 @@ sources: [bookmark-archbase]
 
 - [[cache-memory-design]] — Cache架构设计的更多细节（3C缺失/伪共享/预取）
 - [[cpu-architecture]] — CPU微架构与Cache的协同设计
-- [[os/os-virtual-memory]] — 虚拟内存与物理内存的页表管理
-- [[linux/kernel/mm/linux-kernel-mm-page-fault]] — 页错误处理（Cache未命中的类似机制）
+- [[entities/os/os-virtual-memory.md]] — 虚拟内存与物理内存的页表管理
+- [[entities/linux/kernel/mm/linux-kernel-mm-page-fault.md]] — 页错误处理（Cache未命中的类似机制）
 - [[qemu-memory]] — QEMU的内存模拟与虚拟化
 
 ## 来源详情

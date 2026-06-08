@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 谢涛_从开放指令集到开源算子和编译器：RISC-V+AI的全栈软件生态突破路径

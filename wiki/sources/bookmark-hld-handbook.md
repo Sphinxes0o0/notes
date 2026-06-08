@@ -7,6 +7,9 @@ date: 2026-05-29
 size: medium
 path: https://hld.handbook.academy/
 summary: "Open-source system design curriculum covering HLD fundamentals, patterns, and real-world case studies."
+created: 2026-05-29
+tags: []
+
 ---
 
 # The HLD Handbook

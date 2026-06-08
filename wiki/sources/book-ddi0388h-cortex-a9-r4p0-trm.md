@@ -9,6 +9,9 @@ category: book
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # DDI0388H_cortex_a9_r4p0_trm

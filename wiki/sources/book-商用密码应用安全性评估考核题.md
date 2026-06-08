@@ -9,6 +9,9 @@ category: book
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 商用密码应用安全性评估考核题

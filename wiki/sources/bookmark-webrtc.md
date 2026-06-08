@@ -12,6 +12,8 @@ original-url: https://www.oreilly.com/library/view/real-time-communication-with/
 license: CC BY-NC 4.0
 summary: "中文翻译版 WebRTC 实时通信技术书籍，涵盖 WebRTC 架构、API、信令、媒体处理等核心概念"
 tags: [webrtc, real-time-communication, browser-api, p2p, voip]
+created: 2026-06-04
+
 ---
 
 # WebRTC 实时通信 (Real-Time Communication with WebRTC)

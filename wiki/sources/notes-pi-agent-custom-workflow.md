@@ -10,6 +10,8 @@ summary: "Pi 定制 workflow 实战手册：扩展本质/事件清单/生命周�
 tags: [pi-agent, extension-api, sdk, rpc, customization, recipe]
 sources: [entity-pi-agent]
 related: [notes-pi-agent, synthesis/comparison-terminal-coding-agents-2026-06, notes-pi-agent-ecosystem]
+created: 2026-06-05
+
 ---
 
 # Pi 定制 Workflow 实操（Source）
@@ -173,7 +175,7 @@ const ok = await ctx.ui.confirm("Delete?", "Cannot be undone");
 
 ## 相关页面
 
-- [[entity-pi-agent]] — Pi Agent entity
+- [[entities/pi-agent.md]] — Pi Agent entity
 - [[notes-pi-agent]] — 主体笔记
 - [[synthesis/comparison-terminal-coding-agents-2026-06]] — 7 agent 横向对比
 - [[notes-pi-agent-ecosystem]] — 9 扩展示例 + MCP 桥接

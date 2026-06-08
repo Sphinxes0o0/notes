@@ -8,6 +8,8 @@ size: medium
 path: raw/github/modern-cmake-cn/Modern-CMake-zh_CN
 summary: "系统化 Modern CMake 3.1+ 教程，从安装到高级包管理，纠正网上散乱的 CMake 错误用法，是 C++ 构建工程的权威指南。"
 tags: [cpp, cmake, build-system, professional-engineering]
+created: 2026-05-29
+
 ---
 
 # Modern CMake 教程 (中文版)

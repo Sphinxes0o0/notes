@@ -6,6 +6,9 @@ author: "SubnetZero"
 date: 2024-01-01
 summary: "从硬件基础到完整VM：用C构建语言虚拟机，Part 00-33+覆盖寄存器/汇编/指令集/字节码"
 path: raw/web/building-language-vm
+created: 2026-06-04
+tags: []
+
 ---
 
 # Building a Language VM in C (Iridium)

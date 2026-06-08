@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 汪晟杰_从上下文工程到AI Spec Coding：C++在无图形终端时代的下一站

@@ -9,6 +9,9 @@ category: book
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 手机安全和可信应用开发指南：TrustZone与OP-TEE技术详解

@@ -8,6 +8,9 @@ size: small
 path: https://www.ilikejobs.com/posts/deep-thinking-proformence/
 summary: "软件性能工程：profiling/benchmarking/latency/throughput/CPU优化(向量化/inlining)/内存优化(pool/prealloc)/NIDS性能"
 nids-relevance: 4
+created: 2026-06-04
+tags: []
+
 ---
 
 # 深入理解软件性能 (NoPanic)

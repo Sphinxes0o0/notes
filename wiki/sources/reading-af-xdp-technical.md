@@ -8,6 +8,9 @@ size: small
 path: https://rexrock.github.io/post/af_xdp1/
 summary: "AF_XDP零拷贝架构：UMEM/chunk/ring模型，bpf_redirect_map，XDP程序hook，对比DPDK"
 nids-relevance: 5
+created: 2026-06-04
+tags: []
+
 ---
 
 # AF_XDP技术详解

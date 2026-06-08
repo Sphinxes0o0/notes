@@ -24,5 +24,5 @@ tags: []
 Modern C programming beyond the basics: POSIX/GNU extensions, GDB/DDD debuggers, Autotools build system, Git version control, and third-party libraries (GLib, libcsv, JSON parsing). 面向已有编程经验者，讲解现代C的实践技巧。
 
 ## Related Pages
-- [[sources/pdf-c-in-a-nutshell]] — C reference (C11 standard)
-- [[sources/pdf-21st-century-cpp]] — Stroustrup on modern C++
+- [[sources/pdf-book-c-in-a-nutshell.md]] — C reference (C11 standard)
+- [[sources/pdf-book-21st-century-cpp.md]] — Stroustrup on modern C++

@@ -7,6 +7,9 @@ date: 2026-05-29
 size: medium
 path: https://ailrid.github.io/Bevy-Engine-Guide/
 summary: "Systematic introduction to Bevy game engine (Rust ECS), covering architecture, plugin development, reflection, and rendering pipeline."
+created: 2026-05-29
+tags: []
+
 ---
 
 # Bevy Engine Guide

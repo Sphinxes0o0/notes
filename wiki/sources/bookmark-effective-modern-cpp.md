@@ -8,6 +8,8 @@ size: medium
 path: raw/github/cntransgroup/EffectiveModernCppChinese
 summary: "Scott Meyers Effective Modern C++ (C++11/14) 的中文翻译，42个条款覆盖移动语义、完美转发、lambda、并发、智能指针等核心最佳实践。"
 tags: [cpp, modern-cpp, best-practices, effective-cpp, translation]
+created: 2026-05-29
+
 ---
 
 # Effective Modern C++ 中文版

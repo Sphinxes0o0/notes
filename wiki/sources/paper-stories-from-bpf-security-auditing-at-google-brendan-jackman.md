@@ -9,6 +9,9 @@ category: paper
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # Stories_from_BPF_Security_Auditing_at_Google_-_Brendan_Jackman

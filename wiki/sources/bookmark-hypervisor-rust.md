@@ -5,6 +5,9 @@ title: "You Are The BIOS Now: Building A Hypervisor In Rust With KVM"
 author: "Julian Goldstein"
 date: 2025-07-29
 summary: "用Rust+KVM从用户态构建Type-II hypervisor：VCPU管理、guest内存映射、x86实模式到长模式、I/O端口虚拟化、VMExit处理"
+created: 2026-05-29
+tags: []
+
 ---
 
 # You Are The BIOS Now: Building A Hypervisor In Rust With KVM

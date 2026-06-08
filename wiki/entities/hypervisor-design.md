@@ -59,8 +59,8 @@ Hypervisor（虚拟机监控器）是创建和运行虚拟机的软件，按类�
 
 ## 相关概念
 
-- [[linux/kernel/virt/linux-kernel-virt-kvm]] — Linux内核KVM实现：vcpu_run/VMX/ept_mmu/事件通道
-- [[linux/kernel/virt/linux-kernel-virt-virtio]] — Virtio半虚拟化设备，Hypervisor常用后端
+- [[entities/linux/kernel/virt-kvm.md]] — Linux内核KVM实现：vcpu_run/VMX/ept_mmu/事件通道
+- [[entities/linux/kernel/virt-virtio.md]] — Virtio半虚拟化设备，Hypervisor常用后端
 - [[cpu-architecture]] — x86体系结构（实模式/保护模式/长模式/GDT/段描述符）
 - [[memory-hierarchy]] — TLB和页表机制是虚拟化的核心依赖
 

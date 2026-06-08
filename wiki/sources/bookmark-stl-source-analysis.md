@@ -8,6 +8,8 @@ size: medium
 path: raw/github/FunctionDou/STL
 summary: "系统化分析 SGI STL 3.0 源码——6大部分：空间配置器、迭代器、容器（序列/关联）、算法、函数对象、适配器，52个markdown文件，揭示 STL 内部实现细节。"
 tags: [cpp, STL, source-code, implementation, template]
+created: 2026-06-04
+
 ---
 
 # STL 源码分析 (SGI STL 3.0)

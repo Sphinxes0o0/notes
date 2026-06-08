@@ -8,6 +8,9 @@ size: small
 path: https://plantegg.github.io/2020/07/01/如何创建一个自己连自己的TCP连接/
 summary: "TCP自连接机制：simultaneous open/四元组唯一性/bind vs connect状态差异/ephemeral端口误解"
 nids-relevance: 4
+created: 2026-06-03
+tags: []
+
 ---
 
 # 自己连自己的TCP连接 (plantegg)

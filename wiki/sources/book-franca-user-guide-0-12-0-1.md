@@ -9,6 +9,9 @@ category: book
 ingested: 2026-06-07
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-07
+tags: []
+
 ---
 
 # franca_user_guide_0_12_0_1

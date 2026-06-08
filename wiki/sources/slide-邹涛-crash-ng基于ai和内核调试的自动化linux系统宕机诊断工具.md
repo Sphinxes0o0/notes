@@ -9,6 +9,9 @@ category: slide
 ingested: 2026-06-04
 tool: liteparse
 liteparse-version: 2.0.5
+created: 2026-06-04
+tags: []
+
 ---
 
 # 邹涛_CRASH_NG：基于AI和内核调试的自动化Linux系统宕机诊断工具

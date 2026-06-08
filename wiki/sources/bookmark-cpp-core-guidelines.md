@@ -8,6 +8,8 @@ size: medium
 path: raw/github/lynnboy/CppCoreGuidelines-zh-CN
 summary: "Bjarne Stroustrup 主导的 C++ 核心规范——关注类型安全、资源管理、内存安全、并发、高级架构，是 C++ 官方最佳实践指南。"
 tags: [cpp, safety, guidelines, best-practices, type-safety]
+created: 2026-05-29
+
 ---
 
 # C++ Core Guidelines 中文版

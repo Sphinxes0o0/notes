@@ -4,6 +4,9 @@ source-type: web
 title: "Labgrid 框架深入解读（ChatGPT 分析）"
 date: 2026-05-29
 summary: "ChatGPT 对 labgrid 嵌入式测试框架的深度分析，涵盖核心三层架构、多 ECU 层次化建模、VehicleStrategy 设计思路"
+created: 2026-06-04
+tags: []
+
 ---
 
 # Labgrid 框架深入解读（ChatGPT 分析）

@@ -8,6 +8,8 @@ size: medium
 path: raw/github/downdemo/Cpp-Concurrency-in-Action-2ed
 summary: "C++11/14/17 多线程编程权威指南 Web 版，含 C++20 新特性（jthread、semaphore、barrier）补充，补充 OS 基础与跨语言对比。"
 tags: [cpp, concurrency, multithreading, atomic, mutex, future]
+created: 2026-05-29
+
 ---
 
 # C++ Concurrency in Action 第2版 (Web版)

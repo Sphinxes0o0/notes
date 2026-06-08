@@ -8,6 +8,9 @@ size: small
 path: https://plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/
 summary: "TCP故障排查：queue溢出/CLOSE_WAIT/BDP/RTT/delay ack/TTL fingerprinting/netstat/ss/tcpdump/WireShark"
 nids-relevance: 4
+created: 2026-06-03
+tags: []
+
 ---
 
 # TCP疑难问题汇总 (plantegg)
