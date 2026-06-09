@@ -111,7 +111,6 @@ put_user(val, ptr);
 - [[entities/linux/kernel/mm/linux-kernel-mm]] — 内核内存管理
 - [[entities/linux/kernel/linux-kernel-vfs-core]] — VFS 层（字符设备属于 VFS）
 - [[entities/linux/kernel/net]] — 网络子系统
-- [[entities/linux/safeos/safeos-nsv]] — SafeOS NSv（用户态网络栈，内核模块通信）
 - [[entities/linux/snort3/snort3]] — Snort3 IDS（可加载内核模块用于抓包）
 
 ## 来源详情

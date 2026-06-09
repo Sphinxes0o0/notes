@@ -23,7 +23,6 @@ created: "2026-06-08"
 
 - [[entities/linux/kernel/netfilter]] — Netfilter 兄弟
 - [[entities/linux/snort3/snort3-framework-analysis]] — 用户态 eBPF 消费者
-- [[sources/safeos-architecture]] — seL4 + eBPF
 - [[entities/linux]] — Linux Kernel 顶层
 
 ## 论文来源

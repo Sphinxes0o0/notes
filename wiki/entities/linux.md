@@ -27,8 +27,7 @@ created: "2026-06-08"
 - [[entities/linux/ebpf/xdp-sdn-guide]] — XDP + SDN
 - [[entities/linux/kernel/handson/linux-kernel-boot-process]] — 内核启动
 - [[entities/linux/kernel/handson-hypervisor]] — KVM
-- [[sources/safeos-architecture]] — SafeOS (seL4 + lwIP)
-- [[entities/linux/lwfw/lwfw-architecture]] — lwFW (firewall)
+
 
 ## 用户态工具
 

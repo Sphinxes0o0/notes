@@ -245,5 +245,4 @@ Place 的层次化设计支持多粒度资源管理：
 ## 相关页面
 
 - [[synthesis/labgrid-bench-analysis]] — Bench management 场景分析
-- [[entities/linux/safeos/safeos-packet-mmap]] — safeOS 网络相关
 - [[entities/linux/lwip/lwip-sel4-function]] — lwIP on seL4

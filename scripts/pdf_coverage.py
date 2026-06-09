@@ -47,7 +47,6 @@ RAW_ROOTS = [
     PYRAMID / "raw" / "Modern-Cpp-Skills",
     PYRAMID / "raw" / "github",
     PYRAMID / "raw" / "workflow",
-    PYRAMID / "raw" / "safeos",
 ]
 # File suffixes recognised as ingest source files for md5 coverage.
 # .pdf = classic PDF papers/books; .md = GitHub README / SKILL.md type sources.
@@ -58,7 +57,6 @@ SOURCE_SUFFIXES = {".pdf", ".md"}
 # PDFs inside them are still scanned normally.
 MD_EXCLUDE_ROOTS = {
     PYRAMID / "raw" / "notes",
-    PYRAMID / "raw" / "safeos",
     PYRAMID / "raw" / "workflow",
 }
 # .md subdirs (relative to a root) to skip even where .md scanning is on.
@@ -86,7 +84,7 @@ def collect_sources() -> Dict[Path, str]:
     .md scanning is opt-in per root: only raw/PDFs, raw/Modern-Cpp-Skills, and
     raw/github are treated as candidate locations for ingest-source .md files
     (e.g. GitHub READMEs and SKILL.md docs). The research-note roots
-    (raw/notes, raw/safeos, raw/workflow) are excluded from .md scanning
+    (raw/notes, raw/workflow) are excluded from .md scanning
     because their .md files are downstream analysis, not original sources —
     PDFs inside them are still scanned.
 

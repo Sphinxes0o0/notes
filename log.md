@@ -73,7 +73,7 @@
     - linux-kernel-boot-process.md — x86 boot/GRUB/multiboot/protected mode
     - linux-kernel-packet-processing-userspace.md — DPDK/io_uring/zero-copy/kernel-bypass
   - tutorial-notes 存于 `~/workspace/tutorial-notes/*.md`
-- **Cross-link**: 模块编程→syscall/mm/VFS/net subsystem; boot→KVM/sel4; packet-processing→net subsystem/io_uring/virtio/safeos/snort3
+- **Cross-link**: 模块编程→syscall/mm/VFS/net subsystem; boot→KVM/sel4; packet-processing→net subsystem/io_uring/virtio/snort3
 - **未 commit**
 
 ---
@@ -381,15 +381,6 @@
 
 ---
 
-## [2026-05-26] ingest | Batch G: SafeOS remaining docs (architecture_notes + plan)
-
-- **来源**: raw/safeos/architecture_notes.md, raw/safeos/plan.md
-- **操作**:
-  - 创建 2 个 entity pages: safeos-abi-boundary (ABI边界与头文件暴露), safeos-lwip-lwfw-plan (lwIP+LWFW 深度分析计划)
-  - 更新 safeos-index.md (+2 entities, 4→6)
-  - 更新 home.md (entity count, last-updated)
-- **核心概念**: ABI boundary设计、内部头文件暴露问题、public/private API分离、稳定ABI接口层；lwIP+LWFW 9阶段~64任务分析计划、架构总览、模块分解方法
-
 ## [2026-05-25] ingest | Batch I: Sogou Workflow Engine (C++ async framework)
 
 - **来源**: raw/workflow/ (36 docs: 17 architecture + 18 tutorials + 1 xmake)
@@ -402,16 +393,6 @@
 - **核心概念**: Sogou Workflow C++ 异步引擎，13+ 协议支持 (HTTP/Redis/MySQL/Kafka/DNS)，DAG 任务模型，Upstream 负载均衡与熔断，性能 500K QPS
 
 ---
-
-## [2026-05-25] ingest | Batch D: safeos-lwip-core lwIP Core Network Protocol
-
-- **来源**: raw/safeos/lwip_*.md (~28 分析文档)
-- **操作**:
-  - 创建 27 个 entity 页面: lwip-netif, lwip-netif-add, lwip-ethernet-input, lwip-ethernet-output, lwip-pbuf, lwip-malloc, lwip-ip4-input, lwip-ip4-output, lwip-routing, lwip-ip-fragmentation, lwip-tcp-input, lwip-tcp-output, lwip-tcp-pcb, lwip-tcp-recv-queue, lwip-tcp-socket, lwip-tcpip-thread, lwip-udp-input, lwip-udp-output, lwip-udp-socket, lwip-igmp, lwip-dhcp, lwip-network-init, lwip-vlan-dispatch, lwip-vlan-dispatch-deep, lwip-vlan-hook, lwip-vlan-implementation, lwip-vlan-parsing
-  - 创建 1 个 source 页面: wiki/sources/safeos-lwip-core.md
-  - 创建 1 个 module index: wiki/lwip-index.md
-- **更新**: wiki/home.md (lwip-index + safeos-lwip-core 入口), log.md
-- **核心概念**: lwIP 嵌入式协议栈，LWIP_TCPIP_CORE_LOCKING=1 模式，VLAN 分发机制，TCP/UDP/IGMP/DHCP 协议实现
 
 ---
 
@@ -696,19 +677,3 @@ Updated:
 - **Cross-link 验证**: 全部 10 个 entity 均 ≥2 条 snort3 内部 wikilinks
 - **未 commit**
 
-## [2026-05-27] ingest | SafeOS docs (lwip_analysis_summary, lwip_vlan_dispatch, lwip_vlan_implementation, lwip_firewall_analysis, plan) + VDF apps
-
-- **来源**: `~/workspace/remote/safeos/docs/lwip_analysis_summary.md`, `lwip_vlan_dispatch_analysis.md`, `lwip_vlan_implementation.md`, `lwip_firewall_analysis.md`, `plan.md` + `~/workspace/remote/vdf/apps/recipes/` (evm-report, iot-gateway, oam-service, traffic-manager, data-collection, diagnostic-lib, persistent-data-lib, vca-uds-library, nservice-config-agent, switch-monitor, comm-control-service) + `~/workspace/remote/vdf/tools/` + `~/workspace/remote/vdf/vdf-sel4/`
-- **操作**:
-  - 创建 5 个 safeos source pages: safeos-lwip-analysis-summary, safeos-lwip-vlan-dispatch, safeos-lwip-vlan-implementation, safeos-lwip-firewall-analysis, safeos-plan
-  - 创建 4 个 safeos entity pages: safeos-lwip-vlan, safeos-lwip-sel4-performance-boundary, lwip-cma-elem-ring (in lwip/), safeos-lwfw-hotswap
-  - 创建 11 个 vdf entity pages: vdf-evm-report, vdf-iot-gateway, vdf-oam-service, vdf-traffic-manager, vdf-data-collection, vdf-diagnostic-lib, vdf-persistent-data-lib, vdf-vca-uds-library, vdf-nservice-config-agent, vdf-switch-monitor, vdf-comm-control-service
-  - 创建 3 个 vdf source pages: vdf-apps, vdf-tools, vdf-sel4
-  - 创建 vdf-index.md (module index)
-  - 更新 safeos-index.md (+4 new entities + 5 new sources)
-  - 更新 home.md (+vdf-index section, +new source rows, safeos count 6→10)
-- **核心概念**:
-  - SafeOS lwIP: VLAN 分发机制 vs Linux (LWIP_ARP_FILTER_NETIF 两层分发), IEEE 802.1Q 实现 (TPID=0x8100/PCP/VID), 防火墙三层架构 (lwfw/lwct/cBPF), seL4 IPC 开销 150-710ns/packet, tcpip_thread 单线程瓶颈 4核仅~25%
-  - VDF: NIO 车辆分布式框架, evm-report(GB/T 32960), iot-gateway(物物模型), oam-service(远程救援), traffic-manager(QoS), data-collection(CAN信号), diagnostic-lib(UDS/OBD)
-- **Cross-link**: safeos entities → lwip-index, lwfw-index, safeos-index; vdf entities → vdf-index
-- **未 commit**

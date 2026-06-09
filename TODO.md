@@ -12,22 +12,9 @@
 | eBPF | 10 PDFs | 185→214 pages |
 | C++ | 7 PDFs | 214→220 pages |
 | 拆分 | relay-neuron → atlas | 220→~95 pages |
-| D | safeOS lwIP Core (27 docs) | +27 entities |
-| E | safeOS lwIP 扩展/sel4 (19 docs) | +19 entities |
-| F | safeOS LWFW 防火墙 (25 docs) | +25 entities |
-| Synth | safeos-lwip-deep-analysis.md | 1513 行 |
-| Synth | safeos-source-analysis.md | 1324 行 |
 | **合计** | **281 wiki pages** | |
 
 ## 📋 待办（按优先级）
-
-### P1 — safeOS 剩余文档
-- [ ] 架构类: architecture_notes, plan, NSv_analysis, network_implementation (6 docs)
-- [ ] memory/safeos_vdf_nids.md (1 doc)
-
-### P2 — safeOS vdf & soa
-- [ ] vdf: VDF seL4 虚拟化框架（需先 rsync 远程文档）
-- [ ] soa: SOA 服务化架构（需先 rsync 远程文档）
 
 ### P3 — Modern-Cpp-Skills（待同步）
 - [ ] rsync 远程 ~/github/Modern-Cpp-Skills/ → raw/
