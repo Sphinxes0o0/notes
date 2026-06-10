@@ -677,3 +677,16 @@ Updated:
 - **Cross-link 验证**: 全部 10 个 entity 均 ≥2 条 snort3 内部 wikilinks
 - **未 commit**
 
+
+## [2026-06-10] ingest | web-abseil-fast-hints (1 source, 1 entity section updated)
+
+- **Source**: https://abseil.io/fast/hints.html — abseil 官方 C++ Performance Hints (CC BY 4.0, 2025)
+- **Source MD5**: 6178d46f1eeed6a5a46801f7449ed871, size 222,449 bytes (raw HTML)
+- **Ingest method**: ① curl HTML ② bs4 extract article body (h2#the-importance-of-thinking-about-performance → end of h2#acknowledgments, ~205KB) ③ remap class="language-X" → class="X" ④ pandoc html→gfm ⑤ patch 69/69 H2/H3 anchors as {#id} (post-hoc, pandoc 3.9 gfm drops them) ⑥ state-machine tag 228 opening fences (219 cpp + 9 protobuf) ⑦ write source page with full frontmatter (source-type: web, source-md5, tags [cpp, performance, abseil, ...])
+- **Entity update**: `entities/cpp/cpp-perf-optimization.md` — added `## Abseil-Specific Techniques` section with 6 abseil-unique subsections (3% philosophy / absl::* container table / view types / bulk APIs / flat-profile anti-pattern / SIMD-before-lockfree ranking). Updated frontmatter `tags` (+abseil) and `sources` (+abseil-fast-hints). Did NOT create a new `abseil-performance` entity (Simplicity First — would duplicate Amdahl/90-10/cache hierarchy already in cpp-perf-optimization).
+- **Cross-links**: cpp-perf-optimization ↔ abseil-fast-hints (3 inbound). abseil-source has no inbound to entities yet (rely on home/cpp-index).
+- **Index updates**: home.md Sources table +1 entry (web), cpp-index.md Sources table +1 entry, home.md Last updated → 2026-06-10
+- **Raw layer**: raw/web/abseil-fast-hints/hints.html (222KB) + .meta.md (reproducibility log)
+- **Notes-repo companion**: ccpp/cpp/abseil-hints.md (VitePress, H1 = "# Abseil Performance Hints", sidebar entry "Abseil Performance Hints（性能哲学 + 8 章实战）" added to C++ 高级主题 group; `npm run docs:build` ✓ 117.91s)
+- **Lint status**: audit-codeblocks not affected (cpp/protobuf fence tags accepted); wikilink resolves to `entities/cpp/cpp-perf-optimization` from home/cpp-index/source
+- **未 commit**

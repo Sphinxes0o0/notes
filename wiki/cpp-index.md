@@ -67,6 +67,7 @@ created: 2026-05-22
 | [[sources/pdf-cpp-templates-books]] | C++ Templates 合集 3册：完整指南 + 模板元编程实战 | 2023 |
 | [[sources/pdf-cpp-modern-books]] | Modern C++ 合集 6册：C++20/23、Professional C++、21st Century C++、C++17、Large-Scale C++ | 2024 |
 | [[sources/pdf-cpp-perf-memory]] | C++ 性能与内存管理 4册：内存管理高级指南、性能优化、Cache 内存 | 2025 |
+| [[sources/abseil-fast-hints]] | abseil 官方 C++ Performance Hints：8 章 (Estimation/Measurement/Algorithmic/Memory/Allocations/Code-size/Parallelization/absl containers) + absl::* 容器实战 | 2026-06 |
 | [[sources/pdf-cpp-concurrency]] | C++ 并发编程 2册：Concurrency with Modern C++ + C++ Concurrency in Action | 2023 |
 | [[sources/pdf-cpp-nginx-module]] | Nginx module dev with C++11 + Boost: Luó Jiànfēng — module architecture, HTTP/stream, Boost integration | 2015 |
 | [[sources/pdf-crypto-books]] | OpenSSL Cookbook + Illustrated Cryptography 3rd Ed: key management, TLS testing, crypto basics | 2024 |

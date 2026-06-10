@@ -17,4 +17,9 @@ raw/**/.vscode/
 raw/**/.claude/
 raw/**/.husky/
 raw/bookmarks/ebooks/
+# Web clips — keep the small .meta.md (reproducibility log) but skip the
+# bulky raw HTML/JSON bodies (re-fetchable from URL on demand).
+# Override per-file by `git add -f raw/web/<slug>/hints.html` if needed.
+raw/web/**/*.html
+raw/web/**/*.json
 __pycache__/

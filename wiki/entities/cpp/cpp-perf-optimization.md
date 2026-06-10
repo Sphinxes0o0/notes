@@ -1,8 +1,8 @@
 ---
 type: entity
-tags: [cpp, performance, optimization, cpu-cache, simd, profiling]
+tags: [cpp, performance, optimization, cpu-cache, simd, profiling, abseil]
 created: 2026-05-22
-sources: [pdf-cpp-slides, pdf-cpp-perf-memory, pdf-cpp-modern-books]
+sources: [pdf-cpp-slides, pdf-cpp-perf-memory, pdf-cpp-modern-books, abseil-fast-hints]
 ---
 
 # C++ Performance Optimization
@@ -129,7 +129,87 @@ Async stack dumping with 1/131th overhead of `pstack` (14% QPS impact vs. 100% f
 - [[entities/cpp/concurrency]] — parallel execution requires understanding Amdahl's Law; `std::thread` for parallelism
 - [[entities/cpp/if-constexpr]] — compile-time branch elimination reduces instruction cache pressure
 
+## Abseil-Specific Techniques
+
+Complements the hardware-level principles above with **API-level practice** distilled from
+[abseil.io/fast/hints.html](https://abseil.io/fast/hints.html). These are the
+abseil team's pragmatic guidance, distinct from general performance theory.
+
+### The 3% Philosophy (vs. the Knuth Misquote)
+
+"Premature optimization is the root of all evil" is widely cited **out of context**.
+Knuth's full quote: "We should forget about small efficiencies, say about **97% of the time**.
+Yet we should not pass up our opportunities in that **critical 3%**."
+
+The abseil position: **choose the faster alternative at write time if it does not impact
+readability/complexity significantly**. Reasons "let's profile later" is often wrong:
+
+1. A large system with no perf concerns during development ends up with a **flat profile** — no obvious hotspots, perf lost everywhere
+2. **Library code** is hardest to fix later — users hit the perf problem, not the author
+3. Heavy-use systems resist significant changes
+4. Easy wins are invisible until you measure, leading to over-replication / over-provisioning
+
+### The `absl::*` Container Selection Heuristics
+
+Not just "use better containers" — abseil has **specific defaults** that should be
+reached for reflexively:
+
+| Situation | Default to | Why |
+|-----------|-----------|-----|
+| Small-N vector (usually < 8 elements) | `absl::InlinedVector<T, N>` over `std::vector` | Avoids heap allocation for the common case |
+| Large flat key→value lookup, **insertion-order NOT important** | `absl::flat_hash_map<K, V>` over `std::unordered_map` | Cache-friendly; ~2x faster typical workloads |
+| Stable iteration order required | `absl::btree_map<K, V>` over `std::map` | B-tree cache behavior + faster lookups |
+| Small fixed-size int-keyed map | `gtl::small_map<K, V, N>` | Falls back to linear scan in inline array, no allocation |
+| Membership test (no value) | `util::bitmap::InlinedBitVector` for dense small sets | 32x smaller than `std::set<bool>` |
+| Large int-keyed flat map | `gtl::vector32<K>` | 32-bit index → 4x pointer-space savings |
+| Doubly-linked intrusive list | `gtl::intrusive_list<T>` | No separate node allocation; list ops are O(1) pointer tweaks |
+| Return value with possible error | `absl::StatusOr<T>` (limit use) | Avoids exception overhead on hot paths; **but** every `StatusOr` carries cost, so don't over-decorate return types |
+
+### "View" Types (Cheap Reference, No Ownership)
+
+- `absl::string_view` for read-only string parameters — avoids `const std::string&` overhead, no allocation
+- `absl::Span<T>` for read-only contiguous memory — like `std::span` (C++20) but stable on C++17
+- Use `absl::MakeSpan()` to materialize from initializer list or container
+- **Caveat**: views do NOT extend lifetime; the underlying data must outlive the view
+
+### Pre-Allocated / Pre-Computed Arguments (Bulk APIs)
+
+abseil's "bulk" principle: when a function is called frequently, the per-call setup cost
+dominates. Two patterns:
+
+- **Reserve / pre-size containers** when final size is known: `vec.reserve(n)` before loop
+- **Compute-once outside loops**: hoist invariant computations, not just loads
+- **Resize-in-place** for read-then-process collections: `vec.resize(n); fill(begin, end);`
+  instead of push_back in a loop (avoids capacity-doubling reallocations)
+
+### The "Flat Profile" Anti-Pattern
+
+When a profile is flat (no single hotspot > 5%), don't despair — abseil's playbook:
+
+1. **Memory allocations** are usually the silent killer. Profile with `tcmalloc` / `jemalloc`
+   to see allocator hotspots, not just CPU hotspots
+2. **Cache misses** dominate. Use `perf stat -e cache-misses` to confirm
+3. **Branch mispredictions** on the hot path. Look at `perf record -b` and `perf annotate`
+4. **String operations** are a frequent hidden cost (`std::string` ctor, `operator+`, formatting)
+5. **Virtual calls** on the hot path. Devirtualize via templates or `final` classes
+
+### SIMD Before Lock-Free (Counter-Intuitive)
+
+abseil ranks optimization techniques by **typical wall-clock impact**:
+
+1. **Algorithmic improvements** (e.g. O(n²) → O(n log n)) — orders of magnitude
+2. **Memory layout / cache behavior** — 2-10x typical
+3. **Bulk APIs / pre-allocation** — 2-5x typical
+4. **SIMD** — 4-16x for numeric loops
+5. **Lock-free data structures** — 2-5x, but only after #1-#4
+6. **Micro-optimization** (register hints, branch hints) — 1-5%, rarely worth the complexity
+
+**Lock-free is LAST**, not first. Lock-free is hard to verify correct, hard to profile,
+and the throughput win is often smaller than fixing the underlying contention source
+(usually a too-coarse lock or a shared data structure that should be sharded).
+
 ## Sources
 
 - [[sources/pdf-cpp-perf-memory]] — C++ 性能优化与内存管理 4 册
 - [[sources/pdf-cpp-modern-books]] — Modern C++ 书籍的性能章节
+- [[sources/abseil-fast-hints]] — abseil 官方 C++ Performance Hints（2025）
