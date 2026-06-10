@@ -690,3 +690,24 @@ Updated:
 - **Notes-repo companion**: ccpp/cpp/abseil-hints.md (VitePress, H1 = "# Abseil Performance Hints", sidebar entry "Abseil Performance Hints（性能哲学 + 8 章实战）" added to C++ 高级主题 group; `npm run docs:build` ✓ 117.91s)
 - **Lint status**: audit-codeblocks not affected (cpp/protobuf fence tags accepted); wikilink resolves to `entities/cpp/cpp-perf-optimization` from home/cpp-index/source
 - **未 commit**
+
+
+## [2026-06-10] ingest | web-totw-1..234 batch (83 sources, abseil C++ Tips of the Week)
+
+- **Source list**: https://abseil.io/tips/ index page lists 83 unique TotW tips (selected from 234 total published). Fetched all 83.
+- **Source URLs**: https://abseil.io/tips/{1, 3, 5, 10, 11, 18, 24, 36, 42, 45, 49, 55, 59, 61, 64, 65, 74, 76, 77, 86, 88, 90, 93, 94, 99, 101, 103, 107, 108, 109, 112, 116, 117, 119, 120, 122, 123, 124, 126, 130, 131, 134, 135, 136, 140, 141, 142, 143, 144, 146, 147, 148, 149, 152, 153, 158, 161, 163, 165, 166, 168, 171, 172, 173, 175, 176, 177, 180, 181, 182, 186, 187, 188, 197, 198, 215, 218, 224, 227, 229, 231, 232, 234}
+- **Topic coverage**: string_view, StrCat, StrFormat, absl::Status, absl::Span, absl::optional, absl::btree_map, absl::flat_hash_map, absl::InlinedVector, unique_ptr, make_unique, move semantics, lifetime extension, dangling references, return value optimization, copy elision, member initializers, deleted functions, namespace aliasing, raw string literals, designated initializers, switch initializers (C++17), inline variables (C++17), heterogeneous lookup, exhaustive switch, overload sets, sentinel values, factory functions, etc.
+- **Authors**: Titus Winters, Hyrum Wright, Mark Mentovai, Michael Chastain, Etienne Dechamps, Samuel Benzaquen, Greg Miller, Shayne Hiet-Block, Roman Perepelitsa, Jeoff Pitman, Samuel Benzaquen, James Dennett, Dominic Hamon, Matt Armstrong, JF Bastien, Łukasz Milewski + many others.
+- **Fetched**: 2026-06-10, all 83 returned HTTP 200, total 3.06MB raw HTML
+- **Ingest method (4-step pipeline reused from hints.html)**:
+  1. curl with User-Agent + max-time=20s, concurrency=5, 0.5s courtesy delay → 83 hints.html files
+  2. bs4 extract article body: 2nd h1 (real title) through end of parent container, drop script/style/nav/footer
+  3. <pre> class normalization: drop `prettyprint`/`code`/`bad-code`/`lang-cpp`/`lang-c++`, replace with `cpp` so pandoc emits ```cpp
+  4. pandoc html→gfm --wrap=none; state-machine tag opening fences with cpp, closer stays bare; 389/389 fences balanced, 0 leaks
+- **Source pages written**: 83 files at `wiki/sources/web-totw-<NNN>-<slug>.md`, total 487KB MD. Naming: `web-totw-NNN-slug.md` (zero-padded 3-digit number + slugified title; e.g. `web-totw-001-string-view.md`). Frontmatter includes source-type: web, source-md5 (per-article HTML MD5), author (parsed from "By X" line), date (parsed from "Originally posted as TotW #N on <date>").
+- **Raw layer**: `raw/web/abseil-tips/totw-NNN/hints.html` + `.meta.md` (with http_code, size_bytes, source_md5). 3.06MB total. .gitignore already covers `raw/web/**/*.html` from hints ingest, so these won't be committed (only .meta.md stays).
+- **Entity impact**: NO new entity created. NO update to cpp-perf-optimization (which already has ## Abseil-Specific Techniques section). 83 Tips are individual source pages; their content already covered conceptually by the existing abseil-specific section in cpp-perf-optimization. Cross-linking each tip to entity would bloat the entity (167-line Sources section).
+- **Index updates**: cpp-index.md +1 line (代表 link), home.md +1 line, Last updated → 2026-06-10 | ~741 pages
+- **Known issues**: 1) CloudFlare email-protection links (`/cdn-cgi/l/email-protection#...`) are not resolvable (dead in original HTML, not fixable). 2) `\` after H1 in some pages is pandoc's hard line break artifact from `<br><br>` we inserted (renders as blank line, semantically a hard break). 3) H1 in body has `\#` from pandoc escaping `#` (renders correctly, just visually odd in raw MD).
+- **Lint status (predicted)**: 83 new source pages will add to broken_links count IF they cross-link to entities that don't exist (we don't add cross-links, so should be 0 new). 83 new orphan pages (no inbound links) will add to orphans count. Lint pass will reveal exact delta.
+- **未 commit**

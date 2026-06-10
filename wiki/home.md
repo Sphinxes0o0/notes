@@ -8,7 +8,7 @@ created: 2026-05-22
 
 > 本文件由 LLM 维护，每次 ingest 后自动更新。
 >
-> Last updated: 2026-06-10 | Total: ~658 pages (新加 abseil-fast-hints)
+> Last updated: 2026-06-10 | Total: ~741 pages (新加 abseil-fast-hints + 83 TotW)
 > Last updated: 2026-05-28 | Total: ~657 pages
 
 ---
@@ -204,6 +204,8 @@ created: 2026-05-22
 | [[sources/bookmark-sdn-guide]] | feiskyer SDN实践指南：TC/eBPF/XDP/OpenFlow/P4/OVS/DPDK/容器网络/SD-WAN | 2026-05 | bookmark |
 | [[sources/bookmark-thebyte]] | 深入高可用系统原理与设计：云原生/容器/K8s/负载均衡/Paxos/Raft/Service Mesh | 2026-05 | bookmark |
 | [[sources/abseil-fast-hints]] | abseil 官方 C++ Performance Hints：8 章 (Estimation/Measurement/Algorithmic/Memory/Allocations/Code-size/Parallelization/absl containers) + absl::* 容器实战 | 2026-06 | web |
+| [[sources/web-totw-001-string-view]] (代表) | abseil C++ Tips of the Week 系列 83 篇: C++ 性能/string/move/lifetime/span/optional/unique_ptr/StatusOr/StrCat/StrFormat/constexpr/flag/namespace/SFINAE/initializer/overload 实战 (索引页 https://abseil.io/tips/) | 2012-2022 | web |
+| [[sources/web-totw-001-string-view]] (代表) | abseil C++ Tips of the Week 系列 83 篇: C++ 性能/string/move/lifetime/span/optional/unique_ptr/StatusOr/StrCat/StrFormat/constexpr/flag/namespace/SFINAE/initializer/overload 实战 (索引页 https://abseil.io/tips/) | 2012-2022 | web |
 
 ---
 
