@@ -268,7 +268,8 @@ export default defineConfig({
                 { text: '类型转换', link: '/ccpp/cpp/type_casting' },
                 { text: '拷贝语义', link: '/ccpp/cpp/copy_semantics' },
                 { text: '现代 C++（移动语义 / 完美转发）', link: '/ccpp/cpp/cpp_modern' },
-                { text: '内存池设计', link: '/ccpp/cpp/memory_pool' }
+                { text: '内存池设计', link: '/ccpp/cpp/memory_pool' },
+                { text: 'Abseil Performance Hints（性能哲学 + 8 章实战）', link: '/ccpp/cpp/abseil-hints' }
               ]
             },
             {
