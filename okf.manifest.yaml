@@ -1,0 +1,125 @@
+# Open Knowledge Format — Pack Manifest
+# 这是 Pyramid pack 的内容索引(概念/来源列表),供 OKF 兼容 Agent 快速发现。
+# 不同于 okf.yaml(包元数据),本文件描述 pack 的具体内容。
+okf_version: "0.1"
+pack_id: pyramid
+generated_at: 2026-06-20
+
+# 顶层导航入口
+entry:
+  - path: wiki/index.md
+    title: "LLM Wiki — Global Index"
+    type: index
+  - path: wiki/home.md
+    title: "LLM Wiki — Home"
+    type: index
+
+# 模块索引(子枢纽)
+indexes:
+  - path: wiki/arm-index.md
+    title: "ARM Architecture"
+    domain: cpu-architecture
+  - path: wiki/cpp-index.md
+    title: "Modern C++ & STL"
+    domain: programming
+  - path: wiki/cpp-books-index.md
+    title: "C++ Core Programming Books"
+    domain: programming
+  - path: wiki/cpp-modern-index.md
+    title: "Modern C++ Skills (C++17 + Master)"
+    domain: programming
+  - path: wiki/cpp-slides-index.md
+    title: "C++ Conference Slides"
+    domain: programming
+  - path: wiki/datastructure-index.md
+    title: "Data Structures & Algorithms"
+    domain: algorithms
+  - path: wiki/design-patterns-index.md
+    title: "Design Patterns"
+    domain: software-engineering
+  - path: wiki/distributed-systems-index.md
+    title: "Distributed Systems"
+    domain: systems
+  - path: wiki/ebpf-index.md
+    title: "eBPF"
+    domain: linux-kernel
+  - path: wiki/interview-index.md
+    title: "Interview Preparation"
+    domain: career
+  - path: wiki/linux-kernel-handson-index.md
+    title: "Linux Kernel — Hands-On"
+    domain: linux-kernel
+  - path: wiki/linux-network-index.md
+    title: "Linux Networking"
+    domain: networking
+  - path: wiki/math-index.md
+    title: "Mathematics"
+    domain: math
+  - path: wiki/openbmc-index.md
+    title: "OpenBMC"
+    domain: embedded
+  - path: wiki/os-index.md
+    title: "Operating System Fundamentals"
+    domain: operating-system
+  - path: wiki/qemu-index.md
+    title: "QEMU"
+    domain: emulation
+  - path: wiki/rust-index.md
+    title: "Rust Programming"
+    domain: programming
+  - path: wiki/se-index.md
+    title: "Software Engineering"
+    domain: software-engineering
+  - path: wiki/security-index.md
+    title: "Security & Cryptography"
+    domain: security
+  - path: wiki/snort3-index.md
+    title: "Snort3 IDS/IPS"
+    domain: security
+  - path: wiki/sys-prog-index.md
+    title: "System Programming"
+    domain: programming
+  - path: wiki/tools-index.md
+    title: "Tools — 系统与开发工具"
+    domain: tools
+  - path: wiki/workflow-index.md
+    title: "Workflow Engine (Sogou)"
+    domain: frameworks
+  - path: wiki/pdf-dataview.md
+    title: "PDF Catalog (Dataview)"
+    domain: navigation
+
+# 原始来源根目录(LLM 永不修改)
+sources_raw:
+  root: raw/
+  layout:
+    github: raw/github/<owner>/<repo>/
+    papers: raw/PDFs/papers/
+    books: raw/PDFs/books/
+    slides: raw/PDFs/slides/
+    bookmarks: raw/bookmarks/
+    web: raw/web/
+    notes: raw/notes/
+
+# 摘要页面目录
+summary_paths:
+  entities: wiki/entities/
+  sources: wiki/sources/
+  synthesis: wiki/synthesis/
+  journal: wiki/temporal/journal/
+  attachments: wiki/attachments/
+
+# 统计(供 Agent 评估)
+stats:
+  # 实际数字由 scripts/lint_okf.py 计算,这里只放参考值
+  page_count_estimate: 205
+  module_indexes: 24
+  pdf_sources: 35
+  raw_notes: 25
+
+# 引用此 pack 的方式
+how_to_consume:
+  - "在 Obsidian 中打开 wiki/ 目录作为 Vault"
+  - "运行 python3 scripts/lint_okf.py --check 验证合规性"
+  - "喂给 OKF 兼容 Agent(Claude Code / Codex / Gemini),入口文件 wiki/index.md"
+  - "新来源放入 raw/ 对应子目录,告诉 Agent 'ingest [路径]'"

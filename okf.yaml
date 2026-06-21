@@ -1,0 +1,76 @@
+# Open Knowledge Format (OKF) — Pack Metadata
+# 规范: https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing
+# 本文件声明此仓库是一个符合 OKF v0.1 规范的 Knowledge Pack。
+okf_version: "0.1"
+
+pack:
+  id: pyramid
+  name: "Pyramid — Tech LLM Wiki"
+  title: "Persistent, LLM-maintained knowledge base for systems programming"
+  description: >
+    Pyramid is a personal LLM Wiki covering Linux kernel, eBPF, C++,
+    networking, QEMU, algorithms, security, ARM, OpenBMC, Snort3, and
+    more. Knowledge is incrementally compiled and maintained by an LLM
+    agent following Karpathy's LLM-Wiki methodology, now packaged as a
+    compliant Open Knowledge Format (OKF) pack.
+  domain: technology
+  maintainer: sphinx
+  license: private
+  language: en
+  entry_point: wiki/index.md
+
+# 路径布局
+layout:
+  schema: AGENT.md
+  manifest: okf.manifest.yaml
+  raw_root: raw/
+  wiki_root: wiki/
+  index: wiki/index.md
+  log: wiki/log.md
+  home: wiki/home.md
+  attachments: wiki/attachments/
+
+# OKF 类型集合(本包允许的 type 值)
+types:
+  - entity        # 概念页 (Linux kernel, eBPF, C++11, ...)
+  - source        # 来源摘要 (PDF, GitHub repo, bookmark, web clip)
+  - synthesis     # 跨源综合分析
+  - journal       # 月/周日记
+  - index         # 模块导航页
+  - log           # 操作日志(append-only)
+  - dashboard     # 仪表盘/全局视图
+
+# 必填 frontmatter 字段(扩展 OKF 推荐项)
+required_fields:
+  all: [type]
+  entity: [type, tags, created]
+  source: [type, source-type, title, created]
+  synthesis: [type, tags, created]
+  index: [type, tags, created]
+  journal: [type, month]
+  log: [type]
+
+# 可选但推荐的 frontmatter 字段
+recommended_fields:
+  - updated
+  - tags
+  - sources      # entity / synthesis 引用
+  - summary      # 一句话描述
+  - resource     # source 引用 raw/ 路径
+  - timestamp
+
+# 工具脚本
+tools:
+  lint: scripts/lint_okf.py
+  ingest_pdf: scripts/ingest_pdf.py
+
+# OKF 合规性自检
+conformance:
+  schema_version: "0.1"
+  status: compliant
+  notes: >
+    Pyramid predates OKF v0.1 (Google Cloud, 2026-06) and is a direct
+    implementation of Karpathy's LLM-Wiki pattern. The mapping to OKF
+    is essentially 1:1: every concept already lives in a Markdown
+    file with YAML frontmatter; the wiki/ directory is the OKF
+    knowledge pack root.
