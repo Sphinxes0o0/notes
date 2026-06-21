@@ -1,0 +1,117 @@
+name: Link Check (Internal)
+
+# Fast check: only internal links. Runs on every push and PR so
+# authors see broken internal links immediately.
+# External link probing is in a separate weekly workflow to avoid
+# slowing every push.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write  # for posting PR comment
+
+jobs:
+  link-check:
+    name: Internal link integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run link check
+        id: check
+        run: |
+          set +e
+          python3 scripts/link_check.py --json > /tmp/links.json 2>/tmp/links.err
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          # Strip the leading "Scanning..." lines from --json output
+          # (link_check.py prints progress to stdout in --json mode too)
+          if [ -s /tmp/links.json ]; then
+            # save only the JSON object (skip leading non-JSON lines)
+            python3 - <<'PY'
+          import json, re
+          with open('/tmp/links.json') as f:
+              text = f.read()
+          m = re.search(r'\{.*\}', text, re.DOTALL)
+          if m:
+              with open('/tmp/links_clean.json', 'w') as out:
+                  out.write(m.group(0))
+          else:
+              with open('/tmp/links_clean.json', 'w') as out:
+                  json.dump({"internal": {"broken": []}, "external": {"by_class": {}}}, out)
+          PY
+          fi
+
+      - name: Parse result
+        id: parse
+        if: always()
+        run: |
+          if [ -f /tmp/links_clean.json ]; then
+            python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          with open('/tmp/links_clean.json') as f:
+              r = json.load(f)
+          broken = r['internal']['broken']
+          total = r['internal']['total']
+          print(f"total_internal={total}")
+          print(f"broken_internal={len(broken)}")
+          with open('/tmp/links_clean.json', 'w') as f:
+              json.dump(r, f)
+          PY
+          fi
+
+      - name: Format PR comment
+        if: github.event_name == 'pull_request' && always()
+        id: fmt
+        run: |
+          if [ ! -f /tmp/links_clean.json ]; then
+            echo "no_data=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python3 - <<'PY' > /tmp/comment.md
+          import json
+          with open('/tmp/links_clean.json') as f:
+              r = json.load(f)
+          broken = r['internal']['broken']
+          total = r['internal']['total']
+          if not broken:
+              print("## ✅ Link Check (Internal)\n\n")
+              print(f"**{total}** internal links validated — all good.\n")
+          else:
+              print("## ❌ Link Check (Internal) — Broken Links\n\n")
+              print(f"Found **{len(broken)}** broken internal link(s):\n")
+              print("| File | Link |")
+              print("|------|------|")
+              for it in broken[:50]:
+                  print(f"| `{it['file']}` | `[{it['link']}]` |")
+              if len(broken) > 50:
+                  print(f"\n*…and {len(broken) - 50} more.*\n")
+              print("\nRun locally:\n```bash\npython3 scripts/link_check.py\n```\n")
+          PY
+
+      - name: Post PR comment
+        if: github.event_name == 'pull_request' && steps.fmt.outputs.no_data != 'true'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body-file: /tmp/comment.md
+          # Update same comment on subsequent runs (avoid spam)
+          comment-author: 'github-actions[bot]'
+
+      - name: Fail check if broken
+        if: steps.parse.outputs.broken_internal != '0' && steps.parse.outputs.broken_internal != ''
+        run: |
+          echo "::error::Found ${{ steps.parse.outputs.broken_internal }} broken internal link(s). See PR comment for details."
+          exit 1
