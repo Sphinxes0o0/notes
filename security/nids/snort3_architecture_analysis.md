@@ -15930,8 +15930,8 @@ Inspector* PluginManager::create_inspector(PluginType, const char* name, Module*
 ### IB.1 官方文档
 
 - [Snort 3官方文档](https://snort.org/documents)
-- [Snort 3配置指南](https://snort.org/documents/snort-3-configuration-guide)
-- [Snort 3规则编写](https://snort.org/documents/snort-3-rule-writing)
+- [Snort 3配置指南](https://docs.snort.org/)
+- [Snort 3规则编写](https://docs.snort.org/)
 
 ### IB.2 协议规范
 

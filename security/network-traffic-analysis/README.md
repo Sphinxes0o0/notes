@@ -240,7 +240,6 @@ https://github.com/Sphinxes0o0/network-traffic-analysis
 ## 参考资源
 
 - [SmartX Intelligent Sec Paper](https://arxiv.org/html/2410.20244v1)
-- [Encrypted Traffic Analysis - Cisco ETA](https://www.cisco.com/c/en/us/products/security/encrypted-traffic-analytics.html)
 - [Zeek Network Security Monitor](https://zeek.org/)
 - [Wireshark](https://www.wireshark.org/)
 - [CICIDS Dataset](https://www.unb.ca/cic/datasets/)
