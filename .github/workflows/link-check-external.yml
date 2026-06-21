@@ -1,0 +1,121 @@
+name: Link Check (External, Weekly)
+
+# Slow check: probes all external URLs (~100) over HTTP. Runs
+# weekly on Sunday and on manual dispatch. On breakage, opens a
+# GitHub issue so the problem doesn't get lost.
+#
+# Why separate from internal: external probing takes ~30s with
+# 8-way concurrency, and many target sites rate-limit / Cloudflare
+# block aggressive CI traffic. Keeping it weekly avoids CI noise.
+
+on:
+  schedule:
+    # Every Sunday at 04:00 UTC (after the frontmatter audit at 03:00)
+    - cron: '0 4 * * 0'
+  workflow_dispatch:  # allow manual run from Actions tab
+
+permissions:
+  contents: read
+  issues: write  # for creating issues on breakage
+
+jobs:
+  external-link-check:
+    name: Probe external URLs
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Probe external links
+        id: check
+        run: |
+          set +e
+          python3 scripts/link_check.py --external --concurrency 8 \
+            > /tmp/links.json 2>/tmp/links.err
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          # Strip leading "Scanning..." progress lines from --json output
+          if [ -s /tmp/links.json ]; then
+            python3 - <<'PY'
+          import json, re
+          with open('/tmp/links.json') as f:
+              text = f.read()
+          m = re.search(r'\{.*\}', text, re.DOTALL)
+          if m:
+              with open('/tmp/links_clean.json', 'w') as out:
+                  out.write(m.group(0))
+          else:
+              json.dump({"external": {"by_class": {}, "results": []}}, open('/tmp/links_clean.json', 'w'))
+          PY
+          fi
+
+      - name: Parse result
+        id: parse
+        if: always()
+        run: |
+          if [ -f /tmp/links_clean.json ]; then
+            python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          with open('/tmp/links_clean.json') as f:
+              r = json.load(f)
+          results = r.get('external', {}).get('results', [])
+          by_class = r.get('external', {}).get('by_class', {})
+          ok = by_class.get('ok', 0)
+          broken = by_class.get('broken', 0)
+          # 4xx/5xx = permanent; 5xx transient — but report all "broken" for triage
+          permanent = [r for r in results if r['class'] == 'broken']
+          print(f"ok_external={ok}")
+          print(f"broken_external={broken}")
+          print(f"permanent_count={len(permanent)}")
+          PY
+          fi
+
+      - name: Format issue body
+        if: steps.parse.outputs.broken_external != '0' && steps.parse.outputs.broken_external != ''
+        run: |
+          python3 - <<'PY' > /tmp/issue.md
+          import json
+          with open('/tmp/links_clean.json') as f:
+              r = json.load(f)
+          broken = [x for x in r['external']['results'] if x['class'] == 'broken']
+          ok = r['external']['by_class'].get('ok', 0)
+          print("# 🔗 Weekly External Link Check — Broken URLs\n\n")
+          print(f"**{len(broken)}** broken external link(s) found ({ok} OK).\n\n")
+          print("| URL | Status | Referenced by |")
+          print("|-----|--------|---------------|")
+          for b in sorted(broken, key=lambda x: -x.get('n_refs', 0)):
+              refs = ', '.join(f"`{x}`" for x in b['referenced_from'][:2])
+              print(f"| <{b['url']}> | `{b['status']}` | {refs} |")
+          print("\n## How to fix\n")
+          print("- **Permanent 4xx**: URL is gone. Either delete the link, or replace with a working fallback (e.g. project root, docs site).\n")
+          print("- **5xx/403/521**: usually transient (Cloudflare, server error). Re-run in a few days.\n\n")
+          print("```bash\npython3 scripts/link_check.py --external --concurrency 8\n```\n")
+          PY
+
+      - name: Open or update issue
+        if: steps.parse.outputs.broken_external != '0' && steps.parse.outputs.broken_external != ''
+        uses: peter-evans/create-issue@v7
+        with:
+          title: "🔗 Broken external links (${{ steps.parse.outputs.broken_external }})"
+          body-file: /tmp/issue.md
+          # Reuse the same issue if already open (avoid flooding)
+          labels: |
+            links
+            automated
+          # The action does not auto-dedupe; for that we'd need to
+          # search for an existing open issue with this title and
+          # close it when the run is clean. Kept simple here.
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## External Link Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- OK:    ${{ steps.parse.outputs.ok_external }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Broken: ${{ steps.parse.outputs.broken_external }}" >> $GITHUB_STEP_SUMMARY
