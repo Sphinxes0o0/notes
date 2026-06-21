@@ -1036,13 +1036,13 @@ $ dmesg
 ## 参考资源
 
 - [OpenBMC 官方项目](https://www.openbmc.org/)
-- [phosphor-virtualmedia 源码](https://github.com/openbmc/phosphor-virtualmedia)
-- [phosphor-kvm (obmc-ikvm) 源码](https://github.com/openbmc/phosphor-kvm)
+- [phosphor-virtualmedia 源码](https://github.com/openbmc)
+- [phosphor-kvm (obmc-ikvm) 源码](https://github.com/openbmc)
 - [bmcweb Web 服务器](https://github.com/openbmc/bmcweb)
 - [phosphor-webui](https://github.com/openbmc/phosphor-webui)
 - [RFB/VNC 协议规范](https://github.com/rfbproto/rfbproto)
 - [NBD 协议规范](https://nbd.sourceforge.io/)
-- [Linux USB Gadget API](https://www.kernel.org/doc/html/latest/usb/gadget/index.html)
+- [Linux USB Gadget API](https://docs.kernel.org/driver-api/usb/)
 - [V4L2 开发者文档](https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/)
 
 ---

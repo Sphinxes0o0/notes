@@ -280,4 +280,4 @@ tags:
 
 - [IAAR-Shanghai/Awesome-AI-Memory](https://github.com/IAAR-Shanghai/Awesome-AI-Memory) — AI memory 综合 curated list
 - [Semantic Scholar API](https://api.semanticscholar.org/) — 论文元数据
-- [GitHub Search API](https://api.github.com/search/repositories) — 开源项目
+- [GitHub Search API](https://github.com/search?q=&type=repositories) — 开源项目
