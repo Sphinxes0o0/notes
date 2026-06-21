@@ -1,7 +1,7 @@
 ---
 type: source
 source-type: book
-title: "21st Century C, 2nd Edition"
+title: "21st Century C, 2nd Edition (全文)"
 path: books/21st Century C, 2nd Edition.pdf
 source-md5: cecbceb284ac0f7b742d052141b66f29
 size: 5824 KB

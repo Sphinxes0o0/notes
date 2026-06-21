@@ -25,7 +25,7 @@ tags: [ebpf]
 - **工具链**：bpftool、libbpf-bootstrap、cilium/ebpf-go
 
 ## 相关页面
-- [[pdf-book-ebpf-basics-cn]]
+- [[pdf-ebpf-basics]]
 - [[pdf-book-ebpf-beginners-guide]]
 - [[pdf-ebpf-technical-practice]]
 - [[pdf-bpf-security-auditing-google]]

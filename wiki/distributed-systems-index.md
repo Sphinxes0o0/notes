@@ -1,10 +1,9 @@
 ---
-type: entity
+type: index
 tags: [distributed-systems, replication, partitioning, transactions, consensus, data-engineering]
 created: 2026-05-28
 sources: [ebook-ddia]
 ---
-
 # Distributed Systems Index
 
 > 分布式系统核心概念索引，基于 DDIA (Designing Data-Intensive Applications)

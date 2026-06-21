@@ -1,7 +1,7 @@
 ---
 type: source
 source-type: book
-title: "偏微分方程"
+title: "偏微分方程 (全文)"
 path: books/偏微分方程.pdf
 source-md5: c6384a4c13a94d927467c92c691d2f92
 size: 736 KB

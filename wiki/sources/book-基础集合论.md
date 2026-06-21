@@ -1,7 +1,7 @@
 ---
 type: source
 source-type: book
-title: "基础集合论"
+title: "基础集合论 (全文)"
 path: books/基础集合论.pdf
 size: 3312 KB
 category: book

@@ -678,6 +678,23 @@ Updated:
 - **未 commit**
 
 
+## [2026-06-09] policy | safeos local-only preservation
+
+- **触发**: origin/main 被 force-push（`701da09...728f607 main (forced update)`），远程删除了所有 `safeos/*` 相关内容（80 个 raw/safeos/ + 24 个 wiki/ 文件，共 104 个）
+- **本地保留**:
+  - 创建 `safeos-local-archive` 分支（HEAD `701da09`）—— 完整保留本地 diverged 状态
+  - tar 备份: `/tmp/pyramid-safeos-backup-20260609-234306.tar.gz`（340KB，104 文件）
+  - 同步备份: `/tmp/list_orphan_md_groups.py.bak`（被 reset --hard 风险影响的 untracked 脚本）
+- **main 对齐**: `git switch main && git reset --hard origin/main` —— main 现在 = origin/main (`728f607`)，0 个 safeos 文件
+- **三层推送防护（防止 safeos 再次落到 remote）**:
+  1. **`.git/hooks/pre-push`** — 拒绝 push safeos-* 分支名 + 拒绝任何 commit diff 包含 *safeos* 路径
+  2. **`remote.origin.push` refspec** — 收窄为 `main` + `dev` 两个分支，其他分支默认不可推
+  3. **policy** — safeos 文件不得重新加入 tracked branches，除非用户明确批准
+- **Bypass**: `git push --no-verify`（紧急逃生口，hook 会打印提示）
+- **Hook 测试**: 4/4 通过（block archive branch / block safeos-in-commit on normal branch / allow clean main / block main push if commit has safeos）
+- **同步给**: `~/.hermes/skills/git-prevent-local-content-from-reaching-remote/SKILL.md`（流程模板，下次直接复用）
+- **memory**: pyramid safeos policy 写入 memory（成功）
+
 ## [2026-06-10] ingest | web-abseil-fast-hints (1 source, 1 entity section updated)
 
 - **Source**: https://abseil.io/fast/hints.html — abseil 官方 C++ Performance Hints (CC BY 4.0, 2025)
@@ -700,10 +717,10 @@ Updated:
 - **Authors**: Titus Winters, Hyrum Wright, Mark Mentovai, Michael Chastain, Etienne Dechamps, Samuel Benzaquen, Greg Miller, Shayne Hiet-Block, Roman Perepelitsa, Jeoff Pitman, Samuel Benzaquen, James Dennett, Dominic Hamon, Matt Armstrong, JF Bastien, Łukasz Milewski + many others.
 - **Fetched**: 2026-06-10, all 83 returned HTTP 200, total 3.06MB raw HTML
 - **Ingest method (4-step pipeline reused from hints.html)**:
-  1. curl with User-Agent + max-time=20s, concurrency=5, 0.5s courtesy delay → 83 hints.html files
-  2. bs4 extract article body: 2nd h1 (real title) through end of parent container, drop script/style/nav/footer
-  3. <pre> class normalization: drop `prettyprint`/`code`/`bad-code`/`lang-cpp`/`lang-c++`, replace with `cpp` so pandoc emits ```cpp
-  4. pandoc html→gfm --wrap=none; state-machine tag opening fences with cpp, closer stays bare; 389/389 fences balanced, 0 leaks
+   1. curl with User-Agent + max-time=20s, concurrency=5, 0.5s courtesy delay → 83 hints.html files
+   2. bs4 extract article body: 2nd h1 (real title) through end of parent container, drop script/style/nav/footer
+   3. <pre> class normalization: drop `prettyprint`/`code`/`bad-code`/`lang-cpp`/`lang-c++`, replace with `cpp` so pandoc emits ```cpp
+   4. pandoc html→gfm --wrap=none; state-machine tag opening fences with cpp, closer stays bare; 389/389 fences balanced, 0 leaks
 - **Source pages written**: 83 files at `wiki/sources/web-totw-<NNN>-<slug>.md`, total 487KB MD. Naming: `web-totw-NNN-slug.md` (zero-padded 3-digit number + slugified title; e.g. `web-totw-001-string-view.md`). Frontmatter includes source-type: web, source-md5 (per-article HTML MD5), author (parsed from "By X" line), date (parsed from "Originally posted as TotW #N on <date>").
 - **Raw layer**: `raw/web/abseil-tips/totw-NNN/hints.html` + `.meta.md` (with http_code, size_bytes, source_md5). 3.06MB total. .gitignore already covers `raw/web/**/*.html` from hints ingest, so these won't be committed (only .meta.md stays).
 - **Entity impact**: NO new entity created. NO update to cpp-perf-optimization (which already has ## Abseil-Specific Techniques section). 83 Tips are individual source pages; their content already covered conceptually by the existing abseil-specific section in cpp-perf-optimization. Cross-linking each tip to entity would bloat the entity (167-line Sources section).

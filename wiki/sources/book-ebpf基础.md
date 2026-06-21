@@ -1,7 +1,7 @@
 ---
 type: source
 source-type: book
-title: "eBPF基础"
+title: "eBPF基础 (全文)"
 path: books/eBPF基础.pdf
 source-md5: 2308e77d0d680a38022a0f36cfdb71ff
 size: 1275 KB

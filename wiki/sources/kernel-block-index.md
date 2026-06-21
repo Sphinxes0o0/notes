@@ -1,5 +1,5 @@
 ---
-type: "source"
+type: index
 source-type: "web"
 title: "WoWoTech Linux Kernel Block Index"
 url: "http://www.wowotech.net/comm/2353.html"

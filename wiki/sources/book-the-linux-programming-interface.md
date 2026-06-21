@@ -1,7 +1,7 @@
 ---
 type: source
 source-type: book
-title: "The Linux Programming Interface"
+title: "The Linux Programming Interface (全文)"
 path: books/The Linux Programming Interface.pdf
 source-md5: 9284a2df85ff237153cff1e2b2803912
 size: 7571 KB

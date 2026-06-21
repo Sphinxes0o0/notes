@@ -1,7 +1,7 @@
 ---
 type: source
 source-type: book
-title: "图解密码技术 第三版"
+title: "图解密码技术 第三版 (全文)"
 path: books/图解密码技术 第三版.pdf
 size: 76116 KB
 category: book

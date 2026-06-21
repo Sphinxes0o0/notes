@@ -25,5 +25,5 @@ tags: [cpp]
 
 ## 相关页面
 - [[pdf-book-cpp17]]
-- [[pdf-book-modern-cpp-tutorial-zh]]
+- [[pdf-cpp-modern-tutorial]]
 - [[pdf-book-concurrency-modern-cpp]]
