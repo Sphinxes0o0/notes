@@ -16,3 +16,6 @@ title: Tools Notes
 - [Netcat 使用](./netcat.md) - Netcat 网络工具的使用方法
 - [tcpdump 使用](./tcpdump.md) - 网络抓包分析
 - [端口扫描器](./port_scanner.md) - 端口扫描工具
+
+### AI / NPU 工具链
+- [Pulsar2 与 M57 芯片能力调研](./pulsar2_m57_chip.md) - 爱芯元智 Pulsar2 编译器及 M57 芯片 NPU/LLM 能力调研
