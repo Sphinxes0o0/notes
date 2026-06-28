@@ -37,22 +37,18 @@ jobs:
         id: check
         run: |
           set +e
-          python3 scripts/link_check.py --external --concurrency 8 \
+          python3 scripts/link_check.py --external --concurrency 8 --json \
             > /tmp/links.json 2>/tmp/links.err
           echo "exit=$?" >> "$GITHUB_OUTPUT"
-          # Strip leading "Scanning..." progress lines from --json output
-          if [ -s /tmp/links.json ]; then
-            python3 - <<'PY'
-          import json, re
-          with open('/tmp/links.json') as f:
-              text = f.read()
-          m = re.search(r'\{.*\}', text, re.DOTALL)
-          if m:
-              with open('/tmp/links_clean.json', 'w') as out:
-                  out.write(m.group(0))
-          else:
-              json.dump({"external": {"by_class": {}, "results": []}}, open('/tmp/links_clean.json', 'w'))
-          PY
+          # When run with --json the script prints a single JSON object
+          # to stdout. Earlier this step forgot --json, so the parser
+          # below always fell back to an empty report.
+          if [ -s /tmp/links.json ] && python3 -c 'import json,sys; json.load(sys.stdin)' < /tmp/links.json 2>/dev/null; then
+            cp /tmp/links.json /tmp/links_clean.json
+          else
+            echo "::error::link_check.py did not produce valid JSON; see /tmp/links.err"
+            cat /tmp/links.err || true
+            python3 -c 'import json; json.dump({"external": {"by_class": {}, "results": []}}, open("/tmp/links_clean.json", "w"))'
           fi
 
       - name: Parse result
@@ -100,17 +96,32 @@ jobs:
 
       - name: Open or update issue
         if: steps.parse.outputs.broken_external != '0' && steps.parse.outputs.broken_external != ''
-        uses: peter-evans/create-issue@v7
-        with:
-          title: "🔗 Broken external links (${{ steps.parse.outputs.broken_external }})"
-          body-file: /tmp/issue.md
-          # Reuse the same issue if already open (avoid flooding)
-          labels: |
-            links
-            automated
-          # The action does not auto-dedupe; for that we'd need to
-          # search for an existing open issue with this title and
-          # close it when the run is clean. Kept simple here.
+        env:
+          BROKEN: ${{ steps.parse.outputs.broken_external }}
+          # gh CLI requires GH_TOKEN explicitly even though GITHUB_TOKEN
+          # is auto-provided to Actions steps.
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          TITLE="🔗 Broken external links (${BROKEN})"
+          # Ensure labels exist (idempotent: gh label create errors if it
+          # already exists, so swallow that case).
+          gh label create links      --color "d93f0b" --description "External link check failures" 2>/dev/null || true
+          gh label create automated  --color "ededed" --description "Filed by a GitHub Actions workflow" 2>/dev/null || true
+          # Dedupe: if an open issue with the same title exists, edit it;
+          # otherwise create a new one. The previous peter-evans/create-issue
+          # action did not auto-dedupe.
+          EXISTING=$(gh issue list --state open --search "${TITLE} in:title" --json number -q '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --body-file /tmp/issue.md
+            echo "Updated existing issue #${EXISTING}"
+          else
+            gh issue create \
+              --title "${TITLE}" \
+              --body-file /tmp/issue.md \
+              --label links --label automated
+            echo "Created new issue"
+          fi
 
       - name: Summary
         if: always()
