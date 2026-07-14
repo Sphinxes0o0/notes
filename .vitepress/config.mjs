@@ -458,6 +458,13 @@ export default defineConfig({
               ]
             },
             {
+              text: 'LLM Agent 防御',
+              collapsed: true,
+              items: [
+                { text: '分层防御方案（IAM + 规则 + Content Guard + NSFA + 沙箱）', link: '/security/llm_agent_defense/layered_defense' }
+              ]
+            },
+            {
               text: 'Linux 内核安全',
               collapsed: true,
               items: [
