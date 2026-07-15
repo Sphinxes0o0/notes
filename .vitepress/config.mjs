@@ -461,7 +461,9 @@ export default defineConfig({
               text: 'LLM Agent 防御',
               collapsed: true,
               items: [
-                { text: '分层防御方案（IAM + 规则 + Content Guard + NSFA + 沙箱）', link: '/security/llm_agent_defense/layered_defense' }
+                { text: '分层防御方案（IAM + 规则 + Content Guard + NSFA + 沙箱）', link: '/security/llm_agent_defense/layered_defense' },
+                { text: 'IAM 认证架构（AD/CD/VD）', link: '/security/llm_agent_defense/iam_auth_architecture' },
+                { text: '详细架构（流程 / 状态机 / 演练 / Demo）', link: '/security/llm_agent_defense/detailed_architecture' }
               ]
             },
             {
