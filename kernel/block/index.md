@@ -4,6 +4,7 @@
 
 | 文档 | 描述 | 源码位置 |
 |------|------|----------|
+| [block_overview.md](block_overview.md) | **块设备总览**：blk-mq 架构、bio→request→dispatch 全路径、I/O 调度器 | block/ |
 | [block_core.md](block_core.md) | Block 核心结构: bio, request, request_queue, gendisk | block/blk-core.c, blk-mq.c |
 | [block_mq.md](block_mq.md) | MultiQueue 提交路径: blk_mq_submit_bio, hctx, tag | block/blk-mq.c |
 | [block_request.md](block_request.md) | Request 处理: 分配, 合并, 分发, 完成 | block/blk-mq.c |

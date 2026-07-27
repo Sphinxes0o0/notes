@@ -4,12 +4,15 @@
 
 | 文档 | 描述 | 源码位置 |
 |------|------|----------|
+| [sched_overview.md](sched_overview.md) | **架构总览**：runqueue、CFS/RT/Deadline、PELT、调度策略 | kernel/sched/* |
 | [sched_core.md](sched_core.md) | 调度器核心: schedule(), __schedule(), pick_next_task() | kernel/sched/core.c |
 | [sched_cfs.md](sched_cfs.md) | CFS 完全公平调度器 | kernel/sched/fair.c |
 | [sched_rt.md](sched_rt.md) | RT 实时调度器 + Deadline 调度器 | kernel/sched/rt.c, deadline.c |
 | [sched_class.md](sched_class.md) | 调度类框架 | kernel/sched/sched.h |
 | [sched_context_switch.md](sched_context_switch.md) | 上下文切换机制 | kernel/sched/core.c, arch/x86/ |
 | [sched_load_balance.md](sched_load_balance.md) | 负载均衡 | kernel/sched/fair.c, topology.c |
+| [sched_deep_dive_r1.md](sched_deep_dive_r1.md) | 深度分析 R1（runqueue 与调度类层次） | kernel/sched/* |
+| [sched_deep_dive_r2.md](sched_deep_dive_r2.md) | 深度分析 R2（EEVDF 算法细节） | kernel/sched/fair.c |
 
 ---
 

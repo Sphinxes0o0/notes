@@ -215,7 +215,6 @@ export default defineConfig({
               items: [
                 { text: 'C 语言基础', link: '/ccpp/c/c' },
                 { text: '内存管理', link: '/ccpp/c/memory_management' },
-                { text: '内存相关', link: '/ccpp/c/memory' }
               ]
             },
             {
@@ -241,8 +240,7 @@ export default defineConfig({
                   text: 'C++23/26 新特性',
                   collapsed: true,
                   items: [
-                    { text: 'std::expected 错误处理', link: '/ccpp/cpp/cpp23/expected_error_handling' },
-                    { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/cpp/concurrency/cpp20_26_async_io' }
+                    { text: 'std::expected 错误处理', link: '/ccpp/cpp/cpp23/expected_error_handling' }
                   ]
                 }
               ]
@@ -276,7 +274,7 @@ export default defineConfig({
               text: 'C++ 并发',
               collapsed: true,
               items: [
-                { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/cpp/concurrency/cpp20_26_async_io' },
+                { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/concurrency/cpp20_26_async_io' },
                 { text: 'future / promise / shared_future / async（源码示例）', link: '/ccpp/concurrency/future' },
                 { text: 'memory_order 演示（源码示例）', link: '/ccpp/concurrency/memory_order' },
                 { text: 'MPMC ring buffer（源码示例）', link: '/ccpp/concurrency/mpmc_ringbuffer' },
@@ -293,10 +291,7 @@ export default defineConfig({
                 { text: 'C++ - 240401', link: '/ccpp/codewar_notes/cpp/240401' },
                 { text: 'C++ - 轮转数组', link: '/ccpp/codewar_notes/cpp/rotate_array' }
               ]
-            },
-            { text: 'test-ingest', link: '/ccpp/test-ingest' },
-            { text: 'Hermes Agent Memory 系统设计 + 最佳实践', link: '/ccpp/hermes_memory_design' },
-            { text: 'Hermes Memory 论文 + 开源项目 (2026H1)', link: '/ccpp/hermes_memory_research_2026h1' }
+            }
           ]
         }
       ],
@@ -310,7 +305,8 @@ export default defineConfig({
                 { text: '概述', link: '/sys/' },
                 { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
                 { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' },
-                { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' }
+                { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' },
+                { text: '软件性能深度思考', link: '/sys/software-performance-deep-thinking' }
               ]
             },
             {
@@ -338,7 +334,7 @@ export default defineConfig({
               text: '网络',
               items: [
                 { text: '概述', link: '/network/' },
-                { text: '网络栈深度分析', link: '/network/network_stack_deep_dive' },
+                { text: '网络栈深度分析', link: '/network/stack_deep_dive' },
                 {
                   text: 'TCP/IP',
                   items: [
@@ -363,10 +359,10 @@ export default defineConfig({
                   text: 'Linux 网络核心',
                   collapsed: true,
                   items: [
-                    // —— 核心架构（来源 /network/core/）——
-                    { text: 'Socket 子系统', link: '/network/core/net_subsystem_socket' },
-                    { text: '连接跟踪（核心架构）', link: '/network/core/net_subsystem_conntrack' },
-                    { text: '路由（核心架构）', link: '/network/core/net_subsystem_routing' },
+                    // —— 核心架构（来源 /network/core/，已合并入 linux_kernel/）——
+                    { text: 'Socket 子系统（BSD）', link: '/network/linux_kernel/socket_bsd_layer' },
+                    { text: '连接跟踪子系统', link: '/network/linux_kernel/nf_conntrack_subsystem' },
+                    { text: '路由子系统', link: '/network/linux_kernel/net_routing_subsystem' },
                     // —— 详解与实现（来源 /network/linux_kernel/）——
                     { text: 'Socket', link: '/network/linux_kernel/socket' },
                     { text: 'Socket Syscall', link: '/network/linux_kernel/socket_syscall' },
@@ -571,7 +567,9 @@ export default defineConfig({
             { text: 'Pi Agent 总览', link: '/coding_agent/pi-agent' },
             { text: 'Pi 扩展生态与能力', link: '/coding_agent/pi-agent-ecosystem' },
             { text: 'Pi vs 其他 Agent 框架', link: '/coding_agent/pi-agent-comparison' },
-            { text: 'Pi 定制 workflow 实操', link: '/coding_agent/pi-agent-custom-workflow' }
+            { text: 'Pi 定制 workflow 实操', link: '/coding_agent/pi-agent-custom-workflow' },
+            { text: 'Hermes Agent Memory 系统设计', link: '/coding_agent/hermes_memory_design' },
+            { text: 'Hermes Memory 论文与开源项目 (2026H1)', link: '/coding_agent/hermes_memory_research_2026h1' }
           ]
         }
       ],
@@ -795,7 +793,8 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/mm/' },
-                { text: '分配器', link: '/kernel/mm/mm_allocator' },
+                { text: '分配器总览', link: '/kernel/mm/mm_allocator_r0' },
+                { text: '分配器实现', link: '/kernel/mm/mm_allocator' },
                 { text: '核心结构', link: '/kernel/mm/mm_core_structs' },
                 { text: '内存映射', link: '/kernel/mm/mm_mmap' },
                 { text: '页错误处理', link: '/kernel/mm/mm_page_fault' },
@@ -810,6 +809,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/vfs/' },
+                { text: '架构总览', link: '/kernel/vfs/vfs_overview' },
                 { text: '索引节点', link: '/kernel/vfs/inode' },
                 { text: '目录项缓存', link: '/kernel/vfs/dcache' },
                 { text: '超级块', link: '/kernel/vfs/superblock' },
@@ -825,6 +825,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/block/' },
+                { text: '架构总览', link: '/kernel/block/block_overview' },
                 { text: '通用块层', link: '/kernel/block/block_core' },
                 { text: '请求处理', link: '/kernel/block/block_request' },
                 { text: '调度器', link: '/kernel/block/block_scheduler' },
@@ -857,6 +858,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/sched/' },
+                { text: '架构总览', link: '/kernel/sched/sched_overview' },
                 { text: '核心结构', link: '/kernel/sched/sched_core' },
                 { text: 'CFS 调度器', link: '/kernel/sched/sched_cfs' },
                 { text: '实时调度', link: '/kernel/sched/sched_rt' },
@@ -866,9 +868,12 @@ export default defineConfig({
             },
             {
               text: '同步机制 (locking)',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/locking/' },
-                { text: '子系统架构', link: '/kernel/locking/locking_subsystem' }
+                { text: '同步总览', link: '/kernel/locking/locking_overview' },
+                { text: '子系统架构', link: '/kernel/locking/locking_subsystem' },
+                { text: '深度 R2', link: '/kernel/locking/locking_deep_dive_r2' }
               ]
             },
             {
@@ -880,9 +885,12 @@ export default defineConfig({
             },
             {
               text: '时间管理 (time)',
+              collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/time/' },
-                { text: '子系统架构', link: '/kernel/time/time_subsystem' }
+                { text: '时间总览', link: '/kernel/time/time_overview' },
+                { text: '子系统架构', link: '/kernel/time/time_subsystem' },
+                { text: '深度 R1', link: '/kernel/time/time_deep_dive_r1' }
               ]
             },
             {
@@ -900,6 +908,14 @@ export default defineConfig({
                 { text: '内存管理', link: '/kernel/io_uring/io_uring_memory' },
                 { text: '操作机制', link: '/kernel/io_uring/io_uring_operations' },
                 { text: '特性', link: '/kernel/io_uring/io_uring_features' }
+              ]
+            },
+            {
+              text: '资源控制 (cgroup)',
+              collapsed: true,
+              items: [
+                { text: '概述', link: '/kernel/cgroup/' },
+                { text: '子系统架构', link: '/kernel/cgroup/cgroup_subsystem' }
               ]
             },
             {
@@ -977,9 +993,9 @@ export default defineConfig({
             { text: '系统设计基础', link: '/interview/03_系统设计基础' },
             { text: 'NP完全性与近似算法', link: '/interview/04_NP完全性与近似算法' },
             { text: '位操作技巧', link: '/interview/05_位操作技巧' },
-            { text: '基础数据结构与排序', link: '/interview/基础数据结构与排序' },
-            { text: '进阶数据结构', link: '/interview/06_进阶数据结构' },
-            { text: '推荐资源', link: '/interview/07_推荐资源' },
+            { text: '基础数据结构与排序', link: '/interview/06_基础数据结构与排序' },
+            { text: '进阶数据结构', link: '/interview/07_进阶数据结构' },
+            { text: '推荐资源', link: '/interview/08_推荐资源' },
             { text: '致谢与引用', link: '/interview/credits' }
           ]
         }

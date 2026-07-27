@@ -1,4 +1,17 @@
-# Linux 时间管理系统深度架构分析 v2
+---
+title: Linux 时间管理子系统总览
+description: Clocksource 评级体系、timekeeper 同步、hrtimer 红黑树、时钟事件框架、vDSO 加速
+tags:
+    - kernel
+    - time
+    - clocksource
+    - hrtimer
+---
+
+# Linux 时间管理子系统总览
+
+> 本文侧重**时间体系整体**：Clocksource 评级、timekeeper 与 NTP 同步、hrtimer 红黑树、clock_event_device 框架、vDSO 加速路径。
+> 与 `time_subsystem.md`（tick/hrtimer/posix-timers 子系统接口）、`time_deep_dive_r1.md`（深度实现）形成递进。
 
 ## 1. 概述
 
