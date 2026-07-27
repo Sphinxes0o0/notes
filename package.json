@@ -10,9 +10,6 @@
     "vite-plugin-pwa": "^1.2.0",
     "vitepress": "^2.0.0-alpha.12"
   },
-  "dependencies": {
-    "@vuepress/plugin-sitemap": "^2.0.0-beta.49"
-  },
   "name": "notes",
   "version": "1.0.0",
   "description": "技术学习笔记和总结，涵盖 C/C++、网络、操作系统、系统编程等多个技术领域。",

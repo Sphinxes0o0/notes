@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { VitePWA } from 'vite-plugin-pwa'
-import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 import { readingTimePlugin } from './plugins/readingTime.mjs'
 
 // https://vitepress.dev/reference/site-config
@@ -8,11 +7,7 @@ export default defineConfig({
   base: '/notes/',
 
   plugins: [
-    readingTimePlugin(),
-    sitemapPlugin({
-      hostname: 'https://Sphinxes0o0.github.io/notes',
-      lastmodDateOnly: true
-    })
+    readingTimePlugin()
   ],
 
   title: "Sphinx's Notes",
@@ -115,7 +110,11 @@ export default defineConfig({
 
   // Sitemap
   sitemap: {
-    hostname: 'https://Sphinxes0o0.github.io/notes',
+    // Trailing slash required: with `base: '/notes/'`, the URL builder
+    // treats `/notes` as a file that gets discarded when resolving relative
+    // page paths. Without the trailing slash the sitemap emits URLs with
+    // the base path missing, so every entry returns 404.
+    hostname: 'https://Sphinxes0o0.github.io/notes/',
     lastmodDateOnly: false
   },
 
