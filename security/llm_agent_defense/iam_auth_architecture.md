@@ -501,6 +501,8 @@ L0: spiffe://oem.com/cd/voice/01            (SVID, 1h)
 | 任务超过预期 | 重发新 task token | silent renew 自动延长 | 80% TTL 时主动续租，scope 重评估 |
 | 任务异常中止 | token 自然过期 | 显式 revoke + kmss_free | kmss_release_lease |
 
+> **故障场景的详细时序演练 (KMSS 崩溃/网络分区/TEE 故障/Clock Skew/OTA 回滚) 见 [detailed_architecture.md §D](/security/llm_agent_defense/detailed_architecture)。**
+
 ---
 
 ## 11. Demo 范围

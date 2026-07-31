@@ -158,6 +158,8 @@ delegation_decay:
 - **进程隔离**：AUTOSAR Adaptive 下每个 Agent 一个独立 Process + 独立 trust domain；Classic 下每个 Agent 独占一个 Application
 - **回退**：委托链任一环节失败必须回滚到父 Agent 状态，不允许部分提交
 
+> **详细的跨域委托链实现 (含不变量、全流程时序、KMSS delegate API) 见 [iam_auth_architecture.md §9](/security/llm_agent_defense/iam_auth_architecture)。**
+
 #### 3.1.3 短时凭证配方（OAuth 2.0 + JWT）
 
 **协议流程**：
@@ -269,6 +271,8 @@ trust_domain: cloud.local
 - **降级路径**：SPIRE Server 不可达时，缓存的 SVID 仍可使用直到 TTL 截止；不允许运行无身份进程（白名单策略）
 - **撤销实时性**：车端通过 SPIRE Federated Bundle 的 push 通道实现 <1 s 撤销
 - **隔离**：SPIRE Agent 跑在 ASIL-D 隔离核 / 安全 VM（CC EAL5+），与主 Agent 物理隔离
+
+> **车端 SPIFFE ID 域模型 (Domain/Agent/Component 层级) 见 [a2a/02 §A.6](/security/llm_agent_defense/a2a/02-vehicle-iam-architecture)。**
 
 ### 3.2 规则匹配层
 
