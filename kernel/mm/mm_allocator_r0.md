@@ -1,4 +1,18 @@
-# Linux SLUB 分配器深度源码分析 (第二轮)
+---
+title: Linux 内存分配器架构总览 (Buddy + SLUB)
+description: Buddy 合并算法数学证明、SLUB 数据结构、内存回收、页表、CPU 调度算法对偶性等深度分析
+tags:
+    - kernel
+    - mm
+    - buddy
+    - slub
+    - allocator
+---
+
+# Linux 内存分配器架构总览
+
+> 本文侧重**分配器底层原理**：Buddy 系统合并算法的数学证明、SLUB 数据结构、内存回收（VMSCAN）、页表管理与锁同步。
+> 与 `mm_allocator.md`（SLUB/kmalloc/watermark 实现）形成互补——本文讲"为什么"，`mm_allocator.md` 讲"怎么做"。
 
 ## 深入 Buddy 系统核心算法
 

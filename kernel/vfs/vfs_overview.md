@@ -1,4 +1,18 @@
-# Linux VFS (Virtual File System) 深度架构分析 v2
+---
+title: Linux VFS 虚拟文件系统总览
+description: inode/dentry/super_block/file/address_space 核心数据结构、RCU 路径查找、锁协议
+tags:
+    - kernel
+    - vfs
+    - inode
+    - dentry
+    - rcu
+---
+
+# Linux VFS 虚拟文件系统总览
+
+> 本文侧重**VFS 体系总览**：核心数据结构层次、RCU 路径查找与锁协议、地址空间操作、文件生命周期管理。
+> 与 `vfs_core_structs.md`/`inode.md`/`dcache.md` 等专题文档互补——本文讲"全貌"，专题讲"局部"。
 
 ## 1. 概述
 

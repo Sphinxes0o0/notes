@@ -11,7 +11,6 @@ title: C/C++ Notes
 ### C 语言
 - [C 语言基础](./c/c.md) - C 语言的基本语法和概念
 - [内存管理](./c/memory_management.md) - 内存分配和管理技术
-- [内存相关](./c/memory.md) - 内存操作和优化
 
 ### C++
 - [C++ 基础](./cpp/cpp.md) - C++ 语言的基本特性

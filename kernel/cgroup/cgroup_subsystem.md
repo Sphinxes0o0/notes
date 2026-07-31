@@ -1,4 +1,15 @@
-# Linux Cgroups 深度架构分析 v2
+---
+title: Linux Cgroups 资源控制子系统
+description: cgroup_subsys_state (CSS) 机制、cgroup v2 层级架构、控制器资源跟踪、任务迁移、cgroupfs 实现
+tags:
+    - kernel
+    - cgroup
+    - resource-control
+---
+
+# Linux Cgroups 资源控制子系统
+
+> Cgroups（Control Groups）是 Linux 内核提供的**资源隔离与限制机制**，本文深入分析 CSS 状态对象、cgroup v2 统一层级架构、控制器注册与任务迁移，以及 cgroupfs 用户空间接口。
 
 ## 1. 概述
 

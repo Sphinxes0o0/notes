@@ -17,3 +17,5 @@ AI 编码 Agent 框架深度分析：架构、扩展、对比、定制 workflow�
 | [Pi 扩展生态与能力](./pi-agent-ecosystem) | 9 个官方扩展示例、MCP 桥接、SDK 消费者、设计哲学 |
 | [Pi vs 其他 Agent 框架](./pi-agent-comparison) | 与 Claude Code / Aider / Codex / Gemini / Goose / OpenCode 横向对比 |
 | [Pi 定制 workflow 实操](./pi-agent-custom-workflow) | 扩展开发全生命周期 + 5 个实战配方 |
+| [Hermes Agent Memory 系统设计](./hermes_memory_design) | Agent Memory 层设计与最佳实践 |
+| [Hermes Memory 论文与开源项目 (2026H1)](./hermes_memory_research_2026h1) | Hermes Memory 领域论文与开源项目调研 |

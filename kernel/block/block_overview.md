@@ -1,4 +1,17 @@
-# Linux Block I/O 子系统深度架构分析 v2
+---
+title: Linux 块设备子系统架构总览
+description: blk-mq 多队列架构、bio/request 生命周期、I/O 调度器、写回控制、plug/unplug 机制
+tags:
+    - kernel
+    - block
+    - blk-mq
+    - io-scheduler
+---
+
+# Linux 块设备子系统架构总览
+
+> 本文侧重**块设备整体架构**：blk-mq 多队列设计原理、bio→request→dispatch 完整路径、plug/unplug 合并、I/O 调度器对比、写回控制。
+> 与 `block_core.md`/`block_mq.md`/`block_request.md` 等专题文档互补——本文讲"全貌"，专题讲"细节"。
 
 ## 1. 概述
 

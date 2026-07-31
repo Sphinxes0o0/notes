@@ -1,3 +1,13 @@
+---
+title: C 语言内存管理详解
+description: C 内存模型、动态分配机制（malloc/brk/mmap）、对齐、栈帧、内存屏障与检测工具
+tags:
+    - C
+    - Memory
+    - malloc
+    - Notes
+---
+
 # C 语言内存管理详解
 
 C 语言的内存管理和使用是其核心特性之一，提供了对底层硬件的直接控制，但也要求开发者手动管理内存。以下是对 C 语言内存设计和使用的详细分析，涵盖内存模型、分配方式、使用场景、常见问题及最佳实践。
@@ -373,4 +383,218 @@ C 语言的内存管理提供了强大的灵活性，但也带来了复杂性和
 - **常见问题**：内存泄漏、悬空指针、重复释放、越界、分配失败。
 - **最佳实践**：检查分配、置空指针、清晰所有权、使用工具、封装管理。
 
-通过理解内存模型、谨慎管理动态内存、遵循最佳实践，开发者可以在 C 中实现高效且安全的内存使用。对于复杂项目，考虑使用内存管理工具或设计自定义分配器以优化性能和可靠性。 
+通过理解内存模型、谨慎管理动态内存、遵循最佳实践，开发者可以在 C 中实现高效且安全的内存使用。对于复杂项目，考虑使用内存管理工具或设计自定义分配器以优化性能和可靠性。
+
+---
+
+## 附录 A：动态内存分配的底层机制
+
+### brk / mmap 系统调用
+
+在 Linux 系统中，动态内存分配通常通过 `brk()` 或 `mmap()` 系统调用实现：
+
+- **`brk()` 系统调用**：调整堆的大小。当请求的内存较小时（通常小于 128KB），glibc 的内存分配器会使用 `brk()` 来扩展堆。
+- **`mmap()` 系统调用**：直接映射匿名内存区域。当请求的内存较大时，分配器会使用 `mmap()` 创建独立的内存映射。
+
+glibc 实现了多层分配器：
+
+| 分配器 | 特点 | 适用场景 |
+|--------|------|----------|
+| **ptmalloc2**（glibc 默认） | 将内存分为 chunk 进行管理，per-thread arena | 通用场景 |
+| **tcmalloc**（Google） | 线程缓存、size-class 分桶 | 多线程高并发 |
+| **jemalloc**（FreeBSD） | 多 arena、SLAB 类、碎片率低 | 长寿命服务、Redis 等 |
+
+### malloc / calloc / realloc / free 实战
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // 使用 malloc 分配内存（不初始化）
+    int *arr = (int *)malloc(10 * sizeof(int));
+    if (arr == NULL) return -1;
+    for (int i = 0; i < 10; i++) arr[i] = i;
+
+    // calloc 自动初始化为 0
+    int *arr2 = (int *)calloc(10, sizeof(int));
+
+    // realloc 调整大小
+    int *arr3 = (int *)realloc(arr, 20 * sizeof(int));
+    if (arr3 != NULL) arr = arr3;
+
+    free(arr);
+    free(arr2);
+    free(arr3);
+    return 0;
+}
+```
+
+---
+
+## 附录 B：内存对齐详解
+
+### 为什么需要对齐
+
+1. **硬件限制**：大多数 CPU 要求数据按特定边界访问，否则可能触发硬件异常或性能下降
+2. **性能考虑**：对齐的数据访问比非对齐访问快数倍
+3. **跨平台兼容**：不同平台的对齐要求可能不同
+
+### 基本类型对齐值
+
+| 类型 | 大小 | 对齐要求 |
+|------|------|---------|
+| `char` | 1 字节 | 1 字节 |
+| `short` | 2 字节 | 2 字节 |
+| `int` | 4 字节 | 4 字节 |
+| `long` | 8 字节（64位） | 8 字节 |
+| `float` | 4 字节 | 4 字节 |
+| `double` | 8 字节 | 8 字节（32位系统为 4 字节） |
+| 指针 | 8 字节（64位） | 8 字节 |
+
+结构体的对齐要求是所有成员的最大对齐值。
+
+### 结构体对齐与 `#pragma pack`
+
+```c
+#include <stdio.h>
+
+// 默认对齐：最大成员对齐值的整数倍
+struct Unpacked {
+    char a;   // 偏移 0
+    int b;    // 偏移 4-7（需要 3 字节填充）
+    char c;   // 偏移 8
+};            // 总大小：12 字节
+
+// 强制 1 字节对齐
+#pragma pack(push, 1)
+struct Packed {
+    char a;   // 偏移 0
+    int b;    // 偏移 1-4
+    char c;   // 偏移 5
+};            // 总大小：6 字节
+#pragma pack(pop)
+
+int main() {
+    printf("Unpacked size: %zu\n", sizeof(struct Unpacked)); // 12
+    printf("Packed size: %zu\n", sizeof(struct Packed));     // 6
+    return 0;
+}
+```
+
+### `__attribute__((aligned))` 指定对齐
+
+```c
+struct Aligned16 { int x; } __attribute__((aligned(16)));  // 整体按 16 字节对齐
+struct Aligned32 { double a; char b; } __attribute__((aligned(32)));
+```
+
+---
+
+## 附录 C：栈帧结构
+
+x86-64 函数调用栈帧布局：
+
+```
+高地址
++------------------+
+|    参数 N        |  ← 函数参数（从右向左压栈）
+|    参数 2        |
+|    参数 1        |
++------------------+
+|   返回地址       |  ← 调用指令的下一条地址
++------------------+
+|   保存的 rbp     |  ← 上一个函数的栈帧基址
++------------------+
+|   局部变量 N     |
+|   ...            |
+|   局部变量 1     |
++------------------+
+低地址
+```
+
+栈溢出常见原因：
+
+1. **递归调用过深**：无终止条件或递归深度过大
+2. **大数组分配**：在栈上分配过大的局部变量
+3. **不合理的链式调用**：深层函数调用链
+
+```c
+// 安全替代：用堆或 static
+void safe_allocation() {
+    int *arr = (int *)malloc(sizeof(int) * 1000000);
+    if (arr) {
+        // 安全使用
+        free(arr);
+    }
+}
+```
+
+栈帧相关寄存器：`rsp`（栈顶指针）、`rbp`（栈帧基指针）、返回地址紧邻栈帧。GCC 提供 `__builtin_frame_address()` 与 `__builtin_return_address()`。
+
+---
+
+## 附录 D：内存屏障与 `volatile`
+
+### 编译器优化与内存 reorder
+
+```c
+int flag = 0;
+int value = 0;
+
+void writer() {
+    value = 42;     // 可能被编译器/CPU 重排到 flag = 1 之后
+    flag = 1;
+}
+```
+
+### 屏障类型
+
+| 屏障 | 说明 |
+|------|------|
+| `__asm__ __volatile__("" ::: "memory")` | GCC 编译器屏障 |
+| `std::atomic_thread_fence(std::memory_order_seq_cst)` | C++11 原子屏障 |
+| `MMIO_WRITE_BARRIER_64()` | 设备内存写屏障 |
+
+### `volatile` 关键字
+
+```c
+volatile int *device_reg = (volatile int *)0x40021000;
+int value = *device_reg;   // 不会被优化掉
+```
+
+> **注意**：`volatile` 不提供跨线程同步语义，不能替代原子操作或锁。
+
+---
+
+## 附录 E：内存检测工具
+
+### Valgrind Memcheck
+
+```bash
+valgrind --leak-check=full ./program          # 检测内存泄漏
+valgrind --track-origins=yes ./program        # 检测未初始化内存
+valgrind --tool=memcheck ./program            # 通用内存操作检查
+```
+
+### AddressSanitizer (ASan)
+
+```bash
+gcc -fsanitize=address -g program.c -o program
+```
+
+可检测：
+
+- 堆/栈/全局缓冲区溢出
+- 释放后使用（use-after-free）
+- 返回后使用（use-after-return）
+- 重复释放
+
+### 其他工具
+
+| 工具 | 用途 |
+|------|------|
+| `mtrace` | GNU 内存分配追踪 |
+| `dmalloc` | Debug memory allocator |
+| Electric Fence | 缓冲区溢出检测 |
+| Massif | 堆 profiling（Valgrind 子工具） | 

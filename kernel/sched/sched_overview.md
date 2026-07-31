@@ -1,4 +1,16 @@
-# Linux 调度器深度架构分析 v2
+---
+title: Linux 调度器架构总览
+description: 从运行队列架构、CFS 红黑树、RT/Deadline、负载均衡、PELT 到调度策略的系统级总览
+tags:
+    - kernel
+    - scheduler
+    - overview
+---
+
+# Linux 调度器架构总览
+
+> 本文侧重**整体架构与调度策略**：runqueue 锁协议、CFS / RT / Deadline 三大调度器、调度域、负载均衡、PELT 等。
+> 与 `sched_cfs.md`（CFS 算法细节）、`sched_deep_dive_r2.md`（EEVDF 深度）形成互补。
 
 ## 1. 概述
 

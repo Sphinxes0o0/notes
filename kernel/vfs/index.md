@@ -7,6 +7,7 @@
 ## 目录结构
 
 ### 核心框架
+- [VFS 架构总览 (RCU 路径查找、锁协议)](./vfs_overview.md)
 - [VFS 核心数据结构](./vfs_core_structs.md)
 - [VFS 抽象层 API](./vfs_api.md)
 - [Dentry 缓存](./dcache.md)

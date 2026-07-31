@@ -9,6 +9,7 @@
 ### 核心框架
 - [MM 核心数据结构](./mm_core_structs.md)
 - [MM 内存分配器](./mm_allocator.md)
+- [MM 分配器架构总览 (Buddy + SLUB 数学证明)](./mm_allocator_r0.md)
 - [MM 页面回收机制](./mm_page_reclaim.md)
 
 ### 内存管理
