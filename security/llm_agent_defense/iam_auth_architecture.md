@@ -573,11 +573,11 @@ L0: spiffe://oem.com/cd/voice/01            (SVID, 1h)
 ## 13. 参考资料
 
 - [SPIFFE / SPIRE](https://spiffe.io/) — 工作负载身份标准
-- [SPIFFE Federation](https://spiffe.io/docs/latest/spire-about/spire-federation/) — 跨域信任
-- [OAuth 2.0 Token Exchange (RFC 8693)](https://datatracker.ietf.org/doc/rfc/8693/) — delegation token 灵感
-- [JSON Web Token (RFC 7519)](https://datatracker.ietf.org/doc/rfc/7519/) — 当前 token 格式
-- [CWT (RFC 8392)](https://datatracker.ietf.org/doc/rfc/8392/) — 车规备选格式
-- [NIST SP 800-204D](https://csrc.nist.gov/publications/detail/sp/800-204d/final) — Service Mesh Security
+- [SPIFFE Federation Spec](https://spiffe.io/docs/latest/spiffe-specs/spiffe_federation/) — 跨域信任
+- [OAuth 2.0 Token Exchange (RFC 8693)](https://datatracker.ietf.org/doc/rfc8693/) — delegation token 灵感
+- [JSON Web Token (RFC 7519)](https://datatracker.ietf.org/doc/rfc7519/) — 当前 token 格式
+- [CWT (RFC 8392)](https://datatracker.ietf.org/doc/rfc8392/) — 车规备选格式
+- [NIST SP 800-204D](https://csrc.nist.gov/pubs/sp/800/204/d/final) — Service Mesh Security
 - [OWASP API Security Top 10](https://owasp.org/www-project-api-security/)
 - [车端 KMSS 内部规范] — KMSS 团队提供的 lib 文档与 header
 ---

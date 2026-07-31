@@ -4,6 +4,7 @@
 
 | 文档 | 描述 | 源码位置 |
 |------|------|----------|
+| [locking_overview.md](locking_overview.md) | **同步体系总览**：内存屏障、qspinlock、Mutex、RCU、rwsem | kernel/locking/ |
 | [locking_subsystem.md](locking_subsystem.md) | 锁: spinlock, mutex, rwsem, percpu | kernel/locking/ |
 | [locking_deep_dive_r2.md](locking_deep_dive_r2.md) | 深度分析 R2: MCS队列, mutex活锁, rwsem优化, lockdep环检测 | kernel/locking/ |
 

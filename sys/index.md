@@ -14,6 +14,8 @@ title: System Programming Notes
 ### 系统编程基础
 - [ELF 文件格式](./fundamentals/elf.md) - 可执行文件格式详解
 - [Linux 系统编程](./fundamentals/linux_system_programming.md) - Linux 系统编程基础
+- [TTY / Shell / Console](./tty_shell_console.md) - 终端与控制台子系统
+- [软件性能深度思考](./software-performance-deep-thinking.md) - Brendan Gregg 性能方法论
 
 ### 进程间通信 (IPC)
 - [Linux IPC](./ipc/linux_ipc.md) - Linux 进程间通信机制总览
