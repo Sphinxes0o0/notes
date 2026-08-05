@@ -427,6 +427,36 @@ export default defineConfig({
           ]
         }
       ],
+      '/a2a/': [
+        {
+          text: 'A2A 协议（深入浅出）',
+          items: [
+            { text: '概述', link: '/a2a/' },
+            {
+              text: '基础概念篇',
+              items: [
+                { text: '01 · A2A 协议入门', link: '/a2a/01-introduction' },
+                { text: '02 · 核心概念', link: '/a2a/02-core-concepts' }
+              ]
+            },
+            {
+              text: '协议篇',
+              items: [
+                { text: '03 · 协议深度', link: '/a2a/03-protocol-deep-dive' },
+                { text: '04 · 安全与企业级', link: '/a2a/04-security-enterprise' }
+              ]
+            },
+            {
+              text: '实战篇',
+              items: [
+                { text: '05 · 实战 1：Hello World', link: '/a2a/05-hands-on-helloworld' },
+                { text: '06 · 实战 2：流式 + 多轮对话', link: '/a2a/06-hands-on-streaming' },
+                { text: '07 · 实战 3：多 Agent 协作', link: '/a2a/07-hands-on-multi-agent' }
+              ]
+            }
+          ]
+        }
+      ],
       '/security/': [
         {
           text: '安全工具笔记',
