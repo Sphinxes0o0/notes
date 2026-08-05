@@ -15,6 +15,13 @@ title: Middleware Notes
 - [vSOME/IP](./someip/vsomeip.md) - vSOME/IP 实现详解
 - [SOME/IP 安全](./someip/security.md) - SOME/IP 安全机制
 
+### Agent 协议
+
+- [A2A 车载部署与安全设计](./a2a.md) - 仅车内域控制器场景下的 A2A + TEE + KMSS 设计
+- [A2A × SPIFFE 车内零信任身份方案](./a2a_spiffe.md) - 基于 SPIFFE/SPIRE 的 workload identity 方案, 不强制依赖 TEE
+- [A2A × IAM 集成设计](./a2a_iam_integration.md) - 现有 IAM 三模块(Identity/Auth/CertMgr) 与 A2A 协议栈的对接、C++ 开源栈选型
+- [A2A 协议入门指南](./a2a_getting_started.md) - 从零开始理解 A2A 协议、四核心概念、规范精读路径、动手实践与车端落地路径
+
 ## 学习目标
 
 通过系统学习中间件技术，掌握：

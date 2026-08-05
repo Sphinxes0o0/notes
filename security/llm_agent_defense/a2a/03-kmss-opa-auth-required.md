@@ -1210,22 +1210,22 @@ Client 责任:
 ### 判断是否需要用户确认的决策树
 
 ```
-是否需要用户确认？
+// 是否需要用户确认？
 
-问自己三个问题:
+// 问自己三个问题:
 
-Q1: 这个操作是安全关键的吗？
-    (是否在 safety_critical_skills 列表中?)
-    → YES: 需要确认 (少数例外: ADAS 自动触发)
-    → NO:  继续 Q2
+// Q1: 这个操作是安全关键的吗？
+//    (是否在 safety_critical_skills 列表中?)
+//    → YES: 需要确认 (少数例外: ADAS 自动触发)
+//    → NO:  继续 Q2
 
-Q2: 这个操作会导致物理世界的变化吗？
-    (actuate/unlock/disable/deploy/flash/...)
-    → YES: 继续 Q3
-    → NO:  不需要确认 (纯数据读取)
+// Q2: 这个操作会导致物理世界的变化吗？
+//    (actuate/unlock/disable/deploy/flash/...)
+//    → YES: 继续 Q3
+//    → NO:  不需要确认 (纯数据读取)
 
-Q3: 调用方是来自低安全域吗？
-    (调用方 ASIL 等级 < 目标 ASIL 等级)
+// Q3: 调用方是来自低安全域吗？
+//    (调用方 ASIL 等级 < 目标 ASIL 等级)
     或 (调用方 domain 是 infotainment/connectivity)
     → YES: 需要确认
     → NO:  不需要确认 (如 ADAS→Chassis, 同安全等级的物理操作)

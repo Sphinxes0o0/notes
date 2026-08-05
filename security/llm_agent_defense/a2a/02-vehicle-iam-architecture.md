@@ -665,7 +665,6 @@ Agent (adas-controller)       TEE           KMSS
 
 ### B.3.2 服务启动: 发布 Agent Card + 启动 gRPC Server
 
-```
 Agent 加载配置 → 生成 Agent Card → 启动 gRPC Server with mTLS
 
 配置文件 (agent-config.yaml):

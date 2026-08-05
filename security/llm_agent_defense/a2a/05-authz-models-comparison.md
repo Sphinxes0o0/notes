@@ -139,7 +139,7 @@ OpenFGA Check API:
   + condition check: 
     "skill:emergency_brake 的 requires_confirmation = user_confirm_if_cross_domain"
     "agent:voice-assistant 的 domain ≠ agent:adas-controller 的 domain"
-    → 需要用户确认！
+    // → 需要用户确认！
 
 最终结果:
   { allowed: true, conditions_met: false, missing: ["user_confirmation"] }
