@@ -74,7 +74,7 @@
 ## 2. Phase 0: 启动前 — Agent Cert 的获取 (纯 IAM)
 
 ```
-这是 A2A 协议流程开始之前发生的事情，但决定了 A2A 的根基。
+// 这是 A2A 协议流程开始之前发生的事情，但决定了 A2A 的根基。
 
 时序:
                           KMSS
@@ -119,10 +119,10 @@ IAM 在此阶段完成的:
 ### 关键设计: Agent Card 此时还不存在
 
 ```
-注意: Phase 0 只获得身份，Agent Card 是在 Phase 1 用这个身份生成的。
+// 注意: Phase 0 只获得身份，Agent Card 是在 Phase 1 用这个身份生成的。
 
 Agent Card 中 securitySchemes 的 mutualTls 不是空声明——
-它背后是 Phase 0 中 KMSS 已经签发、TEE 中已有私钥的真实证书。
+// 它背后是 Phase 0 中 KMSS 已经签发、TEE 中已有私钥的真实证书。
 ```
 
 ---
@@ -242,7 +242,7 @@ Client Agent 发现 Remote Agent:
     │    车端不用 OAuth scope, 用证书"   │
 
 关键: Agent Card 的 securitySchemes 就是 IAM 向 A2A 客户端
-     宣告 "你需要什么凭证才能和我说话" 的唯一渠道。
+//    宣告 "你需要什么凭证才能和我说话" 的唯一渠道。
 ```
 
 ---
