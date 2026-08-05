@@ -88,7 +88,7 @@ A2A-Version: 1.0
       "messageId": "msg-001",
       "role": "ROLE_USER",
       "parts": [
-        { "text": "Say hello." }
+        { "kind": "text", "text": "Say hello." }
       ]
     }
   }
@@ -114,7 +114,7 @@ Content-Type: application/json
         "messageId": "msg-002",
         "role": "ROLE_AGENT",
         "parts": [
-          { "text": "Processing request..." }
+          { "kind": "text", "text": "Processing request..." }
         ]
       }
     },
@@ -123,7 +123,7 @@ Content-Type: application/json
         "artifactId": "art-001",
         "name": "result",
         "parts": [
-          { "text": "Hello, World!" }
+          { "kind": "text", "text": "Hello, World!" }
         ]
       }
     ],
@@ -131,12 +131,12 @@ Content-Type: application/json
       {
         "messageId": "msg-001",
         "role": "ROLE_USER",
-        "parts": [{ "text": "Say hello." }]
+        "parts": [{ "kind": "text", "text": "Say hello." }]
       },
       {
         "messageId": "msg-002",
         "role": "ROLE_AGENT",
-        "parts": [{ "text": "Processing request..." }]
+        "parts": [{ "kind": "text", "text": "Processing request..." }]
       }
     ]
   }
@@ -186,9 +186,9 @@ sequenceDiagram
     Note over S: 3. Process
     S-->>C: Task{ status: working }
     Note over C,S: 4. Stream updates (可选)
-    S-->>C: statusUpdate{ state: working }
-    S-->>C: artifactUpdate{ parts:[text/flight] }
-    S-->>C: statusUpdate{ state: completed }
+    S-->>C: status-update{ state: working }
+    S-->>C: artifact-update{ parts:[text/flight] }
+    S-->>C: status-update{ state: completed }
     Note over C: 5. Return result
     C-->>U: 完整行程
 ```

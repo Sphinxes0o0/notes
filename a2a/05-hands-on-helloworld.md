@@ -104,6 +104,26 @@ TASK_STORE: dict[str, dict] = {}
 
 真实生产用 PostgreSQL / Redis；Demo 用内存 dict。
 
+### 5.4.2.5 JSON-RPC 错误载体
+
+```python
+class JsonRpcError(Exception):
+    """承载 JSON-RPC error payload 的自定义异常。"""
+    def __init__(self, code: int, message: str, data=None):
+        self.code = code
+        self.message = message
+        self.data = data
+        super().__init__(message)
+
+    def to_payload(self) -> dict:
+        err = {"code": self.code, "message": self.message}
+        if self.data is not None:
+            err["data"] = self.data
+        return err
+```
+
+不用 `raise {...}` + `except dict as err` 是因为这两条**在 Python 里都不可运行**（前者 TypeError，后者 `dict` 不是 `BaseException` 子类，except 子句根本编译不过）。自定义异常是最干净的替代。
+
 ### 5.4.3 业务逻辑
 
 ```python
@@ -119,40 +139,49 @@ def execute_logic(user_text: str) -> str:
 ```python
 async def handle_message_send(params: dict) -> dict:
     msg = params["message"]
-    task_id    = params.get("taskId")    or str(uuid.uuid4())
-    context_id = params.get("contextId") or str(uuid.uuid4())
-
     user_text = text_of(msg)
 
-    # 1) 拿到或新建 Task
-    task = TASK_STORE.get(task_id) or {
-        "kind": "task",
-        "id": task_id,
-        "contextId": context_id,
-        "status": {"state": "TASK_STATE_SUBMITTED", "timestamp": now_iso()},
-        "artifacts": [],
-        "history": [],
-    }
+    # 决定 taskId / contextId：
+    #   - follow-up：客户端回传了已分配的 taskId，服务端必须复用
+    #   - 首轮：客户端**不能**自造 id，服务端总是自己生成
+    client_task_id = params.get("taskId")
+    existing = TASK_STORE.get(client_task_id) if client_task_id else None
+    if existing:
+        task_id    = existing["id"]
+        context_id = existing["contextId"]
+        task       = existing
+    else:
+        task_id    = str(uuid.uuid4())
+        context_id = params.get("contextId") or str(uuid.uuid4())
+        task = {
+            "kind": "task",
+            "id": task_id,
+            "contextId": context_id,
+            "status": {"state": "TASK_STATE_SUBMITTED", "timestamp": now_iso()},
+            "artifacts": [],
+            "history": [],
+        }
+
     task["history"].append(msg)
 
-    # 2) 转 working
+    # 1) 转 working
     task["status"] = {
         "state": "TASK_STATE_WORKING",
         "message": make_agent_msg("Processing request..."),
         "timestamp": now_iso(),
     }
 
-    # 3) 跑业务
+    # 2) 跑业务
     result_text = execute_logic(user_text)
 
-    # 4) 产出 Artifact
+    # 3) 产出 Artifact
     task["artifacts"].append({
         "artifactId": str(uuid.uuid4()),
         "name": "result",
         "parts": [{"kind": "text", "text": result_text}],
     })
 
-    # 5) 完成
+    # 4) 完成
     task["status"] = {
         "state": "TASK_STATE_COMPLETED",
         "message": make_agent_msg("Done."),
@@ -166,8 +195,7 @@ async def handle_message_send(params: dict) -> dict:
 
 留意几处关键：
 
-- **`task_id = params.get("taskId") or str(uuid.uuid4())`**：多轮时客户端会传 taskId，第一轮不会。这是 v1.0 的标准模式：**客户端永远不能自己造 taskId**。
-- **`contextId` 同样服务端生成**。
+- **`taskId` / `contextId` 由服务端分配**：只有当客户端传回来的 `taskId` **已经在 TASK_STORE 里**（即 follow-up）时才复用；首轮请求里客户端即使塞了任何 `taskId`/`contextId` 也会被忽略，服务端重新生成。这是 v1.0 的标准模式——客户端永远不能自己造 id。
 - **Task 是不可变快照**：每次都生成一个新的 status 对象，而不是 in-place 修改。
 - **`history[]`** 记录了所有消息，便于客户端审计 / 续传。
 
@@ -186,14 +214,14 @@ async def rpc_endpoint(request):
     try:
         result = await dispatch(method, params)
         return JSONResponse({"jsonrpc": "2.0", "id": rid, "result": result})
-    except dict as err:
-        return JSONResponse({"jsonrpc": "2.0", "id": rid, "error": err})
+    except JsonRpcError as e:
+        return JSONResponse({"jsonrpc": "2.0", "id": rid, "error": e.to_payload()})
 ```
 
 注意几个细节：
 
 - **JSON-RPC 错误仍返回 HTTP 200**，错误信息放在 `error` 字段里（这是 JSON-RPC 2.0 规范）。
-- **`raise dict`** 是一种 hack：让我们可以**不带异常堆栈**地传递 JSON-RPC error。
+- **`JsonRpcError`** 是一个轻量自定义异常：让它承载 `code` / `message` / `data`，被 except 捕获后原样塞进 JSON-RPC `error`。比起直接 `raise {...}`（Python 里会 TypeError）和 `except dict as ...`（不是合法 except 子句），这是干净且可运行的做法。
 
 ### 5.4.6 启动
 

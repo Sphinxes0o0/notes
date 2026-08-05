@@ -289,7 +289,7 @@ async def hook(request: Request):
 - [x] **JWT 短有效期**（5-15 分钟），过期必须重发。
 - [x] **JWKS 缓存 + 轮转**支持。
 - [x] **A2A-Token 一次性 / 短期**。
-- [x] **接收端去重**（按 taskId + statusUpdate hash）。
+- [x] **接收端去重**（按 taskId + status-update hash）。
 - [x] **拒绝回放**：每条 webhook 都带 `timestamp` + `nonce`，超过 5 分钟视为过期。
 - [x] **Webhook 签名校验**（一些 Agent 在 body 加 HMAC）。
 

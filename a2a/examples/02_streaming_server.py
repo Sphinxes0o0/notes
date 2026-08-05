@@ -162,18 +162,20 @@ async def stream_logic(task: dict, user_text: str):
             "status": task["status"],
         })
 
-        # 流式产出 artifact（每个 Day 一块）
+        # 流式产出 artifact（每个 Day 一块）。同时在内存里维护完整 artifact，
+        # 这样 tasks/get 拿到的 Task 包含**整份行程**，而不是只剩最后一天。
         artifact_id = str(uuid.uuid4())
         task.setdefault("artifacts", [])
+        accumulated_parts: list[dict] = []
         for i, day in enumerate(DAYS, 1):
             await asyncio.sleep(0.3)   # 模拟 LLM 流式生成
             text_chunk = f"Day {i}: {day}"
+            accumulated_parts.append({"kind": "text", "text": text_chunk})
             art = {
                 "artifactId": artifact_id,
                 "name": "itinerary",
                 "parts": [{"kind": "text", "text": text_chunk}],
             }
-            task["artifacts"].append(art) if i == len(DAYS) else None
             yield ("artifact_update", {
                 "kind": "artifact-update",
                 "taskId": task_id,
@@ -182,6 +184,13 @@ async def stream_logic(task: dict, user_text: str):
                 "append": i > 1,
                 "lastChunk": i == len(DAYS),
             })
+
+        # 把**完整**的 artifact 存进 Task，供 tasks/get 拉取
+        task["artifacts"].append({
+            "artifactId": artifact_id,
+            "name": "itinerary",
+            "parts": accumulated_parts,
+        })
 
         # 终态
         task["status"] = {"state": "TASK_STATE_COMPLETED",
@@ -226,18 +235,26 @@ async def rpc_endpoint(request: Request):
     if method == "message/stream":
         # 准备 task
         msg = params["message"]
-        task_id = params.get("taskId") or str(uuid.uuid4())
-        context_id = params.get("contextId") or str(uuid.uuid4())
-        task = TASKS.get(task_id, {
-            "kind": "task",
-            "id": task_id,
-            "contextId": context_id,
-            "status": {"state": "TASK_STATE_SUBMITTED", "timestamp": now_iso()},
-            "artifacts": [],
-            "history": [],
-            "metadata": {},
-        })
-        TASKS[task_id] = task
+        # follow-up 才复用客户端的 taskId；首轮由服务端生成
+        client_task_id = params.get("taskId")
+        existing = TASKS.get(client_task_id) if client_task_id else None
+        if existing:
+            task_id = existing["id"]
+            context_id = existing["contextId"]
+            task = existing
+        else:
+            task_id = str(uuid.uuid4())
+            context_id = params.get("contextId") or str(uuid.uuid4())
+            task = {
+                "kind": "task",
+                "id": task_id,
+                "contextId": context_id,
+                "status": {"state": "TASK_STATE_SUBMITTED", "timestamp": now_iso()},
+                "artifacts": [],
+                "history": [],
+                "metadata": {},
+            }
+            TASKS[task_id] = task
         user_text = text_of(msg)
 
         async def event_gen():

@@ -303,13 +303,22 @@ async def orch_rpc(request: Request):
 
     if method == "message/stream":
         msg = params["message"]
-        task_id = params.get("taskId") or str(uuid.uuid4())
-        context_id = params.get("contextId") or str(uuid.uuid4())
-        task = ORCH_TASKS.setdefault(task_id, {
-            "kind": "task", "id": task_id, "contextId": context_id,
-            "status": {"state": "TASK_STATE_SUBMITTED", "timestamp": now_iso()},
-            "artifacts": [], "history": [],
-        })
+        # follow-up 才复用客户端的 taskId；首轮由服务端生成
+        client_task_id = params.get("taskId")
+        existing = ORCH_TASKS.get(client_task_id) if client_task_id else None
+        if existing:
+            task_id = existing["id"]
+            context_id = existing["contextId"]
+            task = existing
+        else:
+            task_id = str(uuid.uuid4())
+            context_id = params.get("contextId") or str(uuid.uuid4())
+            task = {
+                "kind": "task", "id": task_id, "contextId": context_id,
+                "status": {"state": "TASK_STATE_SUBMITTED", "timestamp": now_iso()},
+                "artifacts": [], "history": [],
+            }
+            ORCH_TASKS[task_id] = task
         user_text = text_of(msg)
 
         async def gen():

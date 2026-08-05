@@ -15,7 +15,7 @@
 | **Context** | contextId | 服务器分配的会话粘合剂，让多次往返都归属同一个上下文 |
 | **Part 变体** | Part kind | `text` / `raw` / `url` / `data` 四种之一 |
 | **任务状态** | TaskState | `submitted/working/input-required/auth-required/completed/failed/canceled/rejected` |
-| **流事件** | Streaming Event | `task` / `message` / `statusUpdate` / `artifactUpdate` |
+| **流事件** | Streaming Event | `task` / `message` / `status-update` / `artifact-update` |
 
 下面分组展开。
 
@@ -218,7 +218,7 @@ https://<agent-host>/.well-known/agent-card.json
 ### Task 的关键属性
 
 1. **id 由服务端生成**，客户端**永远不能**自己造（必须先发 `message/send`，让服务端返回 id）。
-2. **Task 是不可变的快照**：每条 statusUpdate 都是一份新 Task，不是 in-place 改字段。
+2. **Task 是不可变的快照**：每条 status-update 都是一份新 Task，不是 in-place 改字段。
 3. **`history` 包含完整对话记录**（可选，取决于 `stateTransitionHistory` 能力开关）。
 4. **`artifacts` 是 Agent 已经"端出来"的产物**——客户端可以认为"这部分已经稳定可用"。
 5. **`Task` ≠ `Message`**：如果同步调用、Agent 一次性返回，且不需要状态跟踪，服务端也可以**直接回一个 `Message` 而不是 `Task`**。
@@ -361,7 +361,7 @@ classDiagram
 | 概念 | MCP | A2A |
 |--|--|--|
 | 基本单元 | `Tool`（无状态） | `Task`（有状态、有 id） |
-| 进度回报 | 没有（同步调完返回） | 流式 statusUpdate + 终态 |
+| 进度回报 | 没有（同步调完返回） | 流式 status-update + 终态 |
 | 反馈 | 单次结果 | 完整对话历史 (`history`) |
 | 内容类型 | JSON Schema 输入输出 | `Part` 多模态 |
 | 中断 / 续传 | 不适用 | `input-required` + `contextId` |

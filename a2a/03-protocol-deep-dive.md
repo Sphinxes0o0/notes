@@ -286,9 +286,9 @@ data: {"jsonrpc":"2.0","id":"req-002","result":{"kind":"status-update","taskId":
 
 ```mermaid
 flowchart LR
-    A[Task kind=task<br/>初次快照] --> B[statusUpdate<br/>状态变化]
-    A --> C[artifactUpdate<br/>增量产物]
-    B --> D[statusUpdate final=true<br/>进入终态]
+    A[Task kind=task<br/>初次快照] --> B[status-update<br/>状态变化]
+    A --> C[artifact-update<br/>增量产物]
+    B --> D[status-update final=true<br/>进入终态]
     C --> D
 ```
 
@@ -296,10 +296,10 @@ flowchart LR
 |--|--|--|
 | `task` | 流开始时的"当前快照"，可省略 | `id`, `contextId`, `status`, `artifacts[]`, `history[]` |
 | `message` | Agent 又说了一句话 | `messageId`, `role=ROLE_AGENT`, `parts[]` |
-| `statusUpdate` | 状态变化 | `taskId`, `status.state`, `status.message?`, `final?` |
-| `artifactUpdate` | 产物增量 | `taskId`, `artifact`, `append?`, `lastChunk?` |
+| `status-update` | 状态变化 | `taskId`, `status.state`, `status.message?`, `final?` |
+| `artifact-update` | 产物增量 | `taskId`, `artifact`, `append?`, `lastChunk?` |
 
-`final=true` 的 statusUpdate 表示**流结束**。
+`final=true` 的 status-update 表示**流结束**。
 
 ### 流式拼接 artifact
 
@@ -512,19 +512,19 @@ POST /a2a
   method=message/stream
   params.message={ role=USER, parts=[text="plan my trip"] }
 ← SSE:  task kind=task status=working
-← SSE:  statusUpdate state=working
-← SSE:  statusUpdate state=input-required message="which month?"
+← SSE:  status-update state=working
+← SSE:  status-update state=input-required message="which month?"
 
 # --- 3. 第二轮（续）---
 POST /a2a
   method=message/stream
   params.message={ role=USER, parts=[text="next June"] }
   params.taskId="task-1" params.contextId="ctx-1"
-← SSE:  statusUpdate state=working
-← SSE:  artifactUpdate artifact={parts:[text="Day 1..."]} lastChunk=false
-← SSE:  artifactUpdate artifact={parts:[text="Day 2..."]} lastChunk=false
-← SSE:  artifactUpdate artifact={parts:[text="Day 7..."]} lastChunk=true
-← SSE:  statusUpdate state=completed final=true
+← SSE:  status-update state=working
+← SSE:  artifact-update artifact={parts:[text="Day 1..."]} lastChunk=false
+← SSE:  artifact-update artifact={parts:[text="Day 2..."]} lastChunk=false
+← SSE:  artifact-update artifact={parts:[text="Day 7..."]} lastChunk=true
+← SSE:  status-update state=completed final=true
 ```
 
 注意几个关键点：

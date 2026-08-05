@@ -32,6 +32,30 @@ import uvicorn
 HOST = "127.0.0.1"
 PORT = 9999
 
+
+# ----------------------------------------------------------------------------
+# 0. JSON-RPC 错误载体
+# ----------------------------------------------------------------------------
+class JsonRpcError(Exception):
+    """承载 JSON-RPC error payload 的自定义异常。
+
+    用 raise 而不是 dict —— 因为 `raise { ... }` 在 Python 里是 TypeError，
+    `except dict` 也不是合法语法。专门的异常类既能被 except 捕获，
+    又能干净地把 code/message/data 传给 rpc_endpoint。
+    """
+
+    def __init__(self, code: int, message: str, data=None):
+        self.code = code
+        self.message = message
+        self.data = data
+        super().__init__(message)
+
+    def to_payload(self) -> dict:
+        err = {"code": self.code, "message": self.message}
+        if self.data is not None:
+            err["data"] = self.data
+        return err
+
 # ----------------------------------------------------------------------------
 # 1. Agent Card
 # ----------------------------------------------------------------------------
@@ -107,10 +131,19 @@ def make_message(role: str, text: str, **extra) -> dict:
 async def handle_message_send(params: dict) -> dict:
     """实现 message/send。返回 Task 对象（同步模式）。"""
     msg = params["message"]
-    task_id = params.get("taskId") or str(uuid.uuid4())
-    context_id = params.get("contextId") or str(uuid.uuid4())
-
     user_text = get_input_text(msg)
+
+    # 决定 taskId / contextId：
+    #   - follow-up：客户端回传了已分配的 taskId，服务端必须复用
+    #   - 首轮：客户端**不能**自造 id，服务端总是自己生成
+    client_task_id = params.get("taskId")
+    existing = TASK_STORE.get(client_task_id) if client_task_id else None
+    if existing:
+        task_id = existing["id"]
+        context_id = existing["contextId"]
+    else:
+        task_id = str(uuid.uuid4())
+        context_id = params.get("contextId") or str(uuid.uuid4())
 
     # --- 1. 创建/拿到 Task ---
     task = TASK_STORE.get(task_id) or {
@@ -159,7 +192,7 @@ async def handle_message_send(params: dict) -> dict:
 async def handle_tasks_get(params: dict) -> dict:
     task = TASK_STORE.get(params["taskId"])
     if not task:
-        raise {"code": -32001, "message": "Task not found"}
+        raise JsonRpcError(-32001, "Task not found")
     return task
 
 
@@ -169,7 +202,7 @@ def dispatch(method: str, params: dict):
         "tasks/get": handle_tasks_get,
     }
     if method not in routes:
-        raise {"code": -32601, "message": f"Method not found: {method}"}
+        raise JsonRpcError(-32601, f"Method not found: {method}")
     return routes[method](params)
 
 
@@ -196,9 +229,8 @@ async def rpc_endpoint(request: Request):
     try:
         result = await dispatch(method, params)
         return JSONResponse({"jsonrpc": "2.0", "id": rid, "result": result})
-    except dict as err:
-        # 我们用 raise 一个 dict 的方式传递 JSON-RPC error
-        return JSONResponse({"jsonrpc": "2.0", "id": rid, "error": err})
+    except JsonRpcError as e:
+        return JSONResponse({"jsonrpc": "2.0", "id": rid, "error": e.to_payload()})
     except Exception as e:
         return JSONResponse(
             {"jsonrpc": "2.0", "id": rid, "error": {"code": -32603, "message": f"Internal error: {e}"}}
