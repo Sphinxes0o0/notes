@@ -1,3 +1,7 @@
+---
+title: "Linux 内核实时(RT)调度器分析"
+description: "**文件**: `kernel/sched/sched.h:831-858`"
+---
 # Linux 内核实时(RT)调度器分析
 
 ## 1. RT调度器核心数据结构 (kernel/sched/rt.c)

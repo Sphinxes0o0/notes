@@ -1,3 +1,7 @@
+---
+title: "Linux Sound 子系统深度分析 R2"
+description: "本文档深入分析 Linux Kernel Sound 子系统中的 ASoC(ALSA System on Chip) 核心框架，重点关注 Dynamic Audio Power Management (DAPM)、DAI Link 匹配机制以及 PCM hw_params 流程。源码基于 `sound/soc/soc-dapm.c`、`sound/soc/soc-core.c` 和…"
+---
 # Linux Sound 子系统深度分析 R2
 
 ## 概述

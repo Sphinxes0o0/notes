@@ -1,3 +1,7 @@
+---
+title: "net/sched - QoS 调度框架"
+description: "Linux 流量控制 (TC) 子系统提供了 QoS 调度框架，支持复杂的流量整形、优先级控制和队列管理。"
+---
 # net/sched - QoS 调度框架
 
 ## 1. 模块架构

@@ -1,3 +1,7 @@
+---
+title: "net/bridge - 网桥实现"
+description: "Linux 网桥是二层交换机软件实现，在同一个广播域中连接多个网络接口，支持生成树协议(STP)。"
+---
 # net/bridge - 网桥实现
 
 ## 1. 模块架构

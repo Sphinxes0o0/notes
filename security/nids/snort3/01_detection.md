@@ -1,3 +1,7 @@
+---
+title: "Snort3 Detection Framework Core (detection/)"
+description: "检测框架核心模块，负责规则引擎和事件链的完整生命周期管理。"
+---
 # Snort3 Detection Framework Core (detection/)
 
 检测框架核心模块，负责规则引擎和事件链的完整生命周期管理。

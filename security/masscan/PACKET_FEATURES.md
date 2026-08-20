@@ -1,3 +1,7 @@
+---
+title: "MASSCAN 报文特征与识别"
+description: "MASSCAN 是一个高速互联网端口扫描器，其报文具有独特的特征模式。理解这些特征对于："
+---
 # MASSCAN 报文特征与识别
 
 ## 1. 概述

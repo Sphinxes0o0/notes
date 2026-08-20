@@ -1,3 +1,7 @@
+---
+title: "dst_entry 和路由缓存"
+description: "`dst_entry` 是 Linux 内核路由子系统的核心数据结构，用于缓存路由决策和相关的per-packet信息。"
+---
 # dst_entry 和路由缓存
 
 ## 1. 模块架构

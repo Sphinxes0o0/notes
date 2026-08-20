@@ -1,3 +1,7 @@
+---
+title: "OpenBMC Redfish 接口深度分析"
+description: "OpenBMC（Open Board Management Controller）是一个开源的 BMC（Baseboard Management Controller）固件项目，旨在为服务器硬件管理提供标准化接口。Redfish 是 DMTF（Distributed Management Task Force）制定的 RESTful 硬件管理接口标准，OpenBMC 通过实现 Redfish…"
+---
 # OpenBMC Redfish 接口深度分析
 
 ## 1. 概述

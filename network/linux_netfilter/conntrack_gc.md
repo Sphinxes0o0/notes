@@ -1,3 +1,7 @@
+---
+title: "Linux conntrack 双向流与 GC 机制源码级速查表"
+description: "数据结构说明"
+---
 # Linux conntrack 双向流与 GC 机制源码级速查表
 
 > 基于 Linux 5.15 内核，仅保留关键数据结构 & 流程，方便快速回顾。

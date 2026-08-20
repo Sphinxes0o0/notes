@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: TAD - Multi-Adversarial Detection for NIDS"
+description: "深度学习 IDS 容易受到对抗样本攻击："
+---
 # Paper Reading: TAD - Multi-Adversarial Detection for NIDS
 
 ## 文献信息

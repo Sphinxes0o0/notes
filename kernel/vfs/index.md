@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 VFS 子系统深度分析"
+description: "本文档是 Linux 内核 VFS (Virtual File System) 的全面深度分析，涵盖从系统调用到具体文件系统的完整架构。"
+---
 # Linux 内核 VFS 子系统深度分析
 
 ## 概述

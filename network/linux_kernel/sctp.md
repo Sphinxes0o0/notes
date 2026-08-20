@@ -1,3 +1,7 @@
+---
+title: "net/sctp - SCTP 传输协议"
+description: "SCTP (Stream Control Transmission Protocol) 是可靠的面向消息的传输协议，支持多流和多宿主。"
+---
 # net/sctp - SCTP 传输协议
 
 ## 1. 模块架构

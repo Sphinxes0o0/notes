@@ -1,3 +1,7 @@
+---
+title: "Linux 内核网络子系统 - Socket Core 分析文档"
+description: "**文件**: `net/socket.c:1759-1762`"
+---
 # Linux 内核网络子系统 - Socket Core 分析文档
 
 ## 目录

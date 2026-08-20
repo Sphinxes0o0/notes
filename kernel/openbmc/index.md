@@ -1,3 +1,7 @@
+---
+title: "OpenBMC 子系统文档索引"
+description: "OpenBMC 是基于 Linux 的开源 BMC 固件栈，核心设计基于 Phosphor D-Bus 框架。本文档索引涵盖 OpenBMC 的 8 大核心子系统的深度分析。"
+---
 # OpenBMC 子系统文档索引
 
 ## 概述

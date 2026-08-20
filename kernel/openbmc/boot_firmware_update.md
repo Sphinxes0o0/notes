@@ -1,3 +1,7 @@
+---
+title: "OpenBMC 启动控制/固件更新深度分析"
+description: "OpenBMC是Linux Foundation项目,是一个基于Yocto、OpenEmbedded、systemd和D-Bus的Linux发行版,专门为管理控制器(BMC)设计。它实现了IPMI 2.0兼容性和DCMI支持,提供基于D-Bus的接口、REST接口和Web用户界面。"
+---
 # OpenBMC 启动控制/固件更新深度分析
 
 ## 目录

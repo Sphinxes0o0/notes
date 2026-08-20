@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: SmartX Intelligent Sec - eBPF/XDP + BiLSTM"
+description: "现代 ICT 基础设施面临挑战："
+---
 # Paper Reading: SmartX Intelligent Sec - eBPF/XDP + BiLSTM
 
 ## 文献信息

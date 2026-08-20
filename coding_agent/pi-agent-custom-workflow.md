@@ -1,3 +1,7 @@
+---
+title: "Pi 定制 workflow 实操"
+description: "理论够了，本篇解决\"我具体怎么把 Pi 用出花\"。"
+---
 # Pi 定制 workflow 实操
 
 理论够了，本篇解决"我具体怎么把 Pi 用出花"。

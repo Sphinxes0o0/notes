@@ -1,3 +1,7 @@
+---
+title: "Linux 内核调度器核心结构与函数分析"
+description: "**文件**: `kernel/sched/core.c:6998-7011`"
+---
 # Linux 内核调度器核心结构与函数分析
 
 ## 1. 核心文件概述

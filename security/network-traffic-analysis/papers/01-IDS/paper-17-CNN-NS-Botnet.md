@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: CNN + Negative Selection for Botnet Detection"
+description: "结合负选择算法和 CNN。"
+---
 # Paper Reading: CNN + Negative Selection for Botnet Detection
 
 ## 文献信息

@@ -1,3 +1,7 @@
+---
+title: "Netfilter xt_HL/ipt_ECN"
+description: "ECN (Explicit Congestion Notification) 和 HL (Hop Limit) 是两个相关的 Netfilter 目标模块。"
+---
 # Netfilter xt_HL/ipt_ECN
 
 ## 1. 模块架构

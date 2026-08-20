@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Real-Time IDS for Software Defined 5G Networks"
+description: "为软件定义 5G 网络设计实时 IDS。"
+---
 # Paper Reading: Real-Time IDS for Software Defined 5G Networks
 
 ## 文献信息

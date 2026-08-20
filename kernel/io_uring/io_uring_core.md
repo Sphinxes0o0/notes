@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel io_uring 子系统核心架构分析"
+description: "io_uring 是 Linux kernel 5.1 引入的高性能异步 I/O 接口，由 Jens Axboe 开发。它通过共享内存的环形队列（Ring Buffer）实现用户态与内核态之间的高效通信，显著降低了系统调用的开销。"
+---
 # Linux Kernel io_uring 子系统核心架构分析
 
 ## 目录

@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Multilayer Framework for Insider Threat Detection"
+description: "多层混合框架结合滥用检测和异常检测。"
+---
 # Paper Reading: Multilayer Framework for Insider Threat Detection
 
 ## 文献信息

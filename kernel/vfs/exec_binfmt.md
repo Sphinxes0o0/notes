@@ -1,3 +1,7 @@
+---
+title: "VFS Exec 与 Binfmt"
+description: "Exec 是 Linux 执行新程序的核心机制。Binfmt (Binary Format) 是可执行文件格式的注册框架，支持多种可执行格式如 ELF、script 等。"
+---
 # VFS Exec 与 Binfmt
 
 ## 1. 模块架构

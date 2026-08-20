@@ -1,3 +1,7 @@
+---
+title: "net/tipc - TIPC 传输服务"
+description: "TIPC (Transparent Inter-Process Communication) 是专为集群环境设计的高性能分布式通信协议。"
+---
 # net/tipc - TIPC 传输服务
 
 ## 1. 模块架构

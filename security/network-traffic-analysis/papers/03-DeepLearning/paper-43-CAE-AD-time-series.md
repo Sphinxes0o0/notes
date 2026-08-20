@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: CAE-AD - Contrastive Autoencoder for Time Series Anomaly Detection"
+description: "对比自编码器 (Contrastive Autoencoder)。"
+---
 # Paper Reading: CAE-AD - Contrastive Autoencoder for Time Series Anomaly Detection
 
 ## 文献信息

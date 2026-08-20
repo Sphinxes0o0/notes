@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 IPC (进程间通信) 子系统分析文档"
+description: "Linux 内核的 IPC 子系统提供了多种进程间通信机制，包括："
+---
 # Linux 内核 IPC (进程间通信) 子系统分析文档
 
 ## 目录

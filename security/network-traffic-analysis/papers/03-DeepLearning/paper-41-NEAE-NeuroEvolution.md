@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: NEAE - NeuroEvolution AutoEncoder for Anomaly Detection"
+description: "结合神经进化算法和自编码器。"
+---
 # Paper Reading: NEAE - NeuroEvolution AutoEncoder for Anomaly Detection
 
 ## 文献信息

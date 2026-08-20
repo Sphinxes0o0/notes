@@ -1,3 +1,7 @@
+---
+title: "net/rxrpc - RxRPC 远程调用"
+description: "RxRPC 是用于内核到内核远程调用的协议，提供可靠的数据传输。"
+---
 # net/rxrpc - RxRPC 远程调用
 
 ## 1. 模块架构

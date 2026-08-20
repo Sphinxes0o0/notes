@@ -1,3 +1,7 @@
+---
+title: "Netfilter xt_DSCP/xt_MARK"
+description: "DSCP 和 MARK 是 Netfilter 中用于分组标记的两个目标模块，分别设置 TOS 字段和 fwmark。"
+---
 # Netfilter xt_DSCP/xt_MARK
 
 ## 1. 模块架构

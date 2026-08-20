@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel OOM Killer 分析文档"
+description: "OOM Killer (Out of Memory Killer) 是 Linux 内核在物理内存和交换空间耗尽时，用于选择并杀死进程以释放内存的机制。"
+---
 # Linux Kernel OOM Killer 分析文档
 
 ## 目录

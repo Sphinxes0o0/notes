@@ -1,3 +1,7 @@
+---
+title: "共享内存 (Shared Memory)"
+description: "共享内存是最高效的进程间通信（IPC）机制，它允许多个进程直接访问同一块物理内存，从而实现零拷贝的数据共享。"
+---
 # 共享内存 (Shared Memory)
 
 ## 📋 目录

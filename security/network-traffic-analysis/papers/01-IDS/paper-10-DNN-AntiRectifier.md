@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: DNN with AntiRectifier for Intrusion Detection"
+description: "引入 AntiRectifier 激活函数改进 DNN。"
+---
 # Paper Reading: DNN with AntiRectifier for Intrusion Detection
 
 ## 文献信息

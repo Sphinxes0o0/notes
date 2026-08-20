@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel TCP/IP Protocol Stack Analysis"
+description: "Based on my thorough analysis of the Linux kernel TCP/IP protocol stack source code, here is the comprehensive research document:"
+---
 Based on my thorough analysis of the Linux kernel TCP/IP protocol stack source code, here is the comprehensive research document:
 
 # Linux Kernel TCP/IP Protocol Stack Analysis

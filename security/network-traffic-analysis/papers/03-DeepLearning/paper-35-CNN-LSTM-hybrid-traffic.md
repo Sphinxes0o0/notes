@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: CNN-LSTM Hybrid Network for Traffic Classification"
+description: "CNN-LSTM 混合网络有效结合空间和时间特征，提升分类准确率。"
+---
 # Paper Reading: CNN-LSTM Hybrid Network for Traffic Classification
 
 ## 文献信息

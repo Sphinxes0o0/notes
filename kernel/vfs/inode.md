@@ -1,3 +1,7 @@
+---
+title: "VFS Inode 管理"
+description: "Inode (索引节点) 是 VFS 表示文件的核心数据结构。每个文件在内存中对应一个 inode，包含了文件的元数据和数据块的映射信息。"
+---
 # VFS Inode 管理
 
 ## 1. 模块架构

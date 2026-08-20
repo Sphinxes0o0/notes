@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Netlink Protocol Implementation: Comprehensive Analysis"
+description: "**File:** `include/uapi/linux/netlink.h`"
+---
 # Linux Kernel Netlink Protocol Implementation: Comprehensive Analysis
 
 ## Table of Contents

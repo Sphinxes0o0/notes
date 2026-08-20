@@ -1,3 +1,7 @@
+---
+title: "OpenBMC 硬件控制子系统深度分析"
+description: "OpenBMC（Open Baseboard Management Controller）是 Linux 基金会旗下的开源项目，旨在为 BMC（基板管理控制器）固件提供一套完整的开源软件栈。OpenBMC 硬件控制子系统是整个管理系统中最核心的部分，负责服务器物理层面的监控、控制与告警管理。这些子系统通过 D-Bus 总线进行进程间通信，采用事件驱动的架构模式…"
+---
 # OpenBMC 硬件控制子系统深度分析
 
 ## 概述

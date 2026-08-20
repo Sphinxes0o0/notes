@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Virtio 传输层与设备驱动详细分析"
+description: "Virtio 是 Linux 内核中用于虚拟化环境的标准化 I/O 虚拟化框架。它采用 frontend/backend 架构，允许客户机操作系统与宿主机之间通过共享内存进行高效通信。"
+---
 # Linux 内核 Virtio 传输层与设备驱动详细分析
 
 ## 目录

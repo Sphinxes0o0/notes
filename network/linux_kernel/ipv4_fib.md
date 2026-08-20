@@ -1,3 +1,7 @@
+---
+title: "IPv4 FIB 路由结构"
+description: "FIB (Forwarding Information Base) 是内核用于快速查找路由的数据结构。"
+---
 # IPv4 FIB 路由结构
 
 ## 1. 模块架构

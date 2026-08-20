@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: SDN Dynamics via Diffusions"
+description: "扩散模型应用于 SDN。"
+---
 # Paper Reading: SDN Dynamics via Diffusions
 
 ## 文献信息

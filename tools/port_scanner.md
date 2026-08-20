@@ -1,3 +1,7 @@
+---
+title: "端口扫描器：masscan 与 nmap 使用手册"
+description: "本文档涵盖 masscan 和 nmap 的完整使用方法、场景化命令和实战技巧。"
+---
 # 端口扫描器：masscan 与 nmap 使用手册
 
 本文档涵盖 masscan 和 nmap 的完整使用方法、场景化命令和实战技巧。

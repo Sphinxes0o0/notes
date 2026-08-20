@@ -1,3 +1,7 @@
+---
+title: "Linux TC流量控制"
+description: "**Source:** https://www.ilikejobs.com/posts/what-is-tc/"
+---
 # Linux TC流量控制
 
 **Source:** https://www.ilikejobs.com/posts/what-is-tc/

@@ -1,3 +1,7 @@
+---
+title: "AF_PACKET 套接字"
+description: "AF_PACKET 提供直接访问网络设备的能力，用于原始套接字和包捕获。"
+---
 # AF_PACKET 套接字
 
 ## 1. 模块架构

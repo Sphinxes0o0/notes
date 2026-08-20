@@ -1,3 +1,7 @@
+---
+title: "车端 LLM Agent IAM 认证架构设计"
+description: "车端任务时长跨度极大："
+---
 # 车端 LLM Agent IAM 认证架构设计
 
 > 范围：3 域控制器（AD / CD / VD） × 多 LLM Agent 场景下的身份认证与凭证生命周期。

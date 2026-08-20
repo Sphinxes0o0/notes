@@ -1,3 +1,7 @@
+---
+title: "Linux 内核声音子系统 (Sound Subsystem) 分析文档"
+description: "Linux 内核声音子系统是负责音频设备驱动和应用层音频数据交互的核心框架。主要包括:"
+---
 # Linux 内核声音子系统 (Sound Subsystem) 分析文档
 
 ## 目录

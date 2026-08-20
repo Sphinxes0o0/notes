@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Botnet Detection Using Raw Network Traffic Data + Deep Learning"
+description: "僵尸网络 (Botnet) 是当今最严重的网络安全威胁之一。传统检测方法面临挑战："
+---
 # Paper Reading: Botnet Detection Using Raw Network Traffic Data + Deep Learning
 
 ## 文献信息

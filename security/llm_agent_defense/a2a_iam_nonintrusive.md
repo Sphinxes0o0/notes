@@ -1,3 +1,7 @@
+---
+title: "车载 IAM 对 A2A 的零侵入设计"
+description: "下表对现有设计的每个 IAM 改动点按\"侵入性\"分类。"
+---
 # 车载 IAM 对 A2A 的零侵入设计
 
 > **问题**：现有 [`a2a_iam_integration_arch.md`](./a2a_iam_integration_arch.md) 将 IAM 字段

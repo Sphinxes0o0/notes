@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Bloom and XOR Filters for Intrusion Detection"
+description: "使用 Bloom Filter 和 XOR Filter 进行高效入侵检测。"
+---
 # Paper Reading: Bloom and XOR Filters for Intrusion Detection
 
 ## 文献信息

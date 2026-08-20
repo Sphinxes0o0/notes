@@ -1,3 +1,7 @@
+---
+title: "Snort3 应用层检查器 (Service Inspectors)"
+description: "应用层检查器负责分析网络流量的应用层协议内容,是Snort3检测引擎的核心组件。"
+---
 # Snort3 应用层检查器 (Service Inspectors)
 
 应用层检查器负责分析网络流量的应用层协议内容,是Snort3检测引擎的核心组件。

@@ -1,3 +1,7 @@
+---
+title: "VFS Mount Namespace"
+description: "Mount Namespace 允许每个进程拥有独立的挂载点视图。这是容器技术的基石之一，实现了进程间的文件系统隔离。"
+---
 # VFS Mount Namespace
 
 ## 1. 模块架构

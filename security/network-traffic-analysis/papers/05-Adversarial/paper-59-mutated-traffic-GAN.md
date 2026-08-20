@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Mutated Traffic Detection via Adversarial Generative Deep Learning"
+description: "攻击者使用**流量变异技术**躲避检测："
+---
 # Paper Reading: Mutated Traffic Detection via Adversarial Generative Deep Learning
 
 ## 文献信息

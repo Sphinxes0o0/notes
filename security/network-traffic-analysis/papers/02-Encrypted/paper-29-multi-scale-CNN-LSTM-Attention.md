@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Multi-scale CNN+LSTM+Attention for Encrypted Traffic"
+description: "加密流量识别面临挑战："
+---
 # Paper Reading: Multi-scale CNN+LSTM+Attention for Encrypted Traffic
 
 ## 文献信息

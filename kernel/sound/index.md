@@ -1,3 +1,6 @@
+---
+title: "Linux Sound 子系统文档索引"
+---
 # Linux Sound 子系统文档索引
 
 ## 文档

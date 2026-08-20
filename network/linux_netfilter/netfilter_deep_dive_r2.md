@@ -1,3 +1,7 @@
+---
+title: "Linux Netfilter 子系统深度分析 R2"
+description: "本文档深入分析 Linux Kernel Netfilter 子系统 (nf_tables) 的核心设计，涵盖数据结构关系、查找算法、包匹配流程和动态集合机制。"
+---
 # Linux Netfilter 子系统深度分析 R2
 
 ## 概述

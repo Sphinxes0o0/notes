@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel 页面回收机制分析"
+description: "本文档分析 Linux 内核的页面回收（Page Reclaim）机制，基于 mm/vmscan.c 及相关文件。"
+---
 # Linux Kernel 页面回收机制分析
 
 本文档分析 Linux 内核的页面回收（Page Reclaim）机制，基于 mm/vmscan.c 及相关文件。

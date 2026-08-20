@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: MGEL - Multi-grained Features for Malware Detection"
+description: "多粒度特征 + 集成学习。"
+---
 # Paper Reading: MGEL - Multi-grained Features for Malware Detection
 
 ## 文献信息

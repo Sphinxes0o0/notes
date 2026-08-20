@@ -1,3 +1,7 @@
+---
+title: "neighbour - 邻居子系统"
+description: "邻居子系统实现了 ARP (IPv4) 和 NDP (IPv6) 的核心功能，维护从 IP 地址到 MAC 地址的映射。"
+---
 # neighbour - 邻居子系统
 
 ## 1. 模块架构

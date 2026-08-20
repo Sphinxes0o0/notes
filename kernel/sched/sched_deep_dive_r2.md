@@ -1,3 +1,7 @@
+---
+title: "Linux Sched 子系统深度分析 R2"
+description: "本文档深入分析 Linux kernel CFS (Completely Fair Scheduler) 调度器的核心算法实现，基于 `kernel/sched/fair.c` 源码。EEVDF (Early Eligible Virtual Deadline First) 调度器是当前内核默认的调度策略，其核心思想是通过虚拟运行时间 (vruntime) 和 deadline…"
+---
 # Linux Sched 子系统深度分析 R2
 
 ## 目录

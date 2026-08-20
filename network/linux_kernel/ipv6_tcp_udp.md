@@ -1,3 +1,7 @@
+---
+title: "IPv6 TCP/UDP 实现"
+description: "IPv6 下的 TCP 和 UDP 实现与 IPv4 基本相同，主要区别在于地址处理和伪头部校验和计算。"
+---
 # IPv6 TCP/UDP 实现
 
 ## 1. 模块架构

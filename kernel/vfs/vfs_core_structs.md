@@ -1,3 +1,7 @@
+---
+title: "VFS 核心数据结构"
+description: "VFS 核心数据结构包括 super_block、inode、dentry、file 等，它们共同构成了 Linux 虚拟文件系统的基石。"
+---
 # VFS 核心数据结构
 
 ## 1. 模块架构

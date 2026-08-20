@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 AppArmor 安全模块详细分析"
+description: "AppArmor (Application Armor) 是一个基于**路径**的强制访问控制 (MAC) 安全模块，与传统的基于标签的 MAC 系统（如 SELinux）有本质区别。"
+---
 # Linux 内核 AppArmor 安全模块详细分析
 
 ## 目录

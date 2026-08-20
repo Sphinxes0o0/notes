@@ -1,3 +1,7 @@
+---
+title: "std::unordered_map 详解"
+description: "`std::unordered_map` 是基于哈希表实现的关联容器，存储键值对，其中每个键都是唯一的。它提供平均 O(1) 时间复杂度的插入、删除和查找操作。"
+---
 # std::unordered_map 详解
 
 ## 概述

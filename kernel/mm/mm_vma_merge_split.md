@@ -1,3 +1,7 @@
+---
+title: "MM VMA Merge/Split"
+description: "**文件**: `mm/vma.c:1200-1350`"
+---
 # MM VMA Merge/Split
 
 ## 1. vma_merge 合并

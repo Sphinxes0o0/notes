@@ -1,3 +1,7 @@
+---
+title: "Linux io_uring 子系统深度分析 R1"
+description: "io_uring 是 Linux 内核提供的高性能异步 I/O 接口，首次引入于 5.1 内核。其核心设计通过共享内存的 Ring Buffer 实现用户态与内核态之间的高效通信。"
+---
 # Linux io_uring 子系统深度分析 R1
 
 ## 目录

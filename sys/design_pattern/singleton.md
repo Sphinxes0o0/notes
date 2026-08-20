@@ -1,3 +1,7 @@
+---
+title: "单例模式 (Singleton Pattern) - C/C++ 实现详解"
+description: "单例模式(Singleton Pattern)是一种创建型设计模式，它确保一个类只有一个实例，并提供一个全局访问点来获取这个实例。"
+---
 # 单例模式 (Singleton Pattern) - C/C++ 实现详解
 
 ## 1. 什么是单例模式

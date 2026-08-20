@@ -1,3 +1,7 @@
+---
+title: "net_device - 网络设备抽象层"
+description: "`net_device` 是 Linux 内核中表示网络设备的核心数据结构。它提供了对网络设备（包括物理网卡、虚拟设备、隧道等）的统一抽象。"
+---
 # net_device - 网络设备抽象层
 
 ## 1. 模块架构

@@ -1,3 +1,7 @@
+---
+title: "16_WinMacUnixLinux_的区别和联系_为什么_Debian_漏洞排名第一还这么多人用"
+description: "在我的印象中 Windows 才是最容易被攻击的操作系统，没想到 2020 年美国 NIST 的报告中， Debian 竟然是过去 20 年中漏洞最多的操作系统。Debain 以 3067 个漏洞稳居第一，第二名是 Android，第三名是 Linux Kernel。那么为什么 Debian 漏洞数会排在第一位呢？"
+---
 在我的印象中 Windows 才是最容易被攻击的操作系统，没想到 2020 年美国 NIST 的报告中， Debian 竟然是过去 20 年中漏洞最多的操作系统。Debain 以 3067 个漏洞稳居第一，第二名是 Android，第三名是 Linux Kernel。那么为什么 Debian 漏洞数会排在第一位呢？
 
 NIST的数据报告：软件漏洞排名

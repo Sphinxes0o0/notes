@@ -1,3 +1,7 @@
+---
+title: "Linux Locking 子系统深度分析 R2"
+description: "**raw_spinlock_t 结构体** (`include/linux/spinlock_types_raw.h:14-24`)"
+---
 # Linux Locking 子系统深度分析 R2
 
 ## 目录

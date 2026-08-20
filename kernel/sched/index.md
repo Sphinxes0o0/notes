@@ -1,3 +1,6 @@
+---
+title: "Linux 调度器子系统 (kernel/sched/) 文档索引"
+---
 # Linux 调度器子系统 (kernel/sched/) 文档索引
 
 ## 文档清单

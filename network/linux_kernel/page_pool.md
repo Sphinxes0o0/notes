@@ -1,3 +1,7 @@
+---
+title: "page_pool - 内存页池"
+description: "page_pool 是一种高效的内存页管理机制，为网络设备提供可回收的内存页，减少内存分配开销。"
+---
 # page_pool - 内存页池
 
 ## 1. 模块架构

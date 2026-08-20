@@ -1,3 +1,7 @@
+---
+title: "Snort3 模式匹配引擎 (search_engines/)"
+description: "模式匹配引擎(MPSE - Multi-Pattern Search Engine)负责在数据包载荷中快速搜索多个模式,是Snort检测性能的关键。"
+---
 # Snort3 模式匹配引擎 (search_engines/)
 
 模式匹配引擎(MPSE - Multi-Pattern Search Engine)负责在数据包载荷中快速搜索多个模式,是Snort检测性能的关键。

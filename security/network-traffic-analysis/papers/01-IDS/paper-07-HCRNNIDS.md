@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: HCRNNIDS - Hybrid CNN-RNN for Network Intrusion Detection"
+description: "过去 20 年，机器学习 (ML) 在网络安全领域得到广泛应用。近年来，深度学习 (DL) 因其更出色的表现逐渐取代传统方法。"
+---
 # Paper Reading: HCRNNIDS - Hybrid CNN-RNN for Network Intrusion Detection
 
 ## 文献信息

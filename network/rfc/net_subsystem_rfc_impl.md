@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Networking RFC Implementations"
+description: "The TCP 3-way handshake is implemented across several key functions:"
+---
 # Linux Kernel Networking RFC Implementations
 
 ## Table of Contents

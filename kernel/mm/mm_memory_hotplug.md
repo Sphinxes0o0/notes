@@ -1,3 +1,7 @@
+---
+title: "MM Memory Hotplug"
+description: "**文件**: `mm/memory_hotplug.c:3000-3100`"
+---
 # MM Memory Hotplug
 
 ## 1. add_memory 内存添加

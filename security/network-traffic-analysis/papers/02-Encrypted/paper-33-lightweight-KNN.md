@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Lightweight Encrypted Traffic Classification"
+description: "协议字段 + KNN 轻量级方法。"
+---
 # Paper Reading: Lightweight Encrypted Traffic Classification
 
 ## 文献信息

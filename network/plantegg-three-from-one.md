@@ -1,3 +1,7 @@
+---
+title: "plantegg: 举三反一 (Deriving One from Three)"
+description: "Two learning approaches:"
+---
 # plantegg: 举三反一 (Deriving One from Three)
 
 ## Core Method

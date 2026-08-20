@@ -1,3 +1,7 @@
+---
+title: "NAPI - 轮询机制"
+description: "NAPI (New API) 是 Linux 网络设备驱动的轮询接口，用于高效处理高频网络中断。"
+---
 # NAPI - 轮询机制
 
 ## 1. 模块架构

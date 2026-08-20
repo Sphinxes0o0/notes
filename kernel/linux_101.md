@@ -1,3 +1,7 @@
+---
+title: "理解内核"
+description: "Linux 内核既不是进程、守护进程（daemon），也不是应用程序。"
+---
 # 理解内核
 
 Linux 内核既不是进程、守护进程（daemon），也不是应用程序。

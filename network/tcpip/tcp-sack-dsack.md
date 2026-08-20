@@ -1,3 +1,7 @@
+---
+title: "TCP SACK and DSACK Implementation"
+description: "SACK (Selective Acknowledgment) allows receivers to explicitly acknowledge **out-of-order** segments. DSACK reports duplicate data reception."
+---
 # TCP SACK and DSACK Implementation
 
 ## SACK Overview

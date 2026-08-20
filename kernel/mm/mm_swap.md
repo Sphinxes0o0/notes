@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Swap Subsystem Analysis"
+description: "**Location:** `include/linux/swap.h` lines 261-303"
+---
 # Linux Kernel Swap Subsystem Analysis
 
 ## Table of Contents

@@ -1,3 +1,7 @@
+---
+title: "OpenBMC 通信/网络服务深度分析"
+description: "OpenBMC 是 Linux Foundation 旗下的开源 BMC（Baseboard Management Controller，基板管理控制器）固件项目，旨在为服务器和数据中心设备提供标准化的带外管理解决方案。作为现代服务器基础设施的核心组件，OpenBMC 通过一套精密设计的通信和网络服务子系统，实现了对硬件状态的实时监控、远程管理以及与主机系统的双向通信。本文将深入分析…"
+---
 # OpenBMC 通信/网络服务深度分析
 
 ## 概述

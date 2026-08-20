@@ -1,3 +1,7 @@
+---
+title: "IPv6 NDisc 邻居发现"
+description: "NDisc (Neighbor Discovery Protocol) 是 IPv6 的核心协议，实现了地址解析、路由器发现、重复地址检测等功能。"
+---
 # IPv6 NDisc 邻居发现
 
 ## 1. 模块架构

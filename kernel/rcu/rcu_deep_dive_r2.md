@@ -1,3 +1,7 @@
+---
+title: "Linux RCU 子系统深度分析 R2"
+description: "RCU 的核心是**宽限期检测算法**，通过 `gp_seq` 序列号追踪 grace period 的状态。"
+---
 # Linux RCU 子系统深度分析 R2
 
 ## 目录

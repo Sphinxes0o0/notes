@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Memory Allocator Analysis"
+description: "Location: `mm/slab.h` (lines 197-251)"
+---
 # Linux Kernel Memory Allocator Analysis
 
 ## Table of Contents

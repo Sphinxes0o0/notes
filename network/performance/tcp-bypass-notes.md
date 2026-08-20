@@ -1,3 +1,7 @@
+---
+title: "TCP Bypass Notes"
+description: "Kernel TCP/IP provides: error detection, in-order delivery, flow/congestion control. Bypass alternatives needed for ultra-low-latency (HFT, trading systems)."
+---
 # TCP Bypass Notes
 
 ## Why Bypass TCP/IP?

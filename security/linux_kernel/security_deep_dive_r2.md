@@ -1,3 +1,7 @@
+---
+title: "Linux Security 子系统深度分析 R2"
+description: "AVC（Access Vector Cache）是 SELinux 的核心缓存机制，用于缓存访问决策结果，避免每次权限检查都查询策略数据库。"
+---
 # Linux Security 子系统深度分析 R2
 
 ## 目录

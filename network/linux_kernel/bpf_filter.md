@@ -1,3 +1,7 @@
+---
+title: "BPF 过滤器核心"
+description: "BPF (Berkeley Packet Filter) 是 Linux 内核提供的高性能数据包过滤框架，支持用户定义的程序来过滤和处理网络数据包。"
+---
 # BPF 过滤器核心
 
 ## 1. 模块架构

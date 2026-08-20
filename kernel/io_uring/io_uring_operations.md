@@ -1,3 +1,7 @@
+---
+title: "Linux io_uring 子系统操作码 (Opcode) 实现分析"
+description: "io_uring 是 Linux 内核的高性能异步 I/O 接口,核心文件位于 `/Users/sphinx/github/linux/io_uring/` 目录。"
+---
 # Linux io_uring 子系统操作码 (Opcode) 实现分析
 
 ## 目录

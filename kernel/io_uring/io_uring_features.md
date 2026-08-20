@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 io_uring 子系统高级特性分析"
+description: "io_uring 是 Linux 内核的高性能异步 I/O 子系统，提供了统一的高效接口来执行 I/O 操作。本文档分析其高级功能，包括事件通知、取消机制、超时处理和 futex 支持等。"
+---
 # Linux 内核 io_uring 子系统高级特性分析
 
 ## 目录

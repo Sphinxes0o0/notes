@@ -1,3 +1,7 @@
+---
+title: "Snort3 事件系统、动作与日志 (Events, Actions & Loggers)"
+description: "Snort3的事件系统负责管理检测事件的分发,动作系统提供灵活的响应机制,日志系统则负责事件和数据的输出。"
+---
 # Snort3 事件系统、动作与日志 (Events, Actions & Loggers)
 
 Snort3的事件系统负责管理检测事件的分发,动作系统提供灵活的响应机制,日志系统则负责事件和数据的输出。

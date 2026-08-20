@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: GAN-based Attack on IDS"
+description: "研究 GAN 对入侵检测系统的攻击方法。"
+---
 # Paper Reading: GAN-based Attack on IDS
 
 ## 文献信息

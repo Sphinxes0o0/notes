@@ -1,3 +1,7 @@
+---
+title: "OpenBMC KVM/虚拟介质深度分析"
+description: "OpenBMC 是 Linux 基金会托管的开源项目，旨在为基板管理控制器（BMC）构建完整的 Linux 固件堆栈。BMC 是服务器主板上的专用微控制器，负责远程管理和监控硬件状态。OpenBMC 广泛应用于数据中心服务器、存储设备、网络设备等基础设施硬件的管理。"
+---
 # OpenBMC KVM/虚拟介质深度分析
 
 ## 目录

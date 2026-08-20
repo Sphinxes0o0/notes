@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 CFS（完全公平调度器）分析"
+description: "**文件**: `include/linux/sched.h:575-621`"
+---
 # Linux 内核 CFS（完全公平调度器）分析
 
 ## 1. 核心数据结构

@@ -1,3 +1,7 @@
+---
+title: "Linux Conntrack 系统详解"
+description: "**连接跟踪（Connection Tracking）** 是 Linux 内核中 Netfilter 框架的核心组件，用于跟踪网络连接的状态信息。它维护一个连接表，记录每个网络连接的状态、方向、协议等信息，为防火墙、NAT 等功能提供基础支持。"
+---
 # Linux Conntrack 系统详解
 
 ## 目录

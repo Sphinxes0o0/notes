@@ -1,3 +1,7 @@
+---
+title: "Linux MM 子系统深度分析 R2"
+description: "SLUB (SLAB Under用具) 是 Linux 内核的 slab 分配器,相比 SLAB 具有更低的开销和更好的扩展性。"
+---
 # Linux MM 子系统深度分析 R2
 
 ## 目录

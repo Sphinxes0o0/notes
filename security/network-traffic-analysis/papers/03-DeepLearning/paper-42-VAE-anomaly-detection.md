@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: VAE for Anomaly Detection in Network Traffic"
+description: "比较 Autoencoder 和 VAE 在异常检测中的特征学习能力。"
+---
 # Paper Reading: VAE for Anomaly Detection in Network Traffic
 
 ## 文献信息

@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: WNN-Based Network Intrusion Detection"
+description: "WNN 为 IDS 提供轻量级解决方案。"
+---
 # Paper Reading: WNN-Based Network Intrusion Detection
 
 ## 文献信息

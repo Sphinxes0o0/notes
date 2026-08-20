@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Hierarchical Hybrid Intrusion Detection System"
+description: "层次化混合检测架构。"
+---
 # Paper Reading: Hierarchical Hybrid Intrusion Detection System
 
 ## 文献信息

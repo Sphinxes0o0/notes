@@ -1,3 +1,7 @@
+---
+title: "std::array 详解"
+description: "`std::array` 是 C++11 引入的固定大小数组容器，它是对传统 C 数组的封装，提供了 STL 容器的标准接口。"
+---
 # std::array 详解
 
 ## 概述

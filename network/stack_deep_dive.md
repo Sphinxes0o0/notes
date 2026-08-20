@@ -1,3 +1,7 @@
+---
+title: "Linux 网络栈深度架构分析 v2"
+description: "本文档是 Linux 网络栈的第二轮深度分析，重点关注 Socket 层实现细节、TCP 状态机与拥塞控制算法、UDP 协议实现、IP 层路由与转发、Netfilter 钩子机制、以及网络内存管理（sk_buff）等核心实现。"
+---
 # Linux 网络栈深度架构分析 v2
 
 ## 1. 概述

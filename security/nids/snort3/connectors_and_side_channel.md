@@ -1,3 +1,7 @@
+---
+title: "Snort3 连接器与侧信道 (Connectors & Side Channel)"
+description: "连接器和侧信道模块提供了Snort3与外部系统之间的通信机制,支持高可用性伙伴通信、数据包处理线程间的带外通信等场景。"
+---
 # Snort3 连接器与侧信道 (Connectors & Side Channel)
 
 连接器和侧信道模块提供了Snort3与外部系统之间的通信机制,支持高可用性伙伴通信、数据包处理线程间的带外通信等场景。

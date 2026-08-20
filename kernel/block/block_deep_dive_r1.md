@@ -1,3 +1,7 @@
+---
+title: "Linux Block Layer 深度分析 R1"
+description: "**源码位置**: `/Users/sphinx/github/linux/include/linux/blk_types.h` (第 210-287 行)"
+---
 # Linux Block Layer 深度分析 R1
 
 ## 目录

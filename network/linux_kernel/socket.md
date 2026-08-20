@@ -1,3 +1,7 @@
+---
+title: "Socket 层 - 通用套接字层"
+description: "Socket 层是 Linux 网络栈的核心抽象，提供了应用程序与内核网络子系统之间的接口。它屏蔽了底层协议细节，提供了统一的 socket API。"
+---
 # Socket 层 - 通用套接字层
 
 ## 1. 模块架构

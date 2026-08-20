@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Crypto 子系统同步加密机制分析"
+description: "Linux 内核 Crypto 子系统提供了一套统一的接口用于对称加密、非对称加密、哈希、AEAD 等密码学操作。本文档重点分析**同步对称加密**机制。"
+---
 # Linux 内核 Crypto 子系统同步加密机制分析
 
 ## 目录

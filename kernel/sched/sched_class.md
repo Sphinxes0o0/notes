@@ -1,3 +1,7 @@
+---
+title: "Linux 内核调度器类框架分析"
+description: "**文件**: `kernel/sched/sched.h`"
+---
 # Linux 内核调度器类框架分析
 
 ## 1. struct sched_class 结构体定义

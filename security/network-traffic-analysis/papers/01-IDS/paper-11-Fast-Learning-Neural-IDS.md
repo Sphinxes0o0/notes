@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Fast Learning Neural Network IDS"
+description: "快速学习的模块化神经网络 IDS。"
+---
 # Paper Reading: Fast Learning Neural Network IDS
 
 ## 文献信息

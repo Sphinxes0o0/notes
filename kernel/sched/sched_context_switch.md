@@ -1,3 +1,7 @@
+---
+title: "Linux 内核上下文切换机制分析"
+description: "**文件**: `kernel/sched/core.c:5239-5302`"
+---
 # Linux 内核上下文切换机制分析
 
 ## 1. context_switch() - 主上下文切换函数

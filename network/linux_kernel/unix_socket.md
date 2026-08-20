@@ -1,3 +1,7 @@
+---
+title: "Unix Domain Socket"
+description: "Unix Domain Socket 是本地进程间通信的高效方式，支持流和数据报两种模式。"
+---
 # Unix Domain Socket
 
 ## 1. 模块架构

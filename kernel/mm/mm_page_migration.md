@@ -1,3 +1,7 @@
+---
+title: "MM 页面迁移 (Page Migration)"
+description: "**文件**: `mm/migrate.c:2072-2167`"
+---
 # MM 页面迁移 (Page Migration)
 
 ## 1. migrate_pages 核心函数

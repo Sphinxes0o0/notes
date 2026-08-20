@@ -1,3 +1,7 @@
+---
+title: "OpenBMC 安全子系统深度分析"
+description: "OpenBMC（Open Baseboard Management Controller）是一种基于 Linux 的开源 BMC 固件栈，广泛应用于数据中心服务器、交换机和存储系统的管理。OpenBMC 安全子系统是整个栈的核心组成部分，负责系统身份认证、数据加密、访问控制和完整性验证等关键安全功能。"
+---
 # OpenBMC 安全子系统深度分析
 
 ## 概述
