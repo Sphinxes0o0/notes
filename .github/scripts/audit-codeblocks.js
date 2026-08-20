@@ -75,6 +75,13 @@ function isContentBleeding(line, language) {
     return false;
   }
 
+  // Plain-text blocks (text / plaintext / ascii / ansi) are non-code by definition.
+  // Authors explicitly use them for diagrams, comparison tables, prose snippets —
+  // bleeding detection does not apply.
+  if (['text', 'plaintext', 'ascii', 'ansi'].includes(language)) {
+    return false;
+  }
+
   // If line starts with comment markers, it's a comment (valid)
   if (/^\s*(\/\/|#|\/\*|\*)/.test(trimmed)) {
     return false;

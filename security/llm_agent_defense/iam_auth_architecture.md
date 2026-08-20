@@ -1378,3 +1378,802 @@ int kmss_verify_attestation(
 | 1.0 | 2026-07-16 | 初稿：任务分级 + 分层 TTL + KMSS lib API |
 | 1.1 | 2026-07-16 | 新增 §14 凭据管理（密钥分层 + CRL + Wrapped Secret） |
 | 1.2 | 2026-07-16 | 新增 §15 整体架构（三视图 + 数据流）+ §16 各模块架构（输入/输出） |
+| 1.3 | 2026-07-29 | 新增 §18 威胁模型、§19 审计日志格式、§20 限流与配额 |
+
+---
+
+## 18. 威胁模型（STRIDE）
+
+### 18.1 系统信任边界
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                   信任边界划分                           │
+│                                                         │
+│  TEE 边界（最高信任）                                    │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │  KMSS daemon + libkmss.so                       │   │
+│  │  L0/L1/L2 私钥 + 签名操作                       │   │
+│  └─────────────────────────────────────────────────┘   │
+│                                                         │
+│  内核/进程隔离边界                                       │
+│  ┌───────────────┐   ┌───────────────────────────┐    │
+│  │ Agent Process │   │ Guard Sidecar Process     │    │
+│  │ (Normal World)│   │ (Normal World)            │    │
+│  └───────────────┘   └───────────────────────────┘    │
+│                                                         │
+│  域隔离边界（跨域必须通过 delegation token）             │
+│  AD 域 │ CD 域 │ VD 域                                  │
+│                                                         │
+│  OTA 边界（外部输入，最低信任）                          │
+│  Trust Bundle / Policy Update / Model Update            │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 18.2 STRIDE 威胁矩阵
+
+| # | 威胁 | 类别 | 组件 | 攻击场景 | 现有防护 | 残余风险 |
+|---|---|---|---|---|---|---|
+| S1 | **Workload 身份伪造** | 欺骗 (S) | Agent Process | 恶意进程伪造 SPIFFE ID，调用 KMSS 申请 SVID | KMSS 验证进程 UID/PID + 白名单；SVID 签发需 TEE 背书 | 低（需 root 权限绕过） |
+| S2 | **Token Replay** | 欺骗 (S) | Sidecar | 截获有效 task_token，在 TTL 内重放到另一个 Sidecar | jti 在本域 KMSS CRL 中唯一；token 与 PID 绑定（`km_attest`） | 中（跨域无法及时同步 jti） |
+| S3 | **Delegation token 盗用** | 欺骗 (S) | 跨域网络 | MITM 截获 delegation_jwt，向 AD 重放 | mTLS 双向认证；delegation 绑定 target_spiffe_id | 低（mTLS 有效时） |
+| T1 | **JWT Claims 篡改** | 篡改 (T) | Agent SDK | 修改 scope、exp 字段后重签 | RS256 签名；私钥在 TEE 内不可导出 | 低 |
+| T2 | **Trust Bundle 污染** | 篡改 (T) | OTA 路径 | 注入伪造 trust bundle，使 AD 信任恶意 CD | OTA bundle 用 OEM root 签名；Sidecar 验签后才加载 | 低 |
+| T3 | **CRL 截断攻击** | 篡改 (T) | Sidecar | 阻断 CRL 更新，使被 revoke 的 token 继续有效 | Sidecar 设置 CRL 最大陈旧度（5min）；超时 fail-closed | 中（CRL 推送阻断窗口期 ≤ 5min） |
+| R1 | **审计日志旁路** | 抵赖 (R) | KMSS / Sidecar | Agent 绕过 Sidecar 直接调用工具，不留审计记录 | 所有工具调用必须通过 Guard（进程隔离）；Sidecar 审计日志不可篡改 | 低 |
+| R2 | **jti 碰撞** | 抵赖 (R) | KMSS | 两个 token 生成相同 jti，无法追溯哪次操作 | jti 用 UUID v4（128 bit 熵）；KMSS 签发时检查本地 jti 唯一性 | 极低 |
+| I1 | **Token 内容泄露** | 信息泄露 (I) | 网络 | 明文传输 token，第三方读取 scope/sub | 全程 mTLS；UDS 通道不走网络 | 低（mTLS 有效时） |
+| I2 | **SVID 内容推断** | 信息泄露 (I) | 日志 | SVID URI 包含 Agent 类型，被日志系统泄露 | 日志脱敏（`svid` 字段只记录前 16 字符 hash） | 中（需日志脱敏实现） |
+| D1 | **KMSS 泛洪** | 拒绝服务 (D) | KMSS | 恶意 Agent 高频申请 task_token，耗尽 KMSS 签名能力 | 限流（§20）；每 workload 10 token/s | 中（限流参数需持续调优） |
+| D2 | **Trust Bundle 频繁推送** | 拒绝服务 (D) | Sidecar | OTA 系统反复推 bundle，触发频繁重载，影响验签 | Bundle 更新去抖（min 5min 间隔）；reload 与验签异步 | 低 |
+| E1 | **scope 越权** | 特权提升 (E) | KMSS | 子 Agent 申请超过父 SVID scope 的 token | `child_scope ⊆ parent_scope` 不变量由 KMSS 强制校验 | 低 |
+| E2 | **跨域 ASIL 升级** | 特权提升 (E) | Cross-domain | QM 域 Agent 通过 delegation 触发 ASIL-D 操作 | KMSS 在 `delegate()` 时过滤 ASIL-D scope | 低 |
+| E3 | **长时间 token 滥用** | 特权提升 (E) | 长任务 Agent | Lease Token 泄露后长时间被滥用 | Lease 心跳机制；KMSS 可主动 revoke；心跳间隔 ≤ 60s | 中（revoke 传播延迟 ≤ 1s） |
+
+### 18.3 残余风险处置
+
+| 威胁 | 残余风险等级 | 处置方案 |
+|---|---|---|
+| S2 Token Replay（跨域） | 中 | 短期：task_token TTL 压缩到 15s（demo 可验证）；长期：引入跨域 jti 同步（gRPC stream）|
+| T3 CRL 截断 | 中 | 设置 CRL 陈旧度告警（3min 告警，5min fail-closed） |
+| I2 SVID 日志推断 | 中 | 审计日志中 SVID 字段只记录 `sha256(svid)[:16]`，原文不落盘 |
+| D1 KMSS 泛洪 | 中 | 实现 §20 限流；监控 KMSS 签名 QPS |
+| E3 Lease 泄露 | 中 | 心跳超时后立即 revoke；Lease 绑定进程 PID（PID 消亡即 revoke） |
+
+---
+
+## 19. 审计日志格式规范
+
+### 19.1 设计原则
+
+- **不可篡改**：日志写入后只能追加（append-only），写满后 rotate 到 NVRAM/可信存储
+- **固定尺寸**：每条日志 **64 字节**，便于车规内存预算（circular buffer 计算确定）
+- **无动态分配**：序列化 / 反序列化使用静态 buffer，禁止 `malloc`
+- **结构化**：机器可读，便于 OEM 后端分析
+
+### 19.2 审计事件结构体
+
+```c
+// audit_log.h
+
+typedef enum {
+    // Token 生命周期
+    AUDIT_SVID_ISSUED         = 0x01,
+    AUDIT_SVID_REVOKED        = 0x02,
+    AUDIT_TASK_TOKEN_ISSUED   = 0x03,
+    AUDIT_TASK_TOKEN_CONSUMED = 0x04,
+    AUDIT_TASK_TOKEN_EXPIRED  = 0x05,
+    AUDIT_SESSION_OPENED      = 0x06,
+    AUDIT_SESSION_RENEWED     = 0x07,
+    AUDIT_SESSION_CLOSED      = 0x08,
+    AUDIT_LEASE_ACQUIRED      = 0x09,
+    AUDIT_LEASE_HEARTBEAT     = 0x0A,
+    AUDIT_LEASE_SCOPE_TIGHT   = 0x0B,
+    AUDIT_LEASE_RELEASED      = 0x0C,
+    AUDIT_LEASE_REVOKED       = 0x0D,
+
+    // 决策
+    AUDIT_GUARD_ALLOW         = 0x10,
+    AUDIT_GUARD_DENY          = 0x11,
+
+    // 跨域
+    AUDIT_DELEG_ISSUED        = 0x20,
+    AUDIT_DELEG_VERIFIED_OK   = 0x21,
+    AUDIT_DELEG_VERIFIED_FAIL = 0x22,
+
+    // 安全事件
+    AUDIT_JTI_REPLAY_DETECT   = 0x30,
+    AUDIT_SCOPE_EXCEED        = 0x31,
+    AUDIT_CRL_REVOKE_RECV     = 0x32,
+    AUDIT_TEE_FAULT           = 0x33,
+    AUDIT_RATE_LIMIT_HIT      = 0x34,
+    AUDIT_ASIL_SCOPE_FILTER   = 0x35,  // QM→ASIL-D scope 被过滤
+} audit_event_type_t;
+
+// 决策结果
+typedef enum {
+    AUDIT_DECISION_ALLOW = 1,
+    AUDIT_DECISION_DENY  = 2,
+    AUDIT_DECISION_ERROR = 3,
+} audit_decision_t;
+
+// 固定 64 字节审计记录
+typedef struct __attribute__((packed)) {
+    uint64_t  timestamp_us;      //  8 字节：微秒时间戳（来自安全 RTC）
+    uint32_t  event_type;        //  4 字节：audit_event_type_t
+    uint8_t   decision;          //  1 字节：audit_decision_t
+    uint8_t   domain;            //  1 字节：0=AD,1=CD,2=VD
+    uint8_t   token_layer;       //  1 字节：0=SVID,1=task,2=session,3=lease
+    uint8_t   reason_code;       //  1 字节：拒绝原因（0=allow, 其他见下表）
+    uint8_t   jti_prefix[8];     //  8 字节：jti 的前 8 字节（快速关联）
+    uint8_t   sub_hash[8];       //  8 字节：sha256(sub_spiffe_id)[:8]
+    uint8_t   aud_hash[4];       //  4 字节：sha256(aud)[:4]
+    uint8_t   scope_hash[8];     //  8 字节：sha256(scope_str)[:8]
+    uint32_t  ttl_remaining_s;   //  4 字节：token 签发时剩余 TTL
+    uint32_t  task_id_prefix;    //  4 字节：task_id 的前 4 字节（A2A 任务关联）
+    uint8_t   pad[5];            //  5 字节：保留，对齐到 64 字节
+} audit_record_t;               // 总计：64 字节
+
+_Static_assert(sizeof(audit_record_t) == 64, "audit_record must be 64 bytes");
+```
+
+**reason_code 枚举**（拒绝时有效）：
+
+```c
+typedef enum {
+    REASON_ALLOW              = 0x00,
+    REASON_JWT_EXPIRED        = 0x01,
+    REASON_JWT_SIG_INVALID    = 0x02,
+    REASON_SCOPE_EXCEED       = 0x03,
+    REASON_JTI_REVOKED        = 0x04,
+    REASON_JTI_REPLAY         = 0x05,
+    REASON_ASIL_BOUNDARY      = 0x06,
+    REASON_CRL_REVOKED        = 0x07,
+    REASON_BUNDLE_STALE       = 0x08,
+    REASON_RATE_LIMIT         = 0x09,
+    REASON_POLICY_DENY        = 0x0A,
+    REASON_TEE_UNAVAILABLE    = 0x0B,
+} audit_reason_code_t;
+```
+
+### 19.3 存储与传输
+
+```
+写入路径：
+  Sidecar / KMSS → audit_ring_buffer（内存, 4 KB = 64 条）
+      │
+      │ 满或每 30s flush
+      ▼
+  /var/log/agent-iam/audit.bin   ← append-only，文件锁保护
+      │
+      │ logrotate：每 10 MB 或每天 rotate
+      ▼
+  /var/log/agent-iam/audit.N.bin（压缩 + 校验）
+      │
+      │ OTA 上报（非实时，每分钟批量）
+      ▼
+  OEM 后端审计系统
+```
+
+**写入 API**：
+
+```c
+// 同步写（Sidecar 路径，必须低延迟）
+void audit_log_write(const audit_record_t* rec);  // ≤ 100μs
+
+// 异步写（批量 flush 线程）
+void audit_log_flush_pending(void);
+```
+
+**完整性保护**：
+
+```c
+// 每 N 条记录追加一个 HMAC 校验节点
+typedef struct {
+    uint8_t  marker[4];   // 0xAU_DIT1
+    uint32_t seq_start;   // 第一条记录序号
+    uint32_t seq_end;     // 最后一条记录序号
+    uint8_t  hmac[32];    // HMAC-SHA256(records[start..end], domain_key)
+} audit_checkpoint_t;
+```
+
+### 19.4 关键事件必审记录
+
+以下事件**必须**同步写审计日志，不允许因性能原因跳过：
+
+| 事件 | 原因 |
+|---|---|
+| `AUDIT_SVID_ISSUED` / `AUDIT_SVID_REVOKED` | 工作负载身份变更 |
+| `AUDIT_GUARD_DENY` | 拒绝决策，调查入口 |
+| `AUDIT_JTI_REPLAY_DETECT` | 安全攻击指示 |
+| `AUDIT_SCOPE_EXCEED` | 越权尝试 |
+| `AUDIT_CRL_REVOKE_RECV` | 紧急撤销传播 |
+| `AUDIT_TEE_FAULT` | 硬件故障 |
+| `AUDIT_ASIL_SCOPE_FILTER` | 跨域 ASIL 边界触发 |
+
+---
+
+## 20. 限流与配额
+
+### 20.1 设计目标
+
+防止 KMSS 被单个 Agent 泛洪（DoS），同时保证正常业务的 token 申请不被饿死。
+
+### 20.2 限流维度与参数
+
+```c
+// kmss_ratelimit.h
+
+typedef struct {
+    // ===== Per-Workload 限流 =====
+    uint32_t task_token_per_second;     // 默认 10 /s（L1）
+    uint32_t session_renew_per_minute;  // 默认 4 /min（L2，TTL=15min → 75% 处续期）
+    uint32_t lease_acquire_per_minute;  // 默认 2 /min（L3）
+    uint32_t lease_concurrent_max;      // 默认 5（同时持有的 lease 上限）
+
+    // ===== Per-Domain 限流（防止单域垄断 KMSS 资源）=====
+    uint32_t domain_token_per_second;   // 默认 50 /s（所有 workload 合计）
+    uint32_t domain_deleg_per_minute;   // 默认 20 /min（跨域 delegation）
+
+    // ===== 全局限流 =====
+    uint32_t global_sign_per_second;    // 默认 200 /s（TEE 签名 QPS 上限）
+} kmss_ratelimit_config_t;
+```
+
+**默认值依据**：
+
+| 参数 | 默认值 | 依据 |
+|---|---|---|
+| `task_token_per_second` | 10 /s | 正常 Agent 每次 Guard.Check 约 50~200ms，上限约 5-20 QPS；留 2× 余量 |
+| `lease_concurrent_max` | 5 | 单 workload 最多 5 个并发长任务（演示场景：规划、OTA、监控等） |
+| `global_sign_per_second` | 200 /s | SoftHSM2 签名能力约 500 /s，留 60% 余量 |
+
+### 20.3 令牌桶实现
+
+```c
+// 令牌桶（固定速率，无动态内存）
+typedef struct {
+    uint32_t capacity;          // 桶容量（最大突发）
+    uint32_t tokens;            // 当前令牌数
+    uint32_t refill_rate_us;    // 每 N 微秒补充 1 个令牌
+    uint64_t last_refill_us;    // 上次补充时间（来自安全 RTC）
+    uint32_t dropped_total;     // 统计：被限流总数（overflow 不统计）
+} token_bucket_t;
+
+// 尝试消耗 n 个令牌，返回 0=成功，-1=限流
+int token_bucket_consume(token_bucket_t* tb, uint32_t n) {
+    uint64_t now_us = secure_rtc_now_us();
+    uint64_t elapsed = now_us - tb->last_refill_us;
+    uint32_t refill = (uint32_t)(elapsed / tb->refill_rate_us);
+    if (refill > 0) {
+        tb->tokens = MIN(tb->capacity, tb->tokens + refill);
+        tb->last_refill_us += refill * tb->refill_rate_us;
+    }
+    if (tb->tokens < n) {
+        tb->dropped_total++;
+        return -1;  // 限流
+    }
+    tb->tokens -= n;
+    return 0;
+}
+```
+
+### 20.4 KMSS 限流集成
+
+```c
+// kmss_issue_task_token() 内部调用流程（增加限流）
+
+kmss_token_t* kmss_issue_task_token(
+    kmss_svid_t* parent,
+    const char** scopes, size_t n,
+    uint32_t ttl_seconds
+) {
+    // 1. 查找 per-workload 限流桶
+    token_bucket_t* wb = kmss_get_workload_bucket(parent->workload_id,
+                                                   BUCKET_TASK_TOKEN);
+    if (token_bucket_consume(wb, 1) != 0) {
+        audit_log_write(&(audit_record_t){
+            .event_type  = AUDIT_RATE_LIMIT_HIT,
+            .decision    = AUDIT_DECISION_DENY,
+            .reason_code = REASON_RATE_LIMIT,
+            ...
+        });
+        return NULL;  // 限流返回 NULL（调用方应重试或降级）
+    }
+
+    // 2. 全局签名桶
+    token_bucket_t* gb = kmss_get_global_bucket(BUCKET_SIGN);
+    if (token_bucket_consume(gb, 1) != 0) {
+        return NULL;
+    }
+
+    // 3. 正常签发
+    return kmss_sign_task_token_internal(parent, scopes, n, ttl_seconds);
+}
+```
+
+### 20.5 限流后的 SDK 行为
+
+```
+SDK 收到 kmss_issue_task_token() 返回 NULL（限流）：
+
+ ┌─────────────────┐
+ │  task_token 为空  │
+ └────────┬────────┘
+          │
+     检查 session_token 是否有效（L2）
+          │
+     ┌────┴──────────────────────┐
+     │ 是（session 有效）         │ 否（session 也过期）
+     │                           │
+     ▼                           ▼
+  指数退避重试                 fail-closed
+  （50ms, 100ms, 200ms）       返回 UNAVAILABLE
+     │
+     ▼
+  重试 3 次后仍失败
+     │
+     ▼
+  降级：返回缓存的上次 allow 决策（仅只读操作）
+  写/执行操作：fail-closed
+```
+
+**退避参数**（可配置）：
+
+```c
+#define RATE_LIMIT_RETRY_MAX     3
+#define RATE_LIMIT_BACKOFF_MS_1  50
+#define RATE_LIMIT_BACKOFF_MS_2  100
+#define RATE_LIMIT_BACKOFF_MS_3  200
+```
+
+### 20.6 配额监控
+
+KMSS 对外暴露以下计数器（用于 OEM 监控）：
+
+```c
+typedef struct {
+    uint64_t task_token_issued_total;
+    uint64_t task_token_rejected_ratelimit;
+    uint64_t session_renew_total;
+    uint64_t lease_acquire_total;
+    uint64_t lease_revoke_total;
+    uint64_t sign_qps_peak;           // 峰值签名 QPS（滑动窗口 1min）
+    uint64_t global_sign_ratelimit_total;
+} kmss_metrics_t;
+
+// 通过 gRPC 健康检查端点暴露
+// GET /metrics → Prometheus 格式
+```
+
+**告警阈值**（demo 建议）：
+
+| 指标 | 告警阈值 | 意义 |
+|---|---|---|
+| `task_token_rejected_ratelimit` / min | > 50 | 可能有异常 Agent 泛洪 |
+| `sign_qps_peak` | > 150 /s | 接近 KMSS 能力上限 |
+| `lease_acquire_total` / workload | > 100 /h | 单个 workload 异常频繁申请 lease |
+
+---
+
+## 21. Token Binding（mTLS 信道绑定，防 Bearer 盗用）
+
+### 21.1 问题：Bearer Token 的可盗用性
+
+Bearer Token（RFC 6750）的语义是"持有即授权"——任何拿到 token 的人都可以使用它，
+即使它来自内存泄露、日志泄露或中间人攻击。
+
+```
+攻击场景（Bearer Token 盗用）：
+
+合法 Agent（CD 域）申请 delegation_jwt
+  └─ delegation_jwt 存储在 Normal World 内存
+           │
+           │ 攻击者从被攻陷进程读取内存（如 heap spray、TOCTOU）
+           │
+           ▼
+攻击者在另一台机器上持有 delegation_jwt
+  └─ 向 AD Sidecar 重放（如果没有信道绑定）
+           │
+           ▼
+AD Sidecar 验证签名 + TTL：均通过！无法区分合法 vs 盗用
+```
+
+**现有防御的局限**：
+- TTL 短（30s task token）：盗用窗口小，但不是零
+- mTLS Channel：验证了连接两端的 SPIFFE ID，但 Bearer Token 可以在连接外使用
+
+### 21.2 解决方案：mTLS Certificate-Bound Token（RFC 8705）
+
+将 Bearer Token 绑定到发起方的 **mTLS TLS 证书指纹**（`cnf.x5t#S256` claim）。
+Server 端验证：携带 token 的连接的 TLS 客户端证书哈希 == token claims 里的指纹。
+
+```
+Token Binding 机制：
+
+1. Client（CD Agent）建立 mTLS 连接时：
+   client_cert = TLS 握手中的 CD SPIFFE SVID X.509 证书
+
+2. KMSS 签发 delegation token 时，计算证书指纹并写入 claims：
+   cnf.x5t#S256 = base64url(SHA256(DER(client_cert)))
+
+3. Server（AD Sidecar）验证时：
+   a. 从 TLS 连接提取 peer 证书
+   b. 计算 SHA256(DER(peer_cert))
+   c. 对比 token.claims.cnf["x5t#S256"]
+   d. 不匹配 → 拒绝（token 来自不同的 TLS 连接 = 盗用）
+   e. 匹配 → 继续后续 scope / task_id 检查
+```
+
+### 21.3 Claims 扩展
+
+```json
+{
+  "iss": "spiffe://car.local/ad/kmss",
+  "sub": "spiffe://car.local/cd/voice/01",
+  "aud": "spiffe://car.local/ad/perception/01",
+  "exp": 1753879808,
+  "jti": "0192f9b7-...",
+  "scope": ["read:navi.route"],
+
+  "cnf": {
+    "x5t#S256": "bwcK0esc3ACC3DB2Y5_lESsXE8o9ltc05O89jdN-dg8"
+  }
+}
+```
+
+`cnf`（Confirmation）字段是 RFC 8705 标准字段，KMSS 在签发时写入。
+
+### 21.4 KMSS API 扩展
+
+```c
+// 签发 task token 时额外传入调用方证书（用于绑定）
+kmss_token_t* kmss_issue_task_token_bound(
+    kmss_svid_t*    parent,
+    const char**    scopes, size_t n,
+    uint32_t        ttl_seconds,
+    const uint8_t*  client_cert_der,   // 调用方 TLS 客户端证书 DER（来自 mTLS 握手）
+    size_t          client_cert_len
+);
+
+// 验证 token 时同时验证信道绑定
+int kmss_verify_token_with_binding(
+    kmss_token_t*        token,
+    const uint8_t*       trust_bundle, size_t bundle_len,
+    const uint8_t*       peer_cert_der, size_t peer_cert_len,  // 当前 TLS 连接的 peer 证书
+    kmss_claims_t*       out_claims
+);
+// 返回 IAM_TOKEN_BINDING_MISMATCH 如果 cnf 不匹配
+```
+
+### 21.5 Sidecar 验证流程更新
+
+```c
+// BearerTokenInterceptor（带 token binding 检查）
+
+int bearer_token_interceptor(grpc_call_t* call) {
+    // 1. 提取 bearer token
+    const char* bearer = grpc_meta_get(call->metadata, "authorization") + 7; // "Bearer "
+
+    // 2. 提取当前 TLS 连接的 peer 证书（由 mTLS 握手提供）
+    const uint8_t* peer_cert = grpc_call_get_peer_cert(call, &peer_cert_len);
+
+    // 3. 验证 token + binding（一次调用）
+    kmss_claims_t claims;
+    int rc = kmss_verify_token_with_binding(
+        bearer_token, trust_bundle, bundle_len,
+        peer_cert, peer_cert_len,
+        &claims
+    );
+
+    if (rc == IAM_TOKEN_BINDING_MISMATCH) {
+        audit_log_write(&(audit_record_t){
+            .event_type  = AUDIT_TOKEN_BINDING_FAIL,
+            .reason_code = REASON_BINDING_MISMATCH,
+            ...
+        });
+        return GRPC_STATUS_UNAUTHENTICATED;
+    }
+    // ...
+}
+```
+
+### 21.6 Token Binding 的 ASIL 分级适用
+
+| Token 层级 | Binding 是否必须 | 理由 |
+|---|---|---|
+| L0 Workload SVID | 不适用（不是 Bearer） | SVID 本身就是 TLS 证书 |
+| L1 Task Token（TTL ≤ 30s）| 可选 | TTL 极短，盗用窗口 < 30s，binding 收益有限 |
+| L2 Session Token（TTL 15min）| **必须** | 15min 盗用窗口显著，binding 是必要防护 |
+| L3 Lease Token（TTL 数小时）| **必须** | 长时间窗口，binding 是核心防护 |
+| L3A A2A Delegation（跨域）| **必须** | 跨域 token，被盗后影响面更大 |
+
+**实现优先级**：先为 L2/L3/L3A 实现 binding，L1 可后续补充。
+
+---
+
+## 22. 紧急关闭（Emergency Shutdown）
+
+### 22.1 场景：车辆被攻陷的响应
+
+```
+场景：OEM 检测到 VIN=XXX 的车辆存在异常 Agent 行为（如 prompt injection 导致越权）
+     需要立即停止该车所有 LLM Agent 的授权操作
+
+现有 revoke 机制（per-JTI）的局限：
+  - 已知 JTI：每个 JTI 单独 revoke，需要知道所有活跃 token 的 JTI
+  - KMSS 上哪些 token 活跃？→ 没有全量索引（token 不落盘）
+  - 最快做法：revoke 所有 Workload SVID（Level-0 级别撤销）
+```
+
+### 22.2 三层紧急关闭机制
+
+```
+┌───────────────────────────────────────────────────────────┐
+│ Level 1（最快，< 1s）: Sidecar 切断授权                    │
+│  OEM → AD/CD/VD Sidecar: emergency_shutdown(reason)      │
+│  Sidecar 立即切换到 DENY_ALL 模式                         │
+│  所有后续 Guard.Check → 拒绝（已有 token 不再被接受）      │
+│  注意：进行中的 gRPC 流不中断（等调用返回后再切断）         │
+└───────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────┐
+│ Level 2（< 3s）: KMSS 吊销所有 Workload SVID              │
+│  OEM → 3 个域 KMSS: revoke_all_workload_svids()          │
+│  KMSS 撤销所有 L2 workload key → 现有 token 签名链断裂    │
+│  所有 token 验签失败（即使 Sidecar 未收到通知也生效）       │
+└───────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────┐
+│ Level 3（需维修）: L1 Domain Key 撤销                     │
+│  极端情况：怀疑 Domain Key 泄露                            │
+│  OEM 推送新 trust bundle（含 L1 revocation）              │
+│  整车返厂重新注入 or OTA 重建 domain chain                 │
+└───────────────────────────────────────────────────────────┘
+```
+
+### 22.3 Sidecar 紧急关闭 API
+
+```c
+// kmss_emergency.h
+
+typedef enum {
+    EMERGENCY_DENY_ALL          = 1,   // Level 1：拒绝所有授权（最快）
+    EMERGENCY_REVOKE_SVIDS      = 2,   // Level 2：撤销所有 SVID
+    EMERGENCY_REVOKE_DOMAIN_KEY = 3,   // Level 3：撤销 L1 domain key（需人工确认）
+} emergency_level_t;
+
+typedef struct {
+    emergency_level_t level;
+    const char*       reason;          // 人读原因（审计用）
+    const char*       initiated_by;    // 发起方标识（OEM backend SPIFFE ID）
+    uint64_t          timestamp;       // 操作时间戳（来自 OEM，防回放）
+    uint8_t           signature[72];   // OEM backend 用 L1 私钥签名（防伪造指令）
+} emergency_shutdown_t;
+
+// Sidecar 接收 OEM 紧急关闭指令（通过 gRPC stream 或带外通道）
+int sidecar_emergency_shutdown(
+    const emergency_shutdown_t* cmd,
+    const uint8_t* oem_trust_bundle, size_t bundle_len  // 验证指令签名
+);
+
+// 恢复（需 OEM 显式指令 + 时间戳 > shutdown 时间戳）
+int sidecar_emergency_resume(
+    const char*    reason,
+    uint64_t       timestamp,
+    const uint8_t* oem_signature, size_t sig_len
+);
+```
+
+### 22.4 紧急关闭状态机
+
+```
+Normal
+  │
+  │ emergency_shutdown(DENY_ALL)
+  ▼
+Deny-All Mode ─────────────────────────────────────────────
+  │ 所有 Guard.Check → 拒绝（不查 token）
+  │ 现有流：等当前 RPC 完成后拒绝新请求
+  │
+  │ emergency_shutdown(REVOKE_SVIDS)（可与 DENY_ALL 同时）
+  ▼
+SVIDs-Revoked Mode ─────────────────────────────────────────
+  │ KMSS 撤销所有 L2 key
+  │ 所有 token 验签 → 失败（即使 Sidecar 还没切到 DENY_ALL）
+  │
+  │ sidecar_emergency_resume()（来自 OEM）
+  ▼
+Recovery Mode ────────────────────────────────────────────
+  │ KMSS 重新签发 SVID
+  │ Agent 重启 + 重新申请 Session Token
+  │ 系统自检通过后 → Normal
+  ▼
+Normal
+```
+
+### 22.5 审计记录（紧急关闭必须写入的事件）
+
+```c
+AUDIT_EMERGENCY_SHUTDOWN_RECEIVED,  // 收到关闭指令
+AUDIT_EMERGENCY_DENY_ALL_ACTIVE,    // DENY_ALL 模式激活
+AUDIT_EMERGENCY_SVID_REVOKE_ALL,    // 所有 SVID 撤销
+AUDIT_EMERGENCY_RESUME_RECEIVED,    // 收到恢复指令
+AUDIT_EMERGENCY_RESUME_ACTIVE,      // 恢复完成
+AUDIT_EMERGENCY_INVALID_SIGNATURE,  // 关闭/恢复指令签名无效（防伪造）
+```
+
+这些事件**必须写入 NVRAM（不可擦除）**，不受关闭模式影响。
+
+---
+
+## 23. 车云 IAM 扩展（V2C：Vehicle-to-Cloud Agent）
+
+### 23.1 场景与挑战
+
+车端 Agent（如 CD Voice Agent）需要调用**云端 LLM API**（如 OEM 自建 LLM 服务），
+或云端 OTA 服务需要向车端 Agent 发起任务。
+
+```text
+车端信任域（car.local）               云端信任域（cloud.oem.com）
+  CD Voice Agent                          LLM Gateway
+  SVID: spiffe://car.local/...   ←→       SVID: spiffe://cloud.oem.com/...
+  KMSS: 本地 TEE                          KMSS: 云端 HSM
+
+挑战：
+  1. 两个信任域（car.local vs cloud.oem.com）互不认识
+  2. 车端 token 由车端 KMSS 签发，云端 KMSS 无法验签
+  3. 离线场景：TBOX 断网时，车端不能依赖云端 KMSS
+  4. Token 撤销跨域传播：云端 revoke，车端如何感知？
+```
+
+### 23.2 SPIFFE Federation（跨域信任）
+
+核心机制：两个信任域通过 **SPIFFE Federation Bundle** 交换各自的 trust anchor，
+实现跨域 mTLS 验证（不需要 token 跨域传输）。
+
+```
+车云 Federation 建立：
+
+OEM Cloud（cloud.oem.com）：
+  发布 federation bundle：
+  {
+    "trust_domain": "cloud.oem.com",
+    "keys": [{"kty": "EC", "crv": "P-256", ...}],  // L1 domain public key
+    "refresh_hint": 3600
+  }
+
+车端（car.local）：
+  OTA bundle 中包含 cloud.oem.com 的 trust anchor
+  车端 SPIRE Agent（或 KMSS）加载后：
+    可以验证 cloud.oem.com 签发的 SVID
+
+云端反向同样：
+  云端加载 car.local 的 trust anchor
+  可以验证车端 SVID
+```
+
+### 23.3 车云跨域 Token 交换（Online）
+
+```
+在线场景（TBOX 有网络连接）：
+
+1. 车端 CD Agent 申请车端 SVID（已有，L0）
+2. 向云端 LLM Gateway 建立 mTLS 连接
+   - TLS 客户端证书：CD Agent 的 SVID X.509
+   - TLS 服务端证书：LLM Gateway 的 SVID
+   - 双方通过 Federation trust anchor 互相验证 ✓
+
+3. CD Agent 用 Authorization: Bearer <car_local_token>
+4. LLM Gateway Sidecar 验证 car_local_token：
+   - 用 car.local 的 trust bundle（federation 获取）验签
+   - scope 检查（invoke:llm.chat 等）
+   - mTLS binding 检查（cnf.x5t#S256）
+
+5. LLM Gateway 返回响应
+   - 响应携带 X-Cloud-Job-Id
+   - 车端 SDK 建立 cloud_job_id → local_lease_jti 映射
+```
+
+### 23.4 离线 Token 缓存（TBOX 断网场景）
+
+```
+离线场景：车辆进入隧道 / 地下停车场，TBOX 无网络
+
+提前预热（进入弱网区之前）：
+  车端 SDK 检测到信号变弱 → 触发 offline_preload()
+
+offline_preload() 执行：
+  1. 申请较长 TTL 的车云凭据（TTL = 预估离线时长 + 缓冲）
+  2. 凭据存入 KMSS 保护的 wrapped secret
+  3. 记录预估离线结束时间
+
+离线期间：
+  使用缓存凭据，直到 TTL 到期
+  TTL 到期后不能申请新的云端凭据 → 云端 LLM 功能降级
+  本地 LLM（如果有）继续工作
+
+重新上线：
+  TBOX 检测到网络恢复 → 触发 online_resume()
+  重新申请车云凭据 → 清理过期缓存
+```
+
+### 23.5 车云 KMSS API 扩展
+
+```c
+// 建立车云 Federation
+int kmss_load_cloud_trust_bundle(
+    const char*    cloud_trust_domain,    // "cloud.oem.com"
+    const uint8_t* federation_bundle,    // OTA 推送的 Federation bundle
+    size_t         bundle_len
+);
+
+// 签发跨域凭据（面向云端服务）
+kmss_token_t* kmss_issue_cloud_delegation(
+    kmss_svid_t*    car_svid,
+    const char*     cloud_service_spiffe_id,  // "spiffe://cloud.oem.com/ns/llm/sa/gateway"
+    const char**    scopes, size_t n_scopes,
+    uint32_t        ttl_seconds,
+    const uint8_t*  client_cert_der, size_t cert_len  // mTLS binding
+);
+
+// 预加载离线凭据
+int kmss_preload_offline_credentials(
+    kmss_svid_t*    car_svid,
+    uint32_t        offline_est_seconds  // 预估离线时长
+);
+
+// 验证云端下行 token（云端向车端发起任务时）
+int kmss_verify_cloud_inbound_token(
+    const uint8_t*  token, size_t token_len,
+    const char*     cloud_trust_domain,
+    const uint8_t*  federation_bundle, size_t bundle_len,
+    kmss_claims_t*  out_claims
+);
+```
+
+### 23.6 车云 IAM 安全边界
+
+| 边界 | 规则 | 原因 |
+|---|---|---|
+| 云端 scope ≠ 车端 scope | 云端 scope（`invoke:llm.chat`）不能映射为车端安全 scope（`tool:control.brake`）| 防止云端被攻陷后横向移动 |
+| ASIL 单向 | QM 云端服务不能触发 ASIL-D 车端操作 | 云端不在 ASIL 功能安全认证范围内 |
+| 离线自洽 | 车端不依赖云端进行安全决策（Guard.Check 纯本地）| 网络中断不影响本地安全功能 |
+| 云端 token 在车端独立 namespace | `cloud.oem.com` scope 与 `car.local` scope 严格隔离 | 跨域不混用 scope 字符串 |
+
+---
+
+## 24. IAM 完善后的落地优先级
+
+综合 §18~§23 新增内容，按优先级整理落地清单：
+
+### P0（必须实现，影响基础安全）
+
+- [ ] **§21 Token Binding**：L2 Session + L3 Lease + L3A A2A Delegation 必须绑定 mTLS 证书
+- [ ] **§22 Level-1 紧急关闭**：Sidecar DENY_ALL 模式（< 1s 响应）+ 审计 NVRAM 写入
+
+### P1（应该实现，影响完整性）
+
+- [ ] **§21 L1 Task Token Binding**：TTL 短，可选但推荐
+- [ ] **§22 Level-2 SVID 全量撤销**：KMSS `revoke_all_workload_svids()` + 跨域传播
+- [ ] **§19 审计日志补充**：新增 `AUDIT_TOKEN_BINDING_FAIL`、`AUDIT_EMERGENCY_*` 事件类型
+
+### P2（应该实现，影响扩展性）
+
+- [ ] **§23 SPIFFE Federation Bundle**：OTA bundle 内携带 cloud.oem.com trust anchor
+- [ ] **§23 车云在线 Token 交换**：`kmss_issue_cloud_delegation()` + LLM Gateway Sidecar 验证
+
+### P3（远期，可选）
+
+- [ ] **§23 离线预热缓存**：弱网检测 + `kmss_preload_offline_credentials()`
+- [ ] **§22 Level-3 Domain Key 撤销**：整车生命周期极少触发，人工流程
+
+---
+
+## 25. 修订记录更新
+
+| 版本 | 日期 | 修订内容 |
+|---|---|---|
+| 1.0 | 2026-07-16 | 初稿：任务分级 + 分层 TTL + KMSS lib API |
+| 1.1 | 2026-07-16 | 新增 §14 凭据管理（密钥分层 + CRL + Wrapped Secret） |
+| 1.2 | 2026-07-16 | 新增 §15 整体架构（三视图 + 数据流）+ §16 各模块架构（输入/输出） |
+| 1.3 | 2026-07-29 | 新增 §18 威胁模型、§19 审计日志格式、§20 限流与配额 |
+| 1.4 | 2026-07-30 | 新增 §21 Token Binding（mTLS 信道绑定）、§22 紧急关闭（Emergency Shutdown）、§23 车云 IAM 扩展（V2C）、§24 落地优先级 |

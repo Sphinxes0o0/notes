@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/notes/',
 
   plugins: [
-    readingTimePlugin()
+    readingTimePlugin(),
   ],
 
   title: "Sphinx's Notes",
@@ -190,6 +190,7 @@ export default defineConfig({
       { text: '安全', link: '/security/' },
       { text: '工具', link: '/tools/' },
       { text: 'AI 编码 Agent', link: '/coding_agent/' },
+      { text: '研究', link: '/research/' },
       {
         text: '课程',
         items: [
@@ -214,6 +215,7 @@ export default defineConfig({
               items: [
                 { text: 'C 语言基础', link: '/ccpp/c/c' },
                 { text: '内存管理', link: '/ccpp/c/memory_management' },
+                { text: '内存相关', link: '/ccpp/c/memory' }
               ]
             },
             {
@@ -239,7 +241,8 @@ export default defineConfig({
                   text: 'C++23/26 新特性',
                   collapsed: true,
                   items: [
-                    { text: 'std::expected 错误处理', link: '/ccpp/cpp/cpp23/expected_error_handling' }
+                    { text: 'std::expected 错误处理', link: '/ccpp/cpp/cpp23/expected_error_handling' },
+                    { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/cpp/concurrency/cpp20_26_async_io' }
                   ]
                 }
               ]
@@ -273,7 +276,7 @@ export default defineConfig({
               text: 'C++ 并发',
               collapsed: true,
               items: [
-                { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/concurrency/cpp20_26_async_io' },
+                { text: 'C++20 协程 + C++26 sender/receiver 异步 I/O', link: '/ccpp/cpp/concurrency/cpp20_26_async_io' },
                 { text: 'future / promise / shared_future / async（源码示例）', link: '/ccpp/concurrency/future' },
                 { text: 'memory_order 演示（源码示例）', link: '/ccpp/concurrency/memory_order' },
                 { text: 'MPMC ring buffer（源码示例）', link: '/ccpp/concurrency/mpmc_ringbuffer' },
@@ -290,7 +293,10 @@ export default defineConfig({
                 { text: 'C++ - 240401', link: '/ccpp/codewar_notes/cpp/240401' },
                 { text: 'C++ - 轮转数组', link: '/ccpp/codewar_notes/cpp/rotate_array' }
               ]
-            }
+            },
+            { text: 'test-ingest', link: '/ccpp/test-ingest' },
+            { text: 'Hermes Agent Memory 系统设计 + 最佳实践', link: '/ccpp/hermes_memory_design' },
+            { text: 'Hermes Memory 论文 + 开源项目 (2026H1)', link: '/ccpp/hermes_memory_research_2026h1' }
           ]
         }
       ],
@@ -304,8 +310,7 @@ export default defineConfig({
                 { text: '概述', link: '/sys/' },
                 { text: 'ELF 文件格式', link: '/sys/fundamentals/elf' },
                 { text: 'Linux 系统编程', link: '/sys/fundamentals/linux_system_programming' },
-                { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' },
-                { text: '软件性能深度思考', link: '/sys/software-performance-deep-thinking' }
+                { text: 'TTY / Shell / Console', link: '/sys/tty_shell_console' }
               ]
             },
             {
@@ -333,7 +338,7 @@ export default defineConfig({
               text: '网络',
               items: [
                 { text: '概述', link: '/network/' },
-                { text: '网络栈深度分析', link: '/network/stack_deep_dive' },
+                { text: '网络栈深度分析', link: '/network/network_stack_deep_dive' },
                 {
                   text: 'TCP/IP',
                   items: [
@@ -358,10 +363,10 @@ export default defineConfig({
                   text: 'Linux 网络核心',
                   collapsed: true,
                   items: [
-                    // —— 核心架构（来源 /network/core/，已合并入 linux_kernel/）——
-                    { text: 'Socket 子系统（BSD）', link: '/network/linux_kernel/socket_bsd_layer' },
-                    { text: '连接跟踪子系统', link: '/network/linux_kernel/nf_conntrack_subsystem' },
-                    { text: '路由子系统', link: '/network/linux_kernel/net_routing_subsystem' },
+                    // —— 核心架构（来源 /network/core/）——
+                    { text: 'Socket 子系统', link: '/network/core/net_subsystem_socket' },
+                    { text: '连接跟踪（核心架构）', link: '/network/core/net_subsystem_conntrack' },
+                    { text: '路由（核心架构）', link: '/network/core/net_subsystem_routing' },
                     // —— 详解与实现（来源 /network/linux_kernel/）——
                     { text: 'Socket', link: '/network/linux_kernel/socket' },
                     { text: 'Socket Syscall', link: '/network/linux_kernel/socket_syscall' },
@@ -405,6 +410,20 @@ export default defineConfig({
                     { text: 'LwIP 网桥实现', link: '/network/lwip-bridge-implementation' },
                     { text: 'plantegg - 举三反一', link: '/network/plantegg-three-from-one' }
                   ]
+                },
+                {
+                  // 翻译文章集：arthurchiao.art / plantegg / lsgxeva
+                  // 原始目录 /network/linux_net-stack/
+                  text: '网络栈译文集',
+                  collapsed: true,
+                  items: [
+                    { text: 'plantegg - Linux Network Stack 概览', link: '/network/linux_net-stack/linux-network-stack-plantegg' },
+                    { text: 'Linux 网络栈原理、监控与调优：前言 (2022)', link: '/network/linux_net-stack/linux-网络栈原理监控与调优前言2022' },
+                    { text: 'Linux 网络栈 RX：原理及内核实现 (2022)', link: '/network/linux_net-stack/linux-网络栈接收数据rx原理及内核实现2022' },
+                    { text: 'Linux 网络栈 RX：配置调优 (2022)', link: '/network/linux_net-stack/linux-网络栈接收数据rx配置调优2022' },
+                    { text: 'Linux 中 ARP 表老化机制 (lsgxeva)', link: '/network/linux_net-stack/linux中arp表的老化机制-lsgxeva-博客园' },
+                    { text: '[译] 现代网络负载均衡与代理导论 (2017)', link: '/network/linux_net-stack/译-现代网络负载均衡与代理导论2017' }
+                  ]
                 }
               ]
             }
@@ -422,36 +441,6 @@ export default defineConfig({
               items: [
                 { text: 'vSOME/IP', link: '/midware/someip/vsomeip' },
                 { text: 'SOME/IP 安全', link: '/midware/someip/security' }
-              ]
-            }
-          ]
-        }
-      ],
-      '/a2a/': [
-        {
-          text: 'A2A 协议（深入浅出）',
-          items: [
-            { text: '概述', link: '/a2a/' },
-            {
-              text: '基础概念篇',
-              items: [
-                { text: '01 · A2A 协议入门', link: '/a2a/01-introduction' },
-                { text: '02 · 核心概念', link: '/a2a/02-core-concepts' }
-              ]
-            },
-            {
-              text: '协议篇',
-              items: [
-                { text: '03 · 协议深度', link: '/a2a/03-protocol-deep-dive' },
-                { text: '04 · 安全与企业级', link: '/a2a/04-security-enterprise' }
-              ]
-            },
-            {
-              text: '实战篇',
-              items: [
-                { text: '05 · 实战 1：Hello World', link: '/a2a/05-hands-on-helloworld' },
-                { text: '06 · 实战 2：流式 + 多轮对话', link: '/a2a/06-hands-on-streaming' },
-                { text: '07 · 实战 3：多 Agent 协作', link: '/a2a/07-hands-on-multi-agent' }
               ]
             }
           ]
@@ -488,7 +477,11 @@ export default defineConfig({
               items: [
                 { text: '分层防御方案（IAM + 规则 + Content Guard + NSFA + 沙箱）', link: '/security/llm_agent_defense/layered_defense' },
                 { text: 'IAM 认证架构（身份 / 认证 / 凭据管理）', link: '/security/llm_agent_defense/iam_auth_architecture' },
-                { text: 'IAM 详细架构与模块流程（启动 / 状态机 / 时序 / 故障 / demo）', link: '/security/llm_agent_defense/detailed_architecture' }
+                { text: 'IAM 详细架构与模块流程（启动 / 状态机 / 时序 / 故障 / demo）', link: '/security/llm_agent_defense/detailed_architecture' },
+                { text: 'A2A 协议（车载三域 + IAM 集成 + 安全威胁）', link: '/security/llm_agent_defense/a2a_vehicle_protocol' },
+                { text: 'A2A + IAM 融合架构（Token 模型 / Sidecar 中间件 / 多跳链路）', link: '/security/llm_agent_defense/a2a_iam_integration_arch' },
+                { text: 'A2A + IAM 深度分析与 gRPC 扩展演进', link: '/security/llm_agent_defense/a2a_iam_grpc_deep_dive' },
+                { text: 'IAM 对 A2A 的零侵入设计（AgentCard 签名 / Bearer / Server-Side Policy）', link: '/security/llm_agent_defense/a2a_iam_nonintrusive' }
               ]
             },
             {
@@ -570,6 +563,26 @@ export default defineConfig({
                   ]
                 }
               ]
+            },
+            {
+              text: 'SPIFFE 翻译',
+              collapsed: true,
+              items: [
+                { text: '概述', link: '/security/spiffe-book/' },
+                { text: '01 - 历史与动机', link: '/security/spiffe-book/ch01-history-and-motivation' },
+                { text: '02 - 收益', link: '/security/spiffe-book/ch02-benefits' },
+                { text: '03 - 身份背后的一般概念', link: '/security/spiffe-book/ch03-general-concepts-behind-identity' },
+                { text: '04 - SPIFFE 与 SPIRE 介绍', link: '/security/spiffe-book/ch04-introduction-to-spiffe-and-spire' },
+                { text: '05 - 入门前准备', link: '/security/spiffe-book/ch05-before-you-start' },
+                { text: '06 - 设计 SPIRE 部署', link: '/security/spiffe-book/ch06-designing-a-spire-deployment' },
+                { text: '07 - 与其他系统集成', link: '/security/spiffe-book/ch07-integrating-with-others' },
+                { text: '08 - 用 SPIFFE 身份驱动授权', link: '/security/spiffe-book/ch08-using-spiffe-identities-to-inform-authorization' },
+                { text: '09 - 与其他安全技术对比', link: '/security/spiffe-book/ch09-comparing-spiffe-to-other-security-technologies' },
+                { text: '10 - 实践者故事', link: '/security/spiffe-book/ch10-practitioners-stories' },
+                { text: '术语表', link: '/security/spiffe-book/11-glossary' },
+                { text: '译注', link: '/security/spiffe-book/12-notes' },
+                { text: '尾声', link: '/security/spiffe-book/13-epilogue' }
+              ]
             }
           ]
         }
@@ -596,9 +609,65 @@ export default defineConfig({
             { text: 'Pi Agent 总览', link: '/coding_agent/pi-agent' },
             { text: 'Pi 扩展生态与能力', link: '/coding_agent/pi-agent-ecosystem' },
             { text: 'Pi vs 其他 Agent 框架', link: '/coding_agent/pi-agent-comparison' },
-            { text: 'Pi 定制 workflow 实操', link: '/coding_agent/pi-agent-custom-workflow' },
-            { text: 'Hermes Agent Memory 系统设计', link: '/coding_agent/hermes_memory_design' },
-            { text: 'Hermes Memory 论文与开源项目 (2026H1)', link: '/coding_agent/hermes_memory_research_2026h1' }
+            { text: 'Pi 定制 workflow 实操', link: '/coding_agent/pi-agent-custom-workflow' }
+          ]
+        }
+      ],
+      '/research/': [
+        {
+          text: '研究合集',
+          items: [
+            { text: '概述', link: '/research/' },
+            {
+              text: 'Agent-SafetyBench 评测',
+              items: [
+                { text: '概述', link: '/research/agent-safetybench-singuard-eval/' }
+              ]
+            },
+            {
+              text: 'Agentgateway 分析',
+              items: [
+                { text: '概述', link: '/research/agentgateway-analysis/' },
+                { text: 'IAM 认证与 A2A 授权', link: '/research/agentgateway-analysis/iam-authn-authz-a2a' },
+                { text: 'AgentTeams 深度分析', link: '/research/agentgateway-analysis/agentteams-deep-dive' }
+              ]
+            },
+            {
+              text: 'LLM Agent 安全报告',
+              items: [
+                { text: '概述', link: '/research/llm-agent-security-reports/' },
+                { text: 'OWASP LLM Top 10 防御', link: '/research/llm-agent-security-reports/owasp-llm-top10-defenses' },
+                { text: 'LLM 应用安全架构', link: '/research/llm-agent-security-reports/llm-app-security-architecture' },
+                { text: 'AI Agent 安全 IAM', link: '/research/llm-agent-security-reports/ai-agent-security-iam' },
+                { text: 'Constitutional Classifiers (arxiv)', link: '/research/llm-agent-security-reports/arxiv-2601-04603-constitutional-classifiers-pp' },
+                { text: 'Three Labs 2026', link: '/research/llm-agent-security-reports/llm-agent-security-three-labs-2026' },
+                { text: 'METR 2026 Frontier Risk', link: '/research/llm-agent-security-reports/metr-2026-frontier-risk-report' }
+              ]
+            },
+            {
+              text: 'NIO 车端 AI Agent 安全',
+              items: [
+                { text: '概述', link: '/research/nio-vehicle-ai-agent-security/' },
+                { text: 'IAM LLM Guard 白皮书', link: '/research/nio-vehicle-ai-agent-security/iam-llm-guard-whitepaper' },
+                { text: 'IAM LLM Guard README', link: '/research/nio-vehicle-ai-agent-security/iam-llm-guard-README' },
+                { text: 'Edge AI 安全报告', link: '/research/nio-vehicle-ai-agent-security/edge-ai-security-report' },
+                { text: 'Vehicle IAM 集成', link: '/research/nio-vehicle-ai-agent-security/vehicle-iam-integrated' },
+                {
+                  text: 'Framework Design',
+                  items: [
+                    { text: '概述', link: '/research/nio-vehicle-ai-agent-security/framework-design/' },
+                    { text: 'v1 框架设计', link: '/research/nio-vehicle-ai-agent-security/framework-design/framework-design-v1' },
+                    { text: 'v2 集成版', link: '/research/nio-vehicle-ai-agent-security/framework-design/framework-design-v2-integrated' }
+                  ]
+                }
+              ]
+            },
+            {
+              text: 'Uber ADR 深度分析',
+              items: [
+                { text: '概述', link: '/research/uber-adr-analysis/' }
+              ]
+            }
           ]
         }
       ],
@@ -822,8 +891,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/mm/' },
-                { text: '分配器总览', link: '/kernel/mm/mm_allocator_r0' },
-                { text: '分配器实现', link: '/kernel/mm/mm_allocator' },
+                { text: '分配器', link: '/kernel/mm/mm_allocator' },
                 { text: '核心结构', link: '/kernel/mm/mm_core_structs' },
                 { text: '内存映射', link: '/kernel/mm/mm_mmap' },
                 { text: '页错误处理', link: '/kernel/mm/mm_page_fault' },
@@ -838,7 +906,6 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/vfs/' },
-                { text: '架构总览', link: '/kernel/vfs/vfs_overview' },
                 { text: '索引节点', link: '/kernel/vfs/inode' },
                 { text: '目录项缓存', link: '/kernel/vfs/dcache' },
                 { text: '超级块', link: '/kernel/vfs/superblock' },
@@ -854,7 +921,6 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/block/' },
-                { text: '架构总览', link: '/kernel/block/block_overview' },
                 { text: '通用块层', link: '/kernel/block/block_core' },
                 { text: '请求处理', link: '/kernel/block/block_request' },
                 { text: '调度器', link: '/kernel/block/block_scheduler' },
@@ -887,7 +953,6 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/sched/' },
-                { text: '架构总览', link: '/kernel/sched/sched_overview' },
                 { text: '核心结构', link: '/kernel/sched/sched_core' },
                 { text: 'CFS 调度器', link: '/kernel/sched/sched_cfs' },
                 { text: '实时调度', link: '/kernel/sched/sched_rt' },
@@ -897,12 +962,9 @@ export default defineConfig({
             },
             {
               text: '同步机制 (locking)',
-              collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/locking/' },
-                { text: '同步总览', link: '/kernel/locking/locking_overview' },
-                { text: '子系统架构', link: '/kernel/locking/locking_subsystem' },
-                { text: '深度 R2', link: '/kernel/locking/locking_deep_dive_r2' }
+                { text: '子系统架构', link: '/kernel/locking/locking_subsystem' }
               ]
             },
             {
@@ -914,12 +976,9 @@ export default defineConfig({
             },
             {
               text: '时间管理 (time)',
-              collapsed: true,
               items: [
                 { text: '概述', link: '/kernel/time/' },
-                { text: '时间总览', link: '/kernel/time/time_overview' },
-                { text: '子系统架构', link: '/kernel/time/time_subsystem' },
-                { text: '深度 R1', link: '/kernel/time/time_deep_dive_r1' }
+                { text: '子系统架构', link: '/kernel/time/time_subsystem' }
               ]
             },
             {
@@ -937,14 +996,6 @@ export default defineConfig({
                 { text: '内存管理', link: '/kernel/io_uring/io_uring_memory' },
                 { text: '操作机制', link: '/kernel/io_uring/io_uring_operations' },
                 { text: '特性', link: '/kernel/io_uring/io_uring_features' }
-              ]
-            },
-            {
-              text: '资源控制 (cgroup)',
-              collapsed: true,
-              items: [
-                { text: '概述', link: '/kernel/cgroup/' },
-                { text: '子系统架构', link: '/kernel/cgroup/cgroup_subsystem' }
               ]
             },
             {
@@ -1022,9 +1073,9 @@ export default defineConfig({
             { text: '系统设计基础', link: '/interview/03_系统设计基础' },
             { text: 'NP完全性与近似算法', link: '/interview/04_NP完全性与近似算法' },
             { text: '位操作技巧', link: '/interview/05_位操作技巧' },
-            { text: '基础数据结构与排序', link: '/interview/06_基础数据结构与排序' },
-            { text: '进阶数据结构', link: '/interview/07_进阶数据结构' },
-            { text: '推荐资源', link: '/interview/08_推荐资源' },
+            { text: '基础数据结构与排序', link: '/interview/基础数据结构与排序' },
+            { text: '进阶数据结构', link: '/interview/06_进阶数据结构' },
+            { text: '推荐资源', link: '/interview/07_推荐资源' },
             { text: '致谢与引用', link: '/interview/credits' }
           ]
         }
