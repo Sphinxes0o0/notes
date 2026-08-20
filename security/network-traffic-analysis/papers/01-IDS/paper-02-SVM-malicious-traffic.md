@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Detection of Malicious Network Traffic Attacks Using SVM"
+description: "随着网络攻击频率和复杂性的增加，网络安全成为至关重要的问题。传统的入侵检测系统面临以下挑战："
+---
 # Paper Reading: Detection of Malicious Network Traffic Attacks Using SVM
 
 ## 文献信息

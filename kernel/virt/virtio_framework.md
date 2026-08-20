@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Virtio Para-virtualization 框架分析文档"
+description: "Virtio 是一个开放标准,定义了不同类型设备与驱动程序之间通信的协议。最初作为 hypervisor 实现的半虚拟化设备标准,现在已可用于任何符合规范的设备(真实或模拟)。"
+---
 # Linux 内核 Virtio Para-virtualization 框架分析文档
 
 ## 目录

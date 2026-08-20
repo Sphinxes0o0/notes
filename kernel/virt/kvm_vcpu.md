@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 KVM vCPU 管理机制分析"
+description: "KVM (Kernel-based Virtual Machine) 是 Linux 内核中最主流的虚拟化解决方案,基于硬件虚拟化技术(如 Intel VT-x 和 AMD-V)实现。vCPU (虚拟 CPU) 是 KVM 虚拟机的核心执行单元,每个 vCPU 对应一个宿主机的线程。"
+---
 # Linux 内核 KVM vCPU 管理机制分析
 
 ## 1. 概述

@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Sound 子系统深度分析文档"
+description: "**版本**: R1"
+---
 # Linux Kernel Sound 子系统深度分析文档
 
 **版本**: R1

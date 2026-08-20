@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel KVM (Kernel Virtual Machine) 核心架构分析"
+description: "KVM (Kernel-based Virtual Machine) 是 Linux 内核级的硬件虚拟化解决方案，将 Linux 内核转变为 Hypervisor。KVM 需要硬件虚拟化支持 (Intel VT-x 或 AMD-V)，通过 `/dev/kvm` 字符设备与用户空间交互。"
+---
 # Linux Kernel KVM (Kernel Virtual Machine) 核心架构分析
 
 ## 1. 概述

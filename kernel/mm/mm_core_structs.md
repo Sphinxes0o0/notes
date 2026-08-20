@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel 内存管理核心结构体"
+description: "本文档描述 Linux 内核内存管理子系统（mm）的核心数据结构。"
+---
 # Linux Kernel 内存管理核心结构体
 
 本文档描述 Linux 内核内存管理子系统（mm）的核心数据结构。

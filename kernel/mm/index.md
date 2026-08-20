@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 MM (Memory Management) 子系统深度分析"
+description: "本文档是 Linux 内核 MM (Memory Management) 子系统的全面深度分析，涵盖从页面分配到回收的完整架构。"
+---
 # Linux 内核 MM (Memory Management) 子系统深度分析
 
 ## 概述

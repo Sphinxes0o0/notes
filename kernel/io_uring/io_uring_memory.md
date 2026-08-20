@@ -1,3 +1,7 @@
+---
+title: "io_uring 子系统内存管理与缓冲区机制分析"
+description: "io_uring 是 Linux 内核的高性能异步 I/O 子系统，其内存管理机制包含以下几个核心组件："
+---
 # io_uring 子系统内存管理与缓冲区机制分析
 
 ## 目录

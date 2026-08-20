@@ -1,3 +1,7 @@
+---
+title: "net/openvswitch - Open vSwitch"
+description: "Open vSwitch (OvS) 是一种多层虚拟交换机，支持 OpenFlow 协议，用于 SDN 环境。"
+---
 # net/openvswitch - Open vSwitch
 
 ## 1. 模块架构

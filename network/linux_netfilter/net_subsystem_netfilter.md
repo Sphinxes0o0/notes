@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Netfilter Subsystem Analysis"
+description: "Hooks are ordered by ascending priority (lower number = higher priority):"
+---
 # Linux Kernel Netfilter Subsystem Analysis
 
 ## Table of Contents

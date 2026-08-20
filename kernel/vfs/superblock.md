@@ -1,3 +1,7 @@
+---
+title: "VFS Superblock 管理"
+description: "Superblock 是文件系统的元数据结构，包含文件系统的整体信息（如块大小、总块数、 inode 数量等）。每个挂载的文件系统都有一个 super_block 结构。"
+---
 # VFS Superblock 管理
 
 ## 1. 模块架构

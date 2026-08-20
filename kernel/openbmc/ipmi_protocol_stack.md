@@ -1,3 +1,7 @@
+---
+title: "OpenBMC IPMI 协议栈深度分析"
+description: "IPMI（Intelligent Platform Management Interface，智能平台管理接口）是一种开放标准的硬件管理接口规范，广泛应用于服务器和嵌入式系统。OpenBMC 作为开源的 BMC（Baseboard Management Controller）固件栈，实现了完整的 IPMI 协议栈，包括命令处理、FRU 数据管理、SEL 事件日志和传感器读取等功能。"
+---
 # OpenBMC IPMI 协议栈深度分析
 
 ## 概述

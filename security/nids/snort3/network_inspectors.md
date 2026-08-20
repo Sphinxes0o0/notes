@@ -1,3 +1,7 @@
+---
+title: "Snort3 网络层检查器 (Network Inspectors)"
+description: "网络层检查器是Snort3中处理链路层到网络层协议分析的核心组件,负责数据包的初步解码、协议验证和异常检测。"
+---
 # Snort3 网络层检查器 (Network Inspectors)
 
 网络层检查器是Snort3中处理链路层到网络层协议分析的核心组件,负责数据包的初步解码、协议验证和异常检测。

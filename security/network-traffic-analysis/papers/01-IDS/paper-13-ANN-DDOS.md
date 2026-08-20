@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: ANN for DDoS Attack Detection"
+description: "ANN 是检测 DDoS 攻击的有效工具。"
+---
 # Paper Reading: ANN for DDoS Attack Detection
 
 ## 文献信息

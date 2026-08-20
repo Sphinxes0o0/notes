@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Packet Routing and Neighbor Subsystem Documentation"
+description: "The Linux kernel IPv4 routing subsystem uses a Forwarding Information Base (FIB) implemented as an LC-trie (Level Compression Trie) data structure for efficient longest-prefix matching."
+---
 # Linux Kernel Packet Routing and Neighbor Subsystem Documentation
 
 ## Table of Contents

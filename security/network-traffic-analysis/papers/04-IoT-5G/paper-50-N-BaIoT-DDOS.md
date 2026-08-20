@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: DDOS Intrusion Detection - N-BaIoT Dataset"
+description: "N-BaIoT 是专门为 IoT 设备创建的入侵检测数据集："
+---
 # Paper Reading: DDOS Intrusion Detection - N-BaIoT Dataset
 
 ## 文献信息

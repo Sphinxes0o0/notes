@@ -1,3 +1,7 @@
+---
+title: "net/dsa - 分布式交换机架构"
+description: "DSA (Distributed Switch Architecture) 是一种框架，允许在多个物理端口之间共享单个网络设备驱动程序。"
+---
 # net/dsa - 分布式交换机架构
 
 ## 1. 模块架构

@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel skbuff 内存管理分析"
+description: "**文件**: `/Users/sphinx/github/linux/include/linux/skbuff.h` (第 885-1103 行)"
+---
 # Linux Kernel skbuff 内存管理分析
 
 ## 1. skbuff 核心结构体

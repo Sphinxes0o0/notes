@@ -1,3 +1,7 @@
+---
+title: "std::vector 详解"
+description: "`std::vector` 是 C++ STL 中最常用的序列容器，它是一个动态数组，可以在运行时改变大小。vector 在内存中连续存储元素，支持高效的随机访问。"
+---
 # std::vector 详解
 
 ## 概述

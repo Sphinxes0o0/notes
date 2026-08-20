@@ -1,3 +1,7 @@
+---
+title: "VFS Path 查找 (namei)"
+description: "Path 查找是 VFS 将用户空间路径名（如 `/home/user/file`）转换为内核内部数据结构（dentry、inode）的过程。Linux 使用 RCU（Read-Copy-Update）机制加速查找。"
+---
 # VFS Path 查找 (namei)
 
 ## 1. 模块架构

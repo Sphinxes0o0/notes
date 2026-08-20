@@ -1,3 +1,7 @@
+---
+title: "TTY、Shell 与 Console 详解"
+description: "**TeleTYpewriter (TTY)** 诞生于 19 世纪末，最初用于电报传输。1960 年代被引入计算机领域作为人机交互界面。"
+---
 # TTY、Shell 与 Console 详解
 
 ## 一、Tty 的前世今生

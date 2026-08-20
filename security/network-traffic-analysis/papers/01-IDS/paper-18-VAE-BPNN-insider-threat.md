@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: VAE + BPNN for Insider Threat Detection"
+description: "VAE + BPNN 组合实现有效的内部威胁检测。"
+---
 # Paper Reading: VAE + BPNN for Insider Threat Detection
 
 ## 文献信息

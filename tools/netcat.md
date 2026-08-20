@@ -1,3 +1,7 @@
+---
+title: "netcat"
+description: "nc, netcat 的缩写, 是类 unix 系统下一个功能强大的命令行网络工具, 用来在两台主机之间建立 TCP 或者 UDP 连接,"
+---
 # netcat
 
 nc, netcat 的缩写, 是类 unix 系统下一个功能强大的命令行网络工具, 用来在两台主机之间建立 TCP 或者 UDP 连接, 

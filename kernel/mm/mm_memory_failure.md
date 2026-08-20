@@ -1,3 +1,7 @@
+---
+title: "MM Memory Failure"
+description: "**文件**: `mm/memory-failure.c:1000-1100`"
+---
 # MM Memory Failure
 
 ## 1. 硬件故障处理入口

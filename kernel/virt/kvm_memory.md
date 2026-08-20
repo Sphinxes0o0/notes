@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 KVM 内存管理机制分析"
+description: "本文档详细分析 Linux Kernel KVM (Kernel-based Virtual Machine) 的内存管理机制，包括 Dirty Ring、PFN Cache、Guest Memfd、Memory Slot 等核心组件。"
+---
 # Linux 内核 KVM 内存管理机制分析
 
 本文档详细分析 Linux Kernel KVM (Kernel-based Virtual Machine) 的内存管理机制，包括 Dirty Ring、PFN Cache、Guest Memfd、Memory Slot 等核心组件。

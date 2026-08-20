@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 SELinux 详细实现分析"
+description: "SELinux (Security-Enhanced Linux) 是 Linux 内核的安全模块,实现基于 Flask(Flux Advanced Security Kernel) 架构的强制访问控制(MAC)系统。"
+---
 # Linux 内核 SELinux 详细实现分析
 
 ## 目录

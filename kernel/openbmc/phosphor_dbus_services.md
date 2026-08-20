@@ -1,3 +1,7 @@
+---
+title: "OpenBMC Phosphor D-Bus 服务层深度分析"
+description: "OpenBMC（Open Baseboard Management Controller）是 Linux 基金会旗下的开源 BMC 固件项目，旨在为服务器和网络设备提供标准化的带外管理解决方案。OpenBMC 使用 D-Bus 作为核心的进程间通信（IPC）机制，所有服务通过 D-Bus 进行解耦通信，形成了 Phosphor 服务层架构。"
+---
 # OpenBMC Phosphor D-Bus 服务层深度分析
 
 ## 1. 概述

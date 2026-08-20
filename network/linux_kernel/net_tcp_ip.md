@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 TCP/IP 协议栈分析"
+description: "**文件**: `include/linux/tcp.h:197-520`"
+---
 # Linux 内核 TCP/IP 协议栈分析
 
 ## 1. net/ipv4/tcp.c 核心结构与函数

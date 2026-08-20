@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Networking \"Black Magic\" - Advanced Implementation Techniques"
+description: "Based on my thorough research of the Linux kernel networking codebase, I will now compile a comprehensive document covering these advanced implementation techniques."
+---
 
 Based on my thorough research of the Linux kernel networking codebase, I will now compile a comprehensive document covering these advanced implementation techniques.
 

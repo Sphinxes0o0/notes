@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Time and Timer Infrastructure for Networking: Comprehensive Analysis"
+description: "**File:** `kernel/time/timer.c`, lines 250-265"
+---
 # Linux Kernel Time and Timer Infrastructure for Networking: Comprehensive Analysis
 
 ## Table of Contents

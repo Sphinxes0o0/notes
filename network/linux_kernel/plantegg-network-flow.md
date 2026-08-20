@@ -1,3 +1,7 @@
+---
+title: "plantegg: Linux Network Packet Flow"
+description: "This is a Chinese blog post explaining Linux network stack packet flow in detail."
+---
 # plantegg: Linux Network Packet Flow
 
 ## Core Insight

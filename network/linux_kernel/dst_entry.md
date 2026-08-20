@@ -1,3 +1,7 @@
+---
+title: "dst_entry - 路由缓存条目"
+description: "`dst_entry` 是内核路由子系统的核心数据结构，用于缓存路由查找结果。"
+---
 # dst_entry - 路由缓存条目
 
 ## 1. 模块架构

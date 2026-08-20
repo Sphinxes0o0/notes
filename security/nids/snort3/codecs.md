@@ -1,3 +1,7 @@
+---
+title: "codecs 模块 — 协议解码器"
+description: "`codecs` 模块负责网络协议的解析与编码，将原始字节流解码为分层协议结构(IPv4/IPv6/TCP/UDP/ICMP等)。"
+---
 # codecs 模块 — 协议解码器
 
 ## 概述

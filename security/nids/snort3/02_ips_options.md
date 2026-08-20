@@ -1,3 +1,7 @@
+---
+title: "Snort3 IPS检测选项 (ips_options/)"
+description: "IPS检测选项是规则体中的具体检测谓词，每个选项实现 `IpsOption` 基类，通过 `eval()` 方法对数据包执行检测。"
+---
 # Snort3 IPS检测选项 (ips_options/)
 
 IPS检测选项是规则体中的具体检测谓词，每个选项实现 `IpsOption` 基类，通过 `eval()` 方法对数据包执行检测。

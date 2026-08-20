@@ -1,3 +1,7 @@
+---
+title: "VFS Dentry 缓存"
+description: "Dentry (目录项) 缓存是 VFS 用来加速路径名解析的核心机制。通过缓存最近使用的 dentry 对象，减少对底层文件系统的访问。"
+---
 # VFS Dentry 缓存
 
 ## 1. 模块架构

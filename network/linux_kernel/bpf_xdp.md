@@ -1,3 +1,7 @@
+---
+title: "BPF/XDP 钩子"
+description: "XDP (Express Data Path) 是 Linux 网络栈的高性能入口点，在内核早期处理网络包。"
+---
 # BPF/XDP 钩子
 
 ## 1. 模块架构

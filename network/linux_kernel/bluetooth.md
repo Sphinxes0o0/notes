@@ -1,3 +1,7 @@
+---
+title: "net/bluetooth - 蓝牙协议栈"
+description: "Linux 蓝牙协议栈 (BlueZ) 实现了 Bluetooth 核心协议和蓝牙适配器管理。"
+---
 # net/bluetooth - 蓝牙协议栈
 
 ## 1. 模块架构

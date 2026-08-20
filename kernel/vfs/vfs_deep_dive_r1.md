@@ -1,3 +1,7 @@
+---
+title: "Linux VFS 子系统深度分析 R1"
+description: "Linux VFS (Virtual File System) 是内核中连接用户空间文件系统调用与具体文件系统的抽象层。它通过定义一组标准数据结构和操作接口，使得不同的文件系统（ext4、XFS、Btrfs、NFS、FUSE等）能够共存于同一个内核中。"
+---
 # Linux VFS 子系统深度分析 R1
 
 ## 目录

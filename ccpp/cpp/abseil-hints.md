@@ -1,3 +1,7 @@
+---
+title: "Abseil Performance Hints"
+description: "abseil 团队的 [Performance Hints](https://abseil.io/fast/hints.html)，C++ 性能优化的\"3%\"哲学 + 8 大章实战。"
+---
 # Abseil Performance Hints
 
 > 原文：<https://abseil.io/fast/hints.html> · 抓取：2026-06-10 · 内容许可：CC BY 4.0（abseil.io 文档）

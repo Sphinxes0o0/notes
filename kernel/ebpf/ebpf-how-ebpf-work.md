@@ -1,3 +1,7 @@
+---
+title: "eBPF深入理解 — How eBPF Work"
+description: "**Source:** https://www.ilikejobs.com/posts/how-ebpf-work/"
+---
 # eBPF深入理解 — How eBPF Work
 
 **Source:** https://www.ilikejobs.com/posts/how-ebpf-work/

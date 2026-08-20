@@ -1,3 +1,7 @@
+---
+title: "IAM + LLM Guard 详细架构与模块流程"
+description: "3 个域控制器（AD/CD/VD）冷启动到可对外提供 Guard 调用，需要完成 8 个阶段。下图以"
+---
 # IAM + LLM Guard 详细架构与模块流程
 
 > 本文档是 [`iam_auth_architecture.md`](./iam_auth_architecture.md) 的**详细篇**，聚焦

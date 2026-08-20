@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: ML Algorithm Performance Study for Traffic Anomaly Detection"
+description: "RF 在多数场景表现最佳，需根据实际需求选择算法。"
+---
 # Paper Reading: ML Algorithm Performance Study for Traffic Anomaly Detection
 
 ## 文献信息

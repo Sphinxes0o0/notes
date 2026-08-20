@@ -1,3 +1,7 @@
+---
+title: "std::stack 详解"
+description: "`std::stack` 是一个容器适配器，它提供了后进先出（LIFO - Last In First Out）的数据结构。stack 不是一个真正的容器，而是基于其他容器（默认是deque）的包装器。"
+---
 # std::stack 详解
 
 ## 概述

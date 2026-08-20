@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Block Layer 核心数据结构与函数"
+description: "**文件**: `block/blk-core.c:627-650`"
+---
 # Linux 内核 Block Layer 核心数据结构与函数
 
 ## 1. Bio 提交路径

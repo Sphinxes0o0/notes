@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: CNN-RNN for Network Traffic Classification"
+description: "CNN-RNN 混合模型有效提升流量分类准确率。"
+---
 # Paper Reading: CNN-RNN for Network Traffic Classification
 
 ## 文献信息

@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 BPF (Berkeley Packet Filter) 安全机制详细分析"
+description: "BPF 系统调用的入口定义在 `/Users/sphinx/github/linux/kernel/bpf/syscall.c:6360`:"
+---
 # Linux 内核 BPF (Berkeley Packet Filter) 安全机制详细分析
 
 ## 目录

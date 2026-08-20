@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Block GenHD 与 Partition 分析"
+description: "gendisk 是整个块设备子系统的核心结构，代表一个物理或虚拟磁盘设备。它包含分区表信息，并关联到具体的请求队列。"
+---
 # Linux 内核 Block GenHD 与 Partition 分析
 
 ## 1. GenHD 概述

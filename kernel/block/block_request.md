@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Block Layer 请求处理路径分析"
+description: "Linux 内核 Block Layer 负责处理块设备 I/O 请求，其核心流程为："
+---
 # Linux 内核 Block Layer 请求处理路径分析
 
 ## 1. 概述

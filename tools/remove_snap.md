@@ -1,3 +1,7 @@
+---
+title: "Ubuntu 22.04 移除 snap"
+description: "Snap 是 Canonical 开发的一种软件打包和分发格式，旨在解决传统 Linux 包管理的一些问题。与传统的 deb/rpm 包相比，snap 具有以下特点："
+---
 # Ubuntu 22.04 移除 snap
 
 ## 什么是 snap

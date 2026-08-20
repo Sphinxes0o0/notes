@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Virtio Ring 实现深入分析"
+description: "Virtio Ring 是 Virtio 虚拟化框架的核心组件,负责在 guest 和 host 之间高效传输数据。本文基于 Linux 内核源码 `/Users/sphinx/github/linux/drivers/virtio/virtio_ring.c` 进行深入分析。"
+---
 # Linux 内核 Virtio Ring 实现深入分析
 
 ## 目录

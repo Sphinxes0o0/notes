@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel BPF Networking Hooks: Comprehensive Analysis"
+description: "**File:** `include/net/xdp_sock.h`, line 48"
+---
 # Linux Kernel BPF Networking Hooks: Comprehensive Analysis
 
 ## Table of Contents

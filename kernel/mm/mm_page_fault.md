@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel 缺页中断(Page Fault)处理机制"
+description: "缺页中断(Page Fault)是Linux内核处理内存访问的核心机制。当CPU访问的虚拟地址在页表中没有对应的物理页帧(PFN)或权限不足时，会触发缺页中断。"
+---
 # Linux Kernel 缺页中断(Page Fault)处理机制
 
 ## 目录

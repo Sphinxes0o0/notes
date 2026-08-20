@@ -1,3 +1,7 @@
+---
+title: "Linux lib 子系统深度分析 R2"
+description: "Bitmap 是 Linux 内核中用于管理位图的核心子系统，提供了高效的位操作能力。"
+---
 # Linux lib 子系统深度分析 R2
 
 ## 目录

@@ -1,3 +1,7 @@
+---
+title: "IPv6 addrconf 地址管理"
+description: "`addrconf` 负责 IPv6 地址的自动配置，包括 SLAAC (无状态地址自动配置)、DAD (重复地址检测) 和路由器发现。"
+---
 # IPv6 addrconf 地址管理
 
 ## 1. 模块架构

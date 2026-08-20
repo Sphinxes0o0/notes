@@ -1,3 +1,7 @@
+---
+title: "nftables"
+description: "nftables 是 Linux 上新一代的包过滤框架，它虽然是 Netfilter 的“继任者”，但并不是完全独立的系统——它是基于 Netfilter 核心架构之上重新设计的规则引擎与用户空间接口。"
+---
 # nftables
 
 nftables 是 Linux 上新一代的包过滤框架，它虽然是 Netfilter 的“继任者”，但并不是完全独立的系统——它是基于 Netfilter 核心架构之上重新设计的规则引擎与用户空间接口。

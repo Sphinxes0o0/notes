@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Botnet Detection on TCP Traffic Using ML"
+description: "多种 ML 算法可有效检测 TCP 僵尸网络流量。"
+---
 # Paper Reading: Botnet Detection on TCP Traffic Using ML
 
 ## 文献信息

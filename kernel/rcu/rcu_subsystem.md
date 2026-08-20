@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 RCU (Read-Copy-Update) 子系统分析文档"
+description: "RCU (Read-Copy-Update) 是 Linux 内核中一种高性能的同步机制，设计用于允许多个读者并发访问共享数据，同时确保写者能够安全地进行更新。"
+---
 # Linux 内核 RCU (Read-Copy-Update) 子系统分析文档
 
 ## 目录

@@ -1,3 +1,7 @@
+---
+title: "eBPF Tutorial 全教程速览"
+description: "**目标**：第一个 eBPF 程序 — hook `write()` 系统调用"
+---
 # eBPF Tutorial 全教程速览
 
 > 来源：https://haolipeng.github.io/ebpf-tutorial/

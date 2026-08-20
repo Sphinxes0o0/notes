@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Memory Mapping (mmap) Subsystem Analysis"
+description: "**源码位置**: `mm/mmap.c:335-565`"
+---
 # Linux Kernel Memory Mapping (mmap) Subsystem Analysis
 
 ## Table of Contents

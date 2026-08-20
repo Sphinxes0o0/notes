@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel TCP Congestion Control: Comprehensive Analysis"
+description: "**File:** `include/net/tcp.h`, lines 1275-1334"
+---
 # Linux Kernel TCP Congestion Control: Comprehensive Analysis
 
 ## Table of Contents

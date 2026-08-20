@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel KVM MMU 虚拟化机制分析文档"
+description: "KVM (Kernel-based Virtual Machine) 是 Linux 内核中的全虚拟化解决方案，其 MMU (Memory Management Unit) 虚拟化机制是核心组件之一。KVM MMU 负责将虚拟机的虚拟地址 (GVA) 转换为物理地址 (GPA)，再转换为宿主机的物理地址 (HPA)。"
+---
 # Linux Kernel KVM MMU 虚拟化机制分析文档
 
 ## 目录

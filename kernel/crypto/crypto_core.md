@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Crypto 子系统核心框架分析"
+description: "Linux 内核 Crypto 子系统是一个统一的密码学算法框架,提供了对称加密、非对称加密、哈希、随机数生成等多种密码学功能的抽象接口。"
+---
 # Linux 内核 Crypto 子系统核心框架分析
 
 ## 1. Crypto 子系统概述

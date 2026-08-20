@@ -1,3 +1,7 @@
+---
+title: "Netfilter xt_TCPMSS"
+description: "xt_TCPMSS 用于修改 TCP 最大段大小 (MSS)，主要在 PPTP、IPsec 和其他隧道场景中使用。"
+---
 # Netfilter xt_TCPMSS
 
 ## 1. 模块架构

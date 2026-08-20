@@ -1,3 +1,7 @@
+---
+title: "stream 模块 — TCP流重组与状态跟踪"
+description: "`stream` 模块负责TCP流重组、IP分片重组、会话状态管理，以及协议感知Flush(PAF)。"
+---
 # stream 模块 — TCP流重组与状态跟踪
 
 ## 概述

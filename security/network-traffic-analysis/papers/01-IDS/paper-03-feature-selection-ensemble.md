@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Feature Selection + Ensemble for Anomaly Detection"
+description: "网络入侵检测系统面临以下挑战："
+---
 # Paper Reading: Feature Selection + Ensemble for Anomaly Detection
 
 ## 文献信息

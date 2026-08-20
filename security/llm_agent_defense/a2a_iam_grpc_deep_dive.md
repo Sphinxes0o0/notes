@@ -1,3 +1,7 @@
+---
+title: "A2A 场景 IAM 深度分析与 gRPC 扩展演进"
+description: "多跳链路 CD → AD → VD 中，**每一层的 TTL 必须 ≤ 上一层的剩余 TTL**（不变量），"
+---
 # A2A 场景 IAM 深度分析与 gRPC 扩展演进
 
 > 本文档是 [`a2a_iam_integration_arch.md`](./a2a_iam_integration_arch.md) 的**深度篇**。

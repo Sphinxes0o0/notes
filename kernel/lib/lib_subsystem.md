@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 lib/ 子系统分析文档"
+description: "位图(bitmap)是一种紧凑的数据结构,用于表示大量布尔值。Linux内核使用 `unsigned long` 数组来实现位图,每个比特表示一个标志位。"
+---
 # Linux 内核 lib/ 子系统分析文档
 
 ## 目录

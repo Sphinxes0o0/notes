@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Virtio 传输层实现深入分析"
+description: "Virtio 是一种通用的虚拟化 I/O 访客-主机通信框架,定义了主机和访客之间交换数据的高级机制。Linux 内核实现了两种主要的 Virtio 传输层:"
+---
 # Linux 内核 Virtio 传输层实现深入分析
 
 ## 目录

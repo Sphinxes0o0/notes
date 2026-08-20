@@ -1,3 +1,7 @@
+---
+title: "vSOMEIP 入门"
+description: "vSOMEIP 是 GENIVI 项目中的一个 SOME/IP 开源实现，基于 Mozilla Public License v2.0 协议开源，由 BMW 贡献。"
+---
 
 # vSOMEIP 入门
 

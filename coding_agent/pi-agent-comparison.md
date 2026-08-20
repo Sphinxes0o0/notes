@@ -1,3 +1,7 @@
+---
+title: "Pi vs 其他 Agent 框架"
+description: "Pi 不是孤岛。本篇把 Pi 与市面上 5-6 个主流 terminal AI coding agent 做横向对比，目标是回答\"我该选谁\"。"
+---
 # Pi vs 其他 Agent 框架
 
 Pi 不是孤岛。本篇把 Pi 与市面上 5-6 个主流 terminal AI coding agent 做横向对比，目标是回答"我该选谁"。

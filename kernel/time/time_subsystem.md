@@ -1,3 +1,7 @@
+---
+title: "Linux 内核时间子系统分析文档"
+description: "**源码位置**: `/Users/sphinx/github/linux/include/linux/jiffies.h`"
+---
 # Linux 内核时间子系统分析文档
 
 ## 目录

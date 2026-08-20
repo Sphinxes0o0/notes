@@ -1,3 +1,7 @@
+---
+title: "Linux 内核安全模块分析文档"
+description: "**源码位置**: `/Users/sphinx/github/linux/security/lockdown/lockdown.c`"
+---
 # Linux 内核安全模块分析文档
 
 ## Lockdown / LoadPin / Capabilities / IPE

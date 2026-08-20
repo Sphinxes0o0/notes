@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: ML + DL Hybrid IDS"
+description: "混合方法优于单一模型，提升检测精度和鲁棒性。"
+---
 # Paper Reading: ML + DL Hybrid IDS
 
 ## 文献信息

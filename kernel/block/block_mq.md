@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Block MultiQueue (blk-mq) 子系统分析"
+description: "Block MultiQueue (blk-mq) 是 Linux 内核块层的多队列实现，旨在支持现代高性能存储设备。传统的单队列块层设计无法有效利用多核 CPU 和支持并行操作的存储设备（如 NVMe SSD）。"
+---
 # Linux 内核 Block MultiQueue (blk-mq) 子系统分析
 
 ## 目录

@@ -1,3 +1,7 @@
+---
+title: "Linux ARP Table Aging Mechanism"
+description: "Linux ARP table entries have 3 states: **delay → reachable → stale**. The stale state reduces ARP broadcasts."
+---
 # Linux ARP Table Aging Mechanism
 
 ## Core Concept

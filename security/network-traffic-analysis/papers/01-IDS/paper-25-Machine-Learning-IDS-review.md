@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Machine Learning for Network Intrusion Detection - A Review"
+description: "综述为该领域提供了全面的参考框架。"
+---
 # Paper Reading: Machine Learning for Network Intrusion Detection - A Review
 
 ## 文献信息

@@ -1,3 +1,7 @@
+---
+title: "Linux Sched 子系统深度分析 R1"
+description: "Linux 内核调度器采用**调度类(Scheduling Class)**架构,不同调度类按优先级从高到低排列:"
+---
 # Linux Sched 子系统深度分析 R1
 
 > 内核版本: Linux 6.x (基于最新主线源码分析)

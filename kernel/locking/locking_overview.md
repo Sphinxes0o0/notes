@@ -1,17 +1,8 @@
 ---
-title: Linux 内核同步原语总览
-description: 内存屏障、qspinlock、Mutex、RCU、rwsem、seqlock、原子操作的体系化分析
-tags:
-    - kernel
-    - locking
-    - memory-barrier
-    - rcu
+title: "Linux 内核同步原语深度架构分析 v2"
+description: "本文档是 Linux 内核同步原语的第二轮深度分析，重点关注 qspinlock 队列机制、内存屏障语义、RCU 宽限期实现、乐观自旋机制、以及各类锁的底层算法复杂度分析。"
 ---
-
-# Linux 内核同步原语总览
-
-> 本文侧重**同步体系总览**：内存屏障语义、qspinlock 队列机制、Mutex/RCU/rwsem/seqlock/原子操作各自的适用场景与复杂度。
-> 与 `locking_subsystem.md`（spinlock/mutex/rwsem/percpu 实现）、`locking_deep_dive_r2.md`（MCS/活锁/优化）形成三段式递进。
+# Linux 内核同步原语深度架构分析 v2
 
 ## 1. 概述
 

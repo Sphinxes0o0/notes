@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: GraphDapp - GNN for Decentralized App Identification"
+description: "使用图神经网络 (GNN) 分析加密流量。"
+---
 # Paper Reading: GraphDapp - GNN for Decentralized App Identification
 
 ## 文献信息

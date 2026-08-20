@@ -1,3 +1,7 @@
+---
+title: "eBPF-Based Android Network Optimization"
+description: "eBPF provides sandboxed programs that run in a kernel virtual machine. C-like code compiles to bytecode, attaches to kernel hooks via JIT compilation."
+---
 # eBPF-Based Android Network Optimization
 
 ## Architecture

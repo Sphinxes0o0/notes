@@ -1,3 +1,7 @@
+---
+title: "Snort3 Framework 模块架构分析"
+description: "Framework 模块是 Snort3 的核心框架，提供了插件系统、模块管理、协议编解码、检查器等核心抽象。本文档详细分析 `framework/` 目录下的核心类和技术实现。"
+---
 # Snort3 Framework 模块架构分析
 
 ## 概述

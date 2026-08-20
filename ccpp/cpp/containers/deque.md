@@ -1,3 +1,7 @@
+---
+title: "std::deque 详解"
+description: "`std::deque`（double-ended queue，双端队列）是一个支持在两端进行高效插入和删除操作的序列容器。它提供了类似于vector的随机访问能力，但在头部操作方面性能更优。"
+---
 # std::deque 详解
 
 ## 概述

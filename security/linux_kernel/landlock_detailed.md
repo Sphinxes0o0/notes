@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel Landlock 安全模块详细分析"
+description: "Landlock 是 Linux 内核中的一个 **用户空间安全模块 (Userspace Security Module)**，提供基于 **沙箱 (Sandbox)** 的访问控制机制。它允许非特权进程自愿限制自己对系统资源的访问能力。"
+---
 # Linux Kernel Landlock 安全模块详细分析
 
 ## 目录

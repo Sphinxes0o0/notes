@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 LSM (Linux Security Module) 框架分析"
+description: "LSM (Linux Security Module) 是 Linux 内核的安全模块框架,提供了一种可插拔的安全机制。设计目标包括:"
+---
 # Linux 内核 LSM (Linux Security Module) 框架分析
 
 ## 目录

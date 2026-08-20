@@ -1,3 +1,7 @@
+---
+title: "packet_io 模块 — 数据包捕获与发送 (DAQ封装)"
+description: "`packet_io` 模块是 Snort3 与数据包采集抽象层(DAQ)的接口封装，负责数据包的接收、发送和控制。"
+---
 # packet_io 模块 — 数据包捕获与发送 (DAQ封装)
 
 ## 概述

@@ -1,3 +1,7 @@
+---
+title: "Linux 内核块I/O调度器框架分析"
+description: "Linux内核的块I/O调度器框架（Elevator Framework）是内核子系统，负责对块设备上的I/O请求进行排序和调度，以优化磁盘吞吐量和响应时间。"
+---
 # Linux 内核块I/O调度器框架分析
 
 ## 1. 概述

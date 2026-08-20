@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 Virtio 设备驱动深入分析"
+description: "Virtio 是 Linux 内核中用于虚拟化环境的半虚拟化设备接口规范。它允许Guest虚拟机无需模拟真实硬件，通过共享内存队列(virtqueue)与宿主机(Hypervisor)高效通信。"
+---
 # Linux 内核 Virtio 设备驱动深入分析
 
 ## 目录

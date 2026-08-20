@@ -1,3 +1,7 @@
+---
+title: "Snort 3 源码架构分析文档"
+description: "Snort 3 是下一代 Snort IPS（入侵预防系统），是一个用 C++ 编写的开源网络入侵检测/预防系统。与 Snort 2.x 相比，Snort 3 采用了全新的架构设计，主要特性包括："
+---
 # Snort 3 源码架构分析文档
 
 ## 目录

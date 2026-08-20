@@ -1,3 +1,7 @@
+---
+title: "VFS Buffer Cache"
+description: "Buffer Cache 是 VFS 用于缓存磁盘块数据的机制。每个缓存的磁盘块称为 buffer_head，它将磁盘块映射到内存页面，提供同步 I/O 操作接口。"
+---
 # VFS Buffer Cache
 
 ## 1. 模块架构

@@ -1,3 +1,7 @@
+---
+title: "Linux 内核时间子系统深度分析文档 R1"
+description: "**文件位置**: `/Users/sphinx/github/linux/kernel/time/tick-sched.h`"
+---
 # Linux 内核时间子系统深度分析文档 R1
 
 ## 目录

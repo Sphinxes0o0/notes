@@ -1,3 +1,7 @@
+---
+title: "Linux Kernel BSD Socket Layer Analysis"
+description: "**Location:** `/Users/sphinx/github/linux/include/linux/net.h:116-128`"
+---
 # Linux Kernel BSD Socket Layer Analysis
 
 ## Table of Contents

@@ -1,3 +1,7 @@
+---
+title: "VFS 抽象层 API"
+description: "VFS 通过六种主要 `*_operations` 函数表结构为具体文件系统提供统一接口。"
+---
 # VFS 抽象层 API
 
 ## 1. 模块架构

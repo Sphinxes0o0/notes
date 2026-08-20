@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: BiLSTM + Self-Attention for Encrypted Malicious Traffic Detection (96.71%)"
+description: "恶意软件使用 TLS 加密其通信以躲避检测："
+---
 # Paper Reading: BiLSTM + Self-Attention for Encrypted Malicious Traffic Detection (96.71%)
 
 ## 文献信息

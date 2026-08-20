@@ -1,3 +1,7 @@
+---
+title: "Snort3 Main 模块架构分析"
+description: "Main 模块是 Snort3 的核心入口模块，负责程序初始化、主循环运行、信号处理和线程管理。本文档详细分析 `main.cc` 和 `main/snort.cc` 的源码结构。"
+---
 # Snort3 Main 模块架构分析
 
 ## 概述

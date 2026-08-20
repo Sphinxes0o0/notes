@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: UAV Detection via WiFi Traffic Analysis"
+description: "WiFi 流量分析 + ML 无人机检测。"
+---
 # Paper Reading: UAV Detection via WiFi Traffic Analysis
 
 ## 文献信息

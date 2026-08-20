@@ -1,3 +1,7 @@
+---
+title: "Paper Reading: Addressing the Class Imbalance Problem in NIDS"
+description: "网络入侵检测系统 (NIDS) 是检测恶意攻击的重要工具。然而，现实网络流量数据存在严重的**类别不平衡 (Class Imbalance)** 问题："
+---
 # Paper Reading: Addressing the Class Imbalance Problem in NIDS
 
 ## 文献信息

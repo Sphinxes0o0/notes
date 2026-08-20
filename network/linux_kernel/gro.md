@@ -1,3 +1,7 @@
+---
+title: "GRO - 通用接收卸载"
+description: "GRO (Generic Receive Offload) 是一种软件层面的 packet coalescing 技术，将多个相关的数据包合并为一个大的数据包，减少协议栈的处理开销。"
+---
 # GRO - 通用接收卸载
 
 ## 1. 模块架构

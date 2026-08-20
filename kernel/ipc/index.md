@@ -1,3 +1,6 @@
+---
+title: "Linux IPC 子系统文档索引"
+---
 # Linux IPC 子系统文档索引
 
 ## 文档

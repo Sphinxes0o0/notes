@@ -1,3 +1,7 @@
+---
+title: "研究笔记 | Research Notes"
+description: "**链接**: https://arxiv.org/html/2410.20244v1"
+---
 # 研究笔记 | Research Notes
 
 ## 论文精读笔记

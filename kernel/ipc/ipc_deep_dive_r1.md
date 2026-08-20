@@ -1,3 +1,7 @@
+---
+title: "Linux 内核 IPC 子系统深度分析文档"
+description: "**版本**: R1"
+---
 # Linux 内核 IPC 子系统深度分析文档
 
 **版本**: R1
