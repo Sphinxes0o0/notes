@@ -46,7 +46,7 @@ framework-design/               ← 把上述抽象落到具体模块、API、�
 
 ## 关联项目（同级目录）
 
-- [`../llm-agent-security-reports/`](../llm-agent-security-reports/) — 通用 LLM / AI Agent 安全调研报告（无车端特异性）
+- [`../../security/llm-agent-security-reports/`](../../security/llm-agent-security-reports/) — 通用 LLM / AI Agent 安全调研报告（无车端特异性；2026-08 从 research/ 迁移到 security/）
 - [`../agent-safetybench-singuard-eval/`](../agent-safetybench-singuard-eval/) — SingGuard 在 Agent-SafetyBench 上的实测
 - [`../spiffe-translation/`](../spiffe-translation/) — SPIFFE 身份标准（车端 SPIFFE 化设计的参考）
 - [`../agentgateway/`](../agentgateway/) 与 [`../agentgateway-analysis/`](../agentgateway-analysis/) — Agent 网关与多 Agent 编排（车云协同的网关层参考）

@@ -43,7 +43,7 @@ ai-agent-security-iam.md      ← 当 IAM / 鉴权部分参考
 
 ## 关联项目（同级目录）
 
-- [`../nio-vehicle-ai-agent-security/`](../nio-vehicle-ai-agent-security/) — 车端 AI Agent 安全的**特定行业**研究线
-- [`../agent-safetybench-singuard-eval/`](../agent-safetybench-singuard-eval/) — SingGuard 护栏模型在 Agent-SafetyBench 上的实测
-- [`../uber-ADR/`](../uber-ADR/) — Uber 企业级 Agent 检测与响应（含 `uber-ADR-深度分析.md`）
-- [`../agentgateway-analysis/`](../agentgateway-analysis/) — Agent 网关 + 多 Agent 编排深度分析
+- [`../../research/nio-vehicle-ai-agent-security/`](../../research/nio-vehicle-ai-agent-security/) — 车端 AI Agent 安全的**特定行业**研究线
+- [`../../research/agent-safetybench-singuard-eval/`](../../research/agent-safetybench-singuard-eval/) — SingGuard 护栏模型在 Agent-SafetyBench 上的实测
+- [`../../research/uber-adr-analysis/`](../../research/uber-adr-analysis/) — Uber 企业级 Agent 检测与响应
+- [`../../research/agentgateway-analysis/`](../../research/agentgateway-analysis/) — Agent 网关 + 多 Agent 编排深度分析
