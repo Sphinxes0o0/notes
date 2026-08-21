@@ -34,6 +34,60 @@ title: Network Notes
 
 > 建议阅读顺序：**概念** → **源码概述** → **conntrack 单一组件**，需要时再跳 `core.c` 行号。
 
+## 主题交叉引用索引
+
+同一个主题在 `network/` 下可能有多个文件，下面是几个跨子目录主题的快速定位。
+
+### TCP 主题（11 个文件）
+
+| 层次 | 位置 | 视角 |
+|---|---|---|
+| 协议概念 | [`tcpip/tcp.md`](./tcpip/tcp.md) | TCP 协议详解（中文概念） |
+| TCP 选项 | [`tcpip/tcp-sack-dsack.md`](./tcpip/tcp-sack-dsack.md) | SACK / DSACK 实现 |
+| 调试实战 | [`tcpip/tcp-troubleshooting-plantegg.md`](./tcpip/tcp-troubleshooting-plantegg.md) | 疑难问题汇总（plantegg 译文） |
+| 调试实战 | [`tcpip/tcp-self-connection-plantegg.md`](./tcpip/tcp-self-connection-plantegg.md) | 自己连自己（plantegg 译文） |
+| 子系统概述 | [`tcpip/net_subsystem_tcpip.md`](./tcpip/net_subsystem_tcpip.md) | TCP/IP 子系统（英） |
+| 内核实现 | [`linux_kernel/ipv4_tcp.md`](./linux_kernel/ipv4_tcp.md) | IPv4 TCP 实现（中，概念） |
+| 内核实现 | [`linux_kernel/net_tcp_ip.md`](./linux_kernel/net_tcp_ip.md) | TCP/IP 协议栈源码分析（中） |
+| 内核实现 | [`linux_kernel/ipv6_tcp_udp.md`](./linux_kernel/ipv6_tcp_udp.md) | IPv6 TCP/UDP |
+| Netfilter | [`linux_kernel/netfilter_tcpmss.md`](./linux_kernel/netfilter_tcpmss.md) | xt_TCPMSS |
+| Netfilter | [`linux_netfilter/netfilter_tcp_deep_dive.md`](./linux_netfilter/netfilter_tcp_deep_dive.md) | TCP 深度源码分析（第二轮） |
+| 性能 | [`performance/tcp-bypass-notes.md`](./performance/tcp-bypass-notes.md) | TCP Bypass 绕过方案 |
+| 工具 | [`tools/tcpdump.md`](../tools/tcpdump.md) | tcpdump 使用指南 |
+
+### Socket 主题（5 个文件）
+
+| 层次 | 位置 | 视角 |
+|---|---|---|
+| 子系统概述 | [`core/net_subsystem_socket.md`](./core/net_subsystem_socket.md) | BSD Socket Layer Analysis（英，1606 行） |
+| 概念 | [`linux_kernel/socket.md`](./linux_kernel/socket.md) | Socket 层 - 通用套接字层（中，510 行） |
+| 系统调用 | [`linux_kernel/socket_syscall.md`](./linux_kernel/socket_syscall.md) | Socket 系统调用（279 行） |
+| 源码分析 | [`linux_kernel/net_socket_core.md`](./linux_kernel/net_socket_core.md) | Socket Core 源码分析（780 行） |
+| 特定类型 | [`linux_kernel/unix_socket.md`](./linux_kernel/unix_socket.md) | Unix Domain Socket（268 行） |
+
+> `core/net_subsystem_socket.md` 与 `linux_kernel/net_socket_core.md` 内容有部分重叠但视角不同（英 vs 中 / 侧重不同结构体），不需要合并。
+
+### 路由主题（6 个文件）
+
+| 层次 | 位置 | 视角 |
+|---|---|---|
+| 子系统概述 | [`core/net_subsystem_routing.md`](./core/net_subsystem_routing.md) | Packet Routing + Neighbor（英，976 行） |
+| 源码分析 | [`linux_kernel/net_routing.md`](./linux_kernel/net_routing.md) | IPv4 路由子系统分析（中，1092 行） |
+| 数据结构 | [`linux_kernel/routing.md`](./linux_kernel/routing.md) | dst_entry 和路由缓存（402 行） |
+| 概述 | [`linux_kernel/ipv4_routing.md`](./linux_kernel/ipv4_routing.md) | IPv4 路由子系统（191 行） |
+| 数据结构 | [`linux_kernel/ipv4_fib.md`](./linux_kernel/ipv4_fib.md) | FIB 路由结构（235 行） |
+| IPv6 | [`linux_kernel/ipv6_routing.md`](./linux_kernel/ipv6_routing.md) | IPv6 路由子系统（263 行） |
+
+### IPv6 主题（5 个文件，都在 `linux_kernel/`）
+
+| 子主题 | 位置 | 视角 |
+|---|---|---|
+| 协议栈 | [`ipv6_core.md`](./linux_kernel/ipv6_core.md) | IPv6 协议栈核心 |
+| 地址管理 | [`ipv6_addrconf.md`](./linux_kernel/ipv6_addrconf.md) | SLAAC / DAD / 路由器发现 |
+| 邻居发现 | [`ipv6_ndisc.md`](./linux_kernel/ipv6_ndisc.md) | NDisc（地址解析 / 重定向） |
+| 路由 | [`ipv6_routing.md`](./linux_kernel/ipv6_routing.md) | IPv6 路由子系统 |
+| 传输层 | [`ipv6_tcp_udp.md`](./linux_kernel/ipv6_tcp_udp.md) | TCP/UDP over IPv6 |
+
 ## 目录结构
 
 ### TCP/IP 协议栈
