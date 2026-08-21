@@ -92,6 +92,13 @@ function isContentBleeding(line, language) {
     return false;
   }
 
+  // Host:port / key:value / URL scheme patterns are common in code:
+  //   db.internal:5432   key: value   https://example.com
+  // Extend code-like detection to cover these.
+  if (/:[a-zA-Z0-9/.]/.test(trimmed) && /[a-zA-Z0-9\/.]:/.test(trimmed)) {
+    return false;
+  }
+
   // If line ends with Chinese punctuation (。！？) and has no code structure
   // and looks like a sentence fragment - this is likely bleeding
   if (/[。！？]$/.test(trimmed) && !/[=+\-*/<>]/.test(trimmed)) {

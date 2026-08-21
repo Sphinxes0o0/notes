@@ -485,6 +485,21 @@ export default defineConfig({
               ]
             },
             {
+              // 与 /security/network-traffic-analysis/ 同性质（外部资料综述）
+              // 原位于 /research/llm-agent-security-reports/,2026-08 重组到 security/
+              text: 'LLM Agent 安全研报',
+              collapsed: true,
+              items: [
+                { text: '概述', link: '/security/llm-agent-security-reports/' },
+                { text: 'OWASP LLM Top 10 防御', link: '/security/llm-agent-security-reports/owasp-llm-top10-defenses' },
+                { text: 'LLM 应用安全架构', link: '/security/llm-agent-security-reports/llm-app-security-architecture' },
+                { text: 'AI Agent 安全 IAM', link: '/security/llm-agent-security-reports/ai-agent-security-iam' },
+                { text: 'Constitutional Classifiers (arxiv)', link: '/security/llm-agent-security-reports/arxiv-2601-04603-constitutional-classifiers-pp' },
+                { text: 'Three Labs 2026', link: '/security/llm-agent-security-reports/llm-agent-security-three-labs-2026' },
+                { text: 'METR 2026 Frontier Risk', link: '/security/llm-agent-security-reports/metr-2026-frontier-risk-report' }
+              ]
+            },
+            {
               text: 'Linux 内核安全',
               collapsed: true,
               items: [
@@ -630,18 +645,6 @@ export default defineConfig({
                 { text: '概述', link: '/research/agentgateway-analysis/' },
                 { text: 'IAM 认证与 A2A 授权', link: '/research/agentgateway-analysis/iam-authn-authz-a2a' },
                 { text: 'AgentTeams 深度分析', link: '/research/agentgateway-analysis/agentteams-deep-dive' }
-              ]
-            },
-            {
-              text: 'LLM Agent 安全报告',
-              items: [
-                { text: '概述', link: '/research/llm-agent-security-reports/' },
-                { text: 'OWASP LLM Top 10 防御', link: '/research/llm-agent-security-reports/owasp-llm-top10-defenses' },
-                { text: 'LLM 应用安全架构', link: '/research/llm-agent-security-reports/llm-app-security-architecture' },
-                { text: 'AI Agent 安全 IAM', link: '/research/llm-agent-security-reports/ai-agent-security-iam' },
-                { text: 'Constitutional Classifiers (arxiv)', link: '/research/llm-agent-security-reports/arxiv-2601-04603-constitutional-classifiers-pp' },
-                { text: 'Three Labs 2026', link: '/research/llm-agent-security-reports/llm-agent-security-three-labs-2026' },
-                { text: 'METR 2026 Frontier Risk', link: '/research/llm-agent-security-reports/metr-2026-frontier-risk-report' }
               ]
             },
             {
