@@ -1,5 +1,6 @@
 ---
 title: "Linux 网络协议栈深度源码分析 (第二轮)"
+description: "网络协议栈第二轮深度源码分析，涵盖 Connection Tracking（连接跟踪哈希表、Tuple 计算、TCP 状态机）、Netfilter NAT 实现、TCP 协议首部处理等核心实现。"
 ---
 # Linux 网络协议栈深度源码分析 (第二轮)
 
