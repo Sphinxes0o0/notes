@@ -1,8 +1,8 @@
 ---
-title: "Linux SLUB 分配器深度源码分析 (第二轮)"
-description: "Buddy 系统的核心是**地址对齐合并**。让我们分析合并条件："
+title: "Linux 内核跨子系统深度源码分析（MM/锁/调度/网络）"
+description: "跨子系统的源码深度分析,涵盖 Buddy 系统、SLUB 分配器、VMSCAN 内存回收、页表管理、内核锁与同步、CFS 调度算法、网络协议栈等 7 个领域。"
 ---
-# Linux SLUB 分配器深度源码分析 (第二轮)
+# Linux 内核跨子系统深度源码分析（MM/锁/调度/网络）
 
 ## 深入 Buddy 系统核心算法
 
