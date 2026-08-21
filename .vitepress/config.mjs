@@ -624,7 +624,8 @@ export default defineConfig({
             { text: 'Pi Agent 总览', link: '/coding_agent/pi-agent' },
             { text: 'Pi 扩展生态与能力', link: '/coding_agent/pi-agent-ecosystem' },
             { text: 'Pi vs 其他 Agent 框架', link: '/coding_agent/pi-agent-comparison' },
-            { text: 'Pi 定制 workflow 实操', link: '/coding_agent/pi-agent-custom-workflow' }
+            { text: 'Pi 定制 workflow 实操', link: '/coding_agent/pi-agent-custom-workflow' },
+            { text: '跨 Agent Session 可移植方案', link: '/coding_agent/session-portability' }
           ]
         }
       ],
