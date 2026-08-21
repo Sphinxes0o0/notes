@@ -21,6 +21,19 @@ title: Network Notes
 > - `linux_kernel/` = Linux 网络核心源码解析 —— 是自己的笔记，覆盖面广
 > - `linux_netfilter/` = Netfilter 专项深入 —— 是自己的笔记，但只聚焦一个子系统
 
+## Netfilter 主题在 3 处的区分
+
+同样讲 Netfilter，仓库里有 3 个层次，从"零基础入门"到"源码逐行跟踪":
+
+| 层次 | 位置 | 视角 | 适合 |
+|---|---|---|---|
+| 综合（中 · 概念）| [`linux_netfilter/netfilter_subsystem.md`](./linux_netfilter/netfilter_subsystem.md) | 中文综述：Hook 点 / Verdict / 协议族 / 数据包处理流程 | 入门 / 教学 |
+| 综合（英 · 源码）| [`linux_netfilter/net_subsystem_netfilter.md`](./linux_netfilter/net_subsystem_netfilter.md) | 英文源码分析：含 `core.c` 行号 / 结构体定义 / hook 注册函数 | 想跳源码 |
+| 源码概述 | [`linux_kernel/netfilter.md`](./linux_kernel/netfilter.md) | 在 linux_kernel/ 下的源码概述（292 行）| 看快速框架 |
+| 单一组件 | [`core/net_subsystem_conntrack.md`](./core/net_subsystem_conntrack.md) | Conntrack（连接跟踪）单一组件深入（817 行）| 钻 conntrack 实现 |
+
+> 建议阅读顺序：**概念** → **源码概述** → **conntrack 单一组件**，需要时再跳 `core.c` 行号。
+
 ## 目录结构
 
 ### TCP/IP 协议栈

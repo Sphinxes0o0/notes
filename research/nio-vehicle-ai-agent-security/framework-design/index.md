@@ -7,10 +7,9 @@ title: Framework Design
 > **版本**: v2.0 (整合版)
 > **日期**: 2026-07-21
 > **状态**: 评审稿
-> **主交付物**:
-> - [`framework-design-v1.html`](./framework-design-v1.html) — 评审稿（含 10 个 mermaid 图）
-> - [`framework-design-v1.md`](./framework-design-v1.md) — Coding Agent Spec v1.1
-> - [`framework-design-v2-integrated.md`](./framework-design-v2-integrated.md) — **整合 spec v2.0（Framework + ASG）**
+> **主交付物**: [`framework-design-v2-integrated.md`](./framework-design-v2-integrated.md) — **整合 spec v2.0（Framework + ASG）**
+>
+> **历史版本**: v1.1 设计 spec 见 git history（已合并入 v2.0）
 >
 > **v2.0 增量**:
 > - 整合 Framework v1.1 + ASG v0.1 两份设计稿
@@ -23,18 +22,8 @@ title: Framework Design
 
 | 文件 | 用途 | 受众 | 大小 |
 |------|------|------|------|
-| `framework-design-v1.html` | 设计稿，含 10 个 mermaid 架构图 | 评审团队 / 管理层 | 62 KB |
-| `framework-design-v1.md` | Coding Agent Spec v1.1（紧凑）| Coding Agent v1 | 17 KB |
 | `framework-design-v2-integrated.md` | **整合 spec v2.0**（Framework + ASG 详细设计 + 接口定义）| Coding Agent v2 / 实施工程师 | 33 KB |
-
-## 文档说明
-
-本目录包含 NIO 车端 AI Agent 安全框架的正式设计文档（v1.0 评审稿）。
-
-| 文件 | 用途 | 打开方式 |
-|------|------|---------|
-| `framework-design-v1.html` | **主文档**，可直接发给评审团队 | 浏览器打开（依赖 CDN 加载 mermaid） |
-| `README.md` | 本文件，目录说明 | 任意编辑器 |
+| `index.md` | 本文件，目录说明 | 任意编辑器 | - |
 
 ## 设计文档结构
 

@@ -351,7 +351,10 @@ export default defineConfig({
                 {
                   text: 'Linux Netfilter',
                   items: [
-                    { text: 'Netfilter 子系统', link: '/network/linux_netfilter/net_subsystem_netfilter' },
+                    // 双语并存：中文版偏概念综述，英文版偏源码分析
+                    // 见 network/index.md「三个易混目录的快速区分」段
+                    { text: 'Netfilter 子系统分析（英 · 源码）', link: '/network/linux_netfilter/net_subsystem_netfilter' },
+                    { text: 'Netfilter 子系统分析（中 · 概念）', link: '/network/linux_netfilter/netfilter_subsystem' },
                     { text: 'Netfilter TCP 深度分析', link: '/network/linux_netfilter/netfilter_tcp_deep_dive' },
                     { text: '连接跟踪', link: '/network/linux_netfilter/conntrack' },
                     { text: '连接跟踪垃圾回收', link: '/network/linux_netfilter/conntrack_gc' },
@@ -653,15 +656,13 @@ export default defineConfig({
               items: [
                 { text: '概述', link: '/research/nio-vehicle-ai-agent-security/' },
                 { text: 'IAM LLM Guard 白皮书', link: '/research/nio-vehicle-ai-agent-security/iam-llm-guard-whitepaper' },
-                { text: 'IAM LLM Guard README', link: '/research/nio-vehicle-ai-agent-security/iam-llm-guard-README' },
                 { text: 'Edge AI 安全报告', link: '/research/nio-vehicle-ai-agent-security/edge-ai-security-report' },
                 { text: 'Vehicle IAM 集成', link: '/research/nio-vehicle-ai-agent-security/vehicle-iam-integrated' },
                 {
                   text: 'Framework Design',
                   items: [
                     { text: '概述', link: '/research/nio-vehicle-ai-agent-security/framework-design/' },
-                    { text: 'v1 框架设计', link: '/research/nio-vehicle-ai-agent-security/framework-design/framework-design-v1' },
-                    { text: 'v2 集成版', link: '/research/nio-vehicle-ai-agent-security/framework-design/framework-design-v2-integrated' }
+                    { text: 'v2 集成版（Framework + ASG 详细设计）', link: '/research/nio-vehicle-ai-agent-security/framework-design/framework-design-v2-integrated' }
                   ]
                 }
               ]
