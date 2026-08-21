@@ -4,6 +4,20 @@
 > **日期**: 2026-07-21
 > **状态**: 评审稿
 > **受众**: 架构师 / 安全团队 / 框架实施 / KMSS 团队 / 评审委员会
+> **整合自**: 7 份 research 文档 + Framework v2.0 整合 spec
+
+### 整合源
+
+| 文档 | 核心贡献 |
+|------|----------|
+| AI Agent IAM 调研 | 6 层防护栈 / NHI / Least Agency / 4 大 IAM 平台 |
+| 车载端侧 AI 安全 | 车规三层标准 / 物理安全 / 传感器对抗 |
+| LLM 应用安全架构 | 三层平面 / 5 层信任域 / 7 个控制点 |
+| OWASP LLM Top 10 防御 | LLM01-10 详细防御 + 30 开源工具 |
+| MITRE ATLAS 101 | ATLAS 基础概念 |
+| 委托链标准调研 | OIDC-A / SPIFFE / JWT-SVID |
+| ASG 车规形态 | 单进程 + 2 Gate 实现 |
+| Framework v2.0 | 完整 spec |
 
 ---
 
