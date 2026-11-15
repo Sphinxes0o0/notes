@@ -10,7 +10,7 @@ description: "**源码位置**: `/Users/sphinx/github/linux/include/linux/net.h:
 3. [Netdevice 网络设备](#3-netdevice-网络设备)
 4. [Routing 路由子系统](#4-routing-路由子系统)
 5. [Netfilter Hooks](#5-netfilter-hooks)
-6. [TCP/UDP 协议实现](#6-tcpudp-协议实现)
+6. [TCP/UDP 协议实现](#_6-tcp-udp-协议实现)
 7. [知识点关联表格](#7-知识点关联表格)
 
 ---

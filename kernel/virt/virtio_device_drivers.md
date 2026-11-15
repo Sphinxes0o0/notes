@@ -7,11 +7,11 @@ description: "Virtio 是 Linux 内核中用于虚拟化环境的半虚拟化设�
 ## 目录
 
 1. [Virtio 框架概述](#1-virtio-框架概述)
-2. [Virtio Block 驱动 (virtio_blk.c)](#2-virtio-block-驱动-virtio_blkc)
-3. [Virtio Net 驱动 (virtio_net.c)](#3-virtio-net-驱动-virtio_netc)
-4. [Virtio Console 驱动 (virtio_console.c)](#4-virtio-console-驱动-virtio_consolec)
-5. [Virtio SCSI 驱动 (virtio_scsi.c)](#5-virtio-scsi-驱动-virtio_scsic)
-6. [Virtio Balloon 驱动 (virtio_balloon.c)](#6-virtio-balloon-驱动-virtio_balloonc)
+2. [Virtio Block 驱动 (virtio_blk.c)](#_2-virtio-block-驱动-virtio-blk-c)
+3. [Virtio Net 驱动 (virtio_net.c)](#_3-virtio-net-驱动-virtio-net-c)
+4. [Virtio Console 驱动 (virtio_console.c)](#_4-virtio-console-驱动-virtio-console-c)
+5. [Virtio SCSI 驱动 (virtio_scsi.c)](#_5-virtio-scsi-驱动-virtio-scsi-c)
+6. [Virtio Balloon 驱动 (virtio_balloon.c)](#_6-virtio-balloon-驱动-virtio-balloon-c)
 7. [Virtio GPU 驱动 (virtio_gpu)](#7-virtio-gpu-驱动-virtio_gpu)
 8. [通用驱动框架分析](#8-通用驱动框架分析)
 9. [总结](#9-总结)

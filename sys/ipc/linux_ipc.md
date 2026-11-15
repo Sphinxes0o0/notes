@@ -2,6 +2,7 @@
 title: linux_ipc
 date: 2022-03-21 23:41:11
 tags: Linux, C
+description: "linux_ipc：管道、内存映射 Memory-Mapped、信号。"
 ---
 # 进程间通信： IPC
 

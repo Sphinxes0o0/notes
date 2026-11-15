@@ -1,5 +1,6 @@
 ---
 title: "Agentgateway 第二轮深挖：IAM + 鉴权 + A2A"
+description: "Agentgateway 第二轮深挖：IAM + 鉴权 + A2A：一、IAM 体系：6 个 IDP 联邦 + RFC 矩阵、二、鉴权链路：4 层 12 步、三、AuthN 深度：JWT 流水线 + 凭据生命周期、四、AuthZ 引擎：CEL 表达 + 三态规则 + Network Authz。"
 ---
 
 # Agentgateway 第二轮深挖：IAM + 鉴权 + A2A
@@ -14,14 +15,14 @@ title: "Agentgateway 第二轮深挖：IAM + 鉴权 + A2A"
 
 ## 目录
 
-- [一、IAM 体系：6 个 IDP 联邦 + RFC 矩阵](#一iam-体系6-个-idp-联邦--rfc-矩阵)
-- [二、鉴权链路：4 层 12 步](#二鉴权链路4-层-12-步)
-- [三、AuthN 深度：JWT 流水线 + 凭据生命周期](#三authn-深度jwt-流水线--凭据生命周期)
-- [四、AuthZ 引擎：CEL 表达 + 三态规则 + Network Authz](#四authz-引擎cel-表达--三态规则--network-authz)
-- [五、A2A 任务级授权：补全 RBAC 缺失](#五a2a-任务级授权补全-rbac-缺失)
-- [六、车端 IAM 联邦设计](#六车端-iam-联邦设计)
-- [七、可直接 ship 的完整配置骨架](#七可直接-ship-的完整配置骨架)
-- [八、车端特定风险与加固清单](#八车端特定风险与加固清单)
+- [一、IAM 体系：6 个 IDP 联邦 + RFC 矩阵](#一、iam-体系-6-个-idp-联邦-rfc-矩阵)
+- [二、鉴权链路：4 层 12 步](#二、鉴权链路-4-层-12-步)
+- [三、AuthN 深度：JWT 流水线 + 凭据生命周期](#三、authn-深度-jwt-流水线-凭据生命周期)
+- [四、AuthZ 引擎：CEL 表达 + 三态规则 + Network Authz](#四、authz-引擎-cel-表达-三态规则-network-authz)
+- [五、A2A 任务级授权：补全 RBAC 缺失](#五、a2a-任务级授权-补全-rbac-缺失)
+- [六、车端 IAM 联邦设计](#六、车端-iam-联邦设计)
+- [七、可直接 ship 的完整配置骨架](#七、可直接-ship-的完整配置骨架)
+- [八、车端特定风险与加固清单](#八、车端特定风险与加固清单)
 
 ---
 

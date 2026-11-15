@@ -1,5 +1,6 @@
 ---
 title: "2. pi-ai 统一 API：40+ Provider 的抽象"
+description: "2. pi-ai 统一 API：40+ Provider 的抽象的内容说明与阅读参考。"
 ---
 
 # 2. pi-ai 统一 API：40+ Provider 的抽象 {#chapter}

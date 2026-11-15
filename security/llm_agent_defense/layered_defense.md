@@ -1,5 +1,6 @@
 ---
 title: LLM Agent 分层防御方案
+description: "LLM Agent 分层防御方案：1. 设计目标、2. 整体架构、3. 每一层的细节、4. 决策表。"
 ---
 
 # LLM Agent 分层防御方案

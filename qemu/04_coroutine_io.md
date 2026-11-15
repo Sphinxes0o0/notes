@@ -1,5 +1,6 @@
 ---
 title: Coroutine 和 I/O 线程
+description: "Coroutine 和 I/O 线程：bdrv_co_ 函数、协程 I/O 模式、AioTaskPool、Drain 机制。"
 ---
 
 # Coroutine 和 I/O 线程分析

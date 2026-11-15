@@ -1,5 +1,6 @@
 ---
 title: QOM (QEMU 对象模型)
+description: "QOM (QEMU 对象模型)：概述、核心结构、类层次结构、核心机制。"
 ---
 
 # QOM (QEMU 对象模型) 架构分析

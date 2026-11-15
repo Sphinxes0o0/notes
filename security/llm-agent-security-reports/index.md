@@ -1,5 +1,6 @@
 ---
 title: LLM / AI Agent 安全研究报告合集
+description: "LLM / AI Agent 安全研究报告合集：文件清单、阅读路径建议、关联项目（同级目录）。"
 ---
 
 # LLM / AI Agent 安全研究报告合集

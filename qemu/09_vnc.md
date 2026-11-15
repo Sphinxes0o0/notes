@@ -1,5 +1,6 @@
 ---
 title: VNC 服务器架构
+description: "VNC 服务器架构：核心数据结构、帧缓冲区更新流程、RFB 协议实现、Tight 编码。"
 ---
 
 # VNC 服务器架构分析

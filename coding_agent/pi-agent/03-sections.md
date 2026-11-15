@@ -1,5 +1,6 @@
 ---
 title: "2. oh-my-pi Hashline 编辑机制（Content Hashes as Anchors）"
+description: "2. oh-my-pi Hashline 编辑机制（Content Hashes as Anchors）的内容说明与阅读参考。"
 ---
 
 # 2. oh-my-pi Hashline 编辑机制（Content Hashes as Anchors） {#chapter}

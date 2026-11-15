@@ -1,3 +1,6 @@
+import { writeSourceDownloads } from './downloads.mjs'
+import { compressedSearchPlugin } from './plugins/compressed-search.mjs'
+import { asyncSearchPlugin } from './plugins/async-search.mjs'
 import { renderSearchContent } from './search.mjs'
 import sidebar from './sidebar/index.mjs'
 import { defineConfig } from 'vitepress'
@@ -7,6 +10,8 @@ import { readingTimePlugin } from './plugins/readingTime.mjs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/notes/',
+  buildEnd: writeSourceDownloads,
+  vite: { plugins: [asyncSearchPlugin(), compressedSearchPlugin()] },
 
   plugins: [
     readingTimePlugin(),
@@ -125,7 +130,7 @@ export default defineConfig({
 
   // Head meta tags for SEO
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/notes/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#3c8772' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: "Sphinx's Notes" }],

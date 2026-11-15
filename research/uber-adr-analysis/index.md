@@ -1,5 +1,6 @@
 ---
 title: Uber ADR 深度分析
+description: "Uber ADR 深度分析：0. TL;DR、1. 整体架构、2. 模块详解、3. 详细原理。"
 ---
 
 # uber/ADR 深度分析：企业级 AI Agent 安全检测系统

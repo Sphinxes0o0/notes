@@ -1,5 +1,6 @@
 ---
 title: "LLM 应用安全系统架构设计"
+description: "LLM 应用安全系统架构设计：0. 三句话讲清楚、1. 顶层架构总览、2. 五层信任域（Trust Zones）、3. 三个平面（Planes）。"
 ---
 
 # LLM 应用安全系统架构设计

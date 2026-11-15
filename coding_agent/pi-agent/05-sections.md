@@ -1,5 +1,6 @@
 ---
 title: "4. Subagent Task Fan-out 机制"
+description: "4. Subagent Task Fan-out 机制的内容说明与阅读参考。"
 ---
 
 # 4. Subagent Task Fan-out 机制 {#chapter}

@@ -1,5 +1,6 @@
 ---
 title: QCOW2 格式实现
+description: "QCOW2 格式实现：L1/L2 表结构、BDRVQcow2State 关键字段、簇类型、引用计数管理。"
 ---
 
 # QCOW2 格式实现分析

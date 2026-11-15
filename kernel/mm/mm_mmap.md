@@ -6,12 +6,12 @@ description: "**源码位置**: `mm/mmap.c:335-565`"
 
 ## Table of Contents
 
-1. [do_mmap 函数和 mmap_region](#1-dommap-函数和-mmap_region)
+1. [do_mmap 函数和 mmap_region](#_1-do-mmap-函数和-mmap-region)
 2. [vm_area_struct 结构详细说明](#2-vm_area_struct-结构详细说明)
 3. [vm_flags 标志定义](#3-vm_flags-标志定义)
 4. [vm_unmapped_area 地址空间查找](#4-vm_unmapped_area-地址空间查找)
-5. [brk/sbrk 系统调用](#5-brksbrk-系统调用)
-6. [mlock/munlock 内存锁定](#6-mlockmunlock-内存锁定)
+5. [brk/sbrk 系统调用](#_5-brk-sbrk-系统调用)
+6. [mlock/munlock 内存锁定](#_6-mlock-munlock-内存锁定)
 7. [内存布局 (典型进程布局图)](#7-内存布局-典型进程布局图)
 8. [Maple Tree VMA 管理](#8-maple-tree-vma-管理)
 

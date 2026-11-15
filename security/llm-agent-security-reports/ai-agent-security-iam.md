@@ -1,5 +1,6 @@
 ---
 title: "AI Agent 安全与 IAM 方案全景调研报告"
+description: "AI Agent 安全与 IAM 方案全景调研报告：0. 摘要（TL;DR）、1. 研究框架：AI Agent 安全问题的\"三张面孔\"、2. 主流共识：标准与威胁框架、3. IAM for AI Agent：从 NHI 到\"Agent Identity 一等公民\"。"
 ---
 
 # AI Agent 安全与 IAM 方案全景调研报告

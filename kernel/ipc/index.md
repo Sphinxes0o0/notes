@@ -1,5 +1,6 @@
 ---
 title: "Linux IPC 子系统文档索引"
+description: "Linux IPC 子系统文档索引：文档、主要内容、关键源码位置。"
 ---
 # Linux IPC 子系统文档索引
 

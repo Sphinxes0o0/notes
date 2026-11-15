@@ -1,5 +1,6 @@
 ---
 title: C/C++ Notes
+description: "C/C++ Notes：目录结构。"
 ---
 
 # C/C++ 学习笔记

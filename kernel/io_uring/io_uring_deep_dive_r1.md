@@ -6,7 +6,7 @@ description: "io_uring 是 Linux 内核提供的高性能异步 I/O 接口，首
 
 ## 目录
 1. [概述](#1-概述)
-2. [SQ/CQ Ring 核心数据结构](#2-sqcq-ring-核心数据结构)
+2. [SQ/CQ Ring 核心数据结构](#_2-sq-cq-ring-核心数据结构)
 3. [Submission Queue Entry (SQE)](#3-submission-queue-entry-sqe)
 4. [Completion Queue Entry (CQE)](#4-completion-queue-entry-cqe)
 5. [io_uring_setup 系统调用](#5-io_uring_setup-系统调用)

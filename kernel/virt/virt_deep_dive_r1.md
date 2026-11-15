@@ -7,8 +7,8 @@ description: "**源码位置**: `/Users/sphinx/github/linux/include/linux/kvm_ho
 ## 目录
 1. [KVM Core: struct kvm 与虚拟机生命周期管理](#1-kvm-core-struct-kvm-与虚拟机生命周期管理)
 2. [vCPU: struct kvm_vcpu 与虚拟处理器](#2-vcpu-struct-kvm_vcpu-与虚拟处理器)
-3. [MMU/EPT: 内存虚拟化与页表管理](#3-mmuept-内存虚拟化与页表管理)
-4. [KVM_RUN: vCPU 运行循环与退出处理](#4-kvm_run-vcpu-运行循环与退出处理)
+3. [MMU/EPT: 内存虚拟化与页表管理](#_3-mmu-ept-内存虚拟化与页表管理)
+4. [KVM_RUN: vCPU 运行循环与退出处理](#_4-kvm-run-vcpu运行循环与退出处理)
 5. [Dirty Ring: 脏页追踪机制](#5-dirty-ring-脏页追踪机制)
 6. [guest_memfd: 私有内存管理](#6-guest_memfd-私有内存管理)
 7. [知识点关联表](#7-知识点关联表)

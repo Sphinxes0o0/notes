@@ -8,6 +8,7 @@ tags:
     - design
     - best-practices
     - llm-context
+description: "Hermes Agent Memory 系统设计 + 最佳实践：1. 背景、2. 架构总览、3. 核心机制、4. 工具 API (Memory Tool Schema)。"
 ---
 
 # Hermes Agent Memory 系统设计 + 最佳实践

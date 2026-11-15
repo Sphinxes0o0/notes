@@ -1,5 +1,6 @@
 ---
 title: "车载 IAM + LLM Guard 综合白皮书 v1.0"
+description: "车载 IAM + LLM Guard 综合白皮书 v1.0：第 1 章 — 知识地图与整合逻辑、第 2 章 — 基础威胁模型、第 3 章 — 车端 IAM 体系、第 4 章 — LLM Guard 体系。"
 ---
 
 # 车载 IAM + LLM Guard 综合白皮书 v1.0

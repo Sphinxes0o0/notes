@@ -1,5 +1,6 @@
 ---
 title: "Linux Crypto 子系统文档索引"
+description: "Linux Crypto 子系统文档索引：1. Crypto 核心框架 (crypto_core.md)、2. 同步加密 (crypto_skcipher.md)、3. 异步加密 (crypto_async.md)、4. 基础设施 (crypto_infra.md)。"
 ---
 # Linux Crypto 子系统文档索引
 

@@ -1,5 +1,6 @@
 ---
 title: "Bulk operations"
+description: "Bulk operations：Bulk operations、CLs that demonstrate multiple techniques、Further reading。"
 ---
 
 # Bulk operations {#chapter}

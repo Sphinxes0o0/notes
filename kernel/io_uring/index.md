@@ -1,5 +1,6 @@
 ---
 title: "Linux io_uring 子系统文档索引"
+description: "Linux io_uring 子系统文档索引：1. io_uring 核心架构 (io_uring_core.md)、2. io_uring 操作码 (io_uring_operations.md)、3. io_uring 内存管理 (io_uring_memory.md)、4. io_uring 高级特性 (io_uring_features.md)。"
 ---
 # Linux io_uring 子系统文档索引
 

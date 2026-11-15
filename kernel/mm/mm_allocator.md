@@ -7,15 +7,15 @@ description: "Location: `mm/slab.h` (lines 197-251)"
 ## Table of Contents
 
 1. [SLUB Allocator](#1-slub-allocator)
-   - [struct kmem_cache](#11-struct-kmem_cache)
-   - [struct kmem_cache_node](#12-struct-kmem_cache_node)
-   - [struct slab](#13-struct-slab)
-   - [Sheaves/Barn Mechanism](#14-sheavesbarn-mechanism)
+   - [struct kmem_cache](#_1-1-struct-kmem-cache)
+   - [struct kmem_cache_node](#_1-2-struct-kmem-cache-node)
+   - [struct slab](#_1-3-struct-slab)
+   - [Sheaves/Barn Mechanism](#_1-4-sheaves-barn-mechanism)
 2. [GFP Flags](#2-gfp-flags)
-3. [kmalloc/kfree Implementation](#3-kmallockfree-implementation)
+3. [kmalloc/kfree Implementation](#_3-kmalloc-kfree-implementation)
 4. [Page Allocation](#4-page-allocation)
-   - [`__alloc_pages_noprof`](#41-__alloc_pages_noprof)
-   - [`get_page_from_freelist`](#42-get_page_from_freelist)
+   - [`__alloc_pages_noprof`](#_4-1-alloc-pages-noprof)
+   - [`get_page_from_freelist`](#_4-2-get-page-from-freelist)
 5. [Watermark Mechanism](#5-watermark-mechanism)
 
 ---

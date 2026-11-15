@@ -1,5 +1,6 @@
 ---
 title: "Bit vectors instead of sets"
+description: "Bit vectors instead of sets：Reduce allocations。"
 ---
 
 # Bit vectors instead of sets {#chapter}

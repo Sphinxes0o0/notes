@@ -1,5 +1,6 @@
 ---
 title: "Avoid unnecessary work"
+description: "Avoid unnecessary work：Avoid unnecessary work。"
 ---
 
 # Avoid unnecessary work {#chapter}

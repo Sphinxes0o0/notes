@@ -1,5 +1,6 @@
 ---
 title: "Reduce template instantiations"
+description: "Reduce template instantiations：Parallelization and synchronization。"
 ---
 
 # Reduce template instantiations {#chapter}

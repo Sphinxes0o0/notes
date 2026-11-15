@@ -1,5 +1,6 @@
 ---
 title: "Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks"
+description: "Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks：一句话定位、1. 背景:上一代 Constitutional Classifiers 的两个失效、2. Section 3: Exchange Classifier(解决攻击 #1)、3. Section 4: Two-Stage Cascade(降本)。"
 ---
 
 # Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks

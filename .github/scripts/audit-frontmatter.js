@@ -18,6 +18,7 @@
  */
 
 import fs from 'fs';
+import { execFileSync } from 'node:child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -100,7 +101,11 @@ function buildFrontmatterBlock(title, description) {
 }
 
 function main() {
-  const files = CONTENT_DIRS.flatMap((d) => walkDir(path.join(REPO_ROOT, d)));
+  let files = CONTENT_DIRS.flatMap((d) => walkDir(path.join(REPO_ROOT, d)));
+  if (process.argv.includes('--tracked')) {
+    const tracked = new Set(execFileSync('git', ['-c', 'core.fsmonitor=false', '-c', 'core.quotePath=false', 'ls-files'], { cwd: REPO_ROOT, encoding: 'utf8' }).trim().split('\n'));
+    files = files.filter((file) => tracked.has(path.relative(REPO_ROOT, file)));
+  }
   const stats = { total: files.length, missing: [], noTitle: [], noDesc: [], injected: 0 };
 
   for (const f of files) {
@@ -122,6 +127,7 @@ function main() {
     }
   }
 
+  if (process.argv.includes('--strict') && (stats.missing.length || stats.noTitle.length || stats.noDesc.length)) process.exitCode = 1;
   const rel = (p) => path.relative(REPO_ROOT, p);
 
   if (MODE === 'audit') {

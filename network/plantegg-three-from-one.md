@@ -25,4 +25,4 @@ OS `open files` limit was 1024, preventing new connections. TCP handshakes compl
 ## Key Insight
 > "三次握手成功就变成 ESTABLISHED 了，不需要用户态来accept"
 
-TCP connection state transitions happen in OS kernel. `accept()` and `close()` don't affect the kernel-level TCP state machine—they only consume resources after connection is established.
+TCP handshakes are processed by the kernel before the application accepts the connection. `accept()` retrieves an established connection from the accept queue. Application shutdown does affect TCP state: a graceful close can send FIN, and a connection in CLOSE_WAIT proceeds toward LAST-ACK when its sending side is closed. See [RFC 9293, connection closing](https://www.rfc-editor.org/rfc/rfc9293.html#section-3.6). The case above illustrates a resource-limit diagnosis; CLOSE_WAIT counts alone do not prove that the accept queue is full.

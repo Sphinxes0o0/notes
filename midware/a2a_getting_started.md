@@ -1,5 +1,6 @@
 ---
 title: "A2A 协议入门指南"
+description: "A2A 协议入门指南：0. 一图流（A2A 在车端怎么跑）、1. 协议本质、2. 四个核心概念、3. 协议规范精读指引。"
 ---
 
 # A2A 协议入门指南
@@ -11,7 +12,7 @@ title: "A2A 协议入门指南"
 > - [`a2a_iam_integration.md`](./a2a_iam_integration.md)：与车端 IAM 的集成设计
 >
 > 本文是入门篇，不深入协议细节，只回答"是什么 / 为什么 / 怎么学 / 怎么动手"。
-> 完整设计视角（含 IAM 三模块 + SPIRE 组件部署图）：见 [`a2a_iam_integration.md §0`](./a2a_iam_integration.md#0-总览架构图一图流) 与 [`a2a_spiffe.md §0`](./a2a_spiffe.md#0-总览架构图spiffe-视角)。
+> 完整设计视角（含 IAM 三模块 + SPIRE 组件部署图）：见 [`a2a_iam_integration.md §0`](./a2a_iam_integration.md#_0-总览架构图-一图流) 与 [`a2a_spiffe.md §0`](./a2a_spiffe.md#_0-总览架构图-spiffe-视角)。
 
 ---
 
@@ -536,7 +537,7 @@ Agent Card 是普通 JSON 文件，可以放在：
 | L5（会话层） | 任务级授权 | JWT Session Token |
 | L4（传输层） | 双向身份 + 信道加密 | mTLS / SPIFFE-SVID |
 
-详见 [`a2a_iam_integration.md §4`](./a2a_iam_integration.md#4-ttl-分级与-a2a-生命周期)。
+详见 [`a2a_iam_integration.md §4`](./a2a_iam_integration.md#_4-四层-ttl-直接对接-a2a-生命周期)。
 
 ---
 

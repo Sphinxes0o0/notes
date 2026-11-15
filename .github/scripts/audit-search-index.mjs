@@ -3,16 +3,21 @@
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
-import { fileURLToPath, pathToFileURL } from 'node:url'
+import { fileURLToPath } from 'node:url'
 import MiniSearch from 'minisearch'
+import { gunzipSync } from 'node:zlib'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
-const chunks = path.join(root, '.vitepress/dist/assets/chunks')
-const indexes = fs.readdirSync(chunks).filter((name) => name.startsWith('@localSearchIndex') && name.endsWith('.js'))
+const assets = path.join(root, '.vitepress/dist/assets')
+const chunks = assets
+const indexes = fs.readdirSync(chunks).filter((name) => name.startsWith('search-index-') && name.endsWith('.json.gz'))
 assert.ok(indexes.length, 'No generated search index; run npm run docs:build first')
 
 for (const file of indexes) {
-  const { default: raw } = await import(pathToFileURL(path.join(chunks, file)))
+  const compressed = fs.readFileSync(path.join(chunks, file))
+  const raw = gunzipSync(compressed).toString()
+  assert.equal(raw, fs.readFileSync(path.join(chunks, file.slice(0, -3)), 'utf8'), 'Compressed index and fallback differ')
+  console.log(`Compressed search payload: ${(compressed.length / 1024 / 1024).toFixed(2)} MiB`)
   const data = JSON.parse(raw)
   assert.ok(data.documentCount > 0 && data.index.length > 0, `${file}: search index is empty`)
   const search = MiniSearch.loadJSON(raw, {

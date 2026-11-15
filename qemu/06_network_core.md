@@ -1,5 +1,6 @@
 ---
 title: 网络核心架构
+description: "网络核心架构：NetClientState、NetClientInfo (驱动接口)、NetQueue (数据包队列)、后端驱动。"
 ---
 
 # 网络核心架构分析

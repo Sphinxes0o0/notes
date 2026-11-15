@@ -1,5 +1,6 @@
 ---
 title: "A2A (Agent-to-Agent) 协议与车端 IAM 集成"
+description: "A2A (Agent-to-Agent) 协议与车端 IAM 集成：与父目录 IAM 文档的关系、关键概念速查、外部参考。"
 ---
 
 # A2A (Agent-to-Agent) 协议与车端 IAM 集成

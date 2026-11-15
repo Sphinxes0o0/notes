@@ -1,5 +1,6 @@
 ---
 title: NIO 车端 AI Agent 安全研究合集
+description: "NIO 车端 AI Agent 安全研究合集：文件清单（按主题阅读顺序）、阅读路径建议、关联项目（同级目录）。"
 ---
 
 # NIO 车端 AI Agent 安全研究合集

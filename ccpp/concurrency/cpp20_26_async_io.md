@@ -10,6 +10,7 @@ tags:
     - receiver
     - execution
     - async-io
+description: "C++20 协程与 C++26 网络 sender/receiver 异步 I/O：1. 背景 (Background)、2. C++20 协程核心机制 (Mechanism)、3. C++20 协程实战: 异步 TCP echo server、4. C++26 std::execution (P2300) 核心模型。"
 ---
 
 # C++20 协程与 C++26 网络 sender/receiver 异步 I/O

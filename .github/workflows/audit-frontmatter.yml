@@ -23,6 +23,6 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Audit frontmatter coverage
-        run: node .github/scripts/audit-frontmatter.js
+        run: npm run check:frontmatter
         # 默认是 audit 模式，只读；CI 中不会修改文件
         # 本地需要补全时使用：node .github/scripts/audit-frontmatter.js --apply

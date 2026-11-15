@@ -1,10 +1,8 @@
 ---
 title: "Linux Kernel Connection Tracking (Conntrack) Subsystem Analysis"
-description: "Now I have a comprehensive understanding of the Linux kernel conntrack subsystem. Let me write the detailed analysis document."
+description: "Linux Conntrack 的连接元组、状态、NAT、超时与清理机制。"
 ---
-Now I have a comprehensive understanding of the Linux kernel conntrack subsystem. Let me write the detailed analysis document.
 
-Based on my thorough analysis of the Linux kernel conntrack subsystem source code, here is the comprehensive technical documentation:
 
 # Linux Kernel Connection Tracking (Conntrack) Subsystem Analysis
 

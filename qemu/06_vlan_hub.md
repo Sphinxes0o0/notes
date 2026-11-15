@@ -1,5 +1,6 @@
 ---
 title: VLAN 和 Hub
+description: "VLAN 和 Hub：Hub 架构、Hub 数据包转发、Hub 端口创建、Hub vs VLAN。"
 ---
 
 # VLAN 和 Hub 架构分析

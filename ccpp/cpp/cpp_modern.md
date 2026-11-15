@@ -5,6 +5,7 @@ tags:
     - cpp
     - move-semantics
     - perfect-forwarding
+description: "C++ 移动语义与完美转发：1. 左值与右值、2. 移动语义、3. 完美转发、4. 实际应用。"
 ---
 
 ## 1. 左值与右值

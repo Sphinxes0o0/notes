@@ -1,5 +1,6 @@
 ---
 title: RAM 迁移
+description: "RAM 迁移：Precopy 迁移、Postcopy 迁移、XBZRLE 压缩、内存后端迁移。"
 ---
 
 # RAM 迁移分析

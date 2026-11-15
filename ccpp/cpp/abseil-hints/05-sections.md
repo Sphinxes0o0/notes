@@ -1,5 +1,6 @@
 ---
 title: "Precompute expensive information once"
+description: "Precompute expensive information once的内容说明与阅读参考。"
 ---
 
 # Precompute expensive information once {#chapter}

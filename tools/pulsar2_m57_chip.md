@@ -1,6 +1,7 @@
 ---
 title: Pulsar2 与 M57 芯片能力调研
 tags: [ai, npu, axera, pulsar2, m57, toolchain]
+description: "Pulsar2 与 M57 芯片能力调研：1. 背景、2. M57 在 Pulsar2 中的定位、3. M57 NPU 算子支持总览、4. M57 模型编译流程。"
 ---
 
 # Pulsar2 与 M57 芯片能力调研

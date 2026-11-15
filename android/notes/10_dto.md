@@ -39,7 +39,7 @@
 
      将 `.dtb` 放在唯一的分区（例如 `dtb` 分区）中。
 
-     <img src="imgs/10/treble_dto_partition_1.png">
+     <img src="imgs/10/treble_dto_partition_.png">
 
 3. 要运行，请执行以下操作：
    * 将 `.dtb` 从存储加载到内存中。

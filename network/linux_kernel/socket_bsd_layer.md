@@ -12,7 +12,7 @@ description: "**Location:** `/Users/sphinx/github/linux/include/linux/net.h:116-
 5. [inet_listen()](#5-inet_listen)
 6. [inet_accept()](#6-inet_accept)
 7. [inet_connect()](#7-inet_connect)
-8. [Send/Receive Paths](#8-sendreceive-paths)
+8. [Send/Receive Paths](#_8-send-receive-paths)
 9. [Socket File Operations](#9-socket-file-operations)
 10. [Socket Timeout and Blocking](#10-socket-timeout-and-blocking)
 11. [Memory Management](#11-memory-management)

@@ -1,5 +1,6 @@
 ---
 title: "Linux 块设备子系统 (block/) 文档索引"
+description: "Linux 块设备子系统 (block/) 文档索引：1. Block 核心数据结构 (block_core.md)、2. MultiQueue (block_mq.md)、3. Request 处理 (block_request.md)、4. I/O Scheduler (block_scheduler.md)。"
 ---
 # Linux 块设备子系统 (block/) 文档索引
 

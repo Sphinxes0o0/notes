@@ -9,6 +9,7 @@ tags:
     - papers
     - open-source
     - survey
+description: "Hermes Memory 系统 + 论文开源项目延伸 (2025-12 ~ 2026-06)：1. 学术论文 (10 篇代表)、2. 开源项目 (10 个代表, 按 stars 排序)、3. Awesome list (1 个, 必看)、4. 趋势观察。"
 ---
 
 # Hermes Memory 系统 — 论文 + 开源项目延伸

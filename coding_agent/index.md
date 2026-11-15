@@ -1,5 +1,6 @@
 ---
 title: AI 编码 Agent
+description: "AI 编码 Agent：协作与会话管理。"
 ---
 
 # AI 编码 Agent

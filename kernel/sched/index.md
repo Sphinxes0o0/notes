@@ -1,5 +1,6 @@
 ---
 title: "Linux 调度器子系统 (kernel/sched/) 文档索引"
+description: "Linux 调度器子系统 (kernel/sched/) 文档索引：1. 调度器核心 (sched_core.md)、2. CFS 调度器 (sched_cfs.md)、3. RT 调度器 (sched_rt.md)、4. 调度类框架 (sched_class.md)。"
 ---
 # Linux 调度器子系统 (kernel/sched/) 文档索引
 
@@ -247,4 +248,4 @@ __schedule()
 ## 深度分析
 
 - [sched_deep_dive_r1.md](sched_deep_dive_r1.md) - 深度分析 R1: CFS/EEVDF, RT调度器, Load Balancing, sched_domain, pick_next_task
-- [sched_deep_dive_r2.md](sched_deep_dive_r2.md) - 深度分析 R2: pick_eevdf, calc_delta_fair, update_curr, enqueue_entity, dequeue_entity, task_numa_placement (待完善)
+- [sched_deep_dive_r2.md](sched_deep_dive_r2.md) - 深度分析 R2: pick_eevdf, calc_delta_fair, update_curr, enqueue_entity, dequeue_entity, task_numa_placement

@@ -1,5 +1,6 @@
 ---
 title: 迁移框架
+description: "迁移框架：VMState 机制、SaveVM/LoadVM、迁移状态机、QEMUFile 机制。"
 ---
 
 # 迁移框架分析

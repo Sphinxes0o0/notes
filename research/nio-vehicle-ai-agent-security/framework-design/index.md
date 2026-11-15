@@ -1,5 +1,6 @@
 ---
 title: Framework Design
+description: "Framework Design：文件说明、设计文档结构、配套文档、评审建议。"
 ---
 
 # NIO Vehicle AI Agent Security Framework — 正式设计文档

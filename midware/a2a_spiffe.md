@@ -1,5 +1,6 @@
 ---
 title: A2A × SPIFFE 车内零信任身份方案
+description: "A2A × SPIFFE 车内零信任身份方案：0. 总览架构图（SPIFFE 视角）、1. 为什么选 SPIFFE？、2. 车内部署架构、3. KMSS 作为 SPIRE Upstream CA。"
 ---
 
 # A2A × SPIFFE 车内零信任身份方案
@@ -17,7 +18,7 @@ title: A2A × SPIFFE 车内零信任身份方案
 
 ## 0. 总览架构图（SPIFFE 视角）
 
-> 完整版（含 IAM 三模块）见 [`a2a_iam_integration.md §0`](./a2a_iam_integration.md#0-总览架构图一图流)。
+> 完整版（含 IAM 三模块）见 [`a2a_iam_integration.md §0`](./a2a_iam_integration.md#_0-总览架构图-一图流)。
 > 本图聚焦 **SPIFFE/SPIRE 组件本身** 的部署位置与凭证流。
 
 ```mermaid

@@ -1,5 +1,6 @@
 ---
 title: "A2A 协议与 Agent IAM 能力边界研究报告"
+description: "A2A 协议与 Agent IAM 能力边界研究报告：1. A2A 协议全景分析、2. IAM 在 Agent 系统中的能力边界、3. A2A 与 IAM 的配合模式、4. 车端智能体发现的必要性分析。"
 ---
 
 # A2A 协议与 Agent IAM 能力边界研究报告

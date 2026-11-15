@@ -4,6 +4,7 @@ date: 2024-01-20 10:00:00
 tags:
     - cpp
     - copy-semantics
+description: "C++ 拷贝语义：1. 浅拷贝 vs 深拷贝、2. 拷贝构造与拷贝赋值、3. 移动构造与移动赋值、4. 示例：String 类实现。"
 ---
 
 ## 1. 浅拷贝 vs 深拷贝

@@ -1,5 +1,6 @@
 ---
 title: BlockDriverState 图结构
+description: "BlockDriverState 图结构：BdrvChild 结构、父子关系、bdrv_open_child 流程、权限模型。"
 ---
 
 # BlockDriverState 图结构分析

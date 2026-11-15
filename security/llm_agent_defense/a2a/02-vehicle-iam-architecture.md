@@ -1,5 +1,6 @@
 ---
 title: "车端 Agent IAM 深度设计研究报告"
+description: "车端 Agent IAM 深度设计研究报告：A.1 什么是车端 Agent IAM — 定义与范围、A.2 为什么不能使用 OAuth2 — 车端约束分析、A.3 替代方案全景 — mTLS + 证书身份体系、A.4 TEE + KMSS 如何支撑 IAM。"
 ---
 
 # 车端 Agent IAM 深度设计研究报告
@@ -13,23 +14,23 @@ title: "车端 Agent IAM 深度设计研究报告"
 ## 目录
 
 - [Part A: 车端 Agent IAM 独立深度设计](#part-a-车端-agent-iam-独立深度设计)
-  - [A.1 什么是车端 Agent IAM — 定义与范围](#a1-什么是车端-agent-iam--定义与范围)
-  - [A.2 为什么不能使用 OAuth2 — 车端约束分析](#a2-为什么不能使用-oauth2--车端约束分析)
-  - [A.3 替代方案全景 — mTLS + 证书身份体系](#a3-替代方案全景--mtls--证书身份体系)
-  - [A.4 TEE + KMSS 如何支撑 IAM](#a4-tee--kmss-如何支撑-iam)
-  - [A.5 车端 IAM 架构设计](#a5-车端-iam-架构设计)
-  - [A.6 Agent 身份模型](#a6-agent-身份模型)
-  - [A.7 Agent 凭证管理全生命周期](#a7-agent-凭证管理全生命周期)
-  - [A.8 权限策略引擎设计](#a8-权限策略引擎设计)
-  - [A.9 审计与可追溯性](#a9-审计与可追溯性)
+  - [A.1 什么是车端 Agent IAM — 定义与范围](#a-1-什么是车端-agent-iam-—-定义与范围)
+  - [A.2 为什么不能使用 OAuth2 — 车端约束分析](#a-2-为什么不能使用-oauth2-—-车端约束分析)
+  - [A.3 替代方案全景 — mTLS + 证书身份体系](#a-3-替代方案全景-—-mtls-证书身份体系)
+  - [A.4 TEE + KMSS 如何支撑 IAM](#a-4-tee-kmss-如何支撑-iam)
+  - [A.5 车端 IAM 架构设计](#a-5-车端-iam-架构设计)
+  - [A.6 Agent 身份模型](#a-6-agent-身份模型)
+  - [A.7 Agent 凭证管理全生命周期](#a-7-agent-凭证管理全生命周期)
+  - [A.8 权限策略引擎设计](#a-8-权限策略引擎设计)
+  - [A.9 审计与可追溯性](#a-9-审计与可追溯性)
 - [Part B: A2A + IAM 协作深度分析](#part-b-a2a--iam-协作深度分析)
-  - [B.1 A2A 的安全模型回顾](#b1-a2a-的安全模型回顾)
-  - [B.2 A2A 与 IAM 的能力边界（精确切割）](#b2-a2a-与-iam-的能力边界精确切割)
-  - [B.3 A2A + IAM 交互流程详解](#b3-a2a--iam-交互流程详解)
-  - [B.4 Agent Card 中的 mTLS 声明](#b4-agent-card-中的-mtls-声明)
-  - [B.5 gRPC Binding 下的 IAM 集成](#b5-grpc-binding-下的-iam-集成)
-  - [B.6 In-Task Authorization 的车端实现](#b6-in-task-authorization-的车端实现)
-  - [B.7 完整请求链路追踪](#b7-完整请求链路追踪)
+  - [B.1 A2A 的安全模型回顾](#b-1-a2a-的安全模型回顾)
+  - [B.2 A2A 与 IAM 的能力边界（精确切割）](#b-2-a2a-与-iam-的能力边界-精确切割)
+  - [B.3 A2A + IAM 交互流程详解](#b-3-a2a-iam-交互流程详解)
+  - [B.4 Agent Card 中的 mTLS 声明](#b-4-agent-card-中的-mtls-声明)
+  - [B.5 gRPC Binding 下的 IAM 集成](#b-5-grpc-binding-下的-iam-集成)
+  - [B.6 In-Task Authorization 的车端实现](#b-6-in-task-authorization-的车端实现)
+  - [B.7 完整请求链路追踪](#b-7-完整请求链路追踪)
 
 ---
 

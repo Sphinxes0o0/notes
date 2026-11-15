@@ -1,5 +1,6 @@
 ---
 title: "Linux 虚拟化子系统 (virt/) 文档索引"
+description: "Linux 虚拟化子系统 (virt/) 文档索引：1. KVM 核心架构 (kvm_core.md)、2. KVM vCPU 管理 (kvm_vcpu.md)、3. KVM MMU 虚拟化 (kvm_mmu.md)、4. KVM 内存管理 (kvm_memory.md)。"
 ---
 # Linux 虚拟化子系统 (virt/) 文档索引
 

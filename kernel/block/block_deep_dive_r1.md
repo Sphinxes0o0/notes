@@ -9,7 +9,7 @@ description: "**源码位置**: `/Users/sphinx/github/linux/include/linux/blk_ty
 1. [bio 结构详解](#1-bio-结构详解)
 2. [request 与 request_queue](#2-request-与-request_queue)
 3. [blk-mq 多队列机制](#3-blk-mq-多队列机制)
-4. [I/O Scheduler 分析](#4-io-scheduler-分析)
+4. [I/O Scheduler 分析](#_4-i-o-scheduler-分析)
 5. [GenHD 与 Partitions](#5-gendisk-与-partitions)
 6. [知识点关联表格](#6-知识点关联表格)
 

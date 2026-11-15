@@ -1,5 +1,6 @@
 ---
 title: Network Notes
+description: "Network Notes：阅读路径（推荐顺序）、Netfilter 主题在 3 处的区分、主题交叉引用索引、目录结构。"
 ---
 
 # 网络学习笔记

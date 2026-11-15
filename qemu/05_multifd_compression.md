@@ -1,5 +1,6 @@
 ---
 title: Multifd 和压缩
+description: "Multifd 和压缩：Multifd 通道、压缩方法、RDMA 迁移、关键文件。"
 ---
 
 # Multifd 和压缩分析

@@ -1,5 +1,6 @@
 ---
 title: tcpdump 使用指南
+description: "tcpdump 使用指南：基础用法、过滤器表达式、常用抓包场景、输出格式解析。"
 ---
 
 # tcpdump

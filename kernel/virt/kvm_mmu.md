@@ -7,7 +7,7 @@ description: "KVM (Kernel-based Virtual Machine) 是 Linux 内核中的全虚拟
 ## 目录
 
 1. [概述](#1-概述)
-2. [嵌套页表 (NPT/EPT)](#2-嵌套页表-nptept)
+2. [嵌套页表 (NPT/EPT)](#_2-嵌套页表-npt-ept)
 3. [TDP MMU (Two-Dimensional Paging)](#3-tdp-mmu-two-dimensional-paging)
 4. [影子页表](#4-影子页表)
 5. [脏页追踪](#5-脏页追踪)

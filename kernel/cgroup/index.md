@@ -1,5 +1,6 @@
 ---
 title: Linux Cgroups 资源控制子系统
+description: "Linux Cgroups 资源控制子系统：主要内容、关键源码位置、关联子系统。"
 ---
 
 # Linux Cgroups 资源控制子系统

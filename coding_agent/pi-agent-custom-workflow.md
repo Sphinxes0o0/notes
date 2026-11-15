@@ -395,7 +395,7 @@ export default function (pi: ExtensionAPI) {
 
 **文件格式**：`SKILL.md` + YAML frontmatter
 
-```markdown
+````markdown
 ---
 name: my-skill
 description: Processes input files. Use for batch data transformation.
@@ -412,7 +412,7 @@ cd /path/to/skill && npm install
 ```bash
 ./scripts/process.sh <input>
 ```
-```
+````
 
 **Frontmatter 字段**：
 

@@ -25,5 +25,5 @@ description: "**Source:** https://catboy.blog/lwip-bridge-1/"
 3. **协议无关**: 二层转发不解析高层协议，适合全量流量采集
 
 ## 关联概念
--  — 网络深度笔记
+- [Linux 网络栈深度分析](./stack_deep_dive.md) — 对比完整协议栈的数据路径
 - NIDS架构: TAP/SPAN → 流量镜像 → 检测引擎
