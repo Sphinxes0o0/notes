@@ -116,6 +116,8 @@ def resolve_internal(link: str, source: Path, root: Path,
     # Absolute (VitePress style: /foo/bar)
     if link.startswith("/"):
         target = link.strip("/")
+        if target.endswith(".html") and target[:-5] in routes:
+            return target[:-5]
         if is_dir_link:
             if target in dirs or target + "/" in dirs:
                 return target
@@ -136,6 +138,9 @@ def resolve_internal(link: str, source: Path, root: Path,
         if rel_str in dirs or rel_str + "/" in dirs:
             return rel_str
         return f"MISSING: {link}"
+
+    if rel.suffix == ".html" and str(rel.with_suffix("")) in routes:
+        return str(rel.with_suffix(""))
 
     if rel.suffix and rel.suffix != ".md":
         if rel_str in assets:
@@ -218,7 +223,8 @@ def main(argv: list[str]) -> int:
         # Strip fenced code blocks and inline code spans so we don't
         # mistake C/JS syntax like `arr[i](v)` for a markdown link.
         scan_text = FENCE_RE.sub("", text)
-        scan_text = INLINE_CODE_RE.sub("", scan_text)
+        # Preserve a non-empty label in [`code`](target) while removing code syntax.
+        scan_text = INLINE_CODE_RE.sub("code", scan_text)
         for m in LINK_RE.finditer(scan_text):
             link = m.group(2)
             if link.startswith(("#", "mailto:")):
@@ -307,7 +313,7 @@ def main(argv: list[str]) -> int:
 
     if args.json:
         print(json.dumps(report, ensure_ascii=False, indent=2, default=str))
-        return 0
+        return 1 if (internal_issues or any(r["class"] == "broken" for r in external_results)) else 0
 
     # Pretty print
     print(f"\n{'=' * 70}")

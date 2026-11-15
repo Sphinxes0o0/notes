@@ -1,3 +1,7 @@
+---
+title: "LLM Agent Security — Anthropic / OpenAI / DeepMind 实践对比(2026H1)"
+---
+
 # LLM Agent Security — Anthropic / OpenAI / DeepMind 实践对比(2026H1)
 
 > 一手材料: Anthropic 官方系统卡、Claude Code 文档、alignment 博客;OpenAI Codex 开发者文档、学术论文;DeepMind FSF v1 博客、CaMeL 论文。  

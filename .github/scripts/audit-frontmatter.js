@@ -26,6 +26,7 @@ const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 
 const CONTENT_DIRS = [
+  'a2a', 'research',
   'ccpp', 'kernel', 'network', 'sys', 'security', 'tools', 'midware',
   'qemu', 'interview', 'datastructure', 'design_patterns',
   'network_fundamentals', 'os_fundamentals', 'coding_agent'

@@ -1,3 +1,7 @@
+---
+title: "OWASP LLM Top 10 (2025) 防御手册"
+---
+
 # OWASP LLM Top 10 (2025) 防御手册
 
 > 来源：OWASP GenAI Security Project + 主流开源工具（Meta / Microsoft / NVIDIA / Google / Alibaba / Hugging Face）+ 学术界最新论文（ACL 2025、EMNLP 2025、arXiv 2025-2026）

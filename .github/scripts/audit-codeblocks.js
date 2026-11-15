@@ -20,6 +20,7 @@ const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 
 const CONTENT_DIRS = [
+  'a2a', 'research', 'coding_agent',
   'ccpp', 'network', 'sys', 'midware', 'tools', 'kernel',
   'security', 'qemu', 'datastructure', 'design_patterns',
   'network_fundamentals', 'os_fundamentals', 'os', 'net',
@@ -78,7 +79,7 @@ function isContentBleeding(line, language) {
   // Plain-text blocks (text / plaintext / ascii / ansi) are non-code by definition.
   // Authors explicitly use them for diagrams, comparison tables, prose snippets —
   // bleeding detection does not apply.
-  if (['text', 'plaintext', 'ascii', 'ansi'].includes(language)) {
+  if (!language || ['text', 'plaintext', 'ascii', 'ansi', 'markdown', 'md'].includes(language)) {
     return false;
   }
 
@@ -108,11 +109,13 @@ function isContentBleeding(line, language) {
   return false;
 }
 
-function findCodeBlocks(content) {
+export function findCodeBlocks(content) {
   const blocks = [];
   const lines = content.split('\n');
 
   let inCodeBlock = false;
+  let fenceMarker = '';
+  let fenceLength = 0;
   let blockStartLine = 0;
   let blockStartLang = '';
   let language = '';
@@ -121,11 +124,15 @@ function findCodeBlocks(content) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
-    if (line.startsWith('```')) {
+    const fence = line.match(/^ {0,3}(`{3,}|~{3,})(.*)$/);
+    const closing = fence && fence[1][0] === fenceMarker && fence[1].length >= fenceLength && !fence[2].trim();
+    if (fence && (!inCodeBlock || closing)) {
       if (!inCodeBlock) {
         inCodeBlock = true;
         blockStartLine = i + 1;
-        blockStartLang = line.slice(3).trim();
+        fenceMarker = fence[1][0];
+        fenceLength = fence[1].length;
+        blockStartLang = fence[2].trim();
         language = blockStartLang;
         codeLines = [];
       } else {
@@ -248,4 +255,4 @@ function main() {
   }
 }
 
-main();
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) main();

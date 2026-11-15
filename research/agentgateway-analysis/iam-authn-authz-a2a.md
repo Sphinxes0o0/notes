@@ -1,3 +1,7 @@
+---
+title: "Agentgateway 第二轮深挖：IAM + 鉴权 + A2A"
+---
+
 # Agentgateway 第二轮深挖：IAM + 鉴权 + A2A
 
 > **承接**：第一轮报告（`README.md`）覆盖了项目全景、模块拓扑、整体数据流、A2A 协议识别、Agent ID 三源身份、AuthN 全栈、AuthZ 引擎。

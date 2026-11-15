@@ -1,3 +1,7 @@
+---
+title: "车端 Agent 授权模型深度对比 — 超越 RBAC"
+---
+
 # 车端 Agent 授权模型深度对比 — 超越 RBAC
 
 > **核心问题**: RBAC 是不是车端 Agent IAM 的唯一/最佳选择？  

@@ -1,3 +1,7 @@
+---
+title: "IAM 三要素嵌入 A2A 流程 — 精确注入点设计"
+---
+
 # IAM 三要素嵌入 A2A 流程 — 精确注入点设计
 
 > **核心问题**: AgentID、Agent Auth、Agent Cert 分别在 A2A 生命周期的哪个点介入？如何介入？

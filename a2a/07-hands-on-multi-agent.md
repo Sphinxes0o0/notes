@@ -1,3 +1,7 @@
+---
+title: "07 · 实战 3：多 Agent 协作（Orchestrator 模式）"
+---
+
 # 07 · 实战 3：多 Agent 协作（Orchestrator 模式）
 
 > 本节演示 A2A 的"**杀手级场景**"：一个 Orchestrator Agent 通过 A2A 同时调度多个**独立部署**的子 Agent，每个子 Agent 专注一件事。

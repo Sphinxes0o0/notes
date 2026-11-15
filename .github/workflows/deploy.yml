@@ -32,7 +32,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: '.nvmrc'
           cache: 'npm'
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -40,6 +40,8 @@ jobs:
         run: npm ci
       - name: Build with VitePress
         run: npm run docs:build
+      - name: Check generated search index
+        run: npm run check:search
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

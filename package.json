@@ -1,14 +1,21 @@
 {
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "node --max-old-space-size=8192 node_modules/vitepress/bin/vitepress.js build",
     "docs:preview": "vitepress preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "check:links": "python3 scripts/link_check.py",
+    "check:frontmatter": "node .github/scripts/audit-frontmatter.js",
+    "check:codeblocks": "node .github/scripts/audit-codeblocks.js",
+    "audit:content": "python3 scripts/content_audit.py",
+    "check:navigation": "node .github/scripts/audit-navigation.js",
+    "check:search": "node .github/scripts/audit-search-index.mjs"
   },
   "devDependencies": {
     "husky": "^9.1.7",
     "vite-plugin-pwa": "^1.2.0",
-    "vitepress": "^2.0.0-alpha.12"
+    "vitepress": "^2.0.0-alpha.12",
+    "minisearch": "^7.1.2"
   },
   "name": "notes",
   "version": "1.0.0",
@@ -28,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/Sphinxes0o0/notes/issues"
   },
-  "homepage": "https://github.com/Sphinxes0o0/notes#readme"
+  "homepage": "https://github.com/Sphinxes0o0/notes#readme",
+  "engines": {
+    "node": ">=22.12.0 <23"
+  }
 }

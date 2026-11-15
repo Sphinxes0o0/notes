@@ -1,3 +1,7 @@
+---
+title: "A2A 协议与 Agent IAM 能力边界研究报告"
+---
+
 # A2A 协议与 Agent IAM 能力边界研究报告
 
 > **目标场景**: 汽车嵌入式 Agent IAM 开发  

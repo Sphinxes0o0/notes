@@ -19,3 +19,8 @@ AI 编码 Agent 框架深度分析：架构、扩展、对比、定制 workflow�
 | [Pi 定制 workflow 实操](./pi-agent-custom-workflow) | 扩展开发全生命周期 + 5 个实战配方 |
 | [Hermes Agent Memory 系统设计](./hermes_memory_design) | Agent Memory 层设计与最佳实践 |
 | [Hermes Memory 论文与开源项目 (2026H1)](./hermes_memory_research_2026h1) | Hermes Memory 领域论文与开源项目调研 |
+
+## 协作与会话管理
+
+- [A2A 协议与实战](../a2a/)：从核心概念到流式调用与多 Agent 编排。
+- [跨 Agent Session 可移植方案](./session-portability)：会话状态与上下文的迁移方案。
