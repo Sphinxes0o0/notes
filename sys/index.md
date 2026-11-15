@@ -1,5 +1,6 @@
 ---
 title: System Programming Notes
+description: "System Programming Notes：目录结构、学习目标、实践项目。"
 ---
 
 # 系统编程学习笔记

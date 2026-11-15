@@ -10,7 +10,7 @@ description: "**Location:** `include/linux/swap.h` lines 261-303"
 2. [Swap Cluster Mechanism](#2-swap-cluster-mechanism)
 3. [swapon/swapoff System Calls](#3-swapon-swapoff-system-calls)
 4. [swapin_readahead Page Swap-in](#4-swapin_readahead-page-swap-in)
-5. [swap_readpage/swap_writepage I/O Operations](#5-swap_readpageswap_writepage-io-operations)
+5. [swap_readpage/swap_writepage I/O Operations](#_5-swap-readpage-swap-writepage-i-o-operations)
 6. [Swap Cache Structure (XA Tree)](#6-swap-cache-structure-xa-tree)
 7. [swp_entry_t Definition and PTE Conversion](#7-swp_entry_t-definition-and-pte-conversion)
 8. [add_to_swap / free_swap_and_cache](#8-add_to_swap--free_swap_and_cache)

@@ -1,6 +1,7 @@
 ---
 title: QEMU 架构分析
 index: false
+description: "QEMU 架构分析：关键架构模式。"
 ---
 
 # QEMU 架构分析

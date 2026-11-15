@@ -6,12 +6,12 @@ description: "**文件**: `/Users/sphinx/github/linux/arch/x86/kvm/mmu/mmu.c`"
 # Linux Virt/KVM 子系统深度分析 R2
 
 ## 目录
-1. [kvm_mmu_map_page: SPTE生成流程](#1-kvm_mmu_map_page)
-2. [tdp_mmu_iter: 遍历逻辑](#2-tdp_mmu_iter)
-3. [ept_sync_root: TLB刷新机制](#3-ept_sync_root)
-4. [kvm_x86_emulator: 指令模拟](#4-kvm_x86_emulator)
-5. [vmx_vcpu_run: VMEntry/VMExit](#5-vmx_vcpu_run)
-6. [nested VMX: 嵌套虚拟化](#6-nested-vmx)
+1. [kvm_mmu_map_page: SPTE生成流程](#_1-kvm-mmu-map-page-spte生成流程)
+2. [tdp_mmu_iter: 遍历逻辑](#_2-tdp-mmu-iter-遍历逻辑)
+3. [ept_sync_root: TLB刷新机制](#_3-ept-sync-root-tlb刷新机制)
+4. [kvm_x86_emulator: 指令模拟](#_4-kvm-x86-emulator-指令模拟)
+5. [vmx_vcpu_run: VMEntry/VMExit](#_5-vmx-vcpu-run-vmentry-vmexit)
+6. [nested VMX: 嵌套虚拟化](#_6-nested-vmx-嵌套虚拟化)
 7. [知识点关联表](#7-知识点关联表)
 
 ---

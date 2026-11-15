@@ -1,5 +1,6 @@
 ---
 title: QAPI Schema 和代码生成
+description: "QAPI Schema 和代码生成：概述、架构组件、访问者模式实现、关键设计模式。"
 ---
 
 # QAPI Schema 和代码生成分析

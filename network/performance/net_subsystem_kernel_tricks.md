@@ -1,9 +1,8 @@
 ---
 title: "Linux Kernel Networking \"Black Magic\" - Advanced Implementation Techniques"
-description: "Based on my thorough research of the Linux kernel networking codebase, I will now compile a comprehensive document covering these advanced implementation techniques."
+description: "Linux 网络路径中的内存布局、并发、批处理与性能优化技术。"
 ---
 
-Based on my thorough research of the Linux kernel networking codebase, I will now compile a comprehensive document covering these advanced implementation techniques.
 
 # Linux Kernel Networking "Black Magic" - Advanced Implementation Techniques
 

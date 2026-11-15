@@ -15,7 +15,7 @@ description: "Netfilter 是 Linux 内核提供的一个数据包过滤和修改�
 3. [NAT (网络地址转换)](#3-nat-网络地址转换)
 4. [Conntrack 协议支持](#4-conntrack-协议支持)
 5. [Nftables 表达式](#5-nftables-表达式)
-6. [Xtables 匹配/目标](#6-xtables-匹配目标)
+6. [Xtables 匹配/目标](#_6-xtables-匹配-目标)
 7. [性能优化](#7-性能优化)
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: 跨 Coding Agent Session 可移植方案
+description: "跨 Coding Agent Session 可移植方案：0. TL;DR、1. 背景与目标、2. 生态现状（事实核查版）、3. 定位与边界。"
 ---
 
 # 跨 Coding Agent Session 可移植层（Session Portability Layer）技术方案（V2 · 完善版）

@@ -5,6 +5,7 @@ tags:
     - Linux
 categories:
     - Linux编程
+description: "manjaro_swap：配置及安装相应软件、建立交换文件。"
 ---
 
 

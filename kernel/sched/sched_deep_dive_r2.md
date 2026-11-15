@@ -7,12 +7,12 @@ description: "本文档深入分析 Linux kernel CFS (Completely Fair Scheduler)
 ## 目录
 
 1. [概述](#概述)
-2. [pick_eevdf 详细算法](#pick_eevdf-详细算法)
-3. [calc_delta_fair 算法分析](#calc_delta_fair-算法分析)
-4. [update_curr 更新机制](#update_curr-更新机制)
-5. [enqueue_entity 入队流程](#enqueue_entity-入队流程)
-6. [dequeue_entity 出队流程](#dequeue_entity-出队流程)
-7. [NUMA 感知调度](#numa-感知调度)
+2. [pick_eevdf 详细算法](#_1-pick-eevdf-详细算法)
+3. [calc_delta_fair 算法分析](#_2-calc-delta-fair-算法分析)
+4. [update_curr 更新机制](#_3-update-curr-更新机制)
+5. [enqueue_entity 入队流程](#_4-enqueue-entity-入队流程)
+6. [dequeue_entity 出队流程](#_5-dequeue-entity-出队流程)
+7. [NUMA 感知调度](#_6-numa-感知调度)
 8. [知识点关联表格](#知识点关联表格)
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: "附录 B　注释（Notes）"
+description: "附录 B　注释（Notes）：1. History and Motivation for SPIFFE、2. Benefits、3. Introduction to SPIFFE and SPIRE concepts、4. Before You Start。"
 ---
 # 附录 B　注释（Notes）
 

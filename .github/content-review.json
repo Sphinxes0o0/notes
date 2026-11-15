@@ -1,0 +1,307 @@
+{
+  "reviewed_at": "2026-11-16",
+  "scope": "Tracked Markdown: short-page and prose-placeholder candidates. Source availability and proposed implementation checklists are retained explicitly. Missing prose links are advisory because navigation is audited independently.",
+  "reviews": {
+    "ccpp/concurrency/future/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "ee051aebaa0649c585f416df86ed1420a25f4ece6732de73c7f3fe44cc8c0a8b"
+    },
+    "ccpp/concurrency/memory_order/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "633ffd41fba2130b6238be8d59e8b70a4e8865eb82436a927d97385397332aee"
+    },
+    "ccpp/concurrency/multithreads/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "33183716c611a78cb9346b12f9ac2ce098ecc6e5b2de3612b9027d744e14b495"
+    },
+    "ccpp/concurrency/yield/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "6e294febfa298cee5d4afefbabc3464757a69d044acd8784104859f40a2b8161"
+    },
+    "coding_agent/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "01d457213595a9a4300b31e0f3c6000a52e8156b849d6a20cf185962cbd6d873"
+    },
+    "coding_agent/pi-agent.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "长文分篇入口，含章节目录与旧锚点跳转组件，正文已迁入分篇。",
+      "sha256": "2f9de71b1001aebc719b073b94689da86fd8f8fda4373af6b979906a958bf5be"
+    },
+    "datastructure/开篇词_数据结构与算法_应该这样学.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "课程导读，包含课程特色、结构和学习建议，无空白章节。",
+      "sha256": "24122c1b6d9665b4eb74c09e60d87aa7edc664d89591a5214d2c9ab2610ded55"
+    },
+    "index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "首页内容由 YAML hero/features 渲染；正文短是页面布局要求。",
+      "sha256": "704bddcd52e5aeb0755d7926ddd6add99e1519ce182c06499ce759fc9cb567cc"
+    },
+    "interview/credits.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "独立致谢、许可和参考来源页；篇幅与用途相符。",
+      "sha256": "1ab58506aba09937b9707e66a667c97ab56672ee22be05767206da5839d0e934"
+    },
+    "network/linux_kernel/plantegg-network-flow.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "简明网络收发路径与术语摘要；不是待补全文，参数需结合运行环境。",
+      "sha256": "7cca84cf36d03c17018965434f5895d250f190186ea0b6fd271b8823da09e28a"
+    },
+    "network/lwip-bridge-implementation.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "明确标注通用知识阅读提纲，包含网桥概念与关联阅读，不声称逐行复现实现。",
+      "sha256": "e8e989369d1eb129e58c45707145fe3ddd54862b07d480dffd67d3baa652ca61"
+    },
+    "network/plantegg-three-from-one.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "完整的简短故障案例；已修正 close 不影响 TCP 状态的错误表述并引用 RFC 9293。",
+      "sha256": "bcce11709572e72134ade2d1358d5a4140b24107aae549933d57f1f977cdcf36"
+    },
+    "research/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "5fb3757de61f52064f5a13808b5be56033f919049ff0f8d76b3e311cec15e051"
+    },
+    "security/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "4b63546ebdd5d2cd9fd8b32ea4431d9dae13710ee2fd83dcd1cdc2302fe35068"
+    },
+    "security/spiffe-book/13-epilogue.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "书籍后记，内容与原章节性质相符，保留出处。",
+      "sha256": "9315d84d1fe7c8ba943b3fc0de6212e735c253ee1cd637096b66e6f582e0f6f3"
+    },
+    "tools/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
+      "sha256": "b778f9f21cd06453471883d77ad99db529d5d800f26978a73e39b643ad271845"
+    },
+    "coding_agent/hermes_memory_design.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "todo 是任务状态工具的领域术语，不是本文占位符。",
+      "sha256": "9ad47933ace8cd909548b3370deefd56645b634fd655230cf47331a6519f4753"
+    },
+    "coding_agent/pi-agent-comparison.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "Plan/Todo 是所比较产品的功能项名称。",
+      "sha256": "9929af4807106f6e5c50e84da4c42cd25a9e6881dc4cae7e7380d2e9a1fe601a"
+    },
+    "coding_agent/pi-agent-custom-workflow.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "todo widget 是工作流示例中的功能名称。",
+      "sha256": "330c89a53f6c0f3d68e7bfaac7e3bc202c78a12f56865122e2ba2adee3a2cdcb"
+    },
+    "coding_agent/pi-agent-ecosystem.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "TODO.md 出现在引用与工具取舍说明中，需保留引用原意。",
+      "sha256": "04dda879a4482ff170326a916cace2e7828f15280bce59cde5251092d5db2598"
+    },
+    "coding_agent/session-portability.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "未完成任务/TODO 是会话迁移的数据类型，不是本文缺失内容。",
+      "sha256": "2e5c0133fe1de50fe8c74f6b92a519c4949ae5894e30fc3e8f4957398aa205b1"
+    },
+    "design_patterns/31-策略模式如何解决不同活动策略的营销推荐场景.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "XXX 是满减金额示例的变量占位，不代表遗漏正文。",
+      "sha256": "407318dd92a0c912f05e43edcda8bb32f43187e32fbbe44f672a35453000cab7"
+    },
+    "design_patterns/38-命令模式如何在一次请求中封装多个参数.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "未完成描述异步命令的运行状态。",
+      "sha256": "79a6b35155736fc6160830330611d8c9ae66c3552537aef4cd85be572fb8f398"
+    },
+    "design_patterns/39-责任链模式如何解决审核、过滤场景问题.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "未完成支付描述订单业务状态。",
+      "sha256": "6ea7260db9a3f8f67d510db2fa2284b8f0d107deb7cbaef4b5194aec540a01d0"
+    },
+    "kernel/ebpf/ebpf.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "404 是对外部源教程章节可用性的记录，本地笔记本身不是空页。",
+      "sha256": "df6f7a32861bf663dd34b0a0c9651ede827ec4fe45e6b1a97b403ec3bc40ad52"
+    },
+    "kernel/ipc/ipc_deep_dive_r1.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "未完成指信号量调整状态，是技术解释。",
+      "sha256": "21e832163f1e02d33b8e566d3a23bf7bd919048224cb797c376ea5614f41dfda"
+    },
+    "midware/a2a_iam_integration.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "这是方案文档中的实施路线图，未勾选项不代表本仓库已提供可运行实现，保留风险和实施边界。",
+      "sha256": "8ed3cccdd4bf38a916125e8eb084ae1b2d2a3a4df259ed4cc88f457452e6bacc"
+    },
+    "network/linux_net-stack/linux-网络栈原理监控与调优前言2022.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "TX TBD 标明外部译文系列收录范围，不能编造未收录原文。",
+      "sha256": "fa1a0751edc5c3d021c1aaf3c56aede2f797d5efc4f140ab61823646ea095754"
+    },
+    "network/linux_netfilter/net_subsystem_netfilter.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "placeholder 指已移除 hook 的实现占位节点。",
+      "sha256": "34e91d7cc11c1139bed9f7246baa140a85a0a65ebbde8944928707b37b41c7ea"
+    },
+    "network_fundamentals/02_传输层协议_TCP_TCP_为什么握手是_3_次_挥手是_4_次.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "未完成工作是解释 TCP 半关闭状态的例子。",
+      "sha256": "ad6075c947a7283cbac6c0792647b50b52adbeaaef592301eae7496e35d824a3"
+    },
+    "os_fundamentals/16_WinMacUnixLinux_的区别和联系_为什么_Debian_漏洞排名第一还这么多人用.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "省略号位于历史功能枚举结尾，用作列举省略，不是空章节。",
+      "sha256": "6b767663c19144e4503096150365f35cee6a6b9360c2e60b490a3896bafa7eff"
+    },
+    "os_fundamentals/28_内存回收下篇_三色标记_清除算法是怎么回事.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "未完成标记是增量 GC 的技术状态。",
+      "sha256": "5d5a90de20edee36b1de1ab95b23cd50084af46048561040709749d1e028c383"
+    },
+    "os_fundamentals/34_UDP_协议_UDP_和_TCP_相比快在哪里.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "未完成工作用于 TCP 挥手过程解释，不是文档占位。",
+      "sha256": "c0bca3553b13c388a907c39e44e4ef87d34822e6c8b61c343094e7bc6bf460ad"
+    },
+    "security/network-traffic-analysis/papers/06-SDN/paper-62-SDN-security-architecture.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "亟待完善是对论文领域问题的概括，不是本文编辑任务。",
+      "sha256": "6fe3777e8c0d85c921a3d9c1127c1b9c735c687c441bc5485154ebadbf12f527"
+    },
+    "security/spiffe-book/README.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "page-XXX.png 是文件命名模板；后续图表转换是可选表现形式，已有页图可供引用。",
+      "sha256": "66232628c304b286cf8cac6d7808312632bcba7265c0ccdcd7c5a05c98aca475"
+    },
+    "sys/ipc/linux_ipc.md": {
+      "categories": [
+        "placeholders"
+      ],
+      "reason": "XXX 是内联代码 open 的示例文件名，不是缺失段落。",
+      "sha256": "0aa1910ca3f6658f7762d55d9a54b5816262beec45e08975e9159103ff613ef7"
+    },
+    "a2a/examples/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
+      "sha256": "e248a10b405ef03fab21e6fc50db6a97c8107e7f90adf612bfd87c2cba838157"
+    },
+    "ccpp/cpp/containers/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
+      "sha256": "7f8113e8c4bf317a807ae4716e27f00e15a179b632ceda83394a9793d0475ada"
+    },
+    "network/linux_net-stack/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
+      "sha256": "6761097013709d51b0322264b09b838f16691eab92d45d1a24e687afdb121a98"
+    },
+    "network/performance/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
+      "sha256": "984c2d6fa7a819ed8cd20dd0772e4a099621f1b46f00fc185f8b3c6546eeeca6"
+    },
+    "network/tcpip/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
+      "sha256": "243877dabc5090228d5569e20f88069fc856711f033d608bd37261f3c24a91de"
+    },
+    "security/falco/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
+      "sha256": "f588cb037e10f65a685fd48729f440ebf5b47aa8eb6dc09a1108bf1b3e2c5121"
+    },
+    "security/llm_agent_defense/index.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
+      "sha256": "de192a532357a9968247ace96f6ce5095ba0934dd5cfcfe004f050e047b56e1f"
+    }
+  }
+}

@@ -5,8 +5,8 @@ description: "**文件**: `net/socket.c:1759-1762`"
 # Linux 内核网络子系统 - Socket Core 分析文档
 
 ## 目录
-1. [net/socket.c 分析](#1-netsocketc-分析)
-2. [net/core/sock.c 分析](#2-netcoresockc-分析)
+1. [net/socket.c 分析](#_1-net-socket-c-分析)
+2. [net/core/sock.c 分析](#_2-net-core-sock-c-分析)
 3. [内存分配与释放路径](#3-内存分配与释放路径)
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: "IAM 三要素嵌入 A2A 流程 — 精确注入点设计"
+description: "IAM 三要素嵌入 A2A 流程 — 精确注入点设计：0. 首先明确: IAM 三要素的精确定义、1. A2A 完整生命周期 × IAM 注入点全景图、2. Phase 0: 启动前 — Agent Cert 的获取 (纯 IAM)、3. Phase 1: 服务发布 — Agent Card 生成 (IAM 声明 + A2A 承载)。"
 ---
 
 # IAM 三要素嵌入 A2A 流程 — 精确注入点设计

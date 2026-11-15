@@ -1,5 +1,6 @@
 ---
 title: "Linux RCU 子系统文档索引"
+description: "Linux RCU 子系统文档索引：文档、主要内容、关键源码位置。"
 ---
 # Linux RCU 子系统文档索引
 

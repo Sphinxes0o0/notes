@@ -4,6 +4,7 @@ date: 2021-12-05 13:57:32
 tags:
     - bit op
     - c/cpp
+description: "常用位运算：位运算符、复合赋值位运算符、应用、C++ STL bitset 容器。"
 ---
 
 

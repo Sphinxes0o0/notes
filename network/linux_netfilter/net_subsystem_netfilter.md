@@ -6,10 +6,10 @@ description: "Hooks are ordered by ascending priority (lower number = higher pri
 
 ## Table of Contents
 1. [Core Hook Infrastructure](#1-core-hook-infrastructure)
-2. [iptables/xtables](#2-iptablesxtables)
+2. [iptables/xtables](#_2-iptables-xtables)
 3. [nf_tables](#3-nf_tables)
 4. [Conntrack Integration](#4-conntrack-integration)
-5. [Specific Match/Target Modules](#5-specific-matchtarget-modules)
+5. [Specific Match/Target Modules](#_5-specific-match-target-modules)
 6. [Key Data Structures](#6-key-data-structures)
 
 ---

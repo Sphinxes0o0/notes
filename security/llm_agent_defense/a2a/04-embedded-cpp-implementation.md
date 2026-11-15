@@ -1,5 +1,6 @@
 ---
 title: "车端嵌入式 C/C++ 实现深度调研"
+description: "车端嵌入式 C/C++ 实现深度调研：1. A2A C++ SDK — 社区实现分析、2. gRPC C++ — 嵌入式可行性评估、3. TLS 嵌入式方案 — mbedTLS / wolfSSL、4. Protobuf 嵌入式方案 — nanopb。"
 ---
 
 # 车端嵌入式 C/C++ 实现深度调研
@@ -11,14 +12,14 @@ title: "车端嵌入式 C/C++ 实现深度调研"
 
 ## 目录
 
-1. [A2A C++ SDK — 社区实现分析](#1-a2a-c-sdk--社区实现分析)
-2. [gRPC C++ — 嵌入式可行性评估](#2-grpc-c--嵌入式可行性评估)
-3. [TLS 嵌入式方案 — mbedTLS / wolfSSL](#3-tls-嵌入式方案--mbedtls--wolfssl)
-4. [Protobuf 嵌入式方案 — nanopb](#4-protobuf-嵌入式方案--nanopb)
-5. [策略引擎 C/C++ 替代方案](#5-策略引擎-cc-替代方案)
-6. [TEE Client API — GlobalPlatform C API](#6-tee-client-api--globalplatform-c-api)
-7. [全栈 C/C++ 架构设计](#7-全栈-cc-架构设计)
-8. [关键代码骨架 (C++20)](#8-关键代码骨架-c20)
+1. [A2A C++ SDK — 社区实现分析](#_1-a2a-c-sdk-—-社区实现分析)
+2. [gRPC C++ — 嵌入式可行性评估](#_2-grpc-c-—-嵌入式可行性评估)
+3. [TLS 嵌入式方案 — mbedTLS / wolfSSL](#_3-tls-嵌入式方案-—-mbedtls-wolfssl)
+4. [Protobuf 嵌入式方案 — nanopb](#_4-protobuf-嵌入式方案-—-nanopb)
+5. [策略引擎 C/C++ 替代方案](#_5-策略引擎-c-c-替代方案)
+6. [TEE Client API — GlobalPlatform C API](#_6-tee-client-api-—-globalplatform-c-api)
+7. [全栈 C/C++ 架构设计](#_7-全栈-c-c-架构设计)
+8. [关键代码骨架 (C++20)](#_8-关键代码骨架-c-20)
 9. [资源占用估算](#9-资源占用估算)
 10. [实施建议与风险](#10-实施建议与风险)
 

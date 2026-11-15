@@ -6,6 +6,7 @@ tags:
     - Signal
     - Process
     - IPC
+description: "Linux 信号机制：1. 信号概述、2. 信号类型、3. 信号处理函数、4. 信号与进程。"
 ---
 
 # Linux 信号机制

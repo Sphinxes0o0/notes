@@ -1,5 +1,6 @@
 ---
 title: SPIFFE 翻译
+description: "SPIFFE 翻译：版权页、致谢、关于本书、关于 Zero the Turtle。"
 ---
 
 # 扉页与前言（Frontmatter）

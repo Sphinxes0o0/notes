@@ -11,7 +11,7 @@ description: "OpenBMC是Linux Foundation项目,是一个基于Yocto、OpenEmbedd
 3. [phosphor-bmc-update BMC固件升级](#3-phosphor-bmc-update-bmc固件升级)
 4. [entity-manager 板级配置管理](#4-entity-manager-板级配置管理)
 5. [obmc-trigger 触发器管理](#5-obmc-trigger-触发器管理)
-6. [BIOS/UEFI远程配置](#6-biosuefi远程配置)
+6. [BIOS/UEFI远程配置](#_6-bios-uefi远程配置)
 7. [Flash布局详解](#7-flash布局详解)
 8. [知识点关联表格](#8-知识点关联表格)
 

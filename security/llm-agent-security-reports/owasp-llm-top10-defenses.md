@@ -1,5 +1,6 @@
 ---
 title: "OWASP LLM Top 10 (2025) 防御手册"
+description: "OWASP LLM Top 10 (2025) 防御手册：0. 速读：一张表看懂 10 大风险与防御重点、LLM01: Prompt Injection（头号风险）、LLM02: Sensitive Information Disclosure、LLM03: Supply Chain。"
 ---
 
 # OWASP LLM Top 10 (2025) 防御手册
@@ -12,7 +13,7 @@ title: "OWASP LLM Top 10 (2025) 防御手册"
 
 ## 目录
 
-- [0. 速读：一张表看懂 10 大风险与防御重点](#0-速读一张表看懂-10-大风险与防御重点)
+- [0. 速读：一张表看懂 10 大风险与防御重点](#_0-速读-一张表看懂-10-大风险与防御重点)
 - [LLM01 Prompt Injection](#llm01-prompt-injection-头号风险)
 - [LLM02 Sensitive Information Disclosure](#llm02-sensitive-information-disclosure)
 - [LLM03 Supply Chain](#llm03-supply-chain)
@@ -23,7 +24,7 @@ title: "OWASP LLM Top 10 (2025) 防御手册"
 - [LLM08 Vector and Embedding Weaknesses](#llm08-vector-and-embedding-weaknesses)
 - [LLM09 Misinformation](#llm09-misinformation)
 - [LLM10 Unbounded Consumption](#llm10-unbounded-consumption)
-- [综合路线图：分阶段实施](#综合路线图分阶段实施)
+- [综合路线图：分阶段实施](#综合路线图-分阶段实施)
 - [30 个核心开源仓库总清单](#30-个核心开源仓库总清单)
 - [关键洞察](#关键洞察)
 

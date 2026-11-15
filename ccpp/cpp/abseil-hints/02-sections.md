@@ -1,5 +1,6 @@
 ---
 title: "Algorithmic improvements"
+description: "Algorithmic improvements：Algorithmic improvements、Better memory representation。"
 ---
 
 # Algorithmic improvements {#chapter}

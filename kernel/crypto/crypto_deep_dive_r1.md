@@ -8,7 +8,7 @@ description: "`crypto_alg` 是所有加密算法的基类结构，定义于 `/Us
 1. [Crypto Core (核心层)](#1-crypto-core-核心层)
 2. [skcipher (对称密匙密码)](#2-skcipher-对称密匙密码)
 3. [aead (认证加密)](#3-aead-认证加密)
-4. [ahash/shash (异步/同步哈希)](#4-ahashshash-异步同步哈希)
+4. [ahash/shash (异步/同步哈希)](#_4-ahash-shash-异步-同步哈希)
 5. [cryptd (异步加密封装)](#5-cryptd-异步加密封装)
 6. [Jitter RNG (抖动熵源)](#6-jitter-rng-抖动熵源随机数生成器)
 7. [知识点关联表](#7-知识点关联表)

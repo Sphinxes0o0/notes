@@ -1,5 +1,6 @@
 ---
 title: "Linux Kernel Networking Advanced Features Analysis"
+description: "Linux Kernel Networking Advanced Features Analysis：1. GRO (Generic Receive Offload)、2. GSO (Generic Segmentation Offload)、3. Packet Timestamping、4. cgroup_netprio (Priority Classification)。"
 ---
 # Linux Kernel Networking Advanced Features Analysis
 

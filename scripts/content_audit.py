@@ -22,6 +22,7 @@ Style: matches notes/.github/scripts/audit-codeblocks.js (stdlib, simple).
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -49,39 +50,46 @@ PLACEHOLDER_PATTERNS = [
 
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 WIKILINK_RE = re.compile(r"\[\[([^\]\|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
-FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---(?:\n|$)", re.DOTALL)
 
 
 def iter_markdown(root: Path):
     for p in sorted(root.rglob("*.md")):
+        if p.parent == root and p.name in {"AGENTS.md", "README.md", "TODO.md"}:
+            continue
         if any(part in SKIP_DIRS for part in p.relative_to(root).parts):
             continue
         yield p
 
 
+def without_frontmatter(text: str) -> str:
+    return re.sub(r"^---\s*\n.*?\n---(?:\n|$)", "", text, count=1, flags=re.DOTALL)
+
+
+def prose_without_code(text: str) -> str:
+    result = []
+    marker = None
+    length = 0
+    for line in without_frontmatter(text).splitlines():
+        fence = re.match(r"^ {0,3}(`{3,}|~{3,})(.*)$", line)
+        if fence:
+            chars, info = fence.groups()
+            if marker is None:
+                marker, length = chars[0], len(chars)
+                continue
+            if chars[0] == marker and len(chars) >= length and not info.strip():
+                marker = None
+                continue
+        if marker is None:
+            result.append(line)
+    return "\n".join(result)
+
+
 def count_content_lines(text: str) -> int:
-    """Count lines that contain actual prose, not blank/code/heading/quote."""
-    lines = 0
-    in_code = False
-    for line in text.splitlines():
-        if line.strip().startswith("```"):
-            in_code = not in_code
-            continue
-        if in_code:
-            continue
-        s = line.strip()
-        if not s:
-            continue
-        if s.startswith(("#", ">", "|", "-", "*", "!")):
-            continue
-        if s.startswith("[") and "](" in s:  # link-only line
-            continue
-        if re.match(r"^\d+\.\s", s):
-            continue
-        if re.match(r"^[-*]\s", s):
-            continue
-        lines += 1
-    return lines
+    """Count meaningful lines, including code, lists and tables used by technical notes."""
+    return sum(bool(re.search(r"[\w\u4e00-\u9fff]", line))
+               for line in without_frontmatter(text).splitlines()
+               if not re.match(r"^\s*(`{3,}|~{3,}|<script|</script)", line))
 
 
 def get_last_modified(path: Path, repo_root: Path) -> datetime | None:
@@ -107,6 +115,8 @@ def main(argv: list[str]) -> int:
     p.add_argument("--huge-lines", type=int, default=3000, help="lines threshold for huge")
     p.add_argument("--json", action="store_true")
     p.add_argument("--report", choices=["summary", "full"], default="summary")
+    p.add_argument("--tracked", action="store_true", help="Audit only git-tracked pages")
+    p.add_argument("--strict", action="store_true", help="Fail on unreviewed content candidates")
     args = p.parse_args(argv)
 
     if not args.root.exists():
@@ -114,7 +124,11 @@ def main(argv: list[str]) -> int:
         return 2
 
     files = list(iter_markdown(args.root))
-    print(f"Scanning {len(files)} files under {args.root}")
+    if args.tracked:
+        tracked = set(subprocess.check_output(["git", "-C", str(args.root), "-c", "core.fsmonitor=false", "-c", "core.quotePath=false", "ls-files"], text=True).splitlines())
+        files = [f for f in files if str(f.relative_to(args.root)) in tracked]
+    if not args.json:
+        print(f"Scanning {len(files)} files under {args.root}")
 
     now = datetime.now(timezone.utc)
     issues = {
@@ -164,7 +178,7 @@ def main(argv: list[str]) -> int:
         # Placeholder noise
         matches = []
         for pat, name in PLACEHOLDER_PATTERNS:
-            for m in pat.finditer(text):
+            for m in pat.finditer(prose_without_code(text)):
                 matches.append({"type": name, "match": m.group(0)[:60]})
         if matches:
             issues["placeholders"].append({
@@ -201,6 +215,18 @@ def main(argv: list[str]) -> int:
                     "months_old": round(age_months, 1),
                 })
 
+    ledger_path = args.root / ".github/content-review.json"
+    ledger = json.loads(ledger_path.read_text()) if ledger_path.exists() else {"reviews": {}}
+    pending = []
+    for kind in ["stubs", "placeholders", "no_frontmatter", "huge"]:
+        for item in issues[kind]:
+            reviewed = ledger["reviews"].get(item["file"], {})
+            digest = hashlib.sha256((args.root / item["file"]).read_bytes()).hexdigest()
+            if reviewed.get("sha256") == digest and kind in reviewed.get("categories", []):
+                item["review"] = reviewed["reason"]
+            else:
+                pending.append({"category": kind, **item})
+
     report = {
         "root": str(args.root),
         "scanned_at": now.isoformat(),
@@ -210,6 +236,7 @@ def main(argv: list[str]) -> int:
             "stale_months": args.stale_months,
             "huge_lines": args.huge_lines,
         },
+        "unreviewed": pending,
         "issues": {
             k: v for k, v in issues.items()
         },
@@ -217,7 +244,7 @@ def main(argv: list[str]) -> int:
 
     if args.json:
         print(json.dumps(report, ensure_ascii=False, indent=2, default=str))
-        return 0
+        return 1 if args.strict and pending else 0
 
     # Pretty
     print(f"\n{'=' * 70}")
@@ -255,7 +282,11 @@ def main(argv: list[str]) -> int:
                 print(f"    ... and {len(items) - 10} more")
         print()
 
-    return 0
+    print(f"  Unreviewed actionable candidates: {len(pending)}")
+    for item in pending[:20]:
+        print(f"    {item['category']}: {item['file']}")
+    print("  No-outgoing-link counts are advisory; site navigation is checked separately.")
+    return 1 if args.strict and pending else 0
 
 
 if __name__ == "__main__":

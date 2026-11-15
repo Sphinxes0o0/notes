@@ -1,5 +1,6 @@
 ---
 title: "07 · 实战 3：多 Agent 协作（Orchestrator 模式）"
+description: "07 · 实战 3：多 Agent 协作（Orchestrator 模式）：7.1 场景设计、7.2 文件结构、7.3 子 Agent 的实现模式、7.4 Orchestrator 的核心：并行调度。"
 ---
 
 # 07 · 实战 3：多 Agent 协作（Orchestrator 模式）

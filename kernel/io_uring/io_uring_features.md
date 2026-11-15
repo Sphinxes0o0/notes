@@ -14,7 +14,7 @@ description: "io_uring 是 Linux 内核的高性能异步 I/O 子系统，提供
 6. [Futex 支持](#5-futex-支持)
 7. [Timeout 操作](#6-timeout-操作)
 8. [错误处理](#7-错误处理)
-9. [总结](#总结)
+9. [总结](#_8-总结)
 
 ---
 

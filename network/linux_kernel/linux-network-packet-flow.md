@@ -1,5 +1,6 @@
 ---
 title: "Linux Network Packet Flow"
+description: "Linux Network Packet Flow：RX Path (Receive)、TX Path (Send)、Key Data Structures、Critical Tunables。"
 ---
 # Linux Network Packet Flow
 

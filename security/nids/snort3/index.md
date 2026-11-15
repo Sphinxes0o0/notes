@@ -1,5 +1,6 @@
 ---
 title: Snort3 模块分析
+description: "Snort3 模块分析：模块架构、模块文档、相关文档。"
 ---
 
 # Snort3 数据包处理流水线

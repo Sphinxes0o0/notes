@@ -7,6 +7,7 @@ tags:
     - error-handling
     - expected
     - monad
+description: "C++23 std::expected 错误处理最佳实践：1. 背景：C++ 错误处理的演进、2. std::expected<T, E> API 全景、3. 错误处理策略对比、4. 实践模式。"
 ---
 
 # C++23 `std::expected` 错误处理最佳实践

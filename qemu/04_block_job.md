@@ -1,5 +1,6 @@
 ---
 title: 块任务与实时迁移
+description: "块任务与实时迁移：BlockJob 结构、BackupBlockJob、MirrorBlockJob、CommitBlockJob。"
 ---
 
 # 块任务与实时迁移分析

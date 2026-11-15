@@ -7,6 +7,7 @@ tags:
     - mac
     - ethernet
     - networking
+description: "OSI: PHY & MAC Layers：PHY & MAC 层级结构、固件与驱动、硬件架构、参考资料。"
 ---
 
 # PHY & MAC 层架构

@@ -1,5 +1,6 @@
 ---
 title: "Linux lib 子系统文档索引"
+description: "Linux lib 子系统文档索引：文档、主要内容、关键源码位置。"
 ---
 # Linux lib 子系统文档索引
 

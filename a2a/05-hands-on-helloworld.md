@@ -1,5 +1,6 @@
 ---
 title: "05 · 实战 1：从零手写一个 Hello World A2A"
+description: "05 · 实战 1：从零手写一个 Hello World A2A：5.1 我们要实现什么、5.2 准备环境、5.3 准备文件结构、5.4 服务端拆解（01_hello_server.py）。"
 ---
 
 # 05 · 实战 1：从零手写一个 Hello World A2A
@@ -328,7 +329,7 @@ python 01_hello_client.py
 | 客户端 `GET /.well-known/agent-card.json` 即可发现能力 | 协议发现 |
 | `taskId` / `contextId` 由服务端生成 | v1.0 关键变更 |
 | JSON-RPC 错误仍返回 HTTP 200 | JSON-RPC 2.0 |
-| Task 是不可变快照，每次新对象 | [02 节数据模型](02-core-concepts.md#24-agent-cardagent-的名片--菜单) |
+| Task 是不可变快照，每次新对象 | [02 节数据模型](02-core-concepts.md#_2-3-agent-card-agent-的-名片-菜单) |
 | 多轮对话靠"客户端带回 taskId+contextId"实现 | contextId 设计 |
 
 ## 5.9 动手试试

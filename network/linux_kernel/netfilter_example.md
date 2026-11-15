@@ -1,5 +1,6 @@
 ---
 title: Netfilter 内核模块示例
+description: "Netfilter 内核模块示例：1. Netfilter Hook 框架简介、2. 完整内核模块示例、3. 代码分析、4. 编译与加载。"
 ---
 
 # Netfilter 内核模块示例

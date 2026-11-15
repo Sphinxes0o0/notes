@@ -1,5 +1,6 @@
 ---
 title: "06 · 实战 2：流式响应 + 多轮对话"
+description: "06 · 实战 2：流式响应 + 多轮对话：6.1 场景设计、6.2 文件结构、6.3 服务端架构、6.4 客户端架构。"
 ---
 
 # 06 · 实战 2：流式响应 + 多轮对话
@@ -298,9 +299,9 @@ Day 1: Reykjavik arrival, Blue LagoonDay 2: Golden Circle day tour...
 
 | 学到什么 | 对应协议细节 |
 |--|--|
-| 流式响应通过 `StreamingResponse` + async generator 实现 | [03.4 SSE 节](03-protocol-deep-dive.md#34-流式响应sse) |
+| 流式响应通过 `StreamingResponse` + async generator 实现 | [03.4 SSE 节](03-protocol-deep-dive.md#_3-4-流式响应-sse) |
 | `final: True` 是流的退出信号 | StreamResponse 协议 |
-| `input-required` 状态让流暂停而不是结束 | [02.6 Task 状态机](02-core-concepts.md#26-task一次完整的委托) |
+| `input-required` 状态让流暂停而不是结束 | [02.6 Task 状态机](02-core-concepts.md#_2-6-task-一次完整的委托) |
 | artifact 增量用 `append + lastChunk` 拼接 | 流式 artifact 设计 |
 | 多轮对话靠"客户端带回 taskId+contextId" | contextId 语义 |
 

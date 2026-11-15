@@ -1,5 +1,6 @@
 ---
 title: CPU 执行
+description: "CPU 执行：cpu_exec 流程、TranslationBlock、TCG 翻译流程、加速器接口。"
 ---
 
 # QEMU CPU 执行架构分析

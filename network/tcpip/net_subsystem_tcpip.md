@@ -1,8 +1,7 @@
 ---
 title: "Linux Kernel TCP/IP Protocol Stack Analysis"
-description: "Based on my thorough analysis of the Linux kernel TCP/IP protocol stack source code, here is the comprehensive research document:"
+description: "Linux TCP/IP 协议栈的数据结构、接收与发送路径及关键处理函数。"
 ---
-Based on my thorough analysis of the Linux kernel TCP/IP protocol stack source code, here is the comprehensive research document:
 
 # Linux Kernel TCP/IP Protocol Stack Analysis
 

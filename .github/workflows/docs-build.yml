@@ -36,7 +36,19 @@ jobs:
         run: npm run check:navigation
       - name: Check internal links
         run: npm run check:links
+      - name: Check document metadata
+        run: npm run check:frontmatter
+      - name: Check reviewed content candidates
+        run: npm run audit:content
+      - name: Check duplicate assets
+        run: npm run check:assets
       - name: Build site
         run: npm run docs:build
       - name: Check generated search index
         run: npm run check:search
+      - name: Check published pages, assets and link destinations
+        run: |
+          npm run docs:preview -- --host 127.0.0.1 --port 4173 --strictPort > /tmp/notes-preview.log 2>&1 &
+          notes_preview_pid=$!
+          trap 'kill "$notes_preview_pid" 2>/dev/null || true' EXIT
+          python3 scripts/check_built_site.py

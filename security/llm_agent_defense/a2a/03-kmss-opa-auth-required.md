@@ -1,5 +1,6 @@
 ---
 title: "车端 Agent IAM 深度设计 — 三大专题深入"
+description: "车端 Agent IAM 深度设计 — 三大专题深入：1.1 什么是 KMSS（在车端语境下）、1.2 CA 层次设计、1.3 证书签发协议 (Agent → KMSS → Certificate)、1.4 自动续期协议。"
 ---
 
 # 车端 Agent IAM 深度设计 — 三大专题深入

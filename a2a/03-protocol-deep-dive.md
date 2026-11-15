@@ -1,5 +1,6 @@
 ---
 title: "03 · A2A 协议深度"
+description: "03 · A2A 协议深度：3.1 三层架构、3.2 协议绑定（Protocol Bindings）、3.3 核心 RPC 方法清单、3.4 流式响应（SSE）。"
 ---
 
 # 03 · A2A 协议深度

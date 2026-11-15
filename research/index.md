@@ -1,5 +1,6 @@
 ---
 title: Research
+description: "Research：主题分类、与 security/ 的边界、阅读建议。"
 ---
 
 # 研究合集

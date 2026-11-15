@@ -1,5 +1,6 @@
 ---
 title: "Use caching to avoid repeated work"
+description: "Use caching to avoid repeated work的内容说明与阅读参考。"
 ---
 
 # Use caching to avoid repeated work {#chapter}

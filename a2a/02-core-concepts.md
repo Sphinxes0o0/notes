@@ -1,5 +1,6 @@
 ---
 title: "02 · A2A 核心概念"
+description: "02 · A2A 核心概念：2.1 一张表速览、2.2 Actor：三个角色、2.3 Agent Card：Agent 的\"名片 / 菜单\"、2.4 Part：消息里的最小片段。"
 ---
 
 # 02 · A2A 核心概念

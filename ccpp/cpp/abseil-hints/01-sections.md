@@ -1,5 +1,6 @@
 ---
 title: "The importance of thinking about performance"
+description: "The importance of thinking about performance：The importance of thinking about performance、Estimation、Measurement、API considerations。"
 ---
 
 # The importance of thinking about performance {#chapter}

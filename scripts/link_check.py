@@ -34,6 +34,7 @@ import os
 import re
 import sys
 import time
+from urllib.parse import unquote
 import urllib.error
 import urllib.request
 from collections import Counter
@@ -107,7 +108,7 @@ def resolve_internal(link: str, source: Path, root: Path,
       - Otherwise the link is treated as a markdown stem route
     """
     # Strip fragment / query
-    link = link.split("#", 1)[0].split("?", 1)[0]
+    link = unquote(link.split("#", 1)[0].split("?", 1)[0])
     if not link:
         return ""  # self-link fragment
 

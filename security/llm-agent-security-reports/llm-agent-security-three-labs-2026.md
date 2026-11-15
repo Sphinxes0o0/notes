@@ -1,5 +1,6 @@
 ---
 title: "LLM Agent Security — Anthropic / OpenAI / DeepMind 实践对比(2026H1)"
+description: "LLM Agent Security — Anthropic / OpenAI / DeepMind 实践对比(2026H1)：0. 三家共用的\"威胁模型\"统一框架、1. Anthropic(原文全部抓到)、2. OpenAI(原文 + 学术论文 + Codex 文档)、3. Google DeepMind(原文 FSF v1 博客 + CaMeL abstract)。"
 ---
 
 # LLM Agent Security — Anthropic / OpenAI / DeepMind 实践对比(2026H1)

@@ -1,5 +1,6 @@
 ---
 title: Middleware Notes
+description: "Middleware Notes：目录结构、学习目标、技术栈、应用场景。"
 ---
 
 # 中间件学习笔记

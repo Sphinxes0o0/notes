@@ -1,3 +1,8 @@
+---
+title: "A2A+IAM 文档 Review — 冗余分析与整合建议"
+description: "A2A+IAM 文档 Review — 冗余分析与整合建议：一、文档关系图谱、二、逐文档冗余分析、三、整合建议、四、内容总结。"
+---
+
 # A2A+IAM 文档 Review — 冗余分析与整合建议
 
 > 审查范围: `notes/security/llm_agent_defense/` (父目录 3 篇 + a2a 子目录 7 篇)

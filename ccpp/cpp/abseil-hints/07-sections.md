@@ -1,5 +1,6 @@
 ---
 title: "Avoid logging on hot code paths"
+description: "Avoid logging on hot code paths：Code size considerations。"
 ---
 
 # Avoid logging on hot code paths {#chapter}

@@ -1,5 +1,6 @@
 ---
 title: "附录 A　术语表（Glossary）"
+description: "附录 A　术语表（Glossary）的内容说明与阅读参考。"
 ---
 # 附录 A　术语表（Glossary）
 

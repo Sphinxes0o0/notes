@@ -8,7 +8,7 @@ description: "Bitmap 是 Linux 内核中用于管理位图的核心子系统，�
 
 1. [Bitmap 子系统](#1-bitmap-子系统)
 2. [Radix-Tree 子系统](#2-radix-tree-子系统)
-3. [IDR/IDA 子系统](#3-idrida-子系统)
+3. [IDR/IDA 子系统](#_3-idr-ida-子系统)
 4. [Command Line 解析器](#4-command-line-解析器)
 5. [知识点关联表格](#5-知识点关联表格)
 

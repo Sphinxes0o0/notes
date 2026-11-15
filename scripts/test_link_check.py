@@ -45,6 +45,14 @@ class LinkCheckTests(unittest.TestCase):
         self.assertEqual(report['internal']['total'], 2)
         self.assertEqual(report['internal']['broken_count'], 0)
 
+    def test_percent_encoded_paths_preserve_literal_plus(self):
+        status, report = self.check_site(
+            '[target](topic%281%29%2B%E4%B8%AD%E6%96%87.md)\n',
+            extra_files=['topic(1)+中文.md'],
+        )
+        self.assertEqual(status, 0)
+        self.assertEqual(report['internal']['broken_count'], 0)
+
 
 if __name__ == '__main__':
     unittest.main()

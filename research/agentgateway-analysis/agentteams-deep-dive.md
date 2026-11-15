@@ -1,5 +1,6 @@
 ---
 title: "AgentTeams 深度分析 · 跟 agentgateway 的交叉视图"
+description: "AgentTeams 深度分析 · 跟 agentgateway 的交叉视图：一、关键发现：AgentTeams ⊕ agentgateway 是同一生态的上下层、二、AgentTeams 顶层架构：Manager-Workers + 多 Runtime、三、K8s CRD 体系：Worker / Manager / Team / Human、四、AuthN 三层防线：SA Token → OIDC → Matrix AppService。"
 ---
 
 # AgentTeams 深度分析 · 跟 agentgateway 的交叉视图
@@ -13,18 +14,18 @@ title: "AgentTeams 深度分析 · 跟 agentgateway 的交叉视图"
 
 ## 目录
 
-- [一、关键发现：AgentTeams ⊕ agentgateway 是同一生态的上下层](#一关键发现agentteams--agentgateway-是同一生态的上下层)
-- [二、AgentTeams 顶层架构：Manager-Workers + 多 Runtime](#二agentteams-顶层架构manager-workers--多-runtime)
-- [三、K8s CRD 体系：Worker / Manager / Team / Human](#三k8s-crd-体系worker--manager--team--human)
-- [四、AuthN 三层防线：SA Token → OIDC → Matrix AppService](#四authn-三层防线sa-token--oidc--matrix-appservice)
-- [五、AuthZ 引擎：4 角色 × 6 资源 × 12 动作](#五authz-引擎4-角色--6-资源--12-动作)
-- [六、凭据安全模型：Consumer Token 模式](#六凭据安全模型consumer-token-模式)
-- [七、身份系统：4 种 IdentitySource 实现](#七身份系统4-种-identitysource-实现)
-- [八、AgentTeams ↔ agentgateway 集成点（核心交叉）](#八agentteams--agentgateway-集成点核心交叉)
-- [九、Manager 编排模式：Human-in-the-Loop by Default](#九manager-编排模式human-in-the-loop-by-default)
-- [十、对 NIO 车端 AI Agent 安全的可借鉴点](#十对-nio-车端-ai-agent-安全的可借鉴点)
-- [十一、已知风险与坑](#十一已知风险与坑)
-- [附录 A：关键源码索引](#附录-a关键源码索引)
+- [一、关键发现：AgentTeams ⊕ agentgateway 是同一生态的上下层](#一、关键发现-agentteams-⊕-agentgateway-是同一生态的上下层)
+- [二、AgentTeams 顶层架构：Manager-Workers + 多 Runtime](#二、agentteams-顶层架构-manager-workers-多-runtime)
+- [三、K8s CRD 体系：Worker / Manager / Team / Human](#三、k8s-crd-体系-worker-manager-team-human)
+- [四、AuthN 三层防线：SA Token → OIDC → Matrix AppService](#四、authn-三层防线-sa-token-→-oidc-→-matrix-appservice)
+- [五、AuthZ 引擎：4 角色 × 6 资源 × 12 动作](#五、authz-引擎-4-角色-×-6-资源-×-12-动作)
+- [六、凭据安全模型：Consumer Token 模式](#六、凭据安全模型-consumer-token-模式)
+- [七、身份系统：4 种 IdentitySource 实现](#七、身份系统-4-种-identitysource-实现)
+- [八、AgentTeams ↔ agentgateway 集成点（核心交叉）](#八、agentteams-↔-agentgateway-集成点-核心交叉)
+- [九、Manager 编排模式：Human-in-the-Loop by Default](#九、manager-编排模式-human-in-the-loop-by-default)
+- [十、对 NIO 车端 AI Agent 安全的可借鉴点](#十、对-nio-车端-ai-agent-安全的可借鉴点)
+- [十一、已知风险与坑](#十一、已知风险与坑)
+- [附录 A：关键源码索引](#附录-a-关键源码索引)
 
 ---
 

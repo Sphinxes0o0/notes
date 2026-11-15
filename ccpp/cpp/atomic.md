@@ -5,6 +5,7 @@ tags:
     - cpp
     - atomic
     - concurrency
+description: "C++ 原子操作与内存序：1. 原子操作基础、2. 内存序 (Memory Order)、3. 各内存序的应用场景、4. 原子操作实战。"
 ---
 
 ## 1. 原子操作基础

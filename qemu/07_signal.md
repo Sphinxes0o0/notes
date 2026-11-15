@@ -1,5 +1,6 @@
 ---
 title: 信号处理
+description: "信号处理：信号转换表、Host 信号处理程序、Siginfo 转换、信号帧构建。"
 ---
 
 # 信号处理分析

@@ -1,5 +1,6 @@
 ---
 title: 进程控制块 (PCB)
+description: "进程控制块 (PCB)：PCB 概述、PCB 包含的信息、Linux 中的 PCB、进程状态转换。"
 ---
 
 # 进程控制块 (PCB)

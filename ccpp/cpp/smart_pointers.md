@@ -4,6 +4,7 @@ date: 2024-01-15 20:30:00
 tags:
     - cpp
     - smart-pointer
+description: "C++ 智能指针：1. RAII 原则、2. unique_ptr、3. shared_ptr、4. weak_ptr。"
 ---
 
 ## 1. RAII 原则

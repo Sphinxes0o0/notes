@@ -5,6 +5,7 @@ tags:
     - linux
     - c
     - elf
+description: "elf简介：回顾、格式简介。"
 ---
 
 ## 回顾

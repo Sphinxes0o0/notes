@@ -4,6 +4,7 @@ date: 2024-01-15 21:00:00
 tags:
     - cpp
     - raii
+description: "RAII 资源获取即初始化：1. RAII 原理、2. RAII 示例、3. RAII 的优势、4. RAII 在 STL 中的应用。"
 ---
 
 ## 1. RAII 原理

@@ -1,5 +1,6 @@
 ---
 title: Agent-SafetyBench 调研报告
+description: "Agent-SafetyBench 调研报告：1. 它是什么（What）、2. 它做什么（What it does）、3. 它怎么被你部署的 model 接入（How to plug in our model）、4. 能不能给我们的 security model service 用 — 关键区分。"
 ---
 
 # Agent-SafetyBench 调研报告

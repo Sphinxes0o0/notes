@@ -1,5 +1,6 @@
 ---
 title: A2A 协议车载部署与安全设计
+description: "A2A 协议车载部署与安全设计：1. 协议概览、2. 车内部署拓扑、3. KMSS（Key Management SubSystem）、4. TEE 上的 A2A Runtime。"
 ---
 
 # A2A 协议车载部署与安全设计

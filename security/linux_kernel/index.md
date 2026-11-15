@@ -1,5 +1,6 @@
 ---
 title: "Linux Security 子系统文档索引"
+description: "Linux Security 子系统文档索引：1. LSM 框架 (lsm_framework.md)、2. SELinux (selinux_detailed.md)、3. AppArmor (apparmor_detailed.md)、4. Landlock (landlock_detailed.md)。"
 ---
 # Linux Security 子系统文档索引
 

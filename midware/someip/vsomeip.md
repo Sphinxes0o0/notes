@@ -580,7 +580,6 @@ private:
 ```
 
 
-```
 ### Plugin 系统
 
 #### Plugin 管理
@@ -972,7 +971,7 @@ tp_split_messages_t tp::tp_split_message(const std::uint8_t * const _data, std::
 
 
 
->TODO
+分片接口以 `_size` 指定待分片载荷长度。阅读实现时，需核对各片的载荷边界、偏移量及最后一片标记；重组路径见同目录说明中的 TP 相关组件。
 ---
 ### __routing__
 
