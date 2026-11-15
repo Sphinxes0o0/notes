@@ -1,2 +1,1 @@
-# 596+ markdown 文件的 VitePress 构建需要更大 V8 堆,否则在 frontmatter 注入后会 OOM
-NODE_OPTIONS="--max-old-space-size=8192" npm run docs:build && node .github/scripts/audit-codeblocks.js
+npm run check:codeblocks && npm run check:navigation && npm run check:links

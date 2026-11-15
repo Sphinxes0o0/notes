@@ -1,3 +1,7 @@
+---
+title: "METR 前沿 AI 风险报告(2026 年 2–3 月) — 深度研究"
+---
+
 # METR 前沿 AI 风险报告(2026 年 2–3 月) — 深度研究
 
 > 来源: https://metr.org/zh-hans/blog/2026-05-19-frontier-risk-report/  

@@ -1,0 +1,42 @@
+name: Build Documentation
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: npm ci
+      - name: Check link checker regressions
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Check search rendering regressions
+        run: node --test .github/scripts/test-*.mjs
+      - name: Check navigation
+        run: npm run check:navigation
+      - name: Check internal links
+        run: npm run check:links
+      - name: Build site
+        run: npm run docs:build
+      - name: Check generated search index
+        run: npm run check:search

@@ -1,3 +1,7 @@
+---
+title: "A2A (Agent-to-Agent) 协议与车端 IAM 集成"
+---
+
 # A2A (Agent-to-Agent) 协议与车端 IAM 集成
 
 > 本目录是 `security/llm_agent_defense/` 的子目录，聚焦 **A2A 协议在车端的应用**，与父目录的 IAM 架构形成互补。

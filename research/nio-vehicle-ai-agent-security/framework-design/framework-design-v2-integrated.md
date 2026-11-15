@@ -1,3 +1,7 @@
+---
+title: "NIO Vehicle AI Agent Security Framework — Integrated Design Spec v2.0"
+---
+
 # NIO Vehicle AI Agent Security Framework — Integrated Design Spec v2.0
 
 > **整合自**：

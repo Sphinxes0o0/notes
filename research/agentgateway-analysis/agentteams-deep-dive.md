@@ -1,3 +1,7 @@
+---
+title: "AgentTeams 深度分析 · 跟 agentgateway 的交叉视图"
+---
+
 # AgentTeams 深度分析 · 跟 agentgateway 的交叉视图
 
 > **仓库**：[agentscope-ai/AgentTeams](https://github.com/agentscope-ai/AgentTeams)（克隆于 2026-08-05）

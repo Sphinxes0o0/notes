@@ -1,3 +1,7 @@
+---
+title: "车载 IAM + LLM Guard 综合白皮书 v1.0"
+---
+
 # 车载 IAM + LLM Guard 综合白皮书 v1.0
 
 > **版本**: v1.0

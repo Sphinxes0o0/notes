@@ -1,3 +1,7 @@
+---
+title: "Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks"
+---
+
 # Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks
 
 > arXiv: 2601.04603  

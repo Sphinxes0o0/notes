@@ -30,7 +30,7 @@ title: Network Notes
 | 综合（中 · 概念）| [`linux_netfilter/netfilter_subsystem.md`](./linux_netfilter/netfilter_subsystem.md) | 中文综述：Hook 点 / Verdict / 协议族 / 数据包处理流程 | 入门 / 教学 |
 | 综合（英 · 源码）| [`linux_netfilter/net_subsystem_netfilter.md`](./linux_netfilter/net_subsystem_netfilter.md) | 英文源码分析：含 `core.c` 行号 / 结构体定义 / hook 注册函数 | 想跳源码 |
 | 源码概述 | [`linux_kernel/netfilter.md`](./linux_kernel/netfilter.md) | 在 linux_kernel/ 下的源码概述（292 行）| 看快速框架 |
-| 单一组件 | [`core/net_subsystem_conntrack.md`](./core/net_subsystem_conntrack.md) | Conntrack（连接跟踪）单一组件深入（817 行）| 钻 conntrack 实现 |
+| 单一组件 | [`linux_kernel/nf_conntrack_subsystem.md`](./linux_kernel/nf_conntrack_subsystem.md) | Conntrack（连接跟踪）单一组件深入（817 行）| 钻 conntrack 实现 |
 
 > 建议阅读顺序：**概念** → **源码概述** → **conntrack 单一组件**，需要时再跳 `core.c` 行号。
 
@@ -59,19 +59,19 @@ title: Network Notes
 
 | 层次 | 位置 | 视角 |
 |---|---|---|
-| 子系统概述 | [`core/net_subsystem_socket.md`](./core/net_subsystem_socket.md) | BSD Socket Layer Analysis（英，1606 行） |
+| 子系统概述 | [`linux_kernel/socket_bsd_layer.md`](./linux_kernel/socket_bsd_layer.md) | BSD Socket Layer Analysis（英，1606 行） |
 | 概念 | [`linux_kernel/socket.md`](./linux_kernel/socket.md) | Socket 层 - 通用套接字层（中，510 行） |
 | 系统调用 | [`linux_kernel/socket_syscall.md`](./linux_kernel/socket_syscall.md) | Socket 系统调用（279 行） |
 | 源码分析 | [`linux_kernel/net_socket_core.md`](./linux_kernel/net_socket_core.md) | Socket Core 源码分析（780 行） |
 | 特定类型 | [`linux_kernel/unix_socket.md`](./linux_kernel/unix_socket.md) | Unix Domain Socket（268 行） |
 
-> `core/net_subsystem_socket.md` 与 `linux_kernel/net_socket_core.md` 内容有部分重叠但视角不同（英 vs 中 / 侧重不同结构体），不需要合并。
+> `linux_kernel/socket_bsd_layer.md` 与 `linux_kernel/net_socket_core.md` 内容有部分重叠但视角不同（英 vs 中 / 侧重不同结构体），不需要合并。
 
 ### 路由主题（6 个文件）
 
 | 层次 | 位置 | 视角 |
 |---|---|---|
-| 子系统概述 | [`core/net_subsystem_routing.md`](./core/net_subsystem_routing.md) | Packet Routing + Neighbor（英，976 行） |
+| 子系统概述 | [`linux_kernel/net_routing_subsystem.md`](./linux_kernel/net_routing_subsystem.md) | Packet Routing + Neighbor（英，976 行） |
 | 源码分析 | [`linux_kernel/net_routing.md`](./linux_kernel/net_routing.md) | IPv4 路由子系统分析（中，1092 行） |
 | 数据结构 | [`linux_kernel/routing.md`](./linux_kernel/routing.md) | dst_entry 和路由缓存（402 行） |
 | 概述 | [`linux_kernel/ipv4_routing.md`](./linux_kernel/ipv4_routing.md) | IPv4 路由子系统（191 行） |

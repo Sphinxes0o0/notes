@@ -6,6 +6,8 @@ title: Snort3 模块分析
 
 本节深入分析 Snort3 网络入侵检测系统的数据包处理流水线模块。
 
+需要按架构与附录阅读时，参见 [Snort 3 源码架构分析分篇目录](../snort3_architecture_analysis)。
+
 ## 模块架构
 
 Snort3 数据包处理流程:
