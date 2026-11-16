@@ -20,3 +20,7 @@ description: "Tools Notes：目录结构。"
 
 ### AI / NPU 工具链
 - [Pulsar2 与 M57 芯片能力调研](./pulsar2_m57_chip.md) - 爱芯元智 Pulsar2 编译器及 M57 芯片 NPU/LLM 能力调研
+
+### 知识管理
+
+- [Pyramid 技术知识库](./pyramid.md) - 概念页、来源摘要、综合分析与 Obsidian 阅读入口

@@ -1,0 +1,71 @@
+---
+type: source
+source-type: web
+title: "Tip of the Week #135: Test the Contract, not the Implementation"
+author: "James Dennett"
+date: 2012
+url: https://abseil.io/tips/135
+summary: "abseil C++ Tips of the Week #135: Test the Contract, not the Implementation."
+tags: [cpp, abseil, totw, performance, idioms]
+created: 2026-06-10
+source-md5: 1eded0f2dee5a2f1beb99e192370df62
+---
+
+> 原文：<https://abseil.io/tips/135> · 作者：James Dennett · 发布：2012 · 内容许可：CC BY 4.0（abseil.io docs）
+>
+> 完整原文转录（脚注 [Tip \#NN](/tips/NN) 链接保留，邮件保护链接为 CloudFlare 默认转码无法还原）。
+
+# Tip of the Week \#135: Test the Contract, not the Implementation
+
+\
+\
+
+Originally posted as TotW \#135 on June 5, 2017
+
+*By [James Dennett](/cdn-cgi/l/email-protection#9af0fefff4f4ffeeeedafdf5f5fdf6ffb4f9f5f7)*
+
+Updated 2020-04-06
+
+Quicklink: [abseil.io/tips/135](https://abseil.io/tips/135)
+
+*“If you have one true friend you have more than your share.” — Thomas Fuller*
+
+C++ has a somewhat elaborate access control mechanism using `public`, `protected`, `private`, and `friend`. Test code has its own rules of etiquette for using those facilities, and GoogleTest augments them with its own `FRIEND_TEST` macro. Use of `FRIEND_TEST` should be a last resort, not a preferred choice.
+
+## Test the Contract
+
+We write tests to find bugs in the implementation of a component’s contract, or to give us sufficient confidence that there are no such bugs. When using test-driven development (TDD), we also write tests to help us to design that contract. Tests that depend on unspecified aspects of a component are brittle, and prone to reporting failures even when the production code is working correctly.
+
+Prefer to test via the public interface of a component. More generally, tests should verify the contract of a component and, just as with any other client, should not make assumptions beyond what’s guaranteed.
+
+## Techniques for Providing Access from Tests
+
+A number of techniques can be used to allow test code the access needed to do its job. Some are enumerated here, roughly arranged from best to worst.
+
+### Augmenting the Public API for Tests
+
+Sometimes it’s hard to get sufficient coverage when testing via a minimal interface. If your component is implementing a very narrow interface specified by a base class (e.g., one with only a `ProcessItem` virtual function) and it’s impractical to gain sufficient confidence from a test that uses only that interface, consider creating a new, testable component containing the implementation details. Then the class containing the virtual function can be so simple that it needs only minimal testing. BUILD visibility can be used to restrict use of your implementation class (if needed and if your build system supports it).
+
+If a test depends on just one or two private functions, consider making those functions part of the public interface. This isn’t so bad: you’ll need them to have a clearly documented interface anyway, and other clients (not just the test) might find them useful. If, after consideration, you decide that a function really is only for tests, then it should be documented as such, and maybe named with a `ForTesting` suffix.
+
+### Using Peers to Avoid Exposing Implementation
+
+If the test still needs to have access to private implementation details, create a *test peer* (sometimes called a *test spouse*). A test peer is a friend class of the class under test, often defined in the `_test.cc` file (though some prefer to define it in the same file as the class that befriends it), and used to provide controlled access to the class under test to the test code. The test peer won’t be able to live in an anonymous namespace as its exact name needs to match the `friend` declaration, but the rest of the test code can be in an anonymous namespace as usual. The name of a test peer class typically ends in `Peer`.
+
+### (Avoid) Using `FRIEND_TEST`
+
+While common in older code, `FRIEND_TEST` should not be used in new code. It introduces reverse coupling, making the production header file depend on details of the associated unit test. It forces the tests to move out of the anonymous namespace. Every `FRIEND_TEST` grants a test function unrestricted access to the class under test; in long test functions it can be hard to see where the test modifies the state of the class under test. It requires use of an unusual header file provided by [GoogleTest](https://github.com/google/googletest) for inclusion in production code, whereas almost all of GoogleTest is intended only for use in tests. And finally it scales badly, requiring new `FRIEND_TEST` uses to be added to the production header when new tests are added. In practice this often results in header files having lengthy blocks of `FRIEND_TEST` lines.
+
+### (Don’t) Make the Entire Test Fixture a `friend`
+
+Making the entire test fixture a friend of the class under test (with `friend class MyClassTest;`) is strongly discouraged. Compared to the options above, it allows the entire test fixture (but not the tests themselves, which are sub-classes of the fixture) unrestricted and unannotated access to every member of the class under test, meaning that readers of the test code have no visual clue of when the test is breaking encapsulation. It also forces the test fixture to be outside of the anonymous namespace. Compared to a friend fixture, a test peer makes the code much more self-documenting for readers, and costs just a little extra work for code authors.
+
+## Summary of Recommendations
+
+- Prefer to test the client interface of a component, and keep tests independent of private implementation details.
+- Factor out a testable, possibly test-only subcomponent if the client interface isn’t sufficient to thoroughly exercise the unit under test.
+- Sometimes it’s reasonable to add to the public interface in order to make a component testable.
+- If necessary, access private members from tests using a *test peer* rather than using `FRIEND_TEST`.
+- Do not befriend an entire test fixture. Use one of the more targeted approaches described above.
+
+

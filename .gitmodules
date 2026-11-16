@@ -1,0 +1,6 @@
+[submodule "pyramid-design-pattern"]
+	path = wiki/pyramid/raw/github/design-pattern
+	url = https://github.com/liuzengh/design-pattern.git
+[submodule "pyramid-modern-cpp-features"]
+	path = wiki/pyramid/raw/github/modern-cpp-features
+	url = https://github.com/AnthonyCalandra/modern-cpp-features.git

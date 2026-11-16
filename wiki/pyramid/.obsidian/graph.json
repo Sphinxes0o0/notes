@@ -1,0 +1,22 @@
+{
+  "collapse-filter": false,
+  "search": "-path:entities/exercise-science",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": 0.8,
+  "nodeSizeMultiplier": 1.88411892361111,
+  "lineSizeMultiplier": 1.1240234375,
+  "collapse-forces": false,
+  "centerStrength": 0.333116319444444,
+  "repelStrength": 12.5789930555556,
+  "linkStrength": 0.236762152777778,
+  "linkDistance": 500,
+  "scale": 0.12274833082864219,
+  "close": true
+}

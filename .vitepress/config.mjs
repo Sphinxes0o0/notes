@@ -200,6 +200,7 @@ export default defineConfig({
       { text: '网络/协议', link: '/network/' },
       { text: '安全', link: '/security/' },
       { text: '工具', link: '/tools/' },
+      { text: '知识库', link: '/tools/pyramid' },
       { text: 'AI 编码 Agent', link: '/coding_agent/' },
       { text: '研究', link: '/research/' },
       {

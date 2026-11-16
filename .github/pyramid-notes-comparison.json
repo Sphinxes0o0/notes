@@ -1,0 +1,4076 @@
+{
+  "notes_base": "5116b869ad076d9e8591def5e67b99e2ebf73700",
+  "pyramid_source": "dbbf49e925aca5cdb5c97574d00919af119fba60",
+  "summary": {
+    "different-at-same-path": 274,
+    "snapshot-only": 238,
+    "byte-identical": 124
+  },
+  "decision": "Preserve immutable source snapshots and current Notes files. Matching hashes do not imply matching provenance; differing versions are not overwritten.",
+  "files": [
+    {
+      "source": "raw/notes/README.md",
+      "notes_path": "README.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/TODO.md",
+      "notes_path": "TODO.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/c/c.md",
+      "notes_path": "ccpp/c/c.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/c/memory.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/c/memory_management.md",
+      "notes_path": "ccpp/c/memory_management.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/common_bit_operations.md",
+      "notes_path": "ccpp/common_bit_operations.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/compilation_process.md",
+      "notes_path": "ccpp/compilation_process.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/atomic.md",
+      "notes_path": "ccpp/cpp/atomic.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/array.md",
+      "notes_path": "ccpp/cpp/containers/array.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/deque.md",
+      "notes_path": "ccpp/cpp/containers/deque.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/list.md",
+      "notes_path": "ccpp/cpp/containers/list.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/map.md",
+      "notes_path": "ccpp/cpp/containers/map.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/overview.md",
+      "notes_path": "ccpp/cpp/containers/overview.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/stack.md",
+      "notes_path": "ccpp/cpp/containers/stack.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/unordered_map.md",
+      "notes_path": "ccpp/cpp/containers/unordered_map.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/containers/vector.md",
+      "notes_path": "ccpp/cpp/containers/vector.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/copy_semantics.md",
+      "notes_path": "ccpp/cpp/copy_semantics.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/cpp.md",
+      "notes_path": "ccpp/cpp/cpp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/cpp_modern.md",
+      "notes_path": "ccpp/cpp/cpp_modern.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/memory_pool.md",
+      "notes_path": "ccpp/cpp/memory_pool.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/object_creation_heap_or_stack.md",
+      "notes_path": "ccpp/cpp/object_creation_heap_or_stack.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/raii.md",
+      "notes_path": "ccpp/cpp/raii.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/smart_pointers.md",
+      "notes_path": "ccpp/cpp/smart_pointers.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/type_casting.md",
+      "notes_path": "ccpp/cpp/type_casting.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/cpp/virtual_functions.md",
+      "notes_path": "ccpp/cpp/virtual_functions.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/embedded_c.xmind",
+      "notes_path": "ccpp/embedded_c.xmind",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/embedded_c.xmind"
+      ]
+    },
+    {
+      "source": "raw/notes/ccpp/embedded_cpp.xmind",
+      "notes_path": "ccpp/embedded_cpp.xmind",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/embedded_cpp.xmind"
+      ]
+    },
+    {
+      "source": "raw/notes/ccpp/index.md",
+      "notes_path": "ccpp/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/ccpp/serialization.md",
+      "notes_path": "ccpp/serialization.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/01_复杂度_如何衡量程序运行的效率.md",
+      "notes_path": "datastructure/01_复杂度_如何衡量程序运行的效率.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/02_数据结构_将昂贵的时间复杂度转换成廉价的空间复杂度.md",
+      "notes_path": "datastructure/02_数据结构_将昂贵的时间复杂度转换成廉价的空间复杂度.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/03_增删查_掌握数据处理的基本操作_以不变应万变.md",
+      "notes_path": "datastructure/03_增删查_掌握数据处理的基本操作_以不变应万变.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/04_如何完成线性表结构下的增删查.md",
+      "notes_path": "datastructure/04_如何完成线性表结构下的增删查.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/05_栈_后进先出的线性表_如何实现增删查.md",
+      "notes_path": "datastructure/05_栈_后进先出的线性表_如何实现增删查.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/06_队列_先进先出的线性表_如何实现增删查.md",
+      "notes_path": "datastructure/06_队列_先进先出的线性表_如何实现增删查.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/07_数组_如何实现基于索引的查找.md",
+      "notes_path": "datastructure/07_数组_如何实现基于索引的查找.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/08_字符串_如何正确回答面试中高频考察的字符串匹配算法.md",
+      "notes_path": "datastructure/08_字符串_如何正确回答面试中高频考察的字符串匹配算法.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/09_树和二叉树_分支关系与层次结构下_如何有效实现增删查.md",
+      "notes_path": "datastructure/09_树和二叉树_分支关系与层次结构下_如何有效实现增删查.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/10_哈希表_如何利用好高效率查找的利器.md",
+      "notes_path": "datastructure/10_哈希表_如何利用好高效率查找的利器.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/11_递归_如何利用递归求解汉诺塔问题.md",
+      "notes_path": "datastructure/11_递归_如何利用递归求解汉诺塔问题.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/12_分治_如何利用分治法完成数据查找.md",
+      "notes_path": "datastructure/12_分治_如何利用分治法完成数据查找.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/13_排序_经典排序算法原理解析与优劣对比.md",
+      "notes_path": "datastructure/13_排序_经典排序算法原理解析与优劣对比.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/14_动态规划_如何通过最优子结构_完成复杂问题求解.md",
+      "notes_path": "datastructure/14_动态规划_如何通过最优子结构_完成复杂问题求解.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/15_定位问题才能更好地解决问题_开发前的复杂度分析与技术选型.md",
+      "notes_path": "datastructure/15_定位问题才能更好地解决问题_开发前的复杂度分析与技术选型.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/16_真题案例1_算法思维训练.md",
+      "notes_path": "datastructure/16_真题案例1_算法思维训练.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/17_真题案例2_数据结构训练.md",
+      "notes_path": "datastructure/17_真题案例2_数据结构训练.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/18_真题案例3_力扣真题训练.md",
+      "notes_path": "datastructure/18_真题案例3_力扣真题训练.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/19_真题案例4_大厂真题实战演练.md",
+      "notes_path": "datastructure/19_真题案例4_大厂真题实战演练.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/20_代码之外_技术面试中你应该具备哪些软素质.md",
+      "notes_path": "datastructure/20_代码之外_技术面试中你应该具备哪些软素质.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/21_面试中如何建立全局观_快速完成优质的手写代码.md",
+      "notes_path": "datastructure/21_面试中如何建立全局观_快速完成优质的手写代码.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/array_linkedlist.md",
+      "notes_path": "datastructure/array_linkedlist.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/cpp_linked_list.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/index.md",
+      "notes_path": "datastructure/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/加餐_课后练习题详解.md",
+      "notes_path": "datastructure/加餐_课后练习题详解.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/datastructure/开篇词_数据结构与算法_应该这样学.md",
+      "notes_path": "datastructure/开篇词_数据结构与算法_应该这样学.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/13-反转原则如何减少代码间的相互影响.md",
+      "notes_path": "design_patterns/13-反转原则如何减少代码间的相互影响.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/14-惯例原则如何提升编程中的沟通效率.md",
+      "notes_path": "design_patterns/14-惯例原则如何提升编程中的沟通效率.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/15-分离原则如何将复杂问题拆分成小问题.md",
+      "notes_path": "design_patterns/15-分离原则如何将复杂问题拆分成小问题.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/16-契约原则如何做好-API-接口设计.md",
+      "notes_path": "design_patterns/16-契约原则如何做好-API-接口设计.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/17-单例模式如何有效进行程序初始化.md",
+      "notes_path": "design_patterns/17-单例模式如何有效进行程序初始化.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/18-建造者模式如何创建不同形式的复杂对象.md",
+      "notes_path": "design_patterns/18-建造者模式如何创建不同形式的复杂对象.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/19-抽象工厂模式如何统一不同代码风格下的代码级别.md",
+      "notes_path": "design_patterns/19-抽象工厂模式如何统一不同代码风格下的代码级别.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/20-工厂方法模式如何解决生成对象时的不确定性.md",
+      "notes_path": "design_patterns/20-工厂方法模式如何解决生成对象时的不确定性.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/21-原型模式什么场景下需要用到对象拷贝.md",
+      "notes_path": "design_patterns/21-原型模式什么场景下需要用到对象拷贝.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/22-适配器模式如何处理不同-API-接口的兼容性.md",
+      "notes_path": "design_patterns/22-适配器模式如何处理不同-API-接口的兼容性.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/23-桥接模式如何实现抽象协议与不同实现的绑定.md",
+      "notes_path": "design_patterns/23-桥接模式如何实现抽象协议与不同实现的绑定.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/24-组合模式如何用树形结构处理对象之间的复杂关系.md",
+      "notes_path": "design_patterns/24-组合模式如何用树形结构处理对象之间的复杂关系.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/25-装饰模式如何在基础组件上扩展新功能.md",
+      "notes_path": "design_patterns/25-装饰模式如何在基础组件上扩展新功能.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/26-门面模式如何实现-API-网关的高可用性.md",
+      "notes_path": "design_patterns/26-门面模式如何实现-API-网关的高可用性.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/27-享元模式如何通过共享对象减少内存加载消耗.md",
+      "notes_path": "design_patterns/27-享元模式如何通过共享对象减少内存加载消耗.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/28-代理模式如何控制和管理对象的访问.md",
+      "notes_path": "design_patterns/28-代理模式如何控制和管理对象的访问.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/29-访问者模式如何实现对象级别的矩阵结构.md",
+      "notes_path": "design_patterns/29-访问者模式如何实现对象级别的矩阵结构.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/30-模板方法模式如何实现同一模板框架下的算法扩展.md",
+      "notes_path": "design_patterns/30-模板方法模式如何实现同一模板框架下的算法扩展.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/31-策略模式如何解决不同活动策略的营销推荐场景.md",
+      "notes_path": "design_patterns/31-策略模式如何解决不同活动策略的营销推荐场景.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/32-状态模式如何通过有限状态机监控功能的“状态变化”.md",
+      "notes_path": "design_patterns/32-状态模式如何通过有限状态机监控功能的“状态变化”.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/33-观察者模式如何发送消息变化的通知.md",
+      "notes_path": "design_patterns/33-观察者模式如何发送消息变化的通知.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/34-备忘录模式如何在聊天会话中记录历史消息.md",
+      "notes_path": "design_patterns/34-备忘录模式如何在聊天会话中记录历史消息.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/35-中介者模式如何通过中间层来解决耦合过多的问题.md",
+      "notes_path": "design_patterns/35-中介者模式如何通过中间层来解决耦合过多的问题.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/36-迭代器模式如何实现遍历数据时的职责分离.md",
+      "notes_path": "design_patterns/36-迭代器模式如何实现遍历数据时的职责分离.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/37-解释器模式如何实现一个自定义配置规则功能.md",
+      "notes_path": "design_patterns/37-解释器模式如何实现一个自定义配置规则功能.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/38-命令模式如何在一次请求中封装多个参数.md",
+      "notes_path": "design_patterns/38-命令模式如何在一次请求中封装多个参数.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/39-责任链模式如何解决审核、过滤场景问题.md",
+      "notes_path": "design_patterns/39-责任链模式如何解决审核、过滤场景问题.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/index.md",
+      "notes_path": "design_patterns/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/design_patterns/solid-principles-relation.md",
+      "notes_path": "design_patterns/solid-principles-relation.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/index.md",
+      "notes_path": "index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/01_面试准备方法论.md",
+      "notes_path": "interview/01_面试准备方法论.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/02_问题解决模式.md",
+      "notes_path": "interview/02_问题解决模式.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "interview/02_问题解决模式.md"
+      ]
+    },
+    {
+      "source": "raw/notes/interview/03_系统设计基础.md",
+      "notes_path": "interview/03_系统设计基础.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/04_NP完全性与近似算法.md",
+      "notes_path": "interview/04_NP完全性与近似算法.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/05_位操作技巧.md",
+      "notes_path": "interview/05_位操作技巧.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/06_进阶数据结构.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/07_推荐资源.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/credits.md",
+      "notes_path": "interview/credits.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "interview/credits.md"
+      ]
+    },
+    {
+      "source": "raw/notes/interview/index.md",
+      "notes_path": "interview/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/interview/基础数据结构与排序.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/index.md",
+      "notes_path": "kernel/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/block_core.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/block_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/block_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/block_genhd.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/block_mq.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/block_request.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/block_scheduler.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/block/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/crypto/linux_kernel/crypto_async.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/crypto/linux_kernel/crypto_core.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/crypto/linux_kernel/crypto_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/crypto/linux_kernel/crypto_infra.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/crypto/linux_kernel/crypto_skcipher.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/crypto/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/io_uring/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/io_uring/linux_kernel/io_uring_core.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/io_uring/linux_kernel/io_uring_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/io_uring/linux_kernel/io_uring_features.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/io_uring/linux_kernel/io_uring_memory.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/io_uring/linux_kernel/io_uring_operations.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/ipc/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/ipc/linux_kernel/ipc_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/ipc/linux_kernel/ipc_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/locking/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/locking/linux_kernel/locking_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/locking/linux_kernel/locking_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_allocator.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_core_structs.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_memory_cgroup.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_memory_failure.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_memory_hotplug.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_mmap.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_oom.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_page_fault.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_page_migration.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_page_reclaim.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_swap.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/mm/linux_kernel/mm_vma_merge_split.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/net/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/net/linux_kernel/net_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/net/linux_kernel/net_netfilter.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/net/linux_kernel/net_routing.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/net/linux_kernel/net_skbuff.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/net/linux_kernel/net_socket_core.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/net/linux_kernel/net_tcp_ip.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/netfilter/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/netfilter/linux_kernel/netfilter_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/netfilter/linux_kernel/netfilter_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/netfilter/linux_kernel/netfilter_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/rcu/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/rcu/linux_kernel/rcu_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/rcu/linux_kernel/rcu_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_cfs.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_class.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_context_switch.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_core.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_load_balance.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sched/linux_kernel/sched_rt.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sound/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sound/linux_kernel/sound_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sound/linux_kernel/sound_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/sound/linux_kernel/sound_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/time/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/time/linux_kernel/time_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/time/linux_kernel/time_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/buffer_cache.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/dcache.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/exec_binfmt.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/file_operations.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/inode.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/mount_namespace.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/path_lookup.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/superblock.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/vfs_api.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/vfs_core_structs.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/vfs_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/vfs/linux_kernel/vfs_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/kvm_core.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/kvm_interrupt.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/kvm_memory.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/kvm_mmu.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/kvm_vcpu.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/virt_deep_dive_r1.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/virt_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/virtio_device_drivers.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/virtio_drivers.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/virtio_framework.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/virtio_ring.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/kernel/subsystems/virt/linux_kernel/virtio_transport.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/midware/doip.md",
+      "notes_path": "midware/doip.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/midware/index.md",
+      "notes_path": "midware/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/midware/someip/security.md",
+      "notes_path": "midware/someip/security.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/midware/someip/vsomeip.md",
+      "notes_path": "midware/someip/vsomeip.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/01_漫游互联网_什么是蜂窝移动网络.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/02_传输层协议_TCP_TCP_为什么握手是_3_次_挥手是_4_次.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/03_TCP_的封包格式_TCP_为什么要粘包和拆包.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/04_TCP_的稳定性_滑动窗口和流速控制是怎么回事.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/05_UDP_协议_TCP_协议和_UDP_协议的优势和劣势.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/06_IPv4_协议_路由和寻址的区别是什么.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/07_IPv6_协议_Tunnel_技术是什么.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/08_局域网_NAT_是如何工作的.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/09_TCP_实战_如何进行_TCP_抓包调试.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/10_Socket_编程_epoll_为什么用红黑树.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/11_流和缓冲区_缓冲区的_flip_是怎么回事.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/13_面试中如何回答“怎样实现_RPC_框架”的问题.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/14_DNS_域名解析系统_CNAME_记录的作用是.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/15_内容分发网络_请简述_CDN_回源如何工作.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/16_HTTP_协议面试通关_强制缓存和协商缓存的区别是.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/17_流媒体技术_直播网站是如何实现的.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/18_爬虫和反爬虫_如何防止黑产爬取我的数据.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/19_网络安全概述_对称_非对称加密的区别是.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/20_信任链_为什么可以相信一个_HTTPS_网站.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/21_攻防手段介绍_如何抵御_SYN_拒绝攻击.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/core/net_subsystem_conntrack.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/core/net_subsystem_routing.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/core/net_subsystem_socket.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/index.md",
+      "notes_path": "network/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/af_packet.md",
+      "notes_path": "network/linux_kernel/af_packet.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/bluetooth.md",
+      "notes_path": "network/linux_kernel/bluetooth.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/bpf_filter.md",
+      "notes_path": "network/linux_kernel/bpf_filter.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/bpf_xdp.md",
+      "notes_path": "network/linux_kernel/bpf_xdp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/bridge.md",
+      "notes_path": "network/linux_kernel/bridge.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/dsa.md",
+      "notes_path": "network/linux_kernel/dsa.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/dst_entry.md",
+      "notes_path": "network/linux_kernel/dst_entry.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/flow_dissector.md",
+      "notes_path": "network/linux_kernel/flow_dissector.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/gro.md",
+      "notes_path": "network/linux_kernel/gro.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/index.md",
+      "notes_path": "network/linux_kernel/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv4_core.md",
+      "notes_path": "network/linux_kernel/ipv4_core.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv4_fib.md",
+      "notes_path": "network/linux_kernel/ipv4_fib.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv4_routing.md",
+      "notes_path": "network/linux_kernel/ipv4_routing.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv4_tcp.md",
+      "notes_path": "network/linux_kernel/ipv4_tcp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv4_udp.md",
+      "notes_path": "network/linux_kernel/ipv4_udp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv6_addrconf.md",
+      "notes_path": "network/linux_kernel/ipv6_addrconf.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv6_core.md",
+      "notes_path": "network/linux_kernel/ipv6_core.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv6_ndisc.md",
+      "notes_path": "network/linux_kernel/ipv6_ndisc.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv6_routing.md",
+      "notes_path": "network/linux_kernel/ipv6_routing.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/ipv6_tcp_udp.md",
+      "notes_path": "network/linux_kernel/ipv6_tcp_udp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/mac80211.md",
+      "notes_path": "network/linux_kernel/mac80211.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/napi.md",
+      "notes_path": "network/linux_kernel/napi.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/neighbour.md",
+      "notes_path": "network/linux_kernel/neighbour.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/net_device.md",
+      "notes_path": "network/linux_kernel/net_device.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/netfilter.md",
+      "notes_path": "network/linux_kernel/netfilter.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/netfilter_dscp_mark.md",
+      "notes_path": "network/linux_kernel/netfilter_dscp_mark.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/netfilter_ecn.md",
+      "notes_path": "network/linux_kernel/netfilter_ecn.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/netfilter_example.md",
+      "notes_path": "network/linux_kernel/netfilter_example.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/netfilter_rateest.md",
+      "notes_path": "network/linux_kernel/netfilter_rateest.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/netfilter_tcpmss.md",
+      "notes_path": "network/linux_kernel/netfilter_tcpmss.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/netpoll.md",
+      "notes_path": "network/linux_kernel/netpoll.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/openvswitch.md",
+      "notes_path": "network/linux_kernel/openvswitch.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/page_pool.md",
+      "notes_path": "network/linux_kernel/page_pool.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/qos_sched.md",
+      "notes_path": "network/linux_kernel/qos_sched.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/routing.md",
+      "notes_path": "network/linux_kernel/routing.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/rtnetlink.md",
+      "notes_path": "network/linux_kernel/rtnetlink.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/rxrpc.md",
+      "notes_path": "network/linux_kernel/rxrpc.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/sctp.md",
+      "notes_path": "network/linux_kernel/sctp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/sk_buff.md",
+      "notes_path": "network/linux_kernel/sk_buff.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/socket.md",
+      "notes_path": "network/linux_kernel/socket.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/socket_syscall.md",
+      "notes_path": "network/linux_kernel/socket_syscall.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/tipc.md",
+      "notes_path": "network/linux_kernel/tipc.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/unix_socket.md",
+      "notes_path": "network/linux_kernel/unix_socket.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/xdp.md",
+      "notes_path": "network/linux_kernel/xdp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_kernel/xfrm.md",
+      "notes_path": "network/linux_kernel/xfrm.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_netfilter/conntrack.md",
+      "notes_path": "network/linux_netfilter/conntrack.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_netfilter/conntrack_gc.md",
+      "notes_path": "network/linux_netfilter/conntrack_gc.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_netfilter/net_subsystem_netfilter.md",
+      "notes_path": "network/linux_netfilter/net_subsystem_netfilter.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_netfilter/netfilter_tcp_deep_dive.md",
+      "notes_path": "network/linux_netfilter/netfilter_tcp_deep_dive.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/linux_netfilter/nftables.md",
+      "notes_path": "network/linux_netfilter/nftables.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/network_stack_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/osi_phy_mac.md",
+      "notes_path": "network/osi_phy_mac.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/performance/net_subsystem_advanced.md",
+      "notes_path": "network/performance/net_subsystem_advanced.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/performance/net_subsystem_hotpath.md",
+      "notes_path": "network/performance/net_subsystem_hotpath.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/performance/net_subsystem_kernel_tricks.md",
+      "notes_path": "network/performance/net_subsystem_kernel_tricks.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/performance/net_subsystem_timers.md",
+      "notes_path": "network/performance/net_subsystem_timers.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/protocols/net_subsystem_bpf_hooks.md",
+      "notes_path": "network/protocols/net_subsystem_bpf_hooks.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/protocols/net_subsystem_netlink.md",
+      "notes_path": "network/protocols/net_subsystem_netlink.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/rfc/net_subsystem_rfc_impl.md",
+      "notes_path": "network/rfc/net_subsystem_rfc_impl.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/tcpip/ip.md",
+      "notes_path": "network/tcpip/ip.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/tcpip/net_subsystem_congestion.md",
+      "notes_path": "network/tcpip/net_subsystem_congestion.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/tcpip/net_subsystem_tcpip.md",
+      "notes_path": "network/tcpip/net_subsystem_tcpip.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/tcpip/tcp.md",
+      "notes_path": "network/tcpip/tcp.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/模块一思考题解答.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/模块三思考题解答.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/模块二思考题解答.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/模块五思考题解答.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/network/模块四思考题解答.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/boot_firmware_update.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/hardware_control.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/ipmi_protocol_stack.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/kvm_virtualmedia.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/network_comm_services.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/phosphor_dbus_services.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/redfish_interface.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/openbmc/linux_kernel/security_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/01_计算机是什么.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/02_程序的执行_相比_32_位_64_位的优势是什么(上).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/03_程序的执行_相比_32_位_64_位的优势是什么(下).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/04_构造复杂的程序_将一个递归函数转成非递归函数的通用方法.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/05_存储器分级_L1_Cache_比内存和_SSD_快多少倍.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/06_目录结构和文件管理指令_rm_rf_指令的作用是.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/07_进程_重定向和管道指令_xarg_指令的作用是.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/08_用户和权限管理指令_请简述_Linux_权限划分的原则.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/09_Linux_中的网络指令_如何查看一个域名有哪些_NS_记录.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/10_软件的安装_编译安装和包管理器安装有什么优势和劣势.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/11_高级技巧之日志分析_利用_Linux_指令分析_Web_日志.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/12_高级技巧之集群部署_利用_Linux_指令同时在多台机器部署程序.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/13_操作系统内核_Linux_内核和_Window_内核有什么区别.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/14_用户态和内核态_用户态线程和内核态线程有什么区别.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/15_中断和中断向量_Javaj_等语言为什么可以捕获到键盘输入.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/16_WinMacUnixLinux_的区别和联系_为什么_Debian_漏洞排名第一还这么多人用.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/17_进程和线程_进程的开销比线程大在了哪里.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/18_锁_信号量和分布式锁_如何控制同一时间只有_2_个线程运行.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/19_乐观锁_区块链_除了上锁还有哪些并发控制方法.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/20_线程的调度_线程调度都有哪些方法.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/21_哲学家就餐问题_什么情况下会触发饥饿和死锁.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/22_进程间通信_进程间通信都有哪些方法.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/23_分析服务的特性_我的服务应该开多少个进程_多少个线程.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/24_虚拟内存_一个程序最多能使用多少内存.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/25_内存管理单元_什么情况下使用大内存分页.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/26_缓存置换算法_LRU_用什么数据结构实现更合理.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/27_内存回收上篇_如何解决内存的循环引用问题.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/28_内存回收下篇_三色标记_清除算法是怎么回事.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/29_Linux_下的各个目录有什么作用.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/30_文件系统的底层实现_FAT_NTFS_和_Ext3_有什么区别.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/31_数据库文件系统实例_MySQL_中_B_树和_B+_树有什么区别.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/32_HDFS_介绍_分布式文件系统是怎么回事.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/33_互联网协议群(TCPIP)_多路复用是怎么回事.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/34_UDP_协议_UDP_和_TCP_相比快在哪里.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/35_Linux_的_IO_模式_electpollepoll_有什么区别.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/36_公私钥体系和网络安全_什么是中间人攻击.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/39_Linux_架构优秀在哪里.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/block_io_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/cgroups_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/coroutine.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/cve-2026-31431-copy-fail.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/daemon_process.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/linux_101.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/linux_kernel_development_guide.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/pcb.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/scheduler_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/signal_handling.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/slub_allocator_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/synchronization_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/timekeeping_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/vfs_deep_dive.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(一).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(七).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(三).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(二).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(五).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(八).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(六).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/加餐_练习题详解(四).md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/os/结束语_论程序员的发展——信仰_选择和博弈.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/01_qom.md",
+      "notes_path": "qemu/01_qom.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/02_memory.md",
+      "notes_path": "qemu/02_memory.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/03_cpu.md",
+      "notes_path": "qemu/03_cpu.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/04_block_bs_graph.md",
+      "notes_path": "qemu/04_block_bs_graph.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/04_block_job.md",
+      "notes_path": "qemu/04_block_job.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/04_coroutine_io.md",
+      "notes_path": "qemu/04_coroutine_io.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/04_qcow2.md",
+      "notes_path": "qemu/04_qcow2.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/05_migration_framework.md",
+      "notes_path": "qemu/05_migration_framework.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/05_multifd_compression.md",
+      "notes_path": "qemu/05_multifd_compression.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/05_ram_migration.md",
+      "notes_path": "qemu/05_ram_migration.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/06_network_core.md",
+      "notes_path": "qemu/06_network_core.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/06_vlan_hub.md",
+      "notes_path": "qemu/06_vlan_hub.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/07_signal.md",
+      "notes_path": "qemu/07_signal.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/07_syscall.md",
+      "notes_path": "qemu/07_syscall.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/08_qapi.md",
+      "notes_path": "qemu/08_qapi.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/09_vnc.md",
+      "notes_path": "qemu/09_vnc.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/qemu/index.md",
+      "notes_path": "qemu/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/falco/ARCHITECTURE.md",
+      "notes_path": "security/falco/ARCHITECTURE.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/index.md",
+      "notes_path": "security/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/apparmor_detailed.md",
+      "notes_path": "security/linux_kernel/apparmor_detailed.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/bpf_security.md",
+      "notes_path": "security/linux_kernel/bpf_security.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/index.md",
+      "notes_path": "security/linux_kernel/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/integrity_keys.md",
+      "notes_path": "security/linux_kernel/integrity_keys.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/landlock_detailed.md",
+      "notes_path": "security/linux_kernel/landlock_detailed.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/lockdown_loadpin.md",
+      "notes_path": "security/linux_kernel/lockdown_loadpin.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/lsm_framework.md",
+      "notes_path": "security/linux_kernel/lsm_framework.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/security_deep_dive_r1.md",
+      "notes_path": "security/linux_kernel/security_deep_dive_r1.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/security_deep_dive_r2.md",
+      "notes_path": "security/linux_kernel/security_deep_dive_r2.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/linux_kernel/selinux_detailed.md",
+      "notes_path": "security/linux_kernel/selinux_detailed.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/masscan/ARCHITECTURE.md",
+      "notes_path": "security/masscan/ARCHITECTURE.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/masscan/DETECTION.md",
+      "notes_path": "security/masscan/DETECTION.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/masscan/PACKET_FEATURES.md",
+      "notes_path": "security/masscan/PACKET_FEATURES.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/security/nids/snort3_architecture_analysis.md",
+      "notes_path": "security/nids/snort3_architecture_analysis.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/design_pattern/singleton.md",
+      "notes_path": "sys/design_pattern/singleton.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/fundamentals/elf.md",
+      "notes_path": "sys/fundamentals/elf.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/fundamentals/linux_system_programming.md",
+      "notes_path": "sys/fundamentals/linux_system_programming.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/index.md",
+      "notes_path": "sys/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/ipc/linux_ipc.md",
+      "notes_path": "sys/ipc/linux_ipc.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/ipc/mailbox/Makefile",
+      "notes_path": "sys/ipc/mailbox/Makefile",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/mailbox/Makefile"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/ipc/mailbox/dummy_mbox.c",
+      "notes_path": "sys/ipc/mailbox/dummy_mbox.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/mailbox/dummy_mbox.c"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/ipc/mailbox/dummy_mbox.h",
+      "notes_path": "sys/ipc/mailbox/dummy_mbox.h",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/mailbox/dummy_mbox.h"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/ipc/mailbox/lwip_mailbox.md",
+      "notes_path": "sys/ipc/mailbox/lwip_mailbox.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/ipc/mailbox/test.c",
+      "notes_path": "sys/ipc/mailbox/test.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/mailbox/test.c"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/ipc/shm/Makefile",
+      "notes_path": "sys/ipc/shm/Makefile",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/shm/Makefile"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/ipc/shm/shm.md",
+      "notes_path": "sys/ipc/shm/shm.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/sys/ipc/shm/shm_common.h",
+      "notes_path": "sys/ipc/shm/shm_common.h",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/shm/shm_common.h"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/ipc/shm/shm_reader.c",
+      "notes_path": "sys/ipc/shm/shm_reader.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/shm/shm_reader.c"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/ipc/shm/shm_write_once.c",
+      "notes_path": "sys/ipc/shm/shm_write_once.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "sys/ipc/shm/shm_write_once.c"
+      ]
+    },
+    {
+      "source": "raw/notes/sys/tty_shell_console.md",
+      "notes_path": "sys/tty_shell_console.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/tools/index.md",
+      "notes_path": "tools/index.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/tools/manjaro_swap.md",
+      "notes_path": "tools/manjaro_swap.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/tools/netcat.md",
+      "notes_path": "tools/netcat.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/tools/port_scanner.md",
+      "notes_path": "tools/port_scanner.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/tools/remove_snap.md",
+      "notes_path": "tools/remove_snap.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/notes/tools/tcpdump.md",
+      "notes_path": "tools/tcpdump.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.github-trigger",
+      "notes_path": ".github-trigger",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        ".github-trigger"
+      ]
+    },
+    {
+      "source": "raw/github/notes/.obsidian/app.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/appearance.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/community-plugins.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/core-plugins.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/graph.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/copilot/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/copilot/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/copilot/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/dataview/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/dataview/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/dataview/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-git/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-git/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-git/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-kanban/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-kanban/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-kanban/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-tasks-plugin/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-tasks-plugin/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/obsidian-tasks-plugin/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/omnisearch/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/omnisearch/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/omnisearch/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/pdf-plus/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/pdf-plus/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/pdf-plus/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/table-editor-obsidian/main.js",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/table-editor-obsidian/manifest.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/plugins/table-editor-obsidian/styles.css",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.obsidian/workspace.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/.vscode/settings.json",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/Untitled.base",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/Untitled.canvas",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/android/notes/01_Architecture.md",
+      "notes_path": "android/notes/01_Architecture.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/01_Architecture.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/02_modular-system.md",
+      "notes_path": "android/notes/02_modular-system.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/02_modular-system.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/03_hal.md",
+      "notes_path": "android/notes/03_hal.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/03_hal.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/04_kernel.md",
+      "notes_path": "android/notes/04_kernel.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/04_kernel.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/05_HIDL.md",
+      "notes_path": "android/notes/05_HIDL.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/05_HIDL.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/06_HIDL_Cpp.md",
+      "notes_path": "android/notes/06_HIDL_Cpp.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/06_HIDL_Cpp.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/07_HIDL_Java.md",
+      "notes_path": "android/notes/07_HIDL_Java.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/07_HIDL_Java.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/08_configuration.md",
+      "notes_path": "android/notes/08_configuration.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/08_configuration.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/09_SystemSuspend.md",
+      "notes_path": "android/notes/09_SystemSuspend.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/09_SystemSuspend.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/10_dto.md",
+      "notes_path": "android/notes/10_dto.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/android/notes/11_vndk.md",
+      "notes_path": "android/notes/11_vndk.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/11_vndk.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/12_vintf.md",
+      "notes_path": "android/notes/12_vintf.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/12_vintf.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/13_stable-aidl.md",
+      "notes_path": "android/notes/13_stable-aidl.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/13_stable-aidl.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/14_bootloader.md",
+      "notes_path": "android/notes/14_bootloader.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/14_bootloader.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/15_java-library.md",
+      "notes_path": "android/notes/15_java-library.md",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/15_java-library.md"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/DeviceTreeOverlay.txt",
+      "notes_path": "android/notes/DeviceTreeOverlay.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/DeviceTreeOverlay.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/android-base.cfg",
+      "notes_path": "android/notes/android-base.cfg",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/android-base.cfg"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/dt-object-internal.txt",
+      "notes_path": "android/notes/dt-object-internal.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/dt-object-internal.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/dts-format.txt",
+      "notes_path": "android/notes/dts-format.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/dts-format.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/01/android-stack_2x.png",
+      "notes_path": "android/notes/imgs/01/android-stack_2x.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/01/android-stack_2x.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/01/ape_fwk_all.png",
+      "notes_path": "android/notes/imgs/01/ape_fwk_all.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/01/ape_fwk_all.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/01/treble_blog_after.png",
+      "notes_path": "android/notes/imgs/01/treble_blog_after.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/01/treble_blog_after.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/02/mainline_media_components.png",
+      "notes_path": "android/notes/imgs/02/mainline_media_components.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/02/mainline_media_components.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/02/modular_system_components_arch.png",
+      "notes_path": "android/notes/imgs/02/modular_system_components_arch.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/02/modular_system_components_arch.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/03/android-diffs.png",
+      "notes_path": "android/notes/imgs/03/android-diffs.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/03/android-diffs.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/05/hidl_memoryblock_arch.png",
+      "notes_path": "android/notes/imgs/05/hidl_memoryblock_arch.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/05/hidl_memoryblock_arch.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/06/treble_cpp_compiler_generated_files.png",
+      "notes_path": "android/notes/imgs/06/treble_cpp_compiler_generated_files.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/06/treble_cpp_compiler_generated_files.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/06/treble_cpp_legacy_hal_progression.png",
+      "notes_path": "android/notes/imgs/06/treble_cpp_legacy_hal_progression.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/06/treble_cpp_legacy_hal_progression.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/08/treble_configstore_design.png",
+      "notes_path": "android/notes/imgs/08/treble_configstore_design.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/08/treble_configstore_design.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/09/suspendThreadLoop.png",
+      "notes_path": "android/notes/imgs/09/suspendThreadLoop.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/09/suspendThreadLoop.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_appending.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_appending.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_appending.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_bootloader.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_bootloader.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_bootloader.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_dtbo.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_dtbo.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_ab_1.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_dtbo_ab_1.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_dtbo_ab_1.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_ab_2.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_dtbo_ab_2.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_dtbo_ab_2.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_partition_1.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_dtbo_partition_1.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_dtbo_partition_1.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_partition_2.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_dtbo_partition_2.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_dtbo_partition_2.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_multiple_dt.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_multiple_dt.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_multiple_dt.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_multiple_dt_runtime.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_multiple_dt_runtime.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_multiple_dt_runtime.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_overriding.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_overriding.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_overriding.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_partition_.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_partition_.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_partition_.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_partition_1.png",
+      "notes_path": null,
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_partition_.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_partition_layout.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_partition_layout.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_partition_layout.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_dto_simulate.png",
+      "notes_path": "android/notes/imgs/10/treble_dto_simulate.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_dto_simulate.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/10/treble_vndk_build_system_libraries.png",
+      "notes_path": "android/notes/imgs/10/treble_vndk_build_system_libraries.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/10/treble_vndk_build_system_libraries.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/abi_check_abidiff.png",
+      "notes_path": "android/notes/imgs/11/abi_check_abidiff.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/abi_check_abidiff.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/abi_check_lsdump.png",
+      "notes_path": "android/notes/imgs/11/abi_check_lsdump.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/abi_check_lsdump.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/abi_check_sdump.png",
+      "notes_path": "android/notes/imgs/11/abi_check_sdump.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/abi_check_sdump.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_rs_bcc_plugin_new.png",
+      "notes_path": "android/notes/imgs/11/treble_rs_bcc_plugin_new.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_rs_bcc_plugin_new.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_rs_bcc_plugin_old.png",
+      "notes_path": "android/notes/imgs/11/treble_rs_bcc_plugin_old.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_rs_bcc_plugin_old.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_rs_cpu_fallback.png",
+      "notes_path": "android/notes/imgs/11/treble_rs_cpu_fallback.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_rs_cpu_fallback.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_rs_gpu_fallback.png",
+      "notes_path": "android/notes/imgs/11/treble_rs_gpu_fallback.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_rs_gpu_fallback.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_rs_linking.png",
+      "notes_path": "android/notes/imgs/11/treble_rs_linking.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_rs_linking.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_rs_namespace.png",
+      "notes_path": "android/notes/imgs/11/treble_rs_namespace.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_rs_namespace.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_rs_vendor_driver.png",
+      "notes_path": "android/notes/imgs/11/treble_rs_vendor_driver.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_rs_vendor_driver.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_vndk_design.png",
+      "notes_path": "android/notes/imgs/11/treble_vndk_design.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_vndk_design.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_vndk_linker_namespace1.png",
+      "notes_path": "android/notes/imgs/11/treble_vndk_linker_namespace1.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_vndk_linker_namespace1.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/treble_vndk_linker_namespace3.png",
+      "notes_path": "android/notes/imgs/11/treble_vndk_linker_namespace3.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/treble_vndk_linker_namespace3.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/vndk.jpg",
+      "notes_path": "android/notes/imgs/11/vndk.jpg",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/vndk.jpg"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_arch.png",
+      "notes_path": "android/notes/imgs/11/vndk_snapshot_arch.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/vndk_snapshot_arch.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_directory.png",
+      "notes_path": "android/notes/imgs/11/vndk_snapshot_directory.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/vndk_snapshot_directory.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_prebuilt.png",
+      "notes_path": "android/notes/imgs/11/vndk_snapshot_prebuilt.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/vndk_snapshot_prebuilt.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_system_only.png",
+      "notes_path": "android/notes/imgs/11/vndk_snapshot_system_only.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/11/vndk_snapshot_system_only.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/12/treble_vintf_avb_o_p.png",
+      "notes_path": "android/notes/imgs/12/treble_vintf_avb_o_p.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/12/treble_vintf_avb_o_p.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/12/treble_vintf_avb_p.png",
+      "notes_path": "android/notes/imgs/12/treble_vintf_avb_p.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/12/treble_vintf_avb_p.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/12/treble_vintf_mm.png",
+      "notes_path": "android/notes/imgs/12/treble_vintf_mm.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/12/treble_vintf_mm.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/imgs/14/build-flow-java-lib.png",
+      "notes_path": "android/notes/imgs/14/build-flow-java-lib.png",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/imgs/14/build-flow-java-lib.png"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/notes/manual.txt",
+      "notes_path": "android/notes/manual.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/notes/manual.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/android/tree.txt",
+      "notes_path": "android/tree.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "android/tree.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/codewar_notes/c/EvenorOdd.md",
+      "notes_path": "ccpp/codewar_notes/c/EvenorOdd.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/ccpp/codewar_notes/c/RockPaperScissors.md",
+      "notes_path": "ccpp/codewar_notes/c/RockPaperScissors.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/ccpp/codewar_notes/cpp/240401.md",
+      "notes_path": "ccpp/codewar_notes/cpp/240401.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/ccpp/codewar_notes/cpp/rotate_array.md",
+      "notes_path": "ccpp/codewar_notes/cpp/rotate_array.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/.clang-format",
+      "notes_path": "ccpp/concurrency/.clang-format",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/.clang-format"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/future/aysnc.cc",
+      "notes_path": "ccpp/concurrency/future/aysnc.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/future/aysnc.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/future/future.cc",
+      "notes_path": "ccpp/concurrency/future/future.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/future/future.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/future/promise.cc",
+      "notes_path": "ccpp/concurrency/future/promise.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/future/promise.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/future/shared_future.cc",
+      "notes_path": "ccpp/concurrency/future/shared_future.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/future/shared_future.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/future/task.cc",
+      "notes_path": "ccpp/concurrency/future/task.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/future/task.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/get_id.cc",
+      "notes_path": "ccpp/concurrency/get_id.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/get_id.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/memory_order/mem_order_demo.cc",
+      "notes_path": "ccpp/concurrency/memory_order/mem_order_demo.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/memory_order/mem_order_demo.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/memory_order/msg_pass.cc",
+      "notes_path": "ccpp/concurrency/memory_order/msg_pass.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/memory_order/msg_pass.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/mpmc_ringbuffer/mpmc_ringbuffer.h",
+      "notes_path": "ccpp/concurrency/mpmc_ringbuffer/mpmc_ringbuffer.h",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/mpmc_ringbuffer/mpmc_ringbuffer.h"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/mpmc_ringbuffer/test.cc",
+      "notes_path": "ccpp/concurrency/mpmc_ringbuffer/test.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/mpmc_ringbuffer/test.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/multithreads/multithread_atexit.c",
+      "notes_path": "ccpp/concurrency/multithreads/multithread_atexit.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/multithreads/multithread_atexit.c"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/multithreads/multithread_atexit_advanced.c",
+      "notes_path": "ccpp/concurrency/multithreads/multithread_atexit_advanced.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/multithreads/multithread_atexit_advanced.c"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/sleep_utils.cc",
+      "notes_path": "ccpp/concurrency/sleep_utils.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/sleep_utils.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/yield/no_yield_demo.cc",
+      "notes_path": "ccpp/concurrency/yield/no_yield_demo.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/yield/no_yield_demo.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/yield/yield.cc",
+      "notes_path": "ccpp/concurrency/yield/yield.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/yield/yield.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/concurrency/yield/yield_demo.cc",
+      "notes_path": "ccpp/concurrency/yield/yield_demo.cc",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "ccpp/concurrency/yield/yield_demo.cc"
+      ]
+    },
+    {
+      "source": "raw/github/notes/ccpp/test-ingest.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/Cargo.lock",
+      "notes_path": "kernel/handson/1000lines/hypervisor/Cargo.lock",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/Cargo.lock"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/Cargo.toml",
+      "notes_path": "kernel/handson/1000lines/hypervisor/Cargo.toml",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/Cargo.toml"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/hypervisor.ld",
+      "notes_path": "kernel/handson/1000lines/hypervisor/hypervisor.ld",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/hypervisor.ld"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/run.sh",
+      "notes_path": "kernel/handson/1000lines/hypervisor/run.sh",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/run.sh"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/rust-toolchain.toml",
+      "notes_path": "kernel/handson/1000lines/hypervisor/rust-toolchain.toml",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/rust-toolchain.toml"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/allocator.rs",
+      "notes_path": "kernel/handson/1000lines/hypervisor/src/allocator.rs",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/src/allocator.rs"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/main.rs",
+      "notes_path": "kernel/handson/1000lines/hypervisor/src/main.rs",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/src/main.rs"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/print.rs",
+      "notes_path": "kernel/handson/1000lines/hypervisor/src/print.rs",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/src/print.rs"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/trap.rs",
+      "notes_path": "kernel/handson/1000lines/hypervisor/src/trap.rs",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/hypervisor/src/trap.rs"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/common.c",
+      "notes_path": "kernel/handson/1000lines/os/common.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/common.c"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/common.h",
+      "notes_path": "kernel/handson/1000lines/os/common.h",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/common.h"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/disk/hello.txt",
+      "notes_path": "kernel/handson/1000lines/os/disk/hello.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/disk/hello.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/disk/meow.txt",
+      "notes_path": "kernel/handson/1000lines/os/disk/meow.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/disk/meow.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/kernel.c",
+      "notes_path": "kernel/handson/1000lines/os/kernel.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/kernel.c"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/kernel.h",
+      "notes_path": "kernel/handson/1000lines/os/kernel.h",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/kernel.h"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/kernel.ld",
+      "notes_path": "kernel/handson/1000lines/os/kernel.ld",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/kernel.ld"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/lorem.txt",
+      "notes_path": "kernel/handson/1000lines/os/lorem.txt",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/lorem.txt"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/run.sh",
+      "notes_path": "kernel/handson/1000lines/os/run.sh",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/run.sh"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/shell.c",
+      "notes_path": "kernel/handson/1000lines/os/shell.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/shell.c"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/user.c",
+      "notes_path": "kernel/handson/1000lines/os/user.c",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/user.c"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/user.h",
+      "notes_path": "kernel/handson/1000lines/os/user.h",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/user.h"
+      ]
+    },
+    {
+      "source": "raw/github/notes/kernel/handson/1000lines/os/user.ld",
+      "notes_path": "kernel/handson/1000lines/os/user.ld",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "kernel/handson/1000lines/os/user.ld"
+      ]
+    },
+    {
+      "source": "raw/github/notes/lib/linux_kernel/index.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/lib/linux_kernel/lib_deep_dive_r2.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/lib/linux_kernel/lib_subsystem.md",
+      "notes_path": null,
+      "state": "snapshot-only",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/public/logo.svg",
+      "notes_path": "public/logo.svg",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "public/logo.svg"
+      ]
+    },
+    {
+      "source": "raw/github/notes/public/pwa-192x192.svg",
+      "notes_path": "public/pwa-192x192.svg",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "public/pwa-192x192.svg"
+      ]
+    },
+    {
+      "source": "raw/github/notes/public/pwa-512x512.svg",
+      "notes_path": "public/pwa-512x512.svg",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "public/pwa-512x512.svg"
+      ]
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/README.md",
+      "notes_path": "security/network-traffic-analysis/README.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/literature-review-2023-2026.md",
+      "notes_path": "security/network-traffic-analysis/literature-review-2023-2026.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/method-comparison.md",
+      "notes_path": "security/network-traffic-analysis/method-comparison.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-01-class-imbalance-deep-learning.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-01-class-imbalance-deep-learning.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-02-SVM-malicious-traffic.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-02-SVM-malicious-traffic.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-03-feature-selection-ensemble.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-03-feature-selection-ensemble.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-04-WNN-intrusion.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-04-WNN-intrusion.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-05-ML-algorithm-performance.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-05-ML-algorithm-performance.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-06-Bloom-XOR-Filters.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-06-Bloom-XOR-Filters.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-07-HCRNNIDS.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-07-HCRNNIDS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-08-CNN-LSTM-intrusion.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-08-CNN-LSTM-intrusion.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-09-ML-DL-hybrid-IDS.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-09-ML-DL-hybrid-IDS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-10-DNN-AntiRectifier.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-10-DNN-AntiRectifier.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-11-Fast-Learning-Neural-IDS.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-11-Fast-Learning-Neural-IDS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-12-hierarchical-hybrid-IDS.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-12-hierarchical-hybrid-IDS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-13-ANN-DDOS.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-13-ANN-DDOS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-14-Botnet-CNC-SVM.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-14-Botnet-CNC-SVM.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-15-Botnet-TCP-ML.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-15-Botnet-TCP-ML.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-16-botnet-raw-traffic-dl.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-16-botnet-raw-traffic-dl.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-17-CNN-NS-Botnet.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-17-CNN-NS-Botnet.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-18-VAE-BPNN-insider-threat.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-18-VAE-BPNN-insider-threat.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-19-multilayer-insider-threat.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-19-multilayer-insider-threat.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-20-zero-day-behavioral.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-20-zero-day-behavioral.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-25-Machine-Learning-IDS-review.md",
+      "notes_path": "security/network-traffic-analysis/papers/01-IDS/paper-25-Machine-Learning-IDS-review.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-21-TLS-ensemble-94.85.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-21-TLS-ensemble-94.85.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-22-TLS-BiLSTM-96.71.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-22-TLS-BiLSTM-96.71.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-23-TLS-RF-malware.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-23-TLS-RF-malware.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-24-TLS-review.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-24-TLS-review.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-25-MKEL-multi-grained.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-25-MKEL-multi-grained.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-26-Ensemble-ML-99.85.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-26-Ensemble-ML-99.85.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-27-unsupervised-TLS.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-27-unsupervised-TLS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-28-FlowSpectrum.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-28-FlowSpectrum.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-29-multi-scale-CNN-LSTM-Attention.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-29-multi-scale-CNN-LSTM-Attention.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-30-deep-fingerprinting.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-30-deep-fingerprinting.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-31-GraphDapp-GNN.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-31-GraphDapp-GNN.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-32-FS-Net.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-32-FS-Net.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-33-lightweight-KNN.md",
+      "notes_path": "security/network-traffic-analysis/papers/02-Encrypted/paper-33-lightweight-KNN.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-35-CNN-LSTM-hybrid-traffic.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-35-CNN-LSTM-hybrid-traffic.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-36-IoT-malware-visual.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-36-IoT-malware-visual.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-37-CNN-SE-Net-malware.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-37-CNN-SE-Net-malware.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-38-Rew-LSTM.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-38-Rew-LSTM.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-39-LSTM-Autoencoder-anomaly.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-39-LSTM-Autoencoder-anomaly.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-40-CNN-RNN-traffic.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-40-CNN-RNN-traffic.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-41-NEAE-NeuroEvolution.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-41-NEAE-NeuroEvolution.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-42-VAE-anomaly-detection.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-42-VAE-anomaly-detection.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-43-CAE-AD-time-series.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-43-CAE-AD-time-series.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-44-MTGAE-Graph.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-44-MTGAE-Graph.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-45-multi-scale-attention-fusion.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-45-multi-scale-attention-fusion.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-46-iTransformer-traffic.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-46-iTransformer-traffic.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-47-SmartX-eBPF-BiLSTM.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-47-SmartX-eBPF-BiLSTM.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-48-SDAE-encrypted-traffic.md",
+      "notes_path": "security/network-traffic-analysis/papers/03-DeepLearning/paper-48-SDAE-encrypted-traffic.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-49-ML-IoT-security.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-49-ML-IoT-security.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-50-N-BaIoT-DDOS.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-50-N-BaIoT-DDOS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-51-mobile-malware-detection.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-51-mobile-malware-detection.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-52-UAV-WiFi-detection.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-52-UAV-WiFi-detection.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-53-mobile-malware-detection.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-53-mobile-malware-detection.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-54-5G-virtual-security.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-54-5G-virtual-security.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-55-5G-SDN-IDS.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-55-5G-SDN-IDS.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-56-sampled-flow-detection.md",
+      "notes_path": "security/network-traffic-analysis/papers/04-IoT-5G/paper-56-sampled-flow-detection.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-57-TAD-multi-adversarial.md",
+      "notes_path": "security/network-traffic-analysis/papers/05-Adversarial/paper-57-TAD-multi-adversarial.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-58-IDS-robustness.md",
+      "notes_path": "security/network-traffic-analysis/papers/05-Adversarial/paper-58-IDS-robustness.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-59-mutated-traffic-GAN.md",
+      "notes_path": "security/network-traffic-analysis/papers/05-Adversarial/paper-59-mutated-traffic-GAN.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-60-GAN-IDS-attack.md",
+      "notes_path": "security/network-traffic-analysis/papers/05-Adversarial/paper-60-GAN-IDS-attack.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/06-SDN/paper-61-SDN-dynamics-diffusion.md",
+      "notes_path": "security/network-traffic-analysis/papers/06-SDN/paper-61-SDN-dynamics-diffusion.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/papers/06-SDN/paper-62-SDN-security-architecture.md",
+      "notes_path": "security/network-traffic-analysis/papers/06-SDN/paper-62-SDN-security-architecture.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/quick-reference.md",
+      "notes_path": "security/network-traffic-analysis/quick-reference.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/references.bib",
+      "notes_path": "security/network-traffic-analysis/references.bib",
+      "state": "byte-identical",
+      "identical_notes_paths": [
+        "security/network-traffic-analysis/references.bib"
+      ]
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/research-notes.md",
+      "notes_path": "security/network-traffic-analysis/research-notes.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    },
+    {
+      "source": "raw/github/notes/security/network-traffic-analysis/research-timeline.md",
+      "notes_path": "security/network-traffic-analysis/research-timeline.md",
+      "state": "different-at-same-path",
+      "identical_notes_paths": []
+    }
+  ]
+}
