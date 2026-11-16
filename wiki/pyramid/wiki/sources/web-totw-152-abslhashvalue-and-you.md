@@ -1,0 +1,92 @@
+---
+type: source
+source-type: web
+title: "Tip of the Week #152: `AbslHashValue` and You"
+author: "Matt Kulukundis"
+date: 2012
+url: https://abseil.io/tips/152
+summary: "abseil C++ Tips of the Week #152: AbslHashValue` and You."
+tags: [cpp, abseil, totw, performance, idioms]
+created: 2026-06-10
+source-md5: 424602047d84f8645961d68c8d4c8a0d
+---
+
+> 原文：<https://abseil.io/tips/152> · 作者：Matt Kulukundis · 发布：2012 · 内容许可：CC BY 4.0（abseil.io docs）
+>
+> 完整原文转录（脚注 [Tip \#NN](/tips/NN) 链接保留，邮件保护链接为 CloudFlare 默认转码无法还原）。
+
+# Tip of the Week \#152: `AbslHashValue` and You
+
+\
+\
+
+Originally posted as TotW \#152 on June 21, 2018
+
+*By [Matt Kulukundis](/cdn-cgi/l/email-protection#28434e45684f47474f444d064b4745)*
+
+Updated 2020-04-06
+
+Quicklink: [abseil.io/tips/152](https://abseil.io/tips/152)
+
+**I love Mozart, but I often make a terrible hash of it.** – *Simon Rattle*
+
+The `absl::Hash` framework \[https://abseil.io/docs/cpp/guides/hash\] is now the default hash implementation for the Swisstable family of hash tables (`absl::{flat,node}_hash_{set,map}`). All types hashable by this framework will automatically be useable as keys in Swisstables.
+
+## How Do I Use It?
+
+Let’s say we have a simple `Song` struct (let’s agree that a song can be uniquely identified by these fields):
+
+```cpp
+
+struct Song {
+  std::string name;
+  std::string artist;
+  absl::Duration duration;
+};
+```
+
+and we want to be able to store an `absl::flat_hash_set<Song>` or an `absl::flat_hash_map<Song, CopyrightOwner>`. All we have to do is add a simple friend function like:
+
+```cpp
+
+struct Song {
+  std::string name;
+  std::string artist;
+  absl::Duration duration;
+
+  template <typename H>
+  friend H AbslHashValue(H h, const Song& s) {
+    return H::combine(std::move(h), s.name, s.artist, s.duration);
+  }
+
+  // Include your implementation of operator == and != here
+};
+```
+
+and everything will work!
+
+## How Do I Test It?
+
+We provide `absl::VerifyTypeImplementsAbslHashCorrectly` to verify that a type implements its overload correctly. This function has a few requirements:
+
+- The type must implement the `==` operator correctly.
+
+- The caller must provide instances of the type that include any interesting representations for their type. (For example, a type with a small size optimization should include equivalent instances that use the small size optimization and that do not.)
+
+```cpp
+
+TEST(MyType, SupportsAbslHash) {
+  EXPECT_TRUE(absl::VerifyTypeImplementsAbslHashCorrectly({
+      MyType(),
+      MyType(1, 2),
+      MyType(2, 3),
+      MyType(0, 0),
+  }));
+}
+```
+
+`absl::VerifyTypeImplementsAbslHashCorrectly` also supports testing heterogeneous lookup and custom equality operators.
+
+Intrigued and want to know more? Read up at https://abseil.io/docs/cpp/guides/hash.
+
+

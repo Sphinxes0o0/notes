@@ -1,0 +1,183 @@
+---
+type: source
+source-type: web
+title: "Tip of the Week #153: Don't Use using-directives"
+author: "Abseil Team"
+date: 2012
+url: https://abseil.io/tips/153
+summary: "abseil C++ Tips of the Week #153: Don't Use using-directives."
+tags: [cpp, abseil, totw, performance, idioms]
+created: 2026-06-10
+source-md5: 774881e0f709d27bdb46bd90a1a42440
+---
+
+> 原文：<https://abseil.io/tips/153> · 作者：Abseil Team · 发布：2012 · 内容许可：CC BY 4.0（abseil.io docs）
+>
+> 完整原文转录（脚注 [Tip \#NN](/tips/NN) 链接保留，邮件保护链接为 CloudFlare 默认转码无法还原）。
+
+# Tip of the Week \#153: Don't Use using-directives
+
+\
+\
+
+Originally posted as TotW \#153 on July 17, 2018
+
+*By [Roman Perepelitsa](/cdn-cgi/l/email-protection#01736e6c606f2f7164736471646d6875726041666c60686d2f626e6c) and [Ashley Hedberg](/cdn-cgi/l/email-protection#b0d1d8d5d4d2d5c2d7f0d7dfdfd7dcd59ed3dfdd)*
+
+Updated 2020-04-06
+
+Quicklink: [abseil.io/tips/153](https://abseil.io/tips/153)
+
+**I view using-directives as time-bombs, both for the parties that deal in them and the language system.** – *Ashley Hedberg* with apologies to Warren Buffett
+
+## tl;dr
+
+Using-directives (`using namespace foo`) are dangerous enough to be banned by the [Google style guide](https://google.github.io/styleguide/cppguide.html#Namespaces). Don’t use them in code that will ever need to be upgraded.
+
+If you wish to shorten a name, you may instead use a namespace alias (`namespace baz = ::foo::bar::baz;`) or a using-declaration (`using ::foo::SomeName`), both of which are permitted by the style guide in certain contexts (e.g. in `*.cc` files).
+
+## Using-directives at Function Scope
+
+What do you think this code does?
+
+```cpp
+
+namespace totw {
+namespace example {
+namespace {
+
+TEST(MyTest, UsesUsingDirectives) {
+  using namespace ::testing;
+  Sequence seq;  // ::testing::Sequence
+  WallTimer timer;  // ::WallTimer
+  ...
+}
+
+}  // namespace
+}  // namespace example
+}  // namespace totw
+```
+
+The vast majority of C++ users think that the using-directive is injecting names into the scope where it’s declared. In the example above, that would be the scope of the function. In reality, the names are injected into the nearest common ancestor of the target namespace (`::testing`) and the usage namespace (`::totw::example::anonymous`) while the using directive is in scope. In our example, **that’s the global namespace**!
+
+Thus, the code is roughly equivalent to the following:
+
+```cpp
+
+using ::testing::Expectation;
+using ::testing::Sequence;
+using ::testing::UnorderedElementsAre;
+...
+// many, many more symbols are injected into the global namespace
+
+namespace totw {
+namespace example {
+namespace {
+
+TEST(MyTest, UsesUsingDirectives) {
+  Sequence seq; // ::testing::Sequence
+  WallTimer timer; // ::WallTimer
+  ...
+}
+
+} // namespace
+} // namespace example
+} // namespace totw
+```
+
+This transformation is not exactly correct, as the names do not actually *stay* visible outside the scope of the using-directive. However, even a temporary injection into the global scope has some unfortunate consequences.
+
+Let’s see what kind of changes can break this code:
+
+- If anyone defines `::totw::Sequence` or `::totw::example::Sequence`, `seq` will now refer to that entity instead of `::testing::Sequence`.
+- If anyone defines `::Sequence`, the definition of `seq` will fail to compile, as the reference to the name `Sequence` will be ambiguous. `Sequence` could mean `::testing::Sequence` or `::Sequence`, and the compiler doesn’t know which one you wanted.
+- If anyone defines `::testing::WallTimer`, the definition of `timer` will fail to compile.
+
+Thus, a single using-directive in a function scope has placed naming restrictions on symbols in `::testing`, `::totw`, `::totw::example`, and the global namespace. **Allowing this using-directive, even if only in function scope, creates ample opportunities for name clashes in the global and other namespaces.**
+
+If that example doesn’t look fragile enough, consider this:
+
+```cpp
+
+namespace totw {
+namespace example {
+namespace {
+
+TEST(MyTest, UsesUsingDirectives) {
+  using namespace ::testing;
+  EXPECT_THAT(..., proto::Partially(...)); // ::testing::proto::Partially
+  ...
+}
+
+} // namespace
+} // namespace example
+} // namespace totw
+```
+
+This using-directive has **introduced a namespace alias** `proto` in the global namespace, roughly equivalent to the following:
+
+```cpp
+
+namespace proto = ::testing::proto;
+
+namespace totw {
+namespace example {
+namespace {
+
+TEST(MyTest, UsesUsingDirectives) {
+  EXPECT_THAT(..., proto::Partially(...)); // ::testing::proto::Partially
+  ...
+}
+
+} // namespace
+} // namespace example
+} // namespace totw
+```
+
+The test will keep compiling until a header defining namespace `::proto`, `::totw::proto`, or `::totw::example::proto` gets included transitively. At that point in time, `proto::Partially` becomes ambiguous, and the test stops compiling. This ties into the style guide’s rules on namespace naming: avoid nested namespaces, and don’t use common names for nested namespaces. (See [Tip \#130](/tips/130) and https://google.github.io/styleguide/cppguide.html#Namespace_Names for more on this topic.)
+
+One might think that it’s safe to employ a using-directive for a closed namespace that has few symbols and guarantees that no more symbols will be ever added to it. (`std::placeholders`, which contains symbols `_1` … `_9`, is an example of such a namespace.) However, even that isn’t safe: it precludes any other namespace from introducing symbols with the same names. In this sense, using-directives defeat the modularity provided by namespaces.
+
+## Unqualified using-directives
+
+We’ve seen how one using-directive can go wrong. What happens if we have many of them, unqualified, in the same codebase?
+
+```cpp
+
+namespace totw {
+namespace example {
+namespace {
+
+using namespace rpc;
+using namespace testing;
+
+TEST(MyTest, UsesUsingDirectives) {
+  Sequence seq;  // ::testing::Sequence
+  WallTimer timer;  // ::WallTimer
+  RPC rpc;  // ...is this ::rpc::RPC or ::RPC?
+  ...
+}
+
+}  // namespace
+}  // namespace example
+}  // namespace totw
+```
+
+What could possibly go wrong here? A lot, as it turns out:
+
+- All the problems from our function-level example still exist, but two-fold: once for namespace `::testing`, and once for namespace `::rpc`.
+- If namespace `::rpc` and namespace `::testing` declare symbols with the same name, this code won’t compile if it does unqualified lookup on one of those names. This is important, because it demonstrates a terrifying scaling problem: since the full contents of each namespace is (generally speaking) injected into the global namespace, **every new using-directive could add quadratic risk of name collisions and build failures.**
+- If a sub-namespace such as `::rpc::testing` is ever introduced, this code will stop compiling. (We have actually seen that namespace, so it is potentially just a matter of time until this snippet and that namespace are built together. Another reason to [avoid deeply nested namespaces](/tips/130)). The lack of namespace qualification is important here: this snippet may have compiled if the using-directives were fully-qualified *and* if there were no unqualified lookups on names common to both namespaces.
+- A newly-introduced symbol in `::totw::example`, `::totw`, `::testing`, `::rpc`, or the global namespace could collide with an existing symbol in *any of those namespaces*. That’s a big matrix of possibilities.
+
+A brief aside: What namespace do you think `RPC` lives in? `rpc` would have been a perfectly reasonable guess, but it actually lives in the global namespace. Maintainability issues aside, the using-directives here make this code hard to read.
+
+## Why Do We Have This Feature, Then?
+
+There are legitimate uses of using-directives within generic libraries, but they are so obscure and rare that they don’t deserve a mention here or in the style guide.
+
+## Parting Words
+
+Using-directives are time-bombs: code that compiles today could easily stop compiling with the next language version or symbol addition. For external code that is short-lived and whose dependencies never change, this may be an acceptable risk. But beware: if you later decide that you want your short-lived project to continue working *over time*, those time-bombs may explode.
+
+

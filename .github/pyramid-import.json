@@ -1,0 +1,1130 @@
+{
+  "source_repository": "https://github.com/Sphinxes0o0/pyramid",
+  "source_commit": "dbbf49e925aca5cdb5c97574d00919af119fba60",
+  "source_remote_main": "42ff5fa0e117d81ce53b6e648be08ce0a688072b",
+  "notes_base": "5116b869ad076d9e8591def5e67b99e2ebf73700",
+  "prefix": "wiki/pyramid/",
+  "excluded": [
+    "scripts/node_modules/"
+  ],
+  "changed_files": [
+    ".gitattributes"
+  ],
+  "lfs": [
+    {
+      "path": "raw/github/notes/.github-trigger",
+      "oid": "8e73c02c5f4edcb1e18efece8ae8afd720607bdad6c8d22362d19c52d61c23a1",
+      "size": 48
+    },
+    {
+      "path": "raw/github/notes/.obsidian/app.json",
+      "oid": "86fbee9c2b5a94713c75cccc835c9be58c1c22c5223a4ac249b29368cb3d1dfb",
+      "size": 81
+    },
+    {
+      "path": "raw/github/notes/.obsidian/appearance.json",
+      "oid": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "path": "raw/github/notes/.obsidian/community-plugins.json",
+      "oid": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size": 2
+    },
+    {
+      "path": "raw/github/notes/.obsidian/core-plugins.json",
+      "oid": "40a0a54d77a14b77577070140a79fa88ce85b564708f65ad5f008c88b07fa4a0",
+      "size": 692
+    },
+    {
+      "path": "raw/github/notes/.obsidian/graph.json",
+      "oid": "969396aec27e51d0dfe2d0f03f137c00bc49c376cb9cf8c0ad776bff4b1b9d2c",
+      "size": 494
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/copilot/main.js",
+      "oid": "7485383bfda20635e98b2103a29389ac25e8f502a8e20c5b34bd5c326bc81bd9",
+      "size": 3437168
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/copilot/manifest.json",
+      "oid": "609a2f32795e3fe1f07474069d8d9a69d160bed04e711225cffe9430af13633e",
+      "size": 441
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/copilot/styles.css",
+      "oid": "73c2738bdfaf37b755a8eef59bddfb4aa57add9e21c15bd2b896719393a8c692",
+      "size": 70901
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/dataview/main.js",
+      "oid": "bcdb7a7882051a30427a3fa370533c1052019591e7551bcc12611bb9a726bbb3",
+      "size": 1302069
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/dataview/manifest.json",
+      "oid": "9235db47112da81b85591c79ecb9ae2574e5e72207056e976472f90616286185",
+      "size": 357
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/dataview/styles.css",
+      "oid": "3306dd9032e00f989ba7233a37fd255bc4d3f4340cee661762e952f3f6aa1de9",
+      "size": 2965
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-git/main.js",
+      "oid": "d1bcc50f05646aed708330b80251de755894e3b3bdf7f81e231a03b88212bbb5",
+      "size": 713702
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-git/manifest.json",
+      "oid": "26f0ef6849027ee315989f539a846a42bd3a88112f025ceee6e303ff2f64be85",
+      "size": 325
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-git/styles.css",
+      "oid": "f5ab93f4d5b4dd1bd1e577864c5c79087f7adfd448ac346e0489e5847ce6922d",
+      "size": 18303
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-kanban/main.js",
+      "oid": "458574296f9c50bf5ac078ad28f37724a2520ae45e8ad2144c6769f4062453e4",
+      "size": 990767
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-kanban/manifest.json",
+      "oid": "24976787097ead467969e014a35654e7a80e4db49a977689a48afadfa15e1854",
+      "size": 348
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-kanban/styles.css",
+      "oid": "ecf6dd31f1727c441cce6f54794b0d3916dcfffc87fa17b855c79ba04a85d9a7",
+      "size": 60802
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-tasks-plugin/main.js",
+      "oid": "449e4e1d4fa9b76b995e7b257d0ac3362f8e9ed24f83c739546176352e686ede",
+      "size": 850416
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-tasks-plugin/manifest.json",
+      "oid": "150cec115dfd83f2f95c4edd515df7254e1102c116032bd0998dc90d67138737",
+      "size": 517
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/obsidian-tasks-plugin/styles.css",
+      "oid": "62865e01fbaf8418635c0eeacc27d4f7352c90f07e81b1be396acd1a1f7eabbc",
+      "size": 27027
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/omnisearch/main.js",
+      "oid": "b137b01f0668459ad25daf4f2af31e0699360dff725f9ab6a1e67d6d4d5a450d",
+      "size": 720726
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/omnisearch/manifest.json",
+      "oid": "da7e257adb07e409296e6db80b4e6ff52c80c65eb9a1865cf215ec39f86e3156",
+      "size": 366
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/omnisearch/styles.css",
+      "oid": "818e6b361e426ab3a868a4524a20df5a6416bf614876b61ede340d0f78c9ebc8",
+      "size": 2783
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/pdf-plus/main.js",
+      "oid": "45083cb205e526a12d333f8bdb771bab0557123e38843b6f0fe5567a782b87b2",
+      "size": 1088825
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/pdf-plus/manifest.json",
+      "oid": "dca50165b74316cdb2b76c92084374997be7949d216b31efcecc2b82ff4a086c",
+      "size": 494
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/pdf-plus/styles.css",
+      "oid": "4d944d6ea7aa581fdcd8367c9d8ab09f37c5a8c594e336547795f79f2ede4066",
+      "size": 18472
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/table-editor-obsidian/main.js",
+      "oid": "fbbbfb8c70f57d5c7fc8535c8b01c896389b54ebedab636cf6f6acf1554f471c",
+      "size": 272054
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/table-editor-obsidian/manifest.json",
+      "oid": "698b4f77445e07d887f33450eaf533a28e099b7b483f642fa883362ffbd8ffe9",
+      "size": 493
+    },
+    {
+      "path": "raw/github/notes/.obsidian/plugins/table-editor-obsidian/styles.css",
+      "oid": "23fa30d76f117fd3d1624c4c2e6ddedabf809923996b0534895f8254ea6a39f7",
+      "size": 1744
+    },
+    {
+      "path": "raw/github/notes/.obsidian/workspace.json",
+      "oid": "b7e666941e87d1d16b0e764f330c61cfdece02816ff7de7bba64be6ada39a571",
+      "size": 4784
+    },
+    {
+      "path": "raw/github/notes/.vscode/settings.json",
+      "oid": "18070de64c7c9f703c6279c307eff1840fb8f359d725cd6191b24fc4034328f6",
+      "size": 171
+    },
+    {
+      "path": "raw/github/notes/Untitled.base",
+      "oid": "07bb42152a9f7290a4aa0940c11fffb8618248c567adbde6b1647f84312361ff",
+      "size": 39
+    },
+    {
+      "path": "raw/github/notes/Untitled.canvas",
+      "oid": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "path": "raw/github/notes/android/notes/01_Architecture.md",
+      "oid": "82dd1c62e954d48a1400e2de19522cd91bd8c6668bbc24155198569cb99e6638",
+      "size": 7859
+    },
+    {
+      "path": "raw/github/notes/android/notes/02_modular-system.md",
+      "oid": "0ff3b4bfd62b12b55942630253c722affd4263812533c8b60e4982a9140a3e90",
+      "size": 28010
+    },
+    {
+      "path": "raw/github/notes/android/notes/03_hal.md",
+      "oid": "66b7ac26ff4de97914f90b8d0e8061d5d33a50770b3d28a382a3040a78913236",
+      "size": 9532
+    },
+    {
+      "path": "raw/github/notes/android/notes/04_kernel.md",
+      "oid": "b52fc4046c012f735f802769089c1703bcc3de4e654911a8575ab6eff45610d1",
+      "size": 18748
+    },
+    {
+      "path": "raw/github/notes/android/notes/05_HIDL.md",
+      "oid": "e9167a99dce919b5eebdf3a5905c661ca7745cdc31676f3ef0cdb71e455ae27e",
+      "size": 143308
+    },
+    {
+      "path": "raw/github/notes/android/notes/06_HIDL_Cpp.md",
+      "oid": "773a6cdcd6c0a3d49f0804c8a0bea052ccef8fe35d998facc036361fb24a5b13",
+      "size": 31299
+    },
+    {
+      "path": "raw/github/notes/android/notes/07_HIDL_Java.md",
+      "oid": "36375cc3b8915770196efba08cff5682e09eccc7cce8d1e36079930081899bf8",
+      "size": 14813
+    },
+    {
+      "path": "raw/github/notes/android/notes/08_configuration.md",
+      "oid": "e1f8e82fc70449ee9183827668a37ed449898ceba279b21034e412410a6800ac",
+      "size": 41083
+    },
+    {
+      "path": "raw/github/notes/android/notes/09_SystemSuspend.md",
+      "oid": "f6ce06ecf20590d06c0e4e1bf5ffd71844fb9f5d2252ade89d6c41bf0290d1f9",
+      "size": 3627
+    },
+    {
+      "path": "raw/github/notes/android/notes/10_dto.md",
+      "oid": "4fbb83ac9a110080d9ba809b6a702c869a32f4a1528f7ad57adae6ce69a71c10",
+      "size": 38455
+    },
+    {
+      "path": "raw/github/notes/android/notes/11_vndk.md",
+      "oid": "e6afb9c171ef960b1304d443b1701da003e6179995ccebd4cf94f9db61212bee",
+      "size": 124974
+    },
+    {
+      "path": "raw/github/notes/android/notes/12_vintf.md",
+      "oid": "bcc2983c574556238119a5e1249929a2d1bbeed5b22836bd67a7e971ced4d788",
+      "size": 73801
+    },
+    {
+      "path": "raw/github/notes/android/notes/13_stable-aidl.md",
+      "oid": "3c7696887d5b5940309651607413e0f019d9a8c7699fac1ec13b8521c149d14c",
+      "size": 9200
+    },
+    {
+      "path": "raw/github/notes/android/notes/14_bootloader.md",
+      "oid": "9220495cd1d8e817b43f17a9c257b242b26ece0cc1eb51eecdfad5dfe2644d13",
+      "size": 10627
+    },
+    {
+      "path": "raw/github/notes/android/notes/15_java-library.md",
+      "oid": "c5fe14071f5c173bd7d47eb73fec0d5a4d545d1941fe48db8ecea824d42d5605",
+      "size": 5073
+    },
+    {
+      "path": "raw/github/notes/android/notes/DeviceTreeOverlay.txt",
+      "oid": "ea160902e988fe6644096bbc96e1b1f215585d04e1d0b365ae844098627ed62f",
+      "size": 12716
+    },
+    {
+      "path": "raw/github/notes/android/notes/android-base.cfg",
+      "oid": "32bf414be86d918f3a0d496a3402287a4283d518106c70163c13536d3543e4d9",
+      "size": 4278
+    },
+    {
+      "path": "raw/github/notes/android/notes/dt-object-internal.txt",
+      "oid": "4951f127b081e28d2d065b086a4ad123dfc95fcdf3d95bd809a1c6afb172535b",
+      "size": 9176
+    },
+    {
+      "path": "raw/github/notes/android/notes/dts-format.txt",
+      "oid": "12908085c13c209744542078a5c36c32c2d944364b954f6000268cec151e5d59",
+      "size": 4231
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/01/android-stack_2x.png",
+      "oid": "6fae5edab66d54e4569f4b5a528a650a2bb757f3a4f127526c3c3e6e3e48b4b9",
+      "size": 101554
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/01/ape_fwk_all.png",
+      "oid": "ae8e044f3e419e728b45cd2e6f4a92254346ab83fa72933b36a41da7f6c9a1f5",
+      "size": 49603
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/01/treble_blog_after.png",
+      "oid": "ceb00b4e994f5bd6429b2ba36262373ee111f5ba8b958e7dfb52d2da21fe4a13",
+      "size": 15325
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/02/mainline_media_components.png",
+      "oid": "136547401e21447e6523b9a9bcbe76334cf2f0d0a4b6d5c4b6683fd71fe59cd0",
+      "size": 84652
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/02/modular_system_components_arch.png",
+      "oid": "8c369372406d2c1a9744fc66aa17eafcb340810bcf0adfe75be76ae37573400d",
+      "size": 26428
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/03/android-diffs.png",
+      "oid": "8957cc482949112e338a3cdaa8bbb5a40b0e335935eb7ce95aa4e05159d6e7f9",
+      "size": 73873
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/05/hidl_memoryblock_arch.png",
+      "oid": "fffb7750356a9b6197ff0c5b4b1f6426f0fd54a137c3d0a5284c5f34e8e995a7",
+      "size": 32567
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/06/treble_cpp_compiler_generated_files.png",
+      "oid": "18e1e8a1c83aca52d513e0d5a9b34affa0e365cb8b3d60b300017b52c0c2bc05",
+      "size": 48547
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/06/treble_cpp_legacy_hal_progression.png",
+      "oid": "e42b4419baffce7a91f64ef00428e87d5f5ca68987fe625b333e2c4d597fb82c",
+      "size": 50461
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/08/treble_configstore_design.png",
+      "oid": "ca899a6f09de51a400201c356c698157af2fd33d2dc443406aa7ccce2559ff68",
+      "size": 7610
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/09/suspendThreadLoop.png",
+      "oid": "ccc6195af02ca155f79da35ecc2042997468d0772a948613e4a9d5a3d72214bb",
+      "size": 41650
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_appending.png",
+      "oid": "2be839e6651be5373a25a0117a566e355ddaaf88c2168187c54b97403c1f72ba",
+      "size": 12378
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_bootloader.png",
+      "oid": "4a29238ce2a8dee39097988d1f2da464330e29436aff2acbd535cba8d84547fa",
+      "size": 33503
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo.png",
+      "oid": "867f5ee07b979a7314bd47a624b44ccb9e3eee88975fed060a653aac6cb07e80",
+      "size": 20958
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_ab_1.png",
+      "oid": "b3cf60613ca6a63260fe9e944b471cf909182655da369c81efd8b796ce0eec05",
+      "size": 27803
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_ab_2.png",
+      "oid": "0cffd1473113c6435394bc45bf48b89ac22fbfc8fa7d84621e91a153e81a67a0",
+      "size": 15070
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_partition_1.png",
+      "oid": "a48c1bfb2848f6de1efb4ddd1766a3d78081f44845a870179d337990f3950049",
+      "size": 4094
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_partition_2.png",
+      "oid": "3b7b0dcb1c908952153c8c5906214836be531c8988e210c615ad06d6e04a38f5",
+      "size": 3664
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_multiple_dt.png",
+      "oid": "f8cfb16f359c37adcef59b73bbb5c95c17922af3e724b94770c74995dd9a2413",
+      "size": 17942
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_multiple_dt_runtime.png",
+      "oid": "262868b269d5c1189dfa946937024d9095a356f3b4afc16b1831388429e661cd",
+      "size": 37790
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_overriding.png",
+      "oid": "82c6c3da95c984f5bd2dac02f0252cf94f69237db49b1d830ce1f2e26929e7f1",
+      "size": 12165
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_partition_.png",
+      "oid": "2ed60ebcfaeab0d2f010d0d046f7049c84f4552427415800dbf44123da542320",
+      "size": 6753
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_partition_1.png",
+      "oid": "2ed60ebcfaeab0d2f010d0d046f7049c84f4552427415800dbf44123da542320",
+      "size": 6753
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_partition_layout.png",
+      "oid": "49ab7a686bc07913468e246a3aadc1ad2514663630e6b4cbc740da64beeb0385",
+      "size": 26223
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_dto_simulate.png",
+      "oid": "3e663f4ddd5c689e14f4801ecc4af091c8ab2242d3d6a93671a094579bd7ea69",
+      "size": 34531
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/10/treble_vndk_build_system_libraries.png",
+      "oid": "ac60cf446d2856e44a9ab4928e6856b7fa274675bee28a8aff828a2801b2cec0",
+      "size": 17855
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/abi_check_abidiff.png",
+      "oid": "4e67015729622474fb43589267927ec54e332d73f521da1b6f28a22de4a05ee4",
+      "size": 6589
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/abi_check_lsdump.png",
+      "oid": "8ee95285a2d0e5df080904a18ef2901e9f9e99d035eb5a0d8cd30abb27fd79cf",
+      "size": 13010
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/abi_check_sdump.png",
+      "oid": "35c2c3ec6f6a69b18a63ed607e801cecc835fe9c411a217a22669b958417cd93",
+      "size": 18040
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_rs_bcc_plugin_new.png",
+      "oid": "6b27549777022abe718eca60f1ad1dd1997266de02aec89e9b3d4ef2d764498d",
+      "size": 21097
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_rs_bcc_plugin_old.png",
+      "oid": "6555cc67747eb8fd6ad64a9a20e1749afc6bdbd54eeb785ee7ce7f5d7a6d8736",
+      "size": 15489
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_rs_cpu_fallback.png",
+      "oid": "9ed91b75fda1314bedab977b53e754608a67e047aed54fb9fda6929a9faaef53",
+      "size": 11003
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_rs_gpu_fallback.png",
+      "oid": "cae5c6b6c6e5b2aa91f703791c26ec7cf5f19bc1bc0ac38a10a47fbf67fe25d2",
+      "size": 27761
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_rs_linking.png",
+      "oid": "ddd2731566fc38281f149211b9e612f34f03a33de9709abb186d9769c6ee80cb",
+      "size": 64888
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_rs_namespace.png",
+      "oid": "0dce61fc69906f88dcc3878187c37cf0cfd74078acbc97aa15174dcc049ad7c7",
+      "size": 41109
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_rs_vendor_driver.png",
+      "oid": "3abd49507f3d0dae90c360f734fb46ed9c2d7fba788600ca5744b58d099d62a1",
+      "size": 19187
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_vndk_design.png",
+      "oid": "a11bb352d6ce7c66c6360a30518009c0864f0652b7bf744a69433fd326037769",
+      "size": 39187
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_vndk_linker_namespace1.png",
+      "oid": "0f4d09c81528416a990aa7ff260e4cd18d6117523cfa53d9efb844ff5c08cf99",
+      "size": 42920
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/treble_vndk_linker_namespace3.png",
+      "oid": "5e465338d6e57a0e810bfb04c67b305bacd231f30f0d9eb23a045a28fb35d279",
+      "size": 57347
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/vndk.jpg",
+      "oid": "c42d52617ef268952bea8f2ab00d5e2e6602c7f91c3be0583501e3053af9bb5a",
+      "size": 20159
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_arch.png",
+      "oid": "9d811ee20b6e040effcf16731b6ec8d13adbf129308f41feb9ec8aeea2def458",
+      "size": 17637
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_directory.png",
+      "oid": "a81bdd5669532311e86201a084b4ffb56a1672fd4450ac60b4ec9109de0c2a7c",
+      "size": 21946
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_prebuilt.png",
+      "oid": "9f9a640486cd5c44e46951f8f4f83da7b3c502a6a5dd9407e4f07940f1431a10",
+      "size": 32430
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/11/vndk_snapshot_system_only.png",
+      "oid": "1dc4027192605c64b92dc3311a9b1eecd5a48a141b3889acef4ac5d657e2b3d9",
+      "size": 25430
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/12/treble_vintf_avb_o_p.png",
+      "oid": "48dd291b4421317da35303c5fdf46c23173ae8b4a09838904fcdb629e48682f4",
+      "size": 35440
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/12/treble_vintf_avb_p.png",
+      "oid": "4d138210fb65d0d6beb543855fe9838995dfa56900cebb702d38e26afb1576f8",
+      "size": 29294
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/12/treble_vintf_mm.png",
+      "oid": "5fc192fdb71867c45340bfe9d17a6a462013a1f8380f761aeb2c59d77049674a",
+      "size": 27907
+    },
+    {
+      "path": "raw/github/notes/android/notes/imgs/14/build-flow-java-lib.png",
+      "oid": "78d35a9c9e5072e92fb876bb34e23d5ac63a50d730002551e0187fd24f51081d",
+      "size": 38753
+    },
+    {
+      "path": "raw/github/notes/android/notes/manual.txt",
+      "oid": "6a3c27f8114faf3c34352d18471c70373646dac224b02822358d91123c35eec2",
+      "size": 23934
+    },
+    {
+      "path": "raw/github/notes/android/tree.txt",
+      "oid": "f27d5d133722b3cf562d1c290365ab76489472d491bc44a266411386849592e4",
+      "size": 1359
+    },
+    {
+      "path": "raw/github/notes/ccpp/codewar_notes/c/EvenorOdd.md",
+      "oid": "65dc180c30349444617b5e8579572938efd1008054fa0894bf575b7bc842d4d5",
+      "size": 1733
+    },
+    {
+      "path": "raw/github/notes/ccpp/codewar_notes/c/RockPaperScissors.md",
+      "oid": "a94ca8fa7611e6d8526fd919b53d687e6d910c95e58c4947e35aa4d42eb1221b",
+      "size": 1243
+    },
+    {
+      "path": "raw/github/notes/ccpp/codewar_notes/cpp/240401.md",
+      "oid": "b91339fb8ad4c08ead7cac0e9bc670a392644cdd7d1d462f0ca79ec4a890a275",
+      "size": 6110
+    },
+    {
+      "path": "raw/github/notes/ccpp/codewar_notes/cpp/rotate_array.md",
+      "oid": "bf691358dcce4609f45ba826db0c0226d9b57b0d24912be772217ebc4d94d459",
+      "size": 3006
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/.clang-format",
+      "oid": "3a18e960853f06e951afd16dea90f4e50d0f02f5fe50a8c9dc68453ad26d79d8",
+      "size": 9070
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/future/aysnc.cc",
+      "oid": "990d9032a8405b702643c4b8f344987000b8b86061af8f91b580a3cbc25e04f3",
+      "size": 1384
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/future/future.cc",
+      "oid": "d3124dce3bb4afa90056ecab60b2112ae100a006c1f836bb8b45d28b5814eefc",
+      "size": 441
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/future/promise.cc",
+      "oid": "22763437a7f453a174fdee0c6eb2e3fde0b8d95043b87cbbacf2992588406ffd",
+      "size": 1209
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/future/shared_future.cc",
+      "oid": "d3eaaae386c8e7e754a42b2498a328cf00a0f50f7c69446ba012f706f120f062",
+      "size": 1429
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/future/task.cc",
+      "oid": "8eb333b56ac210f3e913e092d81a78da54466c935e5ccb13df69e8c814b7239f",
+      "size": 999
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/get_id.cc",
+      "oid": "bf928b0d1fa19aa84666f0d66e6faae767e64f460bc5de181645e905897a5c95",
+      "size": 805
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/memory_order/mem_order_demo.cc",
+      "oid": "2663e52b3448b49701a7ca1c7f4b22f806a5d2613c9bc66d9bf88e59ab2f7ba6",
+      "size": 1412
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/memory_order/msg_pass.cc",
+      "oid": "86c650df990b35393ff26680ad6aa48aa03d4b8e6d58ab08a10c1619253f1cc5",
+      "size": 720
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/mpmc_ringbuffer/mpmc_ringbuffer.h",
+      "oid": "9348b9379617fd99090a8321a0ec74ab530511061d1770e5a72be2f0168c64d0",
+      "size": 2632
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/mpmc_ringbuffer/test.cc",
+      "oid": "89a87123fcd766934a11d814c7100a8dbf23eb2633ee156526f5bea27a837363",
+      "size": 2112
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/multithreads/multithread_atexit.c",
+      "oid": "c45e07dbc5404f9198bb63b2d37bf814e8c889d6cc3c674b7049e173f596f8d0",
+      "size": 3121
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/multithreads/multithread_atexit_advanced.c",
+      "oid": "16ddee28ace3d0080f8eaa9be2757580da0c40530a9f3a3f535505e01a8c57ff",
+      "size": 6248
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/sleep_utils.cc",
+      "oid": "12b48a4a88da0e8453b04fb49fac484fa61e40e1fc69c19e8e2c488b24d37740",
+      "size": 564
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/yield/no_yield_demo.cc",
+      "oid": "a4664a1fb69348a19f532b2dfc561f0d3ab0b289f1a5caeebeb01644faab0838",
+      "size": 1163
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/yield/yield.cc",
+      "oid": "cd097c04957a8798776d811bd704ea1b4352643e7f2434f8f26e5051f1f42999",
+      "size": 1499
+    },
+    {
+      "path": "raw/github/notes/ccpp/concurrency/yield/yield_demo.cc",
+      "oid": "291d29e509e98cdb11aabb916fc91759e3555b55726398b50fb9663d2b36c006",
+      "size": 1195
+    },
+    {
+      "path": "raw/github/notes/ccpp/test-ingest.md",
+      "oid": "e621bcce928241db8b0609ac56504cd1e81a1d7d9625d6c00eca21d2de76295d",
+      "size": 7
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/Cargo.lock",
+      "oid": "8658cef9cf84bb804fb25b42ebf0ab3d54e24c08ced83a2550eec7ecb547b583",
+      "size": 1027
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/Cargo.toml",
+      "oid": "19e9f56e179a9467a4761d489e027226d0eaeb3ed5fa289932a5fd3074e20929",
+      "size": 97
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/hypervisor.ld",
+      "oid": "33c1f25528205a91cb3b7049b44e3edb3f052054ce8381dd24c5277c71ac02d3",
+      "size": 5704
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/run.sh",
+      "oid": "eb923abd94ec33b8d3d5308e919f758e41eee5f4a46cd0a3d60767a45548b6f6",
+      "size": 554
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/rust-toolchain.toml",
+      "oid": "074f3d2706b43f64e57aea018665b4f9dd84f0a42863997b830c6a24a62f3b20",
+      "size": 71
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/allocator.rs",
+      "oid": "11a60b95035e99f7858cc78f3d3d2951a55ae0bb270ddbb0f9d506ca1465d285",
+      "size": 1097
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/main.rs",
+      "oid": "3dddeb02dfde7002a3380ad30f12ad646d267d8fecb544cc60b7d2dd6e00a2b4",
+      "size": 1958
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/print.rs",
+      "oid": "d06b98c5d430f31d410991595c089d0ee5022da56c9bce6a325807f34c1588ff",
+      "size": 718
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/hypervisor/src/trap.rs",
+      "oid": "604d60669b1151e3067cfff3a2a6931263fbd33db32e63b8ba9d4ebb2847fe21",
+      "size": 2124
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/common.c",
+      "oid": "ddb1e0968dfae8818a56366a10da9a773cf6cd622fef304a20ec67620644d8c4",
+      "size": 2448
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/common.h",
+      "oid": "2102fae40e3aca4e6c0939934bd573b87799f9719a5f0d6b3100422b40f634ed",
+      "size": 1153
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/disk/hello.txt",
+      "oid": "1fbc105ea4f813cb6c3e2e0afb59c8f93c9722948c9909b4c1781a4f5f9e10dc",
+      "size": 17
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/disk/meow.txt",
+      "oid": "90cdaf13f564e4d2e76706f84226a554a2bbdb2542c2e48764d16bffd17bb38a",
+      "size": 18
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/kernel.c",
+      "oid": "e351867be58786c5fdfcd595aa510c9f5a1256c598a7a9cfd25423d3970e882b",
+      "size": 22316
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/kernel.h",
+      "oid": "5cc193a58de985ccfe20b77dfc66c4ab0d9858084126cac92cf0c443a381f437",
+      "size": 4220
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/kernel.ld",
+      "oid": "6cb4b441d6e5b5d703ad62ee3f022bb32428dc63913daea0e2aa9c681e4017e6",
+      "size": 548
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/lorem.txt",
+      "oid": "12494e7ff4a32a53fbe5c9d2f2980fc15c2524da0b5719d6c61cbaa358e8af0f",
+      "size": 608
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/run.sh",
+      "oid": "3bc3917182327ec12d851524d04dc79307190ef80ad151170f6ea287a055ba43",
+      "size": 1372
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/shell.c",
+      "oid": "b7c5f786ceab528cb67bc0ac58993a2555d8bac8e30a853279d8205f8950fbab",
+      "size": 1118
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/user.c",
+      "oid": "742ad16fd027d2b1278aae64338075fc81d4c4c7f452bb0fbb834d5be98d37d5",
+      "size": 1515
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/user.h",
+      "oid": "3bd3fe1758161ac556f0f55c0a281efb6cec027e3ed9c873ac779d7aba8d228f",
+      "size": 242
+    },
+    {
+      "path": "raw/github/notes/kernel/handson/1000lines/os/user.ld",
+      "oid": "3844f517c95346e84f58c9e52d41634a34c5e78e8cfc5668ec7449707e81135d",
+      "size": 581
+    },
+    {
+      "path": "raw/github/notes/lib/linux_kernel/index.md",
+      "oid": "0635cb3845c7dcea2e05e1cb06534a371e17f936d03c5178c5ac027a00154533",
+      "size": 871
+    },
+    {
+      "path": "raw/github/notes/lib/linux_kernel/lib_deep_dive_r2.md",
+      "oid": "8b1415567bfe77a4958f85512b71f584f522b49a53cb6cd22f44348ff9f12483",
+      "size": 27563
+    },
+    {
+      "path": "raw/github/notes/lib/linux_kernel/lib_subsystem.md",
+      "oid": "1b006b7fe8884ebc990da1c82827a1b86bd4b2b76937453813743e5270f6d7f5",
+      "size": 32826
+    },
+    {
+      "path": "raw/github/notes/public/logo.svg",
+      "oid": "caab60004e7475cef4bf551282a2fc63bb2ed76e4ee338682ec99afc3ae52988",
+      "size": 284
+    },
+    {
+      "path": "raw/github/notes/public/pwa-192x192.svg",
+      "oid": "5543bdf7d3f528a37b734a6a0930ffb2848bbe03fed799029e31a7de471bcd9a",
+      "size": 535
+    },
+    {
+      "path": "raw/github/notes/public/pwa-512x512.svg",
+      "oid": "62817c751eba8e2ee83152463599cbcb90fce66aefe1aad391c2029b881dae82",
+      "size": 537
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/README.md",
+      "oid": "81e7e2299064ed95aa60ca00e77460eeb0d2a1498a573b88eeb7ff80ff3862b4",
+      "size": 8831
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/literature-review-2023-2026.md",
+      "oid": "c88bb218e2afa9c96037d2841c3f400e559565f6a272ec8ad88d01f950a565d6",
+      "size": 27486
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/method-comparison.md",
+      "oid": "e4359c19feebdfbd699ef9a9989ef4af0ff13e09b190efd955764d77377d9fc3",
+      "size": 8607
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-01-class-imbalance-deep-learning.md",
+      "oid": "e3d36aab79424e59313e456fa523ed6e5e588e6688f8f41c4a4d32524a9a96b0",
+      "size": 5050
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-02-SVM-malicious-traffic.md",
+      "oid": "f37a884f753440757f493f4401212def3093096555c01f02a11af9e14ac956ce",
+      "size": 6176
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-03-feature-selection-ensemble.md",
+      "oid": "712277d87d2a40b3616e1cc10cd33bf4dd3173a8c8f64c80f30da64e2ab00d33",
+      "size": 3231
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-04-WNN-intrusion.md",
+      "oid": "4ba7f8495f915b389ab7a2cf12daf6b2ca93bffeceeb506783b4a28864670913",
+      "size": 898
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-05-ML-algorithm-performance.md",
+      "oid": "32d401866a5d9dd477369665c2990c24f645ea7447f53610708d7b8f78d74dbc",
+      "size": 1157
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-06-Bloom-XOR-Filters.md",
+      "oid": "9421701d4fa3617b0d6385cd7247e5c5f0819cd07adbe171b50b16e692204177",
+      "size": 1032
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-07-HCRNNIDS.md",
+      "oid": "c9e0c024de5ce947d09b263d711c50bd8b20ed9e0ad9ad3697e0d4b565f6758a",
+      "size": 7417
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-08-CNN-LSTM-intrusion.md",
+      "oid": "643cbaf72374483aa73043ed3cbb4268bdab5db66b1198a9b9363bb030150be5",
+      "size": 1053
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-09-ML-DL-hybrid-IDS.md",
+      "oid": "3e2d27e27d28fad20f6f85111c7ef88526846331fe503fd80eb202a669bad338",
+      "size": 1125
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-10-DNN-AntiRectifier.md",
+      "oid": "8ab076010a637f6b5419e7c19dee3b559ce9c6e89711644f3ed674d27c5c1503",
+      "size": 983
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-11-Fast-Learning-Neural-IDS.md",
+      "oid": "6d0125841fc6cf39cf80062e7118c3155a3de97ccc40430ad4c255cdfb133cf1",
+      "size": 2142
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-12-hierarchical-hybrid-IDS.md",
+      "oid": "aefa656aa46302aca65fd7e7f050be9413e5f894b3b49f76f189cbab37c6550c",
+      "size": 2196
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-13-ANN-DDOS.md",
+      "oid": "6219b1f5f789df6d1c6962113f7243afeb2845d415055035c29d3cd6c5f457b2",
+      "size": 893
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-14-Botnet-CNC-SVM.md",
+      "oid": "8591bcdd8abe811c664937a2174633d37f8eb9270848cd6d76c0af14cefbb003",
+      "size": 1000
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-15-Botnet-TCP-ML.md",
+      "oid": "13b36973ddb6fe3e4f6eeb607323d6b99e9f96e54fcd12c394eca11d78c1dae9",
+      "size": 755
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-16-botnet-raw-traffic-dl.md",
+      "oid": "6738781d2dda23f16d016345f33edb74d7e901086b983bb2f0a2e80b0f1abf5d",
+      "size": 4389
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-17-CNN-NS-Botnet.md",
+      "oid": "68c087c088cfeda7396d045d90985003636d8a29a53f0f4c8311c86ddbd2ac67",
+      "size": 907
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-18-VAE-BPNN-insider-threat.md",
+      "oid": "588d2cbc71e245e6ac1f5a5333f00ee07d0187086962b537767fc97b85e8d3eb",
+      "size": 956
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-19-multilayer-insider-threat.md",
+      "oid": "574fb196f3a1861765868aca3e43c017d6619723301633b118fde0ae9ba0a2db",
+      "size": 2086
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-20-zero-day-behavioral.md",
+      "oid": "87c3b4f38a755ca5e8dbf88a8911d8a596fd1569ad7222a140d84eaf0d7ce821",
+      "size": 965
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/01-IDS/paper-25-Machine-Learning-IDS-review.md",
+      "oid": "6a49c85824fd248f92baad39b19abd294dec73553d352dc40c7086085dc518fb",
+      "size": 1108
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-21-TLS-ensemble-94.85.md",
+      "oid": "65b652757b8989e4665fb8db520dd2d838fcee8e3ee83aafb95866a53e1a9851",
+      "size": 6161
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-22-TLS-BiLSTM-96.71.md",
+      "oid": "ce4c59095b1e92ed10077469b5fda55f784bb06db9604f22c64cf1adcb6e6093",
+      "size": 2968
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-23-TLS-RF-malware.md",
+      "oid": "baf013bdab9888683224ddf69740bf8587527a9b2c07f9ce7591416eda333f58",
+      "size": 1329
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-24-TLS-review.md",
+      "oid": "0fcc175bbd1b31441bbf94da52eecee21485f0eb7bc3b797b2a4fa2d90576aa4",
+      "size": 967
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-25-MKEL-multi-grained.md",
+      "oid": "7166e83f161bbad92bc75418735540eb519dd9350a88ef5a9ffc62fa49631cfb",
+      "size": 2267
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-26-Ensemble-ML-99.85.md",
+      "oid": "8a7be6fe6b60038517efe7762c3c368348ef651bf52c10a3ef493b8967f2c290",
+      "size": 1661
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-27-unsupervised-TLS.md",
+      "oid": "413f2ab4ad0afa75580fb8b6a91df853c1de76e69941af0efe455f95e939e923",
+      "size": 1010
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-28-FlowSpectrum.md",
+      "oid": "caa5252fb0dd3bd1046db1fecad11ef724df2d2afaaa4051f794f1b7da913a63",
+      "size": 1186
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-29-multi-scale-CNN-LSTM-Attention.md",
+      "oid": "3a5b15226727bfa7ef1b6da59d5b5d8bf600d5c3d6c44a0fd18060db2c867bf7",
+      "size": 4085
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-30-deep-fingerprinting.md",
+      "oid": "2a623b2799cfab561effaf91cb31dc2b9bbb4ad7917a83a1d1f83fe3804faf9f",
+      "size": 939
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-31-GraphDapp-GNN.md",
+      "oid": "255f0c10c54cfc5ce8ca32294cd3327541773121f51a3c4d0c281590d56fa51f",
+      "size": 1132
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-32-FS-Net.md",
+      "oid": "7143f6895db2bd05cbab41b711b446482cfb870685ef9a32b1ff7adbf1c33a68",
+      "size": 833
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/02-Encrypted/paper-33-lightweight-KNN.md",
+      "oid": "56adcd39dbbc4db9961e7ed0c75257b807210d7aee576e90de2bb5f2d9378fa9",
+      "size": 962
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-35-CNN-LSTM-hybrid-traffic.md",
+      "oid": "63b7263481e8c0bf3943eec683a2719218a89e0b5855fb0ed1a3661fb7db5a92",
+      "size": 1186
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-36-IoT-malware-visual.md",
+      "oid": "0a0dd03a9de53484d97eec36a5a5bcbb7b8ba38d8a452f4a34cd9a99abdc5227",
+      "size": 1150
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-37-CNN-SE-Net-malware.md",
+      "oid": "6785dcfdf262743a7cabfb3691ecb955322abfa87df9cc20ff0b7dd1633b10da",
+      "size": 1163
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-38-Rew-LSTM.md",
+      "oid": "1e26e4bf0d54fccf2ff59acaa267d9af1f7b0ae266c58b24ca24f562e66e0d71",
+      "size": 2054
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-39-LSTM-Autoencoder-anomaly.md",
+      "oid": "b0bb2e6dd3a1424db5da4c30c49f59603e240fa5ff43d456951ac83f7d35387a",
+      "size": 1086
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-40-CNN-RNN-traffic.md",
+      "oid": "511d9010b7da89b4ca006847330cf9812cd8912f058c856f2860fce575d0f6a3",
+      "size": 1045
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-41-NEAE-NeuroEvolution.md",
+      "oid": "a19b56f9cc10e0411375bf5e75418b30168379fafd738681d4e7768bbf94d17a",
+      "size": 1329
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-42-VAE-anomaly-detection.md",
+      "oid": "81951b9a28f73fbd13f84bb8ba5c8eb21d88ff38428847bf8188833c18b0bf9c",
+      "size": 1066
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-43-CAE-AD-time-series.md",
+      "oid": "3117e2e4a0ce490c59665b67b204da64b873f8fca4b0407778745fe2625231b8",
+      "size": 939
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-44-MTGAE-Graph.md",
+      "oid": "6e0e84439c5c88a9081954c90114365573fb8b4fe1993b70124e0de76d8b3d59",
+      "size": 2591
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-45-multi-scale-attention-fusion.md",
+      "oid": "6f7429d0947170a3dfa99a9bf2544621ced617849adaa474bf4b3b498b7c4fca",
+      "size": 1316
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-46-iTransformer-traffic.md",
+      "oid": "e183221c2459542fa1d2bedbd9ec244eadf05e74c9933f8f7acf925bde46db5e",
+      "size": 1115
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-47-SmartX-eBPF-BiLSTM.md",
+      "oid": "603258b8f9f83c24de520fb36db762d8b187a6e2e2300da787b0e52e18c3d3ca",
+      "size": 6954
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/03-DeepLearning/paper-48-SDAE-encrypted-traffic.md",
+      "oid": "31c6c58a9aa0f54b491301860f64c56b42a83b6db99b86f9801f4972f5cc9221",
+      "size": 984
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-49-ML-IoT-security.md",
+      "oid": "329ea3623544b96e6b1338511fdc768dffbad878dde167e3d6f6def0d2d31749",
+      "size": 1394
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-50-N-BaIoT-DDOS.md",
+      "oid": "0c1db0f4feb7de7e4271c11dabd80ac7f534ed785b980683741051dbdbb11ef3",
+      "size": 1045
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-51-mobile-malware-detection.md",
+      "oid": "5a68e52ca45130fde02e6ec9df70a7aad5310047b0e72b93bec6081458acb389",
+      "size": 934
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-52-UAV-WiFi-detection.md",
+      "oid": "e9f1277cea5a56d5fdd08e1ab8a1e3dd47cb31d5badc3d77abc1a2e6f2d989e3",
+      "size": 2102
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-53-mobile-malware-detection.md",
+      "oid": "5dd54f425196bfb0f1383a1e8f71ca68f69bad443a52dd7f094e70d1778caf02",
+      "size": 1033
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-54-5G-virtual-security.md",
+      "oid": "e45431108b8b56c3b369a49a9e535b0669acc049d1022e9aa77c26d0b991003b",
+      "size": 1634
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-55-5G-SDN-IDS.md",
+      "oid": "60a6960313df18aef8534c82a396fb60c2f01c95e896dce80e4f7a10e7771c27",
+      "size": 2594
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/04-IoT-5G/paper-56-sampled-flow-detection.md",
+      "oid": "203d06738787be163cfc357b99e26526f6f6074dfcfa75d849290bc50ed27fc4",
+      "size": 1174
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-57-TAD-multi-adversarial.md",
+      "oid": "3e2e91dad6bd52a8264544a06ef3957d153d6daf97f17a360f102e240db18309",
+      "size": 2867
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-58-IDS-robustness.md",
+      "oid": "867fc4910fdccfeaef57685829bb31045ba4b314494006d9478cc5fab19b4d04",
+      "size": 829
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-59-mutated-traffic-GAN.md",
+      "oid": "8e9ce415490d952c819b872c736768bbfed465f409056b51698aebe50c789d40",
+      "size": 7002
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/05-Adversarial/paper-60-GAN-IDS-attack.md",
+      "oid": "ee6d3e2993a2c2328b38fc03e1562aab5bb646e28d760dc63e1798e8d7b7a697",
+      "size": 2061
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/06-SDN/paper-61-SDN-dynamics-diffusion.md",
+      "oid": "44cd268e3111b43277868de0a387e5e0e8ce20206a3da180e1310b955ef15ed5",
+      "size": 1035
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/papers/06-SDN/paper-62-SDN-security-architecture.md",
+      "oid": "890cb733a6c0595dcb5244bd8eb1e273d560f49bce3f39055f8d6c97220a9b57",
+      "size": 1122
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/quick-reference.md",
+      "oid": "3c766bf2ac8517b6589281dd213c930ad520e1b2e43e312f45a525ed5da185a9",
+      "size": 5833
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/references.bib",
+      "oid": "1ec57aa45cea291be826b7a173c885052130a1f33f0a8d1f1d3de64b91f0724d",
+      "size": 11481
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/research-notes.md",
+      "oid": "28f27c2523febcb57cc59ace3ff6b911288136cf7c2a87d67c2706bdc1ebd218",
+      "size": 3256
+    },
+    {
+      "path": "raw/github/notes/security/network-traffic-analysis/research-timeline.md",
+      "oid": "207b0ff0a9e45b29294adb8d6304c309f862917deb71505fa11b64cd539c5541",
+      "size": 10634
+    },
+    {
+      "path": "raw/github/snort3/.meta.md",
+      "oid": "f09c7fb47ec8602e1fa56df510b742dc77df130a6e98f0d6948bf6c6d9c97a77",
+      "size": 432
+    }
+  ]
+}

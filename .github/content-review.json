@@ -111,8 +111,8 @@
       "categories": [
         "stubs"
       ],
-      "reason": "主题或示例代码目录页；已检查条目和阅读入口，目录用途不要求长篇正文。",
-      "sha256": "b778f9f21cd06453471883d77ad99db529d5d800f26978a73e39b643ad271845"
+      "reason": "工具与知识管理主题目录页；已核对现有工具及新增 Pyramid 阅读入口，无空白章节。",
+      "sha256": "28bc838797401d229c91bc6d172b4c02ebebc429217e023a429185384e87600c"
     },
     "coding_agent/hermes_memory_design.md": {
       "categories": [
@@ -302,6 +302,13 @@
       ],
       "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
       "sha256": "de192a532357a9968247ace96f6ce5095ba0934dd5cfcfe004f050e047b56e1f"
+    },
+    "tools/pyramid.md": {
+      "categories": [
+        "stubs"
+      ],
+      "reason": "知识库阅读入口页；已核对主题概念、来源摘要、综合分析和 Obsidian 打开路径，不重复复制知识包正文。",
+      "sha256": "36bcc15acb35cfc934fee9d9b8ea5248da55ac0b88c48425be5903072769c377"
     }
   }
 }

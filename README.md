@@ -4,6 +4,10 @@
 
 在线阅读：[GitHub Pages](https://sphinxes0o0.github.io/notes/)。各主题的 `index.md` 提供阅读入口。
 
+## 技术知识库
+
+Pyramid 的概念页、来源摘要和综合分析统一在本仓库维护。浏览[知识库首页](https://github.com/Sphinxes0o0/notes/blob/main/wiki/pyramid/wiki/home.md)，或在 Obsidian 中打开 `wiki/pyramid/wiki/`。网站的[知识库入口](https://sphinxes0o0.github.io/notes/tools/pyramid)提供在线阅读导航；[迁移记录](https://github.com/Sphinxes0o0/notes/blob/main/wiki/MIGRATION.md)说明历史、来源快照和附件的处理方式。
+
 ## 本地开发
 
 使用 Node.js 22（最低 22.12）和 npm。本地与 GitHub Actions 均通过 `.nvmrc` 指定 Node 主版本。

@@ -1,0 +1,77 @@
+---
+type: source
+source-type: web
+title: "Tip of the Week #90: Retired Flags"
+author: "Abseil Team"
+date: 2012
+url: https://abseil.io/tips/90
+summary: "abseil C++ Tips of the Week #90: Retired Flags."
+tags: [cpp, abseil, totw, performance, idioms]
+created: 2026-06-10
+source-md5: 36373408194d5e5f2b0d1fde2a345043
+---
+
+> 原文：<https://abseil.io/tips/90> · 作者：Abseil Team · 发布：2012 · 内容许可：CC BY 4.0（abseil.io docs）
+>
+> 完整原文转录（脚注 [Tip \#NN](/tips/NN) 链接保留，邮件保护链接为 CloudFlare 默认转码无法还原）。
+
+# Tip of the Week \#90: Retired Flags
+
+\
+\
+
+Originally posted as TotW \#90 on March 19, 2015
+
+\*by [Titus Winters](/cdn-cgi/l/email-protection#f6829f828385b6919999919a93d895999b)
+
+One of the frustrating things about our (mis)use of command-line flags is the difficulty in removing a flag from binary and production servers safely (revisit https://abseil.io/tips/45 for some frustrating misuses). The trouble? A binary won’t start if you specify a flag that is no longer defined, and thus removal of flags may require coordination between C++ code and your job launching scripts and configurations.
+
+In some cases, this coordination can be quite challenging (conditioning production code based on a binary version). If only there were a better way!
+
+There is. A while back we added a new concept to the C++ command-line flags system called “retired flags” ([`ABSL_RETIRED_FLAG`](https://github.com/abseil/abseil-cpp/blob/master/absl/flags/flag.h#L255)).
+
+A retired flag creates no symbol in C++ (no more `FLAGS_some_flag` global variable to rely upon), does not appear in `--help`, but will be accepted when specified on the command line (although an `ERROR` will be logged). In this way, flags that are no longer used by the code can be “retired”, separating C++ changes from production configuration changes. Once the configuration changes are all clear, the retired flag can be removed once and for all.
+
+Retired flags were designed to be used in many situations (including cases involving cross-repo non-atomic commit requirements). A step-by-step for a very simple flag retirement could look like this:
+
+1.  Remove uses of `FLAGS_frobber` from code.
+
+    If you’re following the advice of https://abseil.io/tips/45 and using flags primarily from `main()` this should be easy to do and to check for.
+
+2.  Change the definition of the flag to retire it. That is:
+
+    <div class="language-c++ highlighter-rouge">
+
+    <div class="highlight">
+
+    ``` cpp
+    ABSL_FLAG(type, frobber, "default", "Which frobber to use?");
+    ```
+
+    </div>
+
+    </div>
+
+    should become:
+
+    <div class="language-c++ highlighter-rouge">
+
+    <div class="highlight">
+
+    ``` cpp
+    ABSL_RETIRED_FLAG(type, frobber, "default", "retired");
+    ```
+
+    </div>
+
+    </div>
+
+3.  Wait for binary release(s). Once all the jobs in all of your serving cells are invoking the new binary, you can continue.
+
+4.  Remove the flag from your production configuration. Once searching the relevant production configs shows no hits for the frobber flag, you can continue.
+
+5.  Remove the retired flag.
+
+We’ve had success with very complicated flag removals: the motivating example for this effort was the removal of flags defined in a legacy internal filesystem, which was more complicated because the flags were defined in a library (and thus used in numerous binaries). From what we’ve seen, even the most complicated flag removals can be enabled safely with this system. So, the next time you’re wondering how to remove a flag safely, consider retiring it first and taking it step-by-step.
+
+
