@@ -1,0 +1,5396 @@
+{
+  "presets": [
+    {
+      "id": "14ced730-5c0d-4597-b8fd-999d5f992f54",
+      "name": "tech",
+      "options": {
+        "collapse-filter": false,
+        "search": "-path:entities/exercise-science",
+        "showTags": true,
+        "showAttachments": false,
+        "hideUnresolved": true,
+        "showOrphans": true,
+        "collapse-color-groups": false,
+        "colorGroups": [],
+        "collapse-display": false,
+        "showArrow": true,
+        "textFadeMultiplier": 0.8,
+        "nodeSizeMultiplier": 1.88411892361111,
+        "lineSizeMultiplier": 1.1240234375,
+        "collapse-forces": false,
+        "centerStrength": 0.333116319444444,
+        "repelStrength": 12.5789930555556,
+        "linkStrength": 0.236762152777778,
+        "linkDistance": 500,
+        "scale": 0.13437413021564396,
+        "close": false
+      },
+      "nodePositions": [
+        {
+          "id": "AGENT.md",
+          "x": 1910.646728515625,
+          "y": -4256.37548828125
+        },
+        {
+          "id": "ARCHITECTURE.md",
+          "x": 5960.9755859375,
+          "y": -2083.360595703125
+        },
+        {
+          "id": "index.md",
+          "x": 4158.025390625,
+          "y": -2974.9306640625
+        },
+        {
+          "id": "log.md",
+          "x": 6057.2646484375,
+          "y": -1695.948486328125
+        },
+        {
+          "id": "raw/github/notes/CLAUDE.md",
+          "x": -3216.71435546875,
+          "y": -3451.77490234375
+        },
+        {
+          "id": "raw/github/notes/README.md",
+          "x": 3423.5859375,
+          "y": -5528.76171875
+        },
+        {
+          "id": "raw/github/notes/TODO.md",
+          "x": -4412.67919921875,
+          "y": 4022.633056640625
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/block_core.md",
+          "x": 6206.22802734375,
+          "y": -2208.122314453125
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/block_deep_dive_r1.md",
+          "x": 3437.142578125,
+          "y": -2050.728515625
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/block_deep_dive_r2.md",
+          "x": 1468.34423828125,
+          "y": -1473.56640625
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/block_genhd.md",
+          "x": 3528.209716796875,
+          "y": -3926.760009765625
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/block_mq.md",
+          "x": 945.913330078125,
+          "y": -3569.006591796875
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/block_request.md",
+          "x": 5894.4052734375,
+          "y": -3223.418212890625
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/block_scheduler.md",
+          "x": 2416.2470703125,
+          "y": -3407.930908203125
+        },
+        {
+          "id": "raw/github/notes/block/linux_kernel/index.md",
+          "x": 4894.20458984375,
+          "y": -3359.3076171875
+        },
+        {
+          "id": "raw/github/notes/ccpp/c/c.md",
+          "x": 1285.7987060546875,
+          "y": 3728.648193359375
+        },
+        {
+          "id": "raw/github/notes/ccpp/c/memory.md",
+          "x": -924.4677734375,
+          "y": 502.3143005371094
+        },
+        {
+          "id": "#Linux",
+          "x": 2638.539794921875,
+          "y": -2444.314697265625
+        },
+        {
+          "id": "#C",
+          "x": -1890.9197998046875,
+          "y": -1954.7811279296875
+        },
+        {
+          "id": "#Memory",
+          "x": 59.32465362548828,
+          "y": 429.934326171875
+        },
+        {
+          "id": "#Notes",
+          "x": -2580.220703125,
+          "y": -91.44659423828125
+        },
+        {
+          "id": "raw/github/notes/ccpp/c/memory_management.md",
+          "x": -566.9102172851562,
+          "y": -468.7240905761719
+        },
+        {
+          "id": "raw/github/notes/ccpp/common_bit_operations.md",
+          "x": 3343.600830078125,
+          "y": -2196.79541015625
+        },
+        {
+          "id": "#c/cpp",
+          "x": 2904.545654296875,
+          "y": -4117.70703125
+        },
+        {
+          "id": "raw/github/notes/ccpp/compilation_process.md",
+          "x": -2808.73046875,
+          "y": 872.2859497070312
+        },
+        {
+          "id": "#ifdef",
+          "x": -4057.6142578125,
+          "y": 679.7227783203125
+        },
+        {
+          "id": "#elif",
+          "x": -4331.9599609375,
+          "y": 1557.0526123046875
+        },
+        {
+          "id": "#else",
+          "x": -3431.385498046875,
+          "y": -798.1910400390625
+        },
+        {
+          "id": "#endif",
+          "x": -4241.8642578125,
+          "y": -710.0048217773438
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/atomic.md",
+          "x": 1552.5484619140625,
+          "y": 2880.03076171875
+        },
+        {
+          "id": "#cpp",
+          "x": 3626.75927734375,
+          "y": 4790.88037109375
+        },
+        {
+          "id": "#atomic",
+          "x": 2430.5400390625,
+          "y": 4513.0537109375
+        },
+        {
+          "id": "#concurrency",
+          "x": 1174.383544921875,
+          "y": -123.98899841308594
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/array.md",
+          "x": -2314.151123046875,
+          "y": 2725.234375
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/deque.md",
+          "x": -4711.22802734375,
+          "y": 878.582275390625
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/list.md",
+          "x": -3870.184814453125,
+          "y": 1765.1925048828125
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/map.md",
+          "x": -5239.95654296875,
+          "y": 456.7146301269531
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/overview.md",
+          "x": -5469.92724609375,
+          "y": 1114.3511962890625
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/stack.md",
+          "x": -4915.73583984375,
+          "y": -101.15467834472656
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/unordered_map.md",
+          "x": -4761.80810546875,
+          "y": 2822.803955078125
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/containers/vector.md",
+          "x": -4795.80224609375,
+          "y": 3741.9638671875
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/copy_semantics.md",
+          "x": 5667.60791015625,
+          "y": 3820.546630859375
+        },
+        {
+          "id": "#copy-semantics",
+          "x": 6734.67578125,
+          "y": 1524.09375
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/cpp.md",
+          "x": -4083.131103515625,
+          "y": 3647.287109375
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/cpp_modern.md",
+          "x": 5834.5703125,
+          "y": 2792.462646484375
+        },
+        {
+          "id": "#move-semantics",
+          "x": 6569.30419921875,
+          "y": 1251.612548828125
+        },
+        {
+          "id": "#perfect-forwarding",
+          "x": 6037.5302734375,
+          "y": 1325.471923828125
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/memory_pool.md",
+          "x": 5784.42626953125,
+          "y": 4109.02587890625
+        },
+        {
+          "id": "#memory-pool",
+          "x": 6672.25390625,
+          "y": 2395.195068359375
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/object_creation_heap_or_stack.md",
+          "x": 3402.248291015625,
+          "y": 3235.4794921875
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/raii.md",
+          "x": 3111.291259765625,
+          "y": 6332.2001953125
+        },
+        {
+          "id": "#raii",
+          "x": 3826.244873046875,
+          "y": 6063.45263671875
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/smart_pointers.md",
+          "x": 6024.71337890625,
+          "y": 2266.046875
+        },
+        {
+          "id": "#smart-pointer",
+          "x": 6438.4765625,
+          "y": 660.24169921875
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/type_casting.md",
+          "x": 2479.75830078125,
+          "y": 6277.37158203125
+        },
+        {
+          "id": "#type-casting",
+          "x": 600.2706298828125,
+          "y": 6772.47021484375
+        },
+        {
+          "id": "raw/github/notes/ccpp/cpp/virtual_functions.md",
+          "x": 5869.31884765625,
+          "y": 2532.02880859375
+        },
+        {
+          "id": "#oop",
+          "x": 6760.91650390625,
+          "y": 523.1998291015625
+        },
+        {
+          "id": "raw/github/notes/ccpp/index.md",
+          "x": -651.58544921875,
+          "y": 1621.0577392578125
+        },
+        {
+          "id": "raw/github/notes/ccpp/serialization.md",
+          "x": 885.9375610351562,
+          "y": 248.03872680664062
+        },
+        {
+          "id": "raw/github/notes/crypto/linux_kernel/crypto_async.md",
+          "x": -45.67927932739258,
+          "y": -3770.432861328125
+        },
+        {
+          "id": "raw/github/notes/crypto/linux_kernel/crypto_core.md",
+          "x": -2474.817626953125,
+          "y": -289.1467590332031
+        },
+        {
+          "id": "raw/github/notes/crypto/linux_kernel/crypto_deep_dive_r1.md",
+          "x": -6583.71337890625,
+          "y": 900.3550415039062
+        },
+        {
+          "id": "raw/github/notes/crypto/linux_kernel/crypto_infra.md",
+          "x": 1991.5531005859375,
+          "y": -4009.747314453125
+        },
+        {
+          "id": "raw/github/notes/crypto/linux_kernel/crypto_skcipher.md",
+          "x": -2532.087646484375,
+          "y": 3759.36279296875
+        },
+        {
+          "id": "raw/github/notes/crypto/linux_kernel/index.md",
+          "x": -2933.1552734375,
+          "y": -2292.733154296875
+        },
+        {
+          "id": "raw/github/notes/datastructure/01_复杂度_如何衡量程序运行的效率.md",
+          "x": 3294.20458984375,
+          "y": -1603.55078125
+        },
+        {
+          "id": "raw/github/notes/datastructure/02_数据结构_将昂贵的时间复杂度转换成廉价的空间复杂度.md",
+          "x": -5413.95458984375,
+          "y": 795.1995849609375
+        },
+        {
+          "id": "raw/github/notes/datastructure/03_增删查_掌握数据处理的基本操作_以不变应万变.md",
+          "x": 5292.9658203125,
+          "y": -2006.052978515625
+        },
+        {
+          "id": "raw/github/notes/datastructure/04_如何完成线性表结构下的增删查.md",
+          "x": 3923.758544921875,
+          "y": -1912.707763671875
+        },
+        {
+          "id": "raw/github/notes/datastructure/05_栈_后进先出的线性表_如何实现增删查.md",
+          "x": -4670.994140625,
+          "y": 3728.553466796875
+        },
+        {
+          "id": "raw/github/notes/datastructure/06_队列_先进先出的线性表_如何实现增删查.md",
+          "x": -4751.36572265625,
+          "y": -933.106689453125
+        },
+        {
+          "id": "raw/github/notes/datastructure/07_数组_如何实现基于索引的查找.md",
+          "x": 4275.99560546875,
+          "y": 806.6466064453125
+        },
+        {
+          "id": "raw/github/notes/datastructure/08_字符串_如何正确回答面试中高频考察的字符串匹配算法.md",
+          "x": -1498.665771484375,
+          "y": -4739.06591796875
+        },
+        {
+          "id": "raw/github/notes/datastructure/09_树和二叉树_分支关系与层次结构下_如何有效实现增删查.md",
+          "x": -6878.55126953125,
+          "y": -321.04400634765625
+        },
+        {
+          "id": "raw/github/notes/datastructure/10_哈希表_如何利用好高效率查找的利器.md",
+          "x": 1992.68212890625,
+          "y": -66.50838470458984
+        },
+        {
+          "id": "raw/github/notes/datastructure/11_递归_如何利用递归求解汉诺塔问题.md",
+          "x": -6336.60400390625,
+          "y": -337.1837463378906
+        },
+        {
+          "id": "raw/github/notes/datastructure/12_分治_如何利用分治法完成数据查找.md",
+          "x": -1502.3292236328125,
+          "y": -83.27134704589844
+        },
+        {
+          "id": "raw/github/notes/datastructure/13_排序_经典排序算法原理解析与优劣对比.md",
+          "x": -5310.42578125,
+          "y": -1155.3111572265625
+        },
+        {
+          "id": "raw/github/notes/datastructure/14_动态规划_如何通过最优子结构_完成复杂问题求解.md",
+          "x": 86.27985382080078,
+          "y": -6232.58642578125
+        },
+        {
+          "id": "raw/github/notes/datastructure/15_定位问题才能更好地解决问题_开发前的复杂度分析与技术选型.md",
+          "x": -2846.0029296875,
+          "y": 1914.744140625
+        },
+        {
+          "id": "raw/github/notes/datastructure/16_真题案例1_算法思维训练.md",
+          "x": -6539.2822265625,
+          "y": 1625.463623046875
+        },
+        {
+          "id": "raw/github/notes/datastructure/17_真题案例2_数据结构训练.md",
+          "x": -2851.35546875,
+          "y": -4924.7197265625
+        },
+        {
+          "id": "raw/github/notes/datastructure/18_真题案例3_力扣真题训练.md",
+          "x": -6085.61572265625,
+          "y": 3366.7099609375
+        },
+        {
+          "id": "raw/github/notes/datastructure/19_真题案例4_大厂真题实战演练.md",
+          "x": 3881.918701171875,
+          "y": -2254.204345703125
+        },
+        {
+          "id": "raw/github/notes/datastructure/20_代码之外_技术面试中你应该具备哪些软素质.md",
+          "x": -5073.92578125,
+          "y": -2884.474365234375
+        },
+        {
+          "id": "raw/github/notes/datastructure/21_面试中如何建立全局观_快速完成优质的手写代码.md",
+          "x": 5945.1171875,
+          "y": 183.73727416992188
+        },
+        {
+          "id": "raw/github/notes/datastructure/array_linkedlist.md",
+          "x": -37.267887115478516,
+          "y": 5403.02490234375
+        },
+        {
+          "id": "raw/github/notes/datastructure/cpp_linked_list.md",
+          "x": -244.8258514404297,
+          "y": -4011.735107421875
+        },
+        {
+          "id": "raw/github/notes/datastructure/index.md",
+          "x": -833.3467407226562,
+          "y": 2270.73291015625
+        },
+        {
+          "id": "raw/github/notes/datastructure/加餐_课后练习题详解.md",
+          "x": -5653.2822265625,
+          "y": -4132.40185546875
+        },
+        {
+          "id": "raw/github/notes/datastructure/开篇词_数据结构与算法_应该这样学.md",
+          "x": -2038.9599609375,
+          "y": -973.8568115234375
+        },
+        {
+          "id": "raw/github/notes/design_patterns/13-反转原则如何减少代码间的相互影响.md",
+          "x": -1460.12744140625,
+          "y": -1584.5362548828125
+        },
+        {
+          "id": "raw/github/notes/design_patterns/14-惯例原则如何提升编程中的沟通效率.md",
+          "x": -4689.64892578125,
+          "y": 3277.64794921875
+        },
+        {
+          "id": "raw/github/notes/design_patterns/15-分离原则如何将复杂问题拆分成小问题.md",
+          "x": -539.4420166015625,
+          "y": -5758.40380859375
+        },
+        {
+          "id": "raw/github/notes/design_patterns/16-契约原则如何做好-API-接口设计.md",
+          "x": 5196.86767578125,
+          "y": -1225.2525634765625
+        },
+        {
+          "id": "raw/github/notes/design_patterns/17-单例模式如何有效进行程序初始化.md",
+          "x": 1352.25048828125,
+          "y": -396.8692321777344
+        },
+        {
+          "id": "raw/github/notes/design_patterns/18-建造者模式如何创建不同形式的复杂对象.md",
+          "x": -968.3851928710938,
+          "y": -1701.202392578125
+        },
+        {
+          "id": "raw/github/notes/design_patterns/19-抽象工厂模式如何统一不同代码风格下的代码级别.md",
+          "x": -5698.4365234375,
+          "y": 428.57757568359375
+        },
+        {
+          "id": "raw/github/notes/design_patterns/20-工厂方法模式如何解决生成对象时的不确定性.md",
+          "x": 5877.11376953125,
+          "y": -1769.2213134765625
+        },
+        {
+          "id": "raw/github/notes/design_patterns/21-原型模式什么场景下需要用到对象拷贝.md",
+          "x": 1029.3802490234375,
+          "y": 2625.075439453125
+        },
+        {
+          "id": "raw/github/notes/design_patterns/22-适配器模式如何处理不同-API-接口的兼容性.md",
+          "x": -2750.629638671875,
+          "y": -4420.880859375
+        },
+        {
+          "id": "raw/github/notes/design_patterns/23-桥接模式如何实现抽象协议与不同实现的绑定.md",
+          "x": 1908.3912353515625,
+          "y": -4491.47900390625
+        },
+        {
+          "id": "raw/github/notes/design_patterns/24-组合模式如何用树形结构处理对象之间的复杂关系.md",
+          "x": 4623.92919921875,
+          "y": -636.6553344726562
+        },
+        {
+          "id": "raw/github/notes/design_patterns/25-装饰模式如何在基础组件上扩展新功能.md",
+          "x": -4509.15185546875,
+          "y": -3797.4501953125
+        },
+        {
+          "id": "raw/github/notes/design_patterns/26-门面模式如何实现-API-网关的高可用性.md",
+          "x": 2642.72021484375,
+          "y": -6240.76513671875
+        },
+        {
+          "id": "raw/github/notes/design_patterns/27-享元模式如何通过共享对象减少内存加载消耗.md",
+          "x": 788.7826538085938,
+          "y": -5923.36865234375
+        },
+        {
+          "id": "raw/github/notes/design_patterns/28-代理模式如何控制和管理对象的访问.md",
+          "x": -420.9124755859375,
+          "y": 818.6193237304688
+        },
+        {
+          "id": "raw/github/notes/design_patterns/29-访问者模式如何实现对象级别的矩阵结构.md",
+          "x": 4187.34228515625,
+          "y": 135.0648193359375
+        },
+        {
+          "id": "raw/github/notes/design_patterns/30-模板方法模式如何实现同一模板框架下的算法扩展.md",
+          "x": 1437.1234130859375,
+          "y": -2120.8681640625
+        },
+        {
+          "id": "raw/github/notes/design_patterns/31-策略模式如何解决不同活动策略的营销推荐场景.md",
+          "x": 3009.380615234375,
+          "y": -4498.5908203125
+        },
+        {
+          "id": "raw/github/notes/design_patterns/32-状态模式如何通过有限状态机监控功能的“状态变化”.md",
+          "x": -3207.05078125,
+          "y": -5217.2890625
+        },
+        {
+          "id": "raw/github/notes/design_patterns/33-观察者模式如何发送消息变化的通知.md",
+          "x": -5872.8125,
+          "y": -3627.2998046875
+        },
+        {
+          "id": "raw/github/notes/design_patterns/34-备忘录模式如何在聊天会话中记录历史消息.md",
+          "x": 2884.9189453125,
+          "y": -5570.8544921875
+        },
+        {
+          "id": "raw/github/notes/design_patterns/35-中介者模式如何通过中间层来解决耦合过多的问题.md",
+          "x": -5581.89306640625,
+          "y": 3909.32958984375
+        },
+        {
+          "id": "raw/github/notes/design_patterns/36-迭代器模式如何实现遍历数据时的职责分离.md",
+          "x": 3080.25048828125,
+          "y": -3320.822265625
+        },
+        {
+          "id": "raw/github/notes/design_patterns/37-解释器模式如何实现一个自定义配置规则功能.md",
+          "x": -261.7372741699219,
+          "y": -245.76626586914062
+        },
+        {
+          "id": "raw/github/notes/design_patterns/38-命令模式如何在一次请求中封装多个参数.md",
+          "x": 2433.459716796875,
+          "y": -3591.73095703125
+        },
+        {
+          "id": "raw/github/notes/design_patterns/39-责任链模式如何解决审核、过滤场景问题.md",
+          "x": -303.00311279296875,
+          "y": -2180.244140625
+        },
+        {
+          "id": "raw/github/notes/design_patterns/index.md",
+          "x": -124.00450897216797,
+          "y": -5308.4970703125
+        },
+        {
+          "id": "raw/github/notes/design_patterns/solid-principles-relation.md",
+          "x": 4433.623046875,
+          "y": -3808.720703125
+        },
+        {
+          "id": "raw/github/notes/index.md",
+          "x": -971.2069702148438,
+          "y": -3700.909423828125
+        },
+        {
+          "id": "raw/github/notes/interview/01_面试准备方法论.md",
+          "x": -1503.576416015625,
+          "y": -1034.7833251953125
+        },
+        {
+          "id": "raw/github/notes/interview/02_问题解决模式.md",
+          "x": -3724.634765625,
+          "y": -1791.60693359375
+        },
+        {
+          "id": "raw/github/notes/interview/03_系统设计基础.md",
+          "x": -2271.323974609375,
+          "y": -3758.985107421875
+        },
+        {
+          "id": "raw/github/notes/interview/04_NP完全性与近似算法.md",
+          "x": -3086.587158203125,
+          "y": -580.7389526367188
+        },
+        {
+          "id": "raw/github/notes/interview/05_位操作技巧.md",
+          "x": 274.0545349121094,
+          "y": -3805.3955078125
+        },
+        {
+          "id": "raw/github/notes/interview/06_进阶数据结构.md",
+          "x": -2545.733642578125,
+          "y": -3837.332763671875
+        },
+        {
+          "id": "raw/github/notes/interview/07_推荐资源.md",
+          "x": -4046.586669921875,
+          "y": -2598.739501953125
+        },
+        {
+          "id": "raw/github/notes/interview/credits.md",
+          "x": -3873.48876953125,
+          "y": 60.642799377441406
+        },
+        {
+          "id": "raw/github/notes/interview/index.md",
+          "x": 397.55145263671875,
+          "y": -4627.9423828125
+        },
+        {
+          "id": "raw/github/notes/interview/基础数据结构与排序.md",
+          "x": -1979.8770751953125,
+          "y": -3784.982666015625
+        },
+        {
+          "id": "raw/github/notes/io_uring/linux_kernel/index.md",
+          "x": -1899.7373046875,
+          "y": 3842.34375
+        },
+        {
+          "id": "raw/github/notes/io_uring/linux_kernel/io_uring_core.md",
+          "x": 3146.43994140625,
+          "y": 1506.967529296875
+        },
+        {
+          "id": "raw/github/notes/io_uring/linux_kernel/io_uring_deep_dive_r1.md",
+          "x": 3593.757568359375,
+          "y": -2680.12451171875
+        },
+        {
+          "id": "raw/github/notes/io_uring/linux_kernel/io_uring_features.md",
+          "x": 240.77377319335938,
+          "y": 3445.90625
+        },
+        {
+          "id": "raw/github/notes/io_uring/linux_kernel/io_uring_memory.md",
+          "x": 636.2528076171875,
+          "y": 5925.56689453125
+        },
+        {
+          "id": "raw/github/notes/io_uring/linux_kernel/io_uring_operations.md",
+          "x": -4876.02734375,
+          "y": 4586.892578125
+        },
+        {
+          "id": "raw/github/notes/ipc/linux_kernel/index.md",
+          "x": 3646.896484375,
+          "y": -4669.62744140625
+        },
+        {
+          "id": "raw/github/notes/ipc/linux_kernel/ipc_deep_dive_r1.md",
+          "x": 6465.72314453125,
+          "y": -2485.064208984375
+        },
+        {
+          "id": "raw/github/notes/ipc/linux_kernel/ipc_subsystem.md",
+          "x": 3056.498291015625,
+          "y": -6276.9482421875
+        },
+        {
+          "id": "raw/github/notes/kernel/index.md",
+          "x": -5382.2568359375,
+          "y": 39.43896484375
+        },
+        {
+          "id": "raw/github/notes/locking/linux_kernel/index.md",
+          "x": -5360.3203125,
+          "y": -2383.291748046875
+        },
+        {
+          "id": "raw/github/notes/locking/linux_kernel/locking_deep_dive_r2.md",
+          "x": -2132.40625,
+          "y": -2712.85107421875
+        },
+        {
+          "id": "raw/github/notes/locking/linux_kernel/locking_subsystem.md",
+          "x": -4721.4130859375,
+          "y": 234.26345825195312
+        },
+        {
+          "id": "raw/github/notes/midware/doip.md",
+          "x": -3289.5830078125,
+          "y": 2440.346435546875
+        },
+        {
+          "id": "raw/github/notes/midware/index.md",
+          "x": -3792.853271484375,
+          "y": 1528.1734619140625
+        },
+        {
+          "id": "raw/github/notes/midware/someip/security.md",
+          "x": -4418.09423828125,
+          "y": 3298.176513671875
+        },
+        {
+          "id": "raw/github/notes/midware/someip/vsomeip.md",
+          "x": -2010.1768798828125,
+          "y": 3441.4765625
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/index.md",
+          "x": -1811.36572265625,
+          "y": -5310.4482421875
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_allocator.md",
+          "x": -5844.6591796875,
+          "y": -2849.308837890625
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_core_structs.md",
+          "x": -2729.96435546875,
+          "y": -4101.06982421875
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_deep_dive_r1.md",
+          "x": 52.732078552246094,
+          "y": -4635.0126953125
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_deep_dive_r2.md",
+          "x": -2621.09423828125,
+          "y": -6353.85693359375
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_memory_cgroup.md",
+          "x": 641.6278076171875,
+          "y": -2473.167236328125
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_memory_failure.md",
+          "x": -3803.978759765625,
+          "y": -1068.39794921875
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_memory_hotplug.md",
+          "x": -6332.34033203125,
+          "y": 2999.340087890625
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_mmap.md",
+          "x": -4767.806640625,
+          "y": -4529.900390625
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_oom.md",
+          "x": -423.7945861816406,
+          "y": -6331.68701171875
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_page_fault.md",
+          "x": 2172.98876953125,
+          "y": -3881.32958984375
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_page_migration.md",
+          "x": 2916.65966796875,
+          "y": 426.4148864746094
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_page_reclaim.md",
+          "x": -5.848473072052002,
+          "y": -4375.703125
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_swap.md",
+          "x": -2945.27099609375,
+          "y": -5860.1474609375
+        },
+        {
+          "id": "raw/github/notes/mm/linux_kernel/mm_vma_merge_split.md",
+          "x": 3828.92578125,
+          "y": -4568.24169921875
+        },
+        {
+          "id": "raw/github/notes/net/linux_kernel/index.md",
+          "x": 414.6278381347656,
+          "y": -6333.462890625
+        },
+        {
+          "id": "raw/github/notes/net/linux_kernel/net_deep_dive_r1.md",
+          "x": 275.3215026855469,
+          "y": 1316.0640869140625
+        },
+        {
+          "id": "raw/github/notes/net/linux_kernel/net_netfilter.md",
+          "x": -1334.5494384765625,
+          "y": -6657.16357421875
+        },
+        {
+          "id": "raw/github/notes/net/linux_kernel/net_routing.md",
+          "x": -911.2276611328125,
+          "y": -6852.884765625
+        },
+        {
+          "id": "raw/github/notes/net/linux_kernel/net_skbuff.md",
+          "x": 1290.89990234375,
+          "y": -4568.6669921875
+        },
+        {
+          "id": "raw/github/notes/net/linux_kernel/net_socket_core.md",
+          "x": -864.092529296875,
+          "y": -5947.13232421875
+        },
+        {
+          "id": "raw/github/notes/net/linux_kernel/net_tcp_ip.md",
+          "x": -96.85114288330078,
+          "y": -6830.87158203125
+        },
+        {
+          "id": "raw/github/notes/netfilter/linux_kernel/index.md",
+          "x": -3543.230224609375,
+          "y": 3262.8994140625
+        },
+        {
+          "id": "raw/github/notes/netfilter/linux_kernel/netfilter_deep_dive_r1.md",
+          "x": -1013.608154296875,
+          "y": 6594.130859375
+        },
+        {
+          "id": "raw/github/notes/netfilter/linux_kernel/netfilter_deep_dive_r2.md",
+          "x": -2614.431884765625,
+          "y": 1078.7093505859375
+        },
+        {
+          "id": "raw/github/notes/netfilter/linux_kernel/netfilter_subsystem.md",
+          "x": -4450.90771484375,
+          "y": 5292.79150390625
+        },
+        {
+          "id": "raw/github/notes/network/core/net_subsystem_conntrack.md",
+          "x": -3778.12158203125,
+          "y": -5995.4775390625
+        },
+        {
+          "id": "raw/github/notes/network/core/net_subsystem_routing.md",
+          "x": 58.648292541503906,
+          "y": 3687.163330078125
+        },
+        {
+          "id": "raw/github/notes/network/core/net_subsystem_socket.md",
+          "x": -4292.564453125,
+          "y": -1159.57958984375
+        },
+        {
+          "id": "raw/github/notes/network/index.md",
+          "x": -519.5337524414062,
+          "y": -5353.60595703125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/af_packet.md",
+          "x": 1402.1722412109375,
+          "y": 870.5406494140625
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/bluetooth.md",
+          "x": -810.9596557617188,
+          "y": 2906.98681640625
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/bpf_filter.md",
+          "x": 3603.51123046875,
+          "y": 2150.582763671875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/bpf_xdp.md",
+          "x": -681.4655151367188,
+          "y": 2101.482177734375
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/bridge.md",
+          "x": -0.33240431547164917,
+          "y": 2368.9501953125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/dsa.md",
+          "x": 3556.293212890625,
+          "y": 306.76153564453125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/dst_entry.md",
+          "x": 1938.6273193359375,
+          "y": 2705.84716796875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/flow_dissector.md",
+          "x": 2670.478271484375,
+          "y": 1019.4608764648438
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/gro.md",
+          "x": 3286.635009765625,
+          "y": 899.5960083007812
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/index.md",
+          "x": 3073.392578125,
+          "y": 3650.818115234375
+        },
+        {
+          "id": "#1-42。",
+          "x": 4698.203125,
+          "y": 4305.02587890625
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv4_core.md",
+          "x": 1700.8092041015625,
+          "y": 1919.9483642578125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv4_fib.md",
+          "x": 2330.89501953125,
+          "y": 4294.16064453125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv4_routing.md",
+          "x": 2093.620849609375,
+          "y": 5364.5869140625
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv4_tcp.md",
+          "x": 4060.107421875,
+          "y": 2212.475341796875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv4_udp.md",
+          "x": 4207.73583984375,
+          "y": 4066.559814453125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv6_addrconf.md",
+          "x": 2268.122314453125,
+          "y": 5755.205078125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv6_core.md",
+          "x": 1449.851318359375,
+          "y": 5592.296875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv6_ndisc.md",
+          "x": 1539.92724609375,
+          "y": 3160.500732421875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv6_routing.md",
+          "x": 5491.5458984375,
+          "y": 1901.635986328125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/ipv6_tcp_udp.md",
+          "x": 4128.9521484375,
+          "y": 3553.578125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/mac80211.md",
+          "x": 3815.87060546875,
+          "y": 4283.11767578125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/napi.md",
+          "x": 3877.975341796875,
+          "y": 5179.10205078125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/neighbour.md",
+          "x": 4682.41015625,
+          "y": 2946.676513671875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/net_device.md",
+          "x": 3860.72265625,
+          "y": 3480.9677734375
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/netfilter.md",
+          "x": 1340.5078125,
+          "y": 4234.32421875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/netfilter_dscp_mark.md",
+          "x": 5046.53271484375,
+          "y": 1731.5887451171875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/netfilter_ecn.md",
+          "x": 4906.35888671875,
+          "y": 2430.454833984375
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/netfilter_example.md",
+          "x": 1315.2515869140625,
+          "y": -3141.335205078125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/netfilter_rateest.md",
+          "x": 1796.3203125,
+          "y": 5705.1865234375
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/netfilter_tcpmss.md",
+          "x": 1831.8135986328125,
+          "y": 5140.14501953125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/netpoll.md",
+          "x": 1191.76171875,
+          "y": 1804.20068359375
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/openvswitch.md",
+          "x": 2707.64599609375,
+          "y": 1419.158447265625
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/page_pool.md",
+          "x": 1086.5552978515625,
+          "y": 2438.845458984375
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/qos_sched.md",
+          "x": 1761.1676025390625,
+          "y": 4205.09716796875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/routing.md",
+          "x": -5530.29052734375,
+          "y": 2057.869140625
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/rtnetlink.md",
+          "x": 2714.523681640625,
+          "y": 5425.29345703125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/rxrpc.md",
+          "x": 4460.1923828125,
+          "y": 4543.017578125
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/sctp.md",
+          "x": 3462.99853515625,
+          "y": 2651.240966796875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/sk_buff.md",
+          "x": 2857.749267578125,
+          "y": 5760.01171875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/socket.md",
+          "x": 1046.685791015625,
+          "y": 4185.18115234375
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/socket_syscall.md",
+          "x": 5296.896484375,
+          "y": 1447.4393310546875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/tipc.md",
+          "x": 1037.8175048828125,
+          "y": 5344.0556640625
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/unix_socket.md",
+          "x": 3215.04638671875,
+          "y": 2184.77685546875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/xdp.md",
+          "x": 2237.37841796875,
+          "y": 5074.79296875
+        },
+        {
+          "id": "raw/github/notes/network/linux_kernel/xfrm.md",
+          "x": 5114.173828125,
+          "y": 2836.848876953125
+        },
+        {
+          "id": "raw/github/notes/network/linux_netfilter/conntrack.md",
+          "x": -2886.0078125,
+          "y": -6157.37890625
+        },
+        {
+          "id": "raw/github/notes/network/linux_netfilter/conntrack_gc.md",
+          "x": 1337.1336669921875,
+          "y": -3807.755615234375
+        },
+        {
+          "id": "raw/github/notes/network/linux_netfilter/net_subsystem_netfilter.md",
+          "x": 2383.5634765625,
+          "y": -5455.56201171875
+        },
+        {
+          "id": "raw/github/notes/network/linux_netfilter/netfilter_tcp_deep_dive.md",
+          "x": 3911.532470703125,
+          "y": -5892.33447265625
+        },
+        {
+          "id": "raw/github/notes/network/linux_netfilter/nftables.md",
+          "x": -1931.349609375,
+          "y": -5829.400390625
+        },
+        {
+          "id": "raw/github/notes/network/network_stack_deep_dive.md",
+          "x": 1583.1614990234375,
+          "y": -42.36349868774414
+        },
+        {
+          "id": "raw/github/notes/network/osi_phy_mac.md",
+          "x": -2181.920654296875,
+          "y": 833.0399780273438
+        },
+        {
+          "id": "#osi",
+          "x": -2899.470947265625,
+          "y": 2372.555908203125
+        },
+        {
+          "id": "#phy",
+          "x": 443.9490661621094,
+          "y": -1336.9212646484375
+        },
+        {
+          "id": "#mac",
+          "x": -2722.001708984375,
+          "y": 3417.865234375
+        },
+        {
+          "id": "#ethernet",
+          "x": -499.8045959472656,
+          "y": -1389.342041015625
+        },
+        {
+          "id": "#networking",
+          "x": -4321.89892578125,
+          "y": 1369.135009765625
+        },
+        {
+          "id": "raw/github/notes/network/performance/net_subsystem_advanced.md",
+          "x": -6036.11572265625,
+          "y": -1150.4813232421875
+        },
+        {
+          "id": "raw/github/notes/network/performance/net_subsystem_hotpath.md",
+          "x": 1613.915283203125,
+          "y": 2100.739013671875
+        },
+        {
+          "id": "raw/github/notes/network/performance/net_subsystem_kernel_tricks.md",
+          "x": 2454.04052734375,
+          "y": 2905.19873046875
+        },
+        {
+          "id": "raw/github/notes/network/performance/net_subsystem_timers.md",
+          "x": -2190.682373046875,
+          "y": -1795.4364013671875
+        },
+        {
+          "id": "raw/github/notes/network/protocols/net_subsystem_bpf_hooks.md",
+          "x": -2239.49755859375,
+          "y": -4173.3564453125
+        },
+        {
+          "id": "raw/github/notes/network/protocols/net_subsystem_netlink.md",
+          "x": 6232.044921875,
+          "y": -62.666778564453125
+        },
+        {
+          "id": "raw/github/notes/network/rfc/net_subsystem_rfc_impl.md",
+          "x": -1007.8936767578125,
+          "y": -2790.0244140625
+        },
+        {
+          "id": "raw/github/notes/network/tcpip/ip.md",
+          "x": -1529.1881103515625,
+          "y": -5804.18701171875
+        },
+        {
+          "id": "raw/github/notes/network/tcpip/net_subsystem_congestion.md",
+          "x": 1520.31640625,
+          "y": -6818.16064453125
+        },
+        {
+          "id": "raw/github/notes/network/tcpip/net_subsystem_tcpip.md",
+          "x": 2272.847412109375,
+          "y": -1389.6329345703125
+        },
+        {
+          "id": "raw/github/notes/network/tcpip/tcp.md",
+          "x": -969.296630859375,
+          "y": -2289.25048828125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/01_漫游互联网_什么是蜂窝移动网络.md",
+          "x": -3864.23291015625,
+          "y": -2904.739501953125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/02_传输层协议_TCP_TCP_为什么握手是_3_次_挥手是_4_次.md",
+          "x": -1349.1634521484375,
+          "y": -2433.2158203125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/03_TCP_的封包格式_TCP_为什么要粘包和拆包.md",
+          "x": -4371.666015625,
+          "y": 4397.3134765625
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/04_TCP_的稳定性_滑动窗口和流速控制是怎么回事.md",
+          "x": -4296.9765625,
+          "y": -4307.82861328125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/05_UDP_协议_TCP_协议和_UDP_协议的优势和劣势.md",
+          "x": 2560.731201171875,
+          "y": -429.79443359375
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/06_IPv4_协议_路由和寻址的区别是什么.md",
+          "x": 3091.49462890625,
+          "y": -5257.17236328125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/07_IPv6_协议_Tunnel_技术是什么.md",
+          "x": -71.72781372070312,
+          "y": 2901.806396484375
+        },
+        {
+          "id": "#图片需要重绘，并参考下方中英翻译，在图中标出对应中文",
+          "x": 1034.4788818359375,
+          "y": 1457.3487548828125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/08_局域网_NAT_是如何工作的.md",
+          "x": -4974.0439453125,
+          "y": -1643.42333984375
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/09_TCP_实战_如何进行_TCP_抓包调试.md",
+          "x": -2541.47705078125,
+          "y": 1400.341064453125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/10_Socket_编程_epoll_为什么用红黑树.md",
+          "x": 1224.175048828125,
+          "y": -3465.2529296875
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/11_流和缓冲区_缓冲区的_flip_是怎么回事.md",
+          "x": -712.549560546875,
+          "y": -5166.71875
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/12_网络_IO_模型_BIO_NIO_和_AIO_有什么区别.md",
+          "x": -4825.533203125,
+          "y": -3292.208251953125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/13_面试中如何回答“怎样实现_RPC_框架”的问题.md",
+          "x": -3510.789794921875,
+          "y": 2481.3740234375
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/14_DNS_域名解析系统_CNAME_记录的作用是.md",
+          "x": 736.713623046875,
+          "y": 1961.2205810546875
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/15_内容分发网络_请简述_CDN_回源如何工作.md",
+          "x": -3728.27587890625,
+          "y": 3487.60986328125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/16_HTTP_协议面试通关_强制缓存和协商缓存的区别是.md",
+          "x": -33.5323371887207,
+          "y": -1617.6947021484375
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/17_流媒体技术_直播网站是如何实现的.md",
+          "x": 6441.76171875,
+          "y": -2812.71728515625
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/18_爬虫和反爬虫_如何防止黑产爬取我的数据.md",
+          "x": 3319.71728515625,
+          "y": -3715.86328125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/19_网络安全概述_对称_非对称加密的区别是.md",
+          "x": -4469.6484375,
+          "y": -2298.540283203125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/20_信任链_为什么可以相信一个_HTTPS_网站.md",
+          "x": -2136.687744140625,
+          "y": -3049.39013671875
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/21_攻防手段介绍_如何抵御_SYN_拒绝攻击.md",
+          "x": -5841.03857421875,
+          "y": 1260.940673828125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/index.md",
+          "x": -3376.2646484375,
+          "y": -1635.9718017578125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/模块一思考题解答.md",
+          "x": -4976.66748046875,
+          "y": -4904.9248046875
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/模块三思考题解答.md",
+          "x": 2660.761962890625,
+          "y": -3629.257568359375
+        },
+        {
+          "id": "#include",
+          "x": 1831.507568359375,
+          "y": -4831.76171875
+        },
+        {
+          "id": "#define",
+          "x": -713.7853393554688,
+          "y": -2690.3095703125
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/模块二思考题解答.md",
+          "x": -1847.5662841796875,
+          "y": -2214.33837890625
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/模块五思考题解答.md",
+          "x": 1631.8187255859375,
+          "y": -662.5698852539062
+        },
+        {
+          "id": "raw/github/notes/network_fundamentals/模块四思考题解答.md",
+          "x": -3243.13427734375,
+          "y": -3087.6376953125
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/boot_firmware_update.md",
+          "x": -2295.364990234375,
+          "y": 1913.15234375
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/hardware_control.md",
+          "x": -1278.203369140625,
+          "y": 2676.459228515625
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/index.md",
+          "x": -552.5812377929688,
+          "y": 4238.84521484375
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/ipmi_protocol_stack.md",
+          "x": 297.2188415527344,
+          "y": 6069.18115234375
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/kvm_virtualmedia.md",
+          "x": 3479.91455078125,
+          "y": 695.5155029296875
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/network_comm_services.md",
+          "x": 1413.1143798828125,
+          "y": 4028.23046875
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/phosphor_dbus_services.md",
+          "x": 1271.250732421875,
+          "y": 3583.72802734375
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/redfish_interface.md",
+          "x": 747.509033203125,
+          "y": 5153.00927734375
+        },
+        {
+          "id": "raw/github/notes/openbmc/linux_kernel/security_subsystem.md",
+          "x": -3111.224365234375,
+          "y": 4631.12109375
+        },
+        {
+          "id": "raw/github/notes/os/block_io_deep_dive.md",
+          "x": 1959.14111328125,
+          "y": -6333.486328125
+        },
+        {
+          "id": "raw/github/notes/os/cgroups_deep_dive.md",
+          "x": 5032.9951171875,
+          "y": -4598.443359375
+        },
+        {
+          "id": "raw/github/notes/os/coroutine.md",
+          "x": -3270.2060546875,
+          "y": 249.75697326660156
+        },
+        {
+          "id": "raw/github/notes/os/cve-2026-31431-copy-fail.md",
+          "x": -6176.8212890625,
+          "y": 2232.165771484375
+        },
+        {
+          "id": "raw/github/notes/os/daemon_process.md",
+          "x": 5771.796875,
+          "y": -2472.3759765625
+        },
+        {
+          "id": "raw/github/notes/os/index.md",
+          "x": 573.7396240234375,
+          "y": -6527.443359375
+        },
+        {
+          "id": "raw/github/notes/os/linux_101.md",
+          "x": -6928.69677734375,
+          "y": -710.6868286132812
+        },
+        {
+          "id": "raw/github/notes/os/linux_kernel_development_guide.md",
+          "x": -1240.84814453125,
+          "y": -6894.0146484375
+        },
+        {
+          "id": "raw/github/notes/os/pcb.md",
+          "x": 628.8470458984375,
+          "y": 5017.640625
+        },
+        {
+          "id": "raw/github/notes/os/scheduler_deep_dive.md",
+          "x": -1969.7899169921875,
+          "y": 1908.3260498046875
+        },
+        {
+          "id": "raw/github/notes/os/signal_handling.md",
+          "x": 6473.1748046875,
+          "y": -1594.2276611328125
+        },
+        {
+          "id": "#Signal",
+          "x": 6708.50927734375,
+          "y": -279.02880859375
+        },
+        {
+          "id": "#Process",
+          "x": 6020.27490234375,
+          "y": -3370.76025390625
+        },
+        {
+          "id": "#IPC",
+          "x": 6019.2685546875,
+          "y": -350.6360778808594
+        },
+        {
+          "id": "raw/github/notes/os/slub_allocator_deep_dive.md",
+          "x": -1218.954345703125,
+          "y": 481.419189453125
+        },
+        {
+          "id": "raw/github/notes/os/synchronization_deep_dive.md",
+          "x": 1675.74462890625,
+          "y": -2657.62939453125
+        },
+        {
+          "id": "raw/github/notes/os/timekeeping_deep_dive.md",
+          "x": 4929.375,
+          "y": -2334.656494140625
+        },
+        {
+          "id": "raw/github/notes/os/vfs_deep_dive.md",
+          "x": -3807.008056640625,
+          "y": -432.5967712402344
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/01_计算机是什么.md",
+          "x": 640.4110107421875,
+          "y": -1981.989501953125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/02_程序的执行_相比_32_位_64_位的优势是什么(上).md",
+          "x": -4499.52001953125,
+          "y": -1945.8623046875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/03_程序的执行_相比_32_位_64_位的优势是什么(下).md",
+          "x": -1736.9886474609375,
+          "y": -6330.82275390625
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/04_构造复杂的程序_将一个递归函数转成非递归函数的通用方法.md",
+          "x": -4710.6181640625,
+          "y": 2523.70458984375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/05_存储器分级_L1_Cache_比内存和_SSD_快多少倍.md",
+          "x": 5032.4111328125,
+          "y": -1747.876708984375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/06_目录结构和文件管理指令_rm_rf_指令的作用是.md",
+          "x": 111.77525329589844,
+          "y": 3067.324951171875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/07_进程_重定向和管道指令_xarg_指令的作用是.md",
+          "x": 4829.05224609375,
+          "y": -1137.2542724609375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/08_用户和权限管理指令_请简述_Linux_权限划分的原则.md",
+          "x": -1034.7347412109375,
+          "y": 3431.339599609375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/09_Linux_中的网络指令_如何查看一个域名有哪些_NS_记录.md",
+          "x": 4287.41943359375,
+          "y": -1435.4234619140625
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/10_软件的安装_编译安装和包管理器安装有什么优势和劣势.md",
+          "x": -3995.81884765625,
+          "y": 2782.205810546875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/11_高级技巧之日志分析_利用_Linux_指令分析_Web_日志.md",
+          "x": -4104.84130859375,
+          "y": -630.405517578125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/12_高级技巧之集群部署_利用_Linux_指令同时在多台机器部署程序.md",
+          "x": -1152.9686279296875,
+          "y": 1654.417724609375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/13_操作系统内核_Linux_内核和_Window_内核有什么区别.md",
+          "x": -3992.140380859375,
+          "y": 4510.49560546875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/14_用户态和内核态_用户态线程和内核态线程有什么区别.md",
+          "x": -3493.583740234375,
+          "y": -170.09327697753906
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/15_中断和中断向量_Javaj_等语言为什么可以捕获到键盘输入.md",
+          "x": -5650.64990234375,
+          "y": -978.8703002929688
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/16_WinMacUnixLinux_的区别和联系_为什么_Debian_漏洞排名第一还这么多人用.md",
+          "x": 1417.2379150390625,
+          "y": -1015.879150390625
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/17_进程和线程_进程的开销比线程大在了哪里.md",
+          "x": -3307.278564453125,
+          "y": -5603.88134765625
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/18_锁_信号量和分布式锁_如何控制同一时间只有_2_个线程运行.md",
+          "x": -3718.830322265625,
+          "y": 3909.293701171875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/19_乐观锁_区块链_除了上锁还有哪些并发控制方法.md",
+          "x": 6923.93408203125,
+          "y": -548.7125854492188
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/20_线程的调度_线程调度都有哪些方法.md",
+          "x": -1053.2081298828125,
+          "y": -5047.58935546875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/21_哲学家就餐问题_什么情况下会触发饥饿和死锁.md",
+          "x": -6655.55615234375,
+          "y": 1956.581298828125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/22_进程间通信_进程间通信都有哪些方法.md",
+          "x": 2598.556396484375,
+          "y": -2042.7518310546875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/23_分析服务的特性_我的服务应该开多少个进程_多少个线程.md",
+          "x": 666.8499145507812,
+          "y": 1592.2745361328125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/24_虚拟内存_一个程序最多能使用多少内存.md",
+          "x": -2011.4066162109375,
+          "y": -1357.4232177734375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/25_内存管理单元_什么情况下使用大内存分页.md",
+          "x": -2664.604736328125,
+          "y": -3505.403564453125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/26_缓存置换算法_LRU_用什么数据结构实现更合理.md",
+          "x": 6283.5224609375,
+          "y": -1229.94482421875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/27_内存回收上篇_如何解决内存的循环引用问题.md",
+          "x": -493.7169189453125,
+          "y": -2941.578125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/28_内存回收下篇_三色标记_清除算法是怎么回事.md",
+          "x": 3202.293212890625,
+          "y": -140.94667053222656
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/29_Linux_下的各个目录有什么作用.md",
+          "x": 5125.455078125,
+          "y": 722.4632568359375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/30_文件系统的底层实现_FAT_NTFS_和_Ext3_有什么区别.md",
+          "x": -47.72556686401367,
+          "y": 4666.55615234375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/31_数据库文件系统实例_MySQL_中_B_树和_B+_树有什么区别.md",
+          "x": 3031.72607421875,
+          "y": -2789.89453125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/32_HDFS_介绍_分布式文件系统是怎么回事.md",
+          "x": 3827.06787109375,
+          "y": -760.9154663085938
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/33_互联网协议群(TCPIP)_多路复用是怎么回事.md",
+          "x": -1714.3984375,
+          "y": 2463.2919921875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/34_UDP_协议_UDP_和_TCP_相比快在哪里.md",
+          "x": 2837.38671875,
+          "y": -2245.468017578125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/35_Linux_的_IO_模式_electpollepoll_有什么区别.md",
+          "x": 329.7213134765625,
+          "y": -5315.220703125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/36_公私钥体系和网络安全_什么是中间人攻击.md",
+          "x": -1187.15625,
+          "y": -4154.22216796875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/39_Linux_架构优秀在哪里.md",
+          "x": 198.85409545898438,
+          "y": 4030.8388671875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/index.md",
+          "x": -3686.58203125,
+          "y": -3463.520751953125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(一).md",
+          "x": -2307.98046875,
+          "y": -5495.49267578125
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(七).md",
+          "x": -6404.2265625,
+          "y": -2649.6171875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(三).md",
+          "x": -4816.79150390625,
+          "y": 2170.3427734375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(二).md",
+          "x": -5487.6142578125,
+          "y": 3242.2177734375
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(五).md",
+          "x": -1992.521240234375,
+          "y": -4608.541015625
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(八).md",
+          "x": -220.31503295898438,
+          "y": 2075.270263671875
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(六).md",
+          "x": -6258.197265625,
+          "y": -2136.5947265625
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/加餐_练习题详解(四).md",
+          "x": -5630.4833984375,
+          "y": -548.9601440429688
+        },
+        {
+          "id": "raw/github/notes/os_fundamentals/结束语_论程序员的发展——信仰_选择和博弈.md",
+          "x": -5664.04443359375,
+          "y": -2165.196044921875
+        },
+        {
+          "id": "raw/github/notes/qemu/01_qom.md",
+          "x": 4485.74853515625,
+          "y": 490.81658935546875
+        },
+        {
+          "id": "raw/github/notes/qemu/02_memory.md",
+          "x": 2047.37646484375,
+          "y": -1903.525634765625
+        },
+        {
+          "id": "raw/github/notes/qemu/03_cpu.md",
+          "x": 3009.620361328125,
+          "y": 2697.29638671875
+        },
+        {
+          "id": "raw/github/notes/qemu/04_block_bs_graph.md",
+          "x": 2914.06494140625,
+          "y": 1808.97216796875
+        },
+        {
+          "id": "raw/github/notes/qemu/04_block_job.md",
+          "x": 2108.168212890625,
+          "y": -687.3779296875
+        },
+        {
+          "id": "raw/github/notes/qemu/04_coroutine_io.md",
+          "x": -590.186279296875,
+          "y": 1819.818115234375
+        },
+        {
+          "id": "raw/github/notes/qemu/04_qcow2.md",
+          "x": 42.036842346191406,
+          "y": 1785.4202880859375
+        },
+        {
+          "id": "raw/github/notes/qemu/05_migration_framework.md",
+          "x": 614.0859375,
+          "y": 2310.678955078125
+        },
+        {
+          "id": "raw/github/notes/qemu/05_multifd_compression.md",
+          "x": 342.7029724121094,
+          "y": 817.5970458984375
+        },
+        {
+          "id": "raw/github/notes/qemu/05_ram_migration.md",
+          "x": -347.67523193359375,
+          "y": 3221.321044921875
+        },
+        {
+          "id": "raw/github/notes/qemu/06_network_core.md",
+          "x": 1821.3677978515625,
+          "y": -1362.968994140625
+        },
+        {
+          "id": "raw/github/notes/qemu/06_vlan_hub.md",
+          "x": 4451.67919921875,
+          "y": -260.0791015625
+        },
+        {
+          "id": "raw/github/notes/qemu/07_signal.md",
+          "x": 4929.28271484375,
+          "y": -148.49241638183594
+        },
+        {
+          "id": "raw/github/notes/qemu/07_syscall.md",
+          "x": 189.54957580566406,
+          "y": 129.1044921875
+        },
+        {
+          "id": "raw/github/notes/qemu/08_qapi.md",
+          "x": -1334.5455322265625,
+          "y": 1160.0390625
+        },
+        {
+          "id": "raw/github/notes/qemu/09_vnc.md",
+          "x": -11.97343921661377,
+          "y": 682.3138427734375
+        },
+        {
+          "id": "raw/github/notes/qemu/index.md",
+          "x": 2250.0751953125,
+          "y": 1247.9071044921875
+        },
+        {
+          "id": "raw/github/notes/rcu/linux_kernel/index.md",
+          "x": -2244.631591796875,
+          "y": 5266.54052734375
+        },
+        {
+          "id": "raw/github/notes/rcu/linux_kernel/rcu_deep_dive_r2.md",
+          "x": 1406.3887939453125,
+          "y": 4773.54638671875
+        },
+        {
+          "id": "raw/github/notes/rcu/linux_kernel/rcu_subsystem.md",
+          "x": -2214.499755859375,
+          "y": 6116.6884765625
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/index.md",
+          "x": 722.1007690429688,
+          "y": 3163.998291015625
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_cfs.md",
+          "x": -1286.4073486328125,
+          "y": 2334.162353515625
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_class.md",
+          "x": 3656.3037109375,
+          "y": 797.7726440429688
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_context_switch.md",
+          "x": 2343.3955078125,
+          "y": 457.9351806640625
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_core.md",
+          "x": 2704.143798828125,
+          "y": 4132.87255859375
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_deep_dive_r1.md",
+          "x": -2718.552001953125,
+          "y": 5143.41796875
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_deep_dive_r2.md",
+          "x": 733.7559204101562,
+          "y": 1080.2476806640625
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_load_balance.md",
+          "x": 1763.383056640625,
+          "y": 4767.44482421875
+        },
+        {
+          "id": "raw/github/notes/sched/linux_kernel/sched_rt.md",
+          "x": -1124.06298828125,
+          "y": 3035.70703125
+        },
+        {
+          "id": "raw/github/notes/security/falco/ARCHITECTURE.md",
+          "x": -6118.51123046875,
+          "y": 156.6251983642578
+        },
+        {
+          "id": "raw/github/notes/security/index.md",
+          "x": -4385.42578125,
+          "y": -5087.6083984375
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/apparmor_detailed.md",
+          "x": 32.35731887817383,
+          "y": -2943.969970703125
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/bpf_security.md",
+          "x": -1622.5472412109375,
+          "y": -2051.476806640625
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/index.md",
+          "x": -1291.320068359375,
+          "y": -5725.5283203125
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/integrity_keys.md",
+          "x": -20.848064422607422,
+          "y": -7061.52001953125
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/landlock_detailed.md",
+          "x": -644.090576171875,
+          "y": -6917.57177734375
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/lockdown_loadpin.md",
+          "x": -3353.0078125,
+          "y": -4267.4267578125
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/lsm_framework.md",
+          "x": -2009.538330078125,
+          "y": -6578.64111328125
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/security_deep_dive_r1.md",
+          "x": -393.8672790527344,
+          "y": -4882.38232421875
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/security_deep_dive_r2.md",
+          "x": 328.1378173828125,
+          "y": -5921.38818359375
+        },
+        {
+          "id": "raw/github/notes/security/linux_kernel/selinux_detailed.md",
+          "x": -3706.885009765625,
+          "y": -5708.8828125
+        },
+        {
+          "id": "raw/github/notes/security/masscan/ARCHITECTURE.md",
+          "x": 4392.76171875,
+          "y": -3239.5556640625
+        },
+        {
+          "id": "raw/github/notes/security/masscan/DETECTION.md",
+          "x": -181.69583129882812,
+          "y": -2682.107421875
+        },
+        {
+          "id": "raw/github/notes/security/masscan/PACKET_FEATURES.md",
+          "x": -4664.34423828125,
+          "y": -5338.70361328125
+        },
+        {
+          "id": "raw/github/notes/security/nids/snort3_architecture_analysis.md",
+          "x": -612.1304931640625,
+          "y": -4845.4208984375
+        },
+        {
+          "id": "raw/github/notes/sound/linux_kernel/index.md",
+          "x": -430.0526428222656,
+          "y": -4335.1884765625
+        },
+        {
+          "id": "raw/github/notes/sound/linux_kernel/sound_deep_dive_r1.md",
+          "x": 3556.3818359375,
+          "y": -4262.3349609375
+        },
+        {
+          "id": "raw/github/notes/sound/linux_kernel/sound_deep_dive_r2.md",
+          "x": 1822.4228515625,
+          "y": -5538.80224609375
+        },
+        {
+          "id": "raw/github/notes/sound/linux_kernel/sound_subsystem.md",
+          "x": -4843.5791015625,
+          "y": -1182.4447021484375
+        },
+        {
+          "id": "raw/github/notes/sys/design_pattern/singleton.md",
+          "x": -1581.900634765625,
+          "y": -4461.91357421875
+        },
+        {
+          "id": "raw/github/notes/sys/fundamentals/elf.md",
+          "x": 3719.44921875,
+          "y": -1403.1434326171875
+        },
+        {
+          "id": "#elf",
+          "x": 4829.95947265625,
+          "y": 858.7785034179688
+        },
+        {
+          "id": "raw/github/notes/sys/fundamentals/linux_system_programming.md",
+          "x": 1504.4185791015625,
+          "y": -1886.9261474609375
+        },
+        {
+          "id": "raw/github/notes/sys/index.md",
+          "x": 1960.5740966796875,
+          "y": -5120.1181640625
+        },
+        {
+          "id": "raw/github/notes/sys/ipc/linux_ipc.md",
+          "x": 2826.068603515625,
+          "y": -5905.3955078125
+        },
+        {
+          "id": "raw/github/notes/sys/ipc/mailbox/lwip_mailbox.md",
+          "x": 3675.79052734375,
+          "y": -5286.90234375
+        },
+        {
+          "id": "raw/github/notes/sys/ipc/shm/shm.md",
+          "x": -542.0038452148438,
+          "y": -6157.14990234375
+        },
+        {
+          "id": "raw/github/notes/sys/tty_shell_console.md",
+          "x": -3729.647705078125,
+          "y": -2237.85693359375
+        },
+        {
+          "id": "raw/github/notes/time/linux_kernel/index.md",
+          "x": -5825.177734375,
+          "y": -2023.4068603515625
+        },
+        {
+          "id": "raw/github/notes/time/linux_kernel/time_deep_dive_r1.md",
+          "x": -6759.31103515625,
+          "y": -1143.3135986328125
+        },
+        {
+          "id": "raw/github/notes/time/linux_kernel/time_subsystem.md",
+          "x": -3850.174072265625,
+          "y": -5162.55859375
+        },
+        {
+          "id": "raw/github/notes/tools/index.md",
+          "x": -1562.115478515625,
+          "y": -2633.60009765625
+        },
+        {
+          "id": "raw/github/notes/tools/manjaro_swap.md",
+          "x": 3383.022216796875,
+          "y": -3539.91064453125
+        },
+        {
+          "id": "raw/github/notes/tools/netcat.md",
+          "x": -3719.409423828125,
+          "y": -3865.29443359375
+        },
+        {
+          "id": "raw/github/notes/tools/port_scanner.md",
+          "x": -165.68490600585938,
+          "y": 1157.4532470703125
+        },
+        {
+          "id": "raw/github/notes/tools/remove_snap.md",
+          "x": -2408.031494140625,
+          "y": -577.3990478515625
+        },
+        {
+          "id": "raw/github/notes/tools/tcpdump.md",
+          "x": 181.1127166748047,
+          "y": 1637.36669921875
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/buffer_cache.md",
+          "x": -116.911376953125,
+          "y": -4463.6435546875
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/dcache.md",
+          "x": -710.5148315429688,
+          "y": -5637.2568359375
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/exec_binfmt.md",
+          "x": 2136.548095703125,
+          "y": -4952.3076171875
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/file_operations.md",
+          "x": 2537.554931640625,
+          "y": -3514.494384765625
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/index.md",
+          "x": 1353.3277587890625,
+          "y": -5870.435546875
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/inode.md",
+          "x": -152.469482421875,
+          "y": -6505.64501953125
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/mount_namespace.md",
+          "x": 124.89302825927734,
+          "y": -5871.12646484375
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/path_lookup.md",
+          "x": -1027.643310546875,
+          "y": -5273.60595703125
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/superblock.md",
+          "x": 2239.53076171875,
+          "y": -6343.9091796875
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/vfs_api.md",
+          "x": 1362.0364990234375,
+          "y": -5002.76171875
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/vfs_core_structs.md",
+          "x": 3095.738037109375,
+          "y": -5834.80517578125
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/vfs_deep_dive_r1.md",
+          "x": -1928.1767578125,
+          "y": -6186.77294921875
+        },
+        {
+          "id": "raw/github/notes/vfs/linux_kernel/vfs_deep_dive_r2.md",
+          "x": 3100.64208984375,
+          "y": -4420.6748046875
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/index.md",
+          "x": -1282.6612548828125,
+          "y": -3132.53076171875
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/kvm_core.md",
+          "x": 1555.0858154296875,
+          "y": -3652.174560546875
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/kvm_interrupt.md",
+          "x": -4465.94091796875,
+          "y": -4209.390625
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/kvm_memory.md",
+          "x": -5804.6015625,
+          "y": 501.037353515625
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/kvm_mmu.md",
+          "x": -3426.95263671875,
+          "y": 624.3804321289062
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/kvm_vcpu.md",
+          "x": -577.2957763671875,
+          "y": -2053.0712890625
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/virt_deep_dive_r1.md",
+          "x": 3231.85595703125,
+          "y": -4792.65380859375
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/virt_deep_dive_r2.md",
+          "x": 928.970458984375,
+          "y": -2860.311279296875
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/virtio_device_drivers.md",
+          "x": -4009.916015625,
+          "y": -5266.39990234375
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/virtio_drivers.md",
+          "x": -3486.480224609375,
+          "y": -3711.377197265625
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/virtio_framework.md",
+          "x": -6011.18994140625,
+          "y": -180.02256774902344
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/virtio_ring.md",
+          "x": 709.8424682617188,
+          "y": -4170.68701171875
+        },
+        {
+          "id": "raw/github/notes/virt/linux_kernel/virtio_transport.md",
+          "x": -3333.076171875,
+          "y": -4857.45556640625
+        },
+        {
+          "id": "raw/github/relay-neuron/AGENT.md",
+          "x": -4308.62939453125,
+          "y": 2783.346435546875
+        },
+        {
+          "id": "raw/github/relay-neuron/AGENT_REVIEW.md",
+          "x": -6892.69677734375,
+          "y": 713.8038330078125
+        },
+        {
+          "id": "raw/github/relay-neuron/AGENT_TOPIC_KINESIOLOGY_TAPE.md",
+          "x": -1899.8189697265625,
+          "y": 4074.5361328125
+        },
+        {
+          "id": "raw/github/relay-neuron/CLAUDE.md",
+          "x": 1790.0098876953125,
+          "y": -4058.910888671875
+        },
+        {
+          "id": "raw/github/relay-neuron/README.md",
+          "x": 2454.5693359375,
+          "y": -916.3795776367188
+        },
+        {
+          "id": "raw/github/relay-neuron/RESEARCH_MASTER_LIST.md",
+          "x": -4727.35693359375,
+          "y": 1095.8623046875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/2026-04-28-kinesiology-tape/2026-04-28-subtask-1-1-mechanism.md",
+          "x": 567.4924926757812,
+          "y": -408.08489990234375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/2026-04-28-kinesiology-tape/2026-04-28-subtask-1-2-muscle-strength.md",
+          "x": -2995.052001953125,
+          "y": 3071.02197265625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/2026-04-28-kinesiology-tape/2026-04-28-subtask-1-3-joint-pain.md",
+          "x": 2017.000732421875,
+          "y": -6742.8740234375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/2026-04-28-kinesiology-tape/2026-04-28-subtask-1-4-clinical-application.md",
+          "x": -1380.625732421875,
+          "y": -3767.7607421875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/2026-04-28-kinesiology-tape/2026-04-28-subtask-1-5-latest-review.md",
+          "x": 2515.954833984375,
+          "y": -4401.48974609375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/2026-04-28-kinesiology-tape/FINAL_REPORT.md",
+          "x": 113.678466796875,
+          "y": -4919.74755859375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/README.md",
+          "x": -587.9464721679688,
+          "y": -2420.157958984375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/biomechanics/2026-04-12-task-1-2-running-economy.md",
+          "x": -647.258056640625,
+          "y": -3234.844970703125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/biomechanics/2026-04-12-task-4-1-gait-analysis-technique.md",
+          "x": 533.2530517578125,
+          "y": 3849.869873046875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/biomechanics/2026-04-12-task-4-2-cadence-stride-optimization.md",
+          "x": -5079.0419921875,
+          "y": 364.9195251464844
+        },
+        {
+          "id": "raw/github/relay-neuron/research/biomechanics/2026-04-12-task-4-3-running-injury-biomechanics.md",
+          "x": -860.345703125,
+          "y": -1266.1375732421875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/biomechanics/2026-04-12-task-4-4-downhill-running-biomechanics.md",
+          "x": 406.6500549316406,
+          "y": -1542.172119140625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/biomechanics/2026-04-12-task-4-5-running-shoe-technology.md",
+          "x": 2051.3486328125,
+          "y": 3145.602294921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-1-1-muscle-hypertrophy-mechanisms.md",
+          "x": -4515.84814453125,
+          "y": -487.26007080078125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-1-1-vo2max-endurance-performance.md",
+          "x": -4509.6611328125,
+          "y": -3061.452880859375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-1-2-mps-mtor-pathway.md",
+          "x": -6396.837890625,
+          "y": -1201.0179443359375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-1-3-lactate-threshold.md",
+          "x": 1075.0299072265625,
+          "y": -6153.78125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-1-3-regional-hypertrophy.md",
+          "x": -5431.0302734375,
+          "y": -3744.42626953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-1-4-fatigue-recovery.md",
+          "x": -3308.208984375,
+          "y": -2704.897216796875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-1-4-satellite-cells.md",
+          "x": 2511.17919921875,
+          "y": -1726.4520263671875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-3-1-training-frequency-hypertrophy.md",
+          "x": 928.4674072265625,
+          "y": -6880.1416015625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-3-2-training-volume-intensity.md",
+          "x": -970.4028930664062,
+          "y": -630.3056640625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-3-3-blood-flow-restriction-bfr.md",
+          "x": -6463.013671875,
+          "y": 2451.2734375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-3-4-failure-vs-non-failure-training.md",
+          "x": 4191.79150390625,
+          "y": -896.9584350585938
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-3-5-eccentric-concentric-training.md",
+          "x": 4898.19384765625,
+          "y": -4205.21728515625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-4-1-HIIT-research.md",
+          "x": 3998.928466796875,
+          "y": -5062.1748046875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-4-2-VO2max-cardiovascular.md",
+          "x": -4004.071533203125,
+          "y": -4497.11279296875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-4-3-concurrent-training-interference.md",
+          "x": 396.5216064453125,
+          "y": 3005.69287109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-4-5-exercise-metabolism.md",
+          "x": -5675.73291015625,
+          "y": -3325.400634765625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-5-4-post-exercise-recovery-strategies.md",
+          "x": 720.4974975585938,
+          "y": -5571.80419921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-6-2-body-composition-fat-mass.md",
+          "x": -1821.4544677734375,
+          "y": -3474.141845703125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-7-1-optimal-resistance-training-technique.md",
+          "x": -798.820556640625,
+          "y": 3999.694580078125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-7-2-exercise-order.md",
+          "x": -4565.69384765625,
+          "y": -1473.9765625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-7-3-functional-training.md",
+          "x": -1553.25,
+          "y": -4318.82080078125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-12-task-7-4-concurrent-training-research.md",
+          "x": -2798.7109375,
+          "y": 2206.501953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-16-task-9-1-hormonal-response-resistance-training.md",
+          "x": 5205.5615234375,
+          "y": -2600.66064453125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/exercise-physiology/2026-04-16-task-9-2-gut-microbiome-muscle-health.md",
+          "x": -3130.465576171875,
+          "y": 685.6117553710938
+        },
+        {
+          "id": "raw/github/relay-neuron/research/health-applications/2026-04-12-task-1-5-muscle-atrophy-sarcopenia.md",
+          "x": -2869.109375,
+          "y": -946.387451171875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/health-applications/2026-04-12-task-4-4-metabolic-syndrome-exercise.md",
+          "x": -6818.17919921875,
+          "y": 320.2269287109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/health-applications/2026-04-12-task-5-1-exercise-sleep-quality.md",
+          "x": 298.656982421875,
+          "y": 2221.337890625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/health-applications/2026-04-12-task-6-1-aging-sarcopenia.md",
+          "x": 2992.724609375,
+          "y": -1558.8350830078125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/health-applications/2026-04-12-task-6-3-diabetes-exercise.md",
+          "x": 4526.873046875,
+          "y": -2161.072021484375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/health-applications/2026-04-12-task-6-4-cardiovascular-health-exercise.md",
+          "x": -4049.267333984375,
+          "y": -4863.2275390625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/health-applications/2026-04-16-task-9-3-exercise-mental-health-depression-anxiety.md",
+          "x": -1602.3536376953125,
+          "y": -1166.1087646484375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-12-task-2-3-amino-acids-leucine.md",
+          "x": -4864.94189453125,
+          "y": -3971.94921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-12-task-2-4-casein-vs-whey.md",
+          "x": -6825.82958984375,
+          "y": 1257.4185791015625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-12-task-2-5-protein-spread-change-theory.md",
+          "x": 3546.1318359375,
+          "y": -3266.634765625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-12-task-5-2-training-period-nutrition-strategy.md",
+          "x": -1496.54443359375,
+          "y": -3068.28515625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-12-task-5-3-in-competition-nutrition-science.md",
+          "x": -1320.003662109375,
+          "y": 5119.50390625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-12-task-5-4-hydration-electrolyte-balance.md",
+          "x": 16.955219268798828,
+          "y": -2397.0791015625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-blood-glucose-cognitive-performance.md",
+          "x": -6141.6376953125,
+          "y": -3172.191162109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-carb-glycogen-synthesis.md",
+          "x": 4608.75,
+          "y": -4165.27880859375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-carb-loading-competition.md",
+          "x": -6671.4013671875,
+          "y": -31.455623626708984
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-carb-metabolism-sex-differences.md",
+          "x": 2156.357421875,
+          "y": 2675.42138671875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-carb-periodization.md",
+          "x": -2813.047119140625,
+          "y": -3168.622802734375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-carb-restriction-metabolic-health.md",
+          "x": 1727.2000732421875,
+          "y": -5443.6796875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-carb-timing-strategy.md",
+          "x": 4732.53076171875,
+          "y": -3617.74951171875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-carb-types-glycemic-index.md",
+          "x": -4865.5126953125,
+          "y": 28.213233947753906
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-gut-microbiome-carb-metabolism.md",
+          "x": -1592.389404296875,
+          "y": -662.7607421875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-ketogenic-diet-long-term-rct.md",
+          "x": 3926.526611328125,
+          "y": -2925.53662109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-lowcarb-vs-highcarb-diet.md",
+          "x": 464.4367980957031,
+          "y": -921.0921020507812
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-anti-inflammatory-recovery.md",
+          "x": -2351.599853515625,
+          "y": -700.2041015625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-bioavailability-sources.md",
+          "x": 1121.6544189453125,
+          "y": -2422.059814453125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-cardiovascular-health.md",
+          "x": 4535.216796875,
+          "y": -5000.20458984375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-cognitive-function.md",
+          "x": 726.6797485351562,
+          "y": -3238.32080078125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-dosage-timing.md",
+          "x": 2322.271484375,
+          "y": 1832.625732421875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-hrv-autonomic-nervous.md",
+          "x": -3401.603515625,
+          "y": 1895.3143310546875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-joint-health.md",
+          "x": 641.2553100585938,
+          "y": -2832.542724609375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-omega3-muscle-protein-synthesis.md",
+          "x": -6708.30126953125,
+          "y": -1514.4864501953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-protein-carb-coingestion.md",
+          "x": -3532.94482421875,
+          "y": 2907.78515625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-resistant-starch-exercise-performance.md",
+          "x": 2754.740966796875,
+          "y": -5120.95703125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/nutrition/2026-04-25-sport-specific-carb-strategy.md",
+          "x": 1201.6114501953125,
+          "y": -6563.3837890625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/periodization/2026-04-12-task-6-1-linear-vs-undulating-periodization.md",
+          "x": -795.546875,
+          "y": 1375.930419921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/periodization/2026-04-12-task-6-2-marathon-training-periodization.md",
+          "x": 4399.669921875,
+          "y": 2021.5302734375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/periodization/2026-04-12-task-6-3-trail-race-training-periodization.md",
+          "x": -2987.8095703125,
+          "y": -671.2324829101562
+        },
+        {
+          "id": "raw/github/relay-neuron/research/periodization/2026-04-12-task-6-4-recovery-week-design.md",
+          "x": -3097.1767578125,
+          "y": -4475.8759765625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/periodization/2026-04-12-task-6-5-tapering-science.md",
+          "x": -3251.691650390625,
+          "y": -2211.3818359375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/periodization/2026-04-16-task-9-4-periodization-training-models.md",
+          "x": -2748.938232421875,
+          "y": 4851.02880859375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/population-specific/2026-04-12-task-6-5-child-fitness-cognition.md",
+          "x": 973.872802734375,
+          "y": -1596.614013671875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/population-specific/2026-04-12-task-7-1-recreational-runners-research.md",
+          "x": -1516.423583984375,
+          "y": -5290.93359375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/population-specific/2026-04-12-task-7-2-female-runners-research.md",
+          "x": 533.6734008789062,
+          "y": -6956.88232421875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/population-specific/2026-04-12-task-7-3-master-runners-research.md",
+          "x": 2653.594970703125,
+          "y": 3953.76708984375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/population-specific/2026-04-12-task-7-4-youth-running-development.md",
+          "x": 5615.1337890625,
+          "y": -1133.742431640625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/population-specific/2026-04-12-task-7-5-elite-athletes-research.md",
+          "x": 5208.85009765625,
+          "y": -4059.460205078125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-12-task-3-1-ultra-endurance-physiology.md",
+          "x": 4723.369140625,
+          "y": -1514.793701171875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-12-task-3-2-trail-running-technique.md",
+          "x": -294.68109130859375,
+          "y": -3536.798828125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-12-task-3-3-ultra-recovery-adaptation.md",
+          "x": -393.7676086425781,
+          "y": 1404.6595458984375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-12-task-3-4-ultra-nutrition.md",
+          "x": -768.5197143554688,
+          "y": 925.4569091796875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-12-task-3-5-ultra-mental-fortitude.md",
+          "x": -6383.2021484375,
+          "y": -1716.255126953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-12-task-5-5-trail-running-special-nutrition-needs.md",
+          "x": -2012.3779296875,
+          "y": 212.32122802734375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-16-task-5-1-trail-running-physiological-adaptations.md",
+          "x": -1680.8896484375,
+          "y": 3454.44287109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-16-task-5-2-trail-running-injuries.md",
+          "x": 4732.73828125,
+          "y": 1259.7738037109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-16-task-5-3-trail-running-musculoskeletal.md",
+          "x": -1257.947509765625,
+          "y": -6445.65234375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-16-task-5-4-trail-running-metabolism.md",
+          "x": -5811.37841796875,
+          "y": 3051.491943359375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/sport-specific/2026-04-16-task-5-5-trail-running-psychology.md",
+          "x": -6237.748046875,
+          "y": 522.9147338867188
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/2026-04-12-task-2-2-creatine-supplementation.md",
+          "x": 884.2647705078125,
+          "y": -4545.0224609375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/2026-04-12-task-5-2-creatine-sleep-research.md",
+          "x": 2406.268310546875,
+          "y": 2196.03125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/00_综合综述/00_姜黄素多系统健康功效综合综述.md",
+          "x": -3645.74072265625,
+          "y": -4302.27490234375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/01_糖尿病与代谢/01_Nutrition_Journal_2024_姜黄素改善肥胖T2DM患者β细胞功能RCT.md",
+          "x": -5321.1611328125,
+          "y": -1926.30224609375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/01_糖尿病与代谢/02_Nutrients_2020_姜黄素降低高风险成人 GSK3β 和 IAPP.md",
+          "x": 652.7304077148438,
+          "y": 2619.646240234375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/02_肝脏系统/01_Scientific_Reports_2023_姜黄素对MAFLD荟萃分析.md",
+          "x": 1320.1895751953125,
+          "y": 1886.18310546875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/02_肝脏系统/02_Archives_Medical_Science_2018_姜黄素在肝脏疾病中的作用.md",
+          "x": 5348.859375,
+          "y": -732.4326171875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/03_炎症与免疫/01_Nutrients_2018_姜黄素生物活性与健康功效分子机制综述.md",
+          "x": -6183.15185546875,
+          "y": 1622.501953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/03_炎症与免疫/02_Springer_2024_透明质酸纳米粒增强姜黄素抗RA活性.md",
+          "x": 5788.826171875,
+          "y": 1441.721923828125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/04_神经系统/01_Food_Research_2020_姜黄素神经保护作用.md",
+          "x": -1719.848388671875,
+          "y": 712.774169921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/04_神经系统/02_Neurotoxicity_Research_2021_纳米乳剂增强姜黄素对帕金森病神经保护.md",
+          "x": -2372.47998046875,
+          "y": 2244.501953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/05_肾脏系统/01_Pharmaceutical_Biology_2019_姜黄素缓解糖尿病肾病.md",
+          "x": 1483.5931396484375,
+          "y": -5220.1708984375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/06_癌症/01_Scientific_Reports_2024_姜黄素脂质体通过激活线粒体自噬缓解骨髓间充质干细胞衰老.md",
+          "x": -2060.712646484375,
+          "y": 5527.853515625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/06_癌症/02_BMC_2024_姜黄素与他莫昔芬协同纳米粒治疗乳腺癌.md",
+          "x": -4128.7578125,
+          "y": 2054.519287109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/姜黄素文献分析/07_生物利用度/01_European_J_Pharmacokinetics_2019_姜黄素纳米制剂增强口服生物利用度.md",
+          "x": 2926.98681640625,
+          "y": -660.2645263671875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/00_综述/肥胖导致内脏损伤的综合综述.md",
+          "x": -135.7608642578125,
+          "y": 2528.87451171875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/01_心血管系统/01_Nature_Reviews_Cardiology_2023_肥胖与心脏代谢疾病.md",
+          "x": -5421.76123046875,
+          "y": 2596.843017578125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/01_心血管系统/02_IJ_Obesity_2023_无传统风险因素下肥胖与CVD.md",
+          "x": -5320.05908203125,
+          "y": 1601.9051513671875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/01_心血管系统/03_Current_Heart_Failure_Reports_2024_肥胖_代谢综合征_肥胖悖论与心衰.md",
+          "x": -1137.3160400390625,
+          "y": 83.69146728515625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/01_心血管系统/04_IJ_Obesity_2025_腰围与术后房颤.md",
+          "x": -1995.434326171875,
+          "y": -199.3624725341797
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/01_心血管系统/05_Scientific_Reports_2021_体脂参数与动脉僵硬.md",
+          "x": -4213.09228515625,
+          "y": -125.41529846191406
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/01_心血管系统/06_Cardiovascular_Endocrinology_2024_肥胖与房颤.md",
+          "x": -648.75634765625,
+          "y": 3142.791259765625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/02_肝脏系统/01_Current_Cardiology_Reports_2024_全球MASLD流行现状.md",
+          "x": 2863.65673828125,
+          "y": 16.187023162841797
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/02_肝脏系统/02_J_Translational_Medicine_2025_E3泛素连接酶与MASLD.md",
+          "x": 6054.453125,
+          "y": -2867.146240234375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/02_肝脏系统/03_2024_内脏脂肪在NAFLD中的研究进展.md",
+          "x": 6391.9775390625,
+          "y": -874.6132202148438
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/02_肝脏系统/04_Frontiers_Endocrinology_2022_MASLD与心脏舒张功能.md",
+          "x": -6497.20849609375,
+          "y": -727.4991455078125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/03_中枢神经系统/01_IJ_Obesity_CHARLS_2024_肥胖与痴呆风险.md",
+          "x": 2524.660888671875,
+          "y": -4899.83203125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/03_中枢神经系统/02_2023_柳叶刀子刊_腹部肥胖与认知下降.md",
+          "x": -2317.056884765625,
+          "y": 3223.97412109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/03_中枢神经系统/03_Nature_Mental_Health_2025_长期肥胖对大脑形态功能连接和认知的影响.md",
+          "x": -1081.9619140625,
+          "y": -4620
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/04_代谢与内分泌系统/01_Nature_Medicine_2025_肥胖药物治疗系统综述.md",
+          "x": 2717.353271484375,
+          "y": 3186.38623046875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/04_代谢与内分泌系统/02_2025_免疫学杂志_IL7_调节性T细胞与T2DM.md",
+          "x": -3854.86181640625,
+          "y": 561.3133544921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/04_代谢与内分泌系统/03_Endocrine_2024_RBP4与T2DM.md",
+          "x": -4668.22265625,
+          "y": 1891.182373046875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/04_代谢与内分泌系统/04_Scientific_Reports_2024_VAI与T2DM.md",
+          "x": 5587.15869140625,
+          "y": -3259.927001953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/05_肾脏系统/01_BMC_Nephrology_2022_VAI_LAP与CKD.md",
+          "x": -4165.74658203125,
+          "y": 1085.8056640625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/05_肾脏系统/02_Nature_Reviews_Endocrinology_2024_肥胖与肾脏机制与治疗进展.md",
+          "x": -3538.358154296875,
+          "y": -4652.1201171875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/05_肾脏系统/03_Nature_Reviews_Disease_Primers_2025_慢性肾脏病.md",
+          "x": -2025.693359375,
+          "y": 598.6179809570312
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/05_肾脏系统/04_Scientific_Reports_2025_SGLT2i在CKD真实世界.md",
+          "x": -5826.30810546875,
+          "y": -1511.864501953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/文献分析/05_肾脏系统/05_DMSO_2023_肥胖模式与糖尿病肾病.md",
+          "x": -2076.2119140625,
+          "y": -5272.73193359375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/00_综合综述/00_辅酶Q10多系统健康功效综合综述.md",
+          "x": 5067.7451171875,
+          "y": -38.31218719482422
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/01_心血管系统/01_Food_Function_2023_辅酶Q10治疗心力衰竭系统评价.md",
+          "x": -202.0694122314453,
+          "y": 225.71328735351562
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/01_心血管系统/02_J_Human_Hypertension_2007_辅酶Q10治疗高血压荟萃分析.md",
+          "x": -6327.18359375,
+          "y": 1178.754150390625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/02_神经系统/01_Journal_Parkinson_2014_辅酶Q10与帕金森病.md",
+          "x": -3078.843994140625,
+          "y": 4293.9716796875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/02_神经系统/02_Neurology_2011_辅酶Q10与偏头痛.md",
+          "x": 918.0382690429688,
+          "y": -622.1524658203125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/03_代谢与内分泌/01_Diabetes_2010_辅酶Q10与糖尿病代谢.md",
+          "x": 3791.5185546875,
+          "y": -339.0650329589844
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/04_他汀与肌肉/01_Atherosclerosis_2014_他汀诱导肌病与辅酶Q10.md",
+          "x": -4374.052734375,
+          "y": 226.10304260253906
+        },
+        {
+          "id": "raw/github/relay-neuron/research/supplements/辅酶Q10文献分析/05_生物利用度/01_Bioavailability_2018_泛醇与泛醌生物利用度比较.md",
+          "x": 314.9984436035156,
+          "y": -3476.135009765625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-12-initial-research.md",
+          "x": 3433.048095703125,
+          "y": -5104.69189453125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-12-initial-running-research.md",
+          "x": -3710.345703125,
+          "y": 4240.99267578125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-12-research-round-2.md",
+          "x": 945.201416015625,
+          "y": -5311.98828125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-15-research-round-4.md",
+          "x": -4155.3037109375,
+          "y": 3318.528564453125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-10.md",
+          "x": -5809.16845703125,
+          "y": 3599.43994140625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-11.md",
+          "x": 819.0979614257812,
+          "y": -976.5444946289062
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-12.md",
+          "x": -2561.72314453125,
+          "y": -5391.751953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-13.md",
+          "x": -5404.94677734375,
+          "y": -1543.586669921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-14.md",
+          "x": -5202.2314453125,
+          "y": -3418.480224609375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-15.md",
+          "x": 1215.00390625,
+          "y": -4069.886474609375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-16.md",
+          "x": 147.63848876953125,
+          "y": -6613.7880859375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-3.md",
+          "x": -4081.005615234375,
+          "y": -3252.582763671875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-5.md",
+          "x": -813.5110473632812,
+          "y": -4180.357421875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-6.md",
+          "x": 5019.58056640625,
+          "y": -3031.12841796875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-7.md",
+          "x": -2100.443603515625,
+          "y": -3337.5068359375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-8.md",
+          "x": 1307.10986328125,
+          "y": 386.24102783203125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-round-9.md",
+          "x": -2513.4384765625,
+          "y": -4782.9189453125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-16-research-synthesis.md",
+          "x": -3450.113525390625,
+          "y": 1428.3858642578125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-21-research-round-17.md",
+          "x": 5625.8232421875,
+          "y": -2834.314697265625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-21-research-round-18.md",
+          "x": 1674.159912109375,
+          "y": 1178.7518310546875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-21-research-round-19.md",
+          "x": 2083.902587890625,
+          "y": -2870.162109375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-24-research-round-20.md",
+          "x": -5318.13916015625,
+          "y": 3681.3486328125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-25-research-round-21-supplement.md",
+          "x": -6077.71875,
+          "y": 2722.008544921875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-25-research-round-21.md",
+          "x": 241.80870056152344,
+          "y": -3204.357177734375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/synthesis/2026-04-25-research-round-22.md",
+          "x": -3250.322509765625,
+          "y": -1150.2052001953125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-1-5-HRV-training-monitoring.md",
+          "x": -6621.5234375,
+          "y": -2056.104248046875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-7-5-digital-AI-fitness.md",
+          "x": 1275.553955078125,
+          "y": -5621.96630859375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-1-SCSEPF-conference.md",
+          "x": -3238.708251953125,
+          "y": -4060.970947265625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-1-wearable-devices-running-data.md",
+          "x": -4834.30859375,
+          "y": -329.3277587890625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-2-Journal-Exercise-Science-Fitness.md",
+          "x": 3888.039794921875,
+          "y": 2049.288818359375
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-2-ai-ml-running-performance-prediction.md",
+          "x": 2465.578369140625,
+          "y": 1029.5889892578125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-3-SMHS-journal.md",
+          "x": -5100.44384765625,
+          "y": 3213.16259765625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-3-running-power-meter-research.md",
+          "x": 4043.100830078125,
+          "y": -3389.13720703125
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-4-ACSM-guidelines.md",
+          "x": -2666.9833984375,
+          "y": -2709.546875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/technology/2026-04-12-task-8-4-real-time-physiological-monitoring.md",
+          "x": -4630.234375,
+          "y": 4659.77587890625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/training-methods/2026-04-12-task-2-1-interval-training.md",
+          "x": -3597.780517578125,
+          "y": -1946.67138671875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/training-methods/2026-04-12-task-2-2-tempo-run.md",
+          "x": -2728.197998046875,
+          "y": 419.33056640625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/training-methods/2026-04-12-task-2-3-LSD-easy-run.md",
+          "x": -778.5623779296875,
+          "y": 4780.6650390625
+        },
+        {
+          "id": "raw/github/relay-neuron/research/training-methods/2026-04-12-task-2-4-threshold-training.md",
+          "x": 3581.681396484375,
+          "y": -1523.0965576171875
+        },
+        {
+          "id": "raw/github/relay-neuron/research/training-methods/2026-04-12-task-2-5-hill-training.md",
+          "x": 6216.8603515625,
+          "y": -2415.377197265625
+        },
+        {
+          "id": "wiki/dashboard-exercise.md",
+          "x": -3554.509765625,
+          "y": 264.47430419921875
+        },
+        {
+          "id": "#dashboard",
+          "x": -4109.88427734375,
+          "y": 929.76611328125
+        },
+        {
+          "id": "#exercise-science",
+          "x": -2642.713623046875,
+          "y": -2277.249755859375
+        },
+        {
+          "id": "wiki/dashboard-tech.md",
+          "x": -336.789306640625,
+          "y": 2655.640869140625
+        },
+        {
+          "id": "#tech",
+          "x": 1187.94384765625,
+          "y": 1318.8240966796875
+        },
+        {
+          "id": "wiki/entities/cpp.md",
+          "x": -2202.981689453125,
+          "y": -910.0791015625
+        },
+        {
+          "id": "#C++",
+          "x": -3022.893310546875,
+          "y": -1807.5013427734375
+        },
+        {
+          "id": "#系统编程",
+          "x": -3475.896484375,
+          "y": -1490.5224609375
+        },
+        {
+          "id": "#语言",
+          "x": -958.1979370117188,
+          "y": -3170.712646484375
+        },
+        {
+          "id": "wiki/entities/cpp/auto-type-deduction.md",
+          "x": -1887.2249755859375,
+          "y": 4463.02490234375
+        },
+        {
+          "id": "#modern-cpp",
+          "x": -1177.406982421875,
+          "y": 4432.087890625
+        },
+        {
+          "id": "wiki/entities/cpp/concurrency.md",
+          "x": 3217.822998046875,
+          "y": 3368.190185546875
+        },
+        {
+          "id": "wiki/entities/cpp/constexpr.md",
+          "x": -3520.52587890625,
+          "y": 2343.3154296875
+        },
+        {
+          "id": "wiki/entities/cpp/cpp20-features.md",
+          "x": 3021.143798828125,
+          "y": 2510.822509765625
+        },
+        {
+          "id": "#cpp20",
+          "x": 2076.343994140625,
+          "y": 4094.906494140625
+        },
+        {
+          "id": "wiki/entities/cpp/if-constexpr.md",
+          "x": -2705.828857421875,
+          "y": 3904.767822265625
+        },
+        {
+          "id": "wiki/entities/cpp/lambda-expressions.md",
+          "x": -1351.8814697265625,
+          "y": 358.36920166015625
+        },
+        {
+          "id": "wiki/entities/cpp/move-semantics.md",
+          "x": -990.1149291992188,
+          "y": 1198.2369384765625
+        },
+        {
+          "id": "wiki/entities/cpp/raii.md",
+          "x": 909.3471069335938,
+          "y": 3534.68115234375
+        },
+        {
+          "id": "wiki/entities/cpp/smart-pointers.md",
+          "x": 3337.622802734375,
+          "y": -856.7255859375
+        },
+        {
+          "id": "wiki/entities/cpp/variadic-templates.md",
+          "x": 2566.841552734375,
+          "y": 2353.98291015625
+        },
+        {
+          "id": "wiki/entities/datastructure/algorithm-complexity.md",
+          "x": 196.20274353027344,
+          "y": 5566.96533203125
+        },
+        {
+          "id": "#数据结构",
+          "x": -504.57891845703125,
+          "y": 5509.58740234375
+        },
+        {
+          "id": "#算法",
+          "x": -1330.180908203125,
+          "y": 6031.4375
+        },
+        {
+          "id": "#复杂度分析",
+          "x": -183.89451599121094,
+          "y": 6777.83349609375
+        },
+        {
+          "id": "wiki/entities/datastructure/dynamic-programming.md",
+          "x": 1725.0496826171875,
+          "y": 2470.734619140625
+        },
+        {
+          "id": "#动态规划",
+          "x": 1230.912353515625,
+          "y": 1096.9508056640625
+        },
+        {
+          "id": "#最优子结构",
+          "x": -626.2224731445312,
+          "y": 4334.88671875
+        },
+        {
+          "id": "wiki/entities/datastructure/hash-table.md",
+          "x": -1056.26611328125,
+          "y": 5860.47119140625
+        },
+        {
+          "id": "#哈希表",
+          "x": -2030.7459716796875,
+          "y": 6634.93115234375
+        },
+        {
+          "id": "#散列表",
+          "x": -3477.792724609375,
+          "y": 5366.6650390625
+        },
+        {
+          "id": "#O(1)查找",
+          "x": -2970.0205078125,
+          "y": 5889.42333984375
+        },
+        {
+          "id": "wiki/entities/datastructure/linear-data-structures.md",
+          "x": 1703.4224853515625,
+          "y": 1621.9168701171875
+        },
+        {
+          "id": "#线性结构",
+          "x": 2831.18408203125,
+          "y": 1303.403564453125
+        },
+        {
+          "id": "#数组",
+          "x": 3471.75732421875,
+          "y": 1534.49169921875
+        },
+        {
+          "id": "#链表",
+          "x": -597.9606323242188,
+          "y": 2720.6328125
+        },
+        {
+          "id": "#栈",
+          "x": 3615.54296875,
+          "y": 1217.9481201171875
+        },
+        {
+          "id": "#队列",
+          "x": 3882.7177734375,
+          "y": 1617.2926025390625
+        },
+        {
+          "id": "wiki/entities/datastructure/recursion-and-divide-conquer.md",
+          "x": -15.061517715454102,
+          "y": 6132.67578125
+        },
+        {
+          "id": "#递归",
+          "x": 1190.7237548828125,
+          "y": 6873.54443359375
+        },
+        {
+          "id": "#分治法",
+          "x": 1693.8218994140625,
+          "y": 6786.0751953125
+        },
+        {
+          "id": "wiki/entities/datastructure/sorting-algorithms.md",
+          "x": -3044.36865234375,
+          "y": 3771.73486328125
+        },
+        {
+          "id": "#排序算法",
+          "x": -4934.39453125,
+          "y": 4336.1953125
+        },
+        {
+          "id": "wiki/entities/datastructure/trees-and-graphs.md",
+          "x": -2163.98486328125,
+          "y": 5633.30908203125
+        },
+        {
+          "id": "#树",
+          "x": -1532.23046875,
+          "y": 6790.71875
+        },
+        {
+          "id": "#二叉树",
+          "x": -3570.6748046875,
+          "y": 5887.91796875
+        },
+        {
+          "id": "#图",
+          "x": -4158.478515625,
+          "y": 5194.0029296875
+        },
+        {
+          "id": "wiki/entities/design-patterns/behavioral-patterns.md",
+          "x": 3515.513427734375,
+          "y": 5562.6318359375
+        },
+        {
+          "id": "#设计模式",
+          "x": 5054.390625,
+          "y": 3703.106689453125
+        },
+        {
+          "id": "#行为型模式",
+          "x": 3116.669189453125,
+          "y": 6027.37548828125
+        },
+        {
+          "id": "#策略",
+          "x": 2074.8759765625,
+          "y": 6565.35498046875
+        },
+        {
+          "id": "#状态",
+          "x": 4736.814453125,
+          "y": 5142.515625
+        },
+        {
+          "id": "#观察者",
+          "x": 3457.762451171875,
+          "y": 6188.40869140625
+        },
+        {
+          "id": "#命令",
+          "x": 4402.54296875,
+          "y": 5587.1044921875
+        },
+        {
+          "id": "#模板方法",
+          "x": 5244.490234375,
+          "y": 3558.279296875
+        },
+        {
+          "id": "#迭代器",
+          "x": 1442.0927734375,
+          "y": 6367.3095703125
+        },
+        {
+          "id": "#中介者",
+          "x": 3219.90966796875,
+          "y": 5350.015625
+        },
+        {
+          "id": "#责任链",
+          "x": 4478.56103515625,
+          "y": 4341.318359375
+        },
+        {
+          "id": "wiki/entities/design-patterns/creational-patterns.md",
+          "x": 481.00054931640625,
+          "y": 213.390625
+        },
+        {
+          "id": "#创建型模式",
+          "x": 191.85813903808594,
+          "y": -433.0952453613281
+        },
+        {
+          "id": "#单例",
+          "x": -1034.21875,
+          "y": -1384.3438720703125
+        },
+        {
+          "id": "#工厂",
+          "x": -2314.315673828125,
+          "y": -1035.1346435546875
+        },
+        {
+          "id": "#建造者",
+          "x": -514.4124755859375,
+          "y": -278.7239990234375
+        },
+        {
+          "id": "#原型",
+          "x": 296.2395324707031,
+          "y": -1144.6590576171875
+        },
+        {
+          "id": "wiki/entities/design-patterns/design-principles-advanced.md",
+          "x": 5158.4169921875,
+          "y": 4257.43310546875
+        },
+        {
+          "id": "#设计原则",
+          "x": 5425.1455078125,
+          "y": 3694.80859375
+        },
+        {
+          "id": "#DIP",
+          "x": 5267.8857421875,
+          "y": 4868.087890625
+        },
+        {
+          "id": "#SoC",
+          "x": 6243.56201171875,
+          "y": 3226.644775390625
+        },
+        {
+          "id": "#关注点分离",
+          "x": 6070.87646484375,
+          "y": 3420.148681640625
+        },
+        {
+          "id": "wiki/entities/design-patterns/solid-principles.md",
+          "x": 2507.06884765625,
+          "y": 5576.041015625
+        },
+        {
+          "id": "#SOLID",
+          "x": 4073.70703125,
+          "y": 4755.1005859375
+        },
+        {
+          "id": "wiki/entities/design-patterns/structural-patterns.md",
+          "x": 4805.97900390625,
+          "y": 3738.60986328125
+        },
+        {
+          "id": "#结构型模式",
+          "x": 6286.041015625,
+          "y": 2003.823486328125
+        },
+        {
+          "id": "#适配器",
+          "x": 6168.5654296875,
+          "y": 2816.900634765625
+        },
+        {
+          "id": "#桥接",
+          "x": 5402.8916015625,
+          "y": 4057.57958984375
+        },
+        {
+          "id": "#组合",
+          "x": 5367.740234375,
+          "y": 2028.758544921875
+        },
+        {
+          "id": "#装饰",
+          "x": 5878.58154296875,
+          "y": 2089.18212890625
+        },
+        {
+          "id": "#门面",
+          "x": 6303.66796875,
+          "y": 2387.52001953125
+        },
+        {
+          "id": "#享元",
+          "x": 5911.86962890625,
+          "y": 3613.625732421875
+        },
+        {
+          "id": "#代理",
+          "x": 4609.24462890625,
+          "y": 4819.771484375
+        },
+        {
+          "id": "wiki/entities/interview/interview-preparation.md",
+          "x": 2955.879638671875,
+          "y": -241.58499145507812
+        },
+        {
+          "id": "#面试",
+          "x": 109.35279846191406,
+          "y": 4147.837890625
+        },
+        {
+          "id": "#编程面试",
+          "x": 1323.348388671875,
+          "y": -1739.6461181640625
+        },
+        {
+          "id": "#面试准备",
+          "x": 4470.6416015625,
+          "y": -1666.9364013671875
+        },
+        {
+          "id": "wiki/entities/interview/problem-solving-patterns.md",
+          "x": 2129.34033203125,
+          "y": 3960.88623046875
+        },
+        {
+          "id": "#解题模式",
+          "x": 3520.75732421875,
+          "y": 3898.44140625
+        },
+        {
+          "id": "#LeetCode",
+          "x": 4236.16259765625,
+          "y": 3764.962646484375
+        },
+        {
+          "id": "wiki/entities/interview/system-design-basics.md",
+          "x": -2126.877685546875,
+          "y": 3413.656494140625
+        },
+        {
+          "id": "#系统设计",
+          "x": -3578.482421875,
+          "y": 4675.89990234375
+        },
+        {
+          "id": "#架构",
+          "x": -3349.831787109375,
+          "y": 4938.37060546875
+        },
+        {
+          "id": "#可扩展性",
+          "x": -1962.6405029296875,
+          "y": 5024.44384765625
+        },
+        {
+          "id": "wiki/entities/linux/kernel/block/linux-kernel-block-core.md",
+          "x": -1195.45068359375,
+          "y": 4138.05908203125
+        },
+        {
+          "id": "#linux-kernel",
+          "x": 2343.090576171875,
+          "y": 3424.265869140625
+        },
+        {
+          "id": "#block-layer",
+          "x": -400.8749084472656,
+          "y": 4374.005859375
+        },
+        {
+          "id": "#bio",
+          "x": 353.5229187011719,
+          "y": 4513.05712890625
+        },
+        {
+          "id": "#request",
+          "x": -3735.78173828125,
+          "y": 2127.064208984375
+        },
+        {
+          "id": "#gendisk",
+          "x": -2538.3056640625,
+          "y": 5372.13427734375
+        },
+        {
+          "id": "wiki/entities/linux/kernel/block/linux-kernel-block-mq.md",
+          "x": -1284.5439453125,
+          "y": 5536.95068359375
+        },
+        {
+          "id": "#multi-queue",
+          "x": -3308.474853515625,
+          "y": 5655.537109375
+        },
+        {
+          "id": "#blk-mq",
+          "x": -1718.270751953125,
+          "y": 6583.0166015625
+        },
+        {
+          "id": "#hctx",
+          "x": -2687.631103515625,
+          "y": 6217.6357421875
+        },
+        {
+          "id": "wiki/entities/linux/kernel/block/linux-kernel-block-scheduler.md",
+          "x": 376.45654296875,
+          "y": 4852.67529296875
+        },
+        {
+          "id": "#io-scheduler",
+          "x": -1471.3370361328125,
+          "y": 5794.6943359375
+        },
+        {
+          "id": "#elevator",
+          "x": -1404.93017578125,
+          "y": 4842.28173828125
+        },
+        {
+          "id": "#deadline",
+          "x": 2984.41845703125,
+          "y": 3349.896484375
+        },
+        {
+          "id": "#bfq",
+          "x": -417.00311279296875,
+          "y": 5886.6689453125
+        },
+        {
+          "id": "wiki/entities/linux/kernel/crypto/linux-kernel-crypto-core.md",
+          "x": -2215.352783203125,
+          "y": -1412.89306640625
+        },
+        {
+          "id": "#Linux内核",
+          "x": -1491.27978515625,
+          "y": -3274.834716796875
+        },
+        {
+          "id": "#密码学",
+          "x": -4765.03369140625,
+          "y": -717.3228149414062
+        },
+        {
+          "id": "#crypto子系统",
+          "x": -3800.52978515625,
+          "y": -2381.007568359375
+        },
+        {
+          "id": "#对称加密",
+          "x": -2436.029541015625,
+          "y": -2781.19189453125
+        },
+        {
+          "id": "#非对称加密",
+          "x": -179.95620727539062,
+          "y": -1985.265380859375
+        },
+        {
+          "id": "#哈希",
+          "x": -4251.53955078125,
+          "y": -2609.4443359375
+        },
+        {
+          "id": "wiki/entities/linux/kernel/io_uring/linux-kernel-io-uring-core.md",
+          "x": 2091.793212890625,
+          "y": 4702.3779296875
+        },
+        {
+          "id": "#async-io",
+          "x": 4768.927734375,
+          "y": 2837.2744140625
+        },
+        {
+          "id": "#io-subsystem",
+          "x": 4007.624755859375,
+          "y": 5090.0498046875
+        },
+        {
+          "id": "wiki/entities/linux/kernel/ipc/linux-kernel-ipc-core.md",
+          "x": 2697.143310546875,
+          "y": 1969.49658203125
+        },
+        {
+          "id": "#进程间通信",
+          "x": 3998.009033203125,
+          "y": 2931.116943359375
+        },
+        {
+          "id": "#消息队列",
+          "x": 164.6946258544922,
+          "y": 4877.32763671875
+        },
+        {
+          "id": "#信号量",
+          "x": 231.9112548828125,
+          "y": 4609.87744140625
+        },
+        {
+          "id": "#共享内存",
+          "x": 4991.71826171875,
+          "y": 1131.182861328125
+        },
+        {
+          "id": "#mqueue",
+          "x": 618.278076171875,
+          "y": 1047.6260986328125
+        },
+        {
+          "id": "wiki/entities/linux/kernel/locking/linux-kernel-locking-core.md",
+          "x": 1376.599609375,
+          "y": 2242.9208984375
+        },
+        {
+          "id": "#锁机制",
+          "x": 2971.19287109375,
+          "y": 1202.5609130859375
+        },
+        {
+          "id": "#并发控制",
+          "x": 4304.138671875,
+          "y": -986.0525512695312
+        },
+        {
+          "id": "#spinlock",
+          "x": 2197.27587890625,
+          "y": 580.1973876953125
+        },
+        {
+          "id": "#mutex",
+          "x": -277.8172912597656,
+          "y": 4873.01220703125
+        },
+        {
+          "id": "#lockdep",
+          "x": 4299.93798828125,
+          "y": 2341.937744140625
+        },
+        {
+          "id": "wiki/entities/linux/kernel/mm/linux-kernel-mm-mmap.md",
+          "x": 3609.25537109375,
+          "y": 4559.27197265625
+        },
+        {
+          "id": "#memory-management",
+          "x": 4664.5234375,
+          "y": 3378.381591796875
+        },
+        {
+          "id": "#mmap",
+          "x": 3445.3720703125,
+          "y": 4179.021484375
+        },
+        {
+          "id": "#vma",
+          "x": 1164.07275390625,
+          "y": 5523.78955078125
+        },
+        {
+          "id": "#address-space",
+          "x": 1762.35107421875,
+          "y": 5538.638671875
+        },
+        {
+          "id": "wiki/entities/linux/kernel/mm/linux-kernel-mm-page-fault.md",
+          "x": 1581.30224609375,
+          "y": 4971.640625
+        },
+        {
+          "id": "#page-fault",
+          "x": 1598.161376953125,
+          "y": 6344.6669921875
+        },
+        {
+          "id": "wiki/entities/linux/kernel/mm/linux-kernel-mm-page-reclaim.md",
+          "x": 767.544677734375,
+          "y": 314.8716735839844
+        },
+        {
+          "id": "#lru",
+          "x": 122.01372528076172,
+          "y": -829.0745849609375
+        },
+        {
+          "id": "#kswapd",
+          "x": -696.1826782226562,
+          "y": -787.4632568359375
+        },
+        {
+          "id": "#reclaim",
+          "x": -263.96112060546875,
+          "y": -998.7789306640625
+        },
+        {
+          "id": "wiki/entities/linux/kernel/mm/linux-kernel-mm-slab-allocator.md",
+          "x": 4406.66943359375,
+          "y": 762.0877685546875
+        },
+        {
+          "id": "#slub",
+          "x": 4843.9267578125,
+          "y": -2576.725830078125
+        },
+        {
+          "id": "#allocator",
+          "x": 3878.5400390625,
+          "y": 2587.206787109375
+        },
+        {
+          "id": "wiki/entities/linux/kernel/mm/linux-kernel-mm-swap.md",
+          "x": -255.7656707763672,
+          "y": 6187.51123046875
+        },
+        {
+          "id": "#swap",
+          "x": -1251.4041748046875,
+          "y": 6559.13720703125
+        },
+        {
+          "id": "#anon-page",
+          "x": 1601.83056640625,
+          "y": 6011.025390625
+        },
+        {
+          "id": "wiki/entities/linux/kernel/net/linux-kernel-net-subsystem.md",
+          "x": -2411.18701171875,
+          "y": 4302.66552734375
+        },
+        {
+          "id": "#socket",
+          "x": -3935.852294921875,
+          "y": 4959.212890625
+        },
+        {
+          "id": "#skbuff",
+          "x": -998.283447265625,
+          "y": 6078.37744140625
+        },
+        {
+          "id": "#netdevice",
+          "x": -4490.81396484375,
+          "y": 2920.097412109375
+        },
+        {
+          "id": "#tcp",
+          "x": -1972.3778076171875,
+          "y": 2505.22412109375
+        },
+        {
+          "id": "#udp",
+          "x": -603.2969360351562,
+          "y": 4849.88623046875
+        },
+        {
+          "id": "#routing",
+          "x": -1314.8170166015625,
+          "y": 3237.546142578125
+        },
+        {
+          "id": "#ipv4",
+          "x": -2756.4658203125,
+          "y": 4268.8681640625
+        },
+        {
+          "id": "#ipv6",
+          "x": -2033.4923095703125,
+          "y": 4697.8232421875
+        },
+        {
+          "id": "wiki/entities/linux/kernel/netfilter/linux-kernel-netfilter-framework.md",
+          "x": -3481.9814453125,
+          "y": -488.63140869140625
+        },
+        {
+          "id": "#netfilter",
+          "x": -2452.014892578125,
+          "y": -2076.26318359375
+        },
+        {
+          "id": "#iptables",
+          "x": -4838.7236328125,
+          "y": -1982.0374755859375
+        },
+        {
+          "id": "#nftables",
+          "x": -2858.249267578125,
+          "y": -1682.2611083984375
+        },
+        {
+          "id": "#conntrack",
+          "x": -3187.68212890625,
+          "y": 865.6757202148438
+        },
+        {
+          "id": "#nat",
+          "x": -5703.63818359375,
+          "y": -658.4400634765625
+        },
+        {
+          "id": "#firewall",
+          "x": -5047.21044921875,
+          "y": -2197.808837890625
+        },
+        {
+          "id": "wiki/entities/linux/kernel/rcu/linux-kernel-rcu-core.md",
+          "x": 3766.40576171875,
+          "y": -3820.055419921875
+        },
+        {
+          "id": "#RCU",
+          "x": 1089.483154296875,
+          "y": -4695.16943359375
+        },
+        {
+          "id": "#Read-Copy-Update",
+          "x": 2705.51904296875,
+          "y": -5576.125
+        },
+        {
+          "id": "#无锁同步",
+          "x": 4667.9130859375,
+          "y": -4734.125
+        },
+        {
+          "id": "wiki/entities/linux/kernel/sched/linux-kernel-sched-cfs.md",
+          "x": -679.2177124023438,
+          "y": 2502.45703125
+        },
+        {
+          "id": "#scheduler",
+          "x": 2103.351806640625,
+          "y": -148.44241333007812
+        },
+        {
+          "id": "#cfs",
+          "x": -1112.528564453125,
+          "y": 751.19921875
+        },
+        {
+          "id": "#vruntime",
+          "x": -2798.3876953125,
+          "y": 4654.12890625
+        },
+        {
+          "id": "#eevdf",
+          "x": 927.5016479492188,
+          "y": 926.076416015625
+        },
+        {
+          "id": "wiki/entities/linux/kernel/sched/linux-kernel-sched-context-switch.md",
+          "x": 2148.93115234375,
+          "y": 3452.177978515625
+        },
+        {
+          "id": "#context-switch",
+          "x": 2799.19482421875,
+          "y": 4442.8759765625
+        },
+        {
+          "id": "#switch-to",
+          "x": 2873.756103515625,
+          "y": 4969.81298828125
+        },
+        {
+          "id": "wiki/entities/linux/kernel/sched/linux-kernel-sched-core.md",
+          "x": 5106.283203125,
+          "y": 239.33616638183594
+        },
+        {
+          "id": "#schedule",
+          "x": 3603.74267578125,
+          "y": 1844.19970703125
+        },
+        {
+          "id": "#task",
+          "x": 5491.86572265625,
+          "y": -1863.809814453125
+        },
+        {
+          "id": "wiki/entities/linux/kernel/sched/linux-kernel-sched-load-balance.md",
+          "x": 2229.9697265625,
+          "y": 1557.0341796875
+        },
+        {
+          "id": "#load-balance",
+          "x": 4502.4052734375,
+          "y": 1536.328125
+        },
+        {
+          "id": "#sched-domain",
+          "x": 2761.59326171875,
+          "y": 3365.87744140625
+        },
+        {
+          "id": "wiki/entities/linux/kernel/sound/linux-kernel-sound-core.md",
+          "x": -3355.29248046875,
+          "y": -2898.263916015625
+        },
+        {
+          "id": "#声音系统",
+          "x": -2872.24169921875,
+          "y": -5397.94482421875
+        },
+        {
+          "id": "#ALSA",
+          "x": -5269.3486328125,
+          "y": -3058.40478515625
+        },
+        {
+          "id": "#PCM",
+          "x": -3554.68701171875,
+          "y": -5176.4423828125
+        },
+        {
+          "id": "#ASoC",
+          "x": -2928.79248046875,
+          "y": -5062.49853515625
+        },
+        {
+          "id": "#DAPM",
+          "x": -2309.52099609375,
+          "y": -4533.712890625
+        },
+        {
+          "id": "#音频驱动",
+          "x": -4988.3310546875,
+          "y": -3801.362548828125
+        },
+        {
+          "id": "wiki/entities/linux/kernel/time/linux-kernel-time-core.md",
+          "x": -2855.75732421875,
+          "y": 1156.8975830078125
+        },
+        {
+          "id": "#时间管理",
+          "x": -2745.10205078125,
+          "y": -1183.4447021484375
+        },
+        {
+          "id": "#hrtimer",
+          "x": -2185.951904296875,
+          "y": -285.1495056152344
+        },
+        {
+          "id": "#tick",
+          "x": -5417.14599609375,
+          "y": 1792.250244140625
+        },
+        {
+          "id": "#timekeeping",
+          "x": -5374.083984375,
+          "y": -87.33612060546875
+        },
+        {
+          "id": "#posix-timers",
+          "x": -4927.49462890625,
+          "y": 1169.3592529296875
+        },
+        {
+          "id": "wiki/entities/linux/kernel/vfs/linux-kernel-vfs-core.md",
+          "x": -108.26579284667969,
+          "y": 5695.5380859375
+        },
+        {
+          "id": "#vfs",
+          "x": -1303.484130859375,
+          "y": 4085.81494140625
+        },
+        {
+          "id": "#filesystem",
+          "x": 702.666015625,
+          "y": 6856.98388671875
+        },
+        {
+          "id": "wiki/entities/linux/kernel/virt/linux-kernel-virt-kvm.md",
+          "x": 3150.833984375,
+          "y": 4667.90380859375
+        },
+        {
+          "id": "#virtualization",
+          "x": 5274.849609375,
+          "y": 2246.852294921875
+        },
+        {
+          "id": "#kvm",
+          "x": 2588.560302734375,
+          "y": 5034.14599609375
+        },
+        {
+          "id": "wiki/entities/linux/kernel/virt/linux-kernel-virt-virtio.md",
+          "x": 956.1262817382812,
+          "y": 4635.89990234375
+        },
+        {
+          "id": "#virtio",
+          "x": 1832.5147705078125,
+          "y": 6189.04443359375
+        },
+        {
+          "id": "#para-virtualization",
+          "x": -149.098388671875,
+          "y": 4027.51611328125
+        },
+        {
+          "id": "wiki/entities/linux/network/linux-network-protocols.md",
+          "x": 345.7010803222656,
+          "y": 626.3171997070312
+        },
+        {
+          "id": "#ipsec",
+          "x": 2634.85498046875,
+          "y": -701.611083984375
+        },
+        {
+          "id": "#bridging",
+          "x": 1658.9149169921875,
+          "y": -1730.8070068359375
+        },
+        {
+          "id": "#bpf",
+          "x": 1884.05126953125,
+          "y": -464.29412841796875
+        },
+        {
+          "id": "#xdp",
+          "x": 2231.5546875,
+          "y": 2326.6953125
+        },
+        {
+          "id": "wiki/entities/linux/qemu/qemu-block-layer.md",
+          "x": 480.87139892578125,
+          "y": 5194.2841796875
+        },
+        {
+          "id": "#QEMU",
+          "x": 4230.14501953125,
+          "y": 2659.69921875
+        },
+        {
+          "id": "#块设备",
+          "x": 202.7047882080078,
+          "y": 6386.171875
+        },
+        {
+          "id": "#QCOW2",
+          "x": -2270.618408203125,
+          "y": 5893.66796875
+        },
+        {
+          "id": "#存储",
+          "x": -1567.9554443359375,
+          "y": 6212.72900390625
+        },
+        {
+          "id": "wiki/entities/linux/qemu/qemu-cpu.md",
+          "x": 1925.3931884765625,
+          "y": 667.3544311523438
+        },
+        {
+          "id": "#CPU执行",
+          "x": 1727.26806640625,
+          "y": 2695.5498046875
+        },
+        {
+          "id": "#TCG",
+          "x": 77.00376892089844,
+          "y": -492.352783203125
+        },
+        {
+          "id": "#模拟器",
+          "x": 1129.1334228515625,
+          "y": 3112.65380859375
+        },
+        {
+          "id": "wiki/entities/linux/qemu/qemu-memory.md",
+          "x": -1737.1690673828125,
+          "y": 2873.091064453125
+        },
+        {
+          "id": "#内存管理",
+          "x": -453.6087646484375,
+          "y": 377.9005432128906
+        },
+        {
+          "id": "#虚拟化",
+          "x": -1093.9354248046875,
+          "y": 4689.37060546875
+        },
+        {
+          "id": "wiki/entities/linux/qemu/qemu-migration.md",
+          "x": 3876.44921875,
+          "y": 3944.268798828125
+        },
+        {
+          "id": "#迁移",
+          "x": 4034.720703125,
+          "y": 5489.7451171875
+        },
+        {
+          "id": "#VMState",
+          "x": 5153.43603515625,
+          "y": 3222.6904296875
+        },
+        {
+          "id": "#虚拟机",
+          "x": 4409.79736328125,
+          "y": 3120.547119140625
+        },
+        {
+          "id": "wiki/entities/linux/qemu/qemu-qom.md",
+          "x": 3221.540771484375,
+          "y": 4222.859375
+        },
+        {
+          "id": "#对象模型",
+          "x": 4501.09375,
+          "y": 3429.382080078125
+        },
+        {
+          "id": "wiki/entities/midware.md",
+          "x": -2837.013916015625,
+          "y": 12.741036415100098
+        },
+        {
+          "id": "#中间件",
+          "x": -3547.251953125,
+          "y": 1604.8787841796875
+        },
+        {
+          "id": "#汽车电子",
+          "x": -4809.64111328125,
+          "y": 1581.594970703125
+        },
+        {
+          "id": "#DoIP",
+          "x": -4249.16015625,
+          "y": 2070.211181640625
+        },
+        {
+          "id": "#SOME/IP",
+          "x": -3934.86328125,
+          "y": -1838.0306396484375
+        },
+        {
+          "id": "wiki/entities/os/linux-cgroups.md",
+          "x": -2524.333740234375,
+          "y": 2491.4208984375
+        },
+        {
+          "id": "#cgroups",
+          "x": -4901.78759765625,
+          "y": 3882.712890625
+        },
+        {
+          "id": "#资源限制",
+          "x": -5048.216796875,
+          "y": 2798.930908203125
+        },
+        {
+          "id": "#容器",
+          "x": -3049.354736328125,
+          "y": 5124.07666015625
+        },
+        {
+          "id": "wiki/entities/os/linux-memory-allocator.md",
+          "x": 2463.841552734375,
+          "y": -2845.60302734375
+        },
+        {
+          "id": "#内存分配器",
+          "x": 3169.03564453125,
+          "y": -2456.552734375
+        },
+        {
+          "id": "#Buddy",
+          "x": 3323.69140625,
+          "y": -2980.475830078125
+        },
+        {
+          "id": "#内核",
+          "x": 4598.23095703125,
+          "y": -2780.05224609375
+        },
+        {
+          "id": "wiki/entities/os/linux-scheduler.md",
+          "x": 2223.510986328125,
+          "y": -2153.927001953125
+        },
+        {
+          "id": "#调度器",
+          "x": 3786.236572265625,
+          "y": -4092.4970703125
+        },
+        {
+          "id": "#进程管理",
+          "x": 3885.501220703125,
+          "y": -3574.03662109375
+        },
+        {
+          "id": "wiki/entities/os/linux-vfs.md",
+          "x": 4841.09375,
+          "y": 299.8165588378906
+        },
+        {
+          "id": "#文件系统",
+          "x": 6128.81591796875,
+          "y": 1122.1512451171875
+        },
+        {
+          "id": "wiki/entities/os/os-io-model.md",
+          "x": -2354.232666015625,
+          "y": 3046.486328125
+        },
+        {
+          "id": "#I/O模型",
+          "x": -1549.59814453125,
+          "y": 1776.1343994140625
+        },
+        {
+          "id": "#select",
+          "x": -1866.20751953125,
+          "y": 4320.24951171875
+        },
+        {
+          "id": "#poll",
+          "x": -5057.1416015625,
+          "y": 2475.323974609375
+        },
+        {
+          "id": "#epoll",
+          "x": -1562.12060546875,
+          "y": 5208.75048828125
+        },
+        {
+          "id": "#网络",
+          "x": -192.98696899414062,
+          "y": 3178.099365234375
+        },
+        {
+          "id": "wiki/entities/os/os-process-thread.md",
+          "x": 1771.0240478515625,
+          "y": -1102.0654296875
+        },
+        {
+          "id": "#操作系统",
+          "x": 3420.86962890625,
+          "y": -64.0447769165039
+        },
+        {
+          "id": "#进程",
+          "x": 4398.80517578125,
+          "y": -18.0565185546875
+        },
+        {
+          "id": "#线程",
+          "x": -896.5262451171875,
+          "y": -473.3916320800781
+        },
+        {
+          "id": "#资源分配",
+          "x": 828.8098754882812,
+          "y": -3668.735595703125
+        },
+        {
+          "id": "wiki/entities/os/os-virtual-memory.md",
+          "x": 4088.48876953125,
+          "y": -538.4071655273438
+        },
+        {
+          "id": "#虚拟内存",
+          "x": 5458.5654296875,
+          "y": 160.75912475585938
+        },
+        {
+          "id": "#页表",
+          "x": 5673.623046875,
+          "y": -1290.397705078125
+        },
+        {
+          "id": "#MMU",
+          "x": 4212.888671875,
+          "y": -1713.8970947265625
+        },
+        {
+          "id": "wiki/entities/security.md",
+          "x": -4193.2607421875,
+          "y": -3346.6123046875
+        },
+        {
+          "id": "#安全",
+          "x": -5748.87646484375,
+          "y": -2489.43212890625
+        },
+        {
+          "id": "#网络扫描",
+          "x": -5167.7890625,
+          "y": -4276.29345703125
+        },
+        {
+          "id": "#入侵检测",
+          "x": -4564.78955078125,
+          "y": -4628.447265625
+        },
+        {
+          "id": "#监控",
+          "x": -4853.76318359375,
+          "y": -2621.269775390625
+        },
+        {
+          "id": "wiki/entities/sys.md",
+          "x": 2183.27685546875,
+          "y": -1181.5379638671875
+        },
+        {
+          "id": "wiki/index.md",
+          "x": 2569.588134765625,
+          "y": -1007.9097900390625
+        },
+        {
+          "id": "wiki/log.md",
+          "x": 5474.36279296875,
+          "y": -1588.3292236328125
+        },
+        {
+          "id": "wiki/pdf-catalog.md",
+          "x": 3812.5537109375,
+          "y": -5567.517578125
+        },
+        {
+          "id": "#pdf",
+          "x": 4101.8056640625,
+          "y": -5559.5712890625
+        },
+        {
+          "id": "#catalog",
+          "x": 5338.83544921875,
+          "y": -4217.02099609375
+        },
+        {
+          "id": "wiki/pdf-dataview.md",
+          "x": 1627.4769287109375,
+          "y": -6224.0166015625
+        },
+        {
+          "id": "#dataview",
+          "x": -907.7529296875,
+          "y": -6219.775390625
+        },
+        {
+          "id": "wiki/sources/github-notes-net.md",
+          "x": -1701.666748046875,
+          "y": 1395.6326904296875
+        },
+        {
+          "id": "wiki/sources/github-notes-netfilter.md",
+          "x": -2789.447021484375,
+          "y": 3213.825927734375
+        },
+        {
+          "id": "wiki/sources/github-notes-network.md",
+          "x": -2688.201416015625,
+          "y": 1698.55322265625
+        },
+        {
+          "id": "wiki/sources/github-notes-os-fundamentals.md",
+          "x": 4760.51806640625,
+          "y": -425.32000732421875
+        },
+        {
+          "id": "#os",
+          "x": 5764.5283203125,
+          "y": -883.665283203125
+        },
+        {
+          "id": "wiki/sources/github-notes-os.md",
+          "x": 4254.98974609375,
+          "y": -2584.045166015625
+        },
+        {
+          "id": "wiki/sources/github-notes-qemu.md",
+          "x": 5631.91552734375,
+          "y": -106.55508422851562
+        },
+        {
+          "id": "wiki/sources/github-relay-neuron-exercise-physiology.md",
+          "x": 1359.524658203125,
+          "y": -2791.685302734375
+        },
+        {
+          "id": "#physiology",
+          "x": 53.35285186767578,
+          "y": -1425.9737548828125
+        },
+        {
+          "id": "wiki/sources/github-relay-neuron-supplements.md",
+          "x": 371.4974365234375,
+          "y": -4911.6953125
+        },
+        {
+          "id": "#supplements",
+          "x": 1657.1337890625,
+          "y": -5843.70751953125
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-kernel-crypto.md",
+          "x": 1089.03955078125,
+          "y": 2893.4794921875
+        },
+        {
+          "id": "#cryptography",
+          "x": 3260.095703125,
+          "y": 4981.39208984375
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-kernel-ipc.md",
+          "x": 5389.248046875,
+          "y": -475.0245666503906
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-kernel-locking.md",
+          "x": -628.8651123046875,
+          "y": 3662.806396484375
+        },
+        {
+          "id": "#locking",
+          "x": -980.5999755859375,
+          "y": 5583.85400390625
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-kernel-rcu.md",
+          "x": 180.7418212890625,
+          "y": -3022.876953125
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-kernel-sound.md",
+          "x": 1539.78369140625,
+          "y": 3280.482177734375
+        },
+        {
+          "id": "#sound",
+          "x": 1067.05322265625,
+          "y": 6205.2666015625
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-kernel-time.md",
+          "x": 4091.38623046875,
+          "y": 1402.1854248046875
+        },
+        {
+          "id": "#time",
+          "x": 6226.36474609375,
+          "y": 213.23065185546875
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-kernel.md",
+          "x": 2617.791015625,
+          "y": 5209.91064453125
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-network_fundamentals.md",
+          "x": -1632.6279296875,
+          "y": 3060.696044921875
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes-os_fundamentals.md",
+          "x": 2106.52099609375,
+          "y": -1615.3526611328125
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-notes.md",
+          "x": 5230.3828125,
+          "y": -3583.762451171875
+        },
+        {
+          "id": "#general",
+          "x": 5441.0048828125,
+          "y": -4406.72216796875
+        },
+        {
+          "id": "wiki/sources/github-sphinxes0o0-relay-neuron.md",
+          "x": -5598.68603515625,
+          "y": 1396.140869140625
+        },
+        {
+          "id": "wiki/sources/pdf-modern-cpp-tutorial.md",
+          "x": 3889.91552734375,
+          "y": 1253.1695556640625
+        },
+        {
+          "id": "#programming",
+          "x": 3781.821044921875,
+          "y": 908.9053344726562
+        },
+        {
+          "id": "wiki/synthesis/topic-network-fundamentals.md",
+          "x": 3666.8134765625,
+          "y": 2433.156005859375
+        },
+        {
+          "id": "#计算机网络",
+          "x": 3338.180419921875,
+          "y": 1046.7626953125
+        },
+        {
+          "id": "#课程",
+          "x": 1587.617919921875,
+          "y": 4366.04736328125
+        },
+        {
+          "id": "#TCPIP",
+          "x": 5751.56103515625,
+          "y": 975.83642578125
+        },
+        {
+          "id": "#HTTP",
+          "x": 2150.337158203125,
+          "y": 1872.5657958984375
+        },
+        {
+          "id": "#DNS",
+          "x": 2286.21435546875,
+          "y": 1016.8017578125
+        },
+        {
+          "id": "#网络安全",
+          "x": 4610.27734375,
+          "y": 2140.8486328125
+        },
+        {
+          "id": "wiki/synthesis/topic-os-fundamentals.md",
+          "x": 3754.2919921875,
+          "y": 123.55611419677734
+        },
+        {
+          "id": "#并发",
+          "x": 1952.8382568359375,
+          "y": 211.8064727783203
+        }
+      ],
+      "createdAt": "2026-05-21T05:36:39.492Z",
+      "updatedAt": "2026-05-21T05:36:39.492Z"
+    },
+    {
+      "id": "55618f83-0a09-4d54-800b-52c307bbbad2",
+      "name": "sports&health",
+      "options": {
+        "collapse-filter": false,
+        "search": "path:entities/exercise-science",
+        "showTags": true,
+        "showAttachments": true,
+        "hideUnresolved": true,
+        "showOrphans": true,
+        "collapse-color-groups": false,
+        "colorGroups": [],
+        "collapse-display": false,
+        "showArrow": true,
+        "textFadeMultiplier": -3,
+        "nodeSizeMultiplier": 2.51958767361111,
+        "lineSizeMultiplier": 1.849453125,
+        "collapse-forces": false,
+        "centerStrength": 0,
+        "repelStrength": 10.6796875,
+        "linkStrength": 0,
+        "linkDistance": 392,
+        "scale": 0.13437413021564396,
+        "close": true
+      },
+      "nodePositions": [
+        {
+          "id": "wiki/entities/exercise-science/biomechanics/gait-analysis.md",
+          "x": 1650.9656982421875,
+          "y": 485.0892639160156
+        },
+        {
+          "id": "#exercise-science",
+          "x": 575.7755126953125,
+          "y": -66.24024200439453
+        },
+        {
+          "id": "#biomechanics",
+          "x": -756.1372680664062,
+          "y": 3111.04443359375
+        },
+        {
+          "id": "#gait-analysis",
+          "x": 2370.927490234375,
+          "y": -2587.222900390625
+        },
+        {
+          "id": "#running-technique",
+          "x": 1740.424560546875,
+          "y": -3495.341064453125
+        },
+        {
+          "id": "wiki/entities/exercise-science/biomechanics/running-shoes.md",
+          "x": -2193.456787109375,
+          "y": 3014.157958984375
+        },
+        {
+          "id": "#running-shoes",
+          "x": -3137.48486328125,
+          "y": 1511.2957763671875
+        },
+        {
+          "id": "#equipment",
+          "x": 539.6211547851562,
+          "y": 2630.44775390625
+        },
+        {
+          "id": "wiki/entities/exercise-science/health/exercise-disease.md",
+          "x": -1632.3782958984375,
+          "y": 2931.864501953125
+        },
+        {
+          "id": "#health",
+          "x": -104.60216522216797,
+          "y": 3923.173828125
+        },
+        {
+          "id": "#disease-prevention",
+          "x": -1072.532470703125,
+          "y": 155.0992889404297
+        },
+        {
+          "id": "#diabetes",
+          "x": -1770.45458984375,
+          "y": -316.4903869628906
+        },
+        {
+          "id": "#cardiovascular",
+          "x": -3323.01806640625,
+          "y": 946.4544067382812
+        },
+        {
+          "id": "wiki/entities/exercise-science/nutrition/carb-periodization.md",
+          "x": -3056.829833984375,
+          "y": -2237.750244140625
+        },
+        {
+          "id": "#nutrition",
+          "x": -2960.41015625,
+          "y": -3864.47314453125
+        },
+        {
+          "id": "#periodization",
+          "x": -4685.2451171875,
+          "y": -30.344619750976562
+        },
+        {
+          "id": "#endurance",
+          "x": -2814.39892578125,
+          "y": -3363.11181640625
+        },
+        {
+          "id": "wiki/entities/exercise-science/nutrition/ketogenic-diet.md",
+          "x": -1402.822998046875,
+          "y": 756.6099853515625
+        },
+        {
+          "id": "#ketogenic-diet",
+          "x": -3429.214599609375,
+          "y": -531.7407836914062
+        },
+        {
+          "id": "#low-carb",
+          "x": -2391.5751953125,
+          "y": 1979.0177001953125
+        },
+        {
+          "id": "#body-composition",
+          "x": 1968.8892822265625,
+          "y": 3217.64306640625
+        },
+        {
+          "id": "wiki/entities/exercise-science/nutrition/omega3.md",
+          "x": -3069.3359375,
+          "y": -988.6611938476562
+        },
+        {
+          "id": "#omega3",
+          "x": -863.498046875,
+          "y": -3490.913818359375
+        },
+        {
+          "id": "#anti-inflammatory",
+          "x": -164.66140747070312,
+          "y": -3677.952392578125
+        },
+        {
+          "id": "#recovery",
+          "x": -3686.819580078125,
+          "y": -2231.077880859375
+        },
+        {
+          "id": "wiki/entities/exercise-science/nutrition/protein.md",
+          "x": -564.2539672851562,
+          "y": 679.63427734375
+        },
+        {
+          "id": "#protein",
+          "x": -1802.5751953125,
+          "y": 1888.5367431640625
+        },
+        {
+          "id": "#muscle-hypertrophy",
+          "x": 2100.427001953125,
+          "y": -939.6460571289062
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/bfr-training.md",
+          "x": -2828.6005859375,
+          "y": 23.586578369140625
+        },
+        {
+          "id": "#blood-flow-restriction",
+          "x": -2010.9986572265625,
+          "y": -1456.0906982421875
+        },
+        {
+          "id": "#low-load-training",
+          "x": -4263.029296875,
+          "y": -1847.953857421875
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/concurrent-training.md",
+          "x": -2779.532958984375,
+          "y": 3083.602294921875
+        },
+        {
+          "id": "#aerobic-training",
+          "x": -779.6227416992188,
+          "y": 4330.513671875
+        },
+        {
+          "id": "#resistance-training",
+          "x": -2611.220947265625,
+          "y": 792.258544921875
+        },
+        {
+          "id": "#training-methodology",
+          "x": -2333.9814453125,
+          "y": 3749.024169921875
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/fatigue-recovery.md",
+          "x": 1598.3751220703125,
+          "y": -4135.10205078125
+        },
+        {
+          "id": "#fatigue",
+          "x": 504.8228454589844,
+          "y": -1122.3125
+        },
+        {
+          "id": "#physiology",
+          "x": -282.9159851074219,
+          "y": -1681.1348876953125
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/lactate-threshold.md",
+          "x": -2334.6796875,
+          "y": -2201.216064453125
+        },
+        {
+          "id": "#lactate-metabolism",
+          "x": 1760.2508544921875,
+          "y": -1750.030517578125
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/mps-muscle-protein-synthesis.md",
+          "x": 1155.93701171875,
+          "y": -1362.1904296875
+        },
+        {
+          "id": "#protein-metabolism",
+          "x": 2949.446044921875,
+          "y": 1554.808837890625
+        },
+        {
+          "id": "#muscle-building",
+          "x": 635.0132446289062,
+          "y": 1960.7159423828125
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/mtor-pathway.md",
+          "x": 310.8970642089844,
+          "y": 3458.0859375
+        },
+        {
+          "id": "#protein-synthesis",
+          "x": 363.1590881347656,
+          "y": 4341.20166015625
+        },
+        {
+          "id": "#cell-signaling",
+          "x": -1502.227294921875,
+          "y": 4011.06298828125
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/muscle-hypertrophy.md",
+          "x": -620.3795166015625,
+          "y": -1124.970947265625
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/satellite-cells.md",
+          "x": -3821.8642578125,
+          "y": 1734.3856201171875
+        },
+        {
+          "id": "#muscle-stem-cells",
+          "x": -3388.595703125,
+          "y": 3046.636474609375
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/training-frequency.md",
+          "x": 627.5457153320312,
+          "y": -2613.02294921875
+        },
+        {
+          "id": "#training-programming",
+          "x": 3325.575927734375,
+          "y": -987.2189331054688
+        },
+        {
+          "id": "wiki/entities/exercise-science/physiology/vo2max.md",
+          "x": -904.5899047851562,
+          "y": -4168.96044921875
+        },
+        {
+          "id": "#cardio-vascular",
+          "x": 2446.82275390625,
+          "y": -3844.258056640625
+        },
+        {
+          "id": "wiki/entities/exercise-science/running/running-economy.md",
+          "x": -3563.36572265625,
+          "y": 420.05401611328125
+        },
+        {
+          "id": "#running",
+          "x": -1143.3804931640625,
+          "y": 2463.01953125
+        },
+        {
+          "id": "#running-economy",
+          "x": -2335.8564453125,
+          "y": -774.1788940429688
+        },
+        {
+          "id": "wiki/entities/exercise-science/running/trail-running.md",
+          "x": -1655.3106689453125,
+          "y": -2346.749755859375
+        },
+        {
+          "id": "#trail-running",
+          "x": 39.38383483886719,
+          "y": 1106.4185791015625
+        },
+        {
+          "id": "wiki/entities/exercise-science/running/ultra-endurance.md",
+          "x": -2099.343994140625,
+          "y": -3803.625
+        },
+        {
+          "id": "#ultra-endurance",
+          "x": 298.3970642089844,
+          "y": -1948.9886474609375
+        },
+        {
+          "id": "#super-marathon",
+          "x": -497.03460693359375,
+          "y": -4766.76416015625
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/coq10/coq10-bioavailability.md",
+          "x": -141.98487854003906,
+          "y": 2873.15234375
+        },
+        {
+          "id": "#supplements",
+          "x": 2349.119140625,
+          "y": -140.6510009765625
+        },
+        {
+          "id": "#coq10",
+          "x": 1429.4029541015625,
+          "y": 1190.991455078125
+        },
+        {
+          "id": "#ubiquinol",
+          "x": -225.78689575195312,
+          "y": 2109.54443359375
+        },
+        {
+          "id": "#ubiquinone",
+          "x": 1542.8770751953125,
+          "y": 3610.511962890625
+        },
+        {
+          "id": "#bioavailability",
+          "x": 1395.80224609375,
+          "y": 1899.478271484375
+        },
+        {
+          "id": "#pharmacokinetics",
+          "x": -4114.3154296875,
+          "y": -551.1386108398438
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/coq10/coq10-cardiovascular.md",
+          "x": -2958.655517578125,
+          "y": 2323.1220703125
+        },
+        {
+          "id": "#heart-failure",
+          "x": -4110.36376953125,
+          "y": 183.03819274902344
+        },
+        {
+          "id": "#hypertension",
+          "x": -1082.2406005859375,
+          "y": 3596.704833984375
+        },
+        {
+          "id": "#coronary-artery-disease",
+          "x": -4355.3193359375,
+          "y": 920.7059326171875
+        },
+        {
+          "id": "#mitochondria",
+          "x": -1087.1773681640625,
+          "y": 1789.770751953125
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/coq10/coq10-neuro.md",
+          "x": 3769.46240234375,
+          "y": 1026.80078125
+        },
+        {
+          "id": "#Parkinson",
+          "x": 4362.67529296875,
+          "y": -943.3683471679688
+        },
+        {
+          "id": "#migraine",
+          "x": 2398.17431640625,
+          "y": -1846.2178955078125
+        },
+        {
+          "id": "#neurodegeneration",
+          "x": 3332.39013671875,
+          "y": -211.23019409179688
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/coq10/coq10-overview.md",
+          "x": -2881.145751953125,
+          "y": -1561.9134521484375
+        },
+        {
+          "id": "#antioxidant",
+          "x": -3690.793701171875,
+          "y": -2890.912353515625
+        },
+        {
+          "id": "#electron-transport-chain",
+          "x": -662.0794677734375,
+          "y": -2285.567138671875
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/coq10/coq10-statin-myopathy.md",
+          "x": -1274.12353515625,
+          "y": -1663.3775634765625
+        },
+        {
+          "id": "#statin",
+          "x": 628.596435546875,
+          "y": -4171.5791015625
+        },
+        {
+          "id": "#myopathy",
+          "x": 516.931884765625,
+          "y": -3482.189697265625
+        },
+        {
+          "id": "#HMG-CoA",
+          "x": -3991.64208984375,
+          "y": -1266.563232421875
+        },
+        {
+          "id": "#mevalonate-pathway",
+          "x": 2305.78125,
+          "y": 837.8134765625
+        },
+        {
+          "id": "#muscle",
+          "x": 3296.056884765625,
+          "y": -1737.5789794921875
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/curcumin/curcumin-bioavailability.md",
+          "x": 24.36980438232422,
+          "y": -701.9310913085938
+        },
+        {
+          "id": "#curcumin",
+          "x": 2725.763916015625,
+          "y": 2328.51171875
+        },
+        {
+          "id": "#nanocarriers",
+          "x": -2547.401611328125,
+          "y": -2873.719482421875
+        },
+        {
+          "id": "#drug-delivery",
+          "x": 2669.958984375,
+          "y": -3258.7421875
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/curcumin/curcumin-diabetes.md",
+          "x": -591.1336059570312,
+          "y": 1417.150634765625
+        },
+        {
+          "id": "#insulin-resistance",
+          "x": -755.8334350585938,
+          "y": -371.34954833984375
+        },
+        {
+          "id": "#beta-cell",
+          "x": -2092.49951171875,
+          "y": 258.195556640625
+        },
+        {
+          "id": "#GSK-3β",
+          "x": 2529.744873046875,
+          "y": 3081.1611328125
+        },
+        {
+          "id": "#IAPP",
+          "x": -3730.28369140625,
+          "y": 2362.820556640625
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/curcumin/curcumin-inflammation.md",
+          "x": 1239.884765625,
+          "y": 2783.780029296875
+        },
+        {
+          "id": "#inflammation",
+          "x": -1950.1182861328125,
+          "y": 1166.9937744140625
+        },
+        {
+          "id": "#autoimmune",
+          "x": 940.3534545898438,
+          "y": 3561.019287109375
+        },
+        {
+          "id": "#rheumatoid-arthritis",
+          "x": 3559.304931640625,
+          "y": 1926.1654052734375
+        },
+        {
+          "id": "#NF-κB",
+          "x": 2003.6368408203125,
+          "y": 2248.490234375
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/curcumin/curcumin-kidney.md",
+          "x": 2703.93408203125,
+          "y": -1137.825439453125
+        },
+        {
+          "id": "#diabetic-nephropathy",
+          "x": 633.8928833007812,
+          "y": 1294.6082763671875
+        },
+        {
+          "id": "#podocyte",
+          "x": 1695.5001220703125,
+          "y": -2705.54443359375
+        },
+        {
+          "id": "#autophagy",
+          "x": 3856.7509765625,
+          "y": -843.003173828125
+        },
+        {
+          "id": "#mTOR",
+          "x": 4224.2509765625,
+          "y": -8.377249717712402
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/curcumin/curcumin-liver.md",
+          "x": 2960.20849609375,
+          "y": 266.776611328125
+        },
+        {
+          "id": "#MAFLD",
+          "x": 3928.630859375,
+          "y": -2100.74462890625
+        },
+        {
+          "id": "#NAFLD",
+          "x": 4133.9140625,
+          "y": 635.6174926757812
+        },
+        {
+          "id": "#liver",
+          "x": 1330.71484375,
+          "y": -735.1973876953125
+        },
+        {
+          "id": "#fibrosis",
+          "x": -1379.082763671875,
+          "y": -922.53857421875
+        },
+        {
+          "id": "#NASH",
+          "x": 1054.8043212890625,
+          "y": -2078.970703125
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/curcumin/curcumin-neuro.md",
+          "x": 876.1903076171875,
+          "y": 543.0420532226562
+        },
+        {
+          "id": "#Alzheimer",
+          "x": 3255.915771484375,
+          "y": 2717.068359375
+        },
+        {
+          "id": "#BBB",
+          "x": 3454.03125,
+          "y": -2893.390625
+        },
+        {
+          "id": "#alpha-synuclein",
+          "x": 2231.028076171875,
+          "y": 1563.81689453125
+        },
+        {
+          "id": "wiki/entities/exercise-science/supplements/curcumin/curcumin-overview.md",
+          "x": -90.4119873046875,
+          "y": 99.96260070800781
+        },
+        {
+          "id": "#multi-target",
+          "x": -231.53533935546875,
+          "y": -2855.54736328125
+        },
+        {
+          "id": "wiki/entities/exercise-science/training/periodization.md",
+          "x": -1755.887451171875,
+          "y": -3248.00244140625
+        },
+        {
+          "id": "#training",
+          "x": 1589.0640869140625,
+          "y": -169.49124145507812
+        },
+        {
+          "id": "#programming",
+          "x": -1562.910888671875,
+          "y": -4321.75439453125
+        },
+        {
+          "id": "wiki/entities/exercise-science/training/tapering.md",
+          "x": 72.34468078613281,
+          "y": -4481.8310546875
+        },
+        {
+          "id": "#tapering",
+          "x": 1021.416015625,
+          "y": -3141.396728515625
+        },
+        {
+          "id": "#pre-competition",
+          "x": 1104.96484375,
+          "y": -4614.7724609375
+        },
+        {
+          "id": "wiki/entities/exercise-science/training/training-methods.md",
+          "x": 3056.160888671875,
+          "y": -2409.08154296875
+        },
+        {
+          "id": "#training-methods",
+          "x": 3175.74365234375,
+          "y": 946.038330078125
+        },
+        {
+          "id": "#methodology",
+          "x": -1157.6650390625,
+          "y": -2891.718505859375
+        }
+      ],
+      "createdAt": "2026-05-21T05:41:44.039Z",
+      "updatedAt": "2026-05-21T05:41:48.955Z"
+    }
+  ],
+  "activePresetId": "14ced730-5c0d-4597-b8fd-999d5f992f54",
+  "restoreOnStartup": true
+}

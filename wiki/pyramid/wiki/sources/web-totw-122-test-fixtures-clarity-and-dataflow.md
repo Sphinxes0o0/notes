@@ -1,0 +1,200 @@
+---
+type: source
+source-type: web
+title: "Tip of the Week #122: Test Fixtures, Clarity, and Dataflow"
+author: "Abseil Team"
+date: 2012
+url: https://abseil.io/tips/122
+summary: "abseil C++ Tips of the Week #122: Test Fixtures, Clarity, and Dataflow."
+tags: [cpp, abseil, totw, performance, idioms]
+created: 2026-06-10
+source-md5: 7a6fca15af4013f53138789f66eac12b
+---
+
+> 原文：<https://abseil.io/tips/122> · 作者：Abseil Team · 发布：2012 · 内容许可：CC BY 4.0（abseil.io docs）
+>
+> 完整原文转录（脚注 [Tip \#NN](/tips/NN) 链接保留，邮件保护链接为 CloudFlare 默认转码无法还原）。
+
+# Tip of the Week \#122: Test Fixtures, Clarity, and Dataflow
+
+\
+\
+
+Originally published as totw/122 on 2016-08-30
+
+*By Titus Winters [(<span class="__cf_email__" cfemail="1d697469686e5d7a72727a7178337e7270">\[email protected\]</span>)](/cdn-cgi/l/email-protection#b7c3dec3c2c4f7d0d8d8d0dbd299d4d8da)*
+
+Updated 2017-10-20
+
+Quicklink: [abseil.io/tips/122](https://abseil.io/tips/122)
+
+*Be obscure clearly.* — E.B. White
+
+How does test code differ from production code? For one thing, tests are untested: when you write messy spaghetti code that is spread over several files and has hundreds of lines of `SetUp` how can anyone be sure that the test is really testing what it needs to? Too often your code reviewers will have to assume that the setup makes sense and are at best spot-checking the logic for each individual test case. In those cases, your test is likely to fail if something changes, but it’s rarely clear whether that something is the right something.
+
+On the other hand, if you keep each test simple and as straightforward as possible, it’s easier to see that it is correct by inspection, understand the logic, and review for higher quality test logic. Let’s look at a few simple ways to achieve that.
+
+## Dataflow in Fixtures
+
+Consider the following example:
+
+<div class="language-c++ highlighter-rouge">
+
+<div class="highlight">
+
+```cpp
+class FrobberTest : public ::testing::Test {
+ protected:
+  void ConfigureExampleA() {
+    example_ = "Example A";
+    frobber_.Init(example_);
+    expected_ = "Result A";
+  }
+
+  void ConfigureExampleB() {
+    example_ = "Example B";
+    frobber_.Init(example_);
+    expected_ = "Result B";
+  }
+
+  Frobber frobber_;
+  string example_;
+  string expected_;
+};
+
+TEST_F(FrobberTest, CalculatesA) {
+  ConfigureExampleA();
+  string result = frobber_.Calculate();
+  EXPECT_EQ(result, expected_);
+}
+
+TEST_F(FrobberTest, CalculatesB) {
+  ConfigureExampleB();
+  string result = frobber_.Calculate();
+  EXPECT_EQ(result, expected_);
+}
+```
+
+</div>
+
+</div>
+
+In this fairly simple example, our tests span 30 lines of code. It’s very easy to imagine less simple examples that are 10x that: certainly more than will fit on any single screen. A reader or code reviewer that wants to validate that the code is correct has to scan around as follows:
+
+- “OK, this is a FrobberTest, where’s that defined … oh, this file. Great.”
+- “`ConfigureExampleA` … that’s a FrobberTest method. It’s operating on some member variables. What types are those? How are they initialized? OK, Frobber and two strings. Is there a `SetUp`? OK, default constructed.”
+- “Back to the test: OK, we calculate a result and compare it against `expected_` … what did we store there again?”
+
+Compare to the equivalent code written in a simpler style:
+
+<div class="language-c++ highlighter-rouge">
+
+<div class="highlight">
+
+```cpp
+TEST(FrobberTest, CalculatesA) {
+  Frobber frobber;
+  frobber.Init("Example A");
+  EXPECT_EQ(frobber.Calculate(), "Result A");
+}
+
+TEST(FrobberTest, CalculatesB) {
+  Frobber frobber;
+  frobber.Init("Example B");
+  EXPECT_EQ(frobber.Calculate(), "Result B");
+}
+```
+
+</div>
+
+</div>
+
+With this style, even in a world where we have hundreds of tests, we can tell with only local information exactly what is going on.
+
+## Prefer Free Functions
+
+In the previous example, all of the variable initialization was nice and terse. In real tests, that isn’t always true. However, the same ideas about dataflow and avoiding fixtures may apply. Consider this protobuf example:
+
+<div class="language-c++ highlighter-rouge">
+
+<div class="highlight">
+
+```cpp
+class BobberTest : public ::testing::Test {
+ protected:
+  void SetUp() override {
+    bobber1_ = PARSE_TEXT_PROTO(R"(
+        id: 17
+        artist: "Beyonce"
+        when: "2012-10-10 12:39:54 -04:00"
+        price_usd: 200)");
+    bobber2_ = PARSE_TEXT_PROTO(R"(
+        id: 21
+        artist: "The Shouting Matches"
+        when: "2016-08-24 20:30:21 -04:00"
+        price_usd: 60)");
+  }
+
+  BobberProto bobber1_;
+  BobberProto bobber2_;
+};
+
+TEST_F(BobberTest, UsesProtos) {
+  Bobber bobber({bobber1_, bobber2_});
+  SomeCall();
+  EXPECT_THAT(bobber.MostRecent(), EqualsProto(bobber2_));
+}
+```
+
+</div>
+
+</div>
+
+Again, the centralized refactoring leads to a lot of indirection: declarations and initialization are separate, and potentially far away from actual use. Further, because of `SomeCall()` in the middle, and the fact we’re using a fixture and fixture member variables, there’s no way to be *sure* that `bobber1_` and `bobber2_` weren’t modified between initialization and the `EXPECT_THAT` validation, without checking the details of `SomeCall()`. More scrolling around is likely necessary.
+
+Consider instead:
+
+<div class="language-c++ highlighter-rouge">
+
+<div class="highlight">
+
+```cpp
+BobberProto RecentCheapConcert() {
+  return PARSE_TEXT_PROTO(R"(
+      id: 21
+      artist: "The Shouting Matches"
+      when: "2016-08-24 20:30:21 -04:00"
+      price_usd: 60)");
+}
+BobberProto PastExpensiveConcert() {
+  return PARSE_TEXT_PROTO(R"(
+      id: 17
+      artist: "Beyonce"
+      when: "2012-10-10 12:39:54 -04:00"
+      price_usd: 200)");
+}
+
+TEST(BobberTest, UsesProtos) {
+  Bobber bobber({PastExpensiveConcert(), RecentCheapConcert()});
+  SomeCall();
+  EXPECT_THAT(bobber.MostRecent(), EqualsProto(RecentCheapConcert()));
+}
+```
+
+</div>
+
+</div>
+
+Moving the initialization into free functions makes it clear that there is no hidden dataflow. Well chosen names for the helpers mean that you can likely review the test for correctness without even scrolling up to see the details of the helper.
+
+## Five Easy Steps
+
+You can generally improve test clarity by following these steps:
+
+- Avoid fixtures where reasonable. Sometimes it’s not.
+- If you are using fixtures, try to avoid fixture member variables. It is far too easy to start operating on those in ways akin to globals: data flow is hard to track since absolutely any code path in the fixture may modify the member.
+- If you’ve got variables that need complex initialization that would make each test hard to read, consider a helper function (not part of the fixture) that documents that initialization and returns the object directly.
+- If you must have fixtures that contain member variables, try to avoid methods that operate on those members directly: pass them in as parameters whenever possible to make the dataflow clear.
+- Try to write tests before writing headers: if you start with a usage that is pleasant to test, your API is usually better, and your tests are almost always clearer.
+
+

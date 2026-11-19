@@ -1,0 +1,34 @@
+---
+type: index
+tags: [data-structures, algorithms]
+created: 2026-05-22
+---
+
+# Data Structures & Algorithms
+
+> Complexity analysis, linear structures, sorting, dynamic programming, and graph algorithms
+
+## Entities
+
+| Entity | Description | Tags |
+|--------|-------------|------|
+| [[entities/datastructure/algorithm-complexity]] | Time/space complexity analysis: O(n), O(log n), O(n²) | datastructure, algorithm |
+| [[entities/datastructure/linear-data-structures]] | Arrays, linked lists, stacks, queues | datastructure, linear |
+| [[entities/datastructure/sorting-algorithms]] | Bubble/insertion/merge/quicksort comparison | datastructure, sorting |
+| [[entities/datastructure/dynamic-programming]] | Shortest path, state transition, optimal substructure | algorithm, DP |
+| [[entities/datastructure/recursion-and-divide-conquer]] | Tower of Hanoi, divide-and-conquer, binary search | algorithm, recursion |
+| [[entities/datastructure/hash-table]] | Hash functions, collision handling, O(1) lookup | datastructure, hash |
+| [[entities/datastructure/trees-and-graphs]] | Binary tree, BST, heap, BFS/DFS | datastructure, tree |
+| [[entities/datastructure/graph-algorithms]] | Graph traversal, shortest path, MST, network flow | algorithm, graph |
+| [[entities/datastructure/set-theory-basics]] | Sets, relations, functions, cardinality — math foundation of CS | math, set-theory |
+
+## Cross-References
+
+- [[interview-index]] — DSA is the core of technical interview preparation
+- [[sys-prog-index]] — System programming requires understanding of data structure performance tradeoffs
+- `pdf-dataview` — Dataview query index for PDF sources in this wiki
+- [[sources/pdf-algorithms-books]] — 算法与面试书籍合集（8册）：Sedgewick图算法、Goodrich C++ DS&A、Knuth TAOCP、邓俊辉数据结构、石田算法书、CTCI、EPI
+
+## Sources
+
+- [[sources/pdf-algorithms-books]] — 8册算法/数据结构/面试经典书籍（2026-05）

@@ -1,0 +1,6 @@
+{
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/"
+  ]
+}

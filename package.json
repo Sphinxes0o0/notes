@@ -10,7 +10,8 @@
     "audit:content": "python3 scripts/content_audit.py --tracked --strict",
     "check:navigation": "node .github/scripts/audit-navigation.js",
     "check:search": "node .github/scripts/audit-search-index.mjs",
-    "check:assets": "node .github/scripts/audit-assets.mjs"
+    "check:assets": "node .github/scripts/audit-assets.mjs",
+    "check:pyramid": "python3 scripts/check_pyramid_import.py"
   },
   "devDependencies": {
     "husky": "^9.1.7",

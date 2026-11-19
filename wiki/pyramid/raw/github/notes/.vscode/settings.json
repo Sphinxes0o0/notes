@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "markdown.styles": [],
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false
+  }
+}

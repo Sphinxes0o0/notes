@@ -1,0 +1,457 @@
+{
+  "reason": "Byte-identical source snapshots and vault attachments retained during Pyramid import; no original source is overwritten. Only these exact hash/path groups are allowed.",
+  "groups": {
+    "6fae5edab66d54e4569f4b5a528a650a2bb757f3a4f127526c3c3e6e3e48b4b9": [
+      "android/notes/imgs/01/android-stack_2x.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/01/android-stack_2x.png"
+    ],
+    "ae8e044f3e419e728b45cd2e6f4a92254346ab83fa72933b36a41da7f6c9a1f5": [
+      "android/notes/imgs/01/ape_fwk_all.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/01/ape_fwk_all.png"
+    ],
+    "ceb00b4e994f5bd6429b2ba36262373ee111f5ba8b958e7dfb52d2da21fe4a13": [
+      "android/notes/imgs/01/treble_blog_after.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/01/treble_blog_after.png"
+    ],
+    "136547401e21447e6523b9a9bcbe76334cf2f0d0a4b6d5c4b6683fd71fe59cd0": [
+      "android/notes/imgs/02/mainline_media_components.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/02/mainline_media_components.png"
+    ],
+    "8c369372406d2c1a9744fc66aa17eafcb340810bcf0adfe75be76ae37573400d": [
+      "android/notes/imgs/02/modular_system_components_arch.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/02/modular_system_components_arch.png"
+    ],
+    "8957cc482949112e338a3cdaa8bbb5a40b0e335935eb7ce95aa4e05159d6e7f9": [
+      "android/notes/imgs/03/android-diffs.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/03/android-diffs.png"
+    ],
+    "fffb7750356a9b6197ff0c5b4b1f6426f0fd54a137c3d0a5284c5f34e8e995a7": [
+      "android/notes/imgs/05/hidl_memoryblock_arch.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/05/hidl_memoryblock_arch.png"
+    ],
+    "18e1e8a1c83aca52d513e0d5a9b34affa0e365cb8b3d60b300017b52c0c2bc05": [
+      "android/notes/imgs/06/treble_cpp_compiler_generated_files.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/06/treble_cpp_compiler_generated_files.png"
+    ],
+    "e42b4419baffce7a91f64ef00428e87d5f5ca68987fe625b333e2c4d597fb82c": [
+      "android/notes/imgs/06/treble_cpp_legacy_hal_progression.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/06/treble_cpp_legacy_hal_progression.png"
+    ],
+    "ca899a6f09de51a400201c356c698157af2fd33d2dc443406aa7ccce2559ff68": [
+      "android/notes/imgs/08/treble_configstore_design.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/08/treble_configstore_design.png"
+    ],
+    "ccc6195af02ca155f79da35ecc2042997468d0772a948613e4a9d5a3d72214bb": [
+      "android/notes/imgs/09/suspendThreadLoop.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/09/suspendThreadLoop.png"
+    ],
+    "2be839e6651be5373a25a0117a566e355ddaaf88c2168187c54b97403c1f72ba": [
+      "android/notes/imgs/10/treble_dto_appending.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_appending.png"
+    ],
+    "4a29238ce2a8dee39097988d1f2da464330e29436aff2acbd535cba8d84547fa": [
+      "android/notes/imgs/10/treble_dto_bootloader.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_bootloader.png"
+    ],
+    "867f5ee07b979a7314bd47a624b44ccb9e3eee88975fed060a653aac6cb07e80": [
+      "android/notes/imgs/10/treble_dto_dtbo.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_dtbo.png"
+    ],
+    "b3cf60613ca6a63260fe9e944b471cf909182655da369c81efd8b796ce0eec05": [
+      "android/notes/imgs/10/treble_dto_dtbo_ab_1.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_ab_1.png"
+    ],
+    "0cffd1473113c6435394bc45bf48b89ac22fbfc8fa7d84621e91a153e81a67a0": [
+      "android/notes/imgs/10/treble_dto_dtbo_ab_2.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_ab_2.png"
+    ],
+    "a48c1bfb2848f6de1efb4ddd1766a3d78081f44845a870179d337990f3950049": [
+      "android/notes/imgs/10/treble_dto_dtbo_partition_1.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_partition_1.png"
+    ],
+    "3b7b0dcb1c908952153c8c5906214836be531c8988e210c615ad06d6e04a38f5": [
+      "android/notes/imgs/10/treble_dto_dtbo_partition_2.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_dtbo_partition_2.png"
+    ],
+    "f8cfb16f359c37adcef59b73bbb5c95c17922af3e724b94770c74995dd9a2413": [
+      "android/notes/imgs/10/treble_dto_multiple_dt.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_multiple_dt.png"
+    ],
+    "262868b269d5c1189dfa946937024d9095a356f3b4afc16b1831388429e661cd": [
+      "android/notes/imgs/10/treble_dto_multiple_dt_runtime.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_multiple_dt_runtime.png"
+    ],
+    "82c6c3da95c984f5bd2dac02f0252cf94f69237db49b1d830ce1f2e26929e7f1": [
+      "android/notes/imgs/10/treble_dto_overriding.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_overriding.png"
+    ],
+    "2ed60ebcfaeab0d2f010d0d046f7049c84f4552427415800dbf44123da542320": [
+      "android/notes/imgs/10/treble_dto_partition_.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_partition_.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_partition_1.png"
+    ],
+    "49ab7a686bc07913468e246a3aadc1ad2514663630e6b4cbc740da64beeb0385": [
+      "android/notes/imgs/10/treble_dto_partition_layout.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_partition_layout.png"
+    ],
+    "3e663f4ddd5c689e14f4801ecc4af091c8ab2242d3d6a93671a094579bd7ea69": [
+      "android/notes/imgs/10/treble_dto_simulate.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_dto_simulate.png"
+    ],
+    "ac60cf446d2856e44a9ab4928e6856b7fa274675bee28a8aff828a2801b2cec0": [
+      "android/notes/imgs/10/treble_vndk_build_system_libraries.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/10/treble_vndk_build_system_libraries.png"
+    ],
+    "4e67015729622474fb43589267927ec54e332d73f521da1b6f28a22de4a05ee4": [
+      "android/notes/imgs/11/abi_check_abidiff.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/abi_check_abidiff.png"
+    ],
+    "8ee95285a2d0e5df080904a18ef2901e9f9e99d035eb5a0d8cd30abb27fd79cf": [
+      "android/notes/imgs/11/abi_check_lsdump.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/abi_check_lsdump.png"
+    ],
+    "35c2c3ec6f6a69b18a63ed607e801cecc835fe9c411a217a22669b958417cd93": [
+      "android/notes/imgs/11/abi_check_sdump.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/abi_check_sdump.png"
+    ],
+    "6b27549777022abe718eca60f1ad1dd1997266de02aec89e9b3d4ef2d764498d": [
+      "android/notes/imgs/11/treble_rs_bcc_plugin_new.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_rs_bcc_plugin_new.png"
+    ],
+    "6555cc67747eb8fd6ad64a9a20e1749afc6bdbd54eeb785ee7ce7f5d7a6d8736": [
+      "android/notes/imgs/11/treble_rs_bcc_plugin_old.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_rs_bcc_plugin_old.png"
+    ],
+    "9ed91b75fda1314bedab977b53e754608a67e047aed54fb9fda6929a9faaef53": [
+      "android/notes/imgs/11/treble_rs_cpu_fallback.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_rs_cpu_fallback.png"
+    ],
+    "cae5c6b6c6e5b2aa91f703791c26ec7cf5f19bc1bc0ac38a10a47fbf67fe25d2": [
+      "android/notes/imgs/11/treble_rs_gpu_fallback.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_rs_gpu_fallback.png"
+    ],
+    "ddd2731566fc38281f149211b9e612f34f03a33de9709abb186d9769c6ee80cb": [
+      "android/notes/imgs/11/treble_rs_linking.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_rs_linking.png"
+    ],
+    "0dce61fc69906f88dcc3878187c37cf0cfd74078acbc97aa15174dcc049ad7c7": [
+      "android/notes/imgs/11/treble_rs_namespace.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_rs_namespace.png"
+    ],
+    "3abd49507f3d0dae90c360f734fb46ed9c2d7fba788600ca5744b58d099d62a1": [
+      "android/notes/imgs/11/treble_rs_vendor_driver.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_rs_vendor_driver.png"
+    ],
+    "a11bb352d6ce7c66c6360a30518009c0864f0652b7bf744a69433fd326037769": [
+      "android/notes/imgs/11/treble_vndk_design.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_vndk_design.png"
+    ],
+    "0f4d09c81528416a990aa7ff260e4cd18d6117523cfa53d9efb844ff5c08cf99": [
+      "android/notes/imgs/11/treble_vndk_linker_namespace1.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_vndk_linker_namespace1.png"
+    ],
+    "5e465338d6e57a0e810bfb04c67b305bacd231f30f0d9eb23a045a28fb35d279": [
+      "android/notes/imgs/11/treble_vndk_linker_namespace3.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/treble_vndk_linker_namespace3.png"
+    ],
+    "c42d52617ef268952bea8f2ab00d5e2e6602c7f91c3be0583501e3053af9bb5a": [
+      "android/notes/imgs/11/vndk.jpg",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/vndk.jpg"
+    ],
+    "9d811ee20b6e040effcf16731b6ec8d13adbf129308f41feb9ec8aeea2def458": [
+      "android/notes/imgs/11/vndk_snapshot_arch.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/vndk_snapshot_arch.png"
+    ],
+    "a81bdd5669532311e86201a084b4ffb56a1672fd4450ac60b4ec9109de0c2a7c": [
+      "android/notes/imgs/11/vndk_snapshot_directory.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/vndk_snapshot_directory.png"
+    ],
+    "9f9a640486cd5c44e46951f8f4f83da7b3c502a6a5dd9407e4f07940f1431a10": [
+      "android/notes/imgs/11/vndk_snapshot_prebuilt.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/vndk_snapshot_prebuilt.png"
+    ],
+    "1dc4027192605c64b92dc3311a9b1eecd5a48a141b3889acef4ac5d657e2b3d9": [
+      "android/notes/imgs/11/vndk_snapshot_system_only.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/11/vndk_snapshot_system_only.png"
+    ],
+    "48dd291b4421317da35303c5fdf46c23173ae8b4a09838904fcdb629e48682f4": [
+      "android/notes/imgs/12/treble_vintf_avb_o_p.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/12/treble_vintf_avb_o_p.png"
+    ],
+    "4d138210fb65d0d6beb543855fe9838995dfa56900cebb702d38e26afb1576f8": [
+      "android/notes/imgs/12/treble_vintf_avb_p.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/12/treble_vintf_avb_p.png"
+    ],
+    "5fc192fdb71867c45340bfe9d17a6a462013a1f8380f761aeb2c59d77049674a": [
+      "android/notes/imgs/12/treble_vintf_mm.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/12/treble_vintf_mm.png"
+    ],
+    "78d35a9c9e5072e92fb876bb34e23d5ac63a50d730002551e0187fd24f51081d": [
+      "android/notes/imgs/14/build-flow-java-lib.png",
+      "wiki/pyramid/raw/github/notes/android/notes/imgs/14/build-flow-java-lib.png"
+    ],
+    "caab60004e7475cef4bf551282a2fc63bb2ed76e4ee338682ec99afc3ae52988": [
+      "public/logo.svg",
+      "wiki/pyramid/raw/github/notes/public/logo.svg"
+    ],
+    "5543bdf7d3f528a37b734a6a0930ffb2848bbe03fed799029e31a7de471bcd9a": [
+      "public/pwa-192x192.svg",
+      "wiki/pyramid/raw/github/notes/public/pwa-192x192.svg"
+    ],
+    "62817c751eba8e2ee83152463599cbcb90fce66aefe1aad391c2029b881dae82": [
+      "public/pwa-512x512.svg",
+      "wiki/pyramid/raw/github/notes/public/pwa-512x512.svg"
+    ],
+    "8efe3a98b04f0161548efb6df449112f999792a13fada3afbb412a440a8ea9c9": [
+      "resources/imgs/cc/cpp_overview_00.png",
+      "wiki/pyramid/wiki/attachments/imgs/cc/cpp_overview_00.png"
+    ],
+    "8d9f2ede1a1898c0521105404f8a5770f97c3f7841298c89545b03c67d0bb441": [
+      "resources/imgs/cc/cpp_overview_01_dyna.png",
+      "wiki/pyramid/wiki/attachments/imgs/cc/cpp_overview_01_dyna.png"
+    ],
+    "65bbf8ed15674323b57e7c9452fdd19a79b356af74717ef62c4f5b01fdb7ae91": [
+      "resources/imgs/cc/cpp_overview_01_static.png",
+      "wiki/pyramid/wiki/attachments/imgs/cc/cpp_overview_01_static.png"
+    ],
+    "786f05ff6a1f079a5cee86fb9c7354a036c007a513d87156962ba39150739d0e": [
+      "resources/imgs/linux/101/hardinterrupt.png",
+      "wiki/pyramid/wiki/attachments/imgs/linux/101/hardinterrupt.png"
+    ],
+    "eb0440d52271b171360f1e806adfa986572309e31903877dddfd430111f52fa7": [
+      "resources/imgs/linux/101/kernel_runtime.png",
+      "wiki/pyramid/wiki/attachments/imgs/linux/101/kernel_runtime.png"
+    ],
+    "0d9148e2862ec616f455c03a633bf9ff854c5e03e3335e2ae3093cc1c9ee1c5d": [
+      "resources/imgs/linux/101/system_call_entry.png",
+      "wiki/pyramid/wiki/attachments/imgs/linux/101/system_call_entry.png"
+    ],
+    "610122225a43dacd19039d59d38799f53ad5a95df74eaebe1606a0c75ac2212b": [
+      "resources/imgs/linux/network/linux_netfilter_nqueue.PNG",
+      "wiki/pyramid/wiki/attachments/imgs/linux/network/linux_netfilter_nqueue.PNG"
+    ],
+    "0f24d261621cca85fa703bbfb337c0fded6b728f5c7600e443fbeedc73a1db79": [
+      "resources/imgs/linux/network/network_rx_flow.png",
+      "wiki/pyramid/wiki/attachments/imgs/linux/network/network_rx_flow.png"
+    ],
+    "667ba8a6865b27c39812d023e10737cd13cdb24c096b17c73cf72510a32b0b21": [
+      "resources/imgs/linux/network/tcp_send_path.png",
+      "wiki/pyramid/wiki/attachments/imgs/linux/network/tcp_send_path.png"
+    ],
+    "aae42682b60dff16060340c7fd4c0dede7cbb75f738c2c1e9944ccb2822d9d7b": [
+      "resources/imgs/linux/network/tcpdump_vs_netfilter.png",
+      "wiki/pyramid/wiki/attachments/imgs/linux/network/tcpdump_vs_netfilter.png"
+    ],
+    "db303fe9770d5372e7bfcda7b479a662344327d7ee922841800a885b82d167a6": [
+      "resources/imgs/linux/network/tcpdump_vs_netfilter_tx.png",
+      "wiki/pyramid/wiki/attachments/imgs/linux/network/tcpdump_vs_netfilter_tx.png"
+    ],
+    "9aaa0b05ab5e071d9829b6f15e05485cd3e3697e902bb80d3da20400b58d3317": [
+      "resources/imgs/misc/2024-02-16-185503.png",
+      "wiki/pyramid/wiki/attachments/imgs/misc/2024-02-16-185503.png"
+    ],
+    "dceea3b8609aa7d4f7ab4ca69d7d736ee24efb67062cdd7febf6fd8ca970c97b": [
+      "resources/imgs/misc/2024-02-16-191315.png",
+      "wiki/pyramid/wiki/attachments/imgs/misc/2024-02-16-191315.png"
+    ],
+    "47e02ed31c353b1b7b157e3462aea10324c205098b7730ce29c4bbe279be2f4b": [
+      "resources/imgs/misc/2024-02-16-191611.png",
+      "wiki/pyramid/wiki/attachments/imgs/misc/2024-02-16-191611.png"
+    ],
+    "c439e5ed1719d61271a75eb3b3119d8b5f941d239d8651f53f3706966fb3bb9f": [
+      "resources/imgs/misc/2024-02-16-193158.png",
+      "wiki/pyramid/wiki/attachments/imgs/misc/2024-02-16-193158.png"
+    ],
+    "c0f7d05737a3cce918a7366be855ac1e281820b2b7fa6f96ee22d74bad9078ab": [
+      "resources/imgs/misc/Linux-storage-stack.png",
+      "wiki/pyramid/wiki/attachments/imgs/misc/Linux-storage-stack.png"
+    ],
+    "aa0ce7ecbb7fe8f92eb2172679e96eb94af71a45492f1177686e68b1a854e9f8": [
+      "resources/imgs/misc/cache.png",
+      "wiki/pyramid/wiki/attachments/imgs/misc/cache.png"
+    ],
+    "65e5714e8c5ec61be2f840ecafd98f138ade49051bf9208e6dfb590247703878": [
+      "resources/imgs/misc/storage-arch.png",
+      "wiki/pyramid/wiki/attachments/imgs/misc/storage-arch.png"
+    ],
+    "09bdbfe1505984ed51cad96b37687d1a3ba13f701cfbba381518ef52770db194": [
+      "resources/imgs/reading_notes/select.png",
+      "wiki/pyramid/wiki/attachments/imgs/reading_notes/select.png"
+    ],
+    "bba3256782242a3104e36b49213a2d4b8dc09ead7e03e7e3adeed7df5e5599c7": [
+      "resources/imgs/tcpip/802.1q.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/802.1q.png"
+    ],
+    "b6a5e114288ae1799ecc5bae0a31a4c13f7c5b8cb7d730ee7cb9f7153efc4fc0": [
+      "resources/imgs/tcpip/someip/00_overview_source_arch.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/00_overview_source_arch.png"
+    ],
+    "af3f8e48e0a6d26d833257fe221183b6513edb4a7dd633f6cdbf7f638daed843": [
+      "resources/imgs/tcpip/someip/common_api.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/common_api.png"
+    ],
+    "286ae419ea2b1dbf6379fbfa3c12be9383a136925198b9bbf5c4273e8e05f6f8": [
+      "resources/imgs/tcpip/someip/qnx_bpf_layer2_raw_data.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/qnx_bpf_layer2_raw_data.png"
+    ],
+    "85ce412f887782e925733a7f12b2e338494652875bbda3aaf1a5de009da5c1cb": [
+      "resources/imgs/tcpip/someip/someip_sd_service_entry_type.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/someip_sd_service_entry_type.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/someip_sd_service_entry_type.png"
+    ],
+    "563187c9d0ebbe4c4cd6e9b97390a62558e26dfe528411c9b4d0d8f47f8cba76": [
+      "resources/imgs/tcpip/someip/vsomeip_abstraction.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_abstraction.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_abstraction.png"
+    ],
+    "5459ca29cee765dfb2e3a6c51199880cbf579575791dd839d27ad96780875508": [
+      "resources/imgs/tcpip/someip/vsomeip_configuration.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_configuration.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_configuration.png"
+    ],
+    "e450ddc9e77e441e810839e9fff9082e31e1350386bc9f2bcebfd916025ef7ca": [
+      "resources/imgs/tcpip/someip/vsomeip_endpoint.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_endpoint.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_endpoint.png"
+    ],
+    "043d05eddafe52339c80a8f6724902142acab2a4c233cf113014e1c3855e2610": [
+      "resources/imgs/tcpip/someip/vsomeip_example.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_example.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_example.png"
+    ],
+    "910c6f5db5bd8904afcbd1cc82c88eea0e80e0eba959e2035b4800478efd485b": [
+      "resources/imgs/tcpip/someip/vsomeip_message.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_message.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_message.png"
+    ],
+    "c52806fad2cd90ee448a3085475b661425489cdc940d680964961f753c514181": [
+      "resources/imgs/tcpip/someip/vsomeip_payload.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_payload.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_payload.png"
+    ],
+    "dd6a9c6efd8615ae22e104506c5a0b284926cf818eff5915d7e137bee9d1c3ae": [
+      "resources/imgs/tcpip/someip/vsomeip_source_application.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_application.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_application.png"
+    ],
+    "7e2bc9ec5f1abca0eb5bcb669b2d82d1c9c44997b245e8cc4f10ee81dac21115": [
+      "resources/imgs/tcpip/someip/vsomeip_source_daemon.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_daemon.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_daemon.png"
+    ],
+    "e604e9c0c251658941162a066303669c0aea319719d85f3bb06af98b6fd2c814": [
+      "resources/imgs/tcpip/someip/vsomeip_source_datatype.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_datatype.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_datatype.png"
+    ],
+    "7218a6397f4574541ccd897b66a09912e6add256f78b26afe0f042de9668c3f1": [
+      "resources/imgs/tcpip/someip/vsomeip_source_endpoint.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_endpoint.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_endpoint.png"
+    ],
+    "f1bf557e6545b108b2659c3385a81d6f12e4332b5bdcc9af848c5457b9b2c328": [
+      "resources/imgs/tcpip/someip/vsomeip_source_message.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_message.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_message.png"
+    ],
+    "7264fc3c36fd72d26375d83e1e7de1939fb17f9e9dbc92c52423d0d5df3d3389": [
+      "resources/imgs/tcpip/someip/vsomeip_source_messages_arch.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_messages_arch.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vSOMEIP_source_messages_arch.png"
+    ],
+    "6a3546d00613727c3f877890db7217ef15e958d348918a37c083cb93c8c24c85": [
+      "resources/imgs/tcpip/someip/vsomeip_source_overview.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_overview.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_overview.png"
+    ],
+    "89a096abb9cd0d70ef1ee23da49897011163ecb566d4424e157a806703ab1b64": [
+      "resources/imgs/tcpip/someip/vsomeip_source_routing.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_routing.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_routing.png"
+    ],
+    "13313c5bad8c9fc621510ffcbf47bdbd87eb2bf6518b386677cc67fa47ceac20": [
+      "resources/imgs/tcpip/someip/vsomeip_source_routing_init.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_routing_init.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_routing_init.png"
+    ],
+    "acf5741488bf01284ee9a8937a0fc3ad65a58b981d5b3247c0dff10c9b84271a": [
+      "resources/imgs/tcpip/someip/vsomeip_source_routing_start.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_routing_start.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_routing_start.png"
+    ],
+    "82c11e5f0a89554ccac9c03f376c63b302c99fa35dbb85c9e45fee166cfe7b56": [
+      "resources/imgs/tcpip/someip/vsomeip_source_runtime.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_runtime.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vSOMEIP_source_runtime.png"
+    ],
+    "847d2c971a68cf18bd1733f756227b7c8c843ed05805537a8ede99339e2b593f": [
+      "resources/imgs/tcpip/someip/vsomeip_source_sd_arch.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_sd_arch.png"
+    ],
+    "755ea3aef09af3e128dd530d0f4c177a5735ebd491e028a809f06768771d3850": [
+      "resources/imgs/tcpip/someip/vsomeip_source_sd_init.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_sd_init.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_sd_init.png"
+    ],
+    "f443e452e244c1505f7258e1ae296ccbcd9a935b0b88c6f0d17e91b1349f1373": [
+      "resources/imgs/tcpip/someip/vsomeip_source_sd_start.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_sd_start.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_sd_start.png"
+    ],
+    "63e1329b5d4c7b2a93337c489c695212fe69ae39f11a1ad62d28190f9c862cab": [
+      "resources/imgs/tcpip/someip/vsomeip_source_service_discovery.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/someip/vsomeip_source_service_discovery.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vsomeip/vsomeip_source_service_discovery.png"
+    ],
+    "edb6fc8195e0fe644f65ebbf0bd1eee6fed13de805e4b6f90eda83b6f6595453": [
+      "resources/imgs/tcpip/tcp_sequences.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/tcp_sequences.png"
+    ],
+    "839af663ac4cc3a560036c3bdfc4a2e2cf017b874b4694827ddb346fbc87ddfe": [
+      "resources/imgs/tcpip/vlan.png",
+      "wiki/pyramid/wiki/attachments/imgs/tcpip/vlan.png"
+    ],
+    "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/facebook-xdp-to-socket/bpf-map-1.jpg",
+      "wiki/pyramid/wiki/attachments/arthurchiao/facebook-xdp-to-socket/katran-perf.jpg",
+      "wiki/pyramid/wiki/attachments/arthurchiao/facebook-xdp-to-socket/maglev-perf.jpg",
+      "wiki/pyramid/wiki/attachments/arthurchiao/facebook-xdp-to-socket/socket-takeover-1.jpg",
+      "wiki/pyramid/wiki/attachments/arthurchiao/facebook-xdp-to-socket/traffic-infra-1.jpg",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-cpu-power-management/P-state-vs-speed-shift.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-cpu-power-management/cpu-package.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-cpu-power-management/hyper-threading.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-cpu-power-management/pkg-core.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/pki/cert-path.jpg",
+      "wiki/pyramid/wiki/attachments/arthurchiao/pki/trust-chain.jpg"
+    ],
+    "caefab35bdf7592195ac6d0a2de2be189a134f55ad0e13499cf32e2d98716696": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-implementation-rx/dma-ringbuffer.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack/dma-ringbuffer.png"
+    ],
+    "ae41b0c2e6749c4c7e77e904ffc3cfdcf16739c6794668ce158e283483a6ff9a": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-implementation-rx/irq-and-napi-poll.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack/irq-and-napi-poll.png"
+    ],
+    "75bd00c9fa9ec46f25798ccd4b1d2fa406f8ce3b0b6c9b4babf0ca1b33fe28fa": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-implementation-rx/napi_gro_receive.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack/napi_gro_receive.png"
+    ],
+    "bd1d0a800bb0bb1cfaf593939278ddb893d59e582743902d321eba742792ce2c": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-implementation-rx/net_rx_action.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack/net_rx_action.png"
+    ],
+    "6806bf65e1a58ccee8941df52e979255207fcdcd4fff9b54fe3408a3705c3f25": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-implementation-rx/rx-overview.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-tuning-rx/rx-overview.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack/rx-overview.png"
+    ],
+    "e29e0841f69880f46dde42bbb854972d063f5f1e14ee6a280446670348464216": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-tuning-rx/amd-nodes-cpuhz.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack/amd-nodes-cpuhz.png"
+    ],
+    "e487bc23d2e28b27d58cedabc7481d6c093439e1ed0d4e6b1ed29beebd93cad1": [
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack-tuning-rx/cpuhz-vs-time_squeeze.png",
+      "wiki/pyramid/wiki/attachments/arthurchiao/linux-net-stack/cpuhz-vs-time_squeeze.png"
+    ]
+  }
+}
