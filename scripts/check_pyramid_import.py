@@ -28,6 +28,7 @@ def main():
     lfs = {item['path']: item for item in META['lfs']}
     errors = []
     checked = 0
+    hydrated = 0
     for name, (mode, kind, sha) in source.items():
         if any(name.startswith(prefix) for prefix in META['excluded']) or name in META['changed_files']:
             continue
@@ -41,6 +42,7 @@ def main():
         if mode != actual_mode or stage != '0':
             errors.append(f'{target}: mode or merge stage changed')
         if name in lfs:
+            hydrated += 1
             content = git('cat-file', 'blob', actual_sha)
             item = lfs[name]
             if len(content) != item['size'] or hashlib.sha256(content).hexdigest() != item['oid']:
@@ -53,7 +55,7 @@ def main():
     for ancestor in [META['source_commit'], META['source_remote_main'], META['notes_base']]:
         if subprocess.run(['git', '-C', str(ROOT), 'merge-base', '--is-ancestor', ancestor, 'HEAD']).returncode:
             errors.append(f'History is not preserved: {ancestor}')
-    print(f'Pyramid import: {checked} source entries, {len(lfs)} hydrated LFS files, {len(errors)} errors.')
+    print(f'Pyramid import: {checked} source entries, {hydrated} hydrated LFS files, {len(errors)} errors.')
     for error in errors:
         print(error)
     return bool(errors)

@@ -5,10 +5,14 @@
   "notes_base": "5116b869ad076d9e8591def5e67b99e2ebf73700",
   "prefix": "wiki/pyramid/",
   "excluded": [
-    "scripts/node_modules/"
+    "scripts/node_modules/",
+    ".obsidian/",
+    "raw/github/notes/.obsidian/",
+    "wiki/.obsidian/"
   ],
   "changed_files": [
-    ".gitattributes"
+    ".gitattributes",
+    ".gitignore"
   ],
   "lfs": [
     {
