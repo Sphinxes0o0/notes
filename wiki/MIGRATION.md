@@ -25,6 +25,7 @@ python3 wiki/pyramid/scripts/lint_wiki.py
 - 排除原仓库跟踪的 2,210 个 `scripts/node_modules/` 文件；保留 package 文件，按需在知识包的 `scripts/` 下运行 `npm ci`。
 - 当前来源中的 223 个 LFS 文件（11,999,465 字节）逐一校验 SHA-256 后转成普通 Git 文件，调整包内 `.gitattributes`。当前知识包无需向 Pyramid 的 LFS 服务取文件。
 - 历史提交仍有 LFS 指针。原 Pyramid 远端已删除，恢复旧附件需要使用本地备份中的 LFS 对象。
+- Notes 原先位于 `resources/docs/` 的 16 份 PDF 已迁入 [ebooks](https://github.com/Sphinxes0o0/ebooks)。知识库来源页里的原路径用于记录采集位置。
 - 保留两处上游仓库的固定 gitlink，并在根目录补充 `.gitmodules`。需要原始上游源码时，运行 `git submodule update --init --recursive`。
 - Obsidian 配置、插件和主题由个人在本地维护，仓库忽略 `.obsidian/`。知识库的 Markdown 正文与双向链接继续保留。
 - 两份 Notes 来源快照共比较 636 个文件：124 个与当前 Notes 字节相同，274 个同路径版本不同，238 个未找到同路径文件或相同内容。全部保留在原始资料层，不覆盖当前 Notes。逐文件结果见 `.github/pyramid-notes-comparison.json`。

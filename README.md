@@ -34,7 +34,7 @@ npm run docs:preview  # 预览已构建的站点
 - `datastructure/`、`design_patterns/`、`network_fundamentals/`、`os_fundamentals/`、`interview/`：基础课程与面试笔记。
 - `tools/`、`android/`：工具与 Android 笔记；`android/` 当前不参与站点构建。
 - `.vitepress/config.mjs`：站点配置；`.vitepress/sidebar/`：按主题拆分的侧边栏。
-- `public/`：直接发布的静态文件；`resources/` 和主题内的图片目录：文档附件。
+- `public/`：直接发布的静态文件；`resources/` 和主题内的图片目录：文档附件。PDF 原件集中存放在 [ebooks](https://github.com/Sphinxes0o0/ebooks)。
 - `scripts/`、`.github/scripts/`：内容及链接审计；`.github/workflows/`：检查与发布流程。
 
 ## 内容维护与检查
