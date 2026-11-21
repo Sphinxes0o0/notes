@@ -1,8 +1,8 @@
 {
   "source_repository": "https://github.com/Sphinxes0o0/pyramid",
-  "source_commit": "dbbf49e925aca5cdb5c97574d00919af119fba60",
-  "source_remote_main": "42ff5fa0e117d81ce53b6e648be08ce0a688072b",
-  "notes_base": "5116b869ad076d9e8591def5e67b99e2ebf73700",
+  "source_commit": "679a45bb759b6dfd34a4bede36c4e09a4a3e2e19",
+  "source_remote_main": "eddf607fd7917319e77a5fa518a99a222ef00107",
+  "notes_base": "e33d79e950c4e635eb6f166d3691f4114ba46224",
   "prefix": "wiki/pyramid/",
   "excluded": [
     "scripts/node_modules/",
