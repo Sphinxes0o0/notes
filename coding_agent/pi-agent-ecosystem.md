@@ -57,7 +57,7 @@ Pi 的"核心刻意做小"哲学决定了它真正的能力上限在生态。本
 
 #### `sandbox` —— OS 级沙箱的标准接法
 
-源文件 [`sandbox/index.ts`](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/examples/extensions/sandbox/index.ts) 约 230 行，把内置 `bash` 工具替换为走 `@anthropic-ai/sandbox-runtime` 的版本：
+这一版本的 [`sandbox/index.ts`](https://github.com/earendil-works/pi/blob/86314bf38dd284b649e3d7569aa3517f2a25435b/packages/coding-agent/examples/extensions/sandbox/index.ts) 把内置 `bash` 工具替换为走 `@anthropic-ai/sandbox-runtime` 的版本：
 
 - **平台差异**：
   - macOS → `sandbox-exec`（Seatbelt）

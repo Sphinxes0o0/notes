@@ -140,7 +140,7 @@
         "placeholders"
       ],
       "reason": "TODO.md 出现在引用与工具取舍说明中，需保留引用原意。",
-      "sha256": "04dda879a4482ff170326a916cace2e7828f15280bce59cde5251092d5db2598"
+      "sha256": "f1db77765f2880cbd7637b95ebe80960061a2a4f7f001b57450db9864713ddea"
     },
     "coding_agent/session-portability.md": {
       "categories": [
