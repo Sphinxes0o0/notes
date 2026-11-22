@@ -842,9 +842,9 @@ steps:
 ### 标准与规范
 
 - [SPIFFE 规范](https://spiffe.io/docs/latest/spiffe-about/overview/)
-- [SPIRE 架构](https://spiffe.io/docs/latest/spire-about/spire-architecture/)
-- [SPIFFE Federation](https://spiffe.io/docs/latest/spire/about/spire-federation/)
-- [Workload Identity 最佳实践](https://spiffe.io/docs/latest/spire/using/registration-workload-identity/)
+- [SPIRE 架构](https://spiffe.io/docs/latest/spire-about/spire-concepts/)
+- [SPIFFE Federation](https://spiffe.io/docs/latest/architecture/federation/readme/)
+- [注册 Workload Identity](https://spiffe.io/docs/latest/deploying/registering/)
 - RFC 8705 - TLS 1.3 PoP
 - RFC 9449 - DPoP
 - W3C Trace Context

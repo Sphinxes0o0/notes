@@ -1064,7 +1064,7 @@ class A2AServer:
 
 | 库 | 用途 | 车规适用度 | 备注 |
 |---|---|---|---|
-| **[c-spiffe](https://github.com/Snowflake-Labs/c-spiffe)** | SPIFFE Workload API C 实现 | ★★★★★ | **核心推荐** — 直接对接 SPIRE Agent 取 X.509-SVID / JWT-SVID，Apache 2.0 |
+| **c-spiffe（源码待核实）** | 车端 C 客户端候选 | 待评估 | 接口参考 [SPIFFE Workload API 规范](https://github.com/spiffe/spiffe/blob/main/standards/SPIFFE_Workload_API.md) |
 | **[jwt-cpp](https://github.com/Thalhammer/jwt-cpp)** | JWT 编解码 | ★★★★★ | Header-only，支持 ES256/RS256，车规主流 |
 | **[libjwt](https://github.com/benmcollins/libjwt)** | JWT C 库 | ★★★★ | 更轻量，适合 Classic AUTOSAR |
 | **OpenSSL / BoringSSL** | TLS + X.509 + ECDSA | ★★★★ | 功能全但体积大；BoringSSL 更精简 |
@@ -1079,7 +1079,7 @@ class A2AServer:
 | **[nghttp2](https://github.com/nghttp2/nghttp2)** | HTTP/2 C 库 | ★★★★ | 自实现 A2A Server 时的备选 |
 | **[nlohmann/json](https://github.com/nlohmann/json)** | JSON 序列化 | ★★★★★ | Header-only，对人友好 |
 | **[rapidjson](https://github.com/Tencent/rapidjson)** | JSON 序列化 | ★★★★ | 速度最快，DOM/SAX 双模式 |
-| **[Cap'n Proto](https://github.com/capnproto/capnproto-cpp)** | 序列化 + RPC | ★★★★ | 车规常用（vsomeip 用），零拷贝 |
+| **[Cap'n Proto](https://github.com/capnproto/capnproto)** | 序列化 + RPC | ★★★★ | 车规常用（vsomeip 用），零拷贝 |
 
 ### 14.3 车规通信栈（与 A2A 并存或竞争）
 
@@ -1087,7 +1087,7 @@ class A2AServer:
 |---|---|---|---|
 | **vsomeip** (Vector) | SOME/IP 实现 | ★★★★★ | **仓库已有** — ASIL-B/D 量产项目大量使用 |
 | **[iceoryx](https://github.com/eclipse-iceoryx/iceoryx)** | 零拷贝共享内存 | ★★★★★ | 高频同主机 A2A 调用可走 iceoryx（替代 UDS） |
-| **[eCAL](https://github.com/continental-ecal/ecal)** | Pub/Sub + RPC | ★★★★ | Continental 出品，protobuf 原生 |
+| **[eCAL](https://github.com/eclipse-ecal/ecal)** | Pub/Sub + RPC | ★★★★ | Continental 出品，protobuf 原生 |
 | **CommonAPI C++** (Covesa) | 服务框架 | ★★★★ | 标准化，绑定 D-Bus / vsomeip |
 | **ara::com** | AUTOSAR Adaptive | ★★★★★ | 量产 Adaptive DC 必选，但集成成本高 |
 
@@ -1096,7 +1096,7 @@ class A2AServer:
 | 库 | 用途 | 车规适用度 | 备注 |
 |---|---|---|---|
 | **PKCS#11 标准接口** | HSM/TEE 抽象层 | ★★★★★ | **统一抽象** — KMSS lib 应基于此 |
-| **[SoftHSM2](https://github.com/softhsm/SoftHSM2)** | HSM 模拟 | ★★★★★ | demo 后端 |
+| **[SoftHSM2](https://github.com/softhsm/SoftHSMv2)** | HSM 模拟 | ★★★★★ | demo 后端 |
 | **[OP-TEE client lib](https://github.com/OP-TEE/optee_os)** | OP-TEE 客户端 | ★★★★ | TrustZone OS 平台 |
 | **[libp11](https://github.com/opensc/libp11)** | PKCS#11 高层封装 | ★★★★ | 与 OpenSSL 配合 |
 
@@ -1105,7 +1105,7 @@ class A2AServer:
 | 库 | 用途 | 车规适用度 | 备注 |
 |---|---|---|---|
 | **[OPA](https://github.com/open-policy-agent/opa)** (Go sidecar) | Rego 策略引擎 | ★★★★ | **首选** — Go sidecar 部署在每个 DC，gRPC 调用 |
-| **[cpp-rego](https://github.com/Ph0nk0/cpp-rego)** | Rego C++ 评估器 | ★★★ | 嵌入式场景备选（无 sidecar） |
+| **[rego-cpp](https://github.com/microsoft/rego-cpp)** | Rego C++ 评估器 | ★★★ | 嵌入式场景备选（无 sidecar） |
 | **[Cerbos](https://github.com/cerbos/cerbos)** | 授权决策服务 | ★★★ | 替代 OPA，但车规案例少 |
 
 ### 14.6 Token / 凭证格式
@@ -1113,7 +1113,7 @@ class A2AServer:
 | 库 | 用途 | 车规适用度 | 备注 |
 |---|---|---|---|
 | **[cjose](https://github.com/cisco/cjose)** | C JOSE（JWS/JWE） | ★★★★ | JWT/CWT 都支持，Cisco 出品 |
-| **[libcborld](https://github.com/cborld/cborld)** | CWT (CBOR) 编解码 | ★★★ | 车规带宽紧时用 CWT 优于 JWT |
+| **CWT** | CBOR Web Token | ★★★ | 车规带宽紧时用 CWT 优于 JWT；格式参考 [RFC 8392](https://www.rfc-editor.org/rfc/rfc8392.html) |
 | **tinycbor** | CBOR 编解码 | ★★★★ | 轻量 |
 
 ### 14.7 日志 / 审计 / 可观测性
@@ -1143,10 +1143,10 @@ TEE：PKCS#11 ←→ OEM TEE (OP-TEE/QNX/TEEGRIS)
 ```
 通信：vsomeip 或 raw SOME/IP
 TLS：mbedTLS
-身份：自实现 SPIFFE Workload API 客户端（参考 c-spiffe 源码精简）
+身份：自实现 SPIFFE Workload API 客户端（参考 SPIFFE Workload API 规范）
 Token：libjwt
 TEE：PKCS#11
-策略：cpp-rego 内嵌（无 sidecar）
+策略：rego-cpp 内嵌（无 sidecar）
 ```
 
 **组合 C：高频同主机（Agent ↔ Sidecar 走 UDS 的场景）**
@@ -1156,14 +1156,14 @@ IPC：iceoryx（替代 UDS，零拷贝）
 TLS：mbedTLS
 身份：c-spiffe + SPIRE Agent
 Token：jwt-cpp
-策略：OPA sidecar 或 cpp-rego 内嵌
+策略：OPA sidecar 或 rego-cpp 内嵌
 ```
 
 ### 14.9 关键开源项目链接汇总
 
 | 类别 | 项目 | 仓库 |
 |---|---|---|
-| **身份** | c-spiffe | github.com/Snowflake-Labs/c-spiffe |
+| **身份** | c-spiffe | 源码待核实 |
 | **身份** | SPIRE | github.com/spiffe/spire |
 | **TLS** | wolfSSL | github.com/wolfSSL/wolfssl |
 | **TLS** | mbedTLS | github.com/Mbed-TLS/mbedtls |
@@ -1173,10 +1173,10 @@ Token：jwt-cpp
 | **JSON** | nlohmann/json | github.com/nlohmann/json |
 | **车规 RPC** | vsomeip | github.com/COVESA/vsomeip |
 | **车规共享内存** | iceoryx | github.com/eclipse-iceoryx/iceoryx |
-| **车规 RPC** | eCAL | github.com/continental-ecal/ecal |
+| **车规 RPC** | eCAL | github.com/eclipse-ecal/ecal |
 | **策略** | OPA | github.com/open-policy-agent/opa |
-| **策略** | cpp-rego | github.com/Ph0nk0/cpp-rego |
-| **HSM demo** | SoftHSM2 | github.com/softhsm/SoftHSM2 |
+| **策略** | rego-cpp | github.com/microsoft/rego-cpp |
+| **HSM demo** | SoftHSM2 | github.com/softhsm/SoftHSMv2 |
 
 ### 14.10 库在 KMSS lib 中的接入点
 
@@ -1199,7 +1199,7 @@ Token：jwt-cpp
 | **gRPC 静态库依赖过重** | gRPC 静态编译后 > 30MB，对低端 DC 不友好 | 高端 DC 用 gRPC，低端 DC 换 iceoryx 或 vsomeip |
 | **wolfSSL 商业许可** | wolfSSL dual license，GPLv2 / commercial | OEM 内部使用 GPL 一般无问题；对外分发需评估 |
 | **jwt-cpp 仅 header-only** | 编译时间随项目增大 | 预编译为 .pch / 拆 lib |
-| **cpp-rego 维护活跃度低** | Rego 标准演进时跟进慢 | 关注 OPA 官方 → 长期回归 OPA sidecar 方案 |
+| **rego-cpp 的兼容性与维护情况待评估** | Rego 演进可能影响兼容性 | 关注 OPA 官方 → 长期回归 OPA sidecar 方案 |
 | **iceoryx 与 AUTOSAR 集成** | 经典 AUTOSAR 不支持 POSIX 共享内存 | 仅用于 Adaptive DC 或 Linux-only 子系统 |
 | **OpenSSL EOL 风险** | OpenSSL 3.x LTS 政策不明朗 | 优先 wolfSSL 或 BoringSSL |
 

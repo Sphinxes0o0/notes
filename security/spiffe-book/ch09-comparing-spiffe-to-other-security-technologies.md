@@ -89,7 +89,7 @@ description: "**SPIFFE 和 SPIRE 解决的问题并不新**。**任何分布式�
 
 **许多服务网格产品实现了自己的加密身份平面，或与现有的身份方案集成——以同时提供"传输通信安全"与"信任根"**。**大多数服务网格产品实现了 SPIFFE 或其中的一部分**。**许多服务网格实现采用了 SPIFFE 规范的部分实现（包括 Istio 与 Consul，参考 [www.consul.io](https://www.consul.io/)），可以被视作 SPIFFE 身份提供方**。**有些则把 SPIRE 作为其方案的组件（比如 Grey Matter 或 Network Service Mesh）**。
 
-**举例来说，Istio 使用 SPIFFE 做节点识别——但它的身份模型与 Kubernetes 特定的原语紧密耦合、且完全基于这些原语**。**没有办法基于 Kubernetes 之外的属性在 Istio 中识别服务**。**IBM 解释了为什么当前的 Istio 机制还不够**（[developer.ibm.com/articles/istio-identity-spiff...](https://developer.ibm.com/articles/istio-identity-spiffe-spire/%23why-the-current-istio-mechanism-is-not-enough)）。**这给 Istio 带来了一种约束——相比 SPIRE 这样的通用身份控制平面，当需要更丰富的证明机制、或当服务需要在 Istio 之外用一套通用身份系统做"off-mesh"认证时，Istio 就显得局限**。**用 SPIRE 做工作负载身份的另一个额外好处是：它可以保护那些不受服务网格控制的通信**。**出于这些原因，组织有时会把 SPIRE 与 Istio 集成、并使用 SPIFFE 身份来代替 Istio 内置的身份**。**IBM 在这里发布了一个示例**：[github.com/IBM/istio-spire](https://github.com/IBM/istio-spire)。
+**举例来说，Istio 使用 SPIFFE 做节点识别——但它的身份模型与 Kubernetes 特定的原语紧密耦合、且完全基于这些原语**。**没有办法基于 Kubernetes 之外的属性在 Istio 中识别服务**。**IBM 解释了为什么当前的 Istio 机制还不够**（[developer.ibm.com/articles/istio-identity-spiff...](https://developer.ibm.com/articles/istio-identity-spiffe-spire/)）。**这给 Istio 带来了一种约束——相比 SPIRE 这样的通用身份控制平面，当需要更丰富的证明机制、或当服务需要在 Istio 之外用一套通用身份系统做"off-mesh"认证时，Istio 就显得局限**。**用 SPIRE 做工作负载身份的另一个额外好处是：它可以保护那些不受服务网格控制的通信**。**出于这些原因，组织有时会把 SPIRE 与 Istio 集成、并使用 SPIFFE 身份来代替 Istio 内置的身份**。**IBM 在这里发布了一个示例**：[github.com/IBM/istio-spire](https://github.com/IBM/istio-spire)。
 
 **服务网格不是 SPIFFE / SPIRE 的直接替代品——它们是互补的，SPIFFE / SPIRE 在网格内充当高层抽象的身份方案**。
 

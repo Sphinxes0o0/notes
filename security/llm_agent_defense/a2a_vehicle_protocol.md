@@ -695,7 +695,7 @@ static const struct {
 
 ## 8. 参考
 
-- [Google A2A Protocol Specification](https://google.github.io/A2A/)
+- [A2A Protocol Specification](https://a2a-protocol.org/latest/specification/)
 - [A2A GitHub](https://github.com/google/A2A)
 - [SPIFFE SVID Specification](https://github.com/spiffe/spiffe/blob/main/standards/SPIFFE-ID.md)
 - [gRPC Authentication Guide](https://grpc.io/docs/guides/auth/)

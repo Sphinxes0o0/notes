@@ -89,7 +89,7 @@ SPIRE 横跨多个传统 IT 筒仓，**所以可以预期你的 DevOps 团队、
 
 **这个模型让那些复杂的组织可以开始采用 SPIFFE，而不必一次性完成所有转换**。
 
-> 在请求与工作流需要穿越非 SPIFFE 岛的场景下，**用 JWT-SVID 跨请求传递身份**是很有用的。更好的做法是：**用 X509-SVID 签名文档**（比如 HTTP Message Request Signing，即"HTTP 消息签名"，参考 [tools.ietf.org/id/draft-cavage-http-signatures-...](https://tools.ietf.org/id/draft-cavage-http-signatures-12.html)），**而不仅仅依赖"服务到服务的互信 TLS"**——这样 SPIFFE 化工作负载在另一端就能验证整条消息的真实性。**这在那些已知"安全属性较弱"的孤岛里特别有用**——它能让你对"经由中间生态转发的消息没有被篡改"有信心。
+> 在请求与工作流需要穿越非 SPIFFE 岛的场景下，**用 JWT-SVID 跨请求传递身份**是很有用的。更好的做法是：**用 X509-SVID 签名文档**（比如 HTTP Message Request Signing，即"HTTP 消息签名"，参考 [tools.ietf.org/id/draft-cavage-http-signatures-...](https://datatracker.ietf.org/doc/html/draft-cavage-http-signatures-12)），**而不仅仅依赖"服务到服务的互信 TLS"**——这样 SPIFFE 化工作负载在另一端就能验证整条消息的真实性。**这在那些已知"安全属性较弱"的孤岛里特别有用**——它能让你对"经由中间生态转发的消息没有被篡改"有信心。
 
 ### 文档与可观测性
 

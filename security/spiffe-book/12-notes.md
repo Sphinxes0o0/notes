@@ -15,8 +15,8 @@ description: "附录 B　注释（Notes）：1. History and Motivation for SPIFF
 ## 2. Benefits
 
 3. X.509 原本是 X.500 电信标准的一部分——X.500 提出了一种全球目录，用户可以按名字查找人或服务器的数据并拿到他们的证书。**X.500 的其他部分都没有得到广泛采用**。
-4. 更多信息参见 [RFC 5280 PDF](https://www.rfc-editor.org/rfc/pdfrfc/rfc5280.txt.pdf)。
-5. 一项叫做 **X.509 Name Constraints** 的较新扩展（参考 [RFC 5280 §Name Constraints](https://tools.ietf.org/html/rfc5280%23page-40)）允许对 CA 加上限制——它们不能为外部组织签发证书——**但它还没有被广泛采用**。
+4. 更多信息参见 [RFC 5280](https://www.rfc-editor.org/rfc/rfc5280.html)。
+5. 一项叫做 **X.509 Name Constraints** 的较新扩展（参考 [RFC 5280 §Name Constraints](https://www.rfc-editor.org/rfc/rfc5280.html#section-4.2.1.10)）允许对 CA 加上限制——它们不能为外部组织签发证书——**但它还没有被广泛采用**。
 6. 服务如何与 CA 进行安全通信？**由于 CA 自己的证书是众所周知的，任何人都能与之建立安全连接**。
 7. 想对 CRL 做一个入门介绍、并了解一些潜在问题，请参考 Ronald Rivest 的 *"Can we eliminate certificate revocation lists?"*（[Rivest: Can we eliminate CRLs?](https://people.csail.mit.edu/rivest/pubs/Riv98b.pdf)）。
 8. **身份本身并不授予授权**；**真正起作用的是"与该身份相关联的特定属性"（保存在一个单独的存储里）**——允许决策点或执行点判断该实体是否被授权访问。

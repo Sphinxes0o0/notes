@@ -143,7 +143,7 @@ description: "**SPIFFE 从一开始就被设计成可插拔、可扩展的——
 
 ### 把 SPIFFE 和 SPIRE 配合 SSH 使用
 
-**OpenSSH 支持使用 CA 和证书做身份认证**（[github.com/openssh/openssh-portable/blob/master...](https://github.com/openssh/openssh-portable/blob/master/PROTOCOL.certkeys)）。**虽然 OpenSSH 证书的格式与 X.509 不同，但可以构建一个服务、用 SVID 做身份认证来签发 SSH 证书**。**这让你能同样用 SPIFFE 身份玩 SSH**。
+**OpenSSH 支持使用 CA 和证书做身份认证**（[OpenSSH TrustedUserCAKeys](https://man.openbsd.org/sshd_config#TrustedUserCAKeys)）。**虽然 OpenSSH 证书的格式与 X.509 不同，但可以构建一个服务、用 SVID 做身份认证来签发 SSH 证书**。**这让你能同样用 SPIFFE 身份玩 SSH**。
 
 > 图 7.3　用 SVID 来 bootstrap SSH 证书（见 `assets/pages/page-144.png`）。
 

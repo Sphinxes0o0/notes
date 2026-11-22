@@ -322,19 +322,18 @@ Server → Client:
 ### Step 1：跑通官方 demo
 
 ```bash
-git clone https://github.com/a2a-mcp/a2a
-cd a2a/samples
+git clone https://github.com/a2aproject/a2a-samples
+cd a2a-samples/samples/python/agents/helloworld
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+python __main__.py
 
-# 启动一个 weather agent
-python weather_agent.py --port 8001
-
-# 另开终端，启动 client 调用
-python client.py --target http://localhost:8001
+# 另开终端，在同一示例目录执行
+source .venv/bin/activate
+python test_client.py
 ```
 
-**预期现象**：client 拉取 agent card → 调用 `get_forecast` → 收到 SSE 流式更新 → 最终得到 artifacts。
+**预期现象**：client 从本机 9999 端口拉取 Agent Card，发送消息并收到任务结果。
 
 ### Step 2：写一个最小 Agent（Python）
 
@@ -546,7 +545,7 @@ Agent Card 是普通 JSON 文件，可以放在：
 ### 8.1 必读官方文档
 
 - [a2a.dev](https://a2a.dev) — 协议规范官网
-- [github.com/a2a-mcp/a2a](https://github.com/a2a-mcp/a2a) — Reference 实现 + samples
+- [A2A 官方示例](https://github.com/a2aproject/a2a-samples) — Samples + demos
 - [Google A2A 博客](https://developers.googleblog.com/) — 原始发布说明
 
 ### 8.2 中文 / 中文社区

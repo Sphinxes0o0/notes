@@ -146,7 +146,7 @@ NIO 车端 AI Agent 安全框架经过多轮调研、专项研究、原型设计
 | **反演 (Inversion)** | 恢复训练数据敏感信息 | 座舱语音/视频回放 |
 | **提示注入 (Prompt Injection)** | 操纵 LLM 行为 | 主 Agent 委派时 |
 
-完整列表见 [ATLAS Matrix](https://atlas.mitre.org/matrices/ATLAS)。
+从 [MITRE ATLAS 官网](https://atlas.mitre.org/) 进入 Threat Matrix 查看完整列表。
 
 ### 2.3 车规三层标准（合规基线）
 

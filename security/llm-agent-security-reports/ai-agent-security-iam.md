@@ -261,7 +261,7 @@ AI Agent 的安全问题可以从 **威胁、IAM、运行时** 三个维度切�
   - **Agent ID Guard**：机器身份细粒度访问控制
   - **AI Red Teaming**：基于 Qwen 的攻击 Agent
 - **百炼平台**：模型 + 智能体 + AI 安全护栏 API
-- **Qwen3Guard 开源**：[HuggingFace](https://huggingface.co/Qwen/qwen3guard)
+- **Qwen3Guard 开源**：[Qwen3Guard 官方仓库](https://github.com/QwenLM/Qwen3Guard)
 
 来源：[阿里云 AI 安全护栏](https://www.aliyun.com/product/content-moderation/guardrail) / [IDC 2026 评估](https://news.qq.com/)
 
