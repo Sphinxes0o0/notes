@@ -12,6 +12,8 @@ description: "A2A 协议 × 车端 IAM 集成设计：0. 总览架构图（一�
 >
 > 本文聚焦：**现有 IAM（Identity / Authentication / Credential）如何与 A2A 协议栈对齐**，给出最小侵入改造路径、端到端集成示例与 C++ 开源栈选型。
 
+本文讨论 SPIRE 与 KMSS 双凭证的集成方案。示例用于对照接口和调用流程，实施进度以文末清单为准。要求保留 A2A 消息结构时，见 [车载 IAM 零侵入设计](../security/llm_agent_defense/a2a_iam_nonintrusive.md)。
+
 ---
 
 ## 0. 总览架构图（一图流）

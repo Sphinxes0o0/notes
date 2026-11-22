@@ -18,10 +18,13 @@ description: "Middleware Notes：目录结构、学习目标、技术栈、应�
 
 ### Agent 协议
 
-- [A2A 车载部署与安全设计](./a2a.md) - 仅车内域控制器场景下的 A2A + TEE + KMSS 设计
-- [A2A × SPIFFE 车内零信任身份方案](./a2a_spiffe.md) - 基于 SPIFFE/SPIRE 的 workload identity 方案, 不强制依赖 TEE
-- [A2A × IAM 集成设计](./a2a_iam_integration.md) - 现有 IAM 三模块(Identity/Auth/CertMgr) 与 A2A 协议栈的对接、C++ 开源栈选型
-- [A2A 协议入门指南](./a2a_getting_started.md) - 从零开始理解 A2A 协议、四核心概念、规范精读路径、动手实践与车端落地路径
+| 阅读目标 | 从这里开始 |
+| --- | --- |
+| 了解协议和运行示例 | [A2A 教程](../a2a/index.md) → [Python 示例](../a2a/examples/index.md) |
+| 理解工作负载身份 | [SPIFFE 与 SPIRE 基础](../security/spiffe-book/ch04-introduction-to-spiffe-and-spire.md) |
+| 从协议过渡到车载设计 | [面向车端的 A2A 入门](./a2a_getting_started.md) |
+| 对比车内凭证签发和部署 | [TEE + KMSS 车内部署](./a2a.md) 与 [SPIFFE/SPIRE 车内部署](./a2a_spiffe.md) |
+| 设计鉴权、委托和任务生命周期 | [车载 Agent IAM 设计入口](../security/llm_agent_defense/index.md#车载-a2a-与-iam) → [A2A × IAM 集成设计](./a2a_iam_integration.md) |
 
 ## 学习目标
 

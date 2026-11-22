@@ -7,6 +7,8 @@ description: "A2A 协议车载部署与安全设计：1. 协议概览、2. 车�
 
 > A2A（Agent‑to‑Agent）是面向智能体的互通协议，基于 JSON‑RPC over HTTP/2、SSE、WebSocket，配合 Agent Card 完成能力发现。本笔记聚焦**仅车内域控制器之间的 A2A 互通**：每个域控制器都有 TEE，车内由 KMSS（Key Management SubSystem）统一管理密钥与证书生命周期。
 
+本文记录车内域控制器均提供 TEE 的部署方案。协议字段和传输方式可对照 [A2A 协议教程](../a2a/03-protocol-deep-dive.md)。如需比较工作负载凭证的签发链，参见 [SPIFFE/SPIRE 方案](./a2a_spiffe.md)。
+
 ## 1. 协议概览
 
 ### 1.1 核心要素

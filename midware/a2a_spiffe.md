@@ -7,6 +7,8 @@ description: "A2A × SPIFFE 车内零信任身份方案：0. 总览架构图（S
 
 > SPIFFE（Secure Production Identity Framework For Everyone）把"工作负载身份"从硬件抽离，CNCF 标准。本文聚焦**车内域控制器之间 A2A 互通**场景：KMSS 兼任 SPIRE Server，每个 DC 跑 SPIRE Agent，A2A Runtime 通过 Workload API 拿到 X.509 / JWT SVID 做零信任认证。本方案**不强制依赖 TEE**，可与 TPM / Secure Element / TEE / 软件加密组合使用。
 
+本文是依赖车内 SPIRE 部署的架构方案，凭证签发和轮换流程按文中的 Server、Agent 与存储假设展开。基础术语见 [SPIFFE 与 SPIRE](../security/spiffe-book/ch04-introduction-to-spiffe-and-spire.md)，部署方案对照见 [车载 IAM 设计入口](../security/llm_agent_defense/index.md#车载-a2a-与-iam)。
+
 与本笔记互补：
 
 - [A2A 车载部署与安全设计（TEE + KMSS 基线）](./a2a.md) — TEE‑Rooted CA 方案

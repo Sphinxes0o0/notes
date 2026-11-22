@@ -228,11 +228,11 @@ Place 的层次化设计支持多粒度资源管理：
 
 ---
 
-## 与 labgrid-bench-analysis 的关系
+## 通用台架管理与车载多 ECU 的设计对比
 
-本分析补充了 labgrid 在**车载多 ECU 场景**的设计思路，而 [[synthesis/labgrid-bench-analysis]] 更侧重于 bench management 场景（Power/Serial/SSH/Reservation）。
+通用台架管理覆盖供电、串口、SSH 和台架预约。下表保留原笔记中的对比要点，独立分析原稿待补充。
 
-| 维度 | labgrid-bench-analysis | 本分析 |
+| 维度 | 通用台架管理 | 车载多 ECU |
 |------|----------------------|--------|
 | **场景** | Bench management | 车载多 ECU |
 | **核心抽象** | Target + Place | VehicleBench + Hierarchical Place |
@@ -242,7 +242,7 @@ Place 的层次化设计支持多粒度资源管理：
 
 ---
 
-## 相关页面
+## 待补资料
 
-- [[synthesis/labgrid-bench-analysis]] — Bench management 场景分析
-- [[entities/linux/lwip/lwip-sel4-function]] — lwIP on seL4
+- Labgrid 通用台架管理分析原稿
+- lwIP on seL4 专题原稿

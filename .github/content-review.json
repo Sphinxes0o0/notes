@@ -189,7 +189,7 @@
         "placeholders"
       ],
       "reason": "第 12 节的待办记录实施计划，第 14 节的源码待核实标记记录依赖选型状态。保留这些内容以说明方案的实施边界。",
-      "sha256": "5c150ed334e98105eb40faf3fd5fab1291c7c4b59d09ae8d4e230f0ade446310"
+      "sha256": "260e3d3143e0cc0b47b90d15847493a004d446b3bc1cb89cd7c8d4eb94088483"
     },
     "network/linux_net-stack/linux-网络栈原理监控与调优前言2022.md": {
       "categories": [
@@ -300,8 +300,8 @@
       "categories": [
         "stubs"
       ],
-      "reason": "新建目录入口，列出已有文档或可下载的示例源码；用于修复已发布的目录链接，无空白章节。",
-      "sha256": "de192a532357a9968247ace96f6ce5095ba0934dd5cfcfe004f050e047b56e1f"
+      "reason": "专题索引按设计问题和部署前提串联认证、协议集成与分层防御方案。",
+      "sha256": "068ed80bad027ce0f3b27e20f48b285eafa151d7a8e01acd24693204e3796857"
     },
     "tools/pyramid.md": {
       "categories": [

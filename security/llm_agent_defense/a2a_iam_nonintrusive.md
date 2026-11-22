@@ -10,6 +10,8 @@ description: "下表对现有设计的每个 IAM 改动点按\"侵入性\"分类
 > **本文目标**：重新设计，使 IAM 对 A2A 协议**零改动**——
 > A2A AgentCard/Task/TaskEvent proto 完全不变，A2A Agent 业务代码完全不感知 IAM。
 
+本文是兼容性方案设计。落地需要验证中间件拦截覆盖、身份与任务的绑定，以及跨域凭证生命周期。各方案的适用前提见 [车载 A2A 与 IAM](./index.md#车载-a2a-与-iam)。
+
 ---
 
 ## 目录

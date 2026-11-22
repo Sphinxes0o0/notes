@@ -8,6 +8,8 @@ description: "车端任务时长跨度极大："
 > 不依赖云端。所有密钥操作通过 **KMSS lib** 在 TEE 内完成。
 > 通信全部收敛 gRPC（UDS 同主机 / TCP 跨域 + mTLS）。
 
+本文是基于上述 KMSS/TEE 前提的设计文档。接入 A2A 时，可从 [车载协议设计](./a2a_vehicle_protocol.md) 查看 Agent 发现、Task 和委托的衔接。
+
 ---
 
 ## 1. 设计目标

@@ -190,5 +190,4 @@ created: 2026-05-22
 |-------|-------------|
 | [[synthesis/topic-os-fundamentals]] | OS fundamentals synthesis |
 | [[synthesis/topic-network-fundamentals]] | Network fundamentals synthesis |
-| [[synthesis/labgrid-bench-analysis]] | Labgrid Bench Management 分析：Power/Serial/SSH/Reservation 替换 |
-| [[synthesis/labgrid-automotive-scenario]] | Labgrid 车载多 ECU 场景：Hierarchical Place、Resource Domain、VehicleStrategy |
+| [Labgrid 场景分析](wiki/sources/chatgpt-labgrid-analysis.md) | 车载多 ECU 分析及与通用台架管理的对比 |

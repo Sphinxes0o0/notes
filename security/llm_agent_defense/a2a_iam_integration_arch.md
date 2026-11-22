@@ -12,6 +12,8 @@ description: "引入 A2A 后，原有 IAM 架构在以下四个维度出现**结
 > - [`iam_auth_architecture.md`](./iam_auth_architecture.md) — KMSS / 分层 TTL / 凭据管理
 > - [`a2a_vehicle_protocol.md`](./a2a_vehicle_protocol.md) — A2A 协议基础与车端设计
 
+本文讨论可扩展 Agent Card 和 Task 的融合方案，流程与 API 为设计草案。需要保留消息结构时，见 [车载 IAM 零侵入设计](./a2a_iam_nonintrusive.md)。
+
 ---
 
 ## 目录
