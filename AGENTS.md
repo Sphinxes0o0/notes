@@ -14,7 +14,7 @@ Site configuration and plugins reside in `.vitepress/`; static assets live in `p
 - `npm run docs:preview`: preview the generated site locally.
 - `node .github/scripts/audit-codeblocks.js`: check configured content directories for malformed Markdown code fences.
 
-The pre-commit hook runs the build with `NODE_OPTIONS="--max-old-space-size=8192"`, then audits code blocks. Local `.nvmrc` specifies Node 25; deployment currently uses Node 20.
+The pre-commit hook checks code fences, navigation, and internal links. Local development and GitHub Actions use Node 22 via `.nvmrc`. Run `npm run docs:build` for a full site build.
 
 ## Coding Style & Naming Conventions
 
@@ -24,7 +24,7 @@ Follow local indentation: `.vitepress/config.mjs` uses two spaces. Preserve exis
 
 ## Testing Guidelines
 
-There is no repository-wide test framework or coverage target. Build the documentation, run the code-block audit, and inspect changed pages in the browser. Check links manually: VitePress enables `ignoreDeadLinks`, so a successful build does not establish link validity. Validate executable examples using their own local toolchains and instructions.
+There is no repository-wide test framework or coverage target. Build the documentation, run the code-block audit, and inspect changed pages in the browser. Run `npm run check:links` and `npm run check:navigation` to verify site links and navigation. For Pyramid wikilinks, run `python3 wiki/pyramid/scripts/lint_wiki.py` and inspect its broken-link report. Validate executable examples using their own local toolchains and instructions.
 
 ## Commit & Pull Request Guidelines
 

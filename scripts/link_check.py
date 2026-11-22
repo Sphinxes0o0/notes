@@ -253,15 +253,16 @@ def main(argv: list[str]) -> int:
         print(f"External links: {len(external_links)}")
 
     # 2. Probe externals (concurrent)
+    unique_urls = sorted({url for _, url in external_links})
     external_results: list[dict] = []
-    if args.external and external_links:
-        unique_urls = list({url for _, url in external_links})
+    if args.external and unique_urls:
+        probe_urls = unique_urls
         if args.limit_external:
-            unique_urls = unique_urls[: args.limit_external]
-        print(f"Probing {len(unique_urls)} unique external URLs (concurrency={args.concurrency}) ...", file=sys.stderr)
+            probe_urls = probe_urls[: args.limit_external]
+        print(f"Probing {len(probe_urls)} unique external URLs (concurrency={args.concurrency}) ...", file=sys.stderr)
         t0 = time.time()
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as ex:
-            futures = {ex.submit(probe_external, url): url for url in unique_urls}
+            futures = {ex.submit(probe_external, url): url for url in probe_urls}
             done = 0
             for fut in concurrent.futures.as_completed(futures):
                 url, status, err = fut.result()
@@ -292,7 +293,7 @@ def main(argv: list[str]) -> int:
                 })
                 done += 1
                 if done % 20 == 0:
-                    print(f"  probed {done}/{len(unique_urls)} ({time.time()-t0:.1f}s)", file=sys.stderr)
+                    print(f"  probed {done}/{len(probe_urls)} ({time.time()-t0:.1f}s)", file=sys.stderr)
         print(f"Done in {time.time()-t0:.1f}s", file=sys.stderr)
 
     # 3. Build report
@@ -325,7 +326,7 @@ def main(argv: list[str]) -> int:
     print(f"  Assets:          {len(assets)}")
     print(f"  Dirs:            {len(dirs)}")
     print(f"  Internal links:  {internal_total}")
-    print(f"  External links:  {len(external_links)} (unique: {len(external_results)})")
+    print(f"  External links:  {len(external_links)} (unique: {len(unique_urls)})")
     if internal_issues:
         print(f"\n  ✗ Broken internal links ({len(internal_issues)}):")
         for issue in internal_issues[:20]:

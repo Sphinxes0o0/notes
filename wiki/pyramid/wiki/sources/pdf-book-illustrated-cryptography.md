@@ -38,5 +38,5 @@ created: 2026-05-27
 ## 相关页面
 - [[sources/pdf-crypto-books]] — 密码学书籍合集
 - [[sources/pdf-security-crypto-books]] — 安全与密码学书籍
-- [[sources/pdf-book-trustzone-optee-dev]] — TrustZone/OP-TEE
+- [[sources/pdf-book-trustzone-optee-dev-guide]] — TrustZone/OP-TEE
 - [[security-index]] — 安全模块索引

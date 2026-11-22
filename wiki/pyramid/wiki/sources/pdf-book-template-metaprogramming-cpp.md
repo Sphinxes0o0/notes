@@ -36,6 +36,5 @@ created: 2026-05-27
 
 ## 相关页面
 - [[sources/pdf-book-template-metaprogramming]] — 模板元编程
-- [[sources/pdf-book-template-metaprogramming-with-cpp]] — 模板元编程另一版本
 - [[sources/pdf-cpp-templates]] — C++ 模板主题页
 - [[cpp-index]] — C++ 模块索引

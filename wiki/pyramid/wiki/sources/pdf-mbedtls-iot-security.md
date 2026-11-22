@@ -217,4 +217,4 @@ sources: []
 - [[sources/pdf-crypto-books]] — 图解密码技术 + OpenSSL Cookbook
 - [[entities/security/commercial-cryptography]] — 国密算法 SM2/SM3/SM4
 - [[entities/linux/kernel/index]] — 内核密码学子系统（crypto API）
-- [[lwip-index]] — lwIP 嵌入式协议栈（可与 mbedtls 集成）
+- [[sources/pdf-book-lwip]] — lwIP 嵌入式协议栈源码详解

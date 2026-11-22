@@ -188,8 +188,8 @@
       "categories": [
         "placeholders"
       ],
-      "reason": "这是方案文档中的实施路线图，未勾选项不代表本仓库已提供可运行实现，保留风险和实施边界。",
-      "sha256": "8ed3cccdd4bf38a916125e8eb084ae1b2d2a3a4df259ed4cc88f457452e6bacc"
+      "reason": "第 12 节的待办记录实施计划，第 14 节的源码待核实标记记录依赖选型状态。保留这些内容以说明方案的实施边界。",
+      "sha256": "5c150ed334e98105eb40faf3fd5fab1291c7c4b59d09ae8d4e230f0ade446310"
     },
     "network/linux_net-stack/linux-网络栈原理监控与调优前言2022.md": {
       "categories": [
